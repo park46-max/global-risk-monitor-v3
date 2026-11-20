@@ -1,0 +1,3300 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-20T09:32:52.048Z",
+ "checkedAt": "2026-11-20T09:32:52.048Z",
+ "lastSuccessAt": "2026-11-20T09:32:52.048Z",
+ "retentionDays": 3,
+ "attribution": {
+  "name": "The GDELT Project",
+  "url": "https://www.gdeltproject.org/",
+  "text": "Data: The GDELT Project (open dataset, used under its terms)"
+ },
+ "publishers": [
+  {
+   "id": "gdelt",
+   "name": "GDELT Project open data files",
+   "termsChecked": "2026-11-20"
+  }
+ ],
+ "terms": {
+  "USA": [
+   "United States",
+   "White House",
+   "Pentagon",
+   "State Department",
+   "Treasury Department",
+   "Washington DC",
+   "Washington, D.C.",
+   "U.S.",
+   "US",
+   "USA",
+   "Trump"
+  ],
+  "CHN": [
+   "China",
+   "Chinese",
+   "Beijing",
+   "Xi Jinping",
+   "South China Sea",
+   "PLA"
+  ],
+  "RUS": [
+   "Russia",
+   "Russian",
+   "Moscow",
+   "Kremlin",
+   "Putin"
+  ],
+  "UKR": [
+   "Ukraine",
+   "Ukrainian",
+   "Kyiv",
+   "Kiev",
+   "Zelensky",
+   "Zelenskyy"
+  ],
+  "TWN": [
+   "Taiwan",
+   "Taiwanese",
+   "Taipei",
+   "Taiwan Strait"
+  ]
+ },
+ "feeds": {
+  "gdelt-gkg": {
+   "id": "gdelt-gkg",
+   "publisherId": "gdelt",
+   "publisher": "GDELT Project (open data files)",
+   "label": "GKG 2.0 files, every 15 minutes",
+   "url": "https://data.gdeltproject.org/gdeltv2/",
+   "status": "ok",
+   "checkedAt": "2026-11-20T09:32:52.048Z",
+   "lastSuccessAt": "2026-11-20T09:32:52.048Z",
+   "error": null,
+   "latestFile": "20261120093000"
+  }
+ },
+ "files": {
+  "20261120064500": "ok",
+  "20261120070000": "ok",
+  "20261120071500": "ok",
+  "20261120073000": "ok",
+  "20261120074500": "ok",
+  "20261120080000": "ok",
+  "20261120081500": "ok",
+  "20261120083000": "ok",
+  "20261120084500": "ok",
+  "20261120090000": "ok",
+  "20261120091500": "ok",
+  "20261120093000": "ok"
+ },
+ "items": [
+  {
+   "title": "Agreement between Israir and American Airlines to cooperate on flights between Israel and the US",
+   "url": "https://www.israelnationalnews.com/flashes/698040",
+   "publisher": "israelnationalnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:46:00.000Z",
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Amundi US Treasury Bond 1-3Y UCITS ETF Dist: Net Asset Value(s)",
+   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70186578-amundi-us-treasury-bond-1-3y-ucits-etf-dist-net-asset-value-s-015.htm",
+   "publisher": "finanznachrichten.de",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:39:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Amundi US Inflation Expectations 10Y UCITS ETF Acc: Net Asset Value(s)",
+   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70186567-amundi-us-inflation-expectations-10y-ucits-etf-acc-net-asset-value-s-015.htm",
+   "publisher": "finanznachrichten.de",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:39:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Amundi Core MSCI China A Swap UCITS ETF Dist: Net Asset Value(s)",
+   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70186575-amundi-core-msci-china-a-swap-ucits-etf-dist-net-asset-value-s-015.htm",
+   "publisher": "finanznachrichten.de",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:39:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Amundi US Treasury Bond Long Dated UCITS ETF Acc: Net Asset Value(s)",
+   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70186572-amundi-us-treasury-bond-long-dated-ucits-etf-acc-net-asset-value-s-015.htm",
+   "publisher": "finanznachrichten.de",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:39:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Amundi Core MSCI USA Swap UCITS ETF Acc: Net Asset Value(s)",
+   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70186566-amundi-core-msci-usa-swap-ucits-etf-acc-net-asset-value-s-015.htm",
+   "publisher": "finanznachrichten.de",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:39:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "USA"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Exclusive-Taiwan tells Meta thousands of China-linked accounts seek to influence elections",
+   "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/20/exclusive-taiwan-tells-meta-thousands-of-china-linked-accounts-seek-to-influence-elections",
+   "publisher": "internazionale.it",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T07:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Jefferies' Chris Wood bets bigger on India, cuts Taiwan exposure as AI stocks tumble",
+   "url": "https://www.moneycontrol.com/news/business/jefferies-chris-wood-bets-bigger-on-india-cuts-taiwan-exposure-as-ai-stocks-tumble-14085387.html",
+   "publisher": "moneycontrol.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T07:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "India gains in Jefferies' Asia-Pacific portfolio as Taiwan loses ground amid AI sell-off",
+   "url": "https://news.webindia123.com/news/Articles/Business/20261120/4522170.html",
+   "publisher": "webindia123.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T07:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
+   "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
+   "publisher": "chinamil.com.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T07:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "AI power demand revives global solar PV momentum, while policy bottlenecks leave Taiwan facing a green energy crunch",
+   "url": "https://www.digitimes.com/news/a20261120PD227/solar-taiwan-pv-demand-policy.html",
+   "publisher": "digitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Kushner says he believes Russia is 'comfortable' with NATO-like security guarantees for Ukraine",
+   "url": "https://isp.netscape.com/news/world/story/0001/20261120/7b4a86809dcd466bba97d374045a1a78",
+   "publisher": "netscape.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Zelenskyy sidesteps questions on warm Trump-Putin Shenzhen meet amid",
+   "url": "http://www.chinanationalnews.com/news/279444280/zelenskyy-sidesteps-questions-on-warm-trump-putin-shenzhen-meet-amid-coalition-of-the-willing-talks",
+   "publisher": "chinanationalnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Zelenskyy"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwan to build robotics simulation platform with 30+ industry players to advance smart robot development",
+   "url": "https://www.digitimes.com/news/a20261120PD229/taiwan-development-robot-management-training.html",
+   "publisher": "digitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russian Defense Ministry: Road and railway bridges targeted in Kyiv and Odesa",
+   "url": "https://en.apa.az/cis-countries/russian-defense-ministry-road-and-railway-bridges-targeted-in-kyiv-and-odesa-537426",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia attacks Kyiv with ballistic missiles, fires break out in buildings",
+   "url": "https://en.apa.az/europe/russia-attacks-kyiv-with-ballistic-missiles-fires-break-out-in-buildings-537372",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+   "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine",
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Newbury couple send 13,000 hats to premature babies in Ukraine",
+   "url": "https://www.newburytoday.co.uk/news/couple-send-13-000-hats-to-premature-babies-in-ukraine-9492031/",
+   "publisher": "newburytoday.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Global security, Ukraine peace process, and EU+ invitation to Moscow: Key takeaways from Putin's APEC press meeting",
+   "url": "http://www.russiaherald.com/news/279444665/global-security-ukraine-peace-process-and-eu-invitation-to-moscow-key-takeaways-from-putin-apec-press-meeting",
+   "publisher": "russiaherald.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Moscow",
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "4th LD-Writethru: Xi, Prabowo announce launch of China-Indonesia comprehensive economic partnership negotiations",
+   "url": "http://www.bignewsnetwork.com/news/279444784/4th-ld-writethru-xi-prabowo-announce-launch-of-china-indonesia-comprehensive-economic-partnership-negotiations",
+   "publisher": "bignewsnetwork.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Xi underscores China's willingness to strive for APAC prosperity in APEC speech",
+   "url": "https://www.koreaherald.com/article/10944325",
+   "publisher": "koreaherald.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Three killed in Russian strikes on Kyiv",
+   "url": "https://en.apa.az/cis-countries/three-killed-in-russian-strikes-on-kyiv-537395",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Update: Xi says China ready for closer cooperation with Malaysia",
+   "url": "http://www.bignewsnetwork.com/news/279444788/update-xi-says-china-ready-for-closer-cooperation-with-malaysia",
+   "publisher": "bignewsnetwork.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Powerful explosion reported in Poland, Russian missile suspected of entering country's airspace",
+   "url": "https://en.apa.az/europe/powerful-explosion-reported-in-poland-russian-missile-suspected-of-entering-countrys-airspace-537432",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia hits three Kyiv bridges in overnight ballistic attack",
+   "url": "https://en.apa.az/europe/russia-hits-three-kyiv-bridges-in-overnight-ballistic-attack-537402",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Jefferies Boosts Indian Equity Exposure as AI Sell-Off Weighs on Taiwan Investments",
+   "url": "https://www.siliconindia.com/news/general/jefferies-boosts-indian-equity-exposure-as-ai-selloff-weighs-on-taiwan-investments-nid-243180-cid-1.html",
+   "publisher": "siliconindia.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "\"If Congress were in power, India would be sitting at this table\": Rahul Gandhi takes dig at BJP after Xi-Putin-Trump trilateral",
+   "url": "http://www.southeastasiapost.com/news/279444374/if-congress-were-in-power-india-would-be-sitting-at-this-table-rahul-gandhi-takes-dig-at-bjp-after-xi-putin-trump-trilateral",
+   "publisher": "southeastasiapost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Putin"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Zelenskyy: If we wanted to give our territories to Russia, we would have done so in 2022",
+   "url": "https://en.apa.az/europe/zelenskyy-if-we-wanted-to-give-our-territories-to-russia-we-would-have-done-so-in-2022-537353",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Zelenskyy"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Chinese tech firms fear AI hits from US curbs",
+   "url": "https://www.hurriyetdailynews.com/chinese-tech-firms-fear-ai-hits-from-us-curbs-229636",
+   "publisher": "hurriyetdailynews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "USCBC President: Foreign companies confident in China's development prospects-南海网",
+   "url": "https://www.hinews.cn/page?n=2848948&m=1&s=1044",
+   "publisher": "hinews.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Rohingya Genocide Verdict: ICJ Myanmar Ruling, Israel Gaza Genocide Case, Russia Ukraine War",
+   "url": "https://www.outlookindia.com/international/myanmar-rohingya-genocide-icj-verdict-israel-gaza-russia-ukraine-cases",
+   "publisher": "outlookindia.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China accused of intimidating European lawmakers over Taiwan ties",
+   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/20/2003868096",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Chinese Manjha Deaths & Injuries: High Court Asks Punjab To Examine If Cases Warrant Stricter Treatment Than Petty Offences",
+   "url": "https://www.livelaw.in/high-court/punjab-and-haryana-high-court/punjab-haryana-high-court-asks-state-to-take-a-fresh-look-at-chinese-manjha-deaths-and-injuries-559238",
+   "publisher": "livelaw.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Putin invites European leaders to Moscow for peace talks as Russia pounds Kyiv",
+   "url": "https://www.irishtimes.com/world/europe/2026/11/20/putin-invites-european-leaders-to-moscow-for-peace-talks-as-russia-pounds-kyiv/",
+   "publisher": "irishtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Moscow",
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Putin Gets the Red Carpet, Kyiv Gets the Bombs – Kallas Responds With a Diplomatic Protest",
+   "url": "https://www.inewsgr.com/330/Putin-Gets-the-Red-Carpet-Kyiv-Gets-the-Bombs--Kallas-Responds-With-a-Diplomatic-Protest.htm",
+   "publisher": "inewsgr.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "From Beijing to Shenzhen: APEC and a changing Asia-Pacific-南海网",
+   "url": "https://www.hinews.cn/page?n=2848945&m=1&s=1044",
+   "publisher": "hinews.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "Beijing"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "National Palace Museum, Taipei cultural chief clash over solar panels",
+   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/20/2003868097",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "'Make in India' Turned Into 'Import From China': Jairam Ramesh Takes Dig At Modi",
+   "url": "https://www.outlookindia.com/national/make-in-india-turned-into-import-from-china-congress-jairam-ramesh-takes-dig-at-modi-govt",
+   "publisher": "outlookindia.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Interview: China's advanced agriculture offers lessons for Philippine's province, says Filipino governor-Xinhua",
+   "url": "https://english.news.cn/asiapacific/20261120/d77d751a88a14bb5a9893e0c5236ae25/c.html",
+   "publisher": "english.news.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Ukraine's destruction of Crimean Bridge delivered major hit to Putin's influence and Russia's war effort - 20-Nov-2026",
+   "url": "https://home.nzcity.co.nz/news/article.aspx?id=458380",
+   "publisher": "nzcity.co.nz",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Hours after Putin's 'painful' revenge warning, Russia unleashes massive attack on Ukraine",
+   "url": "https://timesofindia.indiatimes.com/world/rest-of-world/hours-after-putins-painful-revenge-warning-russia-unleashes-massive-attack-on-ukraine/articleshow/136017914.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Aer Lingus questioned over Starlink promotion amid Ukraine controversy",
+   "url": "https://www.irishtimes.com/opinion/letters/2026/11/20/aer-lingus-questioned-over-starlink-promotion-amid-ukraine-controversy/",
+   "publisher": "irishtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "APEC leaders call for stronger connectivity, fewer trade barriers at China summit",
+   "url": "https://tribune.com.pk/story/2641346/apec-leaders-call-for-stronger-connectivity-fewer-trade-barriers-at-china-summit",
+   "publisher": "tribune.com.pk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Trump says nuclear arms limits with China, Russia will be very hard to achieve",
+   "url": "https://tribune.com.pk/story/2641340/trump-says-nuclear-arms-limits-with-china-russia-will-be-very-hard-to-achieve",
+   "publisher": "tribune.com.pk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Iran war bill reaches 48.3 bln USD: Pentagon official-Xinhua",
+   "url": "https://english.news.cn/20261120/893823dad3e343739b338e535aa8be97/c.html",
+   "publisher": "english.news.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Pentagon"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Meta removes thousands of accounts flagged by Taiwan in China influence probe",
+   "url": "http://www.jpost.com/international/article-915564",
+   "publisher": "jpost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Xi projects China's global influence after hosting Trump and Putin at APEC :: WRAL.com",
+   "url": "https://www.wral.com/news/ap/1537a-xi-projects-china-s-global-influence-after-hosting-trump-and-putin-at-apec/",
+   "publisher": "wral.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Putin"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Jefferies' Chris Wood increases India bet; reduces Taiwan weight as AI stocks walk on thin ice",
+   "url": "https://economictimes.indiatimes.com/markets/stocks/news/jefferies-chris-wood-increases-india-bet-reduces-taiwan-weight-as-ai-stocks-walk-on-thin-ice/articleshow/136018276.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Flying Apsaras come to life on stage in China's Jiangsu-Xinhua",
+   "url": "https://english.news.cn/20261120/2f6d03804355475fb68e256e5a1d9468/c.html",
+   "publisher": "english.news.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "They destroyed 4 main bridges in Kyiv with 6 waves of Zircon, Iskander, blackout in Lviv - Furious Trump: Putin right, Europe wrong",
+   "url": "https://www.bankingnews.gr/diethni/articles/912216/they-destroyed-4-main-bridges-in-kyiv-with-6-waves-of-zircon-iskander-blackout-in-lviv-furious-trump-putin-right-europe-wrong%20title=",
+   "publisher": "bankingnews.gr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China Focus: Experts call for new approach to cultivate AI-ready talent-Xinhua",
+   "url": "https://english.news.cn/20261120/a58dac8d58484c9db6da7449b2e99aba/c.html",
+   "publisher": "english.news.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Lukashenko sends anniversary greetings to Patriarch Kirill of Moscow and All Russia",
+   "url": "https://www.sb.by/en/lukashenko-sends-anniversary-greetings-to-patriarch-kirill-of-moscow-and-all-russia.html",
+   "publisher": "sb.by",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Moscow"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Hillary Clinton demands escalation of US-NATO war against Russia",
+   "url": "https://www.wsws.org/en/articles/2026/11/20/uduy-n20.html",
+   "publisher": "wsws.org",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Dan: No blank-cheque mandate for EU delegation on Ukraine",
+   "url": "https://www.stiripesurse.ro/dan-no-blank-cheque-mandate-for-eu-delegation-on-ukraine_3938377",
+   "publisher": "stiripesurse.ro",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+   "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+   "publisher": "wsws.org",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Putin"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "After Nvidia, AMD now alleged to have China supply links; short seller flags ties, stock plunges 7.7%",
+   "url": "https://www.moneycontrol.com/news/business/stocks/after-nvidia-amd-now-alleged-to-have-china-supply-links-short-seller-flags-ties-stock-plunges-7-7-14085651.html",
+   "publisher": "moneycontrol.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Georgia and Russia resume direct talks in Minsk after nearly a year",
+   "url": "https://news.az/news/georgia-and-russia-resume-direct-talks-in-minsk-after-nearly-a-year",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "US beats China in race for Kenya's Sh8 trillion Mrima Hill mineral project",
+   "url": "https://www.standardmedia.co.ke/business/article/2001562624/us-beats-china-in-race-for-kenya-s-sh8-trillion-mrima-hill-mineral-project",
+   "publisher": "standardmedia.co.ke",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia showcases water-saving polymers and drought-resistant farm tech at COP31",
+   "url": "http://www.indiagazette.com/news/279444421/russia-showcases-water-saving-polymers-and-drought-resistant-farm-tech-at-cop31",
+   "publisher": "indiagazette.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Anwar has no regrets backing Xi, reaffirms commitment to Malaysia-China ties",
+   "url": "https://www.thestar.com.my/news/nation/2026/11/20/anwar-has-no-regrets-backing-xi-reaffirms-commitment-to-malaysia-china-ties",
+   "publisher": "thestar.com.my",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Anthropic becomes one of the most-traded US stocks on Indian platforms on debut",
+   "url": "https://www.moneycontrol.com/technology/anthropic-becomes-one-of-the-most-traded-us-stocks-on-indian-platforms-on-debut-article-14085620.html",
+   "publisher": "moneycontrol.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "US-Israel-Iran War: Key Updates for UAE Residents on Travel, Security, and Energy Disruptions",
+   "url": "https://gulfnews.com/uae/usisrael-iran-war-what-uae-residents-need-to-know-today-nov-20-2026-1.500754484",
+   "publisher": "gulfnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "At trilateral summit, Trump, Xi and Putin agree on one major thing",
+   "url": "https://www.moneycontrol.com/world/at-trilateral-summit-trump-xi-and-putin-agree-on-one-major-thing-article-14085619.html",
+   "publisher": "moneycontrol.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Putin"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "AI investment slowdown unlikely to derail US growth, says report",
+   "url": "https://www.moneycontrol.com/artificial-intelligence/ai-investment-slowdown-unlikely-to-derail-us-growth-says-report-article-14085598.html",
+   "publisher": "moneycontrol.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Ukraine war latest: Russian strikes kill 3 in Kyiv, damage key bridges",
+   "url": "https://news.az/news/ukraine-war-latest-russian-strikes-kill-3-in-kyiv-damage-key-bridges",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine",
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Iran rejects US allegations over alleged biological, chemical weapons",
+   "url": "https://news.az/news/iran-rejects-us-allegations-over-alleged-biological-chemical-weapons",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Poland probes suspected crash of unidentified object near Ukraine border",
+   "url": "https://news.az/news/poland-probes-suspected-crash-of-unidentified-object-near-ukraine-border",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "UK conducts offensive cyber operations against Russia, China, Iran, North Korea - top commander",
+   "url": "https://news.az/news/uk-conducts-offensive-cyber-operations-against-russia-china-iran-north-korea-top-commander",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Toyota recalls over 314,000 vehicles in US over airbag flaw",
+   "url": "https://news.az/news/toyota-recalls-over-314-000-vehicles-in-us-over-airbag-flaw",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Trump Delays Decision on Iran Strikes Until 2027 Amid Rising Tensions",
+   "url": "https://gulfnews.com/world/americas/will-us-strike-iran-again-trump-says-decision-can-wait-until-2027-1.500754568",
+   "publisher": "gulfnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Fiona, world's beloved premature hippo, dies at US zoo after ingesting hat",
+   "url": "https://aninews.in/news/world/us/fiona-worlds-beloved-premature-hippo-dies-at-us-zoo-after-ingesting-hat20261120130948/",
+   "publisher": "aninews.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia Forces Continues Strikes Against Infrastructure Used by Ukrainian Forces",
+   "url": "https://sputnikglobe.com/20261120/russia-forces-continues-strikes-against-infrastructure-used-by-ukrainian-forces-1125116799.html",
+   "publisher": "sputnikglobe.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "3rd LD-Writethru: Xi says China ready for closer cooperation with Malaysia",
+   "url": "http://www.bignewsnetwork.com/news/279444901/3rd-ld-writethru-xi-says-china-ready-for-closer-cooperation-with-malaysia",
+   "publisher": "bignewsnetwork.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "US Army postpones Iowa explosives detonation over public safety concerns",
+   "url": "https://aa.com.tr/en/americas/us-army-postpones-iowa-explosives-detonation-over-public-safety-concerns/4131834",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China's Xi holds talks with regional leaders after APEC, trilateral summit with US, Russia",
+   "url": "https://aa.com.tr/en/asia-pacific/chinas-xi-holds-talks-with-regional-leaders-after-apec-trilateral-summit-with-us-russia/4131664",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "3rd LD-Writethru: Xi says China, Singapore should strengthen strategic communication, enhance coordination",
+   "url": "http://www.bignewsnetwork.com/news/279444899/3rd-ld-writethru-xi-says-china-singapore-should-strengthen-strategic-communication-enhance-coordination",
+   "publisher": "bignewsnetwork.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "TSMC tightens curbs on China AI chips as new US rules close loophole: report",
+   "url": "https://www.dealstreetasia.com/stories/tsmc-china-ai-chip-curbs-501724",
+   "publisher": "dealstreetasia.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China urges Japan to 'correct erroneous words, deeds' on Taiwan",
+   "url": "https://aa.com.tr/en/asia-pacific/china-urges-japan-to-correct-erroneous-words-deeds-on-taiwan/4131875",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "California Bar investigates ex-White House spokeswoman over lawyer claims",
+   "url": "https://aa.com.tr/en/americas/california-bar-investigates-ex-white-house-spokeswoman-over-lawyer-claims/4131835",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "White House"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+   "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Asian tech stocks plunge despite Anthropic's strong US market debut",
+   "url": "https://aa.com.tr/en/economy/asian-tech-stocks-plunge-despite-anthropics-strong-us-market-debut/4131708",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China's climate practices take center stage at COP31: cross-sector collaboration between meteorology and energy offers a Chinese approach to global climate adaptation",
+   "url": "https://www.prnewswire.com/news-releases/chinas-climate-practices-take-center-stage-at-cop31-cross-sector-collaboration-between-meteorology-and-energy-offers-a-chinese-approach-to-global-climate-adaptation-302946737.html",
+   "publisher": "prnewswire.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China",
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "INTERVIEW – Pentagon's F-35 parts blind spots raise readiness concerns, US watchdog warns",
+   "url": "https://aa.com.tr/en/features/interview-pentagon-s-f-35-parts-blind-spots-raise-readiness-concerns-us-watchdog-warns/4131791",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Pentagon",
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "3rd LD-Writethru: Xi calls for promoting building of a China-Thailand community with a shared future to higher level",
+   "url": "http://www.bignewsnetwork.com/news/279444900/3rd-ld-writethru-xi-calls-for-promoting-building-of-a-china-thailand-community-with-a-shared-future-to-higher-level",
+   "publisher": "bignewsnetwork.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Indian-Origin, US-Based Agency Founder Nominated for CoA Award, Ceremony to Be Held at Oxford University Campus",
+   "url": "https://aninews.in/news/business/indian-origin-us-based-agency-founder-nominated-for-coa-award-ceremony-to-be-held-at-oxford-university-campus20261120133417/",
+   "publisher": "aninews.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Operation Monsoon Thunder: NCB raids four cities, arrests six in probe into US-bound opioid and psychotropic drug shipments",
+   "url": "https://timesofindia.indiatimes.com/india/operation-monsoon-thunder-ncb-raids-four-cities-arrests-six-in-probe-into-us-bound-opioid-and-psychotropic-drug-shipments/articleshow/136019629.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "NDA leaders criticise Rahul Gandhi for his remarks in US, accuse him of undermining India's global stature",
+   "url": "https://ianslive.in/his-words-cant-be-trusted-nda-leaders-slam-rahul-gandhi-over-side-player-remark-accuse-him-of-undermining-indias-global-stature--20261120124158",
+   "publisher": "ianslive.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "1st meeting of the Joint Consultative Committee CoR-Ukraine",
+   "url": "https://www.cor.europa.eu/en/plenaries-events/Joint-Consultative-Committee-CoR-Ukraine",
+   "publisher": "cor.europa.eu",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
+   "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
+   "publisher": "webindia123.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "No Understanding on New Round of Trilateral Ukraine Talks",
+   "url": "https://sputnikglobe.com/20261120/no-understanding-on-new-round-of-trilateral-ukraine-talks---russian-deputy-fm-1125116534.html",
+   "publisher": "sputnikglobe.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Rubio says US not 'under systemic attack' after series of tech outages",
+   "url": "http://www.businessghana.com/site/news/politics/360054/Rubio-says-US-not-",
+   "publisher": "businessghana.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China dominates battery graphite, but this startup could break the monopoly",
+   "url": "http://www.businessghana.com/site/news/technology/360068/China-dominates-battery-graphite,-but-this-startup-could-break-the-monopoly",
+   "publisher": "businessghana.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Rankings of ADAS component suppliers in China (Jan. - Sept. 2026): China's local LiDAR suppliers claim over 95% of the market | Gasgoo Automotive Research Institute",
+   "url": "https://autonews.gasgoo.com/articles/market-industry/rankings-of-adas-component-suppliers-in-china-jan-sept-2026-chinas-local-lidar-suppliers-claim-over-95-of-the-market-gasgoo-automotive-research-institute-2123701390173712385",
+   "publisher": "gasgoo.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia strikes three Kyiv bridges after Putin vows revenge for Crimea attack",
+   "url": "https://www.thenationalnews.com/news/europe/2026/11/20/russia-strikes-three-kyiv-bridges-after-putin-vows-revenge-for-crimea-attack/",
+   "publisher": "thenationalnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Unidentified object reported crashing in southeastern Poland near Ukrainian border",
+   "url": "https://aa.com.tr/en/europe/unidentified-object-reported-crashing-in-southeastern-poland-near-ukrainian-border/4131876",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia pounds military targets across Ukraine",
+   "url": "http://www.europesun.com/news/279444859/russia-pounds-military-targets-across-ukraine-mod",
+   "publisher": "europesun.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Seattle DJC.com local business news and data - Business - Study shows magnitude of US data center pollution",
+   "url": "https://www.djc.com/news/bu/12178867.html",
+   "publisher": "djc.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "US$1.36m Non-Exclusive Patent Licensing Agreement | Company Announcement",
+   "url": "https://www.investegate.co.uk/announcement/rns/ethernity-networks-ltd--enet/us-1-36m-non-exclusive-patent-licensing-agreement/9886085",
+   "publisher": "investegate.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
+   "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
+   "publisher": "baystreet.ca",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "ChinaLux Explores Automotive Future with Luxembourg & Chinese Industry Experts",
+   "url": "https://www.chronicle.lu/category/working-in-luxembourg/64769-chinalux-explores-automotive-future-with-luxembourg-chinese-industry-experts",
+   "publisher": "chronicle.lu",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "US religious freedom panel alleges India is targeting Muslims in SIR",
+   "url": "https://scroll.in/latest/1097205/us-religious-freedom-panel-alleges-india-is-targeting-muslims-in-sir",
+   "publisher": "scroll.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Denmark Ratifies Trump Deal Over Greenland, Hoping to End Conflict",
+   "url": "https://www.chronicle.lu/category/international-news/64768-denmark-ratifies-trump-deal-over-greenland-hoping-to-end-conflict",
+   "publisher": "chronicle.lu",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Troops from 11 countries drill in Poland for potential postwar Ukraine mission",
+   "url": "https://abcnews.com/International/wireStory/european-troops-11-countries-drill-poland-potential-postwar-138313096",
+   "publisher": "abcnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+   "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+   "publisher": "udaipurkiran.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Sean Cairncross Fired as White House Cybersecurity Director Amid Major Outages",
+   "url": "https://udaipurkiran.com/sean-cairncross-fired-as-white-house-cybersecurity-director-amid-major-outages/",
+   "publisher": "udaipurkiran.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "White House"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "UK conducting offensive cyber ops against Russia, China, Iran and North Korea, says top commander",
+   "url": "https://www.brfm.net/uk-conducting-offensive-cyber-ops-against-russia-china-iran-and-north-korea-says-top-commander/",
+   "publisher": "brfm.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "U.S. Loses Measles Elimination Status Amid Rising Cases",
+   "url": "https://udaipurkiran.com/u-s-loses-measles-elimination-status-amid-rising-cases/",
+   "publisher": "udaipurkiran.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Trump administration urges judge to lift order blocking Kennedy Center's two-year closure | News, Sports, Jobs",
+   "url": "https://www.lahainanews.com/wire/?category=5035&ID=402505",
+   "publisher": "lahainanews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "U.S. Consortium Wins $60bn Kenya Mining Project",
+   "url": "https://allafrica.com/view/group/main/main/id/00098880.html",
+   "publisher": "allafrica.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "'My body started consuming itself. I was a millimetre from death': Andrey Zvyagintsev on Covid, Putin and life in exile | Andrey Zvyagintsev",
+   "url": "https://www.theguardian.com/film/2026/nov/20/andrey-zvyagintsev-covid-putin-russia-life-in-exile",
+   "publisher": "theguardian.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Putin"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China's TOPCon solar module export prices slip as makers clear low-efficiency stock ahead of new standard",
+   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70186162-china-s-topcon-solar-module-export-prices-slip-as-makers-clear-low-efficiency-stock-ahead-of-new-standard-451.htm",
+   "publisher": "finanznachrichten.de",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:05:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Map Shows Donald Trump's Approval Rating in Every State After 22 Months",
+   "url": "https://www.newsweek.com/map-donald-trump-approval-rating-every-state-22-months-12740184",
+   "publisher": "newsweek.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T09:00:00.000Z",
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Deadly attacks on Kyiv damage bridges and cut power",
+   "url": "https://www.thenorthernecho.co.uk/news/national/26747005.deadly-attacks-kyiv-damage-bridges-cut-power/",
+   "publisher": "thenorthernecho.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:51:00.000Z",
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia pummels Ukraine after Putin vowed 'painful' attack",
+   "url": "https://timesofmalta.com/article/russia-pummels-ukraine-putin-vowed-painful-attack.1137390",
+   "publisher": "timesofmalta.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:51:00.000Z",
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "California Bar Investigates Former White House Press Secretary's Legal Claims",
+   "url": "https://econotimes.com/California-Bar-Investigates-Former-White-House-Press-Secretary-s-Legal-Claims-1780124",
+   "publisher": "econotimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:50:00.000Z",
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "White House"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Seoul to Review U.S. Handling of OPCON Assessment Information",
+   "url": "https://econotimes.com/Seoul-to-Review-U-S-Handling-of-OPCON-Assessment-Information-1780123",
+   "publisher": "econotimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:49:00.000Z",
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Three Kyiv bridges hit during major Russian missile attack",
+   "url": "https://cedarnews.net/newstasks/1169923/three-kyiv-bridges-hit-major-russian-missile/",
+   "publisher": "cedarnews.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:43:00.000Z",
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russia hits 3 Kyiv bridges in major attack, while Poland reports airspace violation",
+   "url": "https://www.politico.eu/article/russia-hits-3-kyiv-bridges-in-major-attack-while-poland-reports-airspace-violation/",
+   "publisher": "politico.eu",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:39:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "NATO jets scrambled as Russia's major attack sparks horror alert twice within hours",
+   "url": "https://www.aol.co.uk/articles/nato-jets-scrambled-russias-major-083700000.html",
+   "publisher": "aol.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:37:00.000Z",
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "US Says It Got Kremlin 'Comfortable' With NATO Article 5-Style Security Guarantees for Ukraine",
+   "url": "https://www.kyivpost.com/post/90681",
+   "publisher": "kyivpost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:33:00.000Z",
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "US"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Kremlin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "New EV set to be one of UK's cheapest and isn't a Chinese newcomer",
+   "url": "https://www.dailypost.co.uk/news/motoring/motoring-news/new-ev-set-one-uks-34940039",
+   "publisher": "dailypost.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:32:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russian attacks on Kyiv kill 3, cripple bridges and cut power – Winnipeg Free Press",
+   "url": "https://www.winnipegfreepress.com/world/2026/11/20/russian-attacks-on-kyiv-kill-3-cripple-bridges-and-cut-power",
+   "publisher": "winnipegfreepress.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:32:00.000Z",
+   "seenByGdelt": "2026-11-20T09:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Russian attacks on Kyiv kill 3, cripple bridges and cut power",
+   "url": "http://www.goskagit.com/news/world/russian-attacks-on-kyiv-kill-3-cripple-bridges-and-cut-power/article_de34b87c-d069-5003-8850-4ef0167a31b5.html",
+   "publisher": "goskagit.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:31:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China Proposes Mazu Artificial Intelligence Platform To Peru For Weather Predictions",
+   "url": "https://english.pravda.ru/news/world/173696-china-peru-ai-climate/",
+   "publisher": "english.pravda.ru",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:24:00.000Z",
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Kyiv Metro Shelters Residents as Russian Strikes Kill Three on Nov. 20",
+   "url": "https://econotimes.com/Kyiv-Metro-Shelters-Residents-as-Russian-Strikes-Kill-Three-on-Nov-20-1780113",
+   "publisher": "econotimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:21:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "South African businesses urged to maximise China's zero-tariff policy opportunities",
+   "url": "https://www.sanews.gov.za/south-africa/south-african-businesses-urged-maximise-chinas-zero-tariff-policy-opportunities",
+   "publisher": "sanews.gov.za",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:19:00.000Z",
+   "seenByGdelt": "2026-11-20T09:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "China says Japan must change 'attitude', after Xi snub of Takaichi",
+   "url": "https://www.freemalaysiatoday.com/category/world/2026/11/20/china-says-japan-must-change-attitude-after-xi-snub-of-takaichi",
+   "publisher": "freemalaysiatoday.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:16:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwan tells Meta thousands of China-linked accounts seek to influence elections",
+   "url": "https://economictimes.indiatimes.com/tech/technology/taiwan-tells-meta-thousands-of-china-linked-accounts-seek-to-influence-elections/articleshow/136017456.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:10:00.000Z",
+   "seenByGdelt": "2026-11-20T08:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "headline",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Ukraine: Three Kyiv bridges hit during major Russian missile attack",
+   "url": "https://www.bbc.com/news/articles/c6x29gn4pdn9o",
+   "publisher": "bbc.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:04:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine",
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "European troops take part in exercise with eye on post-war Ukraine",
+   "url": "https://www.wandsworthguardian.co.uk/news/national/26746913.european-troops-take-part-exercise-eye-post-war-ukraine/",
+   "publisher": "wandsworthguardian.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:01:00.000Z",
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Polish army investigates report of unknown objects near Ukraine border",
+   "url": "https://ksevradio.com/polish-army-investigates-report-of-unknown-objects-near-ukraine-border/",
+   "publisher": "ksevradio.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:01:00.000Z",
+   "seenByGdelt": "2026-11-20T08:30:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Hours after Trump-Putin talks, Russia hits Ukraine with massive, deadly attack",
+   "url": "https://cyprusnews.eu/cnn-kosmos/hours-after-trump-putin-talks-russia-hits-ukraine-with-massive-deadly-attack/",
+   "publisher": "cyprusnews.eu",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T08:00:00.000Z",
+   "seenByGdelt": "2026-11-20T09:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "RUS": {
+     "level": "headline",
+     "terms": [
+      "Russia",
+      "Putin"
+     ]
+    },
+    "UKR": {
+     "level": "headline",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Trump, Xi unlikely to have reached agreement on Taiwan, expert says",
+   "url": "https://focustaiwan.tw/politics/202611200010",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T07:46:00.000Z",
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwan Keeps APEC Seat as Scholars Warn of Great-Power Exclusion",
+   "url": "https://econotimes.com/Taiwan-Keeps-APEC-Seat-as-Scholars-Warn-of-Great-Power-Exclusion-1780088",
+   "publisher": "econotimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T07:37:00.000Z",
+   "seenByGdelt": "2026-11-20T08:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwan Shares Slide 6.23% Friday to Close at 36,033.29",
+   "url": "https://econotimes.com/Taiwan-Shares-Slide-6-23-Friday-to-Close-at-36-033-29-1780087",
+   "publisher": "econotimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T07:35:00.000Z",
+   "seenByGdelt": "2026-11-20T08:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwan Stock Market Falls 6.2% to Cap Its Worst Week Since 1991 as KOSPI Closes Down 5.2% and Nikkei 225 Drops 5.1% in AI Chip Selloff",
+   "url": "https://247wallst.com/investing/2026/11/20/taiwan-stock-market-falls-6-2-to-cap-its-worst-week-since-1991-as-kospi-closes-down-5-2-and-nikkei-225-drops-5-1-in-ai-chip-selloff/",
+   "publisher": "247wallst.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T07:33:00.000Z",
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Jefferies' Chris Wood raises India weight to 15% and trims Taiwan as AI stocks stumble globally",
+   "url": "https://www.businesstoday.in/india/story/jefferies-chris-wood-raises-india-weight-to-15-and-trims-taiwan-as-ai-stocks-stumble-globally-568712-2026-11-20",
+   "publisher": "businesstoday.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T07:03:00.000Z",
+   "seenByGdelt": "2026-11-20T08:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwan's APEC participation smooth amid great-power diplomacy: Scholars",
+   "url": "https://focustaiwan.tw/politics/202611200009",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T06:51:00.000Z",
+   "seenByGdelt": "2026-11-20T07:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwanese TV Report Cites Gap at Boarding Stairs for Takaichi",
+   "url": "https://www.nippon.com/en/articles/-/57778",
+   "publisher": "nippon.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T05:17:00.000Z",
+   "seenByGdelt": "2026-11-20T08:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwanese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
+   "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
+   "publisher": "armstrongeconomics.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T05:03:00.000Z",
+   "seenByGdelt": "2026-11-20T07:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "headline",
+     "terms": [
+      "Trump"
+     ]
+    },
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  },
+  {
+   "title": "Taiwanese tech firms showcase smart city solutions at Thailand expo",
+   "url": "https://focustaiwan.tw/sci-tech/202611200005",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T03:15:00.000Z",
+   "seenByGdelt": "2026-11-20T07:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "headline",
+     "terms": [
+      "Taiwanese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-20T09:32:52.048Z",
+   "lastSeenAt": "2026-11-20T09:32:52.048Z"
+  }
+ ]
+}
