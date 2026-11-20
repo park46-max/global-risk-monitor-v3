@@ -1,0 +1,93 @@
+name: Update risk assessments
+
+# Fetches the extra public datasets for the risk assessments (UCDP armed-conflict file, World Bank governance and unemployment series),
+# then rebuilds data/cache/risk.json from cached data. SEPARATE from the news and indicator workflows: nothing here can block or overwrite them.
+# Recent data is not requested again (World Bank series: 7 days, UCDP file: 30 days), so a daily run makes almost no requests.
+# Rule-based, no AI, no paid service, no API key.
+#
+# THE SCHEDULE IS OFF ON PURPOSE. Do these steps first (details in the README):
+#   1. Run it by hand with mode = verify. It requests each source once and writes nothing.
+#   2. Run it by hand with mode = fetch and check data/cache/risk-inputs.json and data/cache/risk.json.
+#   3. Only then remove the "# " in front of the two schedule lines below and commit.
+
+on:
+  # schedule:
+  #   - cron: '41 5 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'verify = check the sources, write nothing. fetch = update the caches.'
+        type: choice
+        default: verify
+        options:
+          - verify
+          - fetch
+      force:
+        description: 'Ignore the "recently fetched" shortcuts and request everything again'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  risk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Fetch risk inputs (UCDP file, World Bank series)
+        id: inputs
+        continue-on-error: true
+        timeout-minutes: 8
+        run: node scripts/fetch-risk-inputs.mjs --${{ github.event.inputs.mode || 'fetch' }} ${{ github.event.inputs.force == 'true' && '--force' || '' }}
+
+      # Builds from whatever is cached, also when the fetch above failed: an earlier cached value is marked stale inside the assessment.
+      # If nothing can be read the previous risk.json is kept and marked stale. A failure here is a warning.
+      - name: Build risk assessments
+        id: build
+        continue-on-error: true
+        timeout-minutes: 3
+        run: node scripts/build-risk.mjs --${{ github.event.inputs.mode || 'fetch' }}
+
+      - name: Commit changed cache files
+        id: commit
+        if: ${{ github.event.inputs.mode != 'verify' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in data/cache/risk-inputs.json data/cache/risk.json; do
+            if [ -f "$f" ]; then git add "$f"; else echo "Not present, nothing to stage: $f"; fi
+          done
+          git status --short data/cache
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update risk assessments $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Request a GitHub Pages build
+        if: ${{ steps.commit.outputs.pushed == 'true' }}
+        continue-on-error: true
+        run: GH_TOKEN="${{ github.token }}" gh api --method POST "/repos/${{ github.repository }}/pages/builds"
+
+      - name: Fail the run if the build failed or every input request failed
+        if: ${{ steps.build.outcome == 'failure' || steps.inputs.outcome == 'failure' }}
+        run: |
+          echo "A step failed. Cached data was kept and marked stale where needed. See the step logs and the run summary."
+          exit 1
