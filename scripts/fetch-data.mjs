@@ -4,6 +4,7 @@
 //
 //   node scripts/fetch-data.mjs                 fetch news and indicators
 //   node scripts/fetch-data.mjs --only=news     news only        (--only=indicators: indicators only)
+//   node scripts/fetch-data.mjs --force         ignore the "cache is fresh" shortcut and request everything
 //   node scripts/fetch-data.mjs --verify        check which World Bank country codes exist (writes nothing)
 //   node scripts/fetch-data.mjs --out=some/dir  write somewhere other than data/cache
 //
@@ -25,11 +26,16 @@ const OUT = path.resolve(arg('out') || path.join(ROOT, 'data', 'cache'));
 const GDELT = process.env.GDELT_BASE || 'https://api.gdeltproject.org/api/v2/doc/doc';
 const WB = process.env.WB_BASE || 'https://api.worldbank.org/v2';
 const TIMESPAN = process.env.GDELT_TIMESPAN || '7d';
-const GDELT_GAP_MS = Number(process.env.GDELT_DELAY_MS ?? 6000);   // GDELT asks for at most one request per 5 seconds
-const RETRY_WAIT_MS = Number(process.env.RETRY_WAIT_MS ?? 20000);
+const GDELT_GAP_MS = Number(process.env.GDELT_DELAY_MS ?? 8000);   // pause between GDELT requests (GDELT asks for 5 s or more), plus up to 2 s of random jitter
+const RETRY_BASE_MS = Number(process.env.RETRY_WAIT_MS ?? 20000);  // first retry waits about this long; every further retry doubles it
+const RETRY_CAP_MS = Number(process.env.RETRY_CAP_MS ?? 90000);    // no single wait is longer than this
 const WB_GAP_MS = Number(process.env.WB_DELAY_MS ?? 250);
-const TIMEOUT_MS = Number(process.env.TIMEOUT_MS ?? 30000);
-const MAX_TRIES = 3, MAX_ARTICLES = 20;
+const TIMEOUT_MS = Number(process.env.TIMEOUT_MS ?? 25000);
+const MAX_TRIES = Number(process.env.MAX_TRIES ?? 3), MAX_ARTICLES = 20;
+const NEWS_BUDGET_MS = Number(process.env.NEWS_BUDGET_MS ?? 8 * 60 * 1000);   // the whole news step stops starting new work after this
+const MIN_AGE_H = Number(process.env.GDELT_MIN_AGE_HOURS ?? 5);   // a country whose last successful fetch is newer than this is not requested again
+const BREAKER = Number(process.env.GDELT_BREAKER ?? 2);           // after this many countries in a row end in rate-limit/timeout errors, stop asking (0 = never stop)
+const FORCE = flag('force') || process.env.FORCE_REFRESH === 'true';   // ignore MIN_AGE_H
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const nowIso = () => new Date().toISOString();
@@ -42,21 +48,31 @@ const COUNTRIES = sandbox.window.COUNTRIES, INDICATORS = sandbox.window.INDICATO
 const IDS = Object.keys(COUNTRIES);
 
 // ---- helpers ----
-class FetchError extends Error { constructor(msg, retryable = false) { super(msg); this.retryable = retryable; } }
+// kind: 'rate' (told to slow down), 'transient' (timeout, network, 5xx), 'fatal' (retrying will not help)
+class FetchError extends Error { constructor(msg, kind = 'fatal', retryAfterMs = 0) { super(msg); this.kind = kind; this.retryable = kind !== 'fatal'; this.retryAfterMs = retryAfterMs; } }
+function parseRetryAfter(v) { if (!v) return 0; const n = Number(v); if (Number.isFinite(n)) return Math.max(0, n * 1000); const d = Date.parse(v); return Number.isNaN(d) ? 0 : Math.max(0, d - Date.now()); }
 async function getText(url) {
   try {
     const r = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS), headers: { 'User-Agent': 'global-risk-monitor/3 (static-site data cache)', Accept: 'application/json' } });
-    return { status: r.status, text: await r.text() };
+    return { status: r.status, retryAfterMs: parseRetryAfter(r.headers.get('retry-after')), text: await r.text() };
   } catch (e) {
-    if (e.name === 'TimeoutError' || e.name === 'AbortError') throw new FetchError('The request timed out after ' + TIMEOUT_MS / 1000 + ' s.', true);
-    throw new FetchError('Network error: ' + (e.cause && e.cause.code ? e.cause.code : e.message), true);
+    if (e.name === 'TimeoutError' || e.name === 'AbortError') throw new FetchError('The request timed out after ' + TIMEOUT_MS / 1000 + ' s.', 'transient');
+    throw new FetchError('Network error: ' + (e.cause && e.cause.code ? e.cause.code : e.message), 'transient');
   }
 }
-async function withRetry(fn, what) {
+// Exponential backoff with jitter: the nominal wait doubles each attempt (20 s, 40 s, ...) up to the cap; the real wait is a random value
+// between half and all of it. If the server sent a Retry-After header, we never wait less than that.
+const backoff = (attempt, retryAfterMs) => { const d = Math.min(RETRY_CAP_MS, RETRY_BASE_MS * 2 ** (attempt - 1)); return Math.min(RETRY_CAP_MS, Math.max(d / 2 + Math.random() * d / 2, retryAfterMs || 0)); };
+async function withRetry(fn, what, deadline = Infinity) {
   let last;
   for (let i = 1; i <= MAX_TRIES; i++) {
     try { return await fn(); }
-    catch (e) { last = e; if (!e.retryable || i === MAX_TRIES) break; log(`  ${what}: ${e.message} Retrying in ${RETRY_WAIT_MS / 1000}s (attempt ${i + 1} of ${MAX_TRIES}).`); await sleep(RETRY_WAIT_MS * i); }
+    catch (e) {
+      last = e; if (!e.retryable || i === MAX_TRIES) break;
+      const wait = backoff(i, e.retryAfterMs);
+      if (Date.now() + wait >= deadline) { last = new FetchError(e.message + ' (not retried: the run time budget is used up)', e.kind); break; }
+      log(`  ${what}: ${e.message} Retrying in ${(wait / 1000).toFixed(1)}s (attempt ${i + 1} of ${MAX_TRIES}).`); await sleep(wait);
+    }
   }
   throw last;
 }
@@ -78,37 +94,53 @@ function cleanArticles(raw) {
   }
   return out;
 }
-async function gdeltArticles(query) {
-  const url = GDELT + '?' + new URLSearchParams({ query: query + ' sourcelang:english', mode: 'artlist', maxrecords: '75', format: 'json', sort: 'datedesc', timespan: TIMESPAN });
+async function gdeltArticles(query, deadline) {
+  const url = GDELT + '?' + new URLSearchParams({ query: query + ' sourcelang:english', mode: 'artlist', maxrecords: '50', format: 'json', sort: 'datedesc', timespan: TIMESPAN });
   return withRetry(async () => {
     const r = await getText(url), body = r.text.trim();
-    if (r.status === 429 || /limit requests/i.test(body)) throw new FetchError('GDELT is rate limiting requests.', true);
-    if (r.status >= 500) throw new FetchError('GDELT returned HTTP ' + r.status + '.', true);
+    if (r.status === 429 || /limit requests/i.test(body)) throw new FetchError('GDELT is rate limiting requests.', 'rate', r.retryAfterMs);
+    if (r.status >= 500) throw new FetchError('GDELT returned HTTP ' + r.status + '.', 'transient', r.retryAfterMs);
     if (r.status < 200 || r.status >= 300) throw new FetchError('GDELT returned HTTP ' + r.status + '.');
     if (!body) return [];                                   // GDELT sends an empty body when nothing matches: a valid "no results"
     let j; try { j = JSON.parse(body); } catch (e) { throw new FetchError('GDELT sent a reply that is not valid JSON: ' + short(body).slice(0, 120)); }
     return cleanArticles(Array.isArray(j.articles) ? j.articles : []);
-  }, 'GDELT');
+  }, 'GDELT', deadline);
 }
 async function runNews() {
-  const file = path.join(OUT, 'news.json'), prev = readPrev(file), t = nowIso(), countries = {};
-  let ok = 0;
-  for (let i = 0; i < IDS.length; i++) {
-    const k = IDS[i], q = COUNTRIES[k].gdelt, p = prev && prev.countries && prev.countries[k];
-    if (i) await sleep(GDELT_GAP_MS);
+  const file = path.join(OUT, 'news.json'), prev = readPrev(file), t = nowIso(), countries = {}, skipped = new Set();
+  const pc = k => prev && prev.countries && prev.countries[k];
+  const order = IDS.slice().sort((a, b) => (pc(a) && pc(a).fetchedAt ? Date.parse(pc(a).fetchedAt) : 0) - (pc(b) && pc(b).fetchedAt ? Date.parse(pc(b).fetchedAt) : 0));   // stalest first
+  const deadline = Date.now() + NEWS_BUDGET_MS;
+  let ok = 0, consec = 0, requests = 0, stopReason = null, lastReq = 0;
+  for (const k of order) {
+    const q = COUNTRIES[k].gdelt, p = pc(k), keep = p && Array.isArray(p.articles) && p.articles.length;
+    const hours = p && p.fetchedAt ? (Date.now() - Date.parse(p.fetchedAt)) / 36e5 : Infinity;
+    if (!FORCE && p && p.status === 'ok' && p.query === q && hours < MIN_AGE_H) {   // recent successful data: do not bother GDELT
+      countries[k] = p; skipped.add(k); ok++; log(`news ${k}: not requested, cached data is only ${hours.toFixed(1)} h old (limit ${MIN_AGE_H} h)`); continue;
+    }
+    if (!stopReason && Date.now() >= deadline) stopReason = `the ${(NEWS_BUDGET_MS / 60000).toFixed(NEWS_BUDGET_MS % 60000 ? 1 : 0)}-minute time budget for news was used up`;
+    if (stopReason) {
+      countries[k] = { query: keep ? p.query : q, status: 'error', attempted: false, error: 'Not attempted this run: ' + stopReason + '.', fetchedAt: p ? p.fetchedAt || null : null, checkedAt: nowIso(), articles: keep ? p.articles : [] };
+      log(`news ${k}: NOT ATTEMPTED (${stopReason})`); continue;
+    }
+    if (requests) { const w = GDELT_GAP_MS + Math.random() * Math.min(2000, GDELT_GAP_MS) - (Date.now() - lastReq); if (w > 0) await sleep(w); }
+    requests++;
     try {
-      const articles = await gdeltArticles(q);
-      countries[k] = { query: q, status: 'ok', error: null, fetchedAt: nowIso(), checkedAt: nowIso(), articles }; ok++;
+      const articles = await gdeltArticles(q, deadline); lastReq = Date.now(); consec = 0;
+      countries[k] = { query: q, status: 'ok', attempted: true, error: null, fetchedAt: nowIso(), checkedAt: nowIso(), articles }; ok++;
       log(`news ${k}: OK, ${articles.length} articles`);
     } catch (e) {
-      const keep = p && Array.isArray(p.articles) && p.articles.length;
-      countries[k] = { query: keep ? p.query : q, status: 'error', error: short(e.message), fetchedAt: p ? p.fetchedAt || null : null, checkedAt: nowIso(), articles: keep ? p.articles : [] };
+      lastReq = Date.now(); consec = e.retryable ? consec + 1 : 0;
+      countries[k] = { query: keep ? p.query : q, status: 'error', attempted: true, error: short(e.message), fetchedAt: p ? p.fetchedAt || null : null, checkedAt: nowIso(), articles: keep ? p.articles : [] };
       log(`news ${k}: FAILED (${short(e.message)}); ${keep ? 'kept ' + p.articles.length + ' earlier articles' : 'no earlier articles to keep'}`);
+      if (BREAKER > 0 && consec >= BREAKER) stopReason = `GDELT kept refusing or timing out (${consec} countries in a row), so the remaining requests were skipped to avoid making it worse`;
     }
   }
+  const final = Object.fromEntries(IDS.map(k => [k, countries[k]]));
   writeAtomic(file, { schema: 2, source: 'GDELT DOC 2.0 API', sourceUrl: 'https://www.gdeltproject.org/', timespan: TIMESPAN, checkedAt: t,
-    lastSuccessAt: latest(Object.values(countries).map(c => c.fetchedAt)), countries });
-  return { name: 'news', ok, total: IDS.length, rows: IDS.map(k => `${k}: ${countries[k].status}${countries[k].status === 'ok' ? ' (' + countries[k].articles.length + ' articles)' : ' - ' + countries[k].error}`) };
+    lastSuccessAt: latest(Object.values(final).map(c => c.fetchedAt)), countries: final });
+  return { name: 'news', ok, total: IDS.length, extra: `GDELT requests started: ${requests}. Not re-requested because the cache was fresh: ${skipped.size}.`,
+    rows: IDS.map(k => `${k}: ${final[k].status}${final[k].status === 'ok' ? (skipped.has(k) ? ' (cached, not re-requested)' : ' (' + final[k].articles.length + ' articles)') : final[k].attempted === false ? ' - not attempted: ' + final[k].error : ' - ' + final[k].error}`) };
 }
 
 // ================= INDICATORS (World Bank) =================
@@ -116,7 +148,7 @@ const wbErr = j => Array.isArray(j) && j[0] && Array.isArray(j[0].message) ? sho
 async function wbJson(url) {
   return withRetry(async () => {
     const r = await getText(url);
-    if (r.status === 429 || r.status >= 500) throw new FetchError('World Bank returned HTTP ' + r.status + '.', true);
+    if (r.status === 429 || r.status >= 500) throw new FetchError('World Bank returned HTTP ' + r.status + '.', 'transient', r.retryAfterMs);
     let j; try { j = JSON.parse(r.text); } catch (e) { throw new FetchError(r.status >= 400 ? 'World Bank returned HTTP ' + r.status + '.' : 'World Bank sent an unreadable reply.'); }
     return { status: r.status, j };
   }, 'World Bank');
@@ -185,13 +217,13 @@ const results = [];
 try {
   if (flag('verify')) results.push(await verify());
   else {
+    if (ONLY === 'all' || ONLY === 'indicators') results.push(await runIndicators());   // first: fast and reliable, so GDELT trouble can never delay or block it
     if (ONLY === 'all' || ONLY === 'news') results.push(await runNews());
-    if (ONLY === 'all' || ONLY === 'indicators') results.push(await runIndicators());
   }
 } catch (e) { console.error('Unexpected error:', e); process.exit(1); }
 
 const lines = ['## Global Risk Monitor data refresh', `Run time (UTC): ${nowIso()}`];
-for (const r of results) { lines.push('', `### ${r.name}`, ...(r.total != null ? [`${r.ok} of ${r.total} succeeded`] : []), ...r.rows.map(x => '- ' + x)); }
+for (const r of results) { lines.push('', `### ${r.name}`, ...(r.total != null ? [`${r.ok} of ${r.total} succeeded`] : []), ...(r.extra ? [r.extra] : []), ...r.rows.map(x => '- ' + x)); }
 log('\n' + lines.join('\n'));
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
 const allFailed = results.some(r => r.total != null && r.ok === 0);
