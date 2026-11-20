@@ -25,12 +25,16 @@ data/rss-sources.mjs                publisher RSS feeds and country-matching wor
 data/countries.js                   the five countries: colours, camera, GDELT search queries, sourced entries
 data/cache/                         JSON written by the Action (starts empty)
 scripts/fetch-data.mjs              the GDELT + World Bank fetcher (Node 18+, no packages to install)
-scripts/fetch-rss.mjs               the publisher RSS fetcher, with a verify mode
+scripts/fetch-rss.mjs               the official/publisher RSS fetcher, with verify mode and feed discovery
+scripts/fetch-gdelt-files.mjs       reads GDELT's open 15-minute data files (verify mode too)
+scripts/http-lib.mjs                the safe download code shared by both (https only, host allowlist, every redirect checked)
+scripts/zip-lib.mjs                 tiny ZIP reader (no packages)
 scripts/rss-lib.mjs                 RSS parsing, dates, duplicates, country matching
 tests/test-fetch.mjs                SIMULATED tests for the GDELT/World Bank fetcher (no internet needed)
 tests/test-rss.mjs                  SIMULATED tests for the RSS pipeline (no internet needed)
+tests/test-gdelt-files.mjs          SIMULATED tests for the GDELT file pipeline (no internet needed)
 .github/workflows/update-data.yml   GDELT + World Bank schedule
-.github/workflows/update-rss.yml    publisher RSS (manual only until you enable its schedule)
+.github/workflows/update-rss.yml    official RSS + GDELT files (manual only until you enable its schedule)
 .nojekyll                           tells GitHub Pages to serve files as they are
 vendor/                             optional: your own copy of globe.gl
 ```
@@ -95,6 +99,26 @@ Your site will be at `https://YOUR-USERNAME.github.io/global-risk-monitor/` afte
 
 **Practical alternative (not built yet):** publisher RSS feeds (for example BBC World, Al Jazeera, DW, France 24). They need no key or card, give a real headline, link, date and publisher, and are stable. Trade-offs: you get each outlet's general world feed, so the script would filter by country keywords rather than run a country search, coverage is limited to the outlets you choose, and I have not verified the feed addresses or each outlet's terms of use. Keyed free-tier news APIs (such as GNews or NewsData.io) are another option, but they need a free signup and a key stored as a GitHub secret, and I have not verified their current free-tier terms. I can add RSS as a second labelled source next to GDELT if you want it.
 
+## Where the news comes from (read this first)
+The dashboard has three separate news sections. Each has its own cache file, its own status pill, and its own failure handling, so one failing never hides or erases another. Risk assessments are a different panel and are never mixed with news; no risk score is generated anywhere.
+
+| Section | How it works | Permission (read 2026-11-20) | Status |
+|---|---|---|---|
+| **Official and publisher feeds (RSS)**: UN Geneva first | `update-rss.yml` reads RSS feeds from sources you have switched on | **UN Geneva: stated.** Its RSS page says: "You can also use our RSS feeds to display the latest news from UN Geneva on your own website or personal page." That page lists no copyright or attribution conditions and no feed addresses. The separate UN Geneva *newsroom* site has its own terms (editorial use; acknowledge the United Nations as provider); I did not assume they apply to ungeneva.org. The dashboard shows headline, date and link only, credits UN Geneva, and uses no images. | OFF. Feed addresses unknown until you run verify (it discovers candidates). |
+| **GDELT open data files** | `update-rss.yml` downloads the newest few 15-minute GKG files, keeps articles whose headline names a country | **Verified quote** from gdeltproject.org/about: datasets are "available for unlimited and unrestricted use ... without fee", may be redistributed, and "any use or redistribution of the data must include a citation to the GDELT Project and a link to this website". The page shows that citation and link. These terms cover GDELT's datasets; the headlines inside were written by publishers, so each article shows its publisher's domain and links straight to the original. | Not yet run. The file layout is assumed (see below); verify mode checks it. |
+| **GDELT search API (secondary)** | `update-data.yml`, unchanged | Same GDELT terms. | Failing from GitHub earlier (rate limits); kept as a fallback. |
+| ReliefWeb | **Not built.** | Needs a pre-approved `appname` ("Every API URL needs a pre-approved appname"; you request it with a form and ReliefWeb replies by email). Its terms say materials may be owned by their original sources, and I could not read the full Terms & Conditions. I will not assume permission. | Action needed from you (below). |
+| BBC, DW, France 24, Al Jazeera | RSS code exists | Reuse rights **not established** (see the permissions review below). | OFF. |
+
+**Why the GDELT files may be more reliable than the search API (a hypothesis, untested):** the search API runs a query on GDELT's search servers and is rate limited. The file route downloads a few static files from a different host and does the matching itself, so it sends no search queries. Real behaviour from GitHub is unknown until you run verify. Be aware that each file is large (the script limits a file to 80 MB zipped) and a run reads up to 12 of them.
+
+**What is assumed about the GDELT files and checked only by verify:** that `https://data.gdeltproject.org/gdeltv2/lastupdate.txt` and `<timestamp>.gkg.csv.zip` exist under that path, that each record has 27 tab-separated columns, and that the last column contains a `<PAGE_TITLE>` tag. The tag was not documented in the pages I could read. If it is absent, verify says so and the route shows nothing (it never invents a headline).
+
+### ReliefWeb: what you would need to do
+1. Request an appname with the form linked from https://apidoc.reliefweb.int/ and wait for ReliefWeb's email.
+2. Read the ReliefWeb Terms & Conditions, especially the limits on reusing content, and decide whether a public portfolio dashboard is allowed.
+3. If both are fine, tell me the approved appname and the conditions, and I will add it as another switched-off source with the same verify step.
+
 ## Publisher RSS feeds (optional news source, OFF until you switch it on)
 Four publishers are supported: BBC News, DW, France 24 and Al Jazeera English. **All four are switched off.** Nothing is copied from any publisher until you have (1) verified the feeds work and (2) read that publisher's terms and decided you are allowed to show their headlines and links. Free access does not by itself mean permission to republish.
 
@@ -102,7 +126,28 @@ Four publishers are supported: BBC News, DW, France 24 and Al Jazeera English. *
 
 **It is separate from GDELT.** It has its own workflow (`update-rss.yml`) and its own file (`data/cache/news-rss.json`). A GDELT failure cannot block or erase RSS news, and an RSS failure cannot affect GDELT or the World Bank data. The page shows each source in its own section with its own status.
 
+### Permissions review (2026-11-20): nothing is established, so everything stays OFF
+This is what I could actually read, and what I could not. It is not legal advice.
+
+| Publisher | Feed reachable from GitHub (your verify run) | What the terms say (source) | Permission for a public non-commercial dashboard |
+|---|---|---|---|
+| BBC News | Was blocked by my own host check (fixed, see below); not yet re-verified | BBC's official RSS terms page could not be read (blocked from my environment). Second-hand only: a directory site says feeds are allowed on personal sites if unchanged, credited and linked, with permission needed for business use. An unofficial, undated copy of BBC terms says content from bbc.co.uk needs permission, making money from BBC content is prohibited and business use needs permission first. | **Not established.** Unclear whether a public portfolio counts as "business use". |
+| DW | Yes (3/3) | No DW terms or RSS licence text found. | **Not established.** Reachable is not permitted. |
+| France 24 | 3 of 4 (main feed HTTP 403) | France Medias Monde legal notice (covers france24.com), read on 2026-11-20: use limited to "personal and private"; reproducing or collecting content without authorisation forbidden; creating hyperlinks to the sites implies you hold the necessary authorisations. Nothing specific on RSS. | **Not established**, and the wording leans against it without written permission. |
+| Al Jazeera English | Yes (1/1) | aljazeera.com/terms-and-conditions, read on 2026-11-20: "only for your own personal, non-commercial use"; copying or distributing needs "express prior written permission"; web scraping prohibited; links must go to full content pages and must not be framed. Nothing on RSS. | **Not established.** Written permission needed. |
+
+**Verified:** which feeds were reachable (your run), and the quoted terms above for France 24 and Al Jazeera (I read those pages). **Assumptions/unverified:** everything about BBC's RSS terms, and the existence of any DW terms. "Free to access" and "personal, non-commercial site" do not by themselves give permission to show a publisher's headlines and links. Your options: read the BBC and DW pages yourself, email each publisher and ask for written permission (keep the reply), or use a source with an explicit reuse licence. Only after one of those, set `enabled: true` and `termsChecked`.
+
+### BBC redirect fix, and redirect safety
+Cause: the config only allowed BBC's *article* host (`bbc.co.uk`), but BBC serves its *feeds* from `feeds.bbci.co.uk`, so my check refused BBC's own feed host. I could not test against the real BBC; the fix is only simulated. The config now has a separate `feedHosts` list for each publisher (BBC: `bbci.co.uk`). Article links are still accepted only on `hosts`.
+
+The redirect handling is stricter than before, not looser. The script used to let the library follow redirects and only check the final address afterwards, which meant it had already contacted the target. Now it follows redirects by hand, at most 3, and checks **every address before requesting it**: https only, no user name or password, no port other than 443, no IP addresses, and the host must be one of that publisher's `feedHosts`. A publisher without `feedHosts` is refused. I did not add any wildcard or "allow all redirects" setting.
+
+### France 24 main feed (HTTP 403)
+I could not reach France 24 from my environment, so I cannot see the cause. A third-party monitor (feeder.co) lists the same address as working, and your other three France 24 feeds returned 200 with the same request headers, so a global block of the script's identity is unlikely. A bot-protection rule on that path or address range is plausible but unconfirmed. I did **not** disguise the script as a browser to get around it, since a 403 is the site refusing the request. That feed is set to `skip` (not requested in fetch mode; verify still tries it once). If you ever enable France 24, re-run verify later; if it is still 403, leave it skipped.
+
 ### Step 1: verify (nothing is switched on, nothing is written)
+The one workflow now checks both the RSS sources and the GDELT files. Choose mode = **verify**, sources = **all**. For UN Geneva it also prints "feed discovery" candidates: addresses found on its RSS page. Copy the ones that look like news feeds into the `feeds: []` list of the `ungeneva` entry in `data/rss-sources.mjs` (same format as the others), commit, and run verify again to confirm they read correctly.
 1. Upload the new files (see "Files to add or replace" in the update instructions) and commit.
 2. **Actions → Update RSS news → Run workflow**, keep mode = **verify**, click **Run workflow**. (The button only appears once the file is on your main branch.)
 3. Open the run and read the **Run the RSS script** step and the **Summary** page. Each feed shows `OK` or `FAIL` with a reason, how many entries it has, its newest item date, how many items have no date, how many point outside the publisher's own website, and how many headlines matched each country, plus two sample headlines to eyeball.
@@ -157,9 +202,11 @@ python3 -m http.server 8000                 # then open http://localhost:8000
 `data/countries.js` has `risk` and `brief` entries with instructions at the top. Anything left empty shows as Unavailable. This site never generates scores or assessments.
 
 ## What has and has not been tested (RSS)
-**Simulated (`node tests/test-rss.mjs`, 90 checks, fake feeds on a local server, no real publisher contacted):** RSS 2.0, RDF (DW style) and Atom parsing; CDATA and entities; HTML pages and non-feeds rejected; date parsing including junk, future and pre-2000 dates; link and headline duplicates; off-site and unsafe links; country matching including false-positive cases; summary text never stored; verify mode (exit codes, per-feed reasons, writes nothing); refusal to fetch a publisher without `termsChecked`; one failing feed not blocking others; earlier articles and last-success time preserved when everything fails; 7-day expiry; removal of a switched-off publisher's articles; ETag/304; retry on 503, timeout, no retry on 404, refusal of a redirect to another website. The page was rendered in a headless browser using cache files produced by the script (not enabled, partly failed, all failed).
+**Simulated (`node tests/test-gdelt-files.mjs`, 46 checks):** ZIP reading (deflate, stored, non-ZIP, oversize, truncated); feed discovery; the GDELT file route end to end on fake files (lastupdate parsing, headline-only country matching, HTML entities, unsafe links, headline duplicates across sites, future or missing publication times left empty, headline-less records ignored, malformed lines counted); verify failing honestly when headlines or the 27-column layout are missing; repeat runs downloading nothing; a 404 file recorded as missing; a corrupt file not marked as read; a 503 retried; server down keeping cached articles with exit code 2; per-country cap; 3-day expiry; redirects to another host refused before being requested; plain http refused in the production setting.
 
-**Never run against the real publishers, so unverified:** whether any of the 12 feed addresses works from GitHub's servers today, what their real content looks like, whether any publisher blocks GitHub's addresses, and what any publisher's terms allow. The addresses came from third-party feed directories. **Verify mode on GitHub is the first real test.**
+**Simulated (`node tests/test-rss.mjs`, 105 checks, fake feeds on a local server, no real publisher contacted):** RSS 2.0, RDF (DW style) and Atom parsing; CDATA and entities; HTML pages and non-feeds rejected; date parsing including junk, future and pre-2000 dates; link and headline duplicates; off-site and unsafe links; country matching including false-positive cases; summary text never stored; verify mode (exit codes, per-feed reasons, writes nothing); refusal to fetch a publisher without `termsChecked`; one failing feed not blocking others; earlier articles and last-success time preserved when everything fails; 7-day expiry; removal of a switched-off publisher's articles; ETag/304; retry on 503, timeout, no retry on 404, hop-by-hop redirect checks (the refused target is never requested; relative redirects, 3-hop limit, loops, credentials in the address, plain http, missing feedHosts, IP-address feeds), and skipped feeds. The page was rendered in a headless browser using cache files produced by the script (not enabled, partly failed, all failed).
+
+**Never run against the real services, so unverified:** whether UN Geneva has usable feeds and what their addresses are, whether the real GDELT files match the assumed layout and are reachable from GitHub, how large they are in practice, whether any of the 12 publisher feed addresses works from GitHub's servers today, what their real content looks like, whether any publisher blocks GitHub's addresses, and what any publisher's terms allow. The addresses came from third-party feed directories. **Verify mode on GitHub is the first real test.**
 
 ## What has and has not been tested (GDELT and World Bank)
 **Simulated (local mock server, `tests/test-fetch.mjs`, 32 checks):** exponential backoff with jitter and `Retry-After`; skipping countries whose cache is fresh; the circuit breaker and time budget; World Bank data surviving a total GDELT failure; parsing; duplicate, unsafe-URL and untitled article removal; empty GDELT bodies; rate-limit retry; plain-text GDELT errors; persistent 503s; timeouts; World Bank missing values, error replies, unsupported codes and refusal of a reply for the wrong country; keeping earlier data when a refresh fails; exit code when everything fails. The front end was also rendered in a headless browser using cache files produced by the real script against the mock server.

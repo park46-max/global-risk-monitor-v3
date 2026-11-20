@@ -139,3 +139,21 @@ export function mergeItems(prev, incoming, { now = Date.now(), retentionDays = 7
   const kept = list.filter(it => when(it) >= cutoff).sort((a, b) => when(b) - when(a)).slice(0, maxItems);
   return { items: kept, dupes, added, expired: list.length - kept.length };
 }
+
+// ---------- feed discovery ----------
+// Finds candidate feed addresses on a web page: <link rel="alternate" type="application/rss+xml"> tags and links whose address looks like a feed.
+// Only addresses on `hosts` are returned. Nothing is requested here.
+export function extractFeedLinks(html, baseUrl, hosts) {
+  const found = new Map();
+  const add = (raw, why) => {
+    let u; try { u = new URL(decodeEntities(String(raw).trim()), baseUrl); } catch { return; }
+    if (!/^https?:$/.test(u.protocol) || !hostAllowed(u.hostname.toLowerCase(), hosts)) return;
+    u.hash = ''; if (!found.has(u.href)) found.set(u.href, why);
+  };
+  for (const m of html.matchAll(/<link\b[^>]*>/gi)) {
+    const t = m[0];
+    if (/type\s*=\s*["']application\/(rss|atom)\+xml["']/i.test(t)) { const h = /href\s*=\s*["']([^"']+)["']/i.exec(t); if (h) add(h[1], 'declared by the page as a feed'); }
+  }
+  for (const m of html.matchAll(/<a\b[^>]*\bhref\s*=\s*["']([^"']+)["']/gi)) if (/(\brss\b|rss\.xml|\.xml($|\?)|\/feed\b|\/rss\/)/i.test(m[1])) add(m[1], 'link on the page whose address looks like a feed');
+  return [...found].map(([url, why]) => ({ url, why }));
+}

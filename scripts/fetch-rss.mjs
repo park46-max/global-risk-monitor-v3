@@ -14,7 +14,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { parseFeed, buildItems, mergeItems, buildMatchers, hostAllowed, safeUrl, ParseError } from './rss-lib.mjs';
+import { parseFeed, buildItems, mergeItems, buildMatchers, extractFeedLinks, ParseError } from './rss-lib.mjs';
+import { createClient } from './http-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = n => (process.argv.find(a => a.startsWith('--' + n + '=')) || '').split('=')[1];
@@ -35,46 +36,10 @@ const iso = t => new Date(t).toISOString();
 const matchers = buildMatchers(COUNTRY_TERMS);
 const hasDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
 
-class FetchError extends Error { constructor(msg, retryable = false, retryAfterMs = 0) { super(msg); this.retryable = retryable; this.retryAfterMs = retryAfterMs; } }
-
-function decode(buf, contentType) {
-  let label = (/charset=["']?([\w-]+)/i.exec(contentType || '') || [])[1];
-  if (!label) label = (/<\?xml[^>]*encoding=["']([\w-]+)["']/i.exec(Buffer.from(buf.subarray(0, 200)).toString('latin1')) || [])[1];
-  try { return new TextDecoder(label || 'utf-8').decode(buf); } catch { return new TextDecoder('utf-8').decode(buf); }
-}
-
-// One request, no retries. Throws FetchError.
-async function requestOnce(feed, pub, cond) {
-  const headers = { 'User-Agent': UA, Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.1' };
-  if (cond && cond.etag) headers['If-None-Match'] = cond.etag;
-  if (cond && cond.lastModified) headers['If-Modified-Since'] = cond.lastModified;
-  let res;
-  try { res = await fetch(feed.url, { headers, redirect: 'follow', signal: AbortSignal.timeout(S.timeoutMs) }); }
-  catch (e) { throw new FetchError(e && e.name === 'TimeoutError' ? `timed out after ${S.timeoutMs / 1000} s` : 'network error: ' + (e.cause && e.cause.code || e.message), true); }
-  const finalUrl = safeUrl(res.url);
-  if (finalUrl && !hostAllowed(finalUrl.hostname.toLowerCase(), pub.hosts)) throw new FetchError('the address redirected to a different website (' + finalUrl.hostname + '), so it was not used');
-  if (res.status === 304) return { status: 304, headers: res.headers };
-  if (res.status === 429 || res.status >= 500) {
-    const ra = Number(res.headers.get('retry-after'));
-    throw new FetchError('HTTP ' + res.status, true, ra > 0 ? Math.min(ra * 1000, 60000) : 0);
-  }
-  if (!res.ok) throw new FetchError('HTTP ' + res.status);
-  const buf = new Uint8Array(await res.arrayBuffer());
-  if (buf.length > S0.maxBytes) throw new FetchError('response larger than ' + S0.maxBytes / 1048576 + ' MB, ignored');
-  return { status: res.status, headers: res.headers, text: decode(buf, res.headers.get('content-type')) };
-}
-
-async function request(feed, pub, cond, log) {
-  for (let attempt = 1; ; attempt++) {
-    try { return await requestOnce(feed, pub, cond); }
-    catch (e) {
-      if (!(e instanceof FetchError) || !e.retryable || attempt >= S.maxTries) throw e;
-      const d = Math.min(60000, S.retryBaseMs * 2 ** (attempt - 1)), wait = Math.min(60000, Math.max(d / 2 + Math.random() * d / 2, e.retryAfterMs));
-      log(`    ${e.message}. Retrying in ${(wait / 1000).toFixed(1)} s (attempt ${attempt + 1} of ${S.maxTries})`);
-      await sleep(wait);
-    }
-  }
-}
+const client = createClient({ ua: UA, timeoutMs: S.timeoutMs, maxTries: S.maxTries, retryBaseMs: S.retryBaseMs, maxBytes: S0.maxBytes, allowHttp: process.env.RSS_ALLOW_HTTP === '1' });
+const RSS_ACCEPT = 'application/rss+xml, application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.1';
+// All addresses go through scripts/http-lib.mjs: https only, publisher feed hosts only, every redirect checked before it is requested.
+const request = (feed, pub, cond, log) => client.request(feed.url, { hosts: pub.feedHosts, who: pub.name, cond, accept: RSS_ACCEPT }, log);
 
 const summaryLines = [];
 const say = l => { console.log(l); };
@@ -88,6 +53,17 @@ if (VERIFY) {
   summaryLines.push('## RSS feed verification', '', '| Feed | Result | Items | Newest item | Undated | Off-site links | Entries matching a country |', '|---|---|---|---|---|---|---|');
   let ok = 0, total = 0, first = true;
   for (const pub of publishers) {
+    if (pub.discoverUrl) {   // the publisher has no known feed addresses yet: look for them on its feeds page (one request, nothing is enabled by this)
+      try {
+        const r = await client.request(pub.discoverUrl, { hosts: pub.feedHosts, who: pub.name, accept: 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.1' }, say);
+        const links = extractFeedLinks(r.text, pub.discoverUrl, pub.feedHosts);
+        say(`${pub.name}: feed discovery on ${pub.discoverUrl}: ${links.length} candidate address(es)`);
+        links.slice(0, 40).forEach(l => say('    candidate: ' + l.url + '   (' + l.why + ')'));
+        summaryLines.push(`### ${pub.name}: feed discovery`, links.length ? links.slice(0, 40).map(l => `- ${l.url} (${l.why})`).join('\n') : 'No candidate feed address was found on the page.', '');
+        say('    These are only candidates. Add the ones that verify to data/rss-sources.mjs, then run verify again.');
+      } catch (e) { say(`${pub.name}: feed discovery failed: ${e.message}`); summaryLines.push(`### ${pub.name}: feed discovery failed`, String(e.message), ''); }
+      first = false;
+    }
     const termsOk = pub.enabled && hasDate(pub.termsChecked);
     say(`${pub.name}  [${termsOk ? 'enabled, terms checked ' + pub.termsChecked : pub.enabled ? 'enabled but NO termsChecked date: will be refused' : 'switched off'}]`);
     for (const feed of pub.feeds) {
@@ -104,7 +80,7 @@ if (VERIFY) {
         const newest = dates.length ? iso(Math.max(...dates)) : 'none';
         const per = Object.keys(COUNTRY_TERMS).map(id => id + ' ' + items.filter(i => i.matches[id]).length).join(', ');
         ok++;
-        line = `  OK   ${feed.id.padEnd(13)} HTTP ${r.status}  entries=${entries.length} usable=${valid} newest=${newest} undated=${stat.undated} off-site=${stat.offHost}  matches: ${per}`;
+        line = `  OK   ${feed.id.padEnd(13)} HTTP ${r.status}${r.hops ? ' (' + r.hops + ' redirect' + (r.hops > 1 ? 's' : '') + ')' : ''}  entries=${entries.length} usable=${valid} newest=${newest} undated=${stat.undated} off-site=${stat.offHost}  matches: ${per}`;
         row = `| ${feed.id} | OK (HTTP ${r.status}) | ${valid} | ${newest} | ${stat.undated} | ${stat.offHost} | ${per} |`;
         const sample = items.slice(0, 2).map(i => `        sample: "${i.title}" (${Object.keys(i.matches).join('/')})`);
         say(line); sample.forEach(say); summaryLines.push(row);
@@ -133,6 +109,11 @@ if (!active.length) {
   summaryLines.push('## RSS fetch', 'No publisher is enabled with a termsChecked date. Nothing was fetched.'); writeSummary();
   process.exit(3);
 }
+if (!active.some(p => p.feeds.some(f => !f.skip))) {
+  say('A publisher is enabled but has no feed addresses configured (or all are skipped), so nothing was fetched. Run verify to discover feed addresses, add them to data/rss-sources.mjs, then fetch again.');
+  summaryLines.push('## RSS fetch', 'No feed addresses are configured for the enabled publishers. Nothing was fetched.'); writeSummary();
+  process.exit(3);
+}
 const activeIds = new Set(active.map(p => p.id));
 const prevFeeds = (prev && prev.feeds) || {};
 let items = ((prev && prev.items) || []).filter(i => activeIds.has(i.publisherId));   // articles of a publisher that is now switched off are removed
@@ -140,6 +121,7 @@ const feeds = {};
 let tried = 0, worked = 0, dupes = 0, added = 0, first = true;
 summaryLines.push('## RSS fetch', '', '| Feed | Result | New articles |', '|---|---|---|');
 for (const pub of active) for (const feed of pub.feeds) {
+  if (feed.skip) { say(`${feed.id}: skipped (${feed.skip})`); continue; }
   tried++;
   if (!first) await sleep(S.gapMs + Math.random() * 1000); first = false;
   const old = prevFeeds[feed.id] || {};

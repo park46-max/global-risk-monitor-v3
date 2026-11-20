@@ -5,8 +5,10 @@ window.CONFIG = {
   indicatorsFile: 'data/cache/indicators.json',
   // Publisher RSS articles, written by scripts/fetch-rss.mjs once you have verified and enabled a publisher (see README).
   rssFile: 'data/cache/news-rss.json',
+  // Articles from GDELT's open 15-minute data files, written by scripts/fetch-gdelt-files.mjs.
+  gdeltFilesFile: 'data/cache/news-gdelt.json',
   // After this many hours without an update, the page labels the data "Stale".
-  staleAfterHours: { news: 24, indicators: 240, rss: 12 },
+  staleAfterHours: { news: 24, indicators: 240, rss: 12, gdeltFiles: 12 },
   // Natural Earth 1:110m boundaries (world-atlas package). Tried in order; the first that loads is used.
   atlas: ['data/countries-110m.json', 'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json'],
   // globe.gl (MIT licence). Tried in order. Save the file as vendor/globe.gl.min.js to stop using the CDN (see README).

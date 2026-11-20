@@ -86,6 +86,7 @@ const server = http.createServer((req, res) => {
   if (p === '/dw.rdf') return send(200, dwFeed());
   if (p === '/atom.xml') return send(200, atomFeed());
   if (p === '/pub2.xml') return send(200, samePub2());
+  if (p === '/discover') return send(200, `<html><head><link rel="alternate" type="application/rss+xml" href="/feeds/news.xml"></head><body><a href="/rss/humanrights.xml">x</a><a href="http://evil.example/rss.xml">y</a></body></html>`, { 'Content-Type': 'text/html' });
   if (p === '/html') return send(200, '<!doctype html><html><body>Sorry</body></html>', { 'Content-Type': 'text/html' });
   if (p === '/err500') return send(500, 'down');
   if (p === '/err404') return send(404, 'nope');
@@ -93,7 +94,13 @@ const server = http.createServer((req, res) => {
   if (p === '/slow') return setTimeout(() => send(200, goodFeed()), 2000);
   if (p === '/flaky') return hits[p] === 1 ? send(503, 'busy', { 'Retry-After': '0' }) : send(200, goodFeed());
   if (p === '/etag') return req.headers['if-none-match'] === 'W/"v1"' ? (res.writeHead(304), res.end()) : send(200, goodFeed(), { ETag: 'W/"v1"' });
-  if (p === '/redirect') { res.writeHead(302, { Location: 'http://localhost:' + PORT + '/good.xml' }); return res.end(); }
+  const go = loc => { res.writeHead(302, { Location: loc }); res.end(); };
+  if (p === '/redirect') return go('http://localhost:' + PORT + '/secret');                 // other host: must be refused BEFORE it is requested
+  if (p === '/secret') return send(200, goodFeed());
+  if (p === '/redir-rel') return go('/good.xml');                                           // relative redirect on the same host
+  if (p.startsWith('/chain/')) { const [, , k, lim] = p.split('/').map(Number); return k >= lim ? go('/good.xml') : go('/chain/' + (k + 1) + '/' + lim); }
+  if (p === '/redir-cred') return go('http://user:pw@127.0.0.1:' + PORT + '/good.xml');
+  if (p === '/redir-loop') return go('/redir-loop');
   send(404, 'unknown');
 });
 await new Promise(r => server.listen(0, '127.0.0.1', r)); PORT = server.address().port;
@@ -101,12 +108,12 @@ await new Promise(r => server.listen(0, '127.0.0.1', r)); PORT = server.address(
 const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'rss-test-')); let n = 0;
 const realCfg = pathToFileURL(path.join(ROOT, 'data', 'rss-sources.mjs')).href;
 const settings = { retentionDays: 7, maxItems: 400, timeoutMs: 15000, maxTries: 3, retryBaseMs: 5000, gapMs: 0, maxBytes: 5242880 };
-const pub = (id, name, feeds, extra = {}) => ({ id, name, hosts: ['127.0.0.1'], enabled: true, termsChecked: '2026-11-20', termsNote: 'test', feeds: feeds.map(([fid, p]) => ({ id: fid, label: fid, url: `http://127.0.0.1:${PORT}${p}` })), ...extra });
+const pub = (id, name, feeds, extra = {}) => ({ id, name, hosts: ['127.0.0.1'], feedHosts: ['127.0.0.1'], enabled: true, termsChecked: '2026-11-20', termsNote: 'test', feeds: feeds.map(([fid, p]) => ({ id: fid, label: fid, url: `http://127.0.0.1:${PORT}${p}` })), ...extra });
 function run(pubs, args, { out = null, env = {}, set = {} } = {}) {
   const cfg = path.join(TMP, `cfg${++n}.mjs`), o = out || path.join(TMP, `out${n}`);
   fs.writeFileSync(cfg, `export { COUNTRY_TERMS } from '${realCfg}';\nexport const SETTINGS = ${JSON.stringify({ ...settings, ...set })};\nexport const PUBLISHERS = ${JSON.stringify(pubs)};\n`);
   return new Promise(resolve => {
-    let log = ''; const c = spawn('node', [path.join(ROOT, 'scripts', 'fetch-rss.mjs'), ...args, '--out=' + o], { env: { ...process.env, RSS_CONFIG: cfg, RSS_NOW: '2026-11-20T08:00:00Z', RSS_GAP_MS: '0', RSS_RETRY_BASE_MS: '30', GITHUB_STEP_SUMMARY: '', ...env } });
+    let log = ''; const c = spawn('node', [path.join(ROOT, 'scripts', 'fetch-rss.mjs'), ...args, '--out=' + o], { env: { ...process.env, RSS_CONFIG: cfg, RSS_ALLOW_HTTP: '1', RSS_NOW: '2026-11-20T08:00:00Z', RSS_GAP_MS: '0', RSS_RETRY_BASE_MS: '30', GITHUB_STEP_SUMMARY: '', ...env } });
     c.stdout.on('data', d => log += d); c.stderr.on('data', d => log += d);
     c.on('close', code => { let cache = null; try { cache = JSON.parse(fs.readFileSync(path.join(o, 'news-rss.json'), 'utf8')); } catch {} resolve({ code, log, cache, out: o }); });
   });
@@ -181,8 +188,24 @@ r = await run([PE], ['--fetch'], { out: r.out, env: { RSS_NOW: '2026-11-20T09:00
 // ---------- Run 9: retry, timeout, redirect ----------
 r = await run([pub('f', 'Pub F', [['f-1', '/flaky']])], ['--fetch']); ok(r.code === 0 && r.cache.feeds['f-1'].status === 'ok' && hits['/flaky'] === 2 && /Retrying in/.test(r.log), 'a 503 is retried and then succeeds');
 r = await run([pub('g', 'Pub G', [['g-1', '/slow']])], ['--fetch'], { env: { RSS_TIMEOUT_MS: '300', RSS_MAX_TRIES: '2' } }); ok(r.code === 2 && /timed out/.test(r.cache.feeds['g-1'].error), 'a slow feed times out and is reported');
-r = await run([pub('h', 'Pub H', [['h-1', '/redirect']], { hosts: ['127.0.0.1'] })], ['--fetch']); ok(r.code === 2 && /redirected to a different website/.test(r.cache.feeds['h-1'].error), 'redirect to another host refused');
+hits['/secret'] = 0; r = await run([pub('h', 'Pub H', [['h-1', '/redirect']])], ['--fetch']);
+ok(r.code === 2 && /address on localhost refused: it is not one of Pub H's feed hosts/.test(r.cache.feeds['h-1'].error), 'redirect to another host refused'); ok(hits['/secret'] === 0, 'the refused redirect target was never requested (checked before the request, not after)');
+r = await run([pub('h2', 'Pub H2', [['h-2', '/redir-rel']])], ['--fetch']); ok(r.code === 0 && r.cache.feeds['h-2'].status === 'ok', 'a relative redirect on the publisher\'s own host is followed');
+r = await run([pub('h3', 'Pub H3', [['h-3', '/chain/1/3']])], ['--fetch']); ok(r.code === 0, 'three redirects are followed');
+r = await run([pub('h4', 'Pub H4', [['h-4', '/chain/1/9']])], ['--fetch']); ok(r.code === 2 && /more than 3 redirects/.test(r.cache.feeds['h-4'].error), 'more than three redirects refused');
+r = await run([pub('h5', 'Pub H5', [['h-5', '/redir-loop']])], ['--fetch']); ok(r.code === 2 && /more than 3 redirects/.test(r.cache.feeds['h-5'].error), 'a redirect loop stops');
+r = await run([pub('h6', 'Pub H6', [['h-6', '/redir-cred']])], ['--fetch']); ok(r.code === 2 && /user name or password/.test(r.cache.feeds['h-6'].error), 'redirect to an address with credentials refused');
+r = await run([pub('h7', 'Pub H7', [['h-7', '/redir-rel']])], ['--verify']); ok(/\(1 redirect\)/.test(r.log), 'verify mode reports the redirect');
+r = await run([pub('h8', 'Pub H8', [['h-8', '/good.xml']])], ['--fetch'], { env: { RSS_ALLOW_HTTP: '0' } }); ok(r.code === 2 && /only https addresses are allowed/.test(r.cache.feeds['h-8'].error), 'plain http refused when the test relaxation is off (production setting)');
+r = await run([pub('h9', 'Pub H9', [['h-9', '/good.xml']], { feedHosts: undefined })], ['--fetch']); ok(r.code === 2 && /none configured/.test(r.cache.feeds['h-9'].error), 'a publisher without feedHosts is refused (fails closed)');
+r = await run([pub('h10', 'Pub H10', [['h-10', '/good.xml']])], ['--fetch'], { env: { RSS_ALLOW_HTTP: '0' } }); ok(r.code === 2, 'IP-address feed refused in production mode');
+{ const before = hits['/good.xml'] || 0; const sk = pub('k', 'Pub K', [['k-1', '/good.xml'], ['k-2', '/dw.rdf']]); sk.feeds[0].skip = 'test'; r = await run([sk], ['--fetch']); ok(r.code === 0 && !r.cache.feeds['k-1'] && r.cache.feeds['k-2'].status === 'ok' && (hits['/good.xml'] || 0) === before, 'a feed with a skip reason is not requested'); }
 hits['/err404'] = 0; r = await run([pub('i', 'Pub I', [['i-1', '/err404']])], ['--fetch']); ok(hits['/err404'] === 1, 'a 404 is not retried');
+// ---------- Run 11: feed discovery and a publisher without feed addresses ----------
+const UN = pub('un', 'Pub UN', [], { enabled: false, termsChecked: null, discoverUrl: `http://127.0.0.1:${PORT}/discover` });
+r = await run([UN, PA], ['--verify']); ok(/feed discovery .*: 2 candidate/.test(r.log) && /candidate: http:\/\/127.0.0.1:\d+\/feeds\/news.xml/.test(r.log) && !/evil/.test(r.log), 'verify prints candidate feed addresses from the publisher page, same host only'); ok(/Add the ones that verify/.test(r.log) && r.cache === null, 'discovery only suggests, writes nothing');
+r = await run([{ ...UN, enabled: true, termsChecked: '2026-11-20' }], ['--fetch']); ok(r.code === 3 && /no feed addresses/.test(r.log) && r.cache === null, 'an enabled publisher with no feed addresses fetches nothing (exit 3)');
+r = await run([{ ...UN, discoverUrl: `http://localhost:${PORT}/discover` }], ['--verify']); ok(/feed discovery failed: address on localhost refused/.test(r.log), 'discovery page on a different host is refused');
 // ---------- Run 10: --only ----------
 r = await run([PA, PC], ['--verify', '--only=c']); ok(/c-1/.test(r.log) && !/a-good/.test(r.log), '--only limits verify to one publisher');
 
