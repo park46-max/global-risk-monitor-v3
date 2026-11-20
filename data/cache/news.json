@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-20T13:29:11.676Z",
-  "lastSuccessAt": "2026-11-20T13:29:25.916Z",
+  "checkedAt": "2026-11-20T19:17:41.527Z",
+  "lastSuccessAt": "2026-11-20T19:21:29.712Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "ok",
+      "status": "error",
       "attempted": true,
-      "error": null,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-20T13:29:25.916Z",
-      "checkedAt": "2026-11-20T13:29:25.916Z",
+      "checkedAt": "2026-11-20T19:22:43.611Z",
       "articles": [
         {
           "title": "After Iowa lead azide detonation , who will test the people ?",
@@ -180,37 +180,359 @@
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
       "status": "error",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T13:30:45.677Z",
+      "checkedAt": "2026-11-20T19:18:58.410Z",
       "articles": []
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
-      "fetchedAt": null,
-      "checkedAt": "2026-11-20T13:32:17.015Z",
-      "articles": []
+      "error": null,
+      "fetchedAt": "2026-11-20T19:19:25.627Z",
+      "checkedAt": "2026-11-20T19:19:25.627Z",
+      "articles": [
+        {
+          "title": "UN Faces Unprecedented Leadership Crisis as Security Council Fails to Agree on Guterre Successor – Sri Lanka Guardian",
+          "url": "https://slguardian.org/un-faces-unprecedented-leadership-crisis-as-security-council-fails-to-agree-on-guterres-successor/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Congo Former President Turns Rebel Leader in Bid to Block Tshisekedi Third Term – Sri Lanka Guardian",
+          "url": "https://slguardian.org/congos-former-president-turns-rebel-leader-in-bid-to-block-tshisekedis-third-term/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Pak fan boy : BJP hits out at Rahul Gandhi for describing India as side player in global affairs",
+          "url": "https://www.hindustantimes.com/india-news/pak-fan-boy-bjp-hits-out-at-rahul-gandhi-for-describing-india-as-side-player-in-global-affairs-101795151909138.html",
+          "domain": "hindustantimes.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Thursday Final Word",
+          "url": "https://hotair.com/ed-morrissey/2026/11/19/thursdays-final-word-n3821167",
+          "domain": "hotair.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "PM Wong and Xi reaffirm Singapore - China ties",
+          "url": "https://www.straitstimes.com/asia/east-asia/pm-wong-xi-reaffirm-close-singapore-china-ties-amid-growing-global-tensions",
+          "domain": "straitstimes.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Xi lauds PM for full turnaround in China relationship",
+          "url": "https://www.juneesoutherncross.com.au/story/9395015/xi-lauds-pm-for-full-turnaround-in-china-relationship/",
+          "domain": "juneesoutherncross.com.au",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "5 Perfect Steven Universe Episodes That Define the Whole Show , Including the One That Cancelled It",
+          "url": "https://comicbook.com/tv-shows/list/5-perfect-steven-universe-episodes-that-define-the-whole-show-including-the-one-that-cancelled-it/",
+          "domain": "comicbook.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Trump , Xi , Putin Hold Rare 3 - Way Talks On Nuclear Risks But Deliver No Breakthroughs",
+          "url": "https://www.oneindia.com/international/trump-xi-putin-hold-rare-3-way-talks-on-nuclear-risks-but-deliver-no-breakthroughs-8264789.html",
+          "domain": "oneindia.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "ARTHUR CYR : Movement and perhaps progress on Ukraine",
+          "url": "https://www.jacksonprogress-argus.com/opinion/arthur-cyr-movement-and-perhaps-progress-on-ukraine/article_bdf11a45-0b53-5f8f-9c26-6eb5ce4a7219.html",
+          "domain": "jacksonprogress-argus.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Editor Choice : Xi , Trump and Putin grand diplomatic theater leaves Asia on the sidelines",
+          "url": "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-xi-trump-and-putin-s-grand-diplomatic-theater-leaves-asia-on-the-sidelines",
+          "domain": "asia.nikkei.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Japan"
+        },
+        {
+          "title": "PM Wong meets Chinese President Xi Jinping , congratulates him on hosting APEC and historic US - Russia summit",
+          "url": "https://www.asiaone.com:443/singapore/xi-jinping-lawrence-wong-meeting",
+          "domain": "asiaone.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Russia attacks bridges in Ukraine Kyiv , three killed",
+          "url": "https://www.centralwesterndaily.com.au/story/9395009/russia-attacks-bridges-in-ukraines-kyiv-three-killed/",
+          "domain": "centralwesterndaily.com.au",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Indonesia asks Google to clarify removal of 19 , 000 YouTube channels , ministry says",
+          "url": "https://www.straitstimes.com/asia/se-asia/indonesia-asks-google-to-clarify-removal-of-19000-youtube-channels-ministry-says",
+          "domain": "straitstimes.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Denmark approves security deal with US and Greenland , seeking to finally ease tensions with Trump",
+          "url": "https://www.asiaone.com:443/world/denmark-approves-security-deal-us-and-greenland-seeking-finally-ease-tensions-trump",
+          "domain": "asiaone.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Trump , Xi and Putin Agree to Boost Global Energy Supplies",
+          "url": "https://energybangla.com/trump-xi-and-putin-agree-to-boost-global-energy-supplies/",
+          "domain": "energybangla.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Ukraine destruction of Crimean Bridge delivered major hit to Putin influence and Russia war effort",
+          "url": "https://www.abc.net.au/news/2026-11-20/ukraine-crimean-bridge-destruction-significance-explained/107408488",
+          "domain": "abc.net.au",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Britain , EU set to agree to reset but divisions persist",
+          "url": "https://www.centralwesterndaily.com.au/story/9395590/britain-eu-set-to-agree-to-reset-but-divisions-persist/",
+          "domain": "centralwesterndaily.com.au",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Oil prices gain as Houthi attacks on Riyadh raise supply concerns",
+          "url": "https://tribune.com.pk/story/2641333/oil-prices-gain-as-houthi-attacks-on-riyadh-raise-supply-concerns",
+          "domain": "tribune.com.pk",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Russia Takeover of Japanese Tobacco Assets Triggers $8 . 9 Billion Loss for Japan Tobacco – Sri Lanka Guardian",
+          "url": "https://slguardian.org/russias-takeover-of-japanese-tobacco-assets-triggers-8-9-billion-loss-for-japan-tobacco/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "APEC live : How events in Shenzhen unfolded",
+          "url": "https://asia.nikkei.com/politics/international-relations/apec/apec-live-how-events-in-shenzhen-unfolded",
+          "domain": "asia.nikkei.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Japan"
+        }
+      ]
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T13:32:17.015Z",
+      "checkedAt": "2026-11-20T19:21:05.783Z",
       "articles": []
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
-      "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
-      "fetchedAt": null,
-      "checkedAt": "2026-11-20T13:32:17.015Z",
-      "articles": []
+      "status": "ok",
+      "attempted": true,
+      "error": null,
+      "fetchedAt": "2026-11-20T19:21:29.712Z",
+      "checkedAt": "2026-11-20T19:21:29.712Z",
+      "articles": [
+        {
+          "title": "Asian shares head for worst week since 2020 as AI rout deepens",
+          "url": "https://www.asiaone.com:443/money/asian-shares-head-worst-week-2020-ai-rout-deepens",
+          "domain": "asiaone.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Japan Secures Access to Indian Missile Ranges in Major Indo - Pacific Defence Push",
+          "url": "https://slguardian.org/japan-secures-access-to-indian-missile-ranges-in-major-indo-pacific-defence-push/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Trump , Xi , Putin Hold Rare 3 - Way Talks On Nuclear Risks But Deliver No Breakthroughs",
+          "url": "https://www.oneindia.com/international/trump-xi-putin-hold-rare-3-way-talks-on-nuclear-risks-but-deliver-no-breakthroughs-8264789.html",
+          "domain": "oneindia.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Nifty , Sensex open lower as sell - off in AI weighs on sentiment , Gold down to lowest level of 2026",
+          "url": "http://www.milwaukeesun.com/news/279444425/nifty-sensex-open-lower-as-sell-off-in-ai-weighs-on-sentiment-gold-down-to-lowest-level-of-2026",
+          "domain": "milwaukeesun.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Editor Choice : Xi , Trump and Putin grand diplomatic theater leaves Asia on the sidelines",
+          "url": "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-xi-trump-and-putin-s-grand-diplomatic-theater-leaves-asia-on-the-sidelines",
+          "domain": "asia.nikkei.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Japan"
+        },
+        {
+          "title": "Takaichi Signals Dialogue with China After First Direct Encounters with Xi Amid Diplomatic Tensions",
+          "url": "https://slguardian.org/takaichi-signals-dialogue-with-china-after-first-direct-encounters-with-xi-amid-diplomatic-tensions/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Chip supply chain warns of broader disruption from new US export controls",
+          "url": "https://asia.nikkei.com/business/tech/semiconductors/chip-supply-chain-warns-of-broader-disruption-from-new-us-export-controls",
+          "domain": "asia.nikkei.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Japan"
+        },
+        {
+          "title": "TSMC tightens China AI chip curbs | The Straits Times",
+          "url": "https://www.straitstimes.com/asia/east-asia/tsmc-tightens-china-ai-chip-curbs-as-new-us-rules-close-manufacturing-loophole-sources-say",
+          "domain": "straitstimes.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Anthropic makes a $1 . 8 trillion debut : What investors should watch next",
+          "url": "https://www.business-standard.com/world-news/anthropic-ipo-stock-market-debut-valuation-investors-what-to-watch-next-126112000351_1.html",
+          "domain": "business-standard.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "APEC live : How events in Shenzhen unfolded",
+          "url": "https://asia.nikkei.com/politics/international-relations/apec/apec-live-how-events-in-shenzhen-unfolded",
+          "domain": "asia.nikkei.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Japan"
+        },
+        {
+          "title": "TSMC tightens China AI chip curbs as new US rules close manufacturing loophole , sources say",
+          "url": "https://www.asiaone.com:443/money/tsmc-tightens-china-ai-chip-curbs-new-us-rules-close-manufacturing-loophole-sources-say",
+          "domain": "asiaone.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "After Jensen , Nvidia China Scandal Just Reached Its Former No . 3",
+          "url": "http://www.zerohedge.com/political/after-jensen-nvidias-china-scandal-just-reached-its-former-no-3",
+          "domain": "zerohedge.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "TSMC invests USD 500 million in Anthropic , acquires 0 . 03 % stake at IPO price",
+          "url": "http://www.milwaukeesun.com/news/279444372/tsmc-invests-usd-500-million-in-anthropic-acquires-003-stake-at-ipo-price",
+          "domain": "milwaukeesun.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "SoftBank Leads Asian Technology Sell - off as Anthropic Debut Fuels AI Investment Concerns",
+          "url": "https://slguardian.org/softbank-leads-asian-technology-sell-off-as-anthropic-debut-fuels-ai-investment-concerns/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Asian stocks head for worst week since 2020 as AI rally loses steam",
+          "url": "https://www.business-standard.com/markets/news/asian-stocks-head-for-worst-week-since-2020-as-ai-rally-loses-steam-126112000154_1.html",
+          "domain": "business-standard.com",
+          "seendate": "20261120T063000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "TCS , Infosys , HCL Technologies , Tech Mahindra : IT stocks gain amid global AI theme selloff",
+          "url": "https://www.businesstoday.in/markets/stocks/story/tcs-infosys-hcl-technologies-tech-mahindra-it-stocks-gain-amid-global-ai-theme-selloff-568663-2026-11-20",
+          "domain": "businesstoday.in",
+          "seendate": "20261120T061500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "BT Opening Bell : Sensex , Nifty open lower amid bloodbath in global markets",
+          "url": "https://www.businesstoday.in/markets/stocks/story/bt-opening-bell-sensex-nifty-open-lower-amid-bloodbath-in-global-markets-568659-2026-11-20",
+          "domain": "businesstoday.in",
+          "seendate": "20261120T061500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "From Apple to Anthropic : World 10 most valuable companies after blockbuster IPO",
+          "url": "https://timesofindia.indiatimes.com/business/from-apple-to-anthropic-worlds-10-most-valuable-companies-after-blockbuster-ipo/articleshow/136014713.cms",
+          "domain": "timesofindia.indiatimes.com",
+          "seendate": "20261120T061500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Sensex and Nifty Decline Amid Profit - Taking and Weak Global Trends",
+          "url": "https://dailypioneer.com/business/stock-markets-fall-in-early-trade-amid-profit-taking-weak-global-trends",
+          "domain": "dailypioneer.com",
+          "seendate": "20261120T054500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Trump , Xi And Putin Pledge Nuclear Risk Talks At First Three - Way Summit",
+          "url": "https://www.worthynews.com/119214-trump-xi-and-putin-pledge-nuclear-risk-talks-at-first-three-way-summit",
+          "domain": "worthynews.com",
+          "seendate": "20261120T054500Z",
+          "language": "English",
+          "sourcecountry": "Israel"
+        }
+      ]
     }
   }
 }
