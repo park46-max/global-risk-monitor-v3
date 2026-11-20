@@ -1,0 +1,255 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-20T10:33:45.828Z",
+ "checkedAt": "2026-11-20T10:33:45.828Z",
+ "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+ "sources": {
+  "ucdp": "https://ucdp.uu.se/downloads/",
+  "worldBank": "https://data.worldbank.org/"
+ },
+ "ucdp": {
+  "status": "ok",
+  "error": null,
+  "version": "26.1",
+  "sourceUrl": "https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-261-csv.zip",
+  "latestYear": 2025,
+  "conflicts": {
+   "USA": [
+    {
+     "conflictId": "337",
+     "location": "Somalia",
+     "sideA": "Government of Somalia",
+     "sideB": "Al-Shabaab",
+     "intensity": 2,
+     "type": "internationalised internal",
+     "incompatibility": "government",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "13641",
+     "location": "Nigeria",
+     "sideA": "Government of Nigeria",
+     "sideB": "IS",
+     "intensity": 2,
+     "type": "internationalised internal",
+     "incompatibility": "territory",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "14609",
+     "location": "Iran, Israel",
+     "sideA": "Government of Iran",
+     "sideB": "Government of Israel",
+     "intensity": 2,
+     "type": "interstate",
+     "incompatibility": "government",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "259",
+     "location": "Iraq",
+     "sideA": "Government of Iraq",
+     "sideB": "IS",
+     "intensity": 1,
+     "type": "internationalised internal",
+     "incompatibility": "government",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "13604",
+     "location": "Syria",
+     "sideA": "Government of Syria",
+     "sideB": "IS",
+     "intensity": 1,
+     "type": "internationalised internal",
+     "incompatibility": "territory",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "14197",
+     "location": "Somalia",
+     "sideA": "Government of Somalia",
+     "sideB": "IS",
+     "intensity": 1,
+     "type": "internationalised internal",
+     "incompatibility": "territory",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "16099",
+     "location": "United Kingdom, United States of America, Yemen (North Yemen)",
+     "sideA": "Government of United Kingdom, Government of United States of America",
+     "sideB": "Government of Yemen (North Yemen)",
+     "intensity": 1,
+     "type": "interstate",
+     "incompatibility": "territory",
+     "role": "location or primary party"
+    }
+   ],
+   "CHN": [
+    {
+     "conflictId": "416",
+     "location": "Central African Republic",
+     "sideA": "Government of Central African Republic",
+     "sideB": "CMSPR, CPC, CPC-F",
+     "intensity": 1,
+     "type": "internationalised internal",
+     "incompatibility": "government",
+     "role": "supporting party"
+    }
+   ],
+   "RUS": [
+    {
+     "conflictId": "11347",
+     "location": "Mali",
+     "sideA": "Government of Mali",
+     "sideB": "JNIM",
+     "intensity": 2,
+     "type": "internationalised internal",
+     "incompatibility": "government",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "13243",
+     "location": "Russia (Soviet Union), Ukraine",
+     "sideA": "Government of Russia (Soviet Union)",
+     "sideB": "Government of Ukraine",
+     "intensity": 2,
+     "type": "interstate",
+     "incompatibility": "government and territory",
+     "role": "location or primary party"
+    },
+    {
+     "conflictId": "416",
+     "location": "Central African Republic",
+     "sideA": "Government of Central African Republic",
+     "sideB": "CMSPR, CPC, CPC-F",
+     "intensity": 1,
+     "type": "internationalised internal",
+     "incompatibility": "government",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "14113",
+     "location": "Mali",
+     "sideA": "Government of Mali",
+     "sideB": "IS",
+     "intensity": 1,
+     "type": "internationalised internal",
+     "incompatibility": "territory",
+     "role": "supporting party"
+    },
+    {
+     "conflictId": "16038",
+     "location": "Mali",
+     "sideA": "Government of Mali",
+     "sideB": "FLA",
+     "intensity": 1,
+     "type": "internationalised internal",
+     "incompatibility": "government and territory",
+     "role": "supporting party"
+    }
+   ],
+   "UKR": [
+    {
+     "conflictId": "13243",
+     "location": "Russia (Soviet Union), Ukraine",
+     "sideA": "Government of Russia (Soviet Union)",
+     "sideB": "Government of Ukraine",
+     "intensity": 2,
+     "type": "interstate",
+     "incompatibility": "government and territory",
+     "role": "location or primary party"
+    }
+   ],
+   "TWN": []
+  },
+  "fetchedAt": "2026-11-20T10:33:45.828Z",
+  "checkedAt": "2026-11-20T10:33:45.828Z"
+ },
+ "wgi": {
+  "USA": {
+   "status": "error",
+   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
+   "value": null,
+   "year": null,
+   "fetchedAt": null,
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "CHN": {
+   "status": "error",
+   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
+   "value": null,
+   "year": null,
+   "fetchedAt": null,
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "RUS": {
+   "status": "error",
+   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
+   "value": null,
+   "year": null,
+   "fetchedAt": null,
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "UKR": {
+   "status": "error",
+   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
+   "value": null,
+   "year": null,
+   "fetchedAt": null,
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "TWN": {
+   "status": "unsupported",
+   "error": "The World Bank API has no country with code TWN (The provided parameter value is not valid).",
+   "fetchedAt": "2026-11-20T10:33:45.828Z",
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  }
+ },
+ "unemployment": {
+  "USA": {
+   "status": "ok",
+   "error": null,
+   "value": 4.198,
+   "year": "2025",
+   "sourceUpdated": "2026-11-11",
+   "fetchedAt": "2026-11-20T10:33:45.828Z",
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "CHN": {
+   "status": "ok",
+   "error": null,
+   "value": 4.615,
+   "year": "2025",
+   "sourceUpdated": "2026-11-11",
+   "fetchedAt": "2026-11-20T10:33:45.828Z",
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "RUS": {
+   "status": "ok",
+   "error": null,
+   "value": 2.133,
+   "year": "2025",
+   "sourceUpdated": "2026-11-11",
+   "fetchedAt": "2026-11-20T10:33:45.828Z",
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "UKR": {
+   "status": "ok",
+   "error": null,
+   "value": 9.834,
+   "year": "2021",
+   "sourceUpdated": "2026-11-11",
+   "fetchedAt": "2026-11-20T10:33:45.828Z",
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  },
+  "TWN": {
+   "status": "none",
+   "error": null,
+   "sourceUpdated": null,
+   "fetchedAt": "2026-11-20T10:33:45.828Z",
+   "checkedAt": "2026-11-20T10:33:45.828Z"
+  }
+ }
+}

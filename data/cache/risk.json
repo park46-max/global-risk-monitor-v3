@@ -1,0 +1,927 @@
+{
+ "schema": 1,
+ "status": "ok",
+ "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
+ "methodologyVersion": 1,
+ "generatedAt": "2026-11-20T10:36:08.006Z",
+ "lastSuccessAt": "2026-11-20T10:36:08.006Z",
+ "checkedAt": "2026-11-20T10:36:08.006Z",
+ "inputs": {
+  "riskInputs": {
+   "status": "ok",
+   "checkedAt": "2026-11-20T10:33:45.828Z",
+   "lastSuccessAt": "2026-11-20T10:33:45.828Z"
+  },
+  "indicators": {
+   "status": "ok",
+   "checkedAt": "2026-11-20T08:07:20.453Z",
+   "lastSuccessAt": "2026-11-20T08:07:28.320Z"
+  },
+  "briefs": {
+   "generatedAt": "2026-11-20T10:12:22.959Z"
+  }
+ },
+ "countries": {
+  "USA": {
+   "name": "United States",
+   "security": {
+    "category": "security",
+    "status": "assessed",
+    "level": "High",
+    "summary": "United States is recorded in UCDP/PRIO v26.1 as the location of or a primary party in 7 state-based armed conflicts in 2025.",
+    "rule": "S2: location or primary party in a UCDP conflict of intensity 1 (minor) in the newest dataset year -> High",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 337, 2025",
+      "value": "Government of Somalia vs Al-Shabaab; location: Somalia; war (at least 1,000 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 13641, 2025",
+      "value": "Government of Nigeria vs IS; location: Nigeria; war (at least 1,000 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 14609, 2025",
+      "value": "Government of Iran vs Government of Israel; location: Iran, Israel; war (at least 1,000 battle-related deaths in the year); type: interstate; about government; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 259, 2025",
+      "value": "Government of Iraq vs IS; location: Iraq; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 13604, 2025",
+      "value": "Government of Syria vs IS; location: Syria; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 14197, 2025",
+      "value": "Government of Somalia vs IS; location: Somalia; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 16099, 2025",
+      "value": "Government of United Kingdom, Government of United States of America vs Government of Yemen (North Yemen); location: United Kingdom, United States of America, Yemen (North Yemen); minor conflict (25 to 999 battle-related deaths in the year); type: interstate; about territory; this country is a location or primary party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     }
+    ],
+    "sources": [
+     {
+      "name": "UCDP/PRIO Armed Conflict Dataset",
+      "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+      "url": "https://ucdp.uu.se/downloads/",
+      "licence": "CC BY 4.0 (stated on the UCDP download page)"
+     }
+    ],
+    "referenceDates": [
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
+     "Headlines are shown as reported context only and played no part in the level."
+    ],
+    "context": [
+     {
+      "headline": "Araghchi ridicules Israeli envoy for acting as 'commander-in-chief' of US military",
+      "publisher": "presstv.co.uk",
+      "url": "https://www.presstv.co.uk/Detail/2026/11/20/781159/iran-fires-back-at-israeli-envoy-for-setting-conditions-for-return-of-us-troops",
+      "time": "2026-11-20T10:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
+      "publisher": "webindia123.com",
+      "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
+      "time": "2026-11-20T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "US Envoys See Ukraine Peace Progress As NATO Debate Resurfaces",
+      "publisher": "heraldglobe.com",
+      "url": "http://www.heraldglobe.com/news/279444964/us-envoys-see-ukraine-peace-progress-as-nato-debate-resurfaces",
+      "time": "2026-11-20T10:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   },
+   "economic": {
+    "category": "economic",
+    "status": "assessed",
+    "level": "Low",
+    "summary": "Based on 3 World Bank macro indicators (inflation, gdp growth, unemployment); the highest band reached is Low.",
+    "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "Inflation (consumer prices, annual %)",
+      "value": "2.95",
+      "year": "2024",
+      "source": "Inflation, consumer prices (annual %)",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "Inflation (consumer prices, annual %): band",
+      "value": "Low",
+      "rule": "E: Inflation (consumer prices, annual %) 2.94952520485207 falls in the \"Low\" band"
+     },
+     {
+      "kind": "observed",
+      "label": "GDP growth (annual %)",
+      "value": "2.16",
+      "year": "2025",
+      "source": "GDP growth (annual %)",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "GDP growth (annual %): band",
+      "value": "Low",
+      "rule": "E: GDP growth (annual %) 2.16138195623856 falls in the \"Low\" band"
+     },
+     {
+      "kind": "observed",
+      "label": "Unemployment (% of labour force)",
+      "value": "4.2",
+      "year": "2025",
+      "source": "Unemployment, total (% of labour force), modelled ILO estimate",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
+     },
+     {
+      "kind": "interpretation",
+      "label": "Unemployment (% of labour force): band",
+      "value": "Low",
+      "rule": "E: Unemployment (% of labour force) 4.198 falls in the \"Low\" band"
+     }
+    ],
+    "sources": [
+     {
+      "name": "Inflation, consumer prices (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     },
+     {
+      "name": "GDP growth (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     },
+     {
+      "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+      "publisher": "World Bank (ILO modelled estimate)",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     }
+    ],
+    "referenceDates": [
+     "2024",
+     "2025",
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Headlines played no part in the level."
+    ],
+    "context": [],
+    "contextAsOf": null
+   },
+   "diplomatic": {
+    "category": "diplomatic",
+    "status": "insufficient",
+    "level": null,
+    "summary": "No level for United States: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "rule": null,
+    "facts": [],
+    "sources": [],
+    "referenceDates": [],
+    "lastSuccessAt": null,
+    "stale": false,
+    "limitations": [
+     "Headlines below are reports by publishers, shown only as context. They are not verified here and no level is derived from them.",
+     "A manually sourced assessment can be added in data/countries.js and is shown there instead."
+    ],
+    "insufficientReason": "method",
+    "context": [
+     {
+      "headline": "Araghchi ridicules Israeli envoy for acting as 'commander-in-chief' of US military",
+      "publisher": "presstv.co.uk",
+      "url": "https://www.presstv.co.uk/Detail/2026/11/20/781159/iran-fires-back-at-israeli-envoy-for-setting-conditions-for-return-of-us-troops",
+      "time": "2026-11-20T10:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
+      "publisher": "webindia123.com",
+      "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
+      "time": "2026-11-20T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+      "publisher": "udaipurkiran.com",
+      "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+      "time": "2026-11-20T09:30:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   }
+  },
+  "CHN": {
+   "name": "China",
+   "security": {
+    "category": "security",
+    "status": "assessed",
+    "level": "Moderate",
+    "summary": "China is recorded in UCDP/PRIO v26.1 as a supporting party in 1 state-based armed conflict in 2025.",
+    "rule": "S3: appears only as a supporting party in a UCDP conflict in the newest dataset year -> Moderate",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 416, 2025",
+      "value": "Government of Central African Republic vs CMSPR, CPC, CPC-F; location: Central African Republic; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     }
+    ],
+    "sources": [
+     {
+      "name": "UCDP/PRIO Armed Conflict Dataset",
+      "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+      "url": "https://ucdp.uu.se/downloads/",
+      "licence": "CC BY 4.0 (stated on the UCDP download page)"
+     }
+    ],
+    "referenceDates": [
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
+     "Headlines are shown as reported context only and played no part in the level."
+    ],
+    "context": [
+     {
+      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+      "publisher": "wsws.org",
+      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+      "time": "2026-11-20T08:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
+      "publisher": "baystreet.ca",
+      "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
+      "time": "2026-11-20T09:30:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump Calls from Air Force One After China Summit, Questions",
+      "publisher": "athens-times.com",
+      "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
+      "time": "2026-11-20T09:26:00.000Z",
+      "timeBasis": "published"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   },
+   "economic": {
+    "category": "economic",
+    "status": "assessed",
+    "level": "Low",
+    "summary": "Based on 3 World Bank macro indicators (inflation, gdp growth, unemployment); the highest band reached is Low.",
+    "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "Inflation (consumer prices, annual %)",
+      "value": "0.06",
+      "year": "2025",
+      "source": "Inflation, consumer prices (annual %)",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "Inflation (consumer prices, annual %): band",
+      "value": "Low",
+      "rule": "E: Inflation (consumer prices, annual %) 0.0595646916565402 falls in the \"Low\" band"
+     },
+     {
+      "kind": "observed",
+      "label": "GDP growth (annual %)",
+      "value": "4.96",
+      "year": "2025",
+      "source": "GDP growth (annual %)",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "GDP growth (annual %): band",
+      "value": "Low",
+      "rule": "E: GDP growth (annual %) 4.95994886240992 falls in the \"Low\" band"
+     },
+     {
+      "kind": "observed",
+      "label": "Unemployment (% of labour force)",
+      "value": "4.62",
+      "year": "2025",
+      "source": "Unemployment, total (% of labour force), modelled ILO estimate",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
+     },
+     {
+      "kind": "interpretation",
+      "label": "Unemployment (% of labour force): band",
+      "value": "Low",
+      "rule": "E: Unemployment (% of labour force) 4.615 falls in the \"Low\" band"
+     }
+    ],
+    "sources": [
+     {
+      "name": "Inflation, consumer prices (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     },
+     {
+      "name": "GDP growth (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     },
+     {
+      "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+      "publisher": "World Bank (ILO modelled estimate)",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     }
+    ],
+    "referenceDates": [
+     "2025",
+     "2025",
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Headlines played no part in the level."
+    ],
+    "context": [],
+    "contextAsOf": null
+   },
+   "diplomatic": {
+    "category": "diplomatic",
+    "status": "insufficient",
+    "level": null,
+    "summary": "No level for China: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "rule": null,
+    "facts": [],
+    "sources": [],
+    "referenceDates": [],
+    "lastSuccessAt": null,
+    "stale": false,
+    "limitations": [
+     "Headlines below are reports by publishers, shown only as context. They are not verified here and no level is derived from them.",
+     "A manually sourced assessment can be added in data/countries.js and is shown there instead."
+    ],
+    "insufficientReason": "method",
+    "context": [
+     {
+      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+      "publisher": "wsws.org",
+      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+      "time": "2026-11-20T08:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
+      "publisher": "baystreet.ca",
+      "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
+      "time": "2026-11-20T09:30:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump Calls from Air Force One After China Summit, Questions",
+      "publisher": "athens-times.com",
+      "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
+      "time": "2026-11-20T09:26:00.000Z",
+      "timeBasis": "published"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   }
+  },
+  "RUS": {
+   "name": "Russia",
+   "security": {
+    "category": "security",
+    "status": "assessed",
+    "level": "Critical",
+    "summary": "Russia is recorded in UCDP/PRIO v26.1 as the location of or a primary party in 5 state-based armed conflicts in 2025.",
+    "rule": "S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 11347, 2025",
+      "value": "Government of Mali vs JNIM; location: Mali; war (at least 1,000 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 13243, 2025",
+      "value": "Government of Russia (Soviet Union) vs Government of Ukraine; location: Russia (Soviet Union), Ukraine; war (at least 1,000 battle-related deaths in the year); type: interstate; about government and territory; this country is a location or primary party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 416, 2025",
+      "value": "Government of Central African Republic vs CMSPR, CPC, CPC-F; location: Central African Republic; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 14113, 2025",
+      "value": "Government of Mali vs IS; location: Mali; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 16038, 2025",
+      "value": "Government of Mali vs FLA; location: Mali; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government and territory; this country is a supporting party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     }
+    ],
+    "sources": [
+     {
+      "name": "UCDP/PRIO Armed Conflict Dataset",
+      "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+      "url": "https://ucdp.uu.se/downloads/",
+      "licence": "CC BY 4.0 (stated on the UCDP download page)"
+     }
+    ],
+    "referenceDates": [
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
+     "Headlines are shown as reported context only and played no part in the level."
+    ],
+    "context": [
+     {
+      "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+      "publisher": "aa.com.tr",
+      "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+      "time": "2026-11-20T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+      "publisher": "wsws.org",
+      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+      "time": "2026-11-20T08:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+      "publisher": "en.apa.az",
+      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+      "time": "2026-11-20T08:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   },
+   "economic": {
+    "category": "economic",
+    "status": "assessed",
+    "level": "Moderate",
+    "summary": "Based on 3 World Bank macro indicators (inflation, gdp growth, unemployment); the highest band reached is Moderate.",
+    "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "Inflation (consumer prices, annual %)",
+      "value": "8.72",
+      "year": "2025",
+      "source": "Inflation, consumer prices (annual %)",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "Inflation (consumer prices, annual %): band",
+      "value": "Moderate",
+      "rule": "E: Inflation (consumer prices, annual %) 8.71986939402666 falls in the \"Moderate\" band"
+     },
+     {
+      "kind": "observed",
+      "label": "GDP growth (annual %)",
+      "value": "1",
+      "year": "2025",
+      "source": "GDP growth (annual %)",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "GDP growth (annual %): band",
+      "value": "Moderate",
+      "rule": "E: GDP growth (annual %) 1.00117656925738 falls in the \"Moderate\" band"
+     },
+     {
+      "kind": "observed",
+      "label": "Unemployment (% of labour force)",
+      "value": "2.13",
+      "year": "2025",
+      "source": "Unemployment, total (% of labour force), modelled ILO estimate",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
+     },
+     {
+      "kind": "interpretation",
+      "label": "Unemployment (% of labour force): band",
+      "value": "Low",
+      "rule": "E: Unemployment (% of labour force) 2.133 falls in the \"Low\" band"
+     }
+    ],
+    "sources": [
+     {
+      "name": "Inflation, consumer prices (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     },
+     {
+      "name": "GDP growth (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     },
+     {
+      "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+      "publisher": "World Bank (ILO modelled estimate)",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     }
+    ],
+    "referenceDates": [
+     "2025",
+     "2025",
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Headlines played no part in the level.",
+     "UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution."
+    ],
+    "context": [],
+    "contextAsOf": null
+   },
+   "diplomatic": {
+    "category": "diplomatic",
+    "status": "insufficient",
+    "level": null,
+    "summary": "No level for Russia: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "rule": null,
+    "facts": [],
+    "sources": [],
+    "referenceDates": [],
+    "lastSuccessAt": null,
+    "stale": false,
+    "limitations": [
+     "Headlines below are reports by publishers, shown only as context. They are not verified here and no level is derived from them.",
+     "A manually sourced assessment can be added in data/countries.js and is shown there instead."
+    ],
+    "insufficientReason": "method",
+    "context": [
+     {
+      "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+      "publisher": "aa.com.tr",
+      "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+      "time": "2026-11-20T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+      "publisher": "wsws.org",
+      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+      "time": "2026-11-20T08:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+      "publisher": "en.apa.az",
+      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+      "time": "2026-11-20T08:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   }
+  },
+  "UKR": {
+   "name": "Ukraine",
+   "security": {
+    "category": "security",
+    "status": "assessed",
+    "level": "Critical",
+    "summary": "Ukraine is recorded in UCDP/PRIO v26.1 as the location of or a primary party in 1 state-based armed conflict in 2025.",
+    "rule": "S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "UCDP armed conflict 13243, 2025",
+      "value": "Government of Russia (Soviet Union) vs Government of Ukraine; location: Russia (Soviet Union), Ukraine; war (at least 1,000 battle-related deaths in the year); type: interstate; about government and territory; this country is a location or primary party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     }
+    ],
+    "sources": [
+     {
+      "name": "UCDP/PRIO Armed Conflict Dataset",
+      "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+      "url": "https://ucdp.uu.se/downloads/",
+      "licence": "CC BY 4.0 (stated on the UCDP download page)"
+     }
+    ],
+    "referenceDates": [
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
+     "Headlines are shown as reported context only and played no part in the level."
+    ],
+    "context": [
+     {
+      "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+      "publisher": "aa.com.tr",
+      "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+      "time": "2026-11-20T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+      "publisher": "en.apa.az",
+      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+      "time": "2026-11-20T08:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "US Envoys See Ukraine Peace Progress As NATO Debate Resurfaces",
+      "publisher": "heraldglobe.com",
+      "url": "http://www.heraldglobe.com/news/279444964/us-envoys-see-ukraine-peace-progress-as-nato-debate-resurfaces",
+      "time": "2026-11-20T10:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   },
+   "economic": {
+    "category": "economic",
+    "status": "assessed",
+    "level": "High",
+    "summary": "Based on 2 World Bank macro indicators (inflation, gdp growth); the highest band reached is High.",
+    "rule": "E: the overall level is the worst band among the 2 available indicators (bands in data/risk-methodology.mjs)",
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "Inflation (consumer prices, annual %)",
+      "value": "12.73",
+      "year": "2025",
+      "source": "Inflation, consumer prices (annual %)",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "Inflation (consumer prices, annual %): band",
+      "value": "High",
+      "rule": "E: Inflation (consumer prices, annual %) 12.7303341026902 falls in the \"High\" band"
+     },
+     {
+      "kind": "observed",
+      "label": "GDP growth (annual %)",
+      "value": "1.82",
+      "year": "2025",
+      "source": "GDP growth (annual %)",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+     },
+     {
+      "kind": "interpretation",
+      "label": "GDP growth (annual %): band",
+      "value": "Moderate",
+      "rule": "E: GDP growth (annual %) 1.82152376756284 falls in the \"Moderate\" band"
+     }
+    ],
+    "sources": [
+     {
+      "name": "Inflation, consumer prices (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     },
+     {
+      "name": "GDP growth (annual %)",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+      "licence": "World Bank Open Data, CC BY 4.0"
+     }
+    ],
+    "referenceDates": [
+     "2025",
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T08:07:26.089Z",
+    "stale": false,
+    "limitations": [
+     "Unemployment (% of labour force): the newest value is from 2021, older than 3 years, so it was not used.",
+     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Headlines played no part in the level.",
+     "UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution."
+    ],
+    "context": [],
+    "contextAsOf": null
+   },
+   "diplomatic": {
+    "category": "diplomatic",
+    "status": "insufficient",
+    "level": null,
+    "summary": "No level for Ukraine: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "rule": null,
+    "facts": [],
+    "sources": [],
+    "referenceDates": [],
+    "lastSuccessAt": null,
+    "stale": false,
+    "limitations": [
+     "Headlines below are reports by publishers, shown only as context. They are not verified here and no level is derived from them.",
+     "A manually sourced assessment can be added in data/countries.js and is shown there instead."
+    ],
+    "insufficientReason": "method",
+    "context": [
+     {
+      "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+      "publisher": "aa.com.tr",
+      "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+      "time": "2026-11-20T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+      "publisher": "en.apa.az",
+      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+      "time": "2026-11-20T08:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   }
+  },
+  "TWN": {
+   "name": "Taiwan",
+   "security": {
+    "category": "security",
+    "status": "insufficient",
+    "level": null,
+    "summary": "No level: UCDP records no state-based armed conflict involving Taiwan in 2025, but the World Bank does not publish this indicator for Taiwan (The World Bank API has no country with code TWN (The provided parameter value is not valid).), and nothing from another country is substituted. The absence of a recorded conflict is not evidence of low risk.",
+    "rule": null,
+    "facts": [
+     {
+      "kind": "observed",
+      "label": "UCDP/PRIO armed conflicts involving Taiwan, 2025",
+      "value": "none recorded in v26.1",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     }
+    ],
+    "sources": [
+     {
+      "name": "UCDP/PRIO Armed Conflict Dataset",
+      "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+      "url": "https://ucdp.uu.se/downloads/",
+      "licence": "CC BY 4.0 (stated on the UCDP download page)"
+     }
+    ],
+    "referenceDates": [
+     "2025"
+    ],
+    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "stale": false,
+    "limitations": [
+     "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
+     "Headlines are shown as reported context only and played no part in the level.",
+     "No sovereignty or status position is taken: names and country codes are used exactly as the sources give them."
+    ],
+    "insufficientReason": "no-evidence",
+    "context": [
+     {
+      "headline": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
+      "publisher": "armstrongeconomics.com",
+      "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
+      "time": "2026-11-20T05:03:00.000Z",
+      "timeBasis": "published"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   },
+   "economic": {
+    "category": "economic",
+    "status": "insufficient",
+    "level": null,
+    "summary": "No level: only 0 of the 3 indicators have a recent value (at least 2 are required). Missing data is not treated as low risk.",
+    "rule": null,
+    "facts": [],
+    "sources": [],
+    "referenceDates": [],
+    "lastSuccessAt": null,
+    "stale": false,
+    "limitations": [
+     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Headlines played no part in the level."
+    ],
+    "insufficientReason": "no-evidence",
+    "context": [],
+    "contextAsOf": null
+   },
+   "diplomatic": {
+    "category": "diplomatic",
+    "status": "insufficient",
+    "level": null,
+    "summary": "No level for Taiwan: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "rule": null,
+    "facts": [],
+    "sources": [],
+    "referenceDates": [],
+    "lastSuccessAt": null,
+    "stale": false,
+    "limitations": [
+     "Headlines below are reports by publishers, shown only as context. They are not verified here and no level is derived from them.",
+     "A manually sourced assessment can be added in data/countries.js and is shown there instead."
+    ],
+    "insufficientReason": "method",
+    "context": [
+     {
+      "headline": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
+      "publisher": "chinamil.com.cn",
+      "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
+      "time": "2026-11-20T07:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Taiwan's APEC participation smooth amid great-power diplomacy: Scholars",
+      "publisher": "focustaiwan.tw",
+      "url": "https://focustaiwan.tw/politics/202611200009",
+      "time": "2026-11-20T06:51:00.000Z",
+      "timeBasis": "published"
+     }
+    ],
+    "contextAsOf": "2026-11-20T10:12:22.959Z"
+   }
+  }
+ }
+}
