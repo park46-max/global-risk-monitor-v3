@@ -1,0 +1,1446 @@
+{
+ "schema": 1,
+ "status": "ok",
+ "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
+ "rulesVersion": 1,
+ "generatedAt": "2026-11-20T10:12:22.959Z",
+ "lastSuccessAt": "2026-11-20T10:12:22.959Z",
+ "checkedAt": "2026-11-20T10:12:22.959Z",
+ "inputs": {
+  "gdelt": {
+   "status": "ok",
+   "items": 148,
+   "lastSuccessAt": "2026-11-20T10:12:21.823Z",
+   "checkedAt": "2026-11-20T10:12:21.823Z",
+   "failedFeeds": 0,
+   "feeds": 1,
+   "stale": false
+  },
+  "rss": {
+   "status": "missing",
+   "items": 0
+  }
+ },
+ "itemStats": {
+  "read": 148,
+  "noSource": 0,
+  "noTime": 0,
+  "outsideWindow": 0,
+  "noCountry": 0,
+  "routineNotices": 8,
+  "grouped": 0
+ },
+ "countries": {
+  "USA": {
+   "generatedAt": "2026-11-20T10:12:22.959Z",
+   "window": {
+    "hours": 72,
+    "from": "2026-11-17T10:12:22.959Z",
+    "to": "2026-11-20T10:12:22.959Z"
+   },
+   "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
+   "status": "ok",
+   "reportsFound": 41,
+   "overview": {
+    "kind": "fact",
+    "text": "41 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 07:45 UTC to 2026-11-20 10:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 9, diplomacy 5.",
+    "evidence": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   "developments": [
+    {
+     "kind": "reporting",
+     "n": 1,
+     "headline": "Araghchi ridicules Israeli envoy for acting as 'commander-in-chief' of US military",
+     "publisher": "presstv.co.uk",
+     "url": "https://www.presstv.co.uk/Detail/2026/11/20/781159/iran-fires-back-at-israeli-envoy-for-setting-conditions-for-return-of-us-troops",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "US"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
+     "headline": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
+     "publisher": "webindia123.com",
+     "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "US"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
+     "headline": "US Envoys See Ukraine Peace Progress As NATO Debate Resurfaces",
+     "publisher": "heraldglobe.com",
+     "url": "http://www.heraldglobe.com/news/279444964/us-envoys-see-ukraine-peace-progress-as-nato-debate-resurfaces",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "US"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 4,
+     "headline": "US House committee warns of China's military use of Western aerospace technology, calls for tighter restrictions",
+     "publisher": "aninews.in",
+     "url": "https://aninews.in/news/world/us/us-house-committee-warns-of-china8217s-military-use-of-western-aerospace-technology-calls-for-tighter-restrictions20261120144738/",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "US"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 5,
+     "headline": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "U.S."
+      ]
+     },
+     "topics": [
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    }
+   ],
+   "why": [
+    {
+     "rule": "topic:security",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      9,
+      10,
+      12
+     ],
+     "text": "9 of the 12 listed reports use security wording (military, NATO, war, weapons) [1][2][3][4][7][8][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      5,
+      6,
+      11
+     ],
+     "text": "5 of the 12 listed reports use diplomacy wording (envoy, summit) [1][2][5][6][11]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "two-countries",
+     "kind": "analysis",
+     "evidence": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "text": "9 listed reports with topic keywords also name Ukraine, China, Russia and Taiwan [3][4][5][6][7][8][9][10][11]. A headline that names two countries does not show how they are connected."
+    }
+   ],
+   "sources": [
+    {
+     "n": 1,
+     "title": "Araghchi ridicules Israeli envoy for acting as 'commander-in-chief' of US military",
+     "publisher": "presstv.co.uk",
+     "url": "https://www.presstv.co.uk/Detail/2026/11/20/781159/iran-fires-back-at-israeli-envoy-for-setting-conditions-for-return-of-us-troops",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
+     "title": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
+     "publisher": "webindia123.com",
+     "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
+     "title": "US Envoys See Ukraine Peace Progress As NATO Debate Resurfaces",
+     "publisher": "heraldglobe.com",
+     "url": "http://www.heraldglobe.com/news/279444964/us-envoys-see-ukraine-peace-progress-as-nato-debate-resurfaces",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
+     "title": "US House committee warns of China's military use of Western aerospace technology, calls for tighter restrictions",
+     "publisher": "aninews.in",
+     "url": "https://aninews.in/news/world/us/us-house-committee-warns-of-china8217s-military-use-of-western-aerospace-technology-calls-for-tighter-restrictions20261120144738/",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
+     "title": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
+     "title": "China's Xi holds talks with regional leaders after APEC, trilateral summit with US, Russia",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/asia-pacific/chinas-xi-holds-talks-with-regional-leaders-after-apec-trilateral-summit-with-us-russia/4131664",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
+     "publisher": "aawsat.com",
+     "url": "https://english.aawsat.com/world/5343506-russia-pushes-back-against-us-idea-nato-style-security-guarantees-ukraine",
+     "time": "2026-11-20T08:49:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "Hillary Clinton demands escalation of US-NATO war against Russia",
+     "publisher": "wsws.org",
+     "url": "https://www.wsws.org/en/articles/2026/11/20/uduy-n20.html",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "US Says It Got Kremlin 'Comfortable' With NATO Article 5-Style Security Guarantees for Ukraine",
+     "publisher": "kyivpost.com",
+     "url": "https://www.kyivpost.com/post/90681",
+     "time": "2026-11-20T08:33:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Replace 'Russian junk' with American weapons system: US lawmaker to India",
+     "publisher": "idrw.org",
+     "url": "https://idrw.org/replace-russian-junk-with-american-weapons-system-us-lawmaker-to-india/",
+     "time": "2026-11-20T07:54:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
+     "title": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
+     "publisher": "chinamil.com.cn",
+     "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
+     "time": "2026-11-20T07:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
+     "title": "\"We will settle the war once and for all\": Iran tells US to accept its terms or face battlefield decision",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279444572/we-will-settle-the-war-once-and-for-all-iran-tells-us-to-accept-its-terms-or-face-battlefield-decision",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    }
+   ],
+   "limitations": [
+    "The rss cache file is not available (normal while no publisher RSS feed is enabled), so it contributed nothing."
+   ]
+  },
+  "CHN": {
+   "generatedAt": "2026-11-20T10:12:22.959Z",
+   "window": {
+    "hours": 72,
+    "from": "2026-11-17T10:12:22.959Z",
+    "to": "2026-11-20T10:12:22.959Z"
+   },
+   "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
+   "status": "ok",
+   "reportsFound": 44,
+   "overview": {
+    "kind": "fact",
+    "text": "44 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 07:45 UTC to 2026-11-20 10:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 8, diplomacy 6, sanctions and trade 1.",
+    "evidence": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   "developments": [
+    {
+     "kind": "reporting",
+     "n": 1,
+     "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+     "publisher": "wsws.org",
+     "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "China"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
+     "headline": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
+     "publisher": "baystreet.ca",
+     "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "China"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Sanctions and trade"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
+     "headline": "Trump Calls from Air Force One After China Summit, Questions",
+     "publisher": "athens-times.com",
+     "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
+     "time": "2026-11-20T09:26:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "China"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 4,
+     "headline": "US House committee warns of China's military use of Western aerospace technology, calls for tighter restrictions",
+     "publisher": "aninews.in",
+     "url": "https://aninews.in/news/world/us/us-house-committee-warns-of-china8217s-military-use-of-western-aerospace-technology-calls-for-tighter-restrictions20261120144738/",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "China"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 5,
+     "headline": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "China"
+      ]
+     },
+     "topics": [
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    }
+   ],
+   "why": [
+    {
+     "rule": "topic:security",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10
+     ],
+     "text": "8 of the 12 listed reports use security wording (war, army, air force, military) [1][2][3][4][6][7][9][10]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      3,
+      5,
+      8,
+      11,
+      12
+     ],
+     "text": "6 of the 12 listed reports use diplomacy wording (summit) [1][3][5][8][11][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "two-countries",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "text": "9 listed reports with topic keywords also name Russia, the United States, Ukraine and Taiwan [1][4][5][6][7][8][9][10][11]. A headline that names two countries does not show how they are connected."
+    }
+   ],
+   "sources": [
+    {
+     "n": 1,
+     "title": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+     "publisher": "wsws.org",
+     "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
+     "title": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
+     "publisher": "baystreet.ca",
+     "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
+     "title": "Trump Calls from Air Force One After China Summit, Questions",
+     "publisher": "athens-times.com",
+     "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
+     "time": "2026-11-20T09:26:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
+     "title": "US House committee warns of China's military use of Western aerospace technology, calls for tighter restrictions",
+     "publisher": "aninews.in",
+     "url": "https://aninews.in/news/world/us/us-house-committee-warns-of-china8217s-military-use-of-western-aerospace-technology-calls-for-tighter-restrictions20261120144738/",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
+     "title": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
+     "title": "UK conducting offensive cyber ops against Russia, China, Iran and North Korea, says top commander",
+     "publisher": "brfm.net",
+     "url": "https://www.brfm.net/uk-conducting-offensive-cyber-ops-against-russia-china-iran-and-north-korea-says-top-commander/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "'Wants the deal done': After China trilateral, Trump tells Europe that Putin wants to end Ukraine war, claim reports",
+     "publisher": "hindustantimes.com",
+     "url": "https://www.hindustantimes.com/world-news/wants-the-deal-done-after-china-trilateral-trump-tells-europe-that-putin-wants-to-end-ukraine-war-claim-reports-101795162348133.html",
+     "time": "2026-11-20T09:25:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "China's Xi holds talks with regional leaders after APEC, trilateral summit with US, Russia",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/asia-pacific/chinas-xi-holds-talks-with-regional-leaders-after-apec-trilateral-summit-with-us-russia/4131664",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "UK conducts offensive cyber operations against Russia, China, Iran, North Korea - top commander",
+     "publisher": "news.az",
+     "url": "https://news.az/news/uk-conducts-offensive-cyber-operations-against-russia-china-iran-north-korea-top-commander",
+     "time": "2026-11-20T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Trump says nuclear arms limits with China, Russia will be very hard to achieve",
+     "publisher": "tribune.com.pk",
+     "url": "https://tribune.com.pk/story/2641340/trump-says-nuclear-arms-limits-with-china-russia-will-be-very-hard-to-achieve",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
+     "title": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
+     "publisher": "chinamil.com.cn",
+     "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
+     "time": "2026-11-20T07:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
+     "title": "APEC leaders call for stronger connectivity, fewer trade barriers at China summit",
+     "publisher": "tribune.com.pk",
+     "url": "https://tribune.com.pk/story/2641346/apec-leaders-call-for-stronger-connectivity-fewer-trade-barriers-at-china-summit",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    }
+   ],
+   "limitations": [
+    "The rss cache file is not available (normal while no publisher RSS feed is enabled), so it contributed nothing."
+   ]
+  },
+  "RUS": {
+   "generatedAt": "2026-11-20T10:12:22.959Z",
+   "window": {
+    "hours": 72,
+    "from": "2026-11-17T10:12:22.959Z",
+    "to": "2026-11-20T10:12:22.959Z"
+   },
+   "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
+   "status": "ok",
+   "reportsFound": 40,
+   "overview": {
+    "kind": "fact",
+    "text": "40 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-20 09:45 UTC and come from 9 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 5.",
+    "evidence": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   "developments": [
+    {
+     "kind": "reporting",
+     "n": 1,
+     "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Russia"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
+     "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+     "publisher": "wsws.org",
+     "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Russia"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
+     "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+     "time": "2026-11-20T08:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Russian"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 4,
+     "headline": "Ukraine war latest: At least 6 killed after Russian strikes on key Kyiv bridges",
+     "publisher": "news.az",
+     "url": "https://news.az/news/ukraine-war-latest-at-least-6-killed-after-russian-strikes-on-key-kyiv-bridges",
+     "time": "2026-11-20T09:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Russian"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 5,
+     "headline": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Russia"
+      ]
+     },
+     "topics": [
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    }
+   ],
+   "why": [
+    {
+     "rule": "topic:security",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12
+     ],
+     "text": "10 of the 12 listed reports use security wording (military, war, drone attack, offensive) [1][2][3][4][6][7][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      5,
+      8
+     ],
+     "text": "5 of the 12 listed reports use diplomacy wording (peace talks, summit, ambassador) [1][2][3][5][8]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "two-countries",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "text": "12 listed reports with topic keywords also name Ukraine, China and the United States [1][2][3][4][5][6][7][8][9][10][11][12]. A headline that names two countries does not show how they are connected."
+    }
+   ],
+   "sources": [
+    {
+     "n": 1,
+     "title": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
+     "title": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
+     "publisher": "wsws.org",
+     "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
+     "title": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+     "time": "2026-11-20T08:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
+     "title": "Ukraine war latest: At least 6 killed after Russian strikes on key Kyiv bridges",
+     "publisher": "news.az",
+     "url": "https://news.az/news/ukraine-war-latest-at-least-6-killed-after-russian-strikes-on-key-kyiv-bridges",
+     "time": "2026-11-20T09:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
+     "title": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
+     "title": "UK conducting offensive cyber ops against Russia, China, Iran and North Korea, says top commander",
+     "publisher": "brfm.net",
+     "url": "https://www.brfm.net/uk-conducting-offensive-cyber-ops-against-russia-china-iran-and-north-korea-says-top-commander/",
+     "time": "2026-11-20T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "Russia pounds military targets across Ukraine",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279444859/russia-pounds-military-targets-across-ukraine-mod",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "China's Xi holds talks with regional leaders after APEC, trilateral summit with US, Russia",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/asia-pacific/chinas-xi-holds-talks-with-regional-leaders-after-apec-trilateral-summit-with-us-russia/4131664",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Russia pummels Ukraine in deadly strikes after renewed international criticism of war",
+     "publisher": "sbs.com.au",
+     "url": "https://www.sbs.com.au/news/article/russia-pummels-ukraine-in-deadly-strikes-after-renewed-international-criticism-of-war/kd5qp5i1n",
+     "time": "2026-11-20T09:06:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "UK conducts offensive cyber operations against Russia, China, Iran, North Korea - top commander",
+     "publisher": "news.az",
+     "url": "https://news.az/news/uk-conducts-offensive-cyber-operations-against-russia-china-iran-north-korea-top-commander",
+     "time": "2026-11-20T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
+     "title": "Ukraine war latest: Russian strikes kill 3 in Kyiv, damage key bridges",
+     "publisher": "news.az",
+     "url": "https://news.az/news/ukraine-war-latest-russian-strikes-kill-3-in-kyiv-damage-key-bridges",
+     "time": "2026-11-20T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
+     "title": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
+     "publisher": "aawsat.com",
+     "url": "https://english.aawsat.com/world/5343506-russia-pushes-back-against-us-idea-nato-style-security-guarantees-ukraine",
+     "time": "2026-11-20T08:49:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    }
+   ],
+   "limitations": [
+    "The rss cache file is not available (normal while no publisher RSS feed is enabled), so it contributed nothing."
+   ]
+  },
+  "UKR": {
+   "generatedAt": "2026-11-20T10:12:22.959Z",
+   "window": {
+    "hours": 72,
+    "from": "2026-11-17T10:12:22.959Z",
+    "to": "2026-11-20T10:12:22.959Z"
+   },
+   "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
+   "status": "ok",
+   "reportsFound": 42,
+   "overview": {
+    "kind": "fact",
+    "text": "42 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-20 10:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 3.",
+    "evidence": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   "developments": [
+    {
+     "kind": "reporting",
+     "n": 1,
+     "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Ukraine"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
+     "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+     "time": "2026-11-20T08:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Ukraine"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
+     "headline": "US Envoys See Ukraine Peace Progress As NATO Debate Resurfaces",
+     "publisher": "heraldglobe.com",
+     "url": "http://www.heraldglobe.com/news/279444964/us-envoys-see-ukraine-peace-progress-as-nato-debate-resurfaces",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Ukraine"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 4,
+     "headline": "Ukraine war latest: At least 6 killed after Russian strikes on key Kyiv bridges",
+     "publisher": "news.az",
+     "url": "https://news.az/news/ukraine-war-latest-at-least-6-killed-after-russian-strikes-on-key-kyiv-bridges",
+     "time": "2026-11-20T09:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Ukraine"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 5,
+     "headline": "'Wants the deal done': After China trilateral, Trump tells Europe that Putin wants to end Ukraine war, claim reports",
+     "publisher": "hindustantimes.com",
+     "url": "https://www.hindustantimes.com/world-news/wants-the-deal-done-after-china-trilateral-trump-tells-europe-that-putin-wants-to-end-ukraine-war-claim-reports-101795162348133.html",
+     "time": "2026-11-20T09:25:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Ukraine"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    }
+   ],
+   "why": [
+    {
+     "rule": "topic:security",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "text": "11 of the 12 listed reports use security wording (military, drone attack, NATO, war) [1][2][3][4][5][6][7][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      12
+     ],
+     "text": "3 of the 12 listed reports use diplomacy wording (peace talks, ambassador) [1][2][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "two-countries",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "text": "12 listed reports with topic keywords also name Russia, the United States and China [1][2][3][4][5][6][7][8][9][10][11][12]. A headline that names two countries does not show how they are connected."
+    }
+   ],
+   "sources": [
+    {
+     "n": 1,
+     "title": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
+     "title": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
+     "time": "2026-11-20T08:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
+     "title": "US Envoys See Ukraine Peace Progress As NATO Debate Resurfaces",
+     "publisher": "heraldglobe.com",
+     "url": "http://www.heraldglobe.com/news/279444964/us-envoys-see-ukraine-peace-progress-as-nato-debate-resurfaces",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
+     "title": "Ukraine war latest: At least 6 killed after Russian strikes on key Kyiv bridges",
+     "publisher": "news.az",
+     "url": "https://news.az/news/ukraine-war-latest-at-least-6-killed-after-russian-strikes-on-key-kyiv-bridges",
+     "time": "2026-11-20T09:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
+     "title": "'Wants the deal done': After China trilateral, Trump tells Europe that Putin wants to end Ukraine war, claim reports",
+     "publisher": "hindustantimes.com",
+     "url": "https://www.hindustantimes.com/world-news/wants-the-deal-done-after-china-trilateral-trump-tells-europe-that-putin-wants-to-end-ukraine-war-claim-reports-101795162348133.html",
+     "time": "2026-11-20T09:25:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
+     "title": "Russia pounds military targets across Ukraine",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279444859/russia-pounds-military-targets-across-ukraine-mod",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "Russia pummels Ukraine in deadly strikes after renewed international criticism of war",
+     "publisher": "sbs.com.au",
+     "url": "https://www.sbs.com.au/news/article/russia-pummels-ukraine-in-deadly-strikes-after-renewed-international-criticism-of-war/kd5qp5i1n",
+     "time": "2026-11-20T09:06:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "Ukraine war latest: Russian strikes kill 3 in Kyiv, damage key bridges",
+     "publisher": "news.az",
+     "url": "https://news.az/news/ukraine-war-latest-russian-strikes-kill-3-in-kyiv-damage-key-bridges",
+     "time": "2026-11-20T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
+     "publisher": "aawsat.com",
+     "url": "https://english.aawsat.com/world/5343506-russia-pushes-back-against-us-idea-nato-style-security-guarantees-ukraine",
+     "time": "2026-11-20T08:49:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "US Says It Got Kremlin 'Comfortable' With NATO Article 5-Style Security Guarantees for Ukraine",
+     "publisher": "kyivpost.com",
+     "url": "https://www.kyivpost.com/post/90681",
+     "time": "2026-11-20T08:33:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
+     "title": "Ukraine's destruction of Crimean Bridge delivered major hit to Putin's influence and Russia's war effort - 20-Nov-2026",
+     "publisher": "nzcity.co.nz",
+     "url": "https://home.nzcity.co.nz/news/article.aspx?id=458380",
+     "time": "2026-11-20T08:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
+     "title": "Putin invites European leaders to Moscow for peace talks as Russia pounds Kyiv",
+     "publisher": "irishtimes.com",
+     "url": "https://www.irishtimes.com/world/europe/2026/11/20/putin-invites-european-leaders-to-moscow-for-peace-talks-as-russia-pounds-kyiv/",
+     "time": "2026-11-20T08:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    }
+   ],
+   "limitations": [
+    "The rss cache file is not available (normal while no publisher RSS feed is enabled), so it contributed nothing."
+   ]
+  },
+  "TWN": {
+   "generatedAt": "2026-11-20T10:12:22.959Z",
+   "window": {
+    "hours": 72,
+    "from": "2026-11-17T10:12:22.959Z",
+    "to": "2026-11-20T10:12:22.959Z"
+   },
+   "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
+   "status": "ok",
+   "reportsFound": 21,
+   "overview": {
+    "kind": "fact",
+    "text": "21 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-20 10:15 UTC and come from 10 outlets. Reports with topic keywords (a report can have several): diplomacy 2, security 1.",
+    "evidence": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   "developments": [
+    {
+     "kind": "reporting",
+     "n": 1,
+     "headline": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
+     "publisher": "chinamil.com.cn",
+     "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
+     "time": "2026-11-20T07:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
+     "headline": "Taiwan's APEC participation smooth amid great-power diplomacy: Scholars",
+     "publisher": "focustaiwan.tw",
+     "url": "https://focustaiwan.tw/politics/202611200009",
+     "time": "2026-11-20T06:51:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
+     "headline": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
+     "publisher": "armstrongeconomics.com",
+     "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
+     "time": "2026-11-20T05:03:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 4,
+     "headline": "PNG has the legal right to close down Taiwan's office, but at what cost? – Radio Free Asia",
+     "publisher": "rfa.org",
+     "url": "https://www.rfa.org/english/pacific/2026/11/20/taiwan-representative-office-png-closure/",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 5,
+     "headline": "China urges Japan to 'correct erroneous words, deeds' on Taiwan",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/asia-pacific/china-urges-japan-to-correct-erroneous-words-deeds-on-taiwan/4131875",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [],
+     "alsoReportedBy": []
+    }
+   ],
+   "why": [
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2
+     ],
+     "text": "2 of the 12 listed reports use diplomacy wording (summit, diplomacy) [1][2]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "two-countries",
+     "kind": "analysis",
+     "evidence": [
+      1
+     ],
+     "text": "1 listed report with topic keywords also names the United States, China and Russia [1]. A headline that names two countries does not show how they are connected."
+    }
+   ],
+   "sources": [
+    {
+     "n": 1,
+     "title": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
+     "publisher": "chinamil.com.cn",
+     "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
+     "time": "2026-11-20T07:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
+     "title": "Taiwan's APEC participation smooth amid great-power diplomacy: Scholars",
+     "publisher": "focustaiwan.tw",
+     "url": "https://focustaiwan.tw/politics/202611200009",
+     "time": "2026-11-20T06:51:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
+     "title": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
+     "publisher": "armstrongeconomics.com",
+     "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
+     "time": "2026-11-20T05:03:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
+     "title": "PNG has the legal right to close down Taiwan's office, but at what cost? – Radio Free Asia",
+     "publisher": "rfa.org",
+     "url": "https://www.rfa.org/english/pacific/2026/11/20/taiwan-representative-office-png-closure/",
+     "time": "2026-11-20T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
+     "title": "China urges Japan to 'correct erroneous words, deeds' on Taiwan",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/asia-pacific/china-urges-japan-to-correct-erroneous-words-deeds-on-taiwan/4131875",
+     "time": "2026-11-20T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
+     "title": "Meta removes thousands of accounts flagged by Taiwan in China influence probe",
+     "publisher": "jpost.com",
+     "url": "http://www.jpost.com/international/article-915564",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "Jefferies' Chris Wood increases India bet; reduces Taiwan weight as AI stocks walk on thin ice",
+     "publisher": "indiatimes.com",
+     "url": "https://economictimes.indiatimes.com/markets/stocks/news/jefferies-chris-wood-increases-india-bet-reduces-taiwan-weight-as-ai-stocks-walk-on-thin-ice/articleshow/136018276.cms",
+     "time": "2026-11-20T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "China accused of intimidating European lawmakers over Taiwan ties",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/20/2003868096",
+     "time": "2026-11-20T08:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "National Palace Museum, Taipei cultural chief clash over solar panels",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/20/2003868097",
+     "time": "2026-11-20T08:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Jefferies Boosts Indian Equity Exposure as AI Sell-Off Weighs on Taiwan Investments",
+     "publisher": "siliconindia.com",
+     "url": "https://www.siliconindia.com/news/general/jefferies-boosts-indian-equity-exposure-as-ai-selloff-weighs-on-taiwan-investments-nid-243180-cid-1.html",
+     "time": "2026-11-20T08:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
+     "title": "AI power demand revives global solar PV momentum, while policy bottlenecks leave Taiwan facing a green energy crunch",
+     "publisher": "digitimes.com",
+     "url": "https://www.digitimes.com/news/a20261120PD227/solar-taiwan-pv-demand-policy.html",
+     "time": "2026-11-20T08:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
+     "title": "Taiwan to build robotics simulation platform with 30+ industry players to advance smart robot development",
+     "publisher": "digitimes.com",
+     "url": "https://www.digitimes.com/news/a20261120PD229/taiwan-development-robot-management-training.html",
+     "time": "2026-11-20T08:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    }
+   ],
+   "limitations": [
+    "The rss cache file is not available (normal while no publisher RSS feed is enabled), so it contributed nothing."
+   ]
+  }
+ }
+}
