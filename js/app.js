@@ -28,7 +28,7 @@ function stamp(iso, maxH, label, failed) {   // freshness pill built from the re
 // ---------- state ----------
 let cur = IDS.includes(location.hash.slice(1).toUpperCase()) ? location.hash.slice(1).toUpperCase() : 'USA';
 let GEO = null, globeOn = false, rotSeg = null;
-const store = { news: null, ind: null, rss: null, gk: null, br: null };
+const store = { news: null, ind: null, rss: null, gk: null, br: null, rk: null };
 
 // ---------- cached data (written by the GitHub Action, Stage 2) ----------
 async function loadJson(path) {
@@ -37,7 +37,7 @@ async function loadJson(path) {
 }
 async function loadAll() {
   $('#meta').replaceChildren(pill('load'));
-  [store.news, store.ind, store.rss, store.gk, store.br] = await Promise.all([loadJson(CFG.newsFile), loadJson(CFG.indicatorsFile), loadJson(CFG.rssFile), loadJson(CFG.gdeltFilesFile), loadJson(CFG.briefsFile || 'data/cache/briefs.json')]);
+  [store.news, store.ind, store.rss, store.gk, store.br, store.rk] = await Promise.all([loadJson(CFG.newsFile), loadJson(CFG.indicatorsFile), loadJson(CFG.rssFile), loadJson(CFG.gdeltFilesFile), loadJson(CFG.briefsFile || 'data/cache/briefs.json'), loadJson(CFG.riskFile || 'data/cache/risk.json')]);
   const n = store.news, d = store.ind;
   const head = (r, what, hrs, bad) => {
     if (!r.ok) return [pill('bad', what + ': unavailable')];
@@ -50,7 +50,7 @@ async function loadAll() {
     return [p];
   };
   $('#meta').replaceChildren(...headSrc(store.rss, 'Official feeds', CFG.staleAfterHours.rss), ...headSrc(store.gk, 'GDELT files', CFG.staleAfterHours.gdeltFiles), ...head(n, 'GDELT search', CFG.staleAfterHours.news, c => c.status === 'error'), ...head(d, 'Indicators', CFG.staleAfterHours.indicators, c => c.status === 'error' || c.status === 'partial'));
-  paintNews(); paintData(); brief();
+  paintNews(); paintData(); brief(); risk();
 }
 function headSrc(r, label, h) {   // header pill for a feed-style cache (publisher RSS, GDELT files)
   if (!r.ok) return [pill('bad', label + (r.error === 'file not found' ? ': not enabled yet' : ': unavailable'))];
@@ -183,15 +183,39 @@ function head() {
   const c = C[cur];
   $('#head').replaceChildren(el('div', 'card chead', [el('div', 'chl', [el('h2', null, c.name), el('span', null, cur)]), ...(c.note ? [el('p', 'callout', [pill('ed'), c.note])] : [])]));
 }
+// ----- risk assessment cards: built by scripts/build-risk.mjs from public datasets with documented rules (README "Risk assessments"). Hand-written entries in data/countries.js still win. -----
 function risk() {
-  const g = el('div', 'grid3');
+  const s = store.rk, g = el('div', 'grid3'), top = [], hand = C[cur].risk || {}, hrs = CFG.staleAfterHours.risk || 72;
+  const file = s && s.ok && s.json && s.json.countries ? s.json : null, auto = file && file.countries[cur];
+  if (!s) { $('#risk').replaceChildren(skel()); return; }
+  if (file) {
+    const failed = file.status === 'error';
+    top.push(stamp(file.lastSuccessAt, hrs, 'Assessments built', failed));
+    if (failed) top.push(pill('stale', 'Latest rebuild failed: earlier assessments kept'));
+    const ri = file.inputs && file.inputs.riskInputs, days = CFG.riskInputsStaleDays || 14;
+    if (ri && ri.status === 'ok' && ri.lastSuccessAt && (Date.now() - new Date(ri.lastSuccessAt)) / 864e5 > days) top.push(pill('stale', 'Risk datasets not refreshed for over ' + days + ' days'));
+    if (failed) top.push(el('div', 'state err', [el('b', null, 'The latest rebuild failed: '), file.error || 'no reason recorded', '. The assessments below are the last successful ones (' + fmtUTC(file.lastSuccessAt) + ').']));
+  }
+  const LABEL = { security: 'Security', economic: 'Economic', diplomatic: 'Diplomatic' };
   ['security', 'economic', 'diplomatic'].forEach(k => {
-    const r = C[cur].risk[k], b = el('div', 'tile', el('h3', null, k[0].toUpperCase() + k.slice(1)));
-    if (r) { b.append(pill('ana'), el('p', 'big', r.rating), el('p', 'meta', r.assessor + ', as of ' + r.asOf)); if (r.note) b.append(el('p', 'meta', 'Analyst note: ' + r.note)); if (safe(r.url)) b.append(link(r.url, 'Source')); }
-    else b.append(pill('bad'), el('p', 'big dim', 'No sourced assessment'), el('p', 'meta', 'Nothing is shown rather than guessing.'));
+    const r = hand[k], a = auto && auto[k], b = el('div', 'tile', el('h3', null, LABEL[k]));
+    if (r) { b.append(pill('ana'), el('p', 'big', r.rating), el('p', 'meta', r.assessor + ', as of ' + r.asOf)); if (r.note) b.append(el('p', 'meta', 'Analyst note: ' + r.note)); if (safe(r.url)) b.append(link(r.url, 'Source')); g.append(b); return; }
+    if (!file) { b.append(pill('bad'), el('p', 'big dim', 'Unavailable'), el('p', 'meta', s.error === 'file not found' ? 'The risk assessments have not been generated yet (the workflow has not run). Nothing is shown rather than guessing.' : 'The cache file ' + CFG.riskFile + ' could not be read (' + s.error + ').')); g.append(b); return; }
+    if (!a) { b.append(pill('bad'), el('p', 'big dim', 'Unavailable'), el('p', 'meta', 'The cache has no entry for ' + C[cur].name + '.')); g.append(b); return; }
+    const ok = a.status === 'assessed';
+    b.append(ok ? pill('ana', 'Rule-based assessment') : pill('bad', 'Insufficient data'), ...(a.stale ? [pill('stale', 'Stale inputs')] : []), el('p', ok ? 'big' : 'big dim', ok ? a.level : 'Insufficient data'), el('p', 'meta', a.summary));
+    const fold = (title, kids) => { if (kids.length) { const d = el('details'); d.append(el('summary', null, title), ...kids); b.append(d); } };
+    const obs = (a.facts || []).filter(f => f.kind === 'observed'), itp = (a.facts || []).filter(f => f.kind === 'interpretation');
+    fold('Observed facts (' + obs.length + ')', obs.length ? [(() => { const ul = el('ul'); obs.forEach(f => ul.append(el('li', null, [el('b', null, f.label + ': '), f.value, ' (' + (f.year || 'year n/a') + ', ', link(f.url, f.source), ')']))); return ul; })()] : []);
+    fold('Rule-based interpretation', ok ? [el('p', 'meta', a.rule || ''), ...(itp.length ? [(() => { const ul = el('ul'); itp.forEach(f => ul.append(el('li', null, f.label.replace(': band', '') + ': ' + f.value))); return ul; })()] : []), el('p', 'meta', 'An interpretation by fixed rules, not an observed fact, forecast or verdict.')] : [el('p', 'meta', 'No level is derived. ' + (a.insufficientReason === 'method' ? 'No defensible automated method exists for this category.' : 'The evidence is missing or too thin; missing data is never treated as low risk.'))]);
+    fold('Sources and dates', [(() => { const ul = el('ul'); (a.sources || []).forEach(x => ul.append(el('li', null, [link(x.url, x.name), ' (' + x.publisher + (x.licence ? ', ' + x.licence : '') + ')']))); if (!(a.sources || []).length) ul.append(el('li', 'dim', 'No data source was used.')); return ul; })(),
+      el('p', 'meta', 'Reference year' + ((a.referenceDates || []).length === 1 ? '' : 's') + ': ' + ((a.referenceDates || []).join(', ') || 'n/a') + '. Last successful input update: ' + (a.lastSuccessAt ? fmtUTC(a.lastSuccessAt) : 'n/a') + '.')]);
+    fold('Limitations (' + (a.limitations || []).length + ')', [(() => { const ul = el('ul'); (a.limitations || []).forEach(t => ul.append(el('li', null, t))); return ul; })()]);
+    const ctx = a.context || [];
+    if (ctx.length) fold('Reported context, not used for the level (' + ctx.length + ')', [el('p', 'meta', 'Headlines are reports by publishers, not verified facts.'), (() => { const ul = el('ul'); ctx.forEach(c => ul.append(el('li', null, [link(c.url, c.headline), el('div', 'meta', c.publisher + (c.time ? ' · ' + (c.timeBasis || 'time') + ' ' + fmtUTC(c.time) : ' · time not provided'))]))); return ul; })()]);
     g.append(b);
   });
-  $('#risk').replaceChildren(g, el('p', 'note', 'This site never generates scores. Sourced assessments are added by hand in data/countries.js.'));
+  $('#risk').replaceChildren(...top, g, el('p', 'note', file ? 'Levels come only from the public datasets named in each card, by fixed rules documented in the README. Headlines and article counts never set a level. "Insufficient data" means the evidence is missing or too thin; it is not a finding of low risk. Observed facts and rule-based interpretation are listed separately.' : 'No assessment is shown until it has been generated from sourced data.'));
 }
 // ----- country intelligence brief: built by scripts/build-briefs.mjs from the cached news (fixed rules, no AI). Hand-written entries in data/countries.js still win. -----
 function brief() {

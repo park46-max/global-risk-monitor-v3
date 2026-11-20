@@ -1,0 +1,157 @@
+// Risk assessment rules as pure functions (no network, no file access, no AI). Rules and thresholds live in data/risk-methodology.mjs.
+// An assessment is either { status:'assessed', level } with the facts and rule that justify it, or { status:'insufficient', level:null } with the reason.
+// A level is never produced from news headlines or article counts, and missing data never becomes "Low".
+import { safeUrl } from './rss-lib.mjs';
+
+const iso = ms => new Date(ms).toISOString();
+const fin = v => typeof v === 'number' && Number.isFinite(v);
+const dayMs = 864e5;
+
+// ---------- UCDP/PRIO Armed Conflict Dataset (CSV) ----------
+export function parseCsv(text) {
+  const rows = []; let row = [], f = '', q = false;
+  const s = String(text).replace(/^﻿/, '');
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (q) { if (c === '"') { if (s[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ',') { row.push(f); f = ''; }
+    else if (c === '\n' || c === '\r') { if (c === '\r' && s[i + 1] === '\n') i++; row.push(f); f = ''; if (row.length > 1 || row[0] !== '') rows.push(row); row = []; }
+    else f += c;
+  }
+  if (f !== '' || row.length) { row.push(f); rows.push(row); }
+  return rows;
+}
+const NEEDED = ['conflict_id', 'location', 'side_a', 'side_b', 'year', 'intensity_level', 'type_of_conflict', 'gwno_a', 'gwno_b', 'gwno_loc'];
+const TYPE = { 1: 'extra-systemic', 2: 'interstate', 3: 'internal', 4: 'internationalised internal' }, INCOMP = { 1: 'territory', 2: 'government', 3: 'government and territory' };
+const gws = v => String(v == null ? '' : v).split(/[,;\s]+/).filter(Boolean).map(Number).filter(Number.isFinite);
+
+// Throws if the file does not have the expected columns: the layout is never guessed.
+export function parseUcdp(text) {
+  const t = parseCsv(text); if (t.length < 2) throw new Error('the UCDP file has no data rows');
+  const head = t[0].map(h => h.trim().toLowerCase()), miss = NEEDED.filter(c => !head.includes(c));
+  if (miss.length) throw new Error('unexpected UCDP file layout: missing column(s) ' + miss.join(', '));
+  const ix = Object.fromEntries(head.map((h, i) => [h, i])), rows = [];
+  for (const r of t.slice(1)) {
+    const year = Number(r[ix.year]), inten = Number(r[ix.intensity_level]);
+    if (!Number.isInteger(year) || ![1, 2].includes(inten)) continue;
+    const g = k => (ix[k] == null ? '' : r[ix[k]]);
+    rows.push({ id: String(r[ix.conflict_id]).trim(), year, intensity: inten, location: String(g('location')).trim(), sideA: String(g('side_a')).trim(), sideB: String(g('side_b')).trim(), type: Number(g('type_of_conflict')), incompatibility: Number(g('incompatibility')),
+      loc: gws(g('gwno_loc')), prim: [...gws(g('gwno_a')), ...gws(g('gwno_b'))], supp: [...gws(g('gwno_a_2nd')), ...gws(g('gwno_b_2nd'))] });
+  }
+  if (!rows.length) throw new Error('the UCDP file has no usable rows (intensity level 1 or 2 with a year)');
+  return { latestYear: Math.max(...rows.map(r => r.year)), rows };
+}
+// Conflicts of the newest year in which a country takes part, per monitored country: { USA: [...], ... } (an empty list = none recorded).
+export function summariseUcdp(parsed, countries) {
+  const out = {};
+  for (const [id, c] of Object.entries(countries)) {
+    const list = [];
+    for (const r of parsed.rows.filter(r => r.year === parsed.latestYear)) {
+      const role = r.loc.includes(c.gw) || r.prim.includes(c.gw) ? 'location or primary party' : r.supp.includes(c.gw) ? 'supporting party' : null;
+      if (role) list.push({ conflictId: r.id, location: r.location, sideA: r.sideA, sideB: r.sideB, intensity: r.intensity, type: TYPE[r.type] || null, incompatibility: INCOMP[r.incompatibility] || null, role });
+    }
+    out[id] = list.sort((a, b) => b.intensity - a.intensity || a.conflictId.localeCompare(b.conflictId, 'en', { numeric: true }));
+  }
+  return out;
+}
+
+// ---------- shared helpers ----------
+const mk = o => ({ category: o.category, status: o.status, level: o.level || null, summary: o.summary, rule: o.rule || null, facts: o.facts || [], sources: o.sources || [], referenceDates: o.referenceDates || [],
+  lastSuccessAt: o.lastSuccessAt || null, stale: !!o.stale, limitations: o.limitations || [], insufficientReason: o.status === 'insufficient' ? o.reason || 'no-evidence' : undefined, context: o.context || [], contextAsOf: o.contextAsOf || null });
+const src = s => ({ name: s.name, publisher: s.publisher, url: s.url, licence: s.licence || null });
+const latest = a => a.filter(Boolean).sort().pop() || null;
+const isOld = (iso0, now, R) => !iso0 || isNaN(Date.parse(iso0)) || (now - Date.parse(iso0)) / dayMs > R.staleAfterDays;
+const LEVEL_FOR = (v, bands) => bands.find(b => v < b.lt);
+
+// Reported context (never used for a level): headlines from the country briefs that carry a matching topic.
+export function contextFor(id, briefs, topics, R) {
+  const b = briefs && briefs.countries && briefs.countries[id]; if (!b || !Array.isArray(b.developments)) return { items: [], asOf: null };
+  const items = b.developments.filter(d => d && d.headline && d.publisher && safeUrl(d.url) && (d.topics || []).some(t => topics.includes(t))).slice(0, R.contextMax)
+    .map(d => ({ headline: d.headline, publisher: d.publisher, url: safeUrl(d.url).href, time: d.time || null, timeBasis: d.timeBasis || null }));
+  return { items, asOf: b.generatedAt || null };
+}
+
+// ---------- SECURITY ----------
+export function classifySecurity(id, inputs, R, now, briefs) {
+  const S = R.security, U = R.sources.ucdp, W = R.sources.wgi, name = R.countries[id].name, nowYear = new Date(now).getUTCFullYear();
+  const ctx = contextFor(id, briefs, ['Security'], R), base = { category: 'security', context: ctx.items, contextAsOf: ctx.asOf };
+  const u = inputs && inputs.ucdp, w = inputs && inputs.wgi && inputs.wgi[id];
+  const uOk = u && (u.status === 'ok' || u.status === 'error') && fin(u.latestYear) && u.conflicts && Array.isArray(u.conflicts[id]);
+  const lim = ['The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.', 'Headlines are shown as reported context only and played no part in the level.'];
+  if (!uOk) return mk({ ...base, status: 'insufficient', reason: 'inputs-unavailable', summary: `No level: the armed-conflict dataset (UCDP/PRIO) is not available in the cache, so no assessment can be made for ${name}. This is not a finding of low risk.`, sources: [src(U)], limitations: [...lim, 'Run the "Update risk assessments" workflow to fetch the dataset.'] });
+  if (u.latestYear < nowYear - U.maxDatasetAgeYears) return mk({ ...base, status: 'insufficient', reason: 'dataset-too-old', summary: `No level: the newest year in the cached UCDP file is ${u.latestYear}, too old to describe the current situation.`, sources: [src(U)], referenceDates: [String(u.latestYear)], lastSuccessAt: u.fetchedAt || null, stale: true, limitations: lim });
+  const list = u.conflicts[id], ver = u.version ? 'v' + u.version : 'the cached version', facts = [], sources = [src(U)], dates = [String(u.latestYear)];
+  const stale = u.status === 'error' || isOld(u.fetchedAt, now, R), limits = [...lim];
+  if (stale) limits.push(u.status === 'error' ? `The latest refresh of the UCDP file failed (${u.error || 'no reason recorded'}); the last successfully fetched data (${u.fetchedAt || 'time unknown'}) is used and marked stale.` : `The UCDP data was last fetched successfully on ${u.fetchedAt || 'an unknown date'}, more than ${R.staleAfterDays} days ago.`);
+  for (const c of list) facts.push({ kind: 'observed', label: `UCDP armed conflict ${c.conflictId}, ${u.latestYear}`, value: `${c.sideA} vs ${c.sideB}; location: ${c.location}; ${c.intensity === 2 ? 'war (at least 1,000 battle-related deaths in the year)' : 'minor conflict (25 to 999 battle-related deaths in the year)'}${c.type ? '; type: ' + c.type : ''}${c.incompatibility ? '; about ' + c.incompatibility : ''}; this country is a ${c.role}`, year: String(u.latestYear), source: U.name, url: U.url });
+  if (!list.length) facts.push({ kind: 'observed', label: `UCDP/PRIO armed conflicts involving ${name}, ${u.latestYear}`, value: `none recorded in ${ver}`, year: String(u.latestYear), source: U.name, url: U.url });
+  const top = list.find(c => c.role !== 'supporting party' && c.intensity === 2) ? 'Critical' : list.find(c => c.role !== 'supporting party' && c.intensity === 1) ? 'High' : list.length ? 'Moderate' : null;
+  const out = { ...base, facts, sources, referenceDates: dates, lastSuccessAt: u.fetchedAt || null, stale, limitations: limits };
+  if (top) return mk({ ...out, status: 'assessed', level: top, rule: top === 'Critical' ? 'S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical' : top === 'High' ? 'S2: location or primary party in a UCDP conflict of intensity 1 (minor) in the newest dataset year -> High' : 'S3: appears only as a supporting party in a UCDP conflict in the newest dataset year -> Moderate',
+    summary: `${name} is recorded in UCDP/PRIO ${ver} as ${top === 'Moderate' ? 'a supporting party in' : 'the location of or a primary party in'} ${list.length} state-based armed ${list.length === 1 ? 'conflict' : 'conflicts'} in ${u.latestYear}.` });
+  // no involvement recorded: the World Bank governance indicator decides, if there is a recent value
+  const wOk = w && (w.status === 'ok' || w.status === 'error') && fin(w.value) && /^\d{4}$/.test(String(w.year)) && Number(w.year) >= nowYear - S.wgiMaxAgeYears;
+  if (!wOk) {
+    const why = w && w.status === 'unsupported' ? `the World Bank does not publish this indicator for ${name} (${w.error || 'no data for this country code'}), and nothing from another country is substituted` : w && w.value != null ? `the World Bank value for ${w.year} is older than ${S.wgiMaxAgeYears} years` : 'no World Bank governance value is available';
+    return mk({ ...out, status: 'insufficient', reason: w && w.status === 'unsupported' ? 'no-evidence' : w ? 'no-evidence' : 'inputs-unavailable',
+      summary: `No level: UCDP records no state-based armed conflict involving ${name} in ${u.latestYear}, but ${why}. The absence of a recorded conflict is not evidence of low risk.`,
+      limitations: [...limits, 'No sovereignty or status position is taken: names and country codes are used exactly as the sources give them.'] });
+  }
+  facts.push({ kind: 'observed', label: 'Political stability and absence of violence/terrorism, estimate (WGI, about -2.5 to +2.5)', value: String(Math.round(w.value * 100) / 100), year: String(w.year), source: W.name, url: W.url });
+  sources.push(src(W)); dates.push(String(w.year));
+  const level = w.value >= S.wgiLowFrom ? 'Low' : w.value >= S.wgiModerateFrom ? 'Moderate' : 'High', wStale = w.status === 'error' || isOld(w.fetchedAt, now, R);
+  return mk({ ...out, status: 'assessed', level, stale: stale || wStale, lastSuccessAt: latest([u.fetchedAt, w.fetchedAt]), limitations: [...limits, W.note, ...(wStale ? [`The World Bank WGI value could not be refreshed recently (${w.error || 'older than ' + R.staleAfterDays + ' days'}); the last successfully fetched value is shown.`] : []), 'The level reflects measured violence and instability perceptions only, not interstate tension.'],
+    rule: `S4: no UCDP conflict recorded; WGI estimate ${w.value >= S.wgiLowFrom ? '>= ' + S.wgiLowFrom + ' -> Low' : w.value >= S.wgiModerateFrom ? '>= ' + S.wgiModerateFrom + ' and < ' + S.wgiLowFrom + ' -> Moderate' : '< ' + S.wgiModerateFrom + ' -> High'}`,
+    summary: `UCDP records no state-based armed conflict involving ${name} in ${u.latestYear}; the World Bank governance estimate for ${w.year} is ${Math.round(w.value * 100) / 100}.` });
+}
+
+// ---------- ECONOMIC ----------
+export function classifyEconomic(id, inputs, R, now) {
+  const E = R.economic, name = R.countries[id].name, nowYear = new Date(now).getUTCFullYear();
+  const wbInd = inputs && inputs.indicators && inputs.indicators.countries && inputs.indicators.countries[id], ri = inputs && inputs.riskInputs;
+  const pick = { inflation: wbInd && wbInd.indicators && wbInd.indicators[R.sources.inflation.code], growth: wbInd && wbInd.indicators && wbInd.indicators[R.sources.growth.code], unemployment: ri && ri.unemployment && ri.unemployment[id] };
+  const facts = [], sources = [], dates = [], limits = [], used = [], fetched = []; let stale = false, unsupported = false, anyInput = !!(wbInd || (ri && ri.unemployment && ri.unemployment[id]));
+  for (const [k, D] of Object.entries(E.dimensions)) {
+    const x = pick[k], S = R.sources[k];
+    if (x && x.status === 'unsupported') { unsupported = true; continue; }
+    if (!x || !fin(x.value) || !/^\d{4}$/.test(String(x.year))) continue;
+    if (Number(x.year) < nowYear - E.maxAgeYears) { limits.push(`${D.label}: the newest value is from ${x.year}, older than ${E.maxAgeYears} years, so it was not used.`); continue; }
+    const band = LEVEL_FOR(x.value, D.bands), st = x.status === 'error' || isOld(x.fetchedAt, now, R);
+    if (st) { stale = true; limits.push(`${D.label}: the latest refresh failed or is old; the last successfully fetched value is shown.`); }
+    facts.push({ kind: 'observed', label: D.label, value: String(Math.round(x.value * 100) / 100), year: String(x.year), source: S.name, url: S.url });
+    facts.push({ kind: 'interpretation', label: D.label + ': band', value: band.level + (band.why ? ' (' + band.why + ')' : ''), rule: `E: ${D.label} ${x.value} falls in the "${band.level}" band` });
+    if (!sources.some(s => s.url === S.url)) sources.push(src(S)); dates.push(String(x.year)); used.push(band.level); fetched.push(x.fetchedAt);
+  }
+  const lim = [...limits, 'Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so "Low" means only that the listed indicators are in ordinary ranges.', 'Headlines played no part in the level.'];
+  if (used.length < E.minDimensions) {
+    const why = unsupported ? `the World Bank API does not publish data for ${name}'s code, and nothing from another country is substituted` : !anyInput ? 'the indicator cache has no entry for it' : `only ${used.length} of the ${Object.keys(E.dimensions).length} indicators have a recent value (at least ${E.minDimensions} are required)`;
+    return mk({ category: 'economic', status: 'insufficient', reason: !anyInput ? 'inputs-unavailable' : 'no-evidence', summary: `No level: ${why}. Missing data is not treated as low risk.`, facts, sources, referenceDates: dates, lastSuccessAt: latest(fetched), stale, limitations: lim });
+  }
+  const level = R.levels[Math.max(...used.map(l => R.levels.indexOf(l)))];
+  return mk({ category: 'economic', status: 'assessed', level, rule: `E: the overall level is the worst band among the ${used.length} available indicators (bands in data/risk-methodology.mjs)`,
+    summary: `Based on ${used.length} World Bank macro indicators (${facts.filter(f => f.kind === 'observed').map(f => f.label.split(' (')[0].toLowerCase()).join(', ')}); the highest band reached is ${level}.`, facts, sources, referenceDates: dates, lastSuccessAt: latest(fetched), stale, limitations: lim });
+}
+
+// ---------- DIPLOMATIC ----------
+export function classifyDiplomatic(id, briefs, R) {
+  const name = R.countries[id].name, ctx = contextFor(id, briefs, ['Diplomacy', 'Sanctions and trade'], R);
+  return mk({ category: 'diplomatic', status: 'insufficient', reason: 'method', context: ctx.items, contextAsOf: ctx.asOf,
+    summary: `No level for ${name}: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.`,
+    limitations: ['Headlines below are reports by publishers, shown only as context. They are not verified here and no level is derived from them.', 'A manually sourced assessment can be added in data/countries.js and is shown there instead.'] });
+}
+
+// ---------- the whole file ----------
+const validIndicators = j => j && typeof j === 'object' && j.countries && typeof j.countries === 'object';
+const validRiskInputs = j => j && typeof j === 'object' && j.schema === 1 && j.ucdp !== undefined;
+export function buildRisk({ riskInputs, indicators, briefs, now, R }) {
+  const ri = validRiskInputs(riskInputs) ? riskInputs : null, ind = validIndicators(indicators) ? indicators : null;
+  if (!ri && !ind) throw new Error('neither the risk-input cache nor the indicator cache could be read');
+  const inputs = { riskInputs: ri, indicators: ind }, countries = {};
+  for (const id of Object.keys(R.countries)) countries[id] = { name: R.countries[id].name, security: classifySecurity(id, { ucdp: ri && ri.ucdp, wgi: ri && ri.wgi }, R, now, briefs), economic: classifyEconomic(id, inputs, R, now), diplomatic: classifyDiplomatic(id, briefs, R) };
+  // A level of Critical means UCDP records a war in this country or involving it as a primary party. The economic card then says plainly that its few indicators do not capture that.
+  for (const c of Object.values(countries)) if (c.security.level === 'Critical' && c.economic.status === 'assessed') c.economic.limitations.push('UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution.');
+  return { schema: 1, status: 'ok', method: 'Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.', methodologyVersion: R.methodologyVersion, generatedAt: iso(now), lastSuccessAt: iso(now), checkedAt: iso(now),
+    inputs: { riskInputs: ri ? { status: 'ok', checkedAt: ri.checkedAt || null, lastSuccessAt: ri.lastSuccessAt || null } : { status: 'missing' }, indicators: ind ? { status: 'ok', checkedAt: ind.checkedAt || null, lastSuccessAt: ind.lastSuccessAt || null } : { status: 'missing' }, briefs: briefs && briefs.generatedAt ? { generatedAt: briefs.generatedAt } : { status: 'missing' } }, countries };
+}
+export const markFailed = (prev, error, now) => ({ ...prev, status: 'error', error: String(error), checkedAt: iso(now) });

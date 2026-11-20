@@ -9,8 +9,11 @@ window.CONFIG = {
   gdeltFilesFile: 'data/cache/news-gdelt.json',
   // Country intelligence briefs, written by scripts/build-briefs.mjs from the two news files above.
   briefsFile: 'data/cache/briefs.json',
+  // Automated risk assessments, written by scripts/build-risk.mjs.
+  riskFile: 'data/cache/risk.json',
+  riskInputsStaleDays: 14,
   // After this many hours without an update, the page labels the data "Stale".
-  staleAfterHours: { news: 24, indicators: 240, rss: 12, gdeltFiles: 12, briefs: 12 },
+  staleAfterHours: { news: 24, indicators: 240, rss: 12, gdeltFiles: 12, briefs: 12, risk: 72 },
   // Natural Earth 1:110m boundaries (world-atlas package). Tried in order; the first that loads is used.
   atlas: ['data/countries-110m.json', 'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json'],
   // globe.gl (MIT licence). Tried in order. Save the file as vendor/globe.gl.min.js to stop using the CDN (see README).
