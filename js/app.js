@@ -21,7 +21,7 @@ function stamp(iso, maxH, label, failed) {   // freshness pill built from the re
   const pre = label === 'Updated' ? '' : label + ': ';
   if (!iso || isNaN(new Date(iso))) return pill('bad', pre ? pre + 'no successful update yet' : 'No successful update yet');
   const old = (Date.now() - new Date(iso)) / 36e5 > maxH;
-  const p = failed ? pill('stale', pre + 'last success ' + ago(iso)) : pill(old ? 'stale' : 'live', (old ? 'Stale: ' : '') + label + ' ' + ago(iso));   // green only when the latest fetch really succeeded
+  const p = failed ? pill('stale', pre ? pre + 'cached, last success ' + ago(iso) : 'Cached, last success ' + ago(iso)) : pill(old ? 'stale' : 'live', (old ? 'Stale: ' : '') + label + ' ' + ago(iso));   // green only when the latest fetch really succeeded
   p.title = fmtUTC(iso); return p;
 }
 
@@ -45,7 +45,7 @@ async function loadAll() {
     let p;
     if (nBad === 0 || !last) p = stamp(last, hrs, what, false);                                  // green only when nothing failed
     else if (nBad === cs.length) p = stamp(last, hrs, what, true);
-    else { p = pill('stale', `${what}: ${cs.length - nBad} of ${cs.length} updated, ${nBad} failed (latest success ${ago(last)})`); p.title = fmtUTC(last); }
+    else { p = pill('stale', `${what}: ${cs.length - nBad} of ${cs.length} updated, ${nBad} not refreshed (latest success ${ago(last)})`); p.title = fmtUTC(last); }
     p.title = (p.title ? p.title + ' (latest success).' : '') + tip;
     return [p];
   };
@@ -61,9 +61,9 @@ function paintNews() {
   const j = s.json, e = j.countries && j.countries[cur];
   if (!e) { st.replaceChildren(pill('bad')); box.replaceChildren(el('div', 'state err', 'The news cache has no entry for ' + C[cur].name + '.')); return; }
   const arts = Array.isArray(e.articles) ? e.articles : [], ts = e.fetchedAt || null;
-  st.replaceChildren(stamp(ts, CFG.staleAfterHours.news, 'Updated', e.status === 'error'), ...(e.status === 'error' ? [pill('bad', 'Latest refresh failed')] : []));
+  st.replaceChildren(stamp(ts, CFG.staleAfterHours.news, 'Updated', e.status === 'error'), ...(e.status === 'error' ? [pill('bad', e.attempted === false ? 'Refresh skipped' : 'Latest refresh failed')] : []));
   const out = [];
-  if (e.status === 'error') out.push(el('div', 'state err', [el('b', null, 'The latest GDELT refresh failed. '), e.error || 'No reason was recorded.', arts.length ? ' Articles from the last successful update are shown.' : ' No earlier articles are stored.']));
+  if (e.status === 'error') out.push(el('div', 'state err', [el('b', null, e.attempted === false ? 'The latest GDELT refresh was not attempted. ' : 'The latest GDELT refresh failed. '), e.error || 'No reason was recorded.', arts.length ? ' The articles below are cached from the last successful update and may be out of date.' : ' Nothing has been fetched successfully yet, so no articles are shown.']));
   if (arts.length) {
     const ul = el('ul', 'news');
     arts.forEach(a => ul.append(el('li', null, [link(a.url, a.title || '(untitled)'), el('div', 'nm', [el('b', null, a.domain || 'Unknown publisher'), 'First seen by GDELT ' + (/^\d{8}T\d{4}/.test(a.seendate || '') ? a.seendate.replace(/^(\d{4})(\d\d)(\d\d)T(\d\d)(\d\d).*/, '$1-$2-$3 $4:$5 UTC') : 'at an unknown time')])])));
