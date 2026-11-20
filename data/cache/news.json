@@ -3,17 +3,178 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-20T08:07:28.321Z",
-  "lastSuccessAt": null,
+  "checkedAt": "2026-11-20T13:29:11.676Z",
+  "lastSuccessAt": "2026-11-20T13:29:25.916Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
-      "fetchedAt": null,
-      "checkedAt": "2026-11-20T08:08:56.776Z",
-      "articles": []
+      "error": null,
+      "fetchedAt": "2026-11-20T13:29:25.916Z",
+      "checkedAt": "2026-11-20T13:29:25.916Z",
+      "articles": [
+        {
+          "title": "After Iowa lead azide detonation , who will test the people ?",
+          "url": "https://www.bleedingheartland.com/2026/11/19/after-iowas-lead-azide-detonation-who-will-test-the-people/",
+          "domain": "bleedingheartland.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "St . Louis Park , Eden Prairie teens launch global student government network",
+          "url": "https://www.hometownsource.com/sun_sailor/community/eden_prairie/st-louis-park-eden-prairie-teens-launch-global-student-government-network/article_1d1739fe-13ec-4499-8066-bfcfd603f26e.html",
+          "domain": "hometownsource.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "UN Faces Unprecedented Leadership Crisis as Security Council Fails to Agree on Guterre Successor – Sri Lanka Guardian",
+          "url": "https://slguardian.org/un-faces-unprecedented-leadership-crisis-as-security-council-fails-to-agree-on-guterres-successor/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Japan Secures Access to Indian Missile Ranges in Major Indo - Pacific Defence Push",
+          "url": "https://slguardian.org/japan-secures-access-to-indian-missile-ranges-in-major-indo-pacific-defence-push/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Congo Former President Turns Rebel Leader in Bid to Block Tshisekedi Third Term – Sri Lanka Guardian",
+          "url": "https://slguardian.org/congos-former-president-turns-rebel-leader-in-bid-to-block-tshisekedis-third-term/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Iran rejects Trump bioweapons claims , warns against repeat of disproved allegations that Iraq had WMD",
+          "url": "https://tribune.com.pk/story/2641331/iran-rejects-trumps-bioweapons-claims-warns-against-repeat-of-disproved-allegations",
+          "domain": "tribune.com.pk",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Canadian Police Add Goldy Brar to Wanted List Over 2023 Winnipeg Killing ; Tops Canada Most - Wanted List",
+          "url": "https://www.rozanaspokesman.com/news/world/201126/goldy-brar-added-to-canadian-police-wanted-list-in-connection-with-202-s.html",
+          "domain": "rozanaspokesman.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Trump praises meeting between Chinese and Russian presidents and discusses AI rules with China",
+          "url": "https://cphpost.dk/2026-11-20/global/trump-praises-meeting-between-chinese-and-russian-presidents-and-discusses-ai-rules-with-china/",
+          "domain": "cphpost.dk",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Denmark"
+        },
+        {
+          "title": "Pentagon standoff , copyright lawsuit to AI safety concerns : 5 controversies that have put Anthropic under scrutiny",
+          "url": "https://timesofindia.indiatimes.com/business/international-business/pentagon-standoff-copyright-lawsuit-to-ai-safety-concerns-5-controversies-that-have-put-anthropic-under-scrutiny/articleshow/136014920.cms",
+          "domain": "timesofindia.indiatimes.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Pak fan boy : BJP hits out at Rahul Gandhi for describing India as side player in global affairs",
+          "url": "https://www.hindustantimes.com/india-news/pak-fan-boy-bjp-hits-out-at-rahul-gandhi-for-describing-india-as-side-player-in-global-affairs-101795151909138.html",
+          "domain": "hindustantimes.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Greenland Defence Pact Opens a New Chapter in the Arctic Power Struggle – Sri Lanka Guardian",
+          "url": "https://slguardian.org/greenlands-defence-pact-opens-a-new-chapter-in-the-arctic-power-struggle/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+          "url": "https://knst.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
+          "domain": "knst.iheart.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "US Tech outages singes Trump administration , Kirsten Davies appointed new Cyber Director",
+          "url": "http://www.caribbeanherald.com/news/279444286/us-tech-outages-singes-trump-administration-kirsten-davies-appointed-new-cyber-director",
+          "domain": "caribbeanherald.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "China bars Bloomberg reporter from trilateral meeting after she shouted question at earlier event - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/nov/19/china-bars-bloomberg-reporter-from-trilateral-meet/",
+          "domain": "lasvegassun.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Fairford accused due in court on National Security Act charges",
+          "url": "https://www.elystandard.co.uk/news/national/26746811.fairford-accused-due-court-national-security-act-charges/",
+          "domain": "elystandard.co.uk",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Meghan Markle father ruled mentally fit to stand trial on child sexual abuse material charges",
+          "url": "https://cphpost.dk/2026-11-20/global/meghan-markles-father-ruled-mentally-fit-to-stand-trial-on-child-sexual-abuse-material-charges/",
+          "domain": "cphpost.dk",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Denmark"
+        },
+        {
+          "title": "Thursday Final Word",
+          "url": "https://hotair.com/ed-morrissey/2026/11/19/thursdays-final-word-n3821167",
+          "domain": "hotair.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "White House Seizes Journalist Phones on Trump Flight from China over Espionage Concerns – Sri Lanka Guardian",
+          "url": "https://slguardian.org/white-house-seizes-journalists-phones-on-trumps-flight-from-china-over-espionage-concerns/",
+          "domain": "slguardian.org",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as 200 , 000 sign petition for Huang return",
+          "url": "https://www.businesstoday.in/technology/news/story/bring-jensen-back-uber-co-founder-says-hell-show-up-to-nvidia-hq-as-200000-sign-petition-for-huangs-return-568689-2026-11-20",
+          "domain": "businesstoday.in",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Trump , Xi , Putin Hold Rare 3 - Way Talks On Nuclear Risks But Deliver No Breakthroughs",
+          "url": "https://www.oneindia.com/international/trump-xi-putin-hold-rare-3-way-talks-on-nuclear-risks-but-deliver-no-breakthroughs-8264789.html",
+          "domain": "oneindia.com",
+          "seendate": "20261120T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        }
+      ]
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
@@ -21,16 +182,16 @@
       "attempted": true,
       "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T08:10:16.914Z",
+      "checkedAt": "2026-11-20T13:30:45.677Z",
       "articles": []
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T08:10:16.914Z",
+      "checkedAt": "2026-11-20T13:32:17.015Z",
       "articles": []
     },
     "UKR": {
@@ -39,7 +200,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T08:10:16.914Z",
+      "checkedAt": "2026-11-20T13:32:17.015Z",
       "articles": []
     },
     "TWN": {
@@ -48,7 +209,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T08:10:16.914Z",
+      "checkedAt": "2026-11-20T13:32:17.015Z",
       "articles": []
     }
   }
