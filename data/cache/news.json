@@ -3,47 +3,52 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-20T07:05:24.110Z",
+  "checkedAt": "2026-11-20T08:07:28.321Z",
   "lastSuccessAt": null,
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
       "status": "error",
-      "error": "GDELT is rate limiting requests.",
+      "attempted": true,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T07:07:01.002Z",
+      "checkedAt": "2026-11-20T08:08:56.776Z",
       "articles": []
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
       "status": "error",
-      "error": "GDELT is rate limiting requests.",
+      "attempted": true,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T07:08:43.212Z",
+      "checkedAt": "2026-11-20T08:10:16.914Z",
       "articles": []
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
       "status": "error",
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T07:10:23.338Z",
+      "checkedAt": "2026-11-20T08:10:16.914Z",
       "articles": []
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
       "status": "error",
-      "error": "GDELT is rate limiting requests.",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T07:12:03.631Z",
+      "checkedAt": "2026-11-20T08:10:16.914Z",
       "articles": []
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
       "status": "error",
-      "error": "GDELT is rate limiting requests.",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T07:13:43.425Z",
+      "checkedAt": "2026-11-20T08:10:16.914Z",
       "articles": []
     }
   }

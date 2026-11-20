@@ -2,23 +2,23 @@
   "schema": 2,
   "source": "World Bank Open Data API",
   "sourceUrl": "https://data.worldbank.org/",
-  "checkedAt": "2026-11-20T07:13:43.426Z",
-  "lastSuccessAt": "2026-11-20T07:14:53.707Z",
+  "checkedAt": "2026-11-20T08:07:20.453Z",
+  "lastSuccessAt": "2026-11-20T08:07:28.320Z",
   "countries": {
     "USA": {
       "wbCode": "USA",
       "status": "ok",
       "error": null,
-      "fetchedAt": "2026-11-20T07:14:03.067Z",
-      "checkedAt": "2026-11-20T07:14:03.067Z",
+      "fetchedAt": "2026-11-20T08:07:21.954Z",
+      "checkedAt": "2026-11-20T08:07:21.954Z",
       "indicators": {
         "NY.GDP.MKTP.CD": {
           "status": "ok",
           "error": null,
           "value": 30769700000000,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:13:43.514Z",
-          "checkedAt": "2026-11-20T07:13:43.514Z",
+          "fetchedAt": "2026-11-20T08:07:20.611Z",
+          "checkedAt": "2026-11-20T08:07:20.611Z",
           "sourceUpdated": "2026-11-11"
         },
         "NY.GDP.MKTP.KD.ZG": {
@@ -26,8 +26,8 @@
           "error": null,
           "value": 2.16138195623856,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:02.185Z",
-          "checkedAt": "2026-11-20T07:14:02.185Z",
+          "fetchedAt": "2026-11-20T08:07:20.949Z",
+          "checkedAt": "2026-11-20T08:07:20.949Z",
           "sourceUpdated": "2026-11-11"
         },
         "FP.CPI.TOTL.ZG": {
@@ -35,8 +35,8 @@
           "error": null,
           "value": 2.94952520485207,
           "year": "2024",
-          "fetchedAt": "2026-11-20T07:14:02.475Z",
-          "checkedAt": "2026-11-20T07:14:02.475Z",
+          "fetchedAt": "2026-11-20T08:07:21.293Z",
+          "checkedAt": "2026-11-20T08:07:21.293Z",
           "sourceUpdated": "2026-11-11"
         },
         "MS.MIL.XPND.GD.ZS": {
@@ -44,8 +44,8 @@
           "error": null,
           "value": 3.1173079811,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:02.796Z",
-          "checkedAt": "2026-11-20T07:14:02.796Z",
+          "fetchedAt": "2026-11-20T08:07:21.628Z",
+          "checkedAt": "2026-11-20T08:07:21.628Z",
           "sourceUpdated": "2026-11-11"
         },
         "SP.POP.TOTL": {
@@ -53,8 +53,8 @@
           "error": null,
           "value": 341784857,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:03.067Z",
-          "checkedAt": "2026-11-20T07:14:03.067Z",
+          "fetchedAt": "2026-11-20T08:07:21.954Z",
+          "checkedAt": "2026-11-20T08:07:21.954Z",
           "sourceUpdated": "2026-11-11"
         }
       }
@@ -63,16 +63,16 @@
       "wbCode": "CHN",
       "status": "ok",
       "error": null,
-      "fetchedAt": "2026-11-20T07:14:04.454Z",
-      "checkedAt": "2026-11-20T07:14:04.454Z",
+      "fetchedAt": "2026-11-20T08:07:23.501Z",
+      "checkedAt": "2026-11-20T08:07:23.501Z",
       "indicators": {
         "NY.GDP.MKTP.CD": {
           "status": "ok",
           "error": null,
           "value": 19498039388042.6,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:03.340Z",
-          "checkedAt": "2026-11-20T07:14:03.340Z",
+          "fetchedAt": "2026-11-20T08:07:22.275Z",
+          "checkedAt": "2026-11-20T08:07:22.275Z",
           "sourceUpdated": "2026-11-11"
         },
         "NY.GDP.MKTP.KD.ZG": {
@@ -80,8 +80,8 @@
           "error": null,
           "value": 4.95994886240992,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:03.611Z",
-          "checkedAt": "2026-11-20T07:14:03.611Z",
+          "fetchedAt": "2026-11-20T08:07:22.564Z",
+          "checkedAt": "2026-11-20T08:07:22.564Z",
           "sourceUpdated": "2026-11-11"
         },
         "FP.CPI.TOTL.ZG": {
@@ -89,8 +89,8 @@
           "error": null,
           "value": 0.0595646916565402,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:03.883Z",
-          "checkedAt": "2026-11-20T07:14:03.883Z",
+          "fetchedAt": "2026-11-20T08:07:22.851Z",
+          "checkedAt": "2026-11-20T08:07:22.851Z",
           "sourceUpdated": "2026-11-11"
         },
         "MS.MIL.XPND.GD.ZS": {
@@ -98,8 +98,8 @@
           "error": null,
           "value": 1.7247233166,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:04.179Z",
-          "checkedAt": "2026-11-20T07:14:04.179Z",
+          "fetchedAt": "2026-11-20T08:07:23.174Z",
+          "checkedAt": "2026-11-20T08:07:23.174Z",
           "sourceUpdated": "2026-11-11"
         },
         "SP.POP.TOTL": {
@@ -107,8 +107,8 @@
           "error": null,
           "value": 1406585000,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:04.454Z",
-          "checkedAt": "2026-11-20T07:14:04.454Z",
+          "fetchedAt": "2026-11-20T08:07:23.501Z",
+          "checkedAt": "2026-11-20T08:07:23.501Z",
           "sourceUpdated": "2026-11-11"
         }
       }
@@ -117,16 +117,16 @@
       "wbCode": "RUS",
       "status": "ok",
       "error": null,
-      "fetchedAt": "2026-11-20T07:14:17.050Z",
-      "checkedAt": "2026-11-20T07:14:17.050Z",
+      "fetchedAt": "2026-11-20T08:07:25.119Z",
+      "checkedAt": "2026-11-20T08:07:25.119Z",
       "indicators": {
         "NY.GDP.MKTP.CD": {
           "status": "ok",
           "error": null,
           "value": 2561310169358.74,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:04.751Z",
-          "checkedAt": "2026-11-20T07:14:04.751Z",
+          "fetchedAt": "2026-11-20T08:07:23.825Z",
+          "checkedAt": "2026-11-20T08:07:23.825Z",
           "sourceUpdated": "2026-11-11"
         },
         "NY.GDP.MKTP.KD.ZG": {
@@ -134,8 +134,8 @@
           "error": null,
           "value": 1.00117656925738,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:05.046Z",
-          "checkedAt": "2026-11-20T07:14:05.046Z",
+          "fetchedAt": "2026-11-20T08:07:24.145Z",
+          "checkedAt": "2026-11-20T08:07:24.145Z",
           "sourceUpdated": "2026-11-11"
         },
         "FP.CPI.TOTL.ZG": {
@@ -143,8 +143,8 @@
           "error": null,
           "value": 8.71986939402666,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:05.333Z",
-          "checkedAt": "2026-11-20T07:14:05.333Z",
+          "fetchedAt": "2026-11-20T08:07:24.472Z",
+          "checkedAt": "2026-11-20T08:07:24.472Z",
           "sourceUpdated": "2026-11-11"
         },
         "MS.MIL.XPND.GD.ZS": {
@@ -152,8 +152,8 @@
           "error": null,
           "value": 7.5014846549,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:16.778Z",
-          "checkedAt": "2026-11-20T07:14:16.778Z",
+          "fetchedAt": "2026-11-20T08:07:24.807Z",
+          "checkedAt": "2026-11-20T08:07:24.807Z",
           "sourceUpdated": "2026-11-11"
         },
         "SP.POP.TOTL": {
@@ -161,8 +161,8 @@
           "error": null,
           "value": 143513328,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:17.050Z",
-          "checkedAt": "2026-11-20T07:14:17.050Z",
+          "fetchedAt": "2026-11-20T08:07:25.119Z",
+          "checkedAt": "2026-11-20T08:07:25.119Z",
           "sourceUpdated": "2026-11-11"
         }
       }
@@ -171,16 +171,16 @@
       "wbCode": "UKR",
       "status": "ok",
       "error": null,
-      "fetchedAt": "2026-11-20T07:14:38.095Z",
-      "checkedAt": "2026-11-20T07:14:38.095Z",
+      "fetchedAt": "2026-11-20T08:07:26.728Z",
+      "checkedAt": "2026-11-20T08:07:26.728Z",
       "indicators": {
         "NY.GDP.MKTP.CD": {
           "status": "ok",
           "error": null,
           "value": 214233312784.397,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:17.322Z",
-          "checkedAt": "2026-11-20T07:14:17.322Z",
+          "fetchedAt": "2026-11-20T08:07:25.438Z",
+          "checkedAt": "2026-11-20T08:07:25.438Z",
           "sourceUpdated": "2026-11-11"
         },
         "NY.GDP.MKTP.KD.ZG": {
@@ -188,8 +188,8 @@
           "error": null,
           "value": 1.82152376756284,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:17.592Z",
-          "checkedAt": "2026-11-20T07:14:17.592Z",
+          "fetchedAt": "2026-11-20T08:07:25.760Z",
+          "checkedAt": "2026-11-20T08:07:25.760Z",
           "sourceUpdated": "2026-11-11"
         },
         "FP.CPI.TOTL.ZG": {
@@ -197,8 +197,8 @@
           "error": null,
           "value": 12.7303341026902,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:17.862Z",
-          "checkedAt": "2026-11-20T07:14:17.862Z",
+          "fetchedAt": "2026-11-20T08:07:26.089Z",
+          "checkedAt": "2026-11-20T08:07:26.089Z",
           "sourceUpdated": "2026-11-11"
         },
         "MS.MIL.XPND.GD.ZS": {
@@ -206,8 +206,8 @@
           "error": null,
           "value": 39.561018358,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:37.824Z",
-          "checkedAt": "2026-11-20T07:14:37.824Z",
+          "fetchedAt": "2026-11-20T08:07:26.413Z",
+          "checkedAt": "2026-11-20T08:07:26.413Z",
           "sourceUpdated": "2026-11-11"
         },
         "SP.POP.TOTL": {
@@ -215,8 +215,8 @@
           "error": null,
           "value": 38980376,
           "year": "2025",
-          "fetchedAt": "2026-11-20T07:14:38.095Z",
-          "checkedAt": "2026-11-20T07:14:38.095Z",
+          "fetchedAt": "2026-11-20T08:07:26.728Z",
+          "checkedAt": "2026-11-20T08:07:26.728Z",
           "sourceUpdated": "2026-11-11"
         }
       }
@@ -225,16 +225,16 @@
       "wbCode": "TWN",
       "status": "ok",
       "error": null,
-      "fetchedAt": "2026-11-20T07:14:53.707Z",
-      "checkedAt": "2026-11-20T07:14:53.707Z",
+      "fetchedAt": "2026-11-20T08:07:28.320Z",
+      "checkedAt": "2026-11-20T08:07:28.320Z",
       "indicators": {
         "NY.GDP.MKTP.CD": {
           "status": "none",
           "error": null,
           "value": null,
           "year": null,
-          "fetchedAt": "2026-11-20T07:14:38.385Z",
-          "checkedAt": "2026-11-20T07:14:38.385Z",
+          "fetchedAt": "2026-11-20T08:07:27.047Z",
+          "checkedAt": "2026-11-20T08:07:27.047Z",
           "sourceUpdated": null
         },
         "NY.GDP.MKTP.KD.ZG": {
@@ -242,8 +242,8 @@
           "error": null,
           "value": null,
           "year": null,
-          "fetchedAt": "2026-11-20T07:14:38.665Z",
-          "checkedAt": "2026-11-20T07:14:38.665Z",
+          "fetchedAt": "2026-11-20T08:07:27.371Z",
+          "checkedAt": "2026-11-20T08:07:27.371Z",
           "sourceUpdated": null
         },
         "FP.CPI.TOTL.ZG": {
@@ -251,8 +251,8 @@
           "error": null,
           "value": null,
           "year": null,
-          "fetchedAt": "2026-11-20T07:14:38.940Z",
-          "checkedAt": "2026-11-20T07:14:38.940Z",
+          "fetchedAt": "2026-11-20T08:07:27.687Z",
+          "checkedAt": "2026-11-20T08:07:27.687Z",
           "sourceUpdated": null
         },
         "MS.MIL.XPND.GD.ZS": {
@@ -260,8 +260,8 @@
           "error": null,
           "value": null,
           "year": null,
-          "fetchedAt": "2026-11-20T07:14:53.436Z",
-          "checkedAt": "2026-11-20T07:14:53.436Z",
+          "fetchedAt": "2026-11-20T08:07:28.005Z",
+          "checkedAt": "2026-11-20T08:07:28.005Z",
           "sourceUpdated": null
         },
         "SP.POP.TOTL": {
@@ -269,8 +269,8 @@
           "error": null,
           "value": null,
           "year": null,
-          "fetchedAt": "2026-11-20T07:14:53.707Z",
-          "checkedAt": "2026-11-20T07:14:53.707Z",
+          "fetchedAt": "2026-11-20T08:07:28.320Z",
+          "checkedAt": "2026-11-20T08:07:28.320Z",
           "sourceUpdated": null
         }
       }
