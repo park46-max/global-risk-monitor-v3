@@ -1,0 +1,72 @@
+name: Update RSS news
+
+# Publisher RSS feeds. SEPARATE from the GDELT workflow: nothing here can block or overwrite GDELT data, and the reverse.
+#
+# THE SCHEDULE IS OFF ON PURPOSE. Do these steps first (details in the README):
+#   1. Run this workflow by hand with mode = verify. It requests each feed once and writes nothing.
+#   2. Read each publisher's usage terms, then edit data/rss-sources.mjs for the publishers you accept.
+#   3. Run it by hand with mode = fetch and check that it worked.
+#   4. Only then remove the two # characters in front of the schedule lines below and commit.
+
+on:
+  # schedule:
+  #   - cron: '23 */3 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'verify = check every feed, write nothing. fetch = update the cache from enabled publishers.'
+        type: choice
+        default: verify
+        options:
+          - verify
+          - fetch
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  rss:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # continue-on-error so the cache is still committed after a partial failure; the last step turns the run red if needed.
+      - name: Run the RSS script
+        id: rss
+        continue-on-error: true
+        timeout-minutes: 8
+        run: node scripts/fetch-rss.mjs --${{ github.event.inputs.mode || 'fetch' }}
+
+      - name: Commit changed cache file
+        id: commit
+        if: ${{ github.event.inputs.mode != 'verify' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cache/news-rss.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update RSS news cache $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fail the run if the script failed
+        if: ${{ steps.rss.outcome == 'failure' }}
+        run: |
+          echo "The RSS script reported a failure: in verify mode no feed could be verified; in fetch mode every feed failed or no publisher is enabled. See the previous log and the run summary."
+          exit 1
