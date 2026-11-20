@@ -28,7 +28,7 @@ function stamp(iso, maxH, label, failed) {   // freshness pill built from the re
 // ---------- state ----------
 let cur = IDS.includes(location.hash.slice(1).toUpperCase()) ? location.hash.slice(1).toUpperCase() : 'USA';
 let GEO = null, globeOn = false, rotSeg = null;
-const store = { news: null, ind: null };
+const store = { news: null, ind: null, rss: null };
 
 // ---------- cached data (written by the GitHub Action, Stage 2) ----------
 async function loadJson(path) {
@@ -37,7 +37,7 @@ async function loadJson(path) {
 }
 async function loadAll() {
   $('#meta').replaceChildren(pill('load'));
-  [store.news, store.ind] = await Promise.all([loadJson(CFG.newsFile), loadJson(CFG.indicatorsFile)]);
+  [store.news, store.ind, store.rss] = await Promise.all([loadJson(CFG.newsFile), loadJson(CFG.indicatorsFile), loadJson(CFG.rssFile)]);
   const n = store.news, d = store.ind;
   const head = (r, what, hrs, bad) => {
     if (!r.ok) return [pill('bad', what + ': unavailable')];
@@ -49,19 +49,68 @@ async function loadAll() {
     p.title = (p.title ? p.title + ' (latest success).' : '') + tip;
     return [p];
   };
-  $('#meta').replaceChildren(...head(n, 'News', CFG.staleAfterHours.news, c => c.status === 'error'), ...head(d, 'Indicators', CFG.staleAfterHours.indicators, c => c.status === 'error' || c.status === 'partial'));
+  $('#meta').replaceChildren(...headRss(), ...head(n, 'GDELT news', CFG.staleAfterHours.news, c => c.status === 'error'), ...head(d, 'Indicators', CFG.staleAfterHours.indicators, c => c.status === 'error' || c.status === 'partial'));
   paintNews(); paintData();
+}
+function headRss() {   // header pill for the publisher RSS feeds
+  const r = store.rss;
+  if (!r.ok) return [pill('bad', r.error === 'file not found' ? 'Publisher feeds: not enabled' : 'Publisher feeds: unavailable')];
+  const fs = Object.values(r.json.feeds || {}), nBad = fs.filter(f => f.status !== 'ok').length, last = r.json.lastSuccessAt || null, h = CFG.staleAfterHours.rss;
+  let p;
+  if (!last) p = pill('bad', 'Publisher feeds: no successful update yet');
+  else if (nBad === 0) p = stamp(last, h, 'Publisher feeds', false);
+  else if (nBad === fs.length) p = stamp(last, h, 'Publisher feeds', true);
+  else p = pill('stale', `Publisher feeds: ${fs.length - nBad} of ${fs.length} updated, ${nBad} failed (latest success ${ago(last)})`);
+  p.title = (last ? fmtUTC(last) + ' (latest success).' : '') + (r.json.checkedAt ? ' Last checked ' + fmtUTC(r.json.checkedAt) : '');
+  return [p];
 }
 const missing = (what, file, err) => el('div', 'state err', [el('b', null, what + ' unavailable. '), `The cache file ${file} could not be read (${err}). It is created by the GitHub Action described in the README. No substitute content is shown.`]);
 
-function paintNews() {
-  const box = $('#news'), st = $('#nst'), s = store.news;
-  if (!s) { st.replaceChildren(pill('load')); box.replaceChildren(skel()); return; }
-  if (!s.ok) { st.replaceChildren(pill('bad')); box.replaceChildren(missing('News', CFG.newsFile, s.error)); return; }
+const secHead = (title, pills) => { const d = el('div'); d.style.cssText = 'display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 8px'; const h = el('h3', null, title); h.style.cssText = 'margin:0;font-size:14px'; d.append(h, ...pills); return d; };
+const when = a => a.published ? 'Published ' + fmtUTC(a.published) : 'Publication date not provided by the feed';
+
+// ----- publisher RSS feeds (written by scripts/fetch-rss.mjs; only publishers you verified and switched on appear) -----
+function rssBlock() {
+  const s = store.rss;
+  if (!s) return { pills: [pill('load')], nodes: [skel()] };
+  if (!s.ok) {
+    if (s.error === 'file not found') return { pills: [pill('bad', 'Not enabled yet')], nodes: [el('div', 'state', [el('b', null, 'Publisher RSS feeds are not enabled yet. '), 'No publisher has been verified and switched on, so there is no cache file. Nothing is shown here in place of publisher headlines. See the README.'])] };
+    return { pills: [pill('bad')], nodes: [missing('Publisher feeds', CFG.rssFile, s.error)] };
+  }
+  const j = s.json, feeds = Object.values(j.feeds || {}), nBad = feeds.filter(f => f.status !== 'ok').length, last = j.lastSuccessAt || null, hrs = CFG.staleAfterHours.rss, pills = [], nodes = [];
+  if (!last) pills.push(pill('bad', 'No successful update yet'));
+  else if (nBad === 0) pills.push(stamp(last, hrs, 'Updated', false));
+  else if (nBad === feeds.length) pills.push(stamp(last, hrs, 'Updated', true), pill('bad', 'Latest refresh failed'));
+  else pills.push(stamp(last, hrs, 'Updated', true), pill('stale', `${feeds.length - nBad} of ${feeds.length} feeds updated`));
+  const failed = feeds.filter(f => f.status !== 'ok');
+  if (failed.length) nodes.push(el('div', 'state err', [el('b', null, `${failed.length} of ${feeds.length} feeds failed on the latest refresh. `), failed.map(f => `${f.publisher} / ${f.label}: ${f.error || 'unknown error'}`).join('; ') + '. Articles from these feeds below are cached from the last successful update and may be out of date.']));
+  const all = (Array.isArray(j.items) ? j.items : []).filter(a => a.matches && a.matches[cur]);
+  const row = a => {
+    const f = (j.feeds || {})[a.feedId], bad = !f || f.status !== 'ok', old = f && f.lastSuccessAt && (Date.now() - new Date(f.lastSuccessAt)) / 36e5 > hrs;
+    const m = a.matches[cur], kids = [el('b', null, a.publisher || 'Unknown publisher'), when(a)];
+    if (bad) kids.push(pill('stale', f ? 'Cached: feed refresh failed' : 'Cached: feed not part of the latest refresh')); else if (old) kids.push(pill('stale', 'Stale'));
+    return el('li', null, [link(a.url, a.title), el('div', 'nm', kids), el('div', 'meta', (m.level === 'headline' ? 'Country named in headline: ' : 'Mentioned in feed summary only: ') + m.terms.join(', '))]);
+  };
+  const byDate = (x, y) => (Date.parse(y.published || y.firstSeenAt) || 0) - (Date.parse(x.published || x.firstSeenAt) || 0);
+  const hd = all.filter(a => a.matches[cur].level === 'headline').sort(byDate).slice(0, 20), sm = all.filter(a => a.matches[cur].level !== 'headline').sort(byDate).slice(0, 20);
+  if (hd.length) { const ul = el('ul', 'news'); hd.forEach(a => ul.append(row(a))); nodes.push(ul); }
+  else if (last) nodes.push(el('div', 'state', 'No cached headline from the enabled feeds names ' + C[cur].name + ' (last ' + (j.retentionDays || 7) + ' days). This does not mean nothing happened: it only reflects these feeds.'));
+  if (sm.length) { const d = el('details'); d.append(el('summary', null, `Mentioned in the feed summary only (${sm.length}): weaker match, the headline does not name ${C[cur].name}`)); const ul = el('ul', 'news'); sm.forEach(a => ul.append(row(a))); d.append(ul); nodes.push(d); }
+  const pubs = (j.publishers || []).map(p => p.name + ' (terms checked ' + p.termsChecked + ')').join(', ') || 'none';
+  nodes.push(el('p', 'meta', ['Reported events. Publishers: ' + pubs + '. Matching words for ' + C[cur].name + ': ', el('code', null, ((j.terms || {})[cur] || []).join(', ')), '. Last successful update: ' + (last ? fmtUTC(last) : 'none yet') + (j.checkedAt ? '. Last checked: ' + fmtUTC(j.checkedAt) : '') + '.']));
+  nodes.push(el('p', 'note', 'Only the headline, publisher, date and link are copied; read the article at the publisher. Articles are matched to a country by words in the headline (or in the feed summary, which is not kept). A country named in a headline does not prove the article is mainly about it, and a summary-only mention is weaker still. Headlines belong to the publishers and are neither checked nor endorsed here.'));
+  return { pills, nodes };
+}
+
+// ----- GDELT (optional second source; its failures never affect the publisher feeds above) -----
+function gdeltBlock() {
+  const s = store.news;
+  if (!s) return { pills: [pill('load')], nodes: [skel()] };
+  if (!s.ok) return { pills: [pill('bad')], nodes: [missing('GDELT news', CFG.newsFile, s.error)] };
   const j = s.json, e = j.countries && j.countries[cur];
-  if (!e) { st.replaceChildren(pill('bad')); box.replaceChildren(el('div', 'state err', 'The news cache has no entry for ' + C[cur].name + '.')); return; }
+  if (!e) return { pills: [pill('bad')], nodes: [el('div', 'state err', 'The GDELT cache has no entry for ' + C[cur].name + '.')] };
   const arts = Array.isArray(e.articles) ? e.articles : [], ts = e.fetchedAt || null;
-  st.replaceChildren(stamp(ts, CFG.staleAfterHours.news, 'Updated', e.status === 'error'), ...(e.status === 'error' ? [pill('bad', e.attempted === false ? 'Refresh skipped' : 'Latest refresh failed')] : []));
+  const pills = [stamp(ts, CFG.staleAfterHours.news, 'Updated', e.status === 'error'), ...(e.status === 'error' ? [pill('bad', e.attempted === false ? 'Refresh skipped' : 'Latest refresh failed')] : [])];
   const out = [];
   if (e.status === 'error') out.push(el('div', 'state err', [el('b', null, e.attempted === false ? 'The latest GDELT refresh was not attempted. ' : 'The latest GDELT refresh failed. '), e.error || 'No reason was recorded.', arts.length ? ' The articles below are cached from the last successful update and may be out of date.' : ' Nothing has been fetched successfully yet, so no articles are shown.']));
   if (arts.length) {
@@ -71,7 +120,13 @@ function paintNews() {
   } else if (e.status !== 'error') out.push(el('div', 'state', 'GDELT returned no articles for this search in the cached window (' + (j.timespan || 'unknown') + ').'));
   out.push(el('p', 'meta', ['Reported events. Search: ', el('code', null, e.query || C[cur].gdelt), '. Last successful update: ' + (ts ? fmtUTC(ts) : 'none yet') + (e.checkedAt ? '. Last checked: ' + fmtUTC(e.checkedAt) : '') + '.']));
   out.push(el('p', 'note', 'Headlines belong to the publishers shown and are neither checked nor endorsed here. GDELT reports when it first saw an article, which can be later than its publication date. Fetched by a scheduled GitHub Action, not live in your browser.'));
-  box.replaceChildren(...out);
+  return { pills, nodes: out };
+}
+
+function paintNews() {
+  const r = rssBlock(), g = gdeltBlock();
+  $('#nst').replaceChildren();
+  $('#news').replaceChildren(secHead('Publisher feeds (RSS)', r.pills), ...r.nodes, secHead('GDELT (optional source)', g.pills), ...g.nodes);
 }
 
 const fmt = { usd: v => 'US$ ' + new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 2 }).format(v), pct: v => Number(v).toFixed(1) + '%', num: v => new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 2 }).format(v) };
