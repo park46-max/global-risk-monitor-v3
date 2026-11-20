@@ -31,6 +31,7 @@ on:
           - all
           - rss
           - gdelt-files
+          - briefs
 
 permissions:
   contents: write
@@ -56,7 +57,7 @@ jobs:
       # Exit code 3 means "no RSS source is enabled yet": that is a warning, not a failure.
       - name: Official and publisher RSS feeds
         id: rss
-        if: ${{ github.event.inputs.sources != 'gdelt-files' }}
+        if: ${{ github.event.inputs.sources != 'gdelt-files' && github.event.inputs.sources != 'briefs' }}
         continue-on-error: true
         timeout-minutes: 10
         run: |
@@ -70,10 +71,22 @@ jobs:
 
       - name: GDELT open data files
         id: gk
-        if: ${{ github.event.inputs.sources != 'rss' }}
+        if: ${{ github.event.inputs.sources != 'rss' && github.event.inputs.sources != 'briefs' }}
         continue-on-error: true
         timeout-minutes: 12
         run: node scripts/fetch-gdelt-files.mjs --${{ github.event.inputs.mode || 'fetch' }}
+
+      # Country briefs are rebuilt from whatever news caches exist (also when a source above failed, because the earlier cached news is still valid input).
+      # Rule-based, no network, no AI. If it fails, the previous briefs.json is kept and marked stale. A failure here is a warning, not a failed run.
+      - name: Country briefs
+        id: briefs
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          code=0
+          node scripts/build-briefs.mjs --${{ github.event.inputs.mode || 'fetch' }} || code=$?
+          if [ "$code" != "0" ]; then echo "::warning::Country briefs were not updated (see the log). Any earlier briefs.json is kept and shown as stale."; fi
+          exit 0
 
       - name: Commit changed cache files
         id: commit
@@ -83,7 +96,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Stage only the cache files that exist. If one of them was never written (for example RSS is switched off),
           # a single missing path makes "git add" refuse to stage ANY file, so each file is added on its own.
-          for f in data/cache/news-rss.json data/cache/news-gdelt.json; do
+          for f in data/cache/news-rss.json data/cache/news-gdelt.json data/cache/briefs.json; do
             if [ -f "$f" ]; then git add "$f"; else echo "Not present, nothing to stage: $f"; fi
           done
           git status --short data/cache
