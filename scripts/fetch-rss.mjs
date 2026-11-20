@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseFeed, buildItems, mergeItems, buildMatchers, extractFeedLinks, ParseError } from './rss-lib.mjs';
+import { compileRules, refreshItems, capItems, termSummary } from './relevance-lib.mjs';
 import { createClient } from './http-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -34,6 +35,8 @@ const UA = `GlobalRiskMonitor/3 (personal non-commercial dashboard; ${process.en
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const iso = t => new Date(t).toISOString();
 const matchers = buildMatchers(COUNTRY_TERMS);
+const { RULES } = await import(pathToFileURL(process.env.RELEVANCE_RULES ? path.resolve(process.env.RELEVANCE_RULES) : path.join(ROOT, 'data', 'relevance-rules.mjs')).href);
+const compiled = compileRules(RULES);
 const hasDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
 
 const client = createClient({ ua: UA, timeoutMs: S.timeoutMs, maxTries: S.maxTries, retryBaseMs: S.retryBaseMs, maxBytes: S0.maxBytes, allowHttp: process.env.RSS_ALLOW_HTTP === '1' });
@@ -117,6 +120,8 @@ if (!active.some(p => p.feeds.some(f => !f.skip))) {
 const activeIds = new Set(active.map(p => p.id));
 const prevFeeds = (prev && prev.feeds) || {};
 let items = ((prev && prev.items) || []).filter(i => activeIds.has(i.publisherId));   // articles of a publisher that is now switched off are removed
+// ...and so are their links inside "also reported by" lists of other articles (a switched-off publisher must not be shown at all)
+for (const i of items) if (i.variants) { i.variants = i.variants.filter(v => activeIds.has(v.publisherId)); i.variantsTotal = i.variants.length; if (!i.variants.length) { delete i.variants; delete i.variantsTotal; } }
 const feeds = {};
 let tried = 0, worked = 0, dupes = 0, added = 0, first = true;
 summaryLines.push('## RSS fetch', '', '| Feed | Result | New articles |', '|---|---|---|');
@@ -149,9 +154,12 @@ for (const pub of active) for (const feed of pub.feeds) {
 }
 // Re-apply retention to articles kept from earlier runs (a run where every feed failed must not keep articles past the limit).
 items = mergeItems(items, [], { now: NOW, retentionDays: S.retentionDays, maxItems: S.maxItems }).items;
+const refreshed = refreshItems(items, { matchers, compiled });
+items = capItems(refreshed.items, Object.keys(COUNTRY_TERMS), 60, 30);
+const relevance = refreshed.stats;
 const lastSuccessAt = Object.values(feeds).map(f => f.lastSuccessAt).filter(Boolean).sort().pop() || null;
 const out = { schema: 1, generatedAt: iso(NOW), checkedAt: iso(NOW), lastSuccessAt, retentionDays: S.retentionDays, publishers: active.map(p => ({ id: p.id, name: p.name, termsChecked: p.termsChecked })),
-  terms: Object.fromEntries(Object.entries(COUNTRY_TERMS).map(([k, v]) => [k, v.map(x => typeof x === 'string' ? x : x.t)])), feeds, items };
+  terms: termSummary(COUNTRY_TERMS), relevance, feeds, items };
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(FILE + '.tmp', JSON.stringify(out, null, 1)); fs.renameSync(FILE + '.tmp', FILE);
 say(`\nSummary: ${worked} of ${tried} feeds updated, ${added} new articles, ${dupes} duplicates ignored, ${items.length} articles in the cache.`);

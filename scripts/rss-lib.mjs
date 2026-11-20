@@ -85,18 +85,23 @@ export function buildMatchers(terms) {
   const out = {};
   for (const [id, list] of Object.entries(terms)) {
     out[id] = list.map(x => {
-      const t = typeof x === 'string' ? x : x.t, cs = typeof x === 'object' && x.cs;
-      return { term: t, re: new RegExp(`(?<![\\p{L}\\p{N}])${esc(t)}(?![\\p{L}\\p{N}])`, cs ? 'u' : 'iu') };
+      const t = typeof x === 'string' ? x : x.t, cs = typeof x === 'object' && x.cs, kind = typeof x === 'object' && x.kind ? x.kind : 'name';
+      return { term: t, kind, re: new RegExp(`(?<![\\p{L}\\p{N}])${esc(t)}(?![\\p{L}\\p{N}])`, cs ? 'u' : 'iu') };
     });
   }
   return out;
 }
-// For each country: { level: 'headline' | 'summary', terms: [...] } or nothing. The summary is only read here, never kept.
+// For each country: { level, terms } or nothing. Levels, strongest first:
+//   'country'      the headline contains the country's name or demonym ("China", "Chinese")
+//   'institution'  no name, but the headline contains its capital or a government/armed-forces body ("Beijing", "Kremlin")
+//   'summary'      only the feed's summary contains a term (the summary is read here and never kept)
+// Person names are not terms (see data/country-terms.mjs), so a leader's name alone never matches a country.
 export function matchCountries(matchers, title, summary = '') {
   const res = {};
   for (const [id, ms] of Object.entries(matchers)) {
-    const th = ms.filter(m => m.re.test(title)).map(m => m.term);
-    if (th.length) { res[id] = { level: 'headline', terms: th }; continue; }
+    const th = ms.filter(m => m.re.test(title)), names = th.filter(m => m.kind === 'name'), inst = th.filter(m => m.kind === 'institution');
+    if (names.length) { res[id] = { level: 'country', terms: names.map(m => m.term) }; continue; }
+    if (inst.length) { res[id] = { level: 'institution', terms: inst.map(m => m.term) }; continue; }
     const sm = ms.filter(m => m.re.test(summary)).map(m => m.term);
     if (sm.length) res[id] = { level: 'summary', terms: sm };
   }

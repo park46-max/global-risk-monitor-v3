@@ -22,6 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { buildMatchers, matchCountries, mergeItems, safeUrl, clean } from './rss-lib.mjs';
+import { compileRules, refreshItems, capItems, termSummary } from './relevance-lib.mjs';
 import { createClient } from './http-lib.mjs';
 import { readFirstZipEntry } from './zip-lib.mjs';
 
@@ -41,6 +42,8 @@ const BUDGET_MS = num(process.env.GKG_BUDGET_MS, 7 * 60 * 1000);
 const RETENTION_DAYS = 3, PER_COUNTRY = 40;
 const { COUNTRY_TERMS } = await import(pathToFileURL(process.env.RSS_CONFIG ? path.resolve(process.env.RSS_CONFIG) : path.join(ROOT, 'data', 'rss-sources.mjs')).href);
 const matchers = buildMatchers(COUNTRY_TERMS);
+const { RULES } = await import(pathToFileURL(process.env.RELEVANCE_RULES ? path.resolve(process.env.RELEVANCE_RULES) : path.join(ROOT, 'data', 'relevance-rules.mjs')).href);
+const compiled = compileRules(RULES);
 const UA = `GlobalRiskMonitor/3 (personal non-commercial dashboard; ${process.env.GITHUB_REPOSITORY ? 'https://github.com/' + process.env.GITHUB_REPOSITORY : 'contact via the project repository'})`;
 const client = createClient({ ua: UA, timeoutMs: num(process.env.GKG_TIMEOUT_MS, 60000), maxTries: num(process.env.RSS_MAX_TRIES, 3), retryBaseMs: num(process.env.RSS_RETRY_BASE_MS, 5000), allowHttp: process.env.RSS_ALLOW_HTTP === '1' });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -155,16 +158,17 @@ try {
 } catch (e) { rec.error = e.message; say('FAILED: ' + e.message + '. Cached articles are kept.'); lines.push(`| lastupdate.txt | FAILED: ${String(e.message).replace(/\|/g, '/')} |`); }
 // retention applies on every run, even when no new file was read
 items = mergeItems(items, [], { now: NOW, retentionDays: RETENTION_DAYS, maxItems: 5000 }).items;
-// per-country cap so one very busy country cannot push the others out, then expire old stamps
-const keep = new Set();
-for (const id of Object.keys(COUNTRY_TERMS)) items.filter(i => i.matches && i.matches[id]).sort((a, b) => Date.parse(b.published || b.seenByGdelt || b.firstSeenAt) - Date.parse(a.published || a.seenByGdelt || a.firstSeenAt)).slice(0, PER_COUNTRY).forEach(i => keep.add(i));
-items = items.filter(i => keep.has(i));
+// Re-judge every cached article with the current rules (country match, topics, routine financial notices, duplicate groups), then keep each country's best.
+const refreshed = refreshItems(items, { matchers, compiled });
+items = capItems(refreshed.items, Object.keys(COUNTRY_TERMS), PER_COUNTRY, 30);
+const relevance = { ...refreshed.stats, rulesNote: 'See data/relevance-rules.mjs and data/country-terms.mjs' };
+say(`Relevance: ${refreshed.stats.droppedNoMatch} dropped (no valid country match), ${refreshed.stats.filteredNotices} filtered as routine financial notices, ${refreshed.stats.groupedDuplicates} grouped as duplicates.`);
 const stampCut = msToStamp(NOW - RETENTION_DAYS * 864e5 - 864e5);
 for (const k of Object.keys(files)) if (k < stampCut) delete files[k];
 const out = { schema: 1, generatedAt: iso(NOW), checkedAt: iso(NOW), lastSuccessAt: rec.lastSuccessAt, retentionDays: RETENTION_DAYS,
   attribution: { name: 'The GDELT Project', url: 'https://www.gdeltproject.org/', text: 'Data: The GDELT Project (open dataset, used under its terms)' },
   publishers: [{ id: 'gdelt', name: 'GDELT Project open data files', termsChecked: '2026-11-20' }],
-  terms: Object.fromEntries(Object.entries(COUNTRY_TERMS).map(([k, v]) => [k, v.map(x => typeof x === 'string' ? x : x.t)])), feeds: { 'gdelt-gkg': rec }, files, items };
+  terms: termSummary(COUNTRY_TERMS), relevance, feeds: { 'gdelt-gkg': rec }, files, items };
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(FILE + '.tmp', JSON.stringify(out, null, 1)); fs.renameSync(FILE + '.tmp', FILE);
 say(`\nSummary: status ${rec.status}; ${ok} of ${tried} files read, ${added} new articles, ${dupes} duplicates ignored, ${items.length} in the cache.${rec.status === 'error' ? ' Cached articles were kept and marked with the error.' : ''}`);

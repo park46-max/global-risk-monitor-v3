@@ -65,22 +65,8 @@ export const PUBLISHERS = [
   }
 ];
 
-// How an article is matched to a country. This is plain text matching, not understanding:
-//  * Whole words only. "China" matches "China's" but not "Chinatown".
-//  * Case-insensitive, except terms written { t, cs: true }, which must match exactly (so "US" does not match the word "us").
-//  * Looked for in the headline first. If the headline has no term, the feed's own summary is searched. The summary is used for
-//    matching only and is never stored or shown.
-//  * A headline match is shown as "Country named in headline". A summary-only match is shown as "Mentioned in summary only".
-//    Neither proves the article is mainly about that country, and the page says so.
-//  * Deliberately left out because they are ambiguous: "Washington" alone, "America", "Congress", "Georgia", "Hong Kong".
-export const COUNTRY_TERMS = {
-  USA: ['United States', 'White House', 'Pentagon', 'State Department', 'Treasury Department', 'Washington DC', 'Washington, D.C.',
-        { t: 'U.S.', cs: true }, { t: 'US', cs: true }, { t: 'USA', cs: true }, { t: 'Trump', cs: true }],
-  CHN: ['China', 'Chinese', 'Beijing', 'Xi Jinping', 'South China Sea', { t: 'PLA', cs: true }],
-  RUS: ['Russia', 'Russian', 'Moscow', 'Kremlin', 'Putin'],
-  UKR: ['Ukraine', 'Ukrainian', 'Kyiv', 'Kiev', 'Zelensky', 'Zelenskyy'],
-  TWN: ['Taiwan', 'Taiwanese', 'Taipei', 'Taiwan Strait']
-};
+// How an article is matched to a country (names and capitals only, never people) is defined in data/country-terms.mjs.
+export { COUNTRY_TERMS } from './country-terms.mjs';
 
 export const SETTINGS = {
   retentionDays: 7,      // articles older than this are dropped from the cache

@@ -69,6 +69,8 @@ const secHead = (title, pills) => { const d = el('div'); d.style.cssText = 'disp
 const when = a => a.published ? 'Published ' + fmtUTC(a.published) : a.seenByGdelt ? 'Publication time not provided; first seen by GDELT ' + fmtUTC(a.seenByGdelt) : 'Publication date not provided by the feed';
 
 // ----- feed-style sources: official/publisher RSS (scripts/fetch-rss.mjs) and GDELT open data files (scripts/fetch-gdelt-files.mjs) -----
+// Old cache files list terms as an array; new ones as { names, institutions }.
+const termText = t => !t ? '' : Array.isArray(t) ? t.join(', ') : [...(t.names || []), ...(t.institutions || []).map(x => x + ' (capital/government body)')].join(', ');
 function articleBlock(s, kind) {
   const gk = kind === 'gdelt', hrsKey = gk ? 'gdeltFiles' : 'rss';
   if (!s) return { pills: [pill('load')], nodes: [skel()] };
@@ -85,21 +87,37 @@ function articleBlock(s, kind) {
   const failed = feeds.filter(f => f.status !== 'ok');
   if (failed.length) nodes.push(el('div', 'state err', [el('b', null, `${failed.length} of ${feeds.length} feeds failed on the latest refresh. `), failed.map(f => `${f.publisher} / ${f.label}: ${f.error || 'unknown error'}`).join('; ') + '. Articles from these feeds below are cached from the last successful update and may be out of date.']));
   const all = (Array.isArray(j.items) ? j.items : []).filter(a => a.matches && a.matches[cur]);
+  // Why this article is listed for the country. Old cache files used level 'headline'; new ones use 'country' / 'institution'.
+  const why = m => m.level === 'institution' ? 'Capital or government body named in headline: ' : m.level === 'summary' ? 'Mentioned in feed summary only: ' : 'Country named in headline: ';
   const row = a => {
     const f = (j.feeds || {})[a.feedId], bad = !f || f.status !== 'ok', old = f && f.lastSuccessAt && (Date.now() - new Date(f.lastSuccessAt)) / 36e5 > hrs;
     const m = a.matches[cur], kids = [el('b', null, a.publisher || 'Unknown publisher'), (a.via ? 'via ' + a.via + ' · ' : '') + when(a)];
     if (bad) kids.push(pill('stale', f ? 'Cached: feed refresh failed' : 'Cached: feed not part of the latest refresh')); else if (old) kids.push(pill('stale', 'Stale'));
-    return el('li', null, [link(a.url, a.title), el('div', 'nm', kids), el('div', 'meta', (m.level === 'headline' ? 'Country named in headline: ' : 'Mentioned in feed summary only: ') + m.terms.join(', '))]);
+    const rowKids = [link(a.url, a.title), el('div', 'nm', kids), el('div', 'meta', why(m) + m.terms.join(', '))];
+    const tp = a.relevance && a.relevance.topics || [];
+    if (tp.length) rowKids.push(el('div', 'meta', 'Topics: ' + tp.map(t => t.label).join(' · ') + ' (' + tp.map(t => t.terms.join(', ')).join('; ') + ')'));
+    if (a.filtered) rowKids.push(el('div', 'meta', 'Filtered as a routine financial notice because of: ' + a.filtered.terms.join(', ')));
+    const vs = a.variants || [];
+    if (vs.length) { const d = el('div', 'meta', 'Also reported by: '); vs.forEach((v, i) => { if (i) d.append(', '); d.append(link(v.url, v.publisher || 'source')); }); if ((a.variantsTotal || vs.length) > vs.length) d.append(' (+' + (a.variantsTotal - vs.length) + ' more)'); rowKids.push(d); }
+    return el('li', null, rowKids);
   };
-  const byDate = (x, y) => (Date.parse(y.published || y.firstSeenAt) || 0) - (Date.parse(x.published || x.firstSeenAt) || 0);
-  const hd = all.filter(a => a.matches[cur].level === 'headline').sort(byDate).slice(0, 20), sm = all.filter(a => a.matches[cur].level !== 'headline').sort(byDate).slice(0, 20);
-  if (hd.length) { const ul = el('ul', 'news'); hd.forEach(a => ul.append(row(a))); nodes.push(ul); }
-  else if (last) nodes.push(el('div', 'state', 'No cached headline from the enabled feeds names ' + C[cur].name + ' (last ' + (j.retentionDays || 7) + ' days). This does not mean nothing happened: it only reflects these feeds.'));
-  if (sm.length) { const d = el('details'); d.append(el('summary', null, `Mentioned in the feed summary only (${sm.length}): weaker match, the headline does not name ${C[cur].name}`)); const ul = el('ul', 'news'); sm.forEach(a => ul.append(row(a))); d.append(ul); nodes.push(d); }
+  const byDate = (x, y) => (Date.parse(y.published || y.seenByGdelt || y.firstSeenAt) || 0) - (Date.parse(x.published || x.seenByGdelt || x.firstSeenAt) || 0);
+  const score = a => (a.relevance && a.relevance.score) || 0;
+  const byRel = (x, y) => score(y) - score(x) || byDate(x, y);
+  const shown = all.filter(a => !a.filtered), flt = all.filter(a => a.filtered).sort(byDate);
+  const strong = shown.filter(a => a.matches[cur].level !== 'summary' && (!a.relevance || a.relevance.tier !== 'other')).sort(byRel).slice(0, 20);
+  const plain = shown.filter(a => a.matches[cur].level !== 'summary' && a.relevance && a.relevance.tier === 'other').sort(byDate).slice(0, 20);
+  const sm = shown.filter(a => a.matches[cur].level === 'summary').sort(byDate).slice(0, 20);
+  const fold = (text, list) => { const d = el('details'); d.append(el('summary', null, text)); const ul = el('ul', 'news'); list.forEach(a => ul.append(row(a))); d.append(ul); nodes.push(d); };
+  if (strong.length) { const ul = el('ul', 'news'); strong.forEach(a => ul.append(row(a))); nodes.push(ul); }
+  else if (last) nodes.push(el('div', 'state', 'No cached headline with a security, diplomacy, sanctions/trade or economic-policy signal names ' + C[cur].name + ' (last ' + (j.retentionDays || 7) + ' days). This does not mean nothing happened: it only reflects these sources.'));
+  if (plain.length) fold(`Other headlines naming ${C[cur].name} without a geopolitical keyword (${plain.length})`, plain);
+  if (sm.length) fold(`Mentioned in the feed summary only (${sm.length}): weaker match, the headline does not name ${C[cur].name}`, sm);
+  if (flt.length) fold(`Filtered out as routine financial notices (${flt.length}): shown here so nothing is hidden silently`, flt);
   const pubs = (j.publishers || []).map(p => p.name + ' (terms checked ' + p.termsChecked + ')').join(', ') || 'none';
   const attr = j.attribution ? [' Data: ', link(j.attribution.url, j.attribution.name), ' (open dataset, used under its terms).'] : [];
-  nodes.push(el('p', 'meta', ['Reported events. Sources: ' + pubs + '.', ...attr, ' Matching words for ' + C[cur].name + ': ', el('code', null, ((j.terms || {})[cur] || []).join(', ')), '. Each headline links to the original report. Last successful update: ' + (last ? fmtUTC(last) : 'none yet') + (j.checkedAt ? '. Last checked: ' + fmtUTC(j.checkedAt) : '') + '.']));
-  nodes.push(el('p', 'note', (gk ? 'Headlines are written by the publishers named and link straight to their pages; GDELT only indexes them. ' : '') + 'Only the headline, publisher, date and link are copied; read the article at the publisher. Articles are matched to a country by words in the headline (or in the feed summary, which is not kept). A country named in a headline does not prove the article is mainly about it, and a summary-only mention is weaker still. Headlines belong to the publishers and are neither checked nor endorsed here.'));
+  nodes.push(el('p', 'meta', ['Reported events. Sources: ' + pubs + '.', ...attr, ' Matching words for ' + C[cur].name + ': ', el('code', null, termText((j.terms || {})[cur])), '. Each headline links to the original report. Last successful update: ' + (last ? fmtUTC(last) : 'none yet') + (j.checkedAt ? '. Last checked: ' + fmtUTC(j.checkedAt) : '') + '.']));
+  nodes.push(el('p', 'note', (gk ? 'Headlines are written by the publishers named and link straight to their pages; GDELT only indexes them. ' : '') + 'Only the headline, publisher, date and link are copied; read the article at the publisher. Articles are matched to a country by its name, or its capital or a government body, in the headline (the names of people are never used), and ordered by simple keyword rules (security, diplomacy, sanctions and trade, economic policy). Routine fund and stock notices are filtered into a labelled list, and near-identical headlines are grouped with links to every source. A country named in a headline does not prove the article is mainly about it, and these keyword rules can be wrong. Headlines belong to the publishers and are neither checked nor endorsed here.'));
   return { pills, nodes };
 }
 

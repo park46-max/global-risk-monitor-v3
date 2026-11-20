@@ -47,12 +47,12 @@ eq(ids(mt('Washington state wildfire spreads')), '', '"Washington" alone is not 
 eq(ids(mt('Chinatown festival returns')), '', 'whole words only (Chinatown)');
 eq(ids(mt('Let us talk about it')), '', 'lowercase "us" is not the US');
 eq(ids(mt('US-China trade talks resume')), 'CHN,USA', 'hyphenated US-China matches both');
-eq(ids(mt('Putin visits Beijing')), 'CHN,RUS', 'two countries');
+eq(ids(mt('Putin visits Beijing')), 'CHN', 'a leader name is not a country term: only Beijing (institution) matches');
 eq(ids(mt('Kyiv and Kiev spellings')), 'UKR', 'both spellings of the capital');
 eq(ids(mt('Cyprus talks')), '', 'no false match');
 eq(mt('Markets rally', 'Investors watch the US Federal Reserve.').USA, { level: 'summary', terms: ['US'] }, 'summary-only match labelled summary');
 eq(mt('Taiwan holds drills', 'China responds').CHN.level, 'summary', 'headline country is headline, other is summary');
-eq(mt('Taiwan holds drills', 'China responds').TWN.level, 'headline', 'headline level');
+eq(mt('Taiwan holds drills', 'China responds').TWN.level, 'country', 'country-name level');
 
 // ---------------- fixtures ----------------
 let PORT = 0, hits = {}, mode = {};
@@ -155,11 +155,11 @@ ok(!T().some(t => /old story/.test(t)), 'article older than 7 days dropped'); ok
 const drills = c1.items.find(i => /drills/.test(i.title)), putin = c1.items.find(i => /Putin/.test(i.title));
 ok(drills && drills.published === null, 'future date is not shown as a date'); ok(putin && putin.published === null, 'junk date is not shown as a date');
 ok(c1.items.find(i => /Markets rally/.test(i.title)).matches.USA.level === 'summary', 'summary-only match flagged');
-ok(c1.items.find(i => /China warns/.test(i.title)).matches.CHN.level === 'headline', 'headline match flagged');
+ok(c1.items.find(i => /China warns/.test(i.title)).matches.CHN.level === 'country', 'country-name match flagged');
 ok(c1.items.every(i => i.publisher && i.url.startsWith('http://127.0.0.1') && i.title && !('summary' in i) && !('description' in i)), 'every article has publisher, link, title; no summary text stored');
 ok(!JSON.stringify(c1).includes('Investors watch'), 'summary text is not in the cache file');
 ok(c1.items.some(i => i.publisherId === 'a' && /Taipei/.test(i.title)) && c1.items.some(i => /Kremlin/.test(i.title) && i.url.endsWith('/atom/1')), 'RDF and Atom feeds both contribute');
-ok(c1.lastSuccessAt === '2026-11-20T08:00:00.000Z', 'lastSuccessAt set'); ok(c1.terms.TWN.includes('Taiwan'), 'match terms are published in the cache');
+ok(c1.lastSuccessAt === '2026-11-20T08:00:00.000Z', 'lastSuccessAt set'); ok(c1.terms.TWN.names.includes('Taiwan'), 'match terms are published in the cache');
 if (KEEP) fs.cpSync(r.out, path.join(KEEP, 'mixed'), { recursive: true });
 // ---------- Run 5: next run, everything fails: old articles kept and marked ----------
 mode.good = 'dead';
@@ -177,9 +177,11 @@ ok(r.cache.items.length === 0 || r.cache.items.every(i => Date.parse(i.published
 // ---------- Run 7: a publisher switched off loses its articles; other publisher untouched ----------
 const PC = pub('c', 'Pub C', [['c-1', '/pub2.xml']]);
 r = await run([PA, PC], ['--fetch']); const both = r.cache;
-eq(both.items.filter(i => /Russia launches new strikes/.test(i.title)).map(i => i.publisherId).sort(), ['a', 'c'], 'same headline at two publishers kept as two articles');
+const strikes = both.items.filter(i => /Russia launches new strikes/.test(i.title));
+eq(strikes.length, 1, 'same headline at two publishers shown once');
+eq([strikes[0].publisherId, ...(strikes[0].variants || []).map(v => v.publisherId)].sort(), ['a', 'c'], 'the other publisher is kept as a linked variant, nothing hidden');
 r = await run([PA, { ...PC, enabled: false }], ['--fetch'], { out: r.out });
-ok(!r.cache.items.some(i => i.publisherId === 'c'), 'articles of a switched-off publisher are removed'); ok(r.cache.items.some(i => i.publisherId === 'a'), 'other publisher unaffected');
+ok(!r.cache.items.some(i => i.publisherId === 'c') && !JSON.stringify(r.cache).includes('"c"'), 'articles AND variant links of a switched-off publisher are removed'); ok(r.cache.items.some(i => i.publisherId === 'a'), 'other publisher unaffected');
 // ---------- Run 8: second fetch does not duplicate; ETag 304 ----------
 const PE = pub('e', 'Pub E', [['e-1', '/etag']]);
 r = await run([PE], ['--fetch']); const e1 = r.cache.items.length; ok(e1 > 0, 'ETag feed fetched first time'); ok(r.cache.feeds['e-1'].etag === 'W/"v1"', 'ETag stored');

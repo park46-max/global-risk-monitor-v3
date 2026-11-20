@@ -172,13 +172,23 @@ Run the workflow again with mode = **fetch**. Check the Summary page (feeds upda
 In `.github/workflows/update-rss.yml`, remove the `# ` in front of the two `schedule:` lines (`schedule:` and the `- cron:` line under it) and commit. It then runs every 3 hours.
 
 ### How articles are matched to a country
-Plain word matching, not understanding. Whole words only (so "Chinatown" does not match China), case-insensitive except short terms like "US" that must be upper case (so "let us talk" does not match). The word list is shown under each article list and lives in `data/rss-sources.mjs`. "Washington" alone, "America", "Congress", "Georgia" and "Hong Kong" are deliberately not used because they are ambiguous or politically contested.
-- **Country named in headline**: a matching word is in the headline. It is the stronger match, but it still does not prove the article is mainly about that country (for example "Putin visits Beijing" is listed under both Russia and China).
-- **Mentioned in feed summary only**: the headline does not name the country; only the summary does. These are collapsed and labelled weaker.
+Plain word matching on the **headline only**, not understanding. The word lists are in `data/country-terms.mjs` and are shown on the page under each list. Whole words only (so "Chinatown" does not match China), case-insensitive except short terms like "US" that must be upper case (so "let us talk" does not match).
+- **Country named in headline**: the headline contains the country's name or demonym (China, Chinese, United States, U.S., US, USA ...).
+- **Capital or government body named in headline**: no country name, but a capital or a body such as Beijing, Kremlin, White House, Pentagon. Labelled separately because it is a weaker signal.
+- **Mentioned in feed summary only** (RSS only): collapsed and labelled weaker; the summary is read but never stored.
+- **People are never matching words.** "Trump", "Putin", "Xi Jinping" and "Zelensky" are not terms, so a headline naming only a leader matches no country. A test (`tests/test-relevance.mjs`) fails if a person's name is added. "Washington" alone, "America", "Congress", "Georgia" and "Hong Kong" are also not used because they are ambiguous or contested.
 The page never says an article is "about" a country, only what matched.
 
+### How headlines are ranked, filtered and grouped
+Rules are plain word lists in `data/relevance-rules.mjs`; no AI and no paid service. To see exactly how one headline is judged: `node scripts/explain-headline.mjs "your headline"`.
+- **Ranking:** security (3), diplomacy (3), sanctions and trade (3) and economic policy (2) each add their weight once if a word from that topic is in the headline; +1 for two or more topics; +1 for two monitored countries in one geopolitical headline. 3 or more is "high", 1-2 "medium". Headlines with no topic word are listed in a collapsed "Other headlines" section. Each shown article lists its topic words.
+- **Routine financial notices** (fund NAV updates, ETF holdings, dividends, price targets, earnings and similar) are filtered unless a geopolitical signal is present: "strong" product words are filtered unless a security, diplomacy or sanctions/trade word is also present; "weak" words (ETF, earnings, shares jump) are filtered only when there is no topic word at all. So "iShares China ETF net asset value update" is filtered, while "Sanctions on Russia hit energy ETF" and "China ETF inflows jump after Beijing unveils stimulus" stay. Filtered headlines are not deleted: they are listed in a collapsed "Filtered out" section with the reason (the newest 30 are kept for this audit).
+- **Duplicates:** headlines that share most of their words (a trailing " - Publisher" and word order are ignored; at least 4 words; published within 48 hours; same country) are grouped. One is shown, the others appear as "Also reported by", each with its own original link.
+- Every run re-judges all cached articles with the current rules, so changing a rule also corrects articles cached earlier.
+- **Trade-offs:** word lists can be wrong ("war" in "price war", "China" in "Bank of China"); a story that names a leader but no country is not matched; the noise filter can hide a genuine item (hence the audit list); grouping can occasionally merge two different stories or miss a paraphrase. Edit the lists and run `node tests/test-relevance.mjs`.
+
 ### Duplicates, dates and freshness
-- The same article (same link after removing tracking parameters, or same headline at the same publisher) is kept once. The same story at two different publishers is shown twice, each credited, because they are separate reports.
+- The same article (same link after removing tracking parameters, or same headline at the same publisher) is kept once. The same story at different publishers is grouped (see above), each source still credited and linked.
 - Dates come only from the feed. A missing, unreadable or future-dated value is shown as "Publication date not provided by the feed". Nothing is guessed.
 - Articles older than 7 days are dropped. If a feed fails, its earlier articles stay and are labelled **Cached: feed refresh failed**; one failing feed never stops the others. If every feed fails the run turns red.
 - Feeds only keep their latest items, so each country may often show few or no articles. "No headline names this country" only describes these feeds, not the world.

@@ -109,7 +109,7 @@ const dr = c1.items.find(i => /drills/.test(i.title)); ok(dr && dr.published ===
 ok(c1.items.find(i => /Ukraine & Russia/.test(i.title)).published === null, 'missing publication time stays empty (nothing guessed)');
 ok(c1.items.find(i => /China warns/.test(i.title)).published === '2026-11-20T07:00:00.000Z', 'precise publication time parsed as UTC');
 ok(c1.items.every(i => i.via === 'GDELT' && i.publisher && i.url.startsWith('http://') && i.matches && !('summary' in i)), 'every item has publisher, link, via GDELT, matches');
-ok(c1.items.every(i => i.matches && Object.values(i.matches).every(m => m.level === 'headline')), 'GDELT matches are headline-only');
+ok(c1.items.every(i => i.matches && Object.values(i.matches).every(m => m.level === 'country' || m.level === 'institution')), 'GDELT matches are headline-only (country name or institution)');
 ok(c1.attribution.url === 'https://www.gdeltproject.org/', 'attribution link stored in the cache');
 ok(!hits['/gdeltv2/20261120074500.export.CSV.zip'], 'only lastupdate.txt and GKG files are requested');
 if (KEEP) fs.cpSync(r.out, path.join(KEEP, 'gdelt-ok'), { recursive: true });
