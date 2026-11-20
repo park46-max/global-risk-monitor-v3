@@ -81,7 +81,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/cache/news-rss.json data/cache/news-gdelt.json 2>/dev/null || true
+          # Stage only the cache files that exist. If one of them was never written (for example RSS is switched off),
+          # a single missing path makes "git add" refuse to stage ANY file, so each file is added on its own.
+          for f in data/cache/news-rss.json data/cache/news-gdelt.json; do
+            if [ -f "$f" ]; then git add "$f"; else echo "Not present, nothing to stage: $f"; fi
+          done
+          git status --short data/cache
           if git diff --cached --quiet; then
             echo "No changes to commit."
             echo "pushed=false" >> "$GITHUB_OUTPUT"
