@@ -20,6 +20,10 @@ on:
           - all
           - news
           - indicators
+      force:
+        description: 'Ask GDELT again even if the cached news is recent (use sparingly)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -62,7 +66,8 @@ jobs:
       - name: Fetch data
         id: fetch
         continue-on-error: true
-        run: node scripts/fetch-data.mjs --only=${{ steps.pick.outputs.dataset }}
+        timeout-minutes: 12
+        run: FORCE_REFRESH="${{ github.event.inputs.force || 'false' }}" node scripts/fetch-data.mjs --only=${{ steps.pick.outputs.dataset }}
 
       - name: Commit changed cache files
         id: commit
