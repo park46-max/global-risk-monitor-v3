@@ -1,0 +1,82 @@
+name: Update data cache
+
+# Fetches news (GDELT) and indicators (World Bank) and commits them as JSON into data/cache/.
+# Free: public repositories get free Actions minutes, and both APIs need no key.
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # news: every 6 hours (UTC), at minute 17 to avoid the busy top of the hour
+    - cron: '43 4 * * 1'     # indicators: Mondays 04:43 UTC (World Bank data changes slowly)
+  workflow_dispatch:         # lets you run it by hand: repository > Actions > Update data cache > Run workflow
+    inputs:
+      dataset:
+        description: 'What to fetch'
+        type: choice
+        default: all
+        options: [all, news, indicators]
+
+permissions:
+  contents: write            # to commit the JSON files
+  pages: write               # only used by the optional "request Pages build" step below
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Choose what to fetch
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "dataset=${{ github.event.inputs.dataset }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "43 4 * * 1" ]; then
+            echo "dataset=indicators" >> "$GITHUB_OUTPUT"
+          else
+            echo "dataset=news" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check World Bank country codes (shows Taiwan availability in the log)
+        if: steps.pick.outputs.dataset != 'news'
+        run: node scripts/fetch-data.mjs --verify
+        continue-on-error: true
+
+      - name: Fetch data
+        id: fetch
+        run: node scripts/fetch-data.mjs --only=${{ steps.pick.outputs.dataset }}
+        continue-on-error: true      # we still want to commit the error records; the last step fails the run if everything failed
+
+      - name: Commit changed cache files
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cache/news.json data/cache/indicators.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update data cache (${{ steps.pick.outputs.dataset }}) $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Best effort. Some setups do not rebuild Pages after a push made with the built-in token; this asks GitHub to rebuild.
+      # It only applies to "Deploy from a branch". If it fails, the run continues; see README "If the site does not update".
+      - name: Request a GitHub Pages build (optional)
+        if: steps.commit.outputs.pushed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "/repos/${{ github.repository }}/pages/builds"
+
+      -
