@@ -14,10 +14,10 @@
   <div class="brand"><h1>Global Risk Monitor</h1><p>Geopolitical intelligence terminal</p></div>
   <div class="tools"><span id="meta" class="chr" aria-live="polite"></span><button id="refresh" class="btn" type="button" title="Re-read the cached data files">Reload data</button></div>
   <ul class="legend" aria-label="Data status key">
-    <li><span class="pill live"><i></i>Updated</span> cache refreshed recently</li>
-    <li><span class="pill stale"><i></i>Stale</span> cache is older than expected</li>
+    <li><span class="pill live"><i></i>Updated</span> fresh: the latest fetch succeeded</li>
+    <li><span class="pill stale"><i></i>Cached / Stale</span> older data kept after a failed or skipped refresh, or data older than expected</li>
     <li><span class="pill hist"><i></i>Historical</span> dated statistic</li>
-    <li><span class="pill bad"><i></i>Unavailable</span> missing, failed or no data</li>
+    <li><span class="pill bad"><i></i>Unavailable</span> nothing has ever been fetched, or no data exists</li>
     <li>Data is fetched on a schedule by GitHub Actions and served as cached JSON. Your browser never calls GDELT or the World Bank.</li>
   </ul>
 </header>
