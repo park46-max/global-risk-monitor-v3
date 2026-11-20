@@ -28,7 +28,7 @@ function stamp(iso, maxH, label, failed) {   // freshness pill built from the re
 // ---------- state ----------
 let cur = IDS.includes(location.hash.slice(1).toUpperCase()) ? location.hash.slice(1).toUpperCase() : 'USA';
 let GEO = null, globeOn = false, rotSeg = null;
-const store = { news: null, ind: null, rss: null, gk: null };
+const store = { news: null, ind: null, rss: null, gk: null, br: null };
 
 // ---------- cached data (written by the GitHub Action, Stage 2) ----------
 async function loadJson(path) {
@@ -37,7 +37,7 @@ async function loadJson(path) {
 }
 async function loadAll() {
   $('#meta').replaceChildren(pill('load'));
-  [store.news, store.ind, store.rss, store.gk] = await Promise.all([loadJson(CFG.newsFile), loadJson(CFG.indicatorsFile), loadJson(CFG.rssFile), loadJson(CFG.gdeltFilesFile)]);
+  [store.news, store.ind, store.rss, store.gk, store.br] = await Promise.all([loadJson(CFG.newsFile), loadJson(CFG.indicatorsFile), loadJson(CFG.rssFile), loadJson(CFG.gdeltFilesFile), loadJson(CFG.briefsFile || 'data/cache/briefs.json')]);
   const n = store.news, d = store.ind;
   const head = (r, what, hrs, bad) => {
     if (!r.ok) return [pill('bad', what + ': unavailable')];
@@ -50,7 +50,7 @@ async function loadAll() {
     return [p];
   };
   $('#meta').replaceChildren(...headSrc(store.rss, 'Official feeds', CFG.staleAfterHours.rss), ...headSrc(store.gk, 'GDELT files', CFG.staleAfterHours.gdeltFiles), ...head(n, 'GDELT search', CFG.staleAfterHours.news, c => c.status === 'error'), ...head(d, 'Indicators', CFG.staleAfterHours.indicators, c => c.status === 'error' || c.status === 'partial'));
-  paintNews(); paintData();
+  paintNews(); paintData(); brief();
 }
 function headSrc(r, label, h) {   // header pill for a feed-style cache (publisher RSS, GDELT files)
   if (!r.ok) return [pill('bad', label + (r.error === 'file not found' ? ': not enabled yet' : ': unavailable'))];
@@ -193,18 +193,73 @@ function risk() {
   });
   $('#risk').replaceChildren(g, el('p', 'note', 'This site never generates scores. Sourced assessments are added by hand in data/countries.js.'));
 }
+// ----- country intelligence brief: built by scripts/build-briefs.mjs from the cached news (fixed rules, no AI). Hand-written entries in data/countries.js still win. -----
 function brief() {
-  const b = C[cur].brief, g = el('div', 'bgrid');
-  [['Overview', 'overview'], ['Key developments', 'developments'], ['Why it matters', 'why']].forEach(([h, k]) => {
-    const s = b[k], d = el('section', 'bsec', el('h3', null, h));
-    if (s) d.append(pill(...KIND[s.kind] || KIND.analysis), el('span', 'meta', ' As of ' + s.asOf), el('p', null, s.text));
-    else d.append(pill('bad'), el('p', 'dim', 'No sourced entry yet.'));
+  const hand = C[cur].brief, root = $('#brief'), s = store.br, hrs = CFG.staleAfterHours.briefs || 12, g = el('div', 'bgrid'), top = [];
+  const auto = s && s.ok && s.json && s.json.countries ? s.json.countries[cur] : null;
+  const handAny = hand.overview || hand.developments || hand.why || (hand.sources || []).length;
+  if (!s) { root.replaceChildren(skel()); return; }
+  if (!s.ok && !handAny) {
+    root.replaceChildren(el('div', 'state', s.error === 'file not found'
+      ? [el('b', null, 'Briefs have not been generated yet. '), 'The workflow that builds them has not run, so there is no cache file. Nothing is shown in place of a brief. See the README.']
+      : [el('b', null, 'Briefs unavailable. '), 'The cache file ' + CFG.briefsFile + ' could not be read (' + s.error + '). Nothing is shown in place of a brief.'])); return;
+  }
+  if (auto) {
+    const j = s.json, failed = j.status === 'error' || !!auto.carriedForward;
+    top.push(stamp(auto.generatedAt, hrs, 'Brief generated', failed));
+    if (j.status === 'error') top.push(pill('stale', 'Latest regeneration failed: earlier brief kept'));
+    if (auto.carriedForward) top.push(pill('stale', 'No usable reports in the latest cache: earlier brief kept'));
+    const inp = j.inputs || {}; const old = Object.entries(inp).filter(([, v]) => v && v.status === 'ok' && v.stale).map(([k]) => k);
+    if (old.length) top.push(pill('stale', 'News input stale: ' + old.join(', ')));
+    top.push(el('span', 'meta', ' Window: reports from ' + fmtUTC(auto.window.from) + ' to ' + fmtUTC(auto.window.to) + '. Rule-based, no AI.'));
+    if (j.status === 'error') top.push(el('div', 'state err', [el('b', null, 'The latest update failed: '), j.error || 'no reason recorded', '. The brief below is the last successful one (generated ' + fmtUTC(auto.generatedAt) + ').']));
+    if (auto.carriedForward) top.push(el('div', 'state err', [el('b', null, 'Earlier brief kept. '), auto.carriedForward.reason]));
+  }
+  const ref = n => el('span', 'meta', ' [' + n + ']');
+  const unavailable = (why) => [pill('bad'), el('p', 'dim', why)];
+  const sec = (h, k, fill) => {
+    const d = el('section', 'bsec', el('h3', null, h)), x = hand[k];
+    if (x) d.append(pill(...KIND[x.kind] || KIND.analysis), el('span', 'meta', ' As of ' + x.asOf), el('p', null, x.text));
+    else if (!auto) d.append(...unavailable('No sourced entry yet.'));
+    else fill(d);
     g.append(d);
+  };
+  const lim = auto && auto.limitations || [];
+  sec('Overview', 'overview', d => {
+    if (auto.overview) d.append(pill(...KIND.fact), el('p', null, auto.overview.text));
+    else d.append(...unavailable('Unavailable: not enough cached reports to summarise ' + C[cur].name + '.'));
   });
-  const s = el('section', 'bsec', el('h3', null, 'Sources'));
-  if (b.sources.length) { const ul = el('ul'); b.sources.forEach(x => ul.append(el('li', null, [link(x.url, x.title), ` (${x.publisher}, accessed ${x.accessed})`]))); s.append(ul); }
-  else s.append(pill('bad'), el('p', 'dim', 'No sources listed. Every statement needs one.'));
-  g.append(s); $('#brief').replaceChildren(g);
+  sec('Key developments', 'developments', d => {
+    if (!auto.developments.length) { d.append(...unavailable('Unavailable: no cached report names ' + C[cur].name + ' in the window.')); return; }
+    d.append(pill(...KIND.reporting), el('span', 'meta', ' Reported by the outlets named; not verified here'));
+    const ul = el('ul');
+    auto.developments.forEach(x => {
+      const li = el('li', null, [link(x.url, x.headline), ref(x.n)]);
+      li.append(el('div', 'meta', `${x.publisher} · ${x.timeBasis === 'published' ? 'Published' : x.timeBasis === 'first seen by GDELT' ? 'Publication time not provided; first seen by GDELT' : 'Publication time not provided; first cached'} ${fmtUTC(x.time)}`));
+      li.append(el('div', 'meta', (x.matched.level === 'institution' ? 'Capital or government body named in headline: ' : 'Country named in headline: ') + x.matched.terms.join(', ') + (x.topics.length ? ' · Topics: ' + x.topics.join(', ') : '')));
+      if (x.alsoReportedBy.length) li.append(el('div', 'meta', 'Also reported by: ' + x.alsoReportedBy.map(n => { const o = auto.sources.find(q => q.n === n); return o ? o.publisher + ' [' + n + ']' : '[' + n + ']'; }).join(', ')));
+      ul.append(li);
+    });
+    d.append(ul);
+  });
+  sec('Why it matters', 'why', d => {
+    if (!auto.why) { d.append(...unavailable('Unavailable: ' + (auto.status === 'unavailable' ? 'there are no reports to apply the rules to.' : (lim.find(t => /analytical|No analytical rule/.test(t)) || 'not enough supporting reports.')))); return; }
+    d.append(pill('ana'), el('span', 'meta', ' Keyword rules applied to the listed headlines; not a finding'));
+    const ul = el('ul'); auto.why.forEach(x => ul.append(el('li', null, [x.text, el('div', 'meta', 'Rule: ' + x.rule)]))); d.append(ul);
+  });
+  const sd = el('section', 'bsec', el('h3', null, 'Sources')), asrc = auto ? auto.sources : [];
+  if (asrc.length) {
+    const ul = el('ul');
+    asrc.forEach(x => ul.append(el('li', null, [el('span', 'meta', '[' + x.n + '] '), link(x.url, x.title), ` (${x.publisher}${x.time ? ', ' + (x.timeBasis || 'time') + ' ' + fmtUTC(x.time) : ', time not provided'}${x.via ? ', via ' + x.via : ''}${x.duplicateOf ? ', same headline as [' + x.duplicateOf + ']' : ''})`])));
+    sd.append(ul);
+  }
+  if ((hand.sources || []).length) { const ul = el('ul'); hand.sources.forEach(x => ul.append(el('li', null, [link(x.url, x.title), ` (${x.publisher}, accessed ${x.accessed})`]))); sd.append(ul); }
+  if (!asrc.length && !(hand.sources || []).length) sd.append(pill('bad'), el('p', 'dim', 'No sources listed. Every statement needs one.'));
+  g.append(sd);
+  const foot = [];
+  if (lim.length) { const ul = el('ul'); lim.forEach(t => ul.append(el('li', null, t))); foot.push(el('div', 'state', [el('b', null, 'Limitations. '), ul])); }
+  if (auto) foot.push(el('p', 'note', auto.notice || 'Headlines are reports, not verified facts.'));
+  root.replaceChildren(...top, g, ...foot);
 }
 
 // ---------- globe ----------

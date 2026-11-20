@@ -193,6 +193,24 @@ Rules are plain word lists in `data/relevance-rules.mjs`; no AI and no paid serv
 - Articles older than 7 days are dropped. If a feed fails, its earlier articles stay and are labelled **Cached: feed refresh failed**; one failing feed never stops the others. If every feed fails the run turns red.
 - Feeds only keep their latest items, so each country may often show few or no articles. "No headline names this country" only describes these feeds, not the world.
 
+## Country intelligence briefs (Stage 3)
+Each country page has a brief with four parts: Overview, Key developments, Why it matters, Sources. It is built automatically by `scripts/build-briefs.mjs` from the cached news (`news-gdelt.json`, and `news-rss.json` if you ever enable RSS) and saved to `data/cache/briefs.json`. **No AI, no paid service, no API key, no network request**: fixed rules only (`data/brief-rules.mjs`, `scripts/brief-lib.mjs`).
+
+What each part contains (and nothing else):
+- **Overview** (labelled "Factual data"): counts of cached headlines that name the country in the last 72 hours, the time span, the number of outlets and topic-keyword counts.
+- **Key developments** (labelled "Reported event"): up to 5 of the highest-ranked headlines, copied word for word, each with publisher, time (publication time, or clearly marked "first seen by GDELT"/"first cached" when the source gave none), matched words, topic words, and the other outlets that carried the same headline. They are reports, not verified facts.
+- **Why it matters** (labelled "Analysis"): only these narrow sentences, each showing its numbered evidence and rule name: "N of the M listed reports use security/diplomacy/sanctions and trade/economic policy wording", "N listed reports with topic keywords also name another monitored country", "N listed headlines were carried by more than one outlet". Each says what it does not show. With fewer than 2 reports, or when no rule has enough support, the section says Unavailable and why. Words that claim cause, proof or prediction are banned and a test enforces it. No risk scores are ever generated.
+- **Sources**: every listed report with a numbered link, publisher and time, plus duplicates. Anything without a headline, publisher, http(s) link or time is never used (the run log counts what was dropped).
+- **Limitations** and a standing note are shown under the brief (stale or missing inputs, failed feeds, too few reports).
+
+Country attribution, relevance ranking, routine-notice filtering and duplicate grouping reuse the existing logic (`data/country-terms.mjs`, `data/relevance-rules.mjs`, `scripts/relevance-lib.mjs`), so people's names never attribute a report to a country, and a headline appears in a brief only if the headline names the country or its capital/government.
+
+**When it runs:** in the "Update RSS news" workflow, after the news steps, in fetch mode, and its file is committed with the other caches. You can also run the workflow with sources = `briefs` to rebuild only the briefs from the existing caches. In verify mode it shows what it would build and writes nothing. If building fails (no readable news cache) the previous `briefs.json` is kept and marked `status: "error"`; the page shows it as stale ("Latest regeneration failed: earlier brief kept") with the reason. If a country has no usable report in the latest cache but had a brief within the last 168 hours, that brief is kept and marked stale; after 168 hours it becomes Unavailable. If there is no earlier file, nothing is written and the page says briefs have not been generated yet.
+
+**Trade-offs:** a brief only reflects the headlines that GDELT/RSS happened to cache in 72 hours, so it can miss important events and over-represent whatever was heavily reported; keyword rules can mis-score a headline; the topic counts describe the listed reports, which are chosen by keyword rank, so they are not a share of all coverage; hand-written entries in `data/countries.js` still override the automatic text per section.
+
+Run on your computer: `node scripts/build-briefs.mjs --verify` (preview) or `node scripts/build-briefs.mjs` (write). Tests: `node tests/test-briefs.mjs`.
+
 ## Changing things
 - **News search terms:** edit the `gdelt:` line per country in `data/countries.js`. GDELT rules: OR groups go in parentheses, phrases in quotes, every word at least 3 letters. After a change, run the Action manually. If a query is invalid the site will show GDELT's own error message.
 - **Schedule:** edit the `cron:` lines in `.github/workflows/update-data.yml`. GDELT asks for at most one request per 5 seconds; the script already waits about 8 seconds between countries. More than every few hours adds little and uses free minutes.
