@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-20T10:12:21.823Z",
- "checkedAt": "2026-11-20T10:12:21.823Z",
- "lastSuccessAt": "2026-11-20T10:12:21.823Z",
+ "generatedAt": "2026-11-21T03:51:19.268Z",
+ "checkedAt": "2026-11-21T03:51:19.268Z",
+ "lastSuccessAt": "2026-11-21T03:51:19.268Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -78,8 +78,8 @@
  },
  "relevance": {
   "droppedNoMatch": 0,
-  "filteredNotices": 8,
-  "groupedDuplicates": 1,
+  "filteredNotices": 9,
+  "groupedDuplicates": 28,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,11 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-20T10:12:21.823Z",
-   "lastSuccessAt": "2026-11-20T10:12:21.823Z",
+   "checkedAt": "2026-11-21T03:51:19.268Z",
+   "lastSuccessAt": "2026-11-21T03:51:19.268Z",
    "error": null,
-   "latestFile": "20261120101500"
+   "latestFile": "20261121040000",
+   "warning": "3 of 12 files could not be read this run"
   }
  },
  "files": {
@@ -111,7 +112,19 @@
   "20261120093000": "ok",
   "20261120094500": "ok",
   "20261120100000": "ok",
-  "20261120101500": "ok"
+  "20261120101500": "ok",
+  "20261121011500": "ok",
+  "20261121013000": "ok",
+  "20261121014500": "ok",
+  "20261121020000": "ok",
+  "20261121021500": "ok",
+  "20261121023000": "ok",
+  "20261121024500": "ok",
+  "20261121030000": "ok",
+  "20261121031500": "ok",
+  "20261121033000": "missing",
+  "20261121034500": "missing",
+  "20261121040000": "missing"
  },
  "items": [
   {
@@ -407,6 +420,46 @@
       "label": "Diplomacy",
       "terms": [
        "envoy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump tells Europe Putin ready to end Ukraine war and willing for peace deal",
+   "url": "https://www.dailyexcelsior.com/trump-tells-europe-putin-ready-to-end-ukraine-war-and-willing-for-peace-deal/",
+   "publisher": "dailyexcelsior.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "peace deal"
       ]
      }
     ]
@@ -1396,6 +1449,495 @@
    }
   },
   {
+   "title": "China, Russia and US Hold First Tripartite Summit in Shenzhe",
+   "url": "https://www.pakistantoday.com.pk/2026/11/21/tripartite-summit",
+   "publisher": "pakistantoday.com.pk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T21:14:00.000Z",
+   "seenByGdelt": "2026-11-21T02:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Shenzhen Summit: China, US and Russia Face Global Challenges",
+   "url": "https://www.pakistantoday.com.pk/2026/11/21/three-giants-one-summit-and-a-world-left-behind",
+   "publisher": "pakistantoday.com.pk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T21:18:00.000Z",
+   "seenByGdelt": "2026-11-21T02:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump says only older US chips should go to China amid broader trade talks",
+   "url": "https://www.thenews.com.pk/latest/1424447-trump-says-only-older-us-chips-should-go-to-china-amid-broader-trade-talks",
+   "publisher": "thenews.com.pk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T22:23:00.000Z",
+   "seenByGdelt": "2026-11-21T01:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "trade talks"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump says China is building nuclear weapons 'hot and heavy', warns it could catch US in 10 years",
+   "url": "https://www.hindustantimes.com/world-news/trump-says-china-is-building-nuclear-weapons-hot-and-heavy-warns-it-could-catch-us-in-10-years-101795211740167.html",
+   "publisher": "hindustantimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T22:34:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear",
+       "weapons"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Denmark expels Russian diplomat over attempt to kill Ukrainian rapper",
+   "url": "https://www.nzherald.co.nz/world/denmark-expels-russian-diplomat-over-attempt-to-kill-ukrainian-rapper/I4ZUM55QQRC3LG3RQ3U2PIN22M/",
+   "publisher": "nzherald.co.nz",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T01:39:00.000Z",
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomat"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian missiles, drone crash in Poland: Warsaw flags 'provocation' as Ukraine faces aerial barrage",
+   "url": "https://timesofindia.indiatimes.com/world/europe/poland-on-alert-as-russian-missiles-drone-crash-near-nato-military-exercises/articleshow/136042254.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T01:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missiles"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "China, U.S. hold military maritime consultative agreement working group meeting",
+   "url": "http://en.people.cn/n3/2026/1120/c90000-20521779.html",
+   "publisher": "en.people.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "News: Uganda government disowns Russia, Ukraine frontline re",
+   "url": "https://www.newvision.co.ug/category/news/uganda-government-disowns-russia-ukraine-fron-NV_244518_112026",
+   "publisher": "newvision.co.ug",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "frontline"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "China using Pakistan, supply chains to constrain India's rise: US Panel",
+   "url": "https://economictimes.indiatimes.com/news/defence/china-using-pakistan-supply-chains-to-constrain-indias-rise-us-panel/articleshow/136042992.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "supply chains"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "World News: Russia's missile and drone strikes kill eight in Ukraine",
+   "url": "https://www.gdnonline.com/Details/1413463/Russia%E2%80%99s-missile-and-drone-strikes-kill-eight-in-Ukraine",
+   "publisher": "gdnonline.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strikes",
+       "missile"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine war briefing: European leaders react with anger and alarm after Russian missiles crash in Poland",
+   "url": "https://www.theguardian.com/world/2026/nov/21/ukraine-war-briefing-european-leaders-react-with-anger-and-alarm-after-russian-missiles-crash-in-poland",
+   "publisher": "theguardian.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missiles",
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "U.S. Faces Unprecedented Three-Way Nuclear Rivalry With China and Russia, WSJ Reports – NaturalNews.com",
+   "url": "https://www.naturalnews.com/2026-11-20-us-faces-nuclear-rivalry-china-russia-wsj.html",
+   "publisher": "naturalnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Japanese nuclear submarines are a bad idea for East China Sea security — for now",
    "url": "https://www.navytimes.com/opinion/2026/11/19/japanese-nuclear-submarines-are-a-bad-idea-for-east-china-sea-security-for-now/",
    "publisher": "navytimes.com",
@@ -1467,43 +2009,16 @@
      "url": "https://abcnews.com/International/wireStory/european-troops-11-countries-drill-poland-potential-postwar-138313096",
      "published": null,
      "seenByGdelt": "2026-11-20T09:30:00.000Z"
+    },
+    {
+     "publisher": "wptf.com",
+     "publisherId": "gdelt",
+     "url": "https://www.wptf.com/2026/11/20/19412/",
+     "published": "2026-11-20T22:17:00.000Z",
+     "seenByGdelt": "2026-11-21T02:45:00.000Z"
     }
    ],
-   "variantsTotal": 1
-  },
-  {
-   "title": "UPDATES: US War on Iran, Day 267 - Houthi Missile Attacks on Saudi Arabia",
-   "url": "https://eaworldview.com/2026/11/us-war-on-iran-houthi-saudi-arabia-missiles/",
-   "publisher": "eaworldview.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T04:55:00.000Z",
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missile",
-       "war"
-      ]
-     }
-    ]
-   }
+   "variantsTotal": 2
   },
   {
    "title": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
@@ -1566,39 +2081,6 @@
       "label": "Diplomacy",
       "terms": [
        "diplomacy"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US Senate rejects resolution to curb Trump's war powers over Iran – Pajhwok Afghan News",
-   "url": "https://pajhwok.com/2026/11/20/us-senate-rejects-resolution-to-curb-trumps-war-powers-over-iran/",
-   "publisher": "pajhwok.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T06:21:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
       ]
      }
     ]
@@ -1737,6 +2219,39 @@
    }
   },
   {
+   "title": "China gloats over Apec summit where Xi got everything he could have hoped for",
+   "url": "https://www.independent.co.uk/asia/china/xi-trump-putin-china-apec-trilateral-summit-b3088393.html",
+   "publisher": "independent.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T07:38:00.000Z",
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Polish army investigates report of unknown objects near Ukraine border",
    "url": "https://ksevradio.com/polish-army-investigates-report-of-unknown-objects-near-ukraine-border/",
    "publisher": "ksevradio.com",
@@ -1831,39 +2346,6 @@
       "label": "Diplomacy",
       "terms": [
        "negotiations"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Powerful explosion reported in Poland, Russian missile suspected of entering country's airspace",
-   "url": "https://en.apa.az/europe/powerful-explosion-reported-in-poland-russian-missile-suspected-of-entering-countrys-airspace-537432",
-   "publisher": "en.apa.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T08:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missile"
       ]
      }
     ]
@@ -2002,72 +2484,6 @@
    }
   },
   {
-   "title": "NATO jets scrambled as Russia's major attack sparks horror alert twice within hours",
-   "url": "https://www.aol.co.uk/articles/nato-jets-scrambled-russias-major-083700000.html",
-   "publisher": "aol.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T08:37:00.000Z",
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Iran war bill reaches 48.3 bln USD: Pentagon official-Xinhua",
-   "url": "https://english.news.cn/20261120/893823dad3e343739b338e535aa8be97/c.html",
-   "publisher": "english.news.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T08:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "institution",
-     "terms": [
-      "Pentagon"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "APEC leaders call for stronger connectivity, fewer trade barriers at China summit",
    "url": "https://tribune.com.pk/story/2641346/apec-leaders-call-for-stronger-connectivity-fewer-trade-barriers-at-china-summit",
    "publisher": "tribune.com.pk",
@@ -2095,171 +2511,6 @@
       "label": "Diplomacy",
       "terms": [
        "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US-Israel-Iran War: Key Updates for UAE Residents on Travel, Security, and Energy Disruptions",
-   "url": "https://gulfnews.com/uae/usisrael-iran-war-what-uae-residents-need-to-know-today-nov-20-2026-1.500754484",
-   "publisher": "gulfnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Iran rejects US allegations over alleged biological, chemical weapons",
-   "url": "https://news.az/news/iran-rejects-us-allegations-over-alleged-biological-chemical-weapons",
-   "publisher": "news.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "weapons"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Cybersecurity breach at USDA hits farmers and supply chain in latest tech threat to the U.S.",
-   "url": "https://www.dailymail.com/snapchat/article-16308441/Cybersecurity-breach-USDA-hits-farmers-supply-chain-latest-tech-threat-U-S.html",
-   "publisher": "dailymail.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:08:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "supply chain"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US Army postpones Iowa explosives detonation over public safety concerns",
-   "url": "https://aa.com.tr/en/americas/us-army-postpones-iowa-explosives-detonation-over-public-safety-concerns/4131834",
-   "publisher": "aa.com.tr",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "army"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Jetten \"won't be intimidated\" by Russian threats and embassy hit",
-   "url": "https://www.dutchnews.nl/2026/11/jetten-wont-be-intimidated-by-russian-threats-and-embassy-hit/",
-   "publisher": "dutchnews.nl",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:16:00.000Z",
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "embassy"
       ]
      }
     ]
@@ -2299,14 +2550,90 @@
    }
   },
   {
-   "title": "BMW Ties $1.7 Billion US EV Investment To Tariff Push",
-   "url": "https://www.motor1.com/news/816181/bmw-us-ev-investment-tariffs/",
-   "publisher": "motor1.com",
+   "title": "Russia Humiliates Kushner Over His Big Claim on Peace Talks",
+   "url": "https://www.thedailybeast.com/russia-humiliates-kushner-over-his-big-claim-on-peace-talks",
+   "publisher": "thedailybeast.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
+   "published": "2026-11-20T19:26:00.000Z",
+   "seenByGdelt": "2026-11-21T01:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "peace talks"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "China's nuclear buildup is 'hot and heavy,' Trump says a day after meeting with Xi",
+   "url": "https://www.ktsa.com/chinas-nuclear-buildup-is-hot-and-heavy-trump-says-a-day-after-meeting-with-xi/",
+   "publisher": "ktsa.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T20:12:00.000Z",
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     }
+    ]
+   },
+   "variants": [
+    {
+     "publisher": "greeleytribune.com",
+     "publisherId": "gdelt",
+     "url": "https://www.greeleytribune.com/2026/11/20/trump-china-nuclear-buildup/",
+     "published": "2026-11-20T20:28:00.000Z",
+     "seenByGdelt": "2026-11-21T01:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "Court stay prevents US Army from detonating bomb-making chemicals in Iowa",
+   "url": "https://www.thetimestribune.com/news/national_news/court-stay-prevents-us-army-from-detonating-bomb-making-chemicals-in-iowa/article_24c43ca0-672f-58b8-9107-a4724e032af5.html",
+   "publisher": "thetimestribune.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T21:29:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
    "matches": {
     "USA": {
      "level": "country",
@@ -2315,41 +2642,8 @@
      ]
     }
    },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 3,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariff"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "From the Russian army to Reform UK to Sinn Féin, everyone is tapping into the GTA VI craze",
-   "url": "https://www.thejournal.ie/russian-army-and-reform-uk-gta-vi-mock-up-clips-7232106-Nov2026/",
-   "publisher": "thejournal.ie",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
    "relevance": {
     "score": 3,
     "tier": "high",
@@ -2365,14 +2659,214 @@
    }
   },
   {
-   "title": "Boeing, U.S. Navy Look To Future Of MQ-25 As Carrier Tests Loom",
-   "url": "https://aviationweek.com/defense/aircraft-propulsion/boeing-us-navy-look-future-mq-25-carrier-tests-loom",
-   "publisher": "aviationweek.com",
+   "title": "Hungary plans to withdraw its blockade of Ukraine's EU accession talks",
+   "url": "https://english.republika.mk/world/hungary-plans-to-withdraw-its-blockade-of-ukraines-eu-accession-talks/",
+   "publisher": "english.republika.mk",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
+   "published": "2026-11-20T21:53:00.000Z",
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "blockade"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Carney, Trump trade talks remain unresolved despite US midterm shake-up - Philippine Canadian Inquirer Nationwide Filipino Newspaper",
+   "url": "https://canadianinquirer.net/2026/11/21/carney-trump-trade-talks-remain-unresolved-despite-us-midterm-shake-up/",
+   "publisher": "canadianinquirer.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T22:00:00.000Z",
+   "seenByGdelt": "2026-11-21T02:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "trade talks"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian missiles land in Poland, as Europe held military drills nearby. NATO calls it a violation",
+   "url": "https://www.journalgazette.net/news/world/russian-missiles-land-in-poland-as-europe-held-military-drills-nearby-nato-calls-it-a/article_c406758f-4ae8-58a1-8aae-393964d706d5.html",
+   "publisher": "journalgazette.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T22:15:00.000Z",
+   "seenByGdelt": "2026-11-21T02:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military drills",
+       "missiles",
+       "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Fears growing of return to all-out war between US, Iran",
+   "url": "https://www.merimbulanewsweekly.com.au/story/9395697/fears-growing-of-return-to-all-out-war-between-us-iran/",
+   "publisher": "merimbulanewsweekly.com.au",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T22:31:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump says Canada trade deal is not close, claims it has 'never treated us fairly'; US nears Mexico deal",
+   "url": "https://www.hindustantimes.com/world-news/us-news/trump-says-canada-trade-deal-is-not-close-claims-it-has-never-treated-us-fairly-us-nears-mexico-deal-101795213159617.html",
+   "publisher": "hindustantimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T22:36:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "trade deal"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "USTR Jamieson Greer Discusses U.S-China Trade Discussions Post APEC Summit",
+   "url": "https://theconservativetreehouse.com/blog/2026/11/20/ustr-jamieson-greer-discusses-u-s-china-trade-discussions-post-apec-summit/",
+   "publisher": "theconservativetreehouse.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T23:16:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Tariffs Work - Japan and U.S. Steel Partnership Returning American Manufacturing Power",
+   "url": "https://theconservativetreehouse.com/blog/2026/11/20/tariffs-work-japan-and-u-s-steel-partnership-returning-american-manufacturing-power/",
+   "publisher": "theconservativetreehouse.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-20T23:42:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
    "matches": {
     "USA": {
      "level": "country",
@@ -2381,8 +2875,305 @@
      ]
     }
    },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump, Xi, and Putin at APEC Summit: Arms Control Long Shot, Ukraine Longer Shot",
+   "url": "https://hotair.com/headlines/2026/11/20/trump-xi-and-putin-at-apec-summit-arms-control-long-shot-ukraine-longer-shot-n3821155",
+   "publisher": "hotair.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:00:00.000Z",
+   "seenByGdelt": "2026-11-21T02:00:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Sanders Condemns The US-Israeli War Against Iran And Demands A Halt Of Its Funding!",
+   "url": "https://wrp.org.uk/editorials/sanders-condemns-the-us-israeli-war-against-iran-and-demands-a-halt-of-its-funding/",
+   "publisher": "wrp.org.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:00:00.000Z",
+   "seenByGdelt": "2026-11-21T02:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump, Pete Hegseth Pentagon Sued Over Alleged Drone Attack on Fishermen",
+   "url": "https://radaronline.com/p/trump-pete-hegseth-pentagon-lawsuit-fishermen-drones-attacked-boat/",
+   "publisher": "radaronline.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:05:00.000Z",
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "institution",
+     "terms": [
+      "Pentagon"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone attack"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Permit stay puts US Army's lead azide detonation plans on hold",
+   "url": "https://www.wsbradio.com/news/national/court-stay-prevents/R6PU7GAFAM76LKD3NUERSFCRGI/",
+   "publisher": "wsbradio.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:09:00.000Z",
+   "seenByGdelt": "2026-11-21T01:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "army"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "U.S. senator says Canada should make interim tariff agreement, let Congress 'legislate' long-term deal",
+   "url": "https://www.cbc.ca/news/politics/us-canada-interim-deal-tariffs-senator-long-term-9.7430913",
+   "publisher": "cbc.ca",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:25:00.000Z",
+   "seenByGdelt": "2026-11-21T01:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariff"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Lead azide detonation in Iowa by U.S. Army paused indefinitely after lawsuits are filed",
+   "url": "https://www.wwaytv3.com/lead-azide-detonation-in-iowa-by-u-s-army-paused-indefinitely-after-lawsuits-are-filed/",
+   "publisher": "wwaytv3.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:30:00.000Z",
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "army"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Terror Suspect's Prison Calls Probed Over U.S. Military Plot",
+   "url": "https://radaronline.com/p/terror-suspect-accused-of-sending-secret-orders-from-behind-bars-us-military-aircraft/",
+   "publisher": "radaronline.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:50:00.000Z",
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Denmark Thwarts Russian Assassination Plot, Expels Russian Diplomat",
+   "url": "https://hotair.com/john-s-2/2026/11/20/denmark-thwarts-russian-assassination-plot-expels-russian-diplomats-n3821224",
+   "publisher": "hotair.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T01:00:00.000Z",
+   "seenByGdelt": "2026-11-21T02:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomat"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "India-US maritime cooperation grows as US Navy ship arrives at Kattupalli",
+   "url": "http://www.trinidadtimes.com/news/279446397/india-us-maritime-cooperation-grows-as-us-navy-ship-arrives-at-kattupalli",
+   "publisher": "trinidadtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
    "relevance": {
     "score": 3,
     "tier": "high",
@@ -2398,14 +3189,14 @@
    }
   },
   {
-   "title": "\"We will settle the war once and for all\": Iran tells US to accept its terms or face battlefield decision",
-   "url": "http://www.europesun.com/news/279444572/we-will-settle-the-war-once-and-for-all-iran-tells-us-to-accept-its-terms-or-face-battlefield-decision",
-   "publisher": "europesun.com",
+   "title": "Nine US senators urge deeper military space ties with New Zealand as the caretaker Government defers a response",
+   "url": "https://newswire.co.nz/2026/11/us-senators-military-space-ties-new-zealand/",
+   "publisher": "newswire.co.nz",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
    "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
    "matches": {
     "USA": {
      "level": "country",
@@ -2414,8 +3205,8 @@
      ]
     }
    },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
    "relevance": {
     "score": 3,
     "tier": "high",
@@ -2424,21 +3215,21 @@
       "id": "security",
       "label": "Security",
       "terms": [
-       "war"
+       "military"
       ]
      }
     ]
    }
   },
   {
-   "title": "Expired Tomahawks, $64m Hormuz insurance: US Navy secretary's Senate hearing exposes war costs",
-   "url": "https://www.presstv.co.uk/Detail/2026/11/20/781148/expired-tomahawks-64m-hormuz-insurance-us-navy-secretarys-senate-hearing-exposes-war-costs",
-   "publisher": "presstv.co.uk",
+   "title": "Huckabee, US Embassy in Jerusalem post 'Grand Theft Auto' meme for Shabbat",
+   "url": "https://news.crossmap.com/2026/11/20/huckabee-us-embassy-in-jerusalem-post-grand-theft-auto-meme-for-shabbat/",
+   "publisher": "crossmap.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
    "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
+   "seenByGdelt": "2026-11-21T01:30:00.000Z",
    "matches": {
     "USA": {
      "level": "country",
@@ -2447,42 +3238,41 @@
      ]
     }
    },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
    "relevance": {
     "score": 3,
     "tier": "high",
     "topics": [
      {
-      "id": "security",
-      "label": "Security",
+      "id": "diplomacy",
+      "label": "Diplomacy",
       "terms": [
-       "navy",
-       "war"
+       "embassy"
       ]
      }
     ]
    }
   },
   {
-   "title": "Pentagon admits $48.3 billion war-on-Iran bill, but $2 trillion in military spending remains unaccounted for",
-   "url": "https://www.presstv.co.uk/Detail/2026/11/20/781152/war-on-iran-costs-us-more-than-48-billion-pentagon-official",
-   "publisher": "presstv.co.uk",
+   "title": "Russia builds a new military base near NATO's border: It could house up to 6,000 troops and will have more than 50 buildings",
+   "url": "https://www.cronista.com/en/today/russia-builds-a-new-military-base-near-natos-border-it-could-house-up-to-6000-troops-and-will-have-more-than-50-buildings/",
+   "publisher": "cronista.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
+   "published": "2026-11-21T01:42:00.000Z",
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
    "matches": {
-    "USA": {
-     "level": "institution",
+    "RUS": {
+     "level": "country",
      "terms": [
-      "Pentagon"
+      "Russia"
      ]
     }
    },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
    "relevance": {
     "score": 3,
     "tier": "high",
@@ -2492,7 +3282,472 @@
       "label": "Security",
       "terms": [
        "military",
+       "troops",
+       "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Tajik, Russian presidents discuss bilateral ties, regional security",
+   "url": "http://www.centralasiatimes.com/news/279445843/tajik-russian-presidents-discuss-bilateral-ties-regional-security",
+   "publisher": "centralasiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T01:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "bilateral"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "5 Algerians named China-Algeria youth cultural ambassadors-Xinhua",
+   "url": "https://english.news.cn/20261121/79e8542b3a3a41a5aadd4474b9de7c79/c.html",
+   "publisher": "english.news.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T01:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "ambassadors"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump says Putin wants talks to end Ukraine war",
+   "url": "https://ianslive.in/trump-says-putin-wants-talks-to-end-ukraine-war--20261121050303",
+   "publisher": "ianslive.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T01:45:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
        "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "'He'd love to end the war': Trump calls Putin a 'friend', dodges whether he's a friend to US",
+   "url": "https://timesofindia.indiatimes.com/world/us/hed-love-to-end-the-war-trump-calls-putin-a-friend-dodges-whether-hes-a-friend-to-us/articleshow/136042459.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T01:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Investigation: Russia Uses Civilian Ships To Move Weapons To Africa",
+   "url": "https://www.eurasiareview.com/21112026-investigation-russia-uses-civilian-ships-to-move-weapons-to-africa/",
+   "publisher": "eurasiareview.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T01:51:00.000Z",
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "weapons"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "U.S. Navy says it has no plan to rename the USS Doris Miller – NBC 5 Dallas-Fort Worth",
+   "url": "https://www.nbcdfw.com/news/local/navy-keep-doris-miller-name-future-aircraft-carrier/4109140/",
+   "publisher": "nbcdfw.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T01:53:00.000Z",
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "navy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "'If Iranians are after me, they're being squeezed': US Treasury chief as he remains at military base amid threats",
+   "url": "https://timesofindia.indiatimes.com/world/us/if-iranians-are-after-me-theyre-being-squeezed-us-treasury-chief-as-he-remains-at-military-base-amid-threats/articleshow/136042606.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "U.S. sanctions alleged Canadian faction of Italian mafia",
+   "url": "https://www.theglobeandmail.com/canada/article-us-sanctions-alleged-canadian-faction-ndrangheta-italian-mafia/",
+   "publisher": "theglobeandmail.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T02:13:00.000Z",
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "sanctions"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US Senate rejects Iran war-powers bid in first vote since midterms",
+   "url": "https://ianslive.in/us-senate-rejects-iran-war-powers-bid-in-first-vote-since-midterms--20261121070303",
+   "publisher": "ianslive.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T02:15:00.000Z",
+   "seenByGdelt": "2026-11-21T02:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Thailand to scrap tariffs on US goods, says Trump",
+   "url": "https://www.prokerala.com/news/articles/a1839278.html",
+   "publisher": "prokerala.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "AP Reports US Army delays detonation of bomb-making chemicals in Iowa amid safety concerns",
+   "url": "https://www.uppermichiganssource.com/2026/11/20/ap-reports-us-army-delays-detonation-bomb-making-chemicals-iowa-amid-safety-concerns/",
+   "publisher": "uppermichiganssource.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "army"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian missiles land in Poland amid NATO drills",
+   "url": "https://tribune.com.pk/story/2641478/russian-missiles-land-in-poland-amid-nato-drills",
+   "publisher": "tribune.com.pk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missiles",
+       "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Intra-BRICS Trade Reaches $1.2 Trillion, Russian Deputy Foreign Minister Says – BRICS Information Sharing & Exchanging Platform",
+   "url": "https://www.brics-info.org/609eedd83c181940958007d15d187d50/",
+   "publisher": "brics-info.org",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "foreign minister",
+       "BRICS"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "U.S. Trade negotiators still insisting on market access in Indian agri-foods sector",
+   "url": "https://www.dailyexcelsior.com/u-s-trade-negotiators-still-insisting-on-market-access-in-indian-agri-foods-sector/",
+   "publisher": "dailyexcelsior.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "negotiators"
       ]
      }
     ]
@@ -2526,39 +3781,6 @@
       "label": "Economic policy",
       "terms": [
        "yuan"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Rupee vs Dollar: Indian Rupee Strengthens To 7-Month High at ₹92.99 Against US Dollar; What's Driving The Rally? Check Impact on Imports, Exports and Inflation",
-   "url": "https://www.jagranjosh.com/general-knowledge/rupee-vs-dollar-indian-rupee-strengthens-to-7month-high-at-rs-92-99-against-us-dollar-whats-driving-the-rally-check-impact-on-imports-exports-and-inflation-1820013992-1",
-   "publisher": "jagranjosh.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:55:00.000Z",
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 2,
-    "tier": "medium",
-    "topics": [
-     {
-      "id": "economicPolicy",
-      "label": "Economic policy",
-      "terms": [
-       "inflation"
       ]
      }
     ]
@@ -2993,93 +4215,6 @@
    }
   },
   {
-   "title": "Russia showcases water-saving polymers and drought-resistant farm tech at COP31",
-   "url": "http://www.indiagazette.com/news/279444421/russia-showcases-water-saving-polymers-and-drought-resistant-farm-tech-at-cop31",
-   "publisher": "indiagazette.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Georgia and Russia resume direct talks in Minsk after nearly a year",
-   "url": "https://news.az/news/georgia-and-russia-resume-direct-talks-in-minsk-after-nearly-a-year",
-   "publisher": "news.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Russia rejects US proposal for Nato-style Ukraine security guarantees",
-   "url": "https://www.freemalaysiatoday.com/category/world/2026/11/20/russia-rejects-us-proposal-for-nato-style-ukraine-security-guarantees",
-   "publisher": "freemalaysiatoday.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:08:00.000Z",
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
    "title": "China urges Japan to 'correct erroneous words, deeds' on Taiwan",
    "url": "https://aa.com.tr/en/asia-pacific/china-urges-japan-to-correct-erroneous-words-deeds-on-taiwan/4131875",
    "publisher": "aa.com.tr",
@@ -3104,1349 +4239,6 @@
    },
    "firstSeenAt": "2026-11-20T09:32:52.048Z",
    "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Unidentified object reported crashing in southeastern Poland near Ukrainian border",
-   "url": "https://aa.com.tr/en/europe/unidentified-object-reported-crashing-in-southeastern-poland-near-ukrainian-border/4131876",
-   "publisher": "aa.com.tr",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "No Understanding on New Round of Trilateral Ukraine Talks",
-   "url": "https://sputnikglobe.com/20261120/no-understanding-on-new-round-of-trilateral-ukraine-talks---russian-deputy-fm-1125116534.html",
-   "publisher": "sputnikglobe.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Russia Forces Continues Strikes Against Infrastructure Used by Ukrainian Forces",
-   "url": "https://sputnikglobe.com/20261120/russia-forces-continues-strikes-against-infrastructure-used-by-ukrainian-forces-1125116799.html",
-   "publisher": "sputnikglobe.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "1st meeting of the Joint Consultative Committee CoR-Ukraine",
-   "url": "https://www.cor.europa.eu/en/plenaries-events/Joint-Consultative-Committee-CoR-Ukraine",
-   "publisher": "cor.europa.eu",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Russia strikes three Kyiv bridges after Putin vows revenge for Crimea attack",
-   "url": "https://www.thenationalnews.com/news/europe/2026/11/20/russia-strikes-three-kyiv-bridges-after-putin-vows-revenge-for-crimea-attack/",
-   "publisher": "thenationalnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "institution",
-     "terms": [
-      "Kyiv"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "China Seeks Broad Rohingya Settlement After ICJ Ruling in Myanmar Genocide Case",
-   "url": "https://econotimes.com/China-Seeks-Broad-Rohingya-Settlement-After-ICJ-Ruling-in-Myanmar-Genocide-Case-1780147",
-   "publisher": "econotimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:33:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "The 2026 Orchid Awards Ceremony Held in Beijing",
-   "url": "https://www.manilatimes.net/2026/11/20/tmt-newswire/pr-newswire/the-2026-orchid-awards-ceremony-held-in-beijing/2474856",
-   "publisher": "manilatimes.net",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:34:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "institution",
-     "terms": [
-      "Beijing"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "White House removes cyber-security chief after series of tech outages",
-   "url": "https://www.bbc.co.uk/news/articles/cwz0k3nn5p5mo",
-   "publisher": "bbc.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:37:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "institution",
-     "terms": [
-      "White House"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "China's CCTV4 Builds Cultural Program Around Quanzhou Family Dinner",
-   "url": "https://econotimes.com/China-s-CCTV4-Builds-Cultural-Program-Around-Quanzhou-Family-Dinner-1780150",
-   "publisher": "econotimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:40:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Trump Let Reporters Keep Personal Phones Leaving Beijing in May, So Why Did His Team Seize Them Now in Shenzhen?",
-   "url": "https://www.ibtimes.co.uk/reporters-phones-signal-blocking-bags-trump-flight-1833506",
-   "publisher": "ibtimes.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:40:00.000Z",
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "institution",
-     "terms": [
-      "Beijing"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Google Adds Wallet Spending Data to Gemini for U.S. Users",
-   "url": "https://econotimes.com/Google-Adds-Wallet-Spending-Data-to-Gemini-for-U-S-Users-1780151",
-   "publisher": "econotimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:41:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Corfu cruise traffic tops 1 million for first time, setting historic record--China Economic Net",
-   "url": "http://en.ce.cn/main/latest/202611/t20261120_3300940.shtml",
-   "publisher": "en.ce.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Union of Greek Shipowners criticises EU stance on shipping decarbonisation talks, warns of fresh IMO deadlock--China Economic Net",
-   "url": "http://en.ce.cn/main/latest/202611/t20261120_3301047.shtml",
-   "publisher": "en.ce.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Greek shipowners lead secondhand market with $6.6 billion investment--China Economic Net",
-   "url": "http://en.ce.cn/main/latest/202611/t20261120_3301052.shtml",
-   "publisher": "en.ce.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Russian Barrage Kills At Least 3 In Kyiv, Damages Bridges",
-   "url": "http://www.asiabulletin.com/news/279444679/russian-barrage-kills-at-least-3-in-kyiv-damages-bridges",
-   "publisher": "asiabulletin.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "institution",
-     "terms": [
-      "Kyiv"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "In Hangzhou, AI Pulse Reading Opens a Door to Traditional Chinese Medicine",
-   "url": "http://www.philippinetimes.com/news/279444510/in-hangzhou-ai-pulse-reading-opens-a-door-to-traditional-chinese-medicine",
-   "publisher": "philippinetimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "3rd LD: Xi says China, Australia should be mutually trusted partners",
-   "url": "http://www.sydneysun.com/news/279444486/3rd-ld-xi-says-china-australia-should-be-mutually-trusted-partners",
-   "publisher": "sydneysun.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "China's Zhangjiakou gears up for four international snow sport events",
-   "url": "https://en.people.cn/n3/2026/1120/c90000-20521346.html",
-   "publisher": "en.people.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Yulong Snow Mountain glows golden at sunrise in Lijiang, SW China's Yunnan",
-   "url": "https://en.people.cn/n3/2026/1120/c98389-20521735.html",
-   "publisher": "en.people.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Rime ice transforms Huma County into winter wonderland in NE China's Heilongjiang",
-   "url": "https://en.people.cn/n3/2026/1120/c98389-20521747.html",
-   "publisher": "en.people.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Ruddy shelducks practice flying ahead of southward migration in N China's Inner Mongolia",
-   "url": "https://en.people.cn/n3/2026/1120/c98389-20521748.html",
-   "publisher": "en.people.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Trendy China | Powering everyday life through China-Africa energy cooperation-Xinhua",
-   "url": "https://english.news.cn/20261120/360b31b4efd9415b96ba2c0afec50d85/c.html",
-   "publisher": "english.news.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Chinese vice premier to visit Singapore-Xinhua",
-   "url": "https://english.news.cn/20261120/50fe192fb17c4763bd7d9e70c252e125/c.html",
-   "publisher": "english.news.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Michael Andrec, Author at The Ukrainian Weekly",
-   "url": "https://subscription.ukrweekly.com/author/michael-andrec/",
-   "publisher": "ukrweekly.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "National bombshell: Ukrainian involvement in Aegean as Zelensky arms Turkey with Kizilelma",
-   "url": "https://www.bankingnews.gr/diethni/articles/912235/national-bombshell-ukrainian-involvement-in-aegean-as-zelensky-arms-turkey-with-kizilelma",
-   "publisher": "bankingnews.gr",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "3 Killed in Bridge Strikes on Kyiv, Mayor Says",
-   "url": "https://www.themoscowtimes.com/2026/11/20/3-killed-in-bridge-strikes-on-kyiv-mayor-says-a94324",
-   "publisher": "themoscowtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "institution",
-     "terms": [
-      "Kyiv"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "'He's No Spy': Former Colleagues Open Up About Japanese Journalist Arrested in Russia",
-   "url": "https://www.themoscowtimes.com/2026/11/20/hes-no-spy-former-colleagues-open-up-about-japanese-journalist-arrested-in-russia-2-a94303",
-   "publisher": "themoscowtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Bank Negara's international reserves at US$132.1bil as at Nov 13",
-   "url": "https://www.thestar.com.my/business/business-news/2026/11/20/bank-negara039s-international-reserves-at-us1321bil-as-at-nov-13",
-   "publisher": "thestar.com.my",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Agreement between Israir and American Airlines to cooperate on flights between Israel and the US",
-   "url": "https://www.israelnationalnews.com/flashes/698040",
-   "publisher": "israelnationalnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:46:00.000Z",
-   "seenByGdelt": "2026-11-20T08:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Eight killed, bridges hit as Russia pummels Ukraine",
-   "url": "https://www.goulburnpost.com.au/story/9395009/eight-killed-bridges-hit-as-russia-pummels-ukraine/",
-   "publisher": "goulburnpost.com.au",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:47:00.000Z",
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "China likely to become the biggest probiotic market by 2030, says IPA chief",
-   "url": "https://www.nutraingredients.com/Article/2026/11/20/china-likely-to-become-the-biggest-probiotic-market-by-2030-says-ipa-chief/",
-   "publisher": "nutraingredients.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:47:00.000Z",
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "How major US stock indexes fared Thursday 11/19/2026",
-   "url": "https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-thursday-11192026-138303454",
-   "publisher": "abcnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Ukraine To Receive More F-16s, Mirage 2000s From Allies",
-   "url": "https://aviationweek.com/defense/aircraft-propulsion/ukraine-receive-more-f-16s-mirage-2000s-allies",
-   "publisher": "aviationweek.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "China issues 2 bln USD sovereign bonds in HKSAR-Xinhua",
-   "url": "https://english.news.cn/20261120/72ef672a85a84d29aa7b26a5ad37f182/c.html",
-   "publisher": "english.news.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "How US AI chip curbs impact Singapore, Malaysia and Thailand",
-   "url": "https://www.businesstimes.com.sg/international/asean/chilling-effect-us-chips-curb-could-slow-down-asean-data-centre-growth-malaysia-thailand-higher-risk",
-   "publisher": "businesstimes.com.sg",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "South-east Asia's payment firms raise US$1.6 billion in 2026 so far, more than double 2025's total",
-   "url": "https://www.businesstimes.com.sg/startups-tech/startups/south-east-asias-payment-firms-raise-us1-6-billion-2026-so-far-more-double-2025s-total",
-   "publisher": "businesstimes.com.sg",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Jared Kushner Backs Ukraine Mutual Defense Guarantee Discussion in Berlin",
-   "url": "https://www.el-balad.com/17068412",
-   "publisher": "el-balad.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "At Least Five Killed as Russia Bombards Kyiv and Cities Across Ukraine - Novinite.com",
-   "url": "https://www.novinite.com/articles/241714/At+Least+Five+Killed+as+Russia+Bombards+Kyiv+and+Cities+Across+Ukraine",
-   "publisher": "novinite.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Potential US targets in Iran revealed as joint Israel action weighed",
-   "url": "https://www.samaa.tv/2087360646-potential-us-targets-in-iran-revealed-as-joint-israel-action-weighed",
-   "publisher": "samaa.tv",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "US panel accuses India of targeting Muslims in voter roll revision",
-   "url": "https://www.samaa.tv/2087360654-us-panel-accuses-india-of-targeting-muslims-in-voter-roll-revision",
-   "publisher": "samaa.tv",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "China Daily Website - Connecting China Connecting the World",
-   "url": "http://www.chinadaily.com.cn/www.chinadaily.com.cn/a/202611/20/WS6afff346e4b03ebf8519dbae.html",
-   "publisher": "chinadaily.com.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "CHINA-INNER MONGOLIA-HYDROGEN-PIPELINE (CN)",
-   "url": "http://www.shanghaisun.com/news/279444680/china-inner-mongolia-hydrogen-pipeline-cn",
-   "publisher": "shanghaisun.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "China's climate practices take center stage at COP31: cross-sector collaboration between meteorology and energy offers a Chinese approach to global climate adaptation",
-   "url": "http://www.vietnamtribune.com/news/279444977/china-climate-practices-take-center-stage-at-cop31-cross-sector-collaboration-between-meteorology-and-energy-offers-a-chinese-approach-to-global-climate-adaptation",
-   "publisher": "vietnamtribune.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China",
-      "Chinese"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "What '5G Causes Coronavirus' Claims Share With Anti-Ag, Anti-Vax, And Anti-Natural Gas Movements - Russia",
-   "url": "https://science20.com/hank_campbell/what_5g_causes_coronavirus_claims_share_with_antiag_antivax_and_antinatural_gas_movements_russia-247067",
-   "publisher": "science20.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Berlin meeting discusses support for Ukraine",
-   "url": "https://themunicheye.com/berlin-meeting-discusses-support-for-ukraine-35409",
-   "publisher": "themunicheye.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "'It just hits me right in the neck': 'Evil owl' terrorises US state, multiple attacks reported",
-   "url": "https://timesofindia.indiatimes.com/world/us/it-just-hits-me-right-in-the-neck-evil-owl-terrorises-us-state-multiple-attacks-reported/articleshow/136021606.cms",
-   "publisher": "indiatimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "And yet they divided the world - Shenzhen was the beginning, something big is coming from Russia, China, the US",
-   "url": "https://www.bankingnews.gr/diethni/articles/912242/and-yet-they-divided-the-world-shenzhen-was-the-beginning-something-big-is-coming-from-russia-china-the-us-possible-sabotage-by-europe",
-   "publisher": "bankingnews.gr",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Retiring in France as a US federal employee: what you need to know",
-   "url": "https://www.connexionfrance.com/living-in-france/retiring-in-france-as-a-us-federal-employee-what-you-need-to-know/829239",
-   "publisher": "connexionfrance.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Business opportunity or security threat? Nvidia case raises questions about China",
-   "url": "https://www.kvnf.org/2026-11-20/business-opportunity-or-security-threat-nvidia-case-raises-questions-about-china",
-   "publisher": "kvnf.org",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Wind Turbine Casting Market Size to Reach US$ 6.8 Billion by 2033",
-   "url": "https://www.openpr.com/news/4695173/wind-turbine-casting-market-size-to-reach-us-6-8-billion-by-2033",
-   "publisher": "openpr.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Coffee Pods and Capsules Market to Reach US$ 52.87 Billion by 2033",
-   "url": "https://www.openpr.com/news/4695179/coffee-pods-and-capsules-market-to-reach-us-52-87-billion-by-2033",
-   "publisher": "openpr.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "NCB busts Indian module of US drug trafficking network under Operation Monsoon Thunder, six arrested",
-   "url": "https://www.prokerala.com/news/articles/a1839004.html",
-   "publisher": "prokerala.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
    "relevance": {
     "score": 0,
     "tier": "other",
@@ -4479,14 +4271,376 @@
    }
   },
   {
-   "title": "China-Russia-US agree on UN reforms",
-   "url": "https://www.thehitavada.com/Encyc/2026/11/20/china-russia-us-agree-on-un-reforms-.html",
-   "publisher": "thehitavada.com",
+   "title": "At China power game, it was Putin 1, Europe and Ukraine, 0",
+   "url": "https://www.csmonitor.com/USA/Foreign-Policy/2026/1120/putin-trump-xi-summit-ukraine-war",
+   "publisher": "csmonitor.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
    "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Trump, Takaichi Discuss Indo-Pacific Security As Japanese Leader Reaffirms Taiwan Policy",
+   "url": "https://www.eurasiareview.com/21112026-trump-takaichi-discuss-indo-pacific-security-as-japanese-leader-reaffirms-taiwan-policy/",
+   "publisher": "eurasiareview.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T01:46:00.000Z",
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "2026 World Computing Conference opens in Changsha, China's Hunan",
+   "url": "http://en.people.cn/n3/2026/1120/c90000-20521772.html",
+   "publisher": "en.people.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Chinese agricultural machinery makers eye growing African market",
+   "url": "http://en.people.cn/n3/2026/1120/c90000-20521775.html",
+   "publisher": "en.people.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Bestselling author R.F. Kuang discusses 'Taipei Story' at on-campus book talk",
+   "url": "https://huntnewsnu.com/95267/lifestyle/bestselling-author-r-f-kuang-discusses-taipei-story-at-on-campus-book-talk/",
+   "publisher": "huntnewsnu.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Fresh off China trip, Trump bobs and weaves in freewheeling press conference",
+   "url": "https://dunyanews.tv/en/World/984061-fresh-off-china-trip-trump-bobs-and-weaves-in-freewheeling-press-conf",
+   "publisher": "dunyanews.tv",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Top leader's China working trip affirms Vietnam's readiness to host APEC 2027",
+   "url": "https://vietnam.vnanet.vn/english/tin-van/top-leaders-china-working-trip-affirms-vietnams-readiness-to-host-apec-2027-478335.html",
+   "publisher": "vietnam.vnanet.vn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Chinese AI tools support emissions monitoring and climate resilience while building local expertise across Global South",
+   "url": "https://www.globaltimes.cn/page/202611/1374732.shtml",
+   "publisher": "globaltimes.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "China honors international contributors to cultural exchange",
+   "url": "https://www.globaltimes.cn/page/202611/1374746.shtml",
+   "publisher": "globaltimes.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Lutnick 'was warned a year ago about China illegally obtaining AI chips'",
+   "url": "https://www.telegraph.co.uk/us/politics/2026/11/21/lutnick-warned-year-ago-china-illegally-ai-chips-nvidia/",
+   "publisher": "telegraph.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Thailand unveils six-point arsenic plan before 24 Nov China-Myanmar talks",
+   "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/21/thailand-unveils-six-point-arsenic-plan-before-24-nov-china-myanmar-talks",
+   "publisher": "thestar.com.my",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T02:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Trump intel chief warned no funding for Musk's SpaceX without answers on Ukraine Starshield slowdown",
+   "url": "https://freerepublic.com/focus/f-news/4403813/posts",
+   "publisher": "freerepublic.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Russia delivers 'painful response' to Ukraine for Crimea bridge strike, killing eight - 21-Nov-2026",
+   "url": "https://home.nzcity.co.nz/news/article.aspx?id=458387",
+   "publisher": "nzcity.co.nz",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Trump Praises Indias Economic Policies Post-China Visit",
+   "url": "https://udaipurkiran.com/trump-praises-indias-economic-policies-post-china-visit/",
+   "publisher": "udaipurkiran.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "No further curbs needed on Nvidia chip sales to China: US Treasury secy",
+   "url": "https://www.business-standard.com/world-news/no-further-curbs-needed-on-nvidia-chip-sales-to-china-us-treasury-secy-126112100081_1.html",
+   "publisher": "business-standard.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:00:00.000Z",
    "matches": {
     "USA": {
      "level": "country",
@@ -4499,20 +4653,132 @@
      "terms": [
       "China"
      ]
-    },
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "No reply from China on camera recovered from terrorists: NIA DG",
+   "url": "https://www.dailyexcelsior.com/no-reply-from-china-on-camera-recovered-from-terrorists-nia-dg/",
+   "publisher": "dailyexcelsior.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Russia bombards Ukraine, killing at least 8 after Putin vowed retaliation for Kerch Bridge attack",
+   "url": "https://www.dailyexcelsior.com/russia-bombards-ukraine-killing-at-least-8-after-putin-vowed-retaliation-for-kerch-bridge-attack/",
+   "publisher": "dailyexcelsior.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
     "RUS": {
      "level": "country",
      "terms": [
       "Russia"
      ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
     }
    },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
    "relevance": {
     "score": 0,
     "tier": "other",
     "topics": []
+   }
+  },
+  {
+   "title": "Congressional Report Reveals China's Push To Obtain Nvidia Chips Despite U.S. Restrictions – NaturalNews.com",
+   "url": "https://www.naturalnews.com/2026-11-20-congressional-report-china-push-obtain-nvidia-chips.html",
+   "publisher": "naturalnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T03:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "First Trust Portfolios Canada Announces Cap, Buffer and Dates of First Trust Vest U.S. Equity Buffer ETF – November",
+   "url": "https://www.recorder.ca/press-releases/globe-newswire/first-trust-portfolios-canada-announces-cap-buffer-and-dates-of-first-trust-vest-u-s-equity-buffer-etf-november/",
+   "publisher": "recorder.ca",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T00:57:00.000Z",
+   "seenByGdelt": "2026-11-21T01:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T03:51:19.268Z",
+   "lastSeenAt": "2026-11-21T03:51:19.268Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "ETF"
+    ]
    }
   },
   {
