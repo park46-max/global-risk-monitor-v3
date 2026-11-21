@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-21T07:27:29.558Z",
+  "checkedAt": "2026-11-21T13:14:47.139Z",
   "lastSuccessAt": "2026-11-21T07:27:44.237Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
       "status": "error",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-20T13:29:25.916Z",
-      "checkedAt": "2026-11-21T07:30:44.920Z",
+      "checkedAt": "2026-11-21T13:17:34.510Z",
       "articles": [
         {
           "title": "After Iowa lead azide detonation , who will test the people ?",
@@ -178,11 +178,11 @@
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-21T07:27:44.237Z",
-      "checkedAt": "2026-11-21T07:27:44.237Z",
+      "checkedAt": "2026-11-21T13:17:34.510Z",
       "articles": [
         {
           "title": "He a killer : Zelensky reacts to Trump calling Putin a friend",
@@ -352,7 +352,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-20T19:19:25.627Z",
-      "checkedAt": "2026-11-21T07:30:44.921Z",
+      "checkedAt": "2026-11-21T13:17:34.510Z",
       "articles": [
         {
           "title": "UN Faces Unprecedented Leadership Crisis as Security Council Fails to Agree on Guterre Successor – Sri Lanka Guardian",
@@ -522,7 +522,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-21T07:29:15.443Z",
+      "checkedAt": "2026-11-21T13:16:04.491Z",
       "articles": []
     },
     "TWN": {
@@ -531,7 +531,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-20T19:21:29.712Z",
-      "checkedAt": "2026-11-21T07:30:44.921Z",
+      "checkedAt": "2026-11-21T13:17:34.510Z",
       "articles": [
         {
           "title": "Asian shares head for worst week since 2020 as AI rout deepens",
