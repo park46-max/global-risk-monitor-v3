@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-21T16:06:26.585Z",
- "lastSuccessAt": "2026-11-21T16:06:26.585Z",
- "checkedAt": "2026-11-21T16:06:26.585Z",
+ "generatedAt": "2026-11-21T19:14:01.279Z",
+ "lastSuccessAt": "2026-11-21T19:14:01.279Z",
+ "checkedAt": "2026-11-21T19:14:01.279Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
    "items": 139,
-   "lastSuccessAt": "2026-11-21T16:06:06.880Z",
-   "checkedAt": "2026-11-21T16:06:06.880Z",
+   "lastSuccessAt": "2026-11-21T19:13:41.230Z",
+   "checkedAt": "2026-11-21T19:13:41.230Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -27,23 +27,23 @@
   "noTime": 0,
   "outsideWindow": 0,
   "noCountry": 0,
-  "routineNotices": 11,
+  "routineNotices": 12,
   "grouped": 0
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-21T16:06:26.585Z",
+   "generatedAt": "2026-11-21T19:14:01.279Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T16:06:26.585Z",
-    "to": "2026-11-21T16:06:26.585Z"
+    "from": "2026-11-18T19:14:01.279Z",
+    "to": "2026-11-21T19:14:01.279Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 41,
+   "reportsFound": 44,
    "overview": {
     "kind": "fact",
-    "text": "41 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-21 14:30 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): diplomacy 9, security 7, sanctions and trade 3, economic policy 1.",
+    "text": "44 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-21 18:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 7, sanctions and trade 3, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -53,7 +53,7 @@
      6,
      7,
      8,
-     10,
+     9,
      11,
      12,
      13
@@ -103,6 +103,26 @@
     {
      "kind": "reporting",
      "n": 3,
+     "headline": "Iran wants diplomacy to end war, says Araghchi as U.S. rejects terms",
+     "publisher": "thehindu.com",
+     "url": "https://www.thehindu.com/news/international/iran-wants-diplomacy-to-end-war-says-araghchi-as-us-rejects-terms/article71729396.ece",
+     "time": "2026-11-21T17:53:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "U.S."
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 4,
      "headline": "Analyst Downgrades Hit Summit Therapeutics (NASDAQ: SMMT), PepsiCo (NASDAQ: PEP) And USA Rare Earth (NASDAQ: USAR)",
      "publisher": "foreignpolicyjournal.com",
      "url": "https://www.foreignpolicyjournal.com/2026/11/21/analyst-downgrades-hit-summit-therapeutics-nasdaq-smmt-pepsico-nasdaq-pep-and-usa-rare-earth-nasdaq-usar/",
@@ -122,7 +142,7 @@
     },
     {
      "kind": "reporting",
-     "n": 4,
+     "n": 5,
      "headline": "US-Iran nuclear talks hit deadlock over enriched uranium stockpile, military escalation feared",
      "publisher": "hindustantimes.com",
      "url": "https://www.hindustantimes.com/world-news/usiran-nuclear-talks-hit-deadlock-over-enriched-uranium-stockpile-military-escalation-feared-101795265100861.html",
@@ -139,29 +159,26 @@
       "Diplomacy"
      ],
      "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 5,
-     "headline": "Iran wants diplomacy to end war, US says terms unacceptable",
-     "publisher": "cyprus-mail.com",
-     "url": "https://cyprus-mail.com/2026/11/21/iran-wants-diplomacy-to-end-war-us-says-terms-unacceptable",
-     "time": "2026-11-21T10:20:00.000Z",
-     "timeBasis": "published",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "US"
-      ]
-     },
-     "topics": [
-      "Security",
-      "Diplomacy"
-     ],
-     "alsoReportedBy": []
     }
    ],
    "why": [
+    {
+     "rule": "topic:security",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13
+     ],
+     "text": "10 of the 12 listed reports use security wording (war, nuclear, weapons, military) [1][2][3][5][6][7][8][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+    },
     {
      "rule": "topic:diplomacy",
      "kind": "analysis",
@@ -172,35 +189,19 @@
       5,
       6,
       7,
-      10,
-      11,
-      13
+      8
      ],
-     "text": "9 of the 12 listed reports use diplomacy wording (summit, nuclear talks, diplomacy, envoy) [2][3][4][5][6][7][10][11][13]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
-     "rule": "topic:security",
-     "kind": "analysis",
-     "evidence": [
-      1,
-      2,
-      4,
-      5,
-      6,
-      7,
-      12
-     ],
-     "text": "7 of the 12 listed reports use security wording (war, nuclear, weapons, military) [1][2][4][5][6][7][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "7 of the 12 listed reports use diplomacy wording (summit, diplomacy, nuclear talks, envoy) [2][3][4][5][6][7][8]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
       1,
-      3,
-      8
+      4,
+      9
      ],
-     "text": "3 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth, sanctions) [1][3][8]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth, sanctions) [1][4][9]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -208,21 +209,20 @@
      "evidence": [
       1,
       2,
-      10,
       11,
       12,
       13
      ],
-     "text": "6 listed reports with topic keywords also name China, Russia, Ukraine and Taiwan [1][2][10][11][12][13]. A headline that names two countries does not show how they are connected."
+     "text": "5 listed reports with topic keywords also name China, Russia and Ukraine [1][2][11][12][13]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      8,
-      9
+      9,
+      10
      ],
-     "text": "1 listed headline was carried by more than one outlet [8]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [9]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -246,6 +246,15 @@
     },
     {
      "n": 3,
+     "title": "Iran wants diplomacy to end war, says Araghchi as U.S. rejects terms",
+     "publisher": "thehindu.com",
+     "url": "https://www.thehindu.com/news/international/iran-wants-diplomacy-to-end-war-says-araghchi-as-us-rejects-terms/article71729396.ece",
+     "time": "2026-11-21T17:53:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
      "title": "Analyst Downgrades Hit Summit Therapeutics (NASDAQ: SMMT), PepsiCo (NASDAQ: PEP) And USA Rare Earth (NASDAQ: USAR)",
      "publisher": "foreignpolicyjournal.com",
      "url": "https://www.foreignpolicyjournal.com/2026/11/21/analyst-downgrades-hit-summit-therapeutics-nasdaq-smmt-pepsico-nasdaq-pep-and-usa-rare-earth-nasdaq-usar/",
@@ -254,7 +263,7 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "US-Iran nuclear talks hit deadlock over enriched uranium stockpile, military escalation feared",
      "publisher": "hindustantimes.com",
      "url": "https://www.hindustantimes.com/world-news/usiran-nuclear-talks-hit-deadlock-over-enriched-uranium-stockpile-military-escalation-feared-101795265100861.html",
@@ -263,7 +272,7 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 6,
      "title": "Iran wants diplomacy to end war, US says terms unacceptable",
      "publisher": "cyprus-mail.com",
      "url": "https://cyprus-mail.com/2026/11/21/iran-wants-diplomacy-to-end-war-us-says-terms-unacceptable",
@@ -272,7 +281,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 7,
      "title": "Araghchi ridicules Israeli envoy for acting as 'commander-in-chief' of US military",
      "publisher": "presstv.co.uk",
      "url": "https://www.presstv.co.uk/Detail/2026/11/20/781159/iran-fires-back-at-israeli-envoy-for-setting-conditions-for-return-of-us-troops",
@@ -281,7 +290,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 8,
      "title": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
      "publisher": "webindia123.com",
      "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
@@ -290,7 +299,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 9,
      "title": "US Treasury presses Singapore, Malaysia on Iran sanctions compliance - Economy",
      "publisher": "thejakartapost.com",
      "url": "http://www.thejakartapost.com/business/2026/11/21/us-treasury-presses-singapore-malaysia-on-iran-sanctions-compliance",
@@ -299,47 +308,38 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 10,
      "title": "US Treasury presses Singapore, Malaysia on Iran sanctions compliance - Economy",
      "publisher": "asiaone.com",
      "url": "https://www.asiaone.com/world/us-treasury-presses-singapore-and-malaysia-iran-sanctions-compliance",
      "time": "2026-11-21T06:30:00.000Z",
      "timeBasis": "published",
-     "duplicateOf": 8
-    },
-    {
-     "n": 10,
-     "title": "Xinhua Headlines: Why China-Russia-U.S. summit hailed historic for world stability, peace",
-     "publisher": "bignewsnetwork.com",
-     "url": "http://www.bignewsnetwork.com/news/279447224/xinhua-headlines-why-china-russia-us-summit-hailed-historic-for-world-stability-peace",
-     "time": "2026-11-21T14:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
+     "duplicateOf": 9
     },
     {
      "n": 11,
-     "title": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
-     "publisher": "indonesiatribune.com",
-     "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
-     "time": "2026-11-21T13:15:00.000Z",
+     "title": "US report flags China-Pakistan military ties as two-front risk for India",
+     "publisher": "mid-day.com",
+     "url": "https://www.mid-day.com/news/world-news/article/us-report-flags-china-pakistan-military-ties-as-two-front-risk-for-india-23660822",
+     "time": "2026-11-21T18:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "China-Pakistan Military Partnership Raises Two-Front War Risk For India, Warns US Panel",
-     "publisher": "freepressjournal.in",
-     "url": "https://www.freepressjournal.in/world/china-pakistan-military-partnership-raises-two-front-war-risk-for-india-warns-us-panel",
-     "time": "2026-11-21T13:10:00.000Z",
-     "timeBasis": "published",
+     "title": "US seeks broader ceasefire between Russia and Ukraine",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/us-seeks-broader-ceasefire-between-russia-and-ukraine-537690",
+     "time": "2026-11-21T17:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 13,
-     "title": "Chinese Embassy in Mexico slams US consul general's claims over Chinese investment near border, urges end to interference",
-     "publisher": "globaltimes.cn",
-     "url": "https://www.globaltimes.cn/page/202611/1374758.shtml",
-     "time": "2026-11-21T12:45:00.000Z",
+     "title": "China Can Back Pak Without Entering War: US Panel",
+     "publisher": "deccanchronicle.com",
+     "url": "https://www.deccanchronicle.com/nation/china-can-back-pak-without-entering-war-us-panel-2006668",
+     "time": "2026-11-21T17:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -349,18 +349,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-21T16:06:26.585Z",
+   "generatedAt": "2026-11-21T19:14:01.279Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T16:06:26.585Z",
-    "to": "2026-11-21T16:06:26.585Z"
+    "from": "2026-11-18T19:14:01.279Z",
+    "to": "2026-11-21T19:14:01.279Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 44,
+   "reportsFound": 42,
    "overview": {
     "kind": "fact",
-    "text": "44 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-21 15:30 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): diplomacy 8, security 8, sanctions and trade 3.",
+    "text": "42 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-21 18:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 9, diplomacy 7, sanctions and trade 3.",
     "evidence": [
      1,
      3,
@@ -482,21 +482,6 @@
    ],
    "why": [
     {
-     "rule": "topic:diplomacy",
-     "kind": "analysis",
-     "evidence": [
-      1,
-      4,
-      5,
-      8,
-      9,
-      10,
-      11,
-      13
-     ],
-     "text": "8 of the 12 listed reports use diplomacy wording (foreign minister, summit, embassy) [1][4][5][8][9][10][11][13]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
      "rule": "topic:security",
      "kind": "analysis",
      "evidence": [
@@ -507,9 +492,24 @@
       6,
       7,
       8,
-      12
+      9,
+      11
      ],
-     "text": "8 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][3][4][5][6][7][8][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][3][4][5][6][7][8][9][11]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      4,
+      5,
+      8,
+      10,
+      12,
+      13
+     ],
+     "text": "7 of the 12 listed reports use diplomacy wording (foreign minister, summit) [1][4][5][8][10][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -622,46 +622,46 @@
     },
     {
      "n": 9,
-     "title": "'Failed to redraw world': Zelenskyy mocks Russia over China summit, says event 'unsuccessful' for Putin",
-     "publisher": "indiatimes.com",
-     "url": "https://timesofindia.indiatimes.com/world/europe/failed-to-redraw-world-zelenskyy-mocks-russia-over-china-summit-says-event-unsuccessful-for-putin/articleshow/136056398.cms",
-     "time": "2026-11-21T15:15:00.000Z",
+     "title": "US report flags China-Pakistan military ties as two-front risk for India",
+     "publisher": "mid-day.com",
+     "url": "https://www.mid-day.com/news/world-news/article/us-report-flags-china-pakistan-military-ties-as-two-front-risk-for-india-23660822",
+     "time": "2026-11-21T18:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 10,
-     "title": "Xinhua Headlines: Why China-Russia-U.S. summit hailed historic for world stability, peace",
-     "publisher": "bignewsnetwork.com",
-     "url": "http://www.bignewsnetwork.com/news/279447224/xinhua-headlines-why-china-russia-us-summit-hailed-historic-for-world-stability-peace",
-     "time": "2026-11-21T14:30:00.000Z",
+     "title": "Volodymyr Zelensky says Vladimir Putin failed at China summit, Donald Trump pressures Ukraine for peace",
+     "publisher": "jpost.com",
+     "url": "http://www.jpost.com/international/article-915639",
+     "time": "2026-11-21T17:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "Zelenskiy says China summit was 'very unsuccessful' for Russia",
-     "publisher": "thehindu.com",
-     "url": "https://www.thehindu.com/news/international/zelenskiy-says-china-summit-was-very-unsuccessful-for-russia/article71728572.ece",
-     "time": "2026-11-21T14:29:00.000Z",
-     "timeBasis": "published",
+     "title": "China Can Back Pak Without Entering War: US Panel",
+     "publisher": "deccanchronicle.com",
+     "url": "https://www.deccanchronicle.com/nation/china-can-back-pak-without-entering-war-us-panel-2006668",
+     "time": "2026-11-21T17:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "China-Pakistan Military Partnership Raises Two-Front War Risk For India, Warns US Panel",
-     "publisher": "freepressjournal.in",
-     "url": "https://www.freepressjournal.in/world/china-pakistan-military-partnership-raises-two-front-war-risk-for-india-warns-us-panel",
-     "time": "2026-11-21T13:10:00.000Z",
+     "title": "Arab News | Zelensky says China summit was 'very unsuccessful' for Russia",
+     "publisher": "arabnews.com",
+     "url": "https://www.arabnews.com/world/zelensky-says-china-summit-was-very-unsuccessful-for-russia-3013395",
+     "time": "2026-11-21T17:22:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 13,
-     "title": "Chinese Embassy in Mexico slams US consul general's claims over Chinese investment near border, urges end to interference",
-     "publisher": "globaltimes.cn",
-     "url": "https://www.globaltimes.cn/page/202611/1374758.shtml",
-     "time": "2026-11-21T12:45:00.000Z",
+     "title": "'Failed to redraw world': Zelenskyy mocks Russia over China summit, says event 'unsuccessful' for Putin",
+     "publisher": "indiatimes.com",
+     "url": "https://timesofindia.indiatimes.com/world/europe/failed-to-redraw-world-zelenskyy-mocks-russia-over-china-summit-says-event-unsuccessful-for-putin/articleshow/136056398.cms",
+     "time": "2026-11-21T15:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -671,18 +671,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-21T16:06:26.585Z",
+   "generatedAt": "2026-11-21T19:14:01.279Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T16:06:26.585Z",
-    "to": "2026-11-21T16:06:26.585Z"
+    "from": "2026-11-18T19:14:01.279Z",
+    "to": "2026-11-21T19:14:01.279Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 55,
    "overview": {
     "kind": "fact",
-    "text": "55 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 15:30 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): diplomacy 10, security 8.",
+    "text": "55 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 19:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8.",
     "evidence": [
      1,
      3,
@@ -804,23 +804,6 @@
    ],
    "why": [
     {
-     "rule": "topic:diplomacy",
-     "kind": "analysis",
-     "evidence": [
-      1,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11
-     ],
-     "text": "10 of the 12 listed reports use diplomacy wording (foreign minister, summit, peace talks, ambassador) [1][3][4][5][6][7][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
      "rule": "topic:security",
      "kind": "analysis",
      "evidence": [
@@ -830,10 +813,27 @@
       5,
       6,
       7,
-      12,
+      8,
+      10,
+      11,
       13
      ],
-     "text": "8 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][3][4][5][6][7][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][3][4][5][6][7][8][10][11][13]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      12
+     ],
+     "text": "8 of the 12 listed reports use diplomacy wording (foreign minister, summit, peace talks, ambassador) [1][3][4][5][6][7][9][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -930,55 +930,55 @@
     },
     {
      "n": 8,
-     "title": "'Failed to redraw world': Zelenskyy mocks Russia over China summit, says event 'unsuccessful' for Putin",
+     "title": "After Oleshky ceasefire, Melania Trump wants more Russia-Ukraine ceasefires before Christmas; Zelenskyy reacts",
      "publisher": "indiatimes.com",
-     "url": "https://timesofindia.indiatimes.com/world/europe/failed-to-redraw-world-zelenskyy-mocks-russia-over-china-summit-says-event-unsuccessful-for-putin/articleshow/136056398.cms",
-     "time": "2026-11-21T15:15:00.000Z",
+     "url": "https://timesofindia.indiatimes.com/world/us/after-oleshky-ceasefire-melania-trump-wants-more-ukraine-ceasefires-before-christmas-zelenskyy-reacts/articleshow/136061877.cms",
+     "time": "2026-11-21T19:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 9,
-     "title": "Xinhua Headlines: Why China-Russia-U.S. summit hailed historic for world stability, peace",
-     "publisher": "bignewsnetwork.com",
-     "url": "http://www.bignewsnetwork.com/news/279447224/xinhua-headlines-why-china-russia-us-summit-hailed-historic-for-world-stability-peace",
-     "time": "2026-11-21T14:30:00.000Z",
+     "title": "Denmark Expels Russian Diplomat Over Assassination Plot Against Ukrainian Rapper",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/denmark-expels-russian-diplomat-over-assassination-plot-against-ukrainian-rapper/",
+     "time": "2026-11-21T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 10,
-     "title": "Zelenskiy says China summit was 'very unsuccessful' for Russia",
-     "publisher": "thehindu.com",
-     "url": "https://www.thehindu.com/news/international/zelenskiy-says-china-summit-was-very-unsuccessful-for-russia/article71728572.ece",
-     "time": "2026-11-21T14:29:00.000Z",
-     "timeBasis": "published",
+     "title": "Russia: Terrible Thermobaric Weapons Used Against Ukrainians",
+     "publisher": "strategypage.com",
+     "url": "http://www.strategypage.com/qnd/russia/articles/20261121101720.aspx",
+     "time": "2026-11-21T18:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "Sweden summons Russian ambassador over explosion near its embassy in Kyiv",
-     "publisher": "news.az",
-     "url": "https://news.az/news/sweden-summons-russian-ambassador-over-explosion-near-its-embassy-in-kyiv",
-     "time": "2026-11-21T14:00:00.000Z",
+     "title": "US seeks broader ceasefire between Russia and Ukraine",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/us-seeks-broader-ceasefire-between-russia-and-ukraine-537690",
+     "time": "2026-11-21T17:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Russian Forces Hit Meeting Site of Senior Ukrainian Military Brass",
-     "publisher": "sputnikglobe.com",
-     "url": "https://sputnikglobe.com/20261121/russian-forces-hit-meeting-site-of-senior-ukrainian-military-brass-1125128445.html",
-     "time": "2026-11-21T13:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Arab News | Zelensky says China summit was 'very unsuccessful' for Russia",
+     "publisher": "arabnews.com",
+     "url": "https://www.arabnews.com/world/zelensky-says-china-summit-was-very-unsuccessful-for-russia-3013395",
+     "time": "2026-11-21T17:22:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 13,
-     "title": "Russia strikes Ukrainian energy facilities overnight: defense ministry-Xinhua",
-     "publisher": "english.news.cn",
-     "url": "https://english.news.cn/europe/20261121/4f6fe76f87d34187b25bead1a2a1479f/c.html",
-     "time": "2026-11-21T13:00:00.000Z",
+     "title": "Ukrainian strike kills six civilians in frontline Russian region",
+     "publisher": "russiaherald.com",
+     "url": "http://www.russiaherald.com/news/279447255/ukrainian-strike-kills-six-civilians-in-frontline-russian-region-officials",
+     "time": "2026-11-21T17:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -988,18 +988,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-21T16:06:26.585Z",
+   "generatedAt": "2026-11-21T19:14:01.279Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T16:06:26.585Z",
-    "to": "2026-11-21T16:06:26.585Z"
+    "from": "2026-11-18T19:14:01.279Z",
+    "to": "2026-11-21T19:14:01.279Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 42,
+   "reportsFound": 43,
    "overview": {
     "kind": "fact",
-    "text": "42 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 14:00 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 7.",
+    "text": "43 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 19:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8.",
     "evidence": [
      1,
      2,
@@ -1128,13 +1128,12 @@
       4,
       5,
       6,
-      8,
+      7,
       9,
-      10,
       11,
       12
      ],
-     "text": "11 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][7][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1146,9 +1145,10 @@
       4,
       5,
       6,
-      7
+      8,
+      10
      ],
-     "text": "7 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6][7]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "8 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6][8][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1225,55 +1225,55 @@
     },
     {
      "n": 7,
-     "title": "Sweden summons Russian ambassador over explosion near its embassy in Kyiv",
-     "publisher": "news.az",
-     "url": "https://news.az/news/sweden-summons-russian-ambassador-over-explosion-near-its-embassy-in-kyiv",
-     "time": "2026-11-21T14:00:00.000Z",
+     "title": "After Oleshky ceasefire, Melania Trump wants more Russia-Ukraine ceasefires before Christmas; Zelenskyy reacts",
+     "publisher": "indiatimes.com",
+     "url": "https://timesofindia.indiatimes.com/world/us/after-oleshky-ceasefire-melania-trump-wants-more-ukraine-ceasefires-before-christmas-zelenskyy-reacts/articleshow/136061877.cms",
+     "time": "2026-11-21T19:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 8,
-     "title": "Russian Forces Hit Meeting Site of Senior Ukrainian Military Brass",
-     "publisher": "sputnikglobe.com",
-     "url": "https://sputnikglobe.com/20261121/russian-forces-hit-meeting-site-of-senior-ukrainian-military-brass-1125128445.html",
-     "time": "2026-11-21T13:45:00.000Z",
+     "title": "Denmark Expels Russian Diplomat Over Assassination Plot Against Ukrainian Rapper",
+     "publisher": "udaipurkiran.com",
+     "url": "https://udaipurkiran.com/denmark-expels-russian-diplomat-over-assassination-plot-against-ukrainian-rapper/",
+     "time": "2026-11-21T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 9,
-     "title": "Russia strikes Ukrainian energy facilities overnight: defense ministry-Xinhua",
-     "publisher": "english.news.cn",
-     "url": "https://english.news.cn/europe/20261121/4f6fe76f87d34187b25bead1a2a1479f/c.html",
-     "time": "2026-11-21T13:00:00.000Z",
+     "title": "Russia: Terrible Thermobaric Weapons Used Against Ukrainians",
+     "publisher": "strategypage.com",
+     "url": "http://www.strategypage.com/qnd/russia/articles/20261121101720.aspx",
+     "time": "2026-11-21T18:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 10,
-     "title": "LIVE: Russia launches deadly missile barrage on Ukraine",
-     "publisher": "news.az",
-     "url": "https://news.az/news/live-russia-launches-deadly-missile-barrage-on-ukraine",
-     "time": "2026-11-21T12:30:00.000Z",
+     "title": "Volodymyr Zelensky says Vladimir Putin failed at China summit, Donald Trump pressures Ukraine for peace",
+     "publisher": "jpost.com",
+     "url": "http://www.jpost.com/international/article-915639",
+     "time": "2026-11-21T17:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "Melania Trump says she is in talks regarding new ceasefire between Ukraine and Russia before Christmas",
-     "publisher": "interfax.com.ua",
-     "url": "https://en.interfax.com.ua/news/general/1240246.html",
-     "time": "2026-11-21T11:45:00.000Z",
+     "title": "US seeks broader ceasefire between Russia and Ukraine",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/us-seeks-broader-ceasefire-between-russia-and-ukraine-537690",
+     "time": "2026-11-21T17:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "From Crimea to Kyiv, Bridges Become Targets in Russia's War on Ukraine",
-     "publisher": "themoscowtimes.com",
-     "url": "https://www.themoscowtimes.com/2026/11/21/from-crimea-to-kyiv-bridges-become-targets-in-russias-war-on-ukraine-a94335",
-     "time": "2026-11-21T11:15:00.000Z",
+     "title": "Ukrainian strike kills six civilians in frontline Russian region",
+     "publisher": "russiaherald.com",
+     "url": "http://www.russiaherald.com/news/279447255/ukrainian-strike-kills-six-civilians-in-frontline-russian-region-officials",
+     "time": "2026-11-21T17:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -1283,18 +1283,18 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-21T16:06:26.585Z",
+   "generatedAt": "2026-11-21T19:14:01.279Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T16:06:26.585Z",
-    "to": "2026-11-21T16:06:26.585Z"
+    "from": "2026-11-18T19:14:01.279Z",
+    "to": "2026-11-21T19:14:01.279Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-21 15:22 UTC and come from 6 outlets. Reports with topic keywords (a report can have several): diplomacy 3, security 2.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-21 18:45 UTC and come from 6 outlets. Reports with topic keywords (a report can have several): diplomacy 3, security 2, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -1486,65 +1486,65 @@
     },
     {
      "n": 6,
-     "title": "Jefferies raises India allocation to 15%, cuts Taiwan: Is global money shifting towards Indian stocks?",
-     "publisher": "businesstoday.in",
-     "url": "https://www.businesstoday.in/markets/story/jefferies-raises-india-allocation-to-15-cuts-taiwan-is-global-money-shifting-towards-indian-stocks-568909-2026-11-21",
-     "time": "2026-11-21T15:22:00.000Z",
-     "timeBasis": "published",
+     "title": "Taiwan to cooperate in joint circular economy",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
+     "time": "2026-11-21T18:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 7,
-     "title": "Taiwan bans short selling below the prior close on all stocks starting Monday",
-     "publisher": "247wallst.com",
-     "url": "https://247wallst.com/cards/xpost-01m7za19nrp84rd11ak0p9a29c",
-     "time": "2026-11-21T14:52:00.000Z",
-     "timeBasis": "published",
+     "title": "U.S. Soybean Buyers Outlook Conference 2026: Japan-Taiwan Held - 博客",
+     "publisher": "wenxuecity.com",
+     "url": "https://blog.wenxuecity.com/myblog/80451/202611/16961.html",
+     "time": "2026-11-21T18:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 8,
-     "title": "National Museum of Taiwan Literature Expands Spanish Translations of Taiwanese Works – Indonesia Tribune",
-     "publisher": "indonesiatribune.com",
-     "url": "https://indonesiatribune.com/national-museum-of-taiwan-literature-expands-spanish-translations-of-taiwanese-works/",
-     "time": "2026-11-21T13:15:00.000Z",
+     "title": "No to sexual jokes in campaigns - Taipei Times",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/22/2003868157",
+     "time": "2026-11-21T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 9,
-     "title": "NTMoFA Unveils Bill Fontana's Sound Sculpture Exhibition in Taiwan – Indonesia Tribune",
-     "publisher": "indonesiatribune.com",
-     "url": "https://indonesiatribune.com/ntmofa-unveils-bill-fontanas-sound-sculpture-exhibition-in-taiwan/",
-     "time": "2026-11-21T13:15:00.000Z",
+     "title": "Indigenous voices deserve a say - Taipei Times",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/22/2003868158",
+     "time": "2026-11-21T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 10,
-     "title": "Stan Shih Represents Taiwan at 2026 APEC Economic Leaders' Meeting in Shenzhen – Indonesia Tribune",
-     "publisher": "indonesiatribune.com",
-     "url": "https://indonesiatribune.com/stan-shih-represents-taiwan-at-2026-apec-economic-leaders-meeting-in-shenzhen/",
-     "time": "2026-11-21T13:15:00.000Z",
+     "title": "EDITORIAL CARTOON - Taipei Times",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/22/2003868160",
+     "time": "2026-11-21T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "Taiwan Hosts Forum on AI-Driven Climate Solutions Amidst COP31 – Indonesia Tribune",
-     "publisher": "indonesiatribune.com",
-     "url": "https://indonesiatribune.com/taiwan-hosts-forum-on-ai-driven-climate-solutions-amidst-cop31/",
-     "time": "2026-11-21T13:15:00.000Z",
+     "title": "Taiwan in Time: The ghosts of Kinmen's movie theaters",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/feat/archives/2026/11/22/2003868164",
+     "time": "2026-11-21T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Veteran Taiwanese poet Xiang Ming dies, leaving literary legacy",
-     "publisher": "focustaiwan.tw",
-     "url": "https://focustaiwan.tw/culture/202611210018",
-     "time": "2026-11-21T12:59:00.000Z",
-     "timeBasis": "published",
+     "title": "US lawmaker upbeat on Taiwan ties - Taipei Times",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/front/archives/2026/11/22/2003868165",
+     "time": "2026-11-21T18:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
