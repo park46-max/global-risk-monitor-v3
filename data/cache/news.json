@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-20T19:17:41.527Z",
+  "checkedAt": "2026-11-21T01:29:03.481Z",
   "lastSuccessAt": "2026-11-20T19:21:29.712Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
       "status": "error",
-      "attempted": true,
-      "error": "GDELT is rate limiting requests.",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-20T13:29:25.916Z",
-      "checkedAt": "2026-11-20T19:22:43.611Z",
+      "checkedAt": "2026-11-21T01:31:39.601Z",
       "articles": [
         {
           "title": "After Iowa lead azide detonation , who will test the people ?",
@@ -180,18 +180,18 @@
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
       "status": "error",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T19:18:58.410Z",
+      "checkedAt": "2026-11-21T01:30:23.107Z",
       "articles": []
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-20T19:19:25.627Z",
-      "checkedAt": "2026-11-20T19:19:25.627Z",
+      "checkedAt": "2026-11-21T01:31:39.601Z",
       "articles": [
         {
           "title": "UN Faces Unprecedented Leadership Crisis as Security Council Fails to Agree on Guterre Successor – Sri Lanka Guardian",
@@ -361,16 +361,16 @@
       "attempted": true,
       "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": null,
-      "checkedAt": "2026-11-20T19:21:05.783Z",
+      "checkedAt": "2026-11-21T01:31:39.601Z",
       "articles": []
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-20T19:21:29.712Z",
-      "checkedAt": "2026-11-20T19:21:29.712Z",
+      "checkedAt": "2026-11-21T01:31:39.601Z",
       "articles": [
         {
           "title": "Asian shares head for worst week since 2020 as AI rout deepens",
