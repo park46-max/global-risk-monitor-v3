@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-21T01:29:03.481Z",
-  "lastSuccessAt": "2026-11-20T19:21:29.712Z",
+  "checkedAt": "2026-11-21T07:27:29.558Z",
+  "lastSuccessAt": "2026-11-21T07:27:44.237Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-20T13:29:25.916Z",
-      "checkedAt": "2026-11-21T01:31:39.601Z",
+      "checkedAt": "2026-11-21T07:30:44.920Z",
       "articles": [
         {
           "title": "After Iowa lead azide detonation , who will test the people ?",
@@ -178,12 +178,173 @@
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
-      "fetchedAt": null,
-      "checkedAt": "2026-11-21T01:30:23.107Z",
-      "articles": []
+      "error": null,
+      "fetchedAt": "2026-11-21T07:27:44.237Z",
+      "checkedAt": "2026-11-21T07:27:44.237Z",
+      "articles": [
+        {
+          "title": "He a killer : Zelensky reacts to Trump calling Putin a friend",
+          "url": "https://www.the-star.co.ke/news/world/2026-11-21-hes-a-killer-zelensky-reacts-to-trump-calling-putin-a-friend",
+          "domain": "the-star.co.ke",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "Kenya"
+        },
+        {
+          "title": "Latest Articles",
+          "url": "https://freerepublic.com/tag/*/index?more=4403808",
+          "domain": "freerepublic.com",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Celebrate A Very Extra Christmas at Ayala Malls",
+          "url": "https://starmometer.com/celebrate-a-very-extra-christmas-at-ayala-malls/",
+          "domain": "starmometer.com",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "Philippines"
+        },
+        {
+          "title": "Kiren Rijiju hits back at Rahul Gandhi compromised PM jibe , questions Congress on 1962 war , poverty",
+          "url": "https://www.thehindu.com/news/national/kiren-rijiju-hits-back-at-rahul-gandhis-compromised-pm-jibe-questions-congress-on-1962-war-poverty/article71727457.ece",
+          "domain": "thehindu.com",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Russia dusts off its prewar demands as the US raises discussing European security at Ukraine talks",
+          "url": "https://www.stcatharinesstandard.ca/news/world/europe/russia-dusts-off-its-prewar-demands-as-the-us-raises-discussing-european-security-at-ukraine-talks/article_b5f9c543-47ed-59ea-a303-dcf3a97192d8.html",
+          "domain": "stcatharinesstandard.ca",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "A new imperial age : Yuval Harari warns Philippines of foreign AI dependence",
+          "url": "https://www.rappler.com/technology/yuval-harari-maria-ressa-artificial-intelligence-social-good-summit-2026/",
+          "domain": "rappler.com",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "Philippines"
+        },
+        {
+          "title": "Young Crestwood squad relishing spot atop 3A in SCBCA preseason rankings",
+          "url": "http://theitem.com/stories/young-crestwood-squad-relishing-spot-atop-3a-in-scbca-preseason-rankings,448969",
+          "domain": "theitem.com",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "China offshore tax clampdown pushes budget into rare surplus",
+          "url": "https://www.businesstimes.com.sg/international/global/chinas-offshore-tax-clampdown-pushes-budget-rare-surplus",
+          "domain": "businesstimes.com.sg",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Sanniu Biscuits Recalled For Milk and Shrimp",
+          "url": "https://foodpoisoningbulletin.com/2026/sanniu-biscuits-recalled-for-milk-and-shrimp/",
+          "domain": "foodpoisoningbulletin.com",
+          "seendate": "20261121T064500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Trump seeks to penalize US companies that build AI data centers abroad , even as they face backlash",
+          "url": "https://www.ktvo.com/news/nation-world/trump-seeks-to-penalize-us-companies-that-build-ai-data-centers-abroad-even-as-they/article_52287a0d-b525-529f-aa7f-614a0bc194d8.html",
+          "domain": "ktvo.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Bessent : No added restrictions needed for Nvidia exports to China",
+          "url": "https://www.wokv.com/news/business/treasury-secretary/TRQRTZSNFE3OJM6X4KLSGWXTXE/",
+          "domain": "wokv.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Trump threatens to penalize U . S . tech companies over AI data centers – NBC Los Angeles",
+          "url": "https://www.nbclosangeles.com/news/national-international/us-tech-companies-build-international-ai-data-centers-trump-penalty/3973556/",
+          "domain": "nbclosangeles.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Morocco open U17 World Cup with 6 - 0 thrashing of Fiji",
+          "url": "https://www.middle-east-online.com/en/morocco-open-u17-world-cup-6-0-thrashing-fiji",
+          "domain": "middle-east-online.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "Iraq"
+        },
+        {
+          "title": "AI sell - off batters Wall Street ; S & P 500 enters correction , Nasdaq turns negative for year",
+          "url": "https://timesofindia.indiatimes.com/business/international-business/ai-sell-off-batters-wall-street-sp-500-enters-correction-nasdaq-turns-negative-for-year/articleshow/136041935.cms",
+          "domain": "timesofindia.indiatimes.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Trump : AI Data Centers Must Be Built In U . S .",
+          "url": "https://wccfradio.iheart.com/content/2026-11-20-trump-ai-data-centers-must-be-built-in-us/",
+          "domain": "wccfradio.iheart.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Trump auditions potential successors as Rubio and Vance join him for White House briefing",
+          "url": "https://www.ktvo.com/news/nation-world/trump-auditions-potential-successors-as-rubio-and-vance-join-him-for-white-house-briefing/article_ce1a68a1-2526-5749-9c56-e7cb8e29464e.html",
+          "domain": "ktvo.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Hole - in - one pushes A Lim Kim in front at CME Group Tour Championship",
+          "url": "http://www.taiwansun.com/news/279446391/hole-in-one-pushes-a-lim-kim-in-front-at-cme-group-tour-championship",
+          "domain": "taiwansun.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "Treasury secretary says no further restrictions are needed for Nvidia chip exports to China",
+          "url": "https://www.clickorlando.com/business/2026/11/20/treasury-secretary-says-no-further-restrictions-are-needed-for-nvidia-chip-exports-to-china/",
+          "domain": "clickorlando.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "China BYD banned from selling copycat Land Rover in Europe",
+          "url": "https://www.smh.com.au/world/europe/chinas-byd-banned-from-selling-copycat-land-rover-in-europe-20261121-p61g44.html",
+          "domain": "smh.com.au",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Trump puts Rubio and Vance on display at briefing",
+          "url": "https://www.wokv.com/news/politics/trump-auditions/JSXL6UTVVA2RLOKLQNTZDR3N5E/",
+          "domain": "wokv.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        }
+      ]
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
@@ -191,7 +352,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-20T19:19:25.627Z",
-      "checkedAt": "2026-11-21T01:31:39.601Z",
+      "checkedAt": "2026-11-21T07:30:44.921Z",
       "articles": [
         {
           "title": "UN Faces Unprecedented Leadership Crisis as Security Council Fails to Agree on Guterre Successor – Sri Lanka Guardian",
@@ -359,9 +520,9 @@
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
       "status": "error",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-21T01:31:39.601Z",
+      "checkedAt": "2026-11-21T07:29:15.443Z",
       "articles": []
     },
     "TWN": {
@@ -370,7 +531,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-20T19:21:29.712Z",
-      "checkedAt": "2026-11-21T01:31:39.601Z",
+      "checkedAt": "2026-11-21T07:30:44.921Z",
       "articles": [
         {
           "title": "Asian shares head for worst week since 2020 as AI rout deepens",
