@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-21T07:37:52.685Z",
- "lastSuccessAt": "2026-11-21T07:37:52.685Z",
- "checkedAt": "2026-11-21T07:37:52.685Z",
+ "generatedAt": "2026-11-21T10:10:00.072Z",
+ "lastSuccessAt": "2026-11-21T10:10:00.072Z",
+ "checkedAt": "2026-11-21T10:10:00.072Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 139,
-   "lastSuccessAt": "2026-11-21T07:37:32.181Z",
-   "checkedAt": "2026-11-21T07:37:32.181Z",
+   "items": 134,
+   "lastSuccessAt": "2026-11-21T10:09:41.061Z",
+   "checkedAt": "2026-11-21T10:09:41.061Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,7 +22,7 @@
   }
  },
  "itemStats": {
-  "read": 139,
+  "read": 134,
   "noSource": 0,
   "noTime": 0,
   "outsideWindow": 0,
@@ -32,31 +32,31 @@
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-21T07:37:52.685Z",
+   "generatedAt": "2026-11-21T10:10:00.072Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T07:37:52.685Z",
-    "to": "2026-11-21T07:37:52.685Z"
+    "from": "2026-11-18T10:10:00.072Z",
+    "to": "2026-11-21T10:10:00.072Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 42,
+   "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "42 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-21 07:00 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 8, diplomacy 4, sanctions and trade 3, economic policy 1.",
+    "text": "40 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-21 09:30 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 3, economic policy 1, sanctions and trade 1.",
     "evidence": [
      1,
      2,
      3,
      4,
-     5,
      6,
      7,
      8,
      9,
      10,
      11,
-     12
+     13,
+     14
     ]
    },
    "developments": [
@@ -138,15 +138,17 @@
       "Sanctions and trade",
       "Economic policy"
      ],
-     "alsoReportedBy": []
+     "alsoReportedBy": [
+      5
+     ]
     },
     {
      "kind": "reporting",
-     "n": 5,
-     "headline": "Trump Warns Beijing Will Catch US 'Within 10 Years' In Nuclear Weapons",
-     "publisher": "outlookindia.com",
-     "url": "https://www.outlookindia.com/international/donald-trump-china-nuclear-weapons-us-10-years-xi-putin-meeting",
-     "time": "2026-11-21T07:00:00.000Z",
+     "n": 6,
+     "headline": "US First Lady: Ukraine and Russia could reach ceasefire by Christmas",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/us-first-lady-ukraine-and-russia-could-reach-ceasefire-by-christmas-537617",
+     "time": "2026-11-21T09:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -168,13 +170,16 @@
       1,
       2,
       3,
-      5,
       6,
       7,
+      8,
       9,
-      10
+      10,
+      11,
+      13,
+      14
      ],
-     "text": "8 of the 12 listed reports use security wording (nuclear, weapons, war, military) [1][2][3][5][6][7][9][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use security wording (nuclear, weapons, war, military) [1][2][3][6][7][8][9][10][11][13][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -182,36 +187,36 @@
      "evidence": [
       1,
       2,
-      3,
-      12
+      3
      ],
-     "text": "4 of the 12 listed reports use diplomacy wording (summit, envoy) [1][2][3][12]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
-     "rule": "topic:sanctions-and-trade",
-     "kind": "analysis",
-     "evidence": [
-      4,
-      8,
-      11
-     ],
-     "text": "3 of the 12 listed reports use sanctions and trade wording (sanctions, supply chains, trade talks) [4][8][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use diplomacy wording (summit, envoy) [1][2][3]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
      "kind": "analysis",
      "evidence": [
       1,
-      5,
       6,
       7,
       8,
       9,
       10,
       11,
+      13,
+      14
+     ],
+     "text": "9 listed reports with topic keywords also name China, Russia, Ukraine and Taiwan [1][6][7][8][9][10][11][13][14]. A headline that names two countries does not show how they are connected."
+    },
+    {
+     "rule": "several-outlets",
+     "kind": "analysis",
+     "evidence": [
+      4,
+      5,
+      11,
       12
      ],
-     "text": "9 listed reports with topic keywords also name China, Russia, Ukraine and Taiwan [1][5][6][7][8][9][10][11][12]. A headline that names two countries does not show how they are connected."
+     "text": "2 listed headlines were carried by more than one outlet [4][11]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -253,6 +258,78 @@
     },
     {
      "n": 5,
+     "title": "US Treasury presses Singapore, Malaysia on Iran sanctions compliance - Economy",
+     "publisher": "asiaone.com",
+     "url": "https://www.asiaone.com/world/us-treasury-presses-singapore-and-malaysia-iran-sanctions-compliance",
+     "time": "2026-11-21T06:30:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 4
+    },
+    {
+     "n": 6,
+     "title": "US First Lady: Ukraine and Russia could reach ceasefire by Christmas",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/us-first-lady-ukraine-and-russia-could-reach-ceasefire-by-christmas-537617",
+     "time": "2026-11-21T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "US congressional panel flags China-Pakistan military ties as two-front risk for India, urges deeper Indian Ocean maritime cooperation",
+     "publisher": "aninews.in",
+     "url": "https://aninews.in/news/world/us/us-congressional-panel-flags-china-pakistan-military-ties-as-two-front-risk-for-india-urges-deeper-indian-ocean-maritime-cooperation20261121133836/",
+     "time": "2026-11-21T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "US China chip war escalates: How new restrictions could reshape the global AI industry",
+     "publisher": "businesstoday.in",
+     "url": "https://www.businesstoday.in/technology/news/story/us-china-chip-war-escalates-how-new-restrictions-could-reshape-the-global-ai-industry-568890-2026-11-21",
+     "time": "2026-11-21T08:38:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Germany Apologizes After Calling Pentagon Stance On Ukraine's Offensive Strikes 'Stupid'",
+     "publisher": "zerohedge.com",
+     "url": "http://www.zerohedge.com/geopolitical/germany-apologizes-after-calling-pentagon-stance-ukraines-offensive-strikes-stupid",
+     "time": "2026-11-21T08:00:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "China's Military Uses AI for Cyber Drills, US Report Raises Concerns",
+     "publisher": "chinatechnews.com",
+     "url": "https://www.chinatechnews.com/2026/11/21/133301-chinas-military-uses-ai-for-cyber-drills-us-report-raises-concerns",
+     "time": "2026-11-21T08:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
+     "title": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+     "publisher": "thehindu.com",
+     "url": "https://www.thehindu.com/news/international/russia-dusts-off-its-pre-war-demands-as-the-us-raises-discussing-european-security-at-ukraine-talks/article71727588.ece",
+     "time": "2026-11-21T07:42:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
+     "title": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+     "publisher": "news4jax.com",
+     "url": "https://www.news4jax.com/news/2026/11/20/russia-dusts-off-its-prewar-demands-as-the-us-raises-discussing-european-security-at-ukraine-talks/",
+     "time": "2026-11-20T22:12:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 11
+    },
+    {
+     "n": 13,
      "title": "Trump Warns Beijing Will Catch US 'Within 10 Years' In Nuclear Weapons",
      "publisher": "outlookindia.com",
      "url": "https://www.outlookindia.com/international/donald-trump-china-nuclear-weapons-us-10-years-xi-putin-meeting",
@@ -261,65 +338,11 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 14,
      "title": "U.S.-Taiwan military cooperation at unprecedented level: Congressman",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611210004",
      "time": "2026-11-21T03:42:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 7,
-     "title": "U.S. Faces Unprecedented Three-Way Nuclear Rivalry With China and Russia, WSJ Reports – NaturalNews.com",
-     "publisher": "naturalnews.com",
-     "url": "https://www.naturalnews.com/2026-11-20-us-faces-nuclear-rivalry-china-russia-wsj.html",
-     "time": "2026-11-21T03:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 8,
-     "title": "China using Pakistan, supply chains to constrain India's rise: US Panel",
-     "publisher": "indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/news/defence/china-using-pakistan-supply-chains-to-constrain-indias-rise-us-panel/articleshow/136042992.cms",
-     "time": "2026-11-21T03:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 9,
-     "title": "China, U.S. hold military maritime consultative agreement working group meeting",
-     "publisher": "en.people.cn",
-     "url": "http://en.people.cn/n3/2026/1120/c90000-20521779.html",
-     "time": "2026-11-21T02:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
-     "title": "Trump says China is building nuclear weapons 'hot and heavy', warns it could catch US in 10 years",
-     "publisher": "hindustantimes.com",
-     "url": "https://www.hindustantimes.com/world-news/trump-says-china-is-building-nuclear-weapons-hot-and-heavy-warns-it-could-catch-us-in-10-years-101795211740167.html",
-     "time": "2026-11-20T22:34:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Trump says only older US chips should go to China amid broader trade talks",
-     "publisher": "thenews.com.pk",
-     "url": "https://www.thenews.com.pk/latest/1424447-trump-says-only-older-us-chips-should-go-to-china-amid-broader-trade-talks",
-     "time": "2026-11-20T22:23:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Shenzhen Summit: China, US and Russia Face Global Challenges",
-     "publisher": "pakistantoday.com.pk",
-     "url": "https://www.pakistantoday.com.pk/2026/11/21/three-giants-one-summit-and-a-world-left-behind",
-     "time": "2026-11-20T21:18:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     }
@@ -329,18 +352,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-21T07:37:52.685Z",
+   "generatedAt": "2026-11-21T10:10:00.072Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T07:37:52.685Z",
-    "to": "2026-11-21T07:37:52.685Z"
+    "from": "2026-11-18T10:10:00.072Z",
+    "to": "2026-11-21T10:10:00.072Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 44,
    "overview": {
     "kind": "fact",
-    "text": "44 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-21 07:00 UTC and come from 10 outlets. Reports with topic keywords (a report can have several): security 8, diplomacy 5, sanctions and trade 3.",
+    "text": "44 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-21 09:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 4, sanctions and trade 3.",
     "evidence": [
      1,
      2,
@@ -348,12 +371,12 @@
      4,
      5,
      6,
-     7,
      8,
      9,
      10,
      11,
-     12
+     12,
+     13
     ]
    },
    "developments": [
@@ -400,6 +423,26 @@
     {
      "kind": "reporting",
      "n": 3,
+     "headline": "China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline - China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline",
+     "publisher": "inewsgr.com",
+     "url": "https://www.inewsgr.com/330/Chinas-Rare-Earth-Truce-Gets-a-Two-Month-Extension--Industry-Still-Faces-a-Supply-Deadline.htm",
+     "time": "2026-11-21T08:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "China"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Sanctions and trade"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 4,
      "headline": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
      "publisher": "baystreet.ca",
      "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
@@ -419,7 +462,7 @@
     },
     {
      "kind": "reporting",
-     "n": 4,
+     "n": 5,
      "headline": "Trump Calls from Air Force One After China Summit, Questions",
      "publisher": "athens-times.com",
      "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
@@ -436,25 +479,6 @@
       "Diplomacy"
      ],
      "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 5,
-     "headline": "Trump Warns Beijing Will Catch US 'Within 10 Years' In Nuclear Weapons",
-     "publisher": "outlookindia.com",
-     "url": "https://www.outlookindia.com/international/donald-trump-china-nuclear-weapons-us-10-years-xi-putin-meeting",
-     "time": "2026-11-21T07:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "matched": {
-      "level": "institution",
-      "terms": [
-       "Beijing"
-      ]
-     },
-     "topics": [
-      "Security"
-     ],
-     "alsoReportedBy": []
     }
    ],
    "why": [
@@ -467,11 +491,13 @@
       3,
       4,
       5,
-      6,
       8,
-      9
+      9,
+      10,
+      11,
+      12
      ],
-     "text": "8 of the 12 listed reports use security wording (nuclear, weapons, war, army) [1][2][3][4][5][6][8][9]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, truce) [1][2][3][4][5][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -479,21 +505,20 @@
      "evidence": [
       1,
       2,
-      4,
-      11,
-      12
+      5,
+      6
      ],
-     "text": "5 of the 12 listed reports use diplomacy wording (summit) [1][2][4][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "4 of the 12 listed reports use diplomacy wording (summit, diplomacy) [1][2][5][6]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
       3,
-      7,
-      10
+      4,
+      13
      ],
-     "text": "3 of the 12 listed reports use sanctions and trade wording (rare earth, supply chains, trade talks) [3][7][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use sanctions and trade wording (rare earth, supply chains) [3][4][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -501,16 +526,24 @@
      "evidence": [
       1,
       2,
-      5,
       6,
-      7,
       8,
       9,
       10,
       11,
-      12
+      12,
+      13
      ],
-     "text": "10 listed reports with topic keywords also name the United States, Russia and Ukraine [1][2][5][6][7][8][9][10][11][12]. A headline that names two countries does not show how they are connected."
+     "text": "9 listed reports with topic keywords also name the United States, Russia and Ukraine [1][2][6][8][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
+    },
+    {
+     "rule": "several-outlets",
+     "kind": "analysis",
+     "evidence": [
+      6,
+      7
+     ],
+     "text": "1 listed headline was carried by more than one outlet [6]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -534,6 +567,15 @@
     },
     {
      "n": 3,
+     "title": "China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline - China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline",
+     "publisher": "inewsgr.com",
+     "url": "https://www.inewsgr.com/330/Chinas-Rare-Earth-Truce-Gets-a-Two-Month-Extension--Industry-Still-Faces-a-Supply-Deadline.htm",
+     "time": "2026-11-21T08:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
      "title": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
      "publisher": "baystreet.ca",
      "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
@@ -542,7 +584,7 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "Trump Calls from Air Force One After China Summit, Questions",
      "publisher": "athens-times.com",
      "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
@@ -551,7 +593,52 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 6,
+     "title": "Head-of-state diplomacy plays a special, guiding role in Russia-China ties: Russian spokeswoman",
+     "publisher": "bignewsnetwork.com",
+     "url": "http://www.bignewsnetwork.com/news/279446804/head-of-state-diplomacy-plays-a-special-guiding-role-in-russia-china-ties-russian-spokeswoman",
+     "time": "2026-11-21T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "Head-of-state diplomacy plays a special, guiding role in Russia-China ties: Russian spokeswoman",
+     "publisher": "english.news.cn",
+     "url": "https://english.news.cn/20261121/5e69a83514d14dda989e990e68373996/c.html",
+     "time": "2026-11-21T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "duplicateOf": 6
+    },
+    {
+     "n": 8,
+     "title": "US congressional panel flags China-Pakistan military ties as two-front risk for India, urges deeper Indian Ocean maritime cooperation",
+     "publisher": "aninews.in",
+     "url": "https://aninews.in/news/world/us/us-congressional-panel-flags-china-pakistan-military-ties-as-two-front-risk-for-india-urges-deeper-indian-ocean-maritime-cooperation20261121133836/",
+     "time": "2026-11-21T08:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "US China chip war escalates: How new restrictions could reshape the global AI industry",
+     "publisher": "businesstoday.in",
+     "url": "https://www.businesstoday.in/technology/news/story/us-china-chip-war-escalates-how-new-restrictions-could-reshape-the-global-ai-industry-568890-2026-11-21",
+     "time": "2026-11-21T08:38:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "China's Military Uses AI for Cyber Drills, US Report Raises Concerns",
+     "publisher": "chinatechnews.com",
+     "url": "https://www.chinatechnews.com/2026/11/21/133301-chinas-military-uses-ai-for-cyber-drills-us-report-raises-concerns",
+     "time": "2026-11-21T08:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
      "title": "Trump Warns Beijing Will Catch US 'Within 10 Years' In Nuclear Weapons",
      "publisher": "outlookindia.com",
      "url": "https://www.outlookindia.com/international/donald-trump-china-nuclear-weapons-us-10-years-xi-putin-meeting",
@@ -560,7 +647,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 12,
      "title": "U.S. Faces Unprecedented Three-Way Nuclear Rivalry With China and Russia, WSJ Reports – NaturalNews.com",
      "publisher": "naturalnews.com",
      "url": "https://www.naturalnews.com/2026-11-20-us-faces-nuclear-rivalry-china-russia-wsj.html",
@@ -569,57 +656,12 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 13,
      "title": "China using Pakistan, supply chains to constrain India's rise: US Panel",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/defence/china-using-pakistan-supply-chains-to-constrain-indias-rise-us-panel/articleshow/136042992.cms",
      "time": "2026-11-21T03:00:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 8,
-     "title": "China, U.S. hold military maritime consultative agreement working group meeting",
-     "publisher": "en.people.cn",
-     "url": "http://en.people.cn/n3/2026/1120/c90000-20521779.html",
-     "time": "2026-11-21T02:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 9,
-     "title": "Trump says China is building nuclear weapons 'hot and heavy', warns it could catch US in 10 years",
-     "publisher": "hindustantimes.com",
-     "url": "https://www.hindustantimes.com/world-news/trump-says-china-is-building-nuclear-weapons-hot-and-heavy-warns-it-could-catch-us-in-10-years-101795211740167.html",
-     "time": "2026-11-20T22:34:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
-     "title": "Trump says only older US chips should go to China amid broader trade talks",
-     "publisher": "thenews.com.pk",
-     "url": "https://www.thenews.com.pk/latest/1424447-trump-says-only-older-us-chips-should-go-to-china-amid-broader-trade-talks",
-     "time": "2026-11-20T22:23:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Shenzhen Summit: China, US and Russia Face Global Challenges",
-     "publisher": "pakistantoday.com.pk",
-     "url": "https://www.pakistantoday.com.pk/2026/11/21/three-giants-one-summit-and-a-world-left-behind",
-     "time": "2026-11-20T21:18:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "China, Russia and US Hold First Tripartite Summit in Shenzhe",
-     "publisher": "pakistantoday.com.pk",
-     "url": "https://www.pakistantoday.com.pk/2026/11/21/tripartite-summit",
-     "time": "2026-11-20T21:14:00.000Z",
-     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
@@ -628,18 +670,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-21T07:37:52.685Z",
+   "generatedAt": "2026-11-21T10:10:00.072Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T07:37:52.685Z",
-    "to": "2026-11-21T07:37:52.685Z"
+    "from": "2026-11-18T10:10:00.072Z",
+    "to": "2026-11-21T10:10:00.072Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 40,
+   "reportsFound": 48,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 07:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 7.",
+    "text": "48 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 09:30 UTC and come from 10 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 7.",
     "evidence": [
      1,
      2,
@@ -649,7 +691,7 @@
      6,
      7,
      8,
-     10,
+     9,
      11,
      12,
      13
@@ -767,13 +809,13 @@
       3,
       4,
       5,
+      6,
+      7,
       8,
-      10,
       11,
-      12,
       13
      ],
-     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][8][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][7][8][11][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -784,10 +826,10 @@
       3,
       4,
       5,
-      6,
-      7
+      9,
+      12
      ],
-     "text": "7 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace deal) [1][2][3][4][5][6][7]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "7 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, diplomacy) [1][2][3][4][5][9][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -801,21 +843,23 @@
       6,
       7,
       8,
-      10,
+      9,
       11,
       12,
       13
      ],
-     "text": "12 listed reports with topic keywords also name the United States, China and Ukraine [1][2][3][4][5][6][7][8][10][11][12][13]. A headline that names two countries does not show how they are connected."
+     "text": "12 listed reports with topic keywords also name the United States, China and Ukraine [1][2][3][4][5][6][7][8][9][11][12][13]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      8,
-      9
+      9,
+      10,
+      13,
+      14
      ],
-     "text": "1 listed headline was carried by more than one outlet [8]. The same headline appearing in several places is not independent verification."
+     "text": "2 listed headlines were carried by more than one outlet [9][13]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -866,6 +910,60 @@
     },
     {
      "n": 6,
+     "title": "Jared Kushner floats Ukraine NATO membership if Kyiv cedes Donbas to Russia",
+     "publisher": "jpost.com",
+     "url": "http://www.jpost.com/international/internationalrussia-ukraine-war/article-915627",
+     "time": "2026-11-21T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
+     "title": "US First Lady: Ukraine and Russia could reach ceasefire by Christmas",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/us-first-lady-ukraine-and-russia-could-reach-ceasefire-by-christmas-537617",
+     "time": "2026-11-21T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "Russian drone strike on residential building in Ukraine's Kharkiv region injures 11",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/europe/russian-drone-strike-on-residential-building-in-ukraines-kharkiv-region-injures-11-537611",
+     "time": "2026-11-21T09:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Head-of-state diplomacy plays a special, guiding role in Russia-China ties: Russian spokeswoman",
+     "publisher": "bignewsnetwork.com",
+     "url": "http://www.bignewsnetwork.com/news/279446804/head-of-state-diplomacy-plays-a-special-guiding-role-in-russia-china-ties-russian-spokeswoman",
+     "time": "2026-11-21T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Head-of-state diplomacy plays a special, guiding role in Russia-China ties: Russian spokeswoman",
+     "publisher": "english.news.cn",
+     "url": "https://english.news.cn/20261121/5e69a83514d14dda989e990e68373996/c.html",
+     "time": "2026-11-21T09:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "duplicateOf": 9
+    },
+    {
+     "n": 11,
+     "title": "News Summary-Intelligence Report 11/20/2026*Newsdump Friday*Weed Killer Deal*New Gov't Israel?*NASDAQ Down 5%*Russia Hits Kiev Hard*Yemen War*Putin-Trump-Xi Slam Court Targeting Netanyahu*Trump Hints New Year War?*",
+     "publisher": "freerepublic.com",
+     "url": "https://freerepublic.com/focus/f-bloggers/4403831/posts",
+     "time": "2026-11-21T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
      "title": "Donald Trump pushes Ukraine-Russia peace deal by January before Democrats take Congress",
      "publisher": "jpost.com",
      "url": "https://www.jpost.com/international/internationalrussia-ukraine-war/article-915625",
@@ -874,67 +972,22 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
-     "title": "Trump says Putin wants diplomatic solution to Russia Ukraine conflict",
-     "publisher": "wn.com",
-     "url": "https://article.wn.com/view/2026/11/21/Trump_says_Putin_wants_diplomatic_solution_to_Russia_Ukraine/",
-     "time": "2026-11-21T06:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 8,
-     "title": "Russian missile hits Poland as Ukraine's allies hold military exercise",
-     "publisher": "the-star.co.ke",
-     "url": "https://www.the-star.co.ke/news/world/2026-11-21-russian-missile-hits-poland-as-ukraines-allies-hold-military-exercise-says-tusk",
-     "time": "2026-11-21T06:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 9,
-     "title": "Russian missile hits Poland as Ukraine's allies hold military exercise",
-     "publisher": "dailymirror.lk",
-     "url": "https://www.dailymirror.lk/international/Russian-missile-hits-Poland-as-Ukraines-allies-hold-military-exercise-says-Tusk/107-355434",
-     "time": "2026-11-21T08:25:00.000Z",
-     "timeBasis": "published",
-     "duplicateOf": 8
-    },
-    {
-     "n": 10,
-     "title": "U.S. Faces Unprecedented Three-Way Nuclear Rivalry With China and Russia, WSJ Reports – NaturalNews.com",
-     "publisher": "naturalnews.com",
-     "url": "https://www.naturalnews.com/2026-11-20-us-faces-nuclear-rivalry-china-russia-wsj.html",
-     "time": "2026-11-21T03:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "World News: Russia's missile and drone strikes kill eight in Ukraine",
-     "publisher": "gdnonline.com",
-     "url": "https://www.gdnonline.com/Details/1413463/Russia%E2%80%99s-missile-and-drone-strikes-kill-eight-in-Ukraine",
-     "time": "2026-11-21T03:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Ukraine war briefing: European leaders react with anger and alarm after Russian missiles crash in Poland",
-     "publisher": "theguardian.com",
-     "url": "https://www.theguardian.com/world/2026/nov/21/ukraine-war-briefing-european-leaders-react-with-anger-and-alarm-after-russian-missiles-crash-in-poland",
-     "time": "2026-11-21T03:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
      "n": 13,
-     "title": "News: Uganda government disowns Russia, Ukraine frontline re",
-     "publisher": "newvision.co.ug",
-     "url": "https://www.newvision.co.ug/category/news/uganda-government-disowns-russia-ukraine-fron-NV_244518_112026",
-     "time": "2026-11-21T02:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+     "publisher": "thehindu.com",
+     "url": "https://www.thehindu.com/news/international/russia-dusts-off-its-pre-war-demands-as-the-us-raises-discussing-european-security-at-ukraine-talks/article71727588.ece",
+     "time": "2026-11-21T07:42:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
+    },
+    {
+     "n": 14,
+     "title": "Russia dusts off its pre-war demands as the U.S. raises discussing European security at Ukraine talks",
+     "publisher": "news4jax.com",
+     "url": "https://www.news4jax.com/news/2026/11/20/russia-dusts-off-its-prewar-demands-as-the-us-raises-discussing-european-security-at-ukraine-talks/",
+     "time": "2026-11-20T22:12:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 13
     }
    ],
    "limitations": [
@@ -942,18 +995,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-21T07:37:52.685Z",
+   "generatedAt": "2026-11-21T10:10:00.072Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T07:37:52.685Z",
-    "to": "2026-11-21T07:37:52.685Z"
+    "from": "2026-11-18T10:10:00.072Z",
+    "to": "2026-11-21T10:10:00.072Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 07:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8.",
+    "text": "40 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 09:30 UTC and come from 8 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 7.",
     "evidence": [
      1,
      2,
@@ -964,9 +1017,9 @@
      7,
      8,
      9,
+     10,
      11,
-     12,
-     13
+     12
     ]
    },
    "developments": [
@@ -1082,12 +1135,13 @@
       4,
       5,
       6,
+      7,
+      8,
       9,
-      11,
-      12,
-      13
+      10,
+      11
      ],
-     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][9][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][7][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1099,10 +1153,9 @@
       4,
       5,
       6,
-      7,
-      8
+      12
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6][7][8]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "7 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1115,20 +1168,11 @@
       7,
       8,
       9,
+      10,
       11,
-      12,
-      13
+      12
      ],
-     "text": "10 listed reports with topic keywords also name the United States, China and Russia [1][2][3][4][7][8][9][11][12][13]. A headline that names two countries does not show how they are connected."
-    },
-    {
-     "rule": "several-outlets",
-     "kind": "analysis",
-     "evidence": [
-      9,
-      10
-     ],
-     "text": "1 listed headline was carried by more than one outlet [9]. The same headline appearing in several places is not independent verification."
+     "text": "10 listed reports with topic keywords also name the United States, China and Russia [1][2][3][4][7][8][9][10][11][12]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
@@ -1188,64 +1232,55 @@
     },
     {
      "n": 7,
-     "title": "Donald Trump pushes Ukraine-Russia peace deal by January before Democrats take Congress",
+     "title": "Jared Kushner floats Ukraine NATO membership if Kyiv cedes Donbas to Russia",
      "publisher": "jpost.com",
-     "url": "https://www.jpost.com/international/internationalrussia-ukraine-war/article-915625",
-     "time": "2026-11-21T07:45:00.000Z",
+     "url": "http://www.jpost.com/international/internationalrussia-ukraine-war/article-915627",
+     "time": "2026-11-21T09:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 8,
-     "title": "Trump says Putin wants diplomatic solution to Russia Ukraine conflict",
-     "publisher": "wn.com",
-     "url": "https://article.wn.com/view/2026/11/21/Trump_says_Putin_wants_diplomatic_solution_to_Russia_Ukraine/",
-     "time": "2026-11-21T06:45:00.000Z",
+     "title": "US First Lady: Ukraine and Russia could reach ceasefire by Christmas",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/us-first-lady-ukraine-and-russia-could-reach-ceasefire-by-christmas-537617",
+     "time": "2026-11-21T09:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 9,
-     "title": "Russian missile hits Poland as Ukraine's allies hold military exercise",
-     "publisher": "the-star.co.ke",
-     "url": "https://www.the-star.co.ke/news/world/2026-11-21-russian-missile-hits-poland-as-ukraines-allies-hold-military-exercise-says-tusk",
-     "time": "2026-11-21T06:45:00.000Z",
+     "title": "Russian drone strike on residential building in Ukraine's Kharkiv region injures 11",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/europe/russian-drone-strike-on-residential-building-in-ukraines-kharkiv-region-injures-11-537611",
+     "time": "2026-11-21T09:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 10,
-     "title": "Russian missile hits Poland as Ukraine's allies hold military exercise",
-     "publisher": "dailymirror.lk",
-     "url": "https://www.dailymirror.lk/international/Russian-missile-hits-Poland-as-Ukraines-allies-hold-military-exercise-says-Tusk/107-355434",
-     "time": "2026-11-21T08:25:00.000Z",
-     "timeBasis": "published",
-     "duplicateOf": 9
+     "title": "News Summary-Intelligence Report 11/20/2026*Newsdump Friday*Weed Killer Deal*New Gov't Israel?*NASDAQ Down 5%*Russia Hits Kiev Hard*Yemen War*Putin-Trump-Xi Slam Court Targeting Netanyahu*Trump Hints New Year War?*",
+     "publisher": "freerepublic.com",
+     "url": "https://freerepublic.com/focus/f-bloggers/4403831/posts",
+     "time": "2026-11-21T09:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "World News: Russia's missile and drone strikes kill eight in Ukraine",
-     "publisher": "gdnonline.com",
-     "url": "https://www.gdnonline.com/Details/1413463/Russia%E2%80%99s-missile-and-drone-strikes-kill-eight-in-Ukraine",
-     "time": "2026-11-21T03:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Germany Apologizes After Calling Pentagon Stance On Ukraine's Offensive Strikes 'Stupid'",
+     "publisher": "zerohedge.com",
+     "url": "http://www.zerohedge.com/geopolitical/germany-apologizes-after-calling-pentagon-stance-ukraines-offensive-strikes-stupid",
+     "time": "2026-11-21T08:00:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Ukraine war briefing: European leaders react with anger and alarm after Russian missiles crash in Poland",
-     "publisher": "theguardian.com",
-     "url": "https://www.theguardian.com/world/2026/nov/21/ukraine-war-briefing-european-leaders-react-with-anger-and-alarm-after-russian-missiles-crash-in-poland",
-     "time": "2026-11-21T03:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "News: Uganda government disowns Russia, Ukraine frontline re",
-     "publisher": "newvision.co.ug",
-     "url": "https://www.newvision.co.ug/category/news/uganda-government-disowns-russia-ukraine-fron-NV_244518_112026",
-     "time": "2026-11-21T02:30:00.000Z",
+     "title": "Donald Trump pushes Ukraine-Russia peace deal by January before Democrats take Congress",
+     "publisher": "jpost.com",
+     "url": "https://www.jpost.com/international/internationalrussia-ukraine-war/article-915625",
+     "time": "2026-11-21T07:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -1255,18 +1290,18 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-21T07:37:52.685Z",
+   "generatedAt": "2026-11-21T10:10:00.072Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-18T07:37:52.685Z",
-    "to": "2026-11-21T07:37:52.685Z"
+    "from": "2026-11-18T10:10:00.072Z",
+    "to": "2026-11-21T10:10:00.072Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 28,
+   "reportsFound": 31,
    "overview": {
     "kind": "fact",
-    "text": "28 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-21 07:30 UTC and come from 9 outlets. Reports with topic keywords (a report can have several): diplomacy 2, security 2.",
+    "text": "31 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-21 10:15 UTC and come from 9 outlets. Reports with topic keywords (a report can have several): diplomacy 2, security 2.",
     "evidence": [
      1,
      2,
@@ -1362,10 +1397,10 @@
     {
      "kind": "reporting",
      "n": 5,
-     "headline": "Micron labor dispute in Taiwan heats up as premier calls for worker protection",
-     "publisher": "digitimes.com",
-     "url": "https://www.digitimes.com/news/a20261118PD247/micron-taiwan-labor-investment-government.html",
-     "time": "2026-11-21T07:30:00.000Z",
+     "headline": "GREED & fear Report: Jefferies Chris Wood hikes India exposure for 2nd time in 3 weeks, cuts Taiwan| New Allocations",
+     "publisher": "livemint.com",
+     "url": "https://www.livemint.com/market/stock-market-news/greed-fear-report-jefferies-chris-wood-hikes-india-exposure-for-2nd-time-in-3-weeks-cuts-taiwan-new-allocations-11795235087351.html",
+     "time": "2026-11-21T10:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -1445,6 +1480,24 @@
     },
     {
      "n": 5,
+     "title": "GREED & fear Report: Jefferies Chris Wood hikes India exposure for 2nd time in 3 weeks, cuts Taiwan| New Allocations",
+     "publisher": "livemint.com",
+     "url": "https://www.livemint.com/market/stock-market-news/greed-fear-report-jefferies-chris-wood-hikes-india-exposure-for-2nd-time-in-3-weeks-cuts-taiwan-new-allocations-11795235087351.html",
+     "time": "2026-11-21T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
+     "title": "Taiwan bans short sales of stocks in new move to calm markets",
+     "publisher": "moneycontrol.com",
+     "url": "https://www.moneycontrol.com/news/business/markets/taiwan-bans-short-sales-of-stocks-in-new-move-to-calm-markets-14086116.html",
+     "time": "2026-11-21T09:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
      "title": "Micron labor dispute in Taiwan heats up as premier calls for worker protection",
      "publisher": "digitimes.com",
      "url": "https://www.digitimes.com/news/a20261118PD247/micron-taiwan-labor-investment-government.html",
@@ -1453,7 +1506,16 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 8,
+     "title": "When the name \"Java\" is held at Taiwan's border",
+     "publisher": "antaranews.com",
+     "url": "https://en.antaranews.com/news/444315/when-the-name-java-is-held-at-taiwans-border",
+     "time": "2026-11-21T07:06:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
      "title": "Taipei mayoral race heats up with campaign merchandise",
      "publisher": "straitstimes.com",
      "url": "https://www.straitstimes.com/asia/east-asia/from-streamers-to-car-sweeps-taipei-mayoral-candidates-pull-out-all-stops-to-sway-voters",
@@ -1462,7 +1524,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 10,
      "title": "Taiwan's Q3 current account surplus hits 2nd highest due to global AI demand",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/business/202611210007",
@@ -1471,7 +1533,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 11,
      "title": "Bestselling author R.F. Kuang discusses 'Taipei Story' at on-campus book talk",
      "publisher": "huntnewsnu.com",
      "url": "https://huntnewsnu.com/95267/lifestyle/bestselling-author-r-f-kuang-discusses-taipei-story-at-on-campus-book-talk/",
@@ -1480,39 +1542,12 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 12,
      "title": "Taiwan headline news - Focus Taiwan",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/society/202611210002",
      "time": "2026-11-21T02:26:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
-     "title": "Trump, Takaichi Discuss Indo-Pacific Security As Japanese Leader Reaffirms Taiwan Policy",
-     "publisher": "eurasiareview.com",
-     "url": "https://www.eurasiareview.com/21112026-trump-takaichi-discuss-indo-pacific-security-as-japanese-leader-reaffirms-taiwan-policy/",
-     "time": "2026-11-21T01:46:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "PNG has the legal right to close down Taiwan's office, but at what cost? – Radio Free Asia",
-     "publisher": "rfa.org",
-     "url": "https://www.rfa.org/english/pacific/2026/11/20/taiwan-representative-office-png-closure/",
-     "time": "2026-11-20T10:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "China urges Japan to 'correct erroneous words, deeds' on Taiwan",
-     "publisher": "aa.com.tr",
-     "url": "https://aa.com.tr/en/asia-pacific/china-urges-japan-to-correct-erroneous-words-deeds-on-taiwan/4131875",
-     "time": "2026-11-20T09:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
