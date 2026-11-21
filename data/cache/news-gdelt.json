@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-21T19:13:41.230Z",
- "checkedAt": "2026-11-21T19:13:41.230Z",
- "lastSuccessAt": "2026-11-21T19:13:41.230Z",
+ "generatedAt": "2026-11-21T22:00:35.566Z",
+ "checkedAt": "2026-11-21T22:00:35.566Z",
+ "lastSuccessAt": "2026-11-21T22:00:35.566Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 12,
-  "groupedDuplicates": 17,
+  "groupedDuplicates": 42,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,11 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-21T19:13:41.230Z",
-   "lastSuccessAt": "2026-11-21T19:13:41.230Z",
+   "checkedAt": "2026-11-21T22:00:35.566Z",
+   "lastSuccessAt": "2026-11-21T22:00:35.566Z",
    "error": null,
-   "latestFile": "20261121191500"
+   "latestFile": "20261121220000",
+   "warning": "2 of 11 files could not be read this run"
   }
  },
  "files": {
@@ -180,7 +181,18 @@
   "20261121183000": "ok",
   "20261121184500": "ok",
   "20261121190000": "ok",
-  "20261121191500": "ok"
+  "20261121191500": "ok",
+  "20261121193000": "ok",
+  "20261121194500": "ok",
+  "20261121200000": "ok",
+  "20261121201500": "ok",
+  "20261121203000": "ok",
+  "20261121204500": "ok",
+  "20261121210000": "ok",
+  "20261121211500": "ok",
+  "20261121213000": "missing",
+  "20261121214500": "missing",
+  "20261121220000": "ok"
  },
  "items": [
   {
@@ -1112,46 +1124,6 @@
    }
   },
   {
-   "title": "Hillary Clinton demands escalation of US-NATO war against Russia",
-   "url": "https://www.wsws.org/en/articles/2026/11/20/uduy-n20.html",
-   "publisher": "wsws.org",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T08:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO",
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
    "url": "https://english.aawsat.com/world/5343506-russia-pushes-back-against-us-idea-nato-style-security-guarantees-ukraine",
    "publisher": "aawsat.com",
@@ -1651,45 +1623,6 @@
    }
   },
   {
-   "title": "Denmark expels Russian diplomat over alleged plot to kill Ukrainian rapper - Grenada Chronicle – Daily Grenada And Caribbean News",
-   "url": "https://grenadachronicle.com/denmark-expels-russian-diplomat-over-alleged-plot-to-kill-ukrainian-rapper/",
-   "publisher": "grenadachronicle.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T01:55:00.000Z",
-   "seenByGdelt": "2026-11-21T06:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T07:37:32.181Z",
-   "lastSeenAt": "2026-11-21T07:37:32.181Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "diplomat"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "China, U.S. hold military maritime consultative agreement working group meeting",
    "url": "http://en.people.cn/n3/2026/1120/c90000-20521779.html",
    "publisher": "en.people.cn",
@@ -1729,45 +1662,6 @@
    }
   },
   {
-   "title": "News: Uganda government disowns Russia, Ukraine frontline re",
-   "url": "https://www.newvision.co.ug/category/news/uganda-government-disowns-russia-ukraine-fron-NV_244518_112026",
-   "publisher": "newvision.co.ug",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T02:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "frontline"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "China using Pakistan, supply chains to constrain India's rise: US Panel",
    "url": "https://economictimes.indiatimes.com/news/defence/china-using-pakistan-supply-chains-to-constrain-indias-rise-us-panel/articleshow/136042992.cms",
    "publisher": "indiatimes.com",
@@ -1801,86 +1695,6 @@
       "label": "Sanctions and trade",
       "terms": [
        "supply chains"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "World News: Russia's missile and drone strikes kill eight in Ukraine",
-   "url": "https://www.gdnonline.com/Details/1413463/Russia%E2%80%99s-missile-and-drone-strikes-kill-eight-in-Ukraine",
-   "publisher": "gdnonline.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T03:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone strikes",
-       "missile"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukraine war briefing: European leaders react with anger and alarm after Russian missiles crash in Poland",
-   "url": "https://www.theguardian.com/world/2026/nov/21/ukraine-war-briefing-european-leaders-react-with-anger-and-alarm-after-russian-missiles-crash-in-poland",
-   "publisher": "theguardian.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T03:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missiles",
-       "war"
       ]
      }
     ]
@@ -3446,7 +3260,17 @@
       ]
      }
     ]
-   }
+   },
+   "variants": [
+    {
+     "publisher": "thefrontierpost.com",
+     "publisherId": "gdelt",
+     "url": "https://thefrontierpost.com/zelensky-says-china-summit-was-very-unsuccessful-for-russia/",
+     "published": null,
+     "seenByGdelt": "2026-11-21T19:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "Xinhua Headlines: Why China-Russia-U.S. summit hailed historic for world stability, peace",
@@ -3566,6 +3390,45 @@
       "label": "Diplomacy",
       "terms": [
        "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian stuff blowing up: Ukraine strikes Russian weapons ship near Finland",
+   "url": "https://www.dailykos.com/stories/2026/11/21/800131623/community/russian-stuff-blowing-up/",
+   "publisher": "dailykos.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T16:35:00.000Z",
+   "seenByGdelt": "2026-11-21T19:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "weapons"
       ]
      }
     ]
@@ -3712,7 +3575,7 @@
     }
    },
    "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -3890,6 +3753,45 @@
    }
   },
   {
+   "title": "Trump signals push for wider Russia-Ukraine ceasefire",
+   "url": "https://www.azernews.az/region/267861.html",
+   "publisher": "azernews.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T18:53:00.000Z",
+   "seenByGdelt": "2026-11-21T20:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "ceasefire"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "After Oleshky ceasefire, Melania Trump wants more Russia-Ukraine ceasefires before Christmas; Zelenskyy reacts",
    "url": "https://timesofindia.indiatimes.com/world/us/after-oleshky-ceasefire-melania-trump-wants-more-ukraine-ceasefires-before-christmas-zelenskyy-reacts/articleshow/136061877.cms",
    "publisher": "indiatimes.com",
@@ -3923,6 +3825,123 @@
       "label": "Security",
       "terms": [
        "ceasefire"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Project Aerodynamic: How CIA Used Ukraine As A Platform For Covert War Against Russia",
+   "url": "https://www.zerohedge.com/geopolitical/project-aerodynamic-how-cia-used-ukraine-platform-covert-war-against-russia",
+   "publisher": "zerohedge.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T20:00:00.000Z",
+   "seenByGdelt": "2026-11-21T20:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Moscow Slams the Door on Kallas as Ukraine Peace Talks Negotiator",
+   "url": "https://www.latintimes.com/russia-rejects-kaja-kallas-eu-envoy-ukraine-talks-601668",
+   "publisher": "latintimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T20:19:00.000Z",
+   "seenByGdelt": "2026-11-21T21:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "institution",
+     "terms": [
+      "Moscow"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "peace talks"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "China's military backing to Pak raises two-front threat for India: US report",
+   "url": "https://www.tribuneindia.com/news/india/chinas-military-backing-to-pak-raises-two-front-threat-for-india-us-report/",
+   "publisher": "tribuneindia.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T20:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
       ]
      }
     ]
@@ -4025,188 +4044,17 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Taiwanese stop-motion animation episode wins top prize in Japan",
-   "url": "https://focustaiwan.tw/culture/202611210009",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T08:19:00.000Z",
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwanese"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Cabinet says Taiwan stock plunge short-term, urges stabilization measures",
-   "url": "https://focustaiwan.tw/business/202611210010",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T08:36:00.000Z",
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
+   "variants": [
+    {
+     "publisher": "ltn.com.tw",
+     "publisherId": "gdelt",
+     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649137",
+     "published": null,
+     "seenByGdelt": "2026-11-21T19:30:00.000Z"
     }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan to provide US$20 million for Marshall Islands SME loan guarantees",
-   "url": "https://focustaiwan.tw/politics/202611210011",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T08:53:00.000Z",
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan's parties target key battlegrounds in final push before local elections",
-   "url": "https://focustaiwan.tw/politics/202611210012",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T09:34:00.000Z",
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan bans short sales of stocks in new move to calm markets",
-   "url": "https://www.moneycontrol.com/news/business/markets/taiwan-bans-short-sales-of-stocks-in-new-move-to-calm-markets-14086116.html",
-   "publisher": "moneycontrol.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T09:45:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan further tightens short-selling amid stock market volatility",
-   "url": "https://focustaiwan.tw/business/202611210013",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T09:48:00.000Z",
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "GREED & fear Report: Jefferies Chris Wood hikes India exposure for 2nd time in 3 weeks, cuts Taiwan| New Allocations",
-   "url": "https://www.livemint.com/market/stock-market-news/greed-fear-report-jefferies-chris-wood-hikes-india-exposure-for-2nd-time-in-3-weeks-cuts-taiwan-new-allocations-11795235087351.html",
-   "publisher": "livemint.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T10:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "PCO urges OFWs in Taiwan to exercise right to information",
@@ -4357,7 +4205,7 @@
     }
    },
    "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
    "relevance": {
     "score": 0,
     "tier": "other",
@@ -4641,6 +4489,61 @@
    }
   },
   {
+   "title": "Taiwan warns Canada's Carney that deeper ties with China come with risks – Capital Gazette",
+   "url": "https://www.capitalgazette.com/2026/11/21/taiwan-warns-canadas-carney-that-deeper-ties-with-china-come-with-risks/",
+   "publisher": "capitalgazette.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T17:39:00.000Z",
+   "seenByGdelt": "2026-11-21T21:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "variants": [
+    {
+     "publisher": "news4jax.com",
+     "publisherId": "gdelt",
+     "url": "https://www.news4jax.com/business/2026/11/21/taiwan-warns-canada-faces-the-china-risks-carney-has-cautioned-against/",
+     "published": "2026-11-21T17:39:00.000Z",
+     "seenByGdelt": "2026-11-21T20:45:00.000Z"
+    },
+    {
+     "publisher": "goskagit.com",
+     "publisherId": "gdelt",
+     "url": "http://www.goskagit.com/news/world/taiwan-warns-canada-s-carney-that-deeper-ties-with-china-come-with-risks/article_9bed3890-94b1-5db1-9f5b-017694179c00.html",
+     "published": "2026-11-21T20:20:00.000Z",
+     "seenByGdelt": "2026-11-21T21:00:00.000Z"
+    },
+    {
+     "publisher": "reflector.com",
+     "publisherId": "gdelt",
+     "url": "http://www.reflector.com/news/national/taiwan-warns-canada-s-carney-that-deeper-ties-with-china-come-with-risks/article_6f46042a-a20d-567d-b481-8c0d1e832d37.html",
+     "published": "2026-11-21T20:48:00.000Z",
+     "seenByGdelt": "2026-11-21T22:00:00.000Z"
+    }
+   ],
+   "variantsTotal": 3
+  },
+  {
    "title": "Taiwan warns Canada faces the China risks Carney has cautioned against",
    "url": "https://www.union-bulletin.com/news/world/taiwan-warns-canada-faces-the-china-risks-carney-has-cautioned-against/article_b7e083e6-35f0-5865-9892-93488600a806.html",
    "publisher": "union-bulletin.com",
@@ -4664,7 +4567,7 @@
     }
    },
    "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
    "relevance": {
     "score": 0,
     "tier": "other",
@@ -4902,6 +4805,168 @@
    },
    "firstSeenAt": "2026-11-21T19:13:41.230Z",
    "lastSeenAt": "2026-11-21T19:13:41.230Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 US lawmaker upbeat on Taiwan ties - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649131",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T19:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 FSC announces measures after stock market losses - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649132",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T19:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 Temperatures could drop to 11°C in low areas: CWA - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649134",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T19:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 2026 ELECTIONS: Chiang, Shen clash at second debate - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649136",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T19:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 Taiwan archers claim women's team silver at Asian Cup - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649138",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T19:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan Cautions Canada About Increasing Trade With China",
+   "url": "https://www.newser.com/story/400421/taiwan-cautions-canada-about-increasing-trade-with-china.html",
+   "publisher": "newser.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T21:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-21T22:00:35.566Z",
+   "lastSeenAt": "2026-11-21T22:00:35.566Z",
    "relevance": {
     "score": 0,
     "tier": "other",
