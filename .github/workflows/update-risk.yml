@@ -11,8 +11,8 @@ name: Update risk assessments
 #   3. Only then remove the "# " in front of the two schedule lines below and commit.
 
 on:
-  # schedule:
-  #   - cron: '41 5 * * *'
+   schedule:
+     - cron: '41 5 * * *'
   workflow_dispatch:
     inputs:
       mode:
