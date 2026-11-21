@@ -3,14 +3,14 @@
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
  "methodologyVersion": 1,
- "generatedAt": "2026-11-20T10:36:08.006Z",
- "lastSuccessAt": "2026-11-20T10:36:08.006Z",
- "checkedAt": "2026-11-20T10:36:08.006Z",
+ "generatedAt": "2026-11-21T03:15:52.992Z",
+ "lastSuccessAt": "2026-11-21T03:15:52.992Z",
+ "checkedAt": "2026-11-21T03:15:52.992Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-20T10:33:45.828Z",
-   "lastSuccessAt": "2026-11-20T10:33:45.828Z"
+   "checkedAt": "2026-11-21T03:15:43.287Z",
+   "lastSuccessAt": "2026-11-21T03:15:43.287Z"
   },
   "indicators": {
    "status": "ok",
@@ -99,7 +99,7 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
@@ -205,7 +205,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
@@ -285,7 +285,7 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
@@ -391,7 +391,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
@@ -503,7 +503,7 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
@@ -609,7 +609,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
@@ -690,7 +690,7 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
@@ -825,10 +825,10 @@
    "name": "Taiwan",
    "security": {
     "category": "security",
-    "status": "insufficient",
-    "level": null,
-    "summary": "No level: UCDP records no state-based armed conflict involving Taiwan in 2025, but the World Bank does not publish this indicator for Taiwan (The World Bank API has no country with code TWN (The provided parameter value is not valid).), and nothing from another country is substituted. The absence of a recorded conflict is not evidence of low risk.",
-    "rule": null,
+    "status": "assessed",
+    "level": "Low",
+    "summary": "UCDP records no state-based armed conflict involving Taiwan in 2025; the World Bank governance estimate for 2025 is 1.",
+    "rule": "S4: no UCDP conflict recorded; WGI estimate >= 0 -> Low",
     "facts": [
      {
       "kind": "observed",
@@ -837,6 +837,14 @@
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
+      "label": "Political stability and absence of violence/terrorism, estimate (WGI, about -2.5 to +2.5)",
+      "value": "1",
+      "year": "2025",
+      "source": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
+      "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST"
      }
     ],
     "sources": [
@@ -845,19 +853,26 @@
       "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
       "url": "https://ucdp.uu.se/downloads/",
       "licence": "CC BY 4.0 (stated on the UCDP download page)"
+     },
+     {
+      "name": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
+      "publisher": "World Bank Group",
+      "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST",
+      "licence": "World Bank Open Data terms of use (https://data.worldbank.org/summary-terms-of-use)"
      }
     ],
     "referenceDates": [
+     "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
      "Headlines are shown as reported context only and played no part in the level.",
-     "No sovereignty or status position is taken: names and country codes are used exactly as the sources give them."
+     "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). Annual. Single-year differences between countries can lie within the margin of error. The thresholds used here were chosen on the conventional scale and have not been re-checked against the revised series.",
+     "The level reflects measured violence and instability perceptions only, not interstate tension."
     ],
-    "insufficientReason": "no-evidence",
     "context": [
      {
       "headline": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",

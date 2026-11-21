@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-20T10:33:45.828Z",
- "checkedAt": "2026-11-20T10:33:45.828Z",
- "lastSuccessAt": "2026-11-20T10:33:45.828Z",
+ "generatedAt": "2026-11-21T03:15:43.287Z",
+ "checkedAt": "2026-11-21T03:15:43.287Z",
+ "lastSuccessAt": "2026-11-21T03:15:43.287Z",
  "sources": {
   "ucdp": "https://ucdp.uu.se/downloads/",
   "worldBank": "https://data.worldbank.org/"
@@ -164,92 +164,118 @@
    ],
    "TWN": []
   },
-  "fetchedAt": "2026-11-20T10:33:45.828Z",
-  "checkedAt": "2026-11-20T10:33:45.828Z"
+  "fetchedAt": "2026-11-21T03:15:43.287Z",
+  "checkedAt": "2026-11-21T03:15:43.287Z"
  },
  "wgi": {
   "USA": {
-   "status": "error",
-   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
-   "value": null,
-   "year": null,
-   "fetchedAt": null,
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "indicator": "GOV_WGI_PV.EST",
+   "status": "ok",
+   "error": null,
+   "value": -0.3020818,
+   "year": "2025",
+   "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
+   "sourceUpdated": "2026-09-25",
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "CHN": {
-   "status": "error",
-   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
-   "value": null,
-   "year": null,
-   "fetchedAt": null,
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "indicator": "GOV_WGI_PV.EST",
+   "status": "ok",
+   "error": null,
+   "value": 0.022475,
+   "year": "2025",
+   "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
+   "sourceUpdated": "2026-09-25",
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "RUS": {
-   "status": "error",
-   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
-   "value": null,
-   "year": null,
-   "fetchedAt": null,
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "indicator": "GOV_WGI_PV.EST",
+   "status": "ok",
+   "error": null,
+   "value": -0.9449586,
+   "year": "2025",
+   "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
+   "sourceUpdated": "2026-09-25",
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "UKR": {
-   "status": "error",
-   "error": "World Bank error: The indicator was not found. It may have been deleted or archived.",
-   "value": null,
-   "year": null,
-   "fetchedAt": null,
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "indicator": "GOV_WGI_PV.EST",
+   "status": "ok",
+   "error": null,
+   "value": -0.3337994,
+   "year": "2025",
+   "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
+   "sourceUpdated": "2026-09-25",
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "TWN": {
-   "status": "unsupported",
-   "error": "The World Bank API has no country with code TWN (The provided parameter value is not valid).",
-   "fetchedAt": "2026-11-20T10:33:45.828Z",
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "indicator": "GOV_WGI_PV.EST",
+   "status": "ok",
+   "error": null,
+   "value": 0.9986707,
+   "year": "2025",
+   "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
+   "sourceUpdated": "2026-09-25",
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   }
  },
  "unemployment": {
   "USA": {
+   "indicator": "SL.UEM.TOTL.ZS",
    "status": "ok",
    "error": null,
    "value": 4.198,
    "year": "2025",
+   "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-20T10:33:45.828Z",
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "CHN": {
+   "indicator": "SL.UEM.TOTL.ZS",
    "status": "ok",
    "error": null,
    "value": 4.615,
    "year": "2025",
+   "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-20T10:33:45.828Z",
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "RUS": {
+   "indicator": "SL.UEM.TOTL.ZS",
    "status": "ok",
    "error": null,
    "value": 2.133,
    "year": "2025",
+   "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-20T10:33:45.828Z",
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "UKR": {
+   "indicator": "SL.UEM.TOTL.ZS",
    "status": "ok",
    "error": null,
    "value": 9.834,
    "year": "2021",
+   "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-20T10:33:45.828Z",
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   },
   "TWN": {
+   "indicator": "SL.UEM.TOTL.ZS",
    "status": "none",
    "error": null,
    "sourceUpdated": null,
-   "fetchedAt": "2026-11-20T10:33:45.828Z",
-   "checkedAt": "2026-11-20T10:33:45.828Z"
+   "fetchedAt": "2026-11-21T03:15:43.287Z",
+   "checkedAt": "2026-11-21T03:15:43.287Z"
   }
  }
 }
