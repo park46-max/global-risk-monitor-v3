@@ -3,186 +3,186 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-21T13:14:47.139Z",
-  "lastSuccessAt": "2026-11-21T07:27:44.237Z",
+  "checkedAt": "2026-11-21T19:03:41.954Z",
+  "lastSuccessAt": "2026-11-21T19:07:50.417Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-20T13:29:25.916Z",
-      "checkedAt": "2026-11-21T13:17:34.510Z",
+      "error": null,
+      "fetchedAt": "2026-11-21T19:06:07.236Z",
+      "checkedAt": "2026-11-21T19:06:07.236Z",
       "articles": [
         {
-          "title": "After Iowa lead azide detonation , who will test the people ?",
-          "url": "https://www.bleedingheartland.com/2026/11/19/after-iowas-lead-azide-detonation-who-will-test-the-people/",
-          "domain": "bleedingheartland.com",
-          "seendate": "20261120T064500Z",
+          "title": "Iran strikes 3 tankers as it shows off missile launchers , and other Mideast news",
+          "url": "http://www.idahopress.com/ap_news/us/iran-strikes-3-tankers-as-it-shows-off-missile-launchers-and-other-mideast-news/article_d69706d0-0aa1-5a72-85d7-55f28dbbb892.html",
+          "domain": "idahopress.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "St . Louis Park , Eden Prairie teens launch global student government network",
-          "url": "https://www.hometownsource.com/sun_sailor/community/eden_prairie/st-louis-park-eden-prairie-teens-launch-global-student-government-network/article_1d1739fe-13ec-4499-8066-bfcfd603f26e.html",
-          "domain": "hometownsource.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "UN Faces Unprecedented Leadership Crisis as Security Council Fails to Agree on Guterre Successor – Sri Lanka Guardian",
-          "url": "https://slguardian.org/un-faces-unprecedented-leadership-crisis-as-security-council-fails-to-agree-on-guterres-successor/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "Japan Secures Access to Indian Missile Ranges in Major Indo - Pacific Defence Push",
-          "url": "https://slguardian.org/japan-secures-access-to-indian-missile-ranges-in-major-indo-pacific-defence-push/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "Congo Former President Turns Rebel Leader in Bid to Block Tshisekedi Third Term – Sri Lanka Guardian",
-          "url": "https://slguardian.org/congos-former-president-turns-rebel-leader-in-bid-to-block-tshisekedis-third-term/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "Iran rejects Trump bioweapons claims , warns against repeat of disproved allegations that Iraq had WMD",
-          "url": "https://tribune.com.pk/story/2641331/iran-rejects-trumps-bioweapons-claims-warns-against-repeat-of-disproved-allegations",
-          "domain": "tribune.com.pk",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Canadian Police Add Goldy Brar to Wanted List Over 2023 Winnipeg Killing ; Tops Canada Most - Wanted List",
-          "url": "https://www.rozanaspokesman.com/news/world/201126/goldy-brar-added-to-canadian-police-wanted-list-in-connection-with-202-s.html",
-          "domain": "rozanaspokesman.com",
-          "seendate": "20261120T064500Z",
+          "title": "Gold , copper , aluminium dive to at least 7 - month lows",
+          "url": "https://www.thehindu.com/business/gold-copper-aluminium-dive-to-at-least-7-month-lows/article71729065.ece",
+          "domain": "thehindu.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Trump praises meeting between Chinese and Russian presidents and discusses AI rules with China",
-          "url": "https://cphpost.dk/2026-11-20/global/trump-praises-meeting-between-chinese-and-russian-presidents-and-discusses-ai-rules-with-china/",
-          "domain": "cphpost.dk",
-          "seendate": "20261120T064500Z",
+          "title": "Voters oust some sheriffs who signed pacts to help Trump immigration enforcement efforts",
+          "url": "https://newschannel9.com/news/local/voters-oust-some-sheriffs-who-signed-pacts-to-help-trumps-immigration-enforcement-efforts",
+          "domain": "newschannel9.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Denmark"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Pentagon standoff , copyright lawsuit to AI safety concerns : 5 controversies that have put Anthropic under scrutiny",
-          "url": "https://timesofindia.indiatimes.com/business/international-business/pentagon-standoff-copyright-lawsuit-to-ai-safety-concerns-5-controversies-that-have-put-anthropic-under-scrutiny/articleshow/136014920.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261120T064500Z",
+          "title": "KXCO Model Books Are Three for Three on FDA Decisions , by Shayne Heffernan",
+          "url": "https://www.livetradingnews.com/kxcos-model-books-are-three-for-three-on-fda-decisions",
+          "domain": "livetradingnews.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Princeton Ph . D . student Eva Yi Xie detained by ICE",
+          "url": "https://abc7ny.com/post/princeton-phd-student-eva-yi-xie-detained-ice/20063301/",
+          "domain": "abc7ny.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Killer robots : U . N . talks fall short of hopes for legally binding rules",
+          "url": "https://www.northcountrypublicradio.org/news/npr/nx-s1-6047916/killer-robots-u-n-talks-fall-short-of-hopes-for-legally-binding-rules",
+          "domain": "northcountrypublicradio.org",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "US denies Iranian account that missile damaged F - 16 over Gulf",
+          "url": "https://cyprus-mail.com/2026/11/21/us-denies-iranian-account-that-missile-damaged-f-16-over-gulf",
+          "domain": "cyprus-mail.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "Cyprus"
+        },
+        {
+          "title": "Bitcoin price crash : ​Falls to lowest level in two years - What behind plunge of world largest cryptocurrency",
+          "url": "https://www.livemint.com/market/cryptocurrency/bitcoin-price-crash-falls-to-lowest-level-in-two-years-what-s-behind-plunge-of-world-s-largest-cryptocurrency-11795267687216.html",
+          "domain": "livemint.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Pak fan boy : BJP hits out at Rahul Gandhi for describing India as side player in global affairs",
-          "url": "https://www.hindustantimes.com/india-news/pak-fan-boy-bjp-hits-out-at-rahul-gandhi-for-describing-india-as-side-player-in-global-affairs-101795151909138.html",
-          "domain": "hindustantimes.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Greenland Defence Pact Opens a New Chapter in the Arctic Power Struggle – Sri Lanka Guardian",
-          "url": "https://slguardian.org/greenlands-defence-pact-opens-a-new-chapter-in-the-arctic-power-struggle/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://knst.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "knst.iheart.com",
-          "seendate": "20261120T064500Z",
+          "title": "Being a prepper once came with a stigma . Recent outages are turning skeptics into believers",
+          "url": "https://www.wglt.org/2026-11-20/being-a-prepper-once-came-with-a-stigma-recent-outages-are-turning-skeptics-into-believers",
+          "domain": "wglt.org",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "US Tech outages singes Trump administration , Kirsten Davies appointed new Cyber Director",
-          "url": "http://www.caribbeanherald.com/news/279444286/us-tech-outages-singes-trump-administration-kirsten-davies-appointed-new-cyber-director",
-          "domain": "caribbeanherald.com",
-          "seendate": "20261120T064500Z",
+          "title": "Mexico detains top cartel boss El Chapo Isidro , one of FBI 10 most wanted fugitives",
+          "url": "http://www.idahopress.com/news/world/mexico-detains-top-cartel-boss-el-chapo-isidro-one-of-fbis-10-most-wanted-fugitives/article_d6338143-d6c7-5f3b-9a54-e1590ffb3ade.html",
+          "domain": "idahopress.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "China bars Bloomberg reporter from trilateral meeting after she shouted question at earlier event - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/nov/19/china-bars-bloomberg-reporter-from-trilateral-meet/",
-          "domain": "lasvegassun.com",
-          "seendate": "20261120T064500Z",
+          "title": "Nations agree to extend talks on AI killer robots but no firm commitment to rein them in",
+          "url": "http://www.rockymounttelegram.com/news/world/nations-agree-to-extend-talks-on-ai-killer-robots-but-no-firm-commitment-to-rein/article_9e134606-6514-5d0c-b98c-4919624b4921.html",
+          "domain": "rockymounttelegram.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Fairford accused due in court on National Security Act charges",
-          "url": "https://www.elystandard.co.uk/news/national/26746811.fairford-accused-due-court-national-security-act-charges/",
-          "domain": "elystandard.co.uk",
-          "seendate": "20261120T064500Z",
+          "title": "Top Apple - related stories for the week of November 16 - 20",
+          "url": "https://www.mactech.com/2026/11/21/top-apple-related-stories-for-the-week-of-november-16-20/",
+          "domain": "mactech.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "US panel says India balances security with economic needs amid Chinese pressure , flags supply - chain trade - offs",
+          "url": "http://www.africaleader.com/news/279446850/us-panel-says-india-balances-security-with-economic-needs-amid-chinese-pressure-flags-supply-chain-trade-offs",
+          "domain": "africaleader.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "South Africa"
+        },
+        {
+          "title": "Emma Stone & Jennifer Lawrence New Movie For 57 - Year - Old Franchise Gets Exciting Writing Update",
+          "url": "https://screenrant.com/emma-stone-miss-piggy-movie-jennifer-lawrence-draft-update/",
+          "domain": "screenrant.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "The economic crisis in Black America",
+          "url": "https://www.canoncitydailyrecord.com/2026/11/21/the-economic-crisis-in-black-america/",
+          "domain": "canoncitydailyrecord.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Mexico captures top drug lord El Chapo Isidro",
+          "url": "https://cyprus-mail.com/2026/11/21/mexico-captures-top-drug-lord-el-chapo-isidro",
+          "domain": "cyprus-mail.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "Cyprus"
+        },
+        {
+          "title": "2028 Democratic primary : Is Raphael Warnock running for president ?",
+          "url": "https://www.vox.com/america-actually/511301/raphael-warnock-2028-presidential-speculation",
+          "domain": "vox.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "10 Retro Drinking Habits Younger Generations Dont Understand",
+          "url": "https://www.thedailymeal.com/2317082/retro-drinking-habits-younger-generations-dont-understand/",
+          "domain": "thedailymeal.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Young boy one of two killed in ballistic missile attack on Zelensky home city",
+          "url": "https://www.countytimes.co.uk/news/national/26750572.young-boy-one-two-killed-ballistic-missile-attack-zelenskys-home-city/",
+          "domain": "countytimes.co.uk",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Meghan Markle father ruled mentally fit to stand trial on child sexual abuse material charges",
-          "url": "https://cphpost.dk/2026-11-20/global/meghan-markles-father-ruled-mentally-fit-to-stand-trial-on-child-sexual-abuse-material-charges/",
-          "domain": "cphpost.dk",
-          "seendate": "20261120T064500Z",
+          "title": "No change : Top Canadian officials deny U . S . is restricting military co - operation",
+          "url": "https://nationalpost.com/news/canada/no-change-top-canadian-officials-deny-u-s-is-restricting-military-co-operation/",
+          "domain": "nationalpost.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Denmark"
-        },
-        {
-          "title": "Thursday Final Word",
-          "url": "https://hotair.com/ed-morrissey/2026/11/19/thursdays-final-word-n3821167",
-          "domain": "hotair.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "White House Seizes Journalist Phones on Trump Flight from China over Espionage Concerns – Sri Lanka Guardian",
-          "url": "https://slguardian.org/white-house-seizes-journalists-phones-on-trumps-flight-from-china-over-espionage-concerns/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as 200 , 000 sign petition for Huang return",
-          "url": "https://www.businesstoday.in/technology/news/story/bring-jensen-back-uber-co-founder-says-hell-show-up-to-nvidia-hq-as-200000-sign-petition-for-huangs-return-568689-2026-11-20",
-          "domain": "businesstoday.in",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Trump , Xi , Putin Hold Rare 3 - Way Talks On Nuclear Risks But Deliver No Breakthroughs",
-          "url": "https://www.oneindia.com/international/trump-xi-putin-hold-rare-3-way-talks-on-nuclear-risks-but-deliver-no-breakthroughs-8264789.html",
-          "domain": "oneindia.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "Canada"
         }
       ]
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-21T07:27:44.237Z",
-      "checkedAt": "2026-11-21T13:17:34.510Z",
+      "checkedAt": "2026-11-21T19:09:12.947Z",
       "articles": [
         {
           "title": "He a killer : Zelensky reacts to Trump calling Putin a friend",
@@ -348,171 +348,171 @@
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
-      "fetchedAt": "2026-11-20T19:19:25.627Z",
-      "checkedAt": "2026-11-21T13:17:34.510Z",
+      "status": "ok",
+      "attempted": true,
+      "error": null,
+      "fetchedAt": "2026-11-21T19:07:01.844Z",
+      "checkedAt": "2026-11-21T19:07:01.844Z",
       "articles": [
         {
-          "title": "UN Faces Unprecedented Leadership Crisis as Security Council Fails to Agree on Guterre Successor – Sri Lanka Guardian",
-          "url": "https://slguardian.org/un-faces-unprecedented-leadership-crisis-as-security-council-fails-to-agree-on-guterres-successor/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
+          "title": "Russian strikes kill child , paramedic in Zelenskyy hometown ; rescuers targeted",
+          "url": "https://nebraska.tv/news/nation-world/russian-strikes-kill-child-paramedic-zelenskyys-hometown-rescuers-targeted",
+          "domain": "nebraska.tv",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Sri Lanka"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Congo Former President Turns Rebel Leader in Bid to Block Tshisekedi Third Term – Sri Lanka Guardian",
-          "url": "https://slguardian.org/congos-former-president-turns-rebel-leader-in-bid-to-block-tshisekedis-third-term/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
+          "title": "Killer robots : U . N . talks fall short of hopes for legally binding rules",
+          "url": "https://www.northcountrypublicradio.org/news/npr/nx-s1-6047916/killer-robots-u-n-talks-fall-short-of-hopes-for-legally-binding-rules",
+          "domain": "northcountrypublicradio.org",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Sri Lanka"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Pak fan boy : BJP hits out at Rahul Gandhi for describing India as side player in global affairs",
-          "url": "https://www.hindustantimes.com/india-news/pak-fan-boy-bjp-hits-out-at-rahul-gandhi-for-describing-india-as-side-player-in-global-affairs-101795151909138.html",
-          "domain": "hindustantimes.com",
-          "seendate": "20261120T064500Z",
+          "title": "Nations agree to extend talks on AI killer robots but no firm commitment to rein them in",
+          "url": "http://www.rockymounttelegram.com/news/world/nations-agree-to-extend-talks-on-ai-killer-robots-but-no-firm-commitment-to-rein/article_9e134606-6514-5d0c-b98c-4919624b4921.html",
+          "domain": "rockymounttelegram.com",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Allies stand with Poland after airspace breach by Russia : NATO chief",
+          "url": "https://aa.com.tr/en/world/allies-stand-with-poland-after-airspace-breach-by-russia-nato-chief/4133047",
+          "domain": "aa.com.tr",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "Turkey"
+        },
+        {
+          "title": "Who is Vidhya Parshuramkar ? IIT graduate millet innovation earns her a place on TIME 100 Next India 2026 list",
+          "url": "https://www.livemint.com/news/trends/who-is-vidhya-parshuramkar-iit-graduate-s-millet-innovation-earns-her-a-place-on-time-s-100-next-india-2026-list-11795271566009.html",
+          "domain": "livemint.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Thursday Final Word",
-          "url": "https://hotair.com/ed-morrissey/2026/11/19/thursdays-final-word-n3821167",
-          "domain": "hotair.com",
-          "seendate": "20261120T064500Z",
+          "title": "Colin Powell Chief of Staff : CIA Does Covert Operations In Accordance With What Pays The Most , Ukraine A Cash Cow",
+          "url": "http://www.zerohedge.com/geopolitical/colin-powells-chief-staff-cia-does-covert-operations-accordance-what-pays-most-ukraine",
+          "domain": "zerohedge.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "PM Wong and Xi reaffirm Singapore - China ties",
-          "url": "https://www.straitstimes.com/asia/east-asia/pm-wong-xi-reaffirm-close-singapore-china-ties-amid-growing-global-tensions",
-          "domain": "straitstimes.com",
-          "seendate": "20261120T064500Z",
+          "title": "Wes Streeting compares Volodymyr Zelensky to Winston Churchill and slams cold - blooded Putin",
+          "url": "https://www.mirror.co.uk/news/politics/wes-streeting-zelensky-churchill-putin-37901865",
+          "domain": "mirror.co.uk",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Singapore"
+          "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Xi lauds PM for full turnaround in China relationship",
-          "url": "https://www.juneesoutherncross.com.au/story/9395015/xi-lauds-pm-for-full-turnaround-in-china-relationship/",
-          "domain": "juneesoutherncross.com.au",
-          "seendate": "20261120T064500Z",
+          "title": "Russian missiles land in Poland ; NATO scrambles aircraft",
+          "url": "https://www.israelnationalnews.com/flashes/698095",
+          "domain": "israelnationalnews.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Australia"
+          "sourcecountry": "Israel"
         },
         {
-          "title": "5 Perfect Steven Universe Episodes That Define the Whole Show , Including the One That Cancelled It",
-          "url": "https://comicbook.com/tv-shows/list/5-perfect-steven-universe-episodes-that-define-the-whole-show-including-the-one-that-cancelled-it/",
-          "domain": "comicbook.com",
-          "seendate": "20261120T064500Z",
+          "title": "Young boy one of two killed in ballistic missile attack on Zelensky home city",
+          "url": "https://www.countytimes.co.uk/news/national/26750572.young-boy-one-two-killed-ballistic-missile-attack-zelenskys-home-city/",
+          "domain": "countytimes.co.uk",
+          "seendate": "20261121T163000Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "NYT Reporter Gets Taken to the Cleaners by American Military Tech Executive Over Trump and Ukraine",
+          "url": "https://townhall.com/news/mattvespa/2026/11/21/nyt-reporter-gets-taken-to-the-cleaners-by-american-military-tech-executive-n2686849",
+          "domain": "townhall.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Trump , Xi , Putin Hold Rare 3 - Way Talks On Nuclear Risks But Deliver No Breakthroughs",
-          "url": "https://www.oneindia.com/international/trump-xi-putin-hold-rare-3-way-talks-on-nuclear-risks-but-deliver-no-breakthroughs-8264789.html",
-          "domain": "oneindia.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "ARTHUR CYR : Movement and perhaps progress on Ukraine",
-          "url": "https://www.jacksonprogress-argus.com/opinion/arthur-cyr-movement-and-perhaps-progress-on-ukraine/article_bdf11a45-0b53-5f8f-9c26-6eb5ce4a7219.html",
-          "domain": "jacksonprogress-argus.com",
-          "seendate": "20261120T064500Z",
+          "title": "Stapilus : Looks like vouchers from here",
+          "url": "http://www.idahopress.com/opinion/columnists/stapilus-looks-like-vouchers-from-here/article_14399153-c736-4075-b827-1aeeb3b029a6.html",
+          "domain": "idahopress.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Editor Choice : Xi , Trump and Putin grand diplomatic theater leaves Asia on the sidelines",
-          "url": "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-xi-trump-and-putin-s-grand-diplomatic-theater-leaves-asia-on-the-sidelines",
-          "domain": "asia.nikkei.com",
-          "seendate": "20261120T064500Z",
+          "title": "Ukraine Strikes Commercial Vessel In Gulf Of Finland In War First",
+          "url": "http://www.zerohedge.com/geopolitical/ukraine-strikes-commercial-vessel-gulf-finland-war-first",
+          "domain": "zerohedge.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Japan"
+          "sourcecountry": "United States"
         },
         {
-          "title": "PM Wong meets Chinese President Xi Jinping , congratulates him on hosting APEC and historic US - Russia summit",
-          "url": "https://www.asiaone.com:443/singapore/xi-jinping-lawrence-wong-meeting",
-          "domain": "asiaone.com",
-          "seendate": "20261120T064500Z",
+          "title": "Defence Secretary meets President Zelensky and Minister Khmara in Kyiv as united kingdom deepens industrial support for Ukraine",
+          "url": "https://cedarnews.net/newstasks/1175949/defence-secretary-meets-president-zelensky-minister-khmara/",
+          "domain": "cedarnews.net",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Singapore"
+          "sourcecountry": "Lebanon"
         },
         {
-          "title": "Russia attacks bridges in Ukraine Kyiv , three killed",
-          "url": "https://www.centralwesterndaily.com.au/story/9395009/russia-attacks-bridges-in-ukraines-kyiv-three-killed/",
-          "domain": "centralwesterndaily.com.au",
-          "seendate": "20261120T064500Z",
+          "title": "Gold Hits 14 - Month Low",
+          "url": "https://www.theepochtimes.com/business/gold-hits-14-month-low-6127794",
+          "domain": "theepochtimes.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Australia"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Indonesia asks Google to clarify removal of 19 , 000 YouTube channels , ministry says",
-          "url": "https://www.straitstimes.com/asia/se-asia/indonesia-asks-google-to-clarify-removal-of-19000-youtube-channels-ministry-says",
-          "domain": "straitstimes.com",
-          "seendate": "20261120T064500Z",
+          "title": "Rickards : Hard Truths On Iran And Ukraine",
+          "url": "http://www.zerohedge.com/geopolitical/rickards-hard-truths-iran-and-ukraine",
+          "domain": "zerohedge.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Singapore"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Denmark approves security deal with US and Greenland , seeking to finally ease tensions with Trump",
-          "url": "https://www.asiaone.com:443/world/denmark-approves-security-deal-us-and-greenland-seeking-finally-ease-tensions-trump",
-          "domain": "asiaone.com",
-          "seendate": "20261120T064500Z",
+          "title": "Russia grasps US offer on European security to revive old demands",
+          "url": "https://www.wboc.com/news/international/russia-grasps-us-offer-on-european-security-to-revive-old-demands/article_f9d4ee81-a153-5170-941b-6a4f977019f7.html",
+          "domain": "wboc.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Singapore"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Trump , Xi and Putin Agree to Boost Global Energy Supplies",
-          "url": "https://energybangla.com/trump-xi-and-putin-agree-to-boost-global-energy-supplies/",
-          "domain": "energybangla.com",
-          "seendate": "20261120T064500Z",
+          "title": "Alcaraz digs deep to beat Shelton and reach ATP Finals showpiece",
+          "url": "https://cyprus-mail.com/2026/11/21/alcaraz-digs-deep-to-beat-shelton-and-reach-atp-finals-showpiece",
+          "domain": "cyprus-mail.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Bangladesh"
+          "sourcecountry": "Cyprus"
         },
         {
-          "title": "Ukraine destruction of Crimean Bridge delivered major hit to Putin influence and Russia war effort",
-          "url": "https://www.abc.net.au/news/2026-11-20/ukraine-crimean-bridge-destruction-significance-explained/107408488",
-          "domain": "abc.net.au",
-          "seendate": "20261120T064500Z",
+          "title": "Estonia - Russia border closure sends residents rushing to cross before deadline",
+          "url": "https://www.euronews.com/2026/11/21/estonia-russia-border-closure-sends-residents-rushing-to-cross-before-deadline",
+          "domain": "euronews.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Australia"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Britain , EU set to agree to reset but divisions persist",
-          "url": "https://www.centralwesterndaily.com.au/story/9395590/britain-eu-set-to-agree-to-reset-but-divisions-persist/",
-          "domain": "centralwesterndaily.com.au",
-          "seendate": "20261120T064500Z",
+          "title": "Build It Here : Trump Threatens Tax on Companies That Put Data Centers Overseas | Business & Energy",
+          "url": "https://www.citynewsokc.com/business/build-it-here-trump-threatens-tax-on-companies-that-put-data-centers-overseas/article_5fe48a73-5d0c-402b-b47c-a1cf9d2162ad.html",
+          "domain": "citynewsokc.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Australia"
+          "sourcecountry": null
         },
         {
-          "title": "Oil prices gain as Houthi attacks on Riyadh raise supply concerns",
-          "url": "https://tribune.com.pk/story/2641333/oil-prices-gain-as-houthi-attacks-on-riyadh-raise-supply-concerns",
-          "domain": "tribune.com.pk",
-          "seendate": "20261120T064500Z",
+          "title": "Antimon : Antimony : Two Gold Projects Put the Semimetal in the Spotlight",
+          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70195567-antimon-antimony-two-gold-projects-put-the-semimetal-in-the-spotlight-413.htm",
+          "domain": "finanznachrichten.de",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Russia Takeover of Japanese Tobacco Assets Triggers $8 . 9 Billion Loss for Japan Tobacco – Sri Lanka Guardian",
-          "url": "https://slguardian.org/russias-takeover-of-japanese-tobacco-assets-triggers-8-9-billion-loss-for-japan-tobacco/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "APEC live : How events in Shenzhen unfolded",
-          "url": "https://asia.nikkei.com/politics/international-relations/apec/apec-live-how-events-in-shenzhen-unfolded",
-          "domain": "asia.nikkei.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Japan"
+          "sourcecountry": "Germany"
         }
       ]
     },
@@ -522,176 +522,176 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": null,
-      "checkedAt": "2026-11-21T13:16:04.491Z",
+      "checkedAt": "2026-11-21T19:05:12.926Z",
       "articles": []
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
-      "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
-      "fetchedAt": "2026-11-20T19:21:29.712Z",
-      "checkedAt": "2026-11-21T13:17:34.510Z",
+      "status": "ok",
+      "attempted": true,
+      "error": null,
+      "fetchedAt": "2026-11-21T19:07:50.417Z",
+      "checkedAt": "2026-11-21T19:07:50.417Z",
       "articles": [
         {
-          "title": "Asian shares head for worst week since 2020 as AI rout deepens",
-          "url": "https://www.asiaone.com:443/money/asian-shares-head-worst-week-2020-ai-rout-deepens",
-          "domain": "asiaone.com",
-          "seendate": "20261120T064500Z",
+          "title": "Taiwan flags improper treatment by China during APEC meetings",
+          "url": "http://www.asiabulletin.com/news/279447110/taiwan-flags-improper-treatment-by-china-during-apec-meetings",
+          "domain": "asiabulletin.com",
+          "seendate": "20261121T163000Z",
           "language": "English",
-          "sourcecountry": "Singapore"
+          "sourcecountry": "China"
         },
         {
-          "title": "Japan Secures Access to Indian Missile Ranges in Major Indo - Pacific Defence Push",
-          "url": "https://slguardian.org/japan-secures-access-to-indian-missile-ranges-in-major-indo-pacific-defence-push/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "Trump , Xi , Putin Hold Rare 3 - Way Talks On Nuclear Risks But Deliver No Breakthroughs",
-          "url": "https://www.oneindia.com/international/trump-xi-putin-hold-rare-3-way-talks-on-nuclear-risks-but-deliver-no-breakthroughs-8264789.html",
-          "domain": "oneindia.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Nifty , Sensex open lower as sell - off in AI weighs on sentiment , Gold down to lowest level of 2026",
-          "url": "http://www.milwaukeesun.com/news/279444425/nifty-sensex-open-lower-as-sell-off-in-ai-weighs-on-sentiment-gold-down-to-lowest-level-of-2026",
-          "domain": "milwaukeesun.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Editor Choice : Xi , Trump and Putin grand diplomatic theater leaves Asia on the sidelines",
-          "url": "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-xi-trump-and-putin-s-grand-diplomatic-theater-leaves-asia-on-the-sidelines",
-          "domain": "asia.nikkei.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Japan"
-        },
-        {
-          "title": "Takaichi Signals Dialogue with China After First Direct Encounters with Xi Amid Diplomatic Tensions",
-          "url": "https://slguardian.org/takaichi-signals-dialogue-with-china-after-first-direct-encounters-with-xi-amid-diplomatic-tensions/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "Chip supply chain warns of broader disruption from new US export controls",
-          "url": "https://asia.nikkei.com/business/tech/semiconductors/chip-supply-chain-warns-of-broader-disruption-from-new-us-export-controls",
-          "domain": "asia.nikkei.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Japan"
-        },
-        {
-          "title": "TSMC tightens China AI chip curbs | The Straits Times",
-          "url": "https://www.straitstimes.com/asia/east-asia/tsmc-tightens-china-ai-chip-curbs-as-new-us-rules-close-manufacturing-loophole-sources-say",
-          "domain": "straitstimes.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Singapore"
-        },
-        {
-          "title": "Anthropic makes a $1 . 8 trillion debut : What investors should watch next",
-          "url": "https://www.business-standard.com/world-news/anthropic-ipo-stock-market-debut-valuation-investors-what-to-watch-next-126112000351_1.html",
+          "title": "Ashok Leyland to set up truck plant in Singur , work to begin soon : Minister",
+          "url": "https://www.business-standard.com/companies/news/ashok-leyland-to-set-up-truck-plant-in-singur-work-to-begin-soon-minister-126112100594_1.html",
           "domain": "business-standard.com",
-          "seendate": "20261120T064500Z",
+          "seendate": "20261121T133000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "APEC live : How events in Shenzhen unfolded",
-          "url": "https://asia.nikkei.com/politics/international-relations/apec/apec-live-how-events-in-shenzhen-unfolded",
-          "domain": "asia.nikkei.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Japan"
-        },
-        {
-          "title": "TSMC tightens China AI chip curbs as new US rules close manufacturing loophole , sources say",
-          "url": "https://www.asiaone.com:443/money/tsmc-tightens-china-ai-chip-curbs-new-us-rules-close-manufacturing-loophole-sources-say",
-          "domain": "asiaone.com",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Singapore"
-        },
-        {
-          "title": "After Jensen , Nvidia China Scandal Just Reached Its Former No . 3",
-          "url": "http://www.zerohedge.com/political/after-jensen-nvidias-china-scandal-just-reached-its-former-no-3",
-          "domain": "zerohedge.com",
-          "seendate": "20261120T064500Z",
+          "title": "Shenzhen Summit Puts Limits of China – Russia Partnership in Focus",
+          "url": "https://www.theepochtimes.com/china/shenzhen-summit-puts-limits-of-china-russia-partnership-in-focus-6127510",
+          "domain": "theepochtimes.com",
+          "seendate": "20261121T133000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "TSMC invests USD 500 million in Anthropic , acquires 0 . 03 % stake at IPO price",
-          "url": "http://www.milwaukeesun.com/news/279444372/tsmc-invests-usd-500-million-in-anthropic-acquires-003-stake-at-ipo-price",
-          "domain": "milwaukeesun.com",
-          "seendate": "20261120T064500Z",
+          "title": "If AI Chips Become Commoditized , Nvidia Has the Most to Lose , While These 3 Stocks Are Set to Gain",
+          "url": "https://www.aol.com/articles/ai-chips-become-commoditized-nvidia-113502000.html",
+          "domain": "aol.com",
+          "seendate": "20261121T133000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "SoftBank Leads Asian Technology Sell - off as Anthropic Debut Fuels AI Investment Concerns",
-          "url": "https://slguardian.org/softbank-leads-asian-technology-sell-off-as-anthropic-debut-fuels-ai-investment-concerns/",
-          "domain": "slguardian.org",
-          "seendate": "20261120T064500Z",
-          "language": "English",
-          "sourcecountry": "Sri Lanka"
-        },
-        {
-          "title": "Asian stocks head for worst week since 2020 as AI rally loses steam",
-          "url": "https://www.business-standard.com/markets/news/asian-stocks-head-for-worst-week-since-2020-as-ai-rally-loses-steam-126112000154_1.html",
-          "domain": "business-standard.com",
-          "seendate": "20261120T063000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "TCS , Infosys , HCL Technologies , Tech Mahindra : IT stocks gain amid global AI theme selloff",
-          "url": "https://www.businesstoday.in/markets/stocks/story/tcs-infosys-hcl-technologies-tech-mahindra-it-stocks-gain-amid-global-ai-theme-selloff-568663-2026-11-20",
-          "domain": "businesstoday.in",
-          "seendate": "20261120T061500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "BT Opening Bell : Sensex , Nifty open lower amid bloodbath in global markets",
-          "url": "https://www.businesstoday.in/markets/stocks/story/bt-opening-bell-sensex-nifty-open-lower-amid-bloodbath-in-global-markets-568659-2026-11-20",
-          "domain": "businesstoday.in",
-          "seendate": "20261120T061500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "From Apple to Anthropic : World 10 most valuable companies after blockbuster IPO",
-          "url": "https://timesofindia.indiatimes.com/business/from-apple-to-anthropic-worlds-10-most-valuable-companies-after-blockbuster-ipo/articleshow/136014713.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261120T061500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Sensex and Nifty Decline Amid Profit - Taking and Weak Global Trends",
-          "url": "https://dailypioneer.com/business/stock-markets-fall-in-early-trade-amid-profit-taking-weak-global-trends",
-          "domain": "dailypioneer.com",
-          "seendate": "20261120T054500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Trump , Xi And Putin Pledge Nuclear Risk Talks At First Three - Way Summit",
-          "url": "https://www.worthynews.com/119214-trump-xi-and-putin-pledge-nuclear-risk-talks-at-first-three-way-summit",
-          "domain": "worthynews.com",
-          "seendate": "20261120T054500Z",
+          "title": "Presidential hopeful wants Guatemala to become the Israel of Latin America",
+          "url": "http://www.jpost.com/international/article-915535",
+          "domain": "jpost.com",
+          "seendate": "20261121T133000Z",
           "language": "English",
           "sourcecountry": "Israel"
+        },
+        {
+          "title": "As Trump basks in summit pomp , China Xi strengthens his hand",
+          "url": "https://tribune.com.pk/story/2641527/as-trump-basks-in-summit-pomp-chinas-xi-strengthens-his-hand",
+          "domain": "tribune.com.pk",
+          "seendate": "20261121T123000Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Carney keeps an insane pace in his quest for a saner world",
+          "url": "https://www.stcatharinesstandard.ca/politics/federal/mark-carney-keeps-an-insane-pace-in-his-quest-for-a-saner-world/article_7767477b-1f76-54cf-94e0-d3f95548fac0.html",
+          "domain": "stcatharinesstandard.ca",
+          "seendate": "20261121T123000Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Nvidia stock crash : Record market cap wipeout deepens global tech sell - off ; shares plunge 14 %, Alphabet overtakes chipmaker",
+          "url": "https://www.ibtimes.co.in/nvidia-stock-crash-record-market-cap-wipeout-deepens-global-tech-sell-off-shares-plunge-14-908552",
+          "domain": "ibtimes.co.in",
+          "seendate": "20261121T123000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Why Korean occult films are casting a spell on audiences in Vietnam and Indonesia",
+          "url": "https://www.koreatimes.co.kr/entertainment/films/20261121/why-korean-occult-films-are-casting-a-spell-on-audiences-in-vietnam-and-indonesia",
+          "domain": "koreatimes.co.kr",
+          "seendate": "20261121T113000Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "TSMC reportedly tightens China AI chip curbs as new US rules close manufacturing loophole",
+          "url": "https://www.businesstimes.com.sg/international/global/tsmc-reportedly-tightens-china-ai-chip-curbs-new-us-rules-close-manufacturing-loophole",
+          "domain": "businesstimes.com.sg",
+          "seendate": "20261121T113000Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "AI sell - off batters Wall Street ; S & P 500 enters correction , Nasdaq turns negative for year",
+          "url": "https://timesofindia.indiatimes.com/business/international-business/ai-sell-off-batters-wall-street-sp-500-enters-correction-nasdaq-turns-negative-for-year/articleshow/136041935.cms",
+          "domain": "timesofindia.indiatimes.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Dow Jones plunges 950 points , Nasdaq loses more than 5 percent",
+          "url": "http://www.sandiegosun.com/news/279446207/dow-jones-plunges-950-points-nasdaq-loses-more-than-5-percent",
+          "domain": "sandiegosun.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Trump , Xi , Putin Declaration Omits Ukraine ; Moscow Rejects NATO - Style Guarantee",
+          "url": "https://www.hngn.com/articles/273878/20261120/trump-xi-putin-issue-peace-declaration-that-omits-ukraine.htm",
+          "domain": "hngn.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "The Kitchen Master owner takes his cooking up a notch with a new restaurant called Wabi Sabi",
+          "url": "https://www.atlantamagazine.com/dining-news/the-kitchen-master-owner-takes-his-cooking-up-a-notch-with-a-new-restaurant-called-wabi-sabi/",
+          "domain": "atlantamagazine.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Would like Jensen to be given second chance : Trump backs embattled former Nvidia CEO",
+          "url": "http://www.taiwansun.com/news/279446209/would-like-jensen-to-be-given-second-chance-trump-backs-embattled-former-nvidia-ceo",
+          "domain": "taiwansun.com",
+          "seendate": "20261121T003000Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "Horror end to week on Wall Street , Nasdaq plunges 1 , 261 points",
+          "url": "http://www.bignewsnetwork.com/news/279446207/horror-end-to-week-on-wall-street-nasdaq-plunges-1-261-points",
+          "domain": "bignewsnetwork.com",
+          "seendate": "20261120T214500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Shenzhen Hypocritical Nonsense , War Escalation in Ukraine and Asia",
+          "url": "https://www.greanvillepost.com/shenzhen-hypocritical-nonsense-war-escalation-in-ukraine-and-asia/",
+          "domain": "greanvillepost.com",
+          "seendate": "20261120T214500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Infineon Technologies ( IFNNY ) Stock Price , News & Analysis",
+          "url": "https://247wallst.com/companies/ifnny/",
+          "domain": "247wallst.com",
+          "seendate": "20261120T214500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Anthropic plunges as Wall Street suffers AI sell - off",
+          "url": "https://www.aol.com/articles/anthropic-plunges-wall-street-suffers-210718000.html",
+          "domain": "aol.com",
+          "seendate": "20261120T214500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "WorldGym Q3 Income Rises",
+          "url": "https://www.rttnews.com/3716902/worldgym-q3-income-rises.aspx",
+          "domain": "rttnews.com",
+          "seendate": "20261120T214500Z",
+          "language": "English",
+          "sourcecountry": "United States"
         }
       ]
     }
