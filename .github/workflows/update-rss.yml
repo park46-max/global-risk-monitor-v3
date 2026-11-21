@@ -5,15 +5,14 @@ name: Update RSS news
 # A failure in one source here never stops the other: both steps run, both caches are committed, and the run only turns red
 # when EVERY source that was tried failed.
 #
-# THE SCHEDULE IS OFF ON PURPOSE. Do these steps first (details in the README):
-#   1. Run this workflow by hand with mode = verify. It requests each source once and writes nothing.
-#   2. Read the results and each source's terms, then edit data/rss-sources.mjs for the RSS sources you accept.
-#   3. Run it by hand with mode = fetch and check that it worked.
-#   4. Only then remove the "# " in front of the two schedule lines below and commit.
+# SCHEDULE: every 3 hours (cron '23 */3 * * *', UTC). A scheduled run is exactly "mode = fetch, sources = all": see MODE and SOURCES below.
+# Publisher RSS stays OFF: every publisher in data/rss-sources.mjs is enabled:false, so the RSS step ends with exit code 3 ("nothing enabled")
+# and is reported as a warning. This workflow never enables a publisher; that is only done by editing data/rss-sources.mjs after reading the terms.
+# By hand (Actions, Run workflow): mode = verify checks the sources and writes nothing, mode = fetch updates the caches.
 
 on:
-  # schedule:
-  #   - cron: '23 */3 * * *'
+  schedule:
+    - cron: '23 */3 * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -45,6 +44,11 @@ jobs:
   news:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    # On a scheduled run github.event.inputs is empty, so these fall back to the scheduled behaviour. Every step below reads MODE and SOURCES
+    # (never github.event.inputs directly), so a manual run and a scheduled run go through exactly the same conditions.
+    env:
+      MODE: ${{ github.event.inputs.mode || 'fetch' }}
+      SOURCES: ${{ github.event.inputs.sources || 'all' }}
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
@@ -57,24 +61,25 @@ jobs:
       # Exit code 3 means "no RSS source is enabled yet": that is a warning, not a failure.
       - name: Official and publisher RSS feeds
         id: rss
-        if: ${{ github.event.inputs.sources != 'gdelt-files' && github.event.inputs.sources != 'briefs' }}
+        if: ${{ env.SOURCES == 'all' || env.SOURCES == 'rss' }}
         continue-on-error: true
         timeout-minutes: 10
         run: |
           code=0
-          node scripts/fetch-rss.mjs --${{ github.event.inputs.mode || 'fetch' }} || code=$?
+          node scripts/fetch-rss.mjs --"$MODE" || code=$?
           if [ "$code" = "3" ]; then
             echo "::warning::No RSS source is enabled yet (or none has feed addresses), so RSS was skipped. See the README."
+            echo "disabled=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           exit $code
 
       - name: GDELT open data files
         id: gk
-        if: ${{ github.event.inputs.sources != 'rss' && github.event.inputs.sources != 'briefs' }}
+        if: ${{ env.SOURCES == 'all' || env.SOURCES == 'gdelt-files' }}
         continue-on-error: true
         timeout-minutes: 12
-        run: node scripts/fetch-gdelt-files.mjs --${{ github.event.inputs.mode || 'fetch' }}
+        run: node scripts/fetch-gdelt-files.mjs --"$MODE"
 
       # Country briefs are rebuilt from whatever news caches exist (also when a source above failed, because the earlier cached news is still valid input).
       # Rule-based, no network, no AI. If it fails, the previous briefs.json is kept and marked stale. A failure here is a warning, not a failed run.
@@ -84,13 +89,13 @@ jobs:
         timeout-minutes: 3
         run: |
           code=0
-          node scripts/build-briefs.mjs --${{ github.event.inputs.mode || 'fetch' }} || code=$?
+          node scripts/build-briefs.mjs --"$MODE" || code=$?
           if [ "$code" != "0" ]; then echo "::warning::Country briefs were not updated (see the log). Any earlier briefs.json is kept and shown as stale."; fi
           exit 0
 
       - name: Commit changed cache files
         id: commit
-        if: ${{ github.event.inputs.mode != 'verify' }}
+        if: ${{ env.MODE != 'verify' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -116,8 +121,13 @@ jobs:
         continue-on-error: true
         run: GH_TOKEN="${{ github.token }}" gh api --method POST "/repos/${{ github.repository }}/pages/builds"
 
-      - name: Fail the run only if every source failed
-        if: ${{ steps.rss.outcome == 'failure' && steps.gk.outcome == 'failure' || steps.rss.outcome == 'failure' && steps.gk.outcome == 'skipped' || steps.rss.outcome == 'skipped' && steps.gk.outcome == 'failure' }}
+      # "Tried" means actually run: an RSS step that ended with exit code 3 (nothing enabled) counts as NOT tried (steps.rss.outputs.disabled).
+      # So with RSS switched off, a GDELT failure turns the run red; a green run therefore never hides a failed GDELT update.
+# "!cancelled() &&" is a status-check function, so GitHub does NOT add its implicit success(): this step still runs when an earlier step
+# (for example the commit step) has failed, but not when the run was cancelled by hand. The fetch steps use continue-on-error, so their failures
+# do not fail the job by themselves; that is why this step is needed to turn a failed GDELT fetch into a red run.
+      - name: Fail the run only if every source that was tried failed
+        if: ${{ !cancelled() && ((steps.gk.outcome == 'failure' && (steps.rss.outcome != 'success' || steps.rss.outputs.disabled == 'true')) || (steps.rss.outcome == 'failure' && steps.gk.outcome == 'skipped')) }}
         run: |
           echo "Every source that was tried failed. Cached data was kept and marked with the error. See the step logs and the run summary."
           exit 1
