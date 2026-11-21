@@ -91,7 +91,7 @@ export function classifySecurity(id, inputs, R, now, briefs) {
   if (top) return mk({ ...out, status: 'assessed', level: top, rule: top === 'Critical' ? 'S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical' : top === 'High' ? 'S2: location or primary party in a UCDP conflict of intensity 1 (minor) in the newest dataset year -> High' : 'S3: appears only as a supporting party in a UCDP conflict in the newest dataset year -> Moderate',
     summary: `${name} is recorded in UCDP/PRIO ${ver} as ${top === 'Moderate' ? 'a supporting party in' : 'the location of or a primary party in'} ${list.length} state-based armed ${list.length === 1 ? 'conflict' : 'conflicts'} in ${u.latestYear}.` });
   // no involvement recorded: the World Bank governance indicator decides, if there is a recent value
-  const wOk = w && (w.status === 'ok' || w.status === 'error') && fin(w.value) && /^\d{4}$/.test(String(w.year)) && Number(w.year) >= nowYear - S.wgiMaxAgeYears;
+  const wOk = w && (w.status === 'ok' || w.status === 'error') && w.indicator === W.code && fin(w.value) && /^\d{4}$/.test(String(w.year)) && Number(w.year) >= nowYear - S.wgiMaxAgeYears;
   if (!wOk) {
     const why = w && w.status === 'unsupported' ? `the World Bank does not publish this indicator for ${name} (${w.error || 'no data for this country code'}), and nothing from another country is substituted` : w && w.value != null ? `the World Bank value for ${w.year} is older than ${S.wgiMaxAgeYears} years` : 'no World Bank governance value is available';
     return mk({ ...out, status: 'insufficient', reason: w && w.status === 'unsupported' ? 'no-evidence' : w ? 'no-evidence' : 'inputs-unavailable',

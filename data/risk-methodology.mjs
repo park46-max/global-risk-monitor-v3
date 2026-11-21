@@ -33,9 +33,12 @@ export const RISK = {
       maxDatasetAgeYears: 2         // if the newest year in the file is older than (this year - 2), no level is given
     },
     wgi: {
-      name: 'Worldwide Governance Indicators: Political Stability and Absence of Violence/Terrorism, estimate (PV.EST)', publisher: 'World Bank (Kaufmann and Kraay)',
-      url: 'https://data.worldbank.org/indicator/PV.EST', host: 'api.worldbank.org', code: 'PV.EST', licence: 'World Bank Open Data, CC BY 4.0',
-      note: 'A composite of perception-based surveys. Roughly -2.5 (weak) to +2.5 (strong). Annual, released about September. Single-year differences between countries can lie within the margin of error.'
+      // The old code PV.EST was retired by the World Bank when the WGI 2025 revision (revised methodology) was published; the API now answers
+      // "The indicator was not found" for it. The series is published as GOV_WGI_PV.EST (World Bank data portal page and its own API download links, read 2026-11-21).
+      // The legacy code is deliberately NOT used as a fallback: its values follow the old methodology and must never be mixed with the revised series.
+      name: 'Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST', publisher: 'World Bank Group',
+      url: 'https://data.worldbank.org/indicator/GOV_WGI_PV.EST', host: 'api.worldbank.org', code: 'GOV_WGI_PV.EST', licence: 'World Bank Open Data terms of use (https://data.worldbank.org/summary-terms-of-use)',
+      note: 'A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). Annual. Single-year differences between countries can lie within the margin of error. The thresholds used here were chosen on the conventional scale and have not been re-checked against the revised series.'
     },
     unemployment: { name: 'Unemployment, total (% of labour force), modelled ILO estimate', publisher: 'World Bank (ILO modelled estimate)', url: 'https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS', code: 'SL.UEM.TOTL.ZS', licence: 'World Bank Open Data, CC BY 4.0' },
     growth: { name: 'GDP growth (annual %)', publisher: 'World Bank', url: 'https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG', code: 'NY.GDP.MKTP.KD.ZG', licence: 'World Bank Open Data, CC BY 4.0' },
@@ -47,7 +50,7 @@ export const RISK = {
   //   Critical  the country is the LOCATION of, or a PRIMARY PARTY (side A or side B) in, a state-based armed conflict coded intensity 2 (war: at least 1,000 battle-related deaths in that year)
   //   High      the same for intensity 1 (minor: 25 to 999 battle-related deaths)
   //   Moderate  the country appears only as a SUPPORTING party (secondary warring party) in such a conflict
-  // Step 2 (only if step 1 found no involvement, and only with a World Bank WGI value not older than wgiMaxAgeYears): the PV.EST estimate sets
+  // Step 2 (only if step 1 found no involvement, and only with a World Bank WGI value not older than wgiMaxAgeYears): the GOV_WGI_PV.EST estimate sets
   //   Low if it is at least wgiLowFrom, Moderate if at least wgiModerateFrom, otherwise High.
   // No level (Insufficient data) when: the UCDP file is unavailable or too old; or there is no involvement in step 1 AND no usable WGI value.
   //   (Absence from the UCDP file means no armed conflict of that kind was recorded. It does not show low risk, and it says nothing about interstate tension.)

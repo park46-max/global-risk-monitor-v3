@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Fetches the extra public datasets the risk assessments need and writes data/cache/risk-inputs.json. Free, key-free sources only:
 //   - UCDP/PRIO Armed Conflict Dataset (one static CSV zip from ucdp.uu.se, CC BY 4.0). The UCDP API is NOT used (it needs an emailed access token).
-//   - World Bank API (api.worldbank.org): WGI "Political Stability and Absence of Violence/Terrorism" (PV.EST) and unemployment (SL.UEM.TOTL.ZS), per country.
+//   - World Bank API (api.worldbank.org): WGI political stability estimate (GOV_WGI_PV.EST; the old code PV.EST was retired by the World Bank) and unemployment (SL.UEM.TOTL.ZS), per country.
 // Growth and inflation come from the existing indicators.json (fetched by the existing workflow), so they are not requested again.
 //   node scripts/fetch-risk-inputs.mjs --fetch      update the cache (default)
 //   node scripts/fetch-risk-inputs.mjs --verify     request everything once, show what was found, write nothing
@@ -41,27 +41,41 @@ async function wbJson(url) {
   const r = await client.request(url, { hosts: HOSTS, who: 'World Bank', accept: 'application/json', maxBytes: 2 * 1048576 }, m => say(m));
   try { return JSON.parse(r.text); } catch { throw new FetchError('World Bank sent an unreadable reply'); }
 }
+// Best-effort diagnostic when the World Bank says an indicator was not found: asks the metadata endpoint what it knows about the code. Never throws.
+const probed = new Map();
+async function probeIndicator(ind) {
+  if (!probed.has(ind)) {
+    let t;
+    try {
+      const j = await wbJson(`${WB}/indicator/${ind}?format=json`), m = wbErr(j), r = Array.isArray(j) && Array.isArray(j[1]) && j[1][0];
+      t = m ? ` [metadata lookup for ${ind}: ${m}]` : r ? ` [metadata lookup: ${r.id} = "${short(r.name)}", source ${r.source && r.source.id} ${r.source && r.source.value ? '(' + short(r.source.value) + ')' : ''}]` : ` [metadata lookup for ${ind}: empty reply]`;
+    } catch (e) { t = ` [metadata lookup for ${ind} failed: ${short(e.message)}]`; }
+    probed.set(ind, t);
+  }
+  return probed.get(ind);
+}
 async function wbIndicator(code, ind) {
   const j = await wbJson(`${WB}/country/${code}/indicator/${ind}?format=json&mrnev=1`), m = wbErr(j);
   if (m) {
     const c = await wbJson(`${WB}/country/${code}?format=json`);
     if (wbErr(c)) return { status: 'unsupported', error: `The World Bank API has no country with code ${code} (${wbErr(c)}).` };
-    throw new FetchError('World Bank error: ' + m);
+    throw new FetchError('World Bank error: ' + m + (await probeIndicator(ind)));
   }
   const rows = Array.isArray(j) && Array.isArray(j[1]) ? j[1] : [];
   if (!rows.length || rows[0].value == null) return { status: 'none', error: null, sourceUpdated: j[0] && j[0].lastupdated || null };
-  const row = rows[0], id = row.countryiso3code || (row.country && row.country.id), value = Number(row.value);
+  const row = rows[0], id = row.countryiso3code || (row.country && row.country.id), value = Number(row.value), gotInd = row.indicator && row.indicator.id;
   if (id && id !== code) throw new FetchError(`Refused: the reply was for country ${id}, not ${code}.`);
+  if (gotInd && gotInd !== ind) throw new FetchError(`Refused: the reply was for indicator ${gotInd}, not ${ind}.`);   // never accept another series (for example a legacy one)
   if (!Number.isFinite(value)) throw new FetchError('the reply contained a non-numeric value');
-  return { status: 'ok', error: null, value, year: String(row.date), sourceUpdated: j[0] && j[0].lastupdated || null };
+  return { status: 'ok', error: null, value, year: String(row.date), indicator: ind, indicatorName: row.indicator && row.indicator.value || null, sourceUpdated: j[0] && j[0].lastupdated || null };
 }
 async function runWb(series, key, code, label, results) {
   const out = {}, old = prev[key] || {};
   for (const [id, c] of Object.entries(R.countries)) {
     const p = old[id];
-    if (!FORCE && p && (p.status === 'ok' || p.status === 'unsupported' || p.status === 'none') && ageDays(p.fetchedAt) < 7) { out[id] = p; results.push({ label: `${label} ${id}`, state: 'skipped' }); continue; }
-    try { const x = await wbIndicator(c.wb, code), t = iso(NOW); out[id] = { ...x, fetchedAt: t, checkedAt: t }; say(`  ${label} ${id}: ${x.status}${x.status === 'ok' ? ` ${x.value} (${x.year})` : x.error ? ' - ' + x.error : ''}`); results.push({ label: `${label} ${id}`, state: 'ok' }); }
-    catch (e) { out[id] = { status: 'error', error: short(e.message), value: p ? p.value ?? null : null, year: p ? p.year ?? null : null, fetchedAt: p ? p.fetchedAt || null : null, checkedAt: iso(NOW) }; say(`  ${label} ${id}: FAILED - ${short(e.message)}${p && p.value != null ? ' (earlier value kept)' : ''}`); results.push({ label: `${label} ${id}`, state: 'failed' }); }
+    if (!FORCE && p && (p.status === 'ok' || p.status === 'unsupported' || p.status === 'none') && ageDays(p.fetchedAt) < 7 && (!p.indicator || p.indicator === code) && (key !== 'wgi' || p.indicator === code)) { out[id] = p; results.push({ label: `${label} ${id}`, state: 'skipped' }); continue; }
+    try { const x = await wbIndicator(c.wb, code), t = iso(NOW); out[id] = { indicator: code, ...x, fetchedAt: t, checkedAt: t }; say(`  ${label} ${id}: ${x.status}${x.status === 'ok' ? ` ${x.value} (${x.year})` : x.error ? ' - ' + x.error : ''}`); results.push({ label: `${label} ${id}`, state: 'ok' }); }
+    catch (e) { out[id] = { indicator: code, status: 'error', error: short(e.message).slice(0, 420), value: p && p.indicator === code ? p.value ?? null : null, year: p && p.indicator === code ? p.year ?? null : null, fetchedAt: p && p.indicator === code ? p.fetchedAt || null : null, checkedAt: iso(NOW) }; say(`  ${label} ${id}: FAILED - ${short(e.message)}${p && p.value != null ? ' (earlier value kept)' : ''}`); results.push({ label: `${label} ${id}`, state: 'failed' }); }
     await sleep(GAP);
   }
   return out;
@@ -96,7 +110,7 @@ async function runUcdp(results) {
 const results = [];
 say(VERIFY ? 'VERIFY MODE: every source is requested once; nothing is written.\n' : 'Fetching risk inputs (recent data is not requested again).\n');
 const ucdp = await runUcdp(results);
-say('World Bank WGI (political stability):'); const wgi = await runWb('wgi', 'wgi', R.sources.wgi.code, 'WGI', results);
+say('World Bank WGI (political stability), indicator ' + R.sources.wgi.code + ':'); if (VERIFY) say('  ' + (await probeIndicator(R.sources.wgi.code)).trim()); const wgi = await runWb('wgi', 'wgi', R.sources.wgi.code, 'WGI', results);
 say('World Bank unemployment:'); const unemployment = await runWb('unemployment', 'unemployment', R.sources.unemployment.code, 'Unemployment', results);
 const asked = results.filter(r => r.state !== 'skipped'), failed = results.filter(r => r.state === 'failed'), okN = results.filter(r => r.state === 'ok').length;
 const lastSuccessAt = [ucdp.fetchedAt, ...Object.values(wgi).map(x => x.fetchedAt), ...Object.values(unemployment).map(x => x.fetchedAt)].filter(Boolean).sort().pop() || null;

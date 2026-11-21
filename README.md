@@ -223,7 +223,7 @@ The three Risk Assessment cards (Security, Economic, Diplomatic) are generated b
 
 ### Security (needs the UCDP file)
 1. Look at the newest year in the UCDP/PRIO Armed Conflict Dataset. **Critical**: the country is the location of, or a primary party (side A or B) in, a state-based conflict of intensity 2 (war, at least 1,000 battle-related deaths that year). **High**: the same at intensity 1 (25 to 999). **Moderate**: only a supporting (secondary) party.
-2. If no involvement is recorded **and** a World Bank WGI "Political Stability and Absence of Violence/Terrorism" estimate (PV.EST, not older than 3 years) exists: at least 0.0 gives **Low**, at least -1.0 gives **Moderate**, below that **High**.
+2. If no involvement is recorded **and** a World Bank WGI political stability estimate (indicator `GOV_WGI_PV.EST`, not older than 3 years) exists: at least 0.0 gives **Low**, at least -1.0 gives **Moderate**, below that **High**.
 3. Otherwise **Insufficient data** (UCDP file missing or older than 2 years; no conflict recorded and no WGI value).
 
 ### Economic
@@ -236,7 +236,7 @@ No level is computed for any country. I looked for a free, key-free, machine-rea
 | Source | Used for | Access and licence | Main limits |
 |---|---|---|---|
 | [UCDP/PRIO Armed Conflict Dataset](https://ucdp.uu.se/downloads/) (one CSV zip, v26.1, tried newer versions automatically) | Security: conflict involvement | Static download, no key. CC BY 4.0 as stated on the download page; citation text is in `data/risk-methodology.mjs` and the card | Annual, covers state-based armed conflict only (not tension, unrest or terrorism); the newest year is last year's. Its API needs an emailed token, so it is NOT used |
-| [World Bank WGI PV.EST](https://data.worldbank.org/indicator/PV.EST) | Security (only when no conflict) | World Bank API, no key, CC BY 4.0 | Perception-based composite, annual (about September), margins of error, not published for Taiwan as far as the World Bank API answers (the run tells you) |
+| [World Bank WGI political stability, `GOV_WGI_PV.EST`](https://data.worldbank.org/indicator/GOV_WGI_PV.EST) | Security (only when no conflict) | World Bank API, no key; World Bank Open Data terms of use | Perception-based composite on the WGI 2025 revised methodology (history recalculated to 1996), annual, margins of error. The thresholds were chosen on the conventional -2.5 to +2.5 scale and are not re-checked against the revision. Not published for Taiwan as far as the World Bank API answers (the run tells you). The old code `PV.EST` was retired by the World Bank and is deliberately never used as a fallback |
 | World Bank GDP growth, inflation (existing `indicators.json`), unemployment (ILO modelled) | Economic | World Bank API, no key, CC BY 4.0 | Annual, lagged; Taiwan not published by the World Bank; revisions; modelled estimates |
 | Country briefs (`briefs.json`) | Reported context only | Already in the project | Headlines are reports, not verified facts |
 **Not used:** the IMF (its terms prohibit bulk automated download without permission, so it is not fetched automatically; Taiwan economic data would be the main benefit if you obtain permission), ACLED (needs registration and a key), the UCDP API (needs a token), commercial risk indices.
@@ -255,8 +255,11 @@ No level is computed for any country. I looked for a free, key-free, machine-rea
 3. Open the live site, select each country, expand the details of each card, and compare the facts and links with the sources.
 4. Only then remove the `# ` before the two `schedule:` lines in `update-risk.yml` and commit.
 
+### If the WGI request fails
+The run log prints a `[metadata lookup ...]` note: what the World Bank's metadata endpoint says about the code. If it says the indicator was not found, the World Bank renamed it again; open `https://api.worldbank.org/v2/country/USA/indicator/GOV_WGI_PV.EST?format=json&mrnev=1` in a browser to see the reply, and send me the first lines. Until it works, Security shows Insufficient data for countries with no recorded conflict; nothing is guessed. A cache entry written for a different indicator code is never trusted and is requested again.
+
 ### Tests
-`node tests/test-risk.mjs` (81 simulated checks: documented levels and boundaries, missing and incomplete data, stale data, failed requests, source attribution, no fabricated levels, all five countries, existing files unchanged). The mock server stands in for the World Bank and UCDP; **no real request was made by the tests, and nothing has been run on GitHub or the live site.** The real UCDP column layout and the World Bank reply format are implemented from their documentation and from the existing World Bank code; the verify run is how you confirm them.
+`node tests/test-risk.mjs` (90 simulated checks: documented levels and boundaries, missing and incomplete data, stale data, failed requests, source attribution, no fabricated levels, all five countries, existing files unchanged). The mock server stands in for the World Bank and UCDP; **no real request was made by the tests, and nothing has been run on GitHub or the live site.** The real UCDP column layout and the World Bank reply format are implemented from their documentation and from the existing World Bank code; the verify run is how you confirm them.
 
 ## Changing things
 - **News search terms:** edit the `gdelt:` line per country in `data/countries.js`. GDELT rules: OR groups go in parentheses, phrases in quotes, every word at least 3 letters. After a change, run the Action manually. If a query is invalid the site will show GDELT's own error message.
