@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-22T10:07:49.777Z",
- "checkedAt": "2026-11-22T10:07:49.777Z",
- "lastSuccessAt": "2026-11-22T10:07:49.777Z",
+ "generatedAt": "2026-11-22T13:23:15.274Z",
+ "checkedAt": "2026-11-22T13:23:15.274Z",
+ "lastSuccessAt": "2026-11-22T13:23:15.274Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 12,
-  "groupedDuplicates": 10,
+  "groupedDuplicates": 9,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,10 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-22T10:07:49.777Z",
-   "lastSuccessAt": "2026-11-22T10:07:49.777Z",
+   "checkedAt": "2026-11-22T13:23:15.274Z",
+   "lastSuccessAt": "2026-11-22T13:23:15.274Z",
    "error": null,
-   "latestFile": "20261122101500"
+   "latestFile": "20261122133000"
   }
  },
  "files": {
@@ -236,7 +236,19 @@
   "20261122093000": "ok",
   "20261122094500": "ok",
   "20261122100000": "ok",
-  "20261122101500": "ok"
+  "20261122101500": "ok",
+  "20261122104500": "ok",
+  "20261122110000": "ok",
+  "20261122111500": "ok",
+  "20261122113000": "ok",
+  "20261122114500": "ok",
+  "20261122120000": "ok",
+  "20261122121500": "ok",
+  "20261122123000": "ok",
+  "20261122124500": "ok",
+  "20261122130000": "ok",
+  "20261122131500": "ok",
+  "20261122133000": "ok"
  },
  "items": [
   {
@@ -1301,90 +1313,6 @@
    }
   },
   {
-   "title": "China's Xi holds talks with regional leaders after APEC, trilateral summit with US, Russia",
-   "url": "https://aa.com.tr/en/asia-pacific/chinas-xi-holds-talks-with-regional-leaders-after-apec-trilateral-summit-with-us-russia/4131664",
-   "publisher": "aa.com.tr",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "'Wants the deal done': After China trilateral, Trump tells Europe that Putin wants to end Ukraine war, claim reports",
-   "url": "https://www.hindustantimes.com/world-news/wants-the-deal-done-after-china-trilateral-trump-tells-europe-that-putin-wants-to-end-ukraine-war-claim-reports-101795162348133.html",
-   "publisher": "hindustantimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T09:25:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T09:51:58.387Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "U.S., China, and Russia Hold Historic Trilateral Summit in Shenzhen",
    "url": "https://udaipurkiran.com/u-s-china-and-russia-hold-historic-trilateral-summit-in-shenzhen/",
    "publisher": "udaipurkiran.com",
@@ -2147,45 +2075,6 @@
    "variantsTotal": 1
   },
   {
-   "title": "Jared Kushner floats Ukraine NATO membership if Kyiv cedes Donbas to Russia",
-   "url": "http://www.jpost.com/international/internationalrussia-ukraine-war/article-915627",
-   "publisher": "jpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T09:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "US First Lady: Ukraine and Russia could reach ceasefire by Christmas",
    "url": "https://en.apa.az/america/us-first-lady-ukraine-and-russia-could-reach-ceasefire-by-christmas-537617",
    "publisher": "en.apa.az",
@@ -2270,86 +2159,6 @@
    }
   },
   {
-   "title": "Russia-Ukraine War: Missiles near NATO drills rattle Europe",
-   "url": "https://organiser.org/2026/11/21/428056/international/poland-reports-russian-missiles-near-european-drills-nato-calls-incident-grave-as-military-tensions-take-a-new-turn/",
-   "publisher": "organiser.org",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T10:30:00.000Z",
-   "seenByGdelt": "2026-11-21T13:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missiles",
-       "NATO",
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Dead and injured in Russian attacks as Ukraine targets Russian military positions",
-   "url": "https://sana.sy/en/international/2360527/",
-   "publisher": "sana.sy",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T10:52:00.000Z",
-   "seenByGdelt": "2026-11-21T13:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T16:06:06.880Z",
-   "lastSeenAt": "2026-11-21T16:06:06.880Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "US-China Chip War AI Export Restrictions Explained - Pragativadi I Latest Odisha News in English I Breaking News",
    "url": "https://pragativadi.com/us-china-chip-war-ai-export-restrictions-impact/",
    "publisher": "pragativadi.com",
@@ -2369,84 +2178,6 @@
      "level": "country",
      "terms": [
       "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "At Halifax forum, Poroshenko urges increased support for Ukraine, greater pressure on Russia to secure ceasefire",
-   "url": "https://en.interfax.com.ua/news/general/1240207.html",
-   "publisher": "interfax.com.ua",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T11:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "ceasefire"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "From Crimea to Kyiv, Bridges Become Targets in Russia's War on Ukraine",
-   "url": "https://www.themoscowtimes.com/2026/11/21/from-crimea-to-kyiv-bridges-become-targets-in-russias-war-on-ukraine-a94335",
-   "publisher": "themoscowtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
      ]
     }
    },
@@ -2560,84 +2291,6 @@
     }
    ],
    "variantsTotal": 2
-  },
-  {
-   "title": "Melania Trump says she is in talks regarding new ceasefire between Ukraine and Russia before Christmas",
-   "url": "https://en.interfax.com.ua/news/general/1240246.html",
-   "publisher": "interfax.com.ua",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T11:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "ceasefire"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "LIVE: Russia launches deadly missile barrage on Ukraine",
-   "url": "https://news.az/news/live-russia-launches-deadly-missile-barrage-on-ukraine",
-   "publisher": "news.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T12:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missile"
-      ]
-     }
-    ]
-   }
   },
   {
    "title": "Chinese Embassy in Mexico slams US consul general's claims over Chinese investment near border, urges end to interference",
@@ -4147,6 +3800,127 @@
    }
   },
   {
+   "title": "Russian Missile & Drone Strikes Kill 2 In Ukraine's Lviv As Zelenskyy Presses For NATO Membership",
+   "url": "https://www.freepressjournal.in/world/russian-missile-drone-strikes-kill-2-in-ukraines-lviv-as-zelenskyy-presses-for-nato-membership",
+   "publisher": "freepressjournal.in",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T08:59:00.000Z",
+   "seenByGdelt": "2026-11-22T12:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strikes",
+       "missile",
+       "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "'Putin is a butcher': Cabinet minister hits out at Trump over 'my friend' post after summit with Russian president and China's Xi",
+   "url": "https://www.dailymail.com/news/article-16312959/Putin-Cabinet-minister-Trump-friend-summit-Russia-China.html",
+   "publisher": "dailymail.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T09:17:00.000Z",
+   "seenByGdelt": "2026-11-22T11:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Air raid sirens go off in Kaliningrad amid fears of Ukrainian drone attack in Russia's European enclave - a month after Putin threatened to use nuclear weapons to defend it",
+   "url": "https://www.dailymail.com/news/article-16312901/Air-raid-sirens-Kaliningrad-fears-Ukrainian-drone-attack-Russia-Kaliningrad.html",
+   "publisher": "dailymail.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T09:22:00.000Z",
+   "seenByGdelt": "2026-11-22T11:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone attack",
+       "nuclear",
+       "weapons"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Ukrainian drones: Ukranian drones strike Russian cargo ship off Finland, escalating tensions over NATO involvement",
    "url": "https://economictimes.indiatimes.com/news/defence/ukranian-drones-strike-russian-cargo-ship-off-finland-escalating-tensions-over-nato-involvement/articleshow/136070492.cms",
    "publisher": "indiatimes.com",
@@ -4180,6 +3954,328 @@
       "label": "Security",
       "terms": [
        "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "14 missing after Russian strike as Zelenskyy presses US over Patriot missiles",
+   "url": "https://www.politico.eu/article/14-missing-after-russian-strike-zelenskyy-presses-us-patriot-missiles/",
+   "publisher": "politico.eu",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T09:49:00.000Z",
+   "seenByGdelt": "2026-11-22T10:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missiles"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US congressional report on China-Pakistan ties highlights what India already knows: Former diplomat Mahesh Sachdev",
+   "url": "http://www.chinanationalnews.com/news/279448703/us-congressional-report-on-china-pakistan-ties-highlights-what-india-already-knows-former-diplomat-mahesh-sachdev",
+   "publisher": "chinanationalnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T10:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomat"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian drone strike collapses apartment building in Kyiv region, 14 feared trapped",
+   "url": "https://timesofindia.indiatimes.com/world/europe/russian-drone-strike-collapses-apartment-building-in-kyiv-region-14-feared-trapped/articleshow/136072334.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T11:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "institution",
+     "terms": [
+      "Kyiv"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strike"
+      ]
+     }
+    ]
+   },
+   "variants": [
+    {
+     "publisher": "moneycontrol.com",
+     "publisherId": "gdelt",
+     "url": "https://www.moneycontrol.com/world/at-least-14-feared-trapped-after-russian-drone-strike-collapses-building-in-ukraine-s-kyiv-region-article-14086600.html",
+     "published": null,
+     "seenByGdelt": "2026-11-22T12:30:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "Russian couple who met after they both defected to fight for Ukraine following Putin's invasion tie the knot in touching wedding ceremony",
+   "url": "https://www.dailymail.com/news/article-16313015/Russian-couple-defected-fight-Ukraine-married.html",
+   "publisher": "dailymail.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T11:38:00.000Z",
+   "seenByGdelt": "2026-11-22T13:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "invasion"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian MFA Spox Slams Meloni For Biased Approach to Ukraine's Mirotvorets Blacklist",
+   "url": "https://sputnikglobe.com/20261122/russian-mfa-spox-slams-meloni-for-biased-approach-to-ukraines-mirotvorets-blacklist-1125130999.html",
+   "publisher": "sputnikglobe.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T12:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "blacklist"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "LIVE: Russian drone attack damages apartment building near Kyiv, Ukraine faces overnight strikes",
+   "url": "https://news.az/news/live-russian-drone-attack-damages-apartment-building-near-kyiv-ukraine-faces-overnight-strikes",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T12:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone attack"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russia and Ukraine are bombing bridges. Who's winning? - International - derStandard.at › International",
+   "url": "https://www.derstandard.at/consent/tcf/story/3000000350142/russia-and-ukraine-are-bombing-bridges-whos-winning",
+   "publisher": "derstandard.at",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T12:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "bombing"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US admission on Ukraine: Everything collapsed, Sachs says G20 in Miami could seal peace and rebuilding",
+   "url": "https://www.bankingnews.gr/diethni/articles/912568/us-admission-on-ukraine-everything-collapsed-sachs-says-g20-in-miami-could-seal-peace-and-rebuilding",
+   "publisher": "bankingnews.gr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T13:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "G20"
       ]
      }
     ]
@@ -4285,6 +4381,39 @@
    }
   },
   {
+   "title": "Taiwanese banks turn to AI defenses as cyberattack activity climbs",
+   "url": "https://cedarnews.net/newstasks/1179256/taiwanese-banks-turn-ai-defenses-cyberattack-activity/",
+   "publisher": "cedarnews.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T11:03:00.000Z",
+   "seenByGdelt": "2026-11-22T11:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwanese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "cyberattack"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Taiwan to cooperate in joint circular economy",
    "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
    "publisher": "taipeitimes.com",
@@ -4356,56 +4485,6 @@
   {
    "title": "NTMoFA Unveils Bill Fontana's Sound Sculpture Exhibition in Taiwan – Indonesia Tribune",
    "url": "https://indonesiatribune.com/ntmofa-unveils-bill-fontanas-sound-sculpture-exhibition-in-taiwan/",
-   "publisher": "indonesiatribune.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T13:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Stan Shih Represents Taiwan at 2026 APEC Economic Leaders' Meeting in Shenzhen – Indonesia Tribune",
-   "url": "https://indonesiatribune.com/stan-shih-represents-taiwan-at-2026-apec-economic-leaders-meeting-in-shenzhen/",
-   "publisher": "indonesiatribune.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T13:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan Hosts Forum on AI-Driven Climate Solutions Amidst COP31 – Indonesia Tribune",
-   "url": "https://indonesiatribune.com/taiwan-hosts-forum-on-ai-driven-climate-solutions-amidst-cop31/",
    "publisher": "indonesiatribune.com",
    "publisherId": "gdelt",
    "via": "GDELT",
@@ -5258,6 +5337,31 @@
    },
    "firstSeenAt": "2026-11-22T07:37:20.160Z",
    "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Malaysian actor Nandagopal Mohan makes history with Taiwan's Golden Horse win",
+   "url": "https://www.thestar.com.my/lifestyle/entertainment/2026/11/22/malaysian-actor-nandagopal-mohan-makes-history-with-taiwan039s-golden-horse-win",
+   "publisher": "thestar.com.my",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T13:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T13:23:15.274Z",
+   "lastSeenAt": "2026-11-22T13:23:15.274Z",
    "relevance": {
     "score": 0,
     "tier": "other",
