@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-22T19:15:20.669Z",
- "lastSuccessAt": "2026-11-22T19:15:20.669Z",
- "checkedAt": "2026-11-22T19:15:20.669Z",
+ "generatedAt": "2026-11-22T22:03:13.151Z",
+ "lastSuccessAt": "2026-11-22T22:03:13.151Z",
+ "checkedAt": "2026-11-22T22:03:13.151Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 148,
-   "lastSuccessAt": "2026-11-22T19:14:59.606Z",
-   "checkedAt": "2026-11-22T19:14:59.606Z",
+   "items": 151,
+   "lastSuccessAt": "2026-11-22T22:02:53.339Z",
+   "checkedAt": "2026-11-22T22:02:53.339Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,7 +22,7 @@
   }
  },
  "itemStats": {
-  "read": 148,
+  "read": 151,
   "noSource": 0,
   "noTime": 0,
   "outsideWindow": 0,
@@ -32,18 +32,18 @@
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-22T19:15:20.669Z",
+   "generatedAt": "2026-11-22T22:03:13.151Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T19:15:20.669Z",
-    "to": "2026-11-22T19:15:20.669Z"
+    "from": "2026-11-19T22:03:13.151Z",
+    "to": "2026-11-22T22:03:13.151Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 55,
+   "reportsFound": 54,
    "overview": {
     "kind": "fact",
-    "text": "55 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-22 10:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 10, sanctions and trade 3.",
+    "text": "54 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-22 10:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 10, sanctions and trade 3.",
     "evidence": [
      1,
      2,
@@ -333,18 +333,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-22T19:15:20.669Z",
+   "generatedAt": "2026-11-22T22:03:13.151Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T19:15:20.669Z",
-    "to": "2026-11-22T19:15:20.669Z"
+    "from": "2026-11-19T22:03:13.151Z",
+    "to": "2026-11-22T22:03:13.151Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 46,
+   "reportsFound": 48,
    "overview": {
     "kind": "fact",
-    "text": "46 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-22 16:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 9, diplomacy 6, sanctions and trade 4.",
+    "text": "48 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-22 19:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 9, diplomacy 5, sanctions and trade 5.",
     "evidence": [
      1,
      3,
@@ -476,10 +476,10 @@
       6,
       7,
       8,
-      10,
-      12
+      11,
+      13
      ],
-     "text": "9 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][3][4][5][6][7][8][10][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][3][4][5][6][7][8][11][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -489,10 +489,9 @@
       4,
       5,
       8,
-      11,
-      13
+      12
      ],
-     "text": "6 of the 12 listed reports use diplomacy wording (foreign minister, summit, bilateral, diplomat) [1][4][5][8][11][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use diplomacy wording (foreign minister, summit, bilateral) [1][4][5][8][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -501,9 +500,10 @@
       3,
       6,
       7,
-      9
+      9,
+      10
      ],
-     "text": "4 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth, export controls) [3][6][7][9]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth, blacklist) [3][6][7][9][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -606,6 +606,15 @@
     },
     {
      "n": 9,
+     "title": "US House Committee Urges Federal Blacklist of Chinese Entities Implicated in Forced Organ Harvesting",
+     "publisher": "theepochtimes.com",
+     "url": "https://www.theepochtimes.com/china/us-house-committee-urges-federal-blacklist-of-chinese-entities-implicated-in-forced-organ-harvesting-6127972",
+     "time": "2026-11-22T19:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
      "title": "China's Intelligence Agency Targets Advanced AI Chips Amid U.S. Export Controls – China Money Network",
      "publisher": "chinamoneynetwork.com",
      "url": "https://www.chinamoneynetwork.com/2026/11/22/chinas-intelligence-agency-targets-advanced-ai-chips-amid-u-s-export-controls",
@@ -614,7 +623,7 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "US power in Asia hits weakest point against China since 2018 as Iran war reshapes power balance, report finds",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/international/world-news/us-power-in-asia-hits-weakest-point-against-china-since-2018-as-iran-war-reshapes-power-balance-report-finds/articleshow/136076949.cms",
@@ -623,7 +632,7 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "China urges US to revoke proposed telecom restrictions, warns of damage to bilateral ties",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1374802.shtml",
@@ -632,21 +641,12 @@
      "via": "GDELT"
     },
     {
-     "n": 12,
+     "n": 13,
      "title": "UK General Confirms Offensive Cyber Operations Against Russia, China, Iran and North Korea",
      "publisher": "newsroomamerica.com",
      "url": "https://newsroomamerica.com/a/JK441wqWnohUqfLrtAgf6cd0SI8/google_s_threat_intelligence_group_separately_says_attackers_used_an_ai_framework_to_find_and_exploit_software_flaws_with_no_human_in_the_loop_describing_it_as_a_fully_automated_cyberattack.html",
      "time": "2026-11-22T11:30:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "US congressional report on China-Pakistan ties highlights what India already knows: Former diplomat Mahesh Sachdev",
-     "publisher": "chinanationalnews.com",
-     "url": "http://www.chinanationalnews.com/news/279448703/us-congressional-report-on-china-pakistan-ties-highlights-what-india-already-knows-former-diplomat-mahesh-sachdev",
-     "time": "2026-11-22T10:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
@@ -655,18 +655,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-22T19:15:20.669Z",
+   "generatedAt": "2026-11-22T22:03:13.151Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T19:15:20.669Z",
-    "to": "2026-11-22T19:15:20.669Z"
+    "from": "2026-11-19T22:03:13.151Z",
+    "to": "2026-11-22T22:03:13.151Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 54,
+   "reportsFound": 56,
    "overview": {
     "kind": "fact",
-    "text": "54 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 19:15 UTC and come from 15 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 8.",
+    "text": "56 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 21:30 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8.",
     "evidence": [
      1,
      2,
@@ -678,8 +678,8 @@
      9,
      10,
      11,
-     13,
-     14
+     12,
+     13
     ]
    },
    "developments": [
@@ -799,11 +799,12 @@
       7,
       8,
       9,
+      10,
       11,
-      13,
-      14
+      12,
+      13
      ],
-     "text": "11 of the 12 listed reports use security wording (war, nuclear, weapons, invasion) [1][2][4][5][6][7][8][9][11][13][14]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (war, nuclear, weapons, invasion) [1][2][4][5][6][7][8][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -816,9 +817,9 @@
       6,
       7,
       8,
-      10
+      9
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (envoy, foreign minister, summit, peace talks) [1][2][4][5][6][7][8][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "8 of the 12 listed reports use diplomacy wording (envoy, foreign minister, summit, peace talks) [1][2][4][5][6][7][8][9]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -831,26 +832,21 @@
       6,
       7,
       8,
-      9,
       10,
       11,
-      13,
-      14
+      12,
+      13
      ],
-     "text": "12 listed reports with topic keywords also name the United States, Ukraine and China [1][2][4][5][6][7][8][9][10][11][13][14]. A headline that names two countries does not show how they are connected."
+     "text": "11 listed reports with topic keywords also name the United States, Ukraine and China [1][2][4][5][6][7][8][10][11][12][13]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
       2,
-      3,
-      11,
-      12,
-      14,
-      15
+      3
      ],
-     "text": "3 listed headlines were carried by more than one outlet [2][11][14]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [2]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -928,66 +924,48 @@
     },
     {
      "n": 9,
-     "title": "Russian vessel hit by suspected sea drone at Libya's Benghazi naval base | Russia-Ukraine war News",
-     "publisher": "aljazeera.com",
-     "url": "https://www.aljazeera.com/news/2026/11/22/suspected-drone-strike-hits-russian-vessel-in-libya",
-     "time": "2026-11-22T19:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Cyprus expels Russian diplomats on suspicion of espionage",
+     "publisher": "politico.eu",
+     "url": "https://www.politico.eu/article/cyprus-expels-russian-diplomats-on-suspicion-of-espionage/",
+     "time": "2026-11-22T15:56:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 10,
-     "title": "Russian Ambassador Denies Blame Following Attack on Austrian Embassy in Kyiv",
-     "publisher": "vindobona.org",
-     "url": "https://www.vindobona.org/article/russian-ambassador-denies-blame-following-attack-on-austrian-embassy-in-kyiv",
-     "time": "2026-11-22T19:15:00.000Z",
+     "title": "Kushner says US seeks to convince Russia of NATO's peaceful intentions",
+     "publisher": "en.apa.az",
+     "url": "https://en.apa.az/america/kushner-says-us-seeks-to-convince-russia-of-natos-peaceful-intentions-537804",
+     "time": "2026-11-22T21:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "Appreciate PM Modi's appeal to Russia to stop Ukraine war, return to talks: Netherlands FM",
-     "publisher": "aninews.in",
-     "url": "https://aninews.in/news/world/asia/appreciate-pm-modi8217s-appeal-to-russia-to-stop-ukraine-war-return-to-talks-netherlands-fm20261122230535/",
-     "time": "2026-11-22T18:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Suspected Ukrainian drones hit Russian warship in Libya port",
+     "publisher": "ckom.com",
+     "url": "https://www.ckom.com/2026/11/22/suspected-ukrainian-drones-hit-russian-warship-in-libya-port/",
+     "time": "2026-11-22T20:31:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Appreciate PM Modi's appeal to Russia to stop Ukraine war, return to talks: Netherlands FM",
-     "publisher": "webindia123.com",
-     "url": "https://news.webindia123.com/news/Articles/World/20261122/4523168.html",
-     "time": "2026-11-22T19:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "duplicateOf": 11
+     "title": "Kushner Doubles Down On Claim Russia Is Open To NATO-Style Security Guarantees For Ukraine",
+     "publisher": "ibtimes.com",
+     "url": "https://www.ibtimes.com/kushner-russia-ukraine-article-5-like-guarantees-3810066",
+     "time": "2026-11-22T20:02:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
     },
     {
      "n": 13,
-     "title": "Ukraine Hits Russian Warship and Naval Base; Brings the Baltic Fleet's Backyard Into Play",
-     "publisher": "redstate.com",
-     "url": "https://redstate.com/streiff/2026/11/22/ukraine-hits-russian-warship-and-naval-base-brings-the-baltic-fleets-backyard-into-play-n2209678",
-     "time": "2026-11-22T18:02:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 14,
-     "title": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
-     "publisher": "durangoherald.com",
-     "url": "https://www.durangoherald.com/articles/associated-press/suspected-ukrainian-sea-drones-hit-russian-warship-at-benghazi-naval-base-libyan-officials-say/",
-     "time": "2026-11-22T17:40:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 15,
-     "title": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
-     "publisher": "cbsnews.com",
-     "url": "https://www.cbsnews.com/news/russian-warship-struck-suspected-ukrainian-sea-drones-benghazi-naval-base-libya-officials/",
-     "time": "2026-11-22T19:15:00.000Z",
+     "title": "Russian Ship Towed From Finnish Waters After Suspected Ukrainian Drone Strike",
+     "publisher": "theepochtimes.com",
+     "url": "https://www.theepochtimes.com/world/russian-ship-towed-from-finnish-waters-after-suspected-ukrainian-drone-strike-6127999",
+     "time": "2026-11-22T19:45:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "duplicateOf": 14
+     "via": "GDELT"
     }
    ],
    "limitations": [
@@ -995,18 +973,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-22T19:15:20.669Z",
+   "generatedAt": "2026-11-22T22:03:13.151Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T19:15:20.669Z",
-    "to": "2026-11-22T19:15:20.669Z"
+    "from": "2026-11-19T22:03:13.151Z",
+    "to": "2026-11-22T22:03:13.151Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 43,
+   "reportsFound": 44,
    "overview": {
     "kind": "fact",
-    "text": "43 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 19:15 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 8, sanctions and trade 1.",
+    "text": "44 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 20:31 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 7, sanctions and trade 1.",
     "evidence": [
      1,
      2,
@@ -1019,7 +997,7 @@
      9,
      10,
      11,
-     13
+     12
     ]
    },
    "developments": [
@@ -1138,10 +1116,11 @@
       7,
       8,
       9,
+      10,
       11,
-      13
+      12
      ],
-     "text": "11 of the 12 listed reports use security wording (war, nuclear, weapons, invasion) [1][2][3][4][5][6][7][8][9][11][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (war, nuclear, weapons, invasion) [1][2][3][4][5][6][7][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1153,10 +1132,9 @@
       4,
       5,
       7,
-      8,
-      10
+      8
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (envoy, summit, peace talks, ambassador) [1][2][3][4][5][7][8][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "7 of the 12 listed reports use diplomacy wording (envoy, summit, peace talks, ambassador) [1][2][3][4][5][7][8]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1170,18 +1148,9 @@
       9,
       10,
       11,
-      13
-     ],
-     "text": "9 listed reports with topic keywords also name the United States, Russia and China [1][2][3][4][5][9][10][11][13]. A headline that names two countries does not show how they are connected."
-    },
-    {
-     "rule": "several-outlets",
-     "kind": "analysis",
-     "evidence": [
-      11,
       12
      ],
-     "text": "1 listed headline was carried by more than one outlet [11]. The same headline appearing in several places is not independent verification."
+     "text": "9 listed reports with topic keywords also name the United States, Russia and China [1][2][3][4][5][9][10][11][12]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
@@ -1259,46 +1228,37 @@
     },
     {
      "n": 9,
-     "title": "Russian vessel hit by suspected sea drone at Libya's Benghazi naval base | Russia-Ukraine war News",
-     "publisher": "aljazeera.com",
-     "url": "https://www.aljazeera.com/news/2026/11/22/suspected-drone-strike-hits-russian-vessel-in-libya",
-     "time": "2026-11-22T19:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Suspected Ukrainian drones hit Russian warship in Libya port",
+     "publisher": "ckom.com",
+     "url": "https://www.ckom.com/2026/11/22/suspected-ukrainian-drones-hit-russian-warship-in-libya-port/",
+     "time": "2026-11-22T20:31:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 10,
-     "title": "Russian Ambassador Denies Blame Following Attack on Austrian Embassy in Kyiv",
-     "publisher": "vindobona.org",
-     "url": "https://www.vindobona.org/article/russian-ambassador-denies-blame-following-attack-on-austrian-embassy-in-kyiv",
-     "time": "2026-11-22T19:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Kushner Doubles Down On Claim Russia Is Open To NATO-Style Security Guarantees For Ukraine",
+     "publisher": "ibtimes.com",
+     "url": "https://www.ibtimes.com/kushner-russia-ukraine-article-5-like-guarantees-3810066",
+     "time": "2026-11-22T20:02:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "Appreciate PM Modi's appeal to Russia to stop Ukraine war, return to talks: Netherlands FM",
-     "publisher": "aninews.in",
-     "url": "https://aninews.in/news/world/asia/appreciate-pm-modi8217s-appeal-to-russia-to-stop-ukraine-war-return-to-talks-netherlands-fm20261122230535/",
-     "time": "2026-11-22T18:30:00.000Z",
+     "title": "Russian Ship Towed From Finnish Waters After Suspected Ukrainian Drone Strike",
+     "publisher": "theepochtimes.com",
+     "url": "https://www.theepochtimes.com/world/russian-ship-towed-from-finnish-waters-after-suspected-ukrainian-drone-strike-6127999",
+     "time": "2026-11-22T19:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Appreciate PM Modi's appeal to Russia to stop Ukraine war, return to talks: Netherlands FM",
-     "publisher": "webindia123.com",
-     "url": "https://news.webindia123.com/news/Articles/World/20261122/4523168.html",
-     "time": "2026-11-22T19:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "duplicateOf": 11
-    },
-    {
-     "n": 13,
-     "title": "Ukraine Hits Russian Warship and Naval Base; Brings the Baltic Fleet's Backyard Into Play",
-     "publisher": "redstate.com",
-     "url": "https://redstate.com/streiff/2026/11/22/ukraine-hits-russian-warship-and-naval-base-brings-the-baltic-fleets-backyard-into-play-n2209678",
-     "time": "2026-11-22T18:02:00.000Z",
+     "title": "Libya drone strike: Russian warship engulfed in flames following suspected Ukrainian attack in Benghazi",
+     "publisher": "watoday.com.au",
+     "url": "https://www.watoday.com.au/world/europe/russian-warship-goes-up-in-flames-at-libyan-port-in-suspected-ukraine-sea-drone-attack-20261123-p61gbo.html",
+     "time": "2026-11-22T19:44:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     }
@@ -1308,18 +1268,18 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-22T19:15:20.669Z",
+   "generatedAt": "2026-11-22T22:03:13.151Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T19:15:20.669Z",
-    "to": "2026-11-22T19:15:20.669Z"
+    "from": "2026-11-19T22:03:13.151Z",
+    "to": "2026-11-22T22:03:13.151Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-22 17:30 UTC and come from 8 outlets. Reports with topic keywords (a report can have several): security 4, diplomacy 3, economic policy 1.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-22 21:00 UTC and come from 9 outlets. Reports with topic keywords (a report can have several): security 6, diplomacy 3, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -1329,8 +1289,8 @@
      6,
      7,
      8,
+     9,
      10,
-     11,
      12,
      13
     ]
@@ -1396,15 +1356,15 @@
     {
      "kind": "reporting",
      "n": 4,
-     "headline": "Taiwanese banks turn to AI defenses as cyberattack activity climbs",
-     "publisher": "cedarnews.net",
-     "url": "https://cedarnews.net/newstasks/1179256/taiwanese-banks-turn-ai-defenses-cyberattack-activity/",
-     "time": "2026-11-22T11:03:00.000Z",
-     "timeBasis": "published",
+     "headline": "Taiwan banks deploy AI to prevent cyberattacks",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/23/2003868206",
+     "time": "2026-11-22T20:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
       "terms": [
-       "Taiwanese"
+       "Taiwan"
       ]
      },
      "topics": [
@@ -1415,15 +1375,15 @@
     {
      "kind": "reporting",
      "n": 5,
-     "headline": "Taiwan Is Preparing for a War That Could Reshape the World",
-     "publisher": "slguardian.org",
-     "url": "https://slguardian.org/taiwan-is-preparing-for-a-war-that-could-reshape-the-world/",
-     "time": "2026-11-22T06:30:00.000Z",
+     "headline": "《TAIPEI TIMES》 CCP legal warfare evolving: minister - 焦點",
+     "publisher": "ltn.com.tw",
+     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649964",
+     "time": "2026-11-22T19:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
-      "level": "country",
+      "level": "institution",
       "terms": [
-       "Taiwan"
+       "Taipei"
       ]
      },
      "topics": [
@@ -1440,9 +1400,11 @@
       2,
       4,
       5,
-      7
+      6,
+      7,
+      9
      ],
-     "text": "4 of the 12 listed reports use security wording (military, cyberattack, war) [2][4][5][7]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use security wording (military, cyberattacks, warfare, cyberattack) [2][4][5][6][7][9]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1450,9 +1412,9 @@
      "evidence": [
       1,
       3,
-      6
+      8
      ],
-     "text": "3 of the 12 listed reports use diplomacy wording (foreign minister, summit, diplomacy) [1][3][6]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use diplomacy wording (foreign minister, summit, diplomacy) [1][3][8]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1468,10 +1430,10 @@
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      8,
-      9
+      10,
+      11
      ],
-     "text": "1 listed headline was carried by more than one outlet [8]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [10]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -1504,6 +1466,24 @@
     },
     {
      "n": 4,
+     "title": "Taiwan banks deploy AI to prevent cyberattacks",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/23/2003868206",
+     "time": "2026-11-22T20:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
+     "title": "《TAIPEI TIMES》 CCP legal warfare evolving: minister - 焦點",
+     "publisher": "ltn.com.tw",
+     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649964",
+     "time": "2026-11-22T19:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
      "title": "Taiwanese banks turn to AI defenses as cyberattack activity climbs",
      "publisher": "cedarnews.net",
      "url": "https://cedarnews.net/newstasks/1179256/taiwanese-banks-turn-ai-defenses-cyberattack-activity/",
@@ -1512,7 +1492,7 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 7,
      "title": "Taiwan Is Preparing for a War That Could Reshape the World",
      "publisher": "slguardian.org",
      "url": "https://slguardian.org/taiwan-is-preparing-for-a-war-that-could-reshape-the-world/",
@@ -1521,7 +1501,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 8,
      "title": "Taiwan's APEC participation smooth amid great-power diplomacy: Scholars",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611200009",
@@ -1530,7 +1510,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 9,
      "title": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
      "publisher": "armstrongeconomics.com",
      "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
@@ -1539,7 +1519,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 10,
      "title": "Taiwan to cooperate in joint circular economy",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
@@ -1548,47 +1528,29 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 11,
      "title": "Taiwan to cooperate in joint circular economy",
      "publisher": "ltn.com.tw",
      "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649137",
      "time": "2026-11-21T19:30:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "duplicateOf": 8
-    },
-    {
-     "n": 10,
-     "title": "No new curbs on Nvidia chips - Taipei Times",
-     "publisher": "taipeitimes.com",
-     "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/23/2003868201",
-     "time": "2026-11-22T17:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "EDITORIAL: Taipei's Chiang eyes TPP support",
-     "publisher": "taipeitimes.com",
-     "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/23/2003868207",
-     "time": "2026-11-22T17:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
+     "duplicateOf": 10
     },
     {
      "n": 12,
-     "title": "A response to Elon Musk's misconstruction of relations across the Taiwan Strait",
-     "publisher": "taipeitimes.com",
-     "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/23/2003868208",
-     "time": "2026-11-22T17:30:00.000Z",
+     "title": "Asia week ahead: BoK rate decision, data from China, Taiwan, Japan | Hellenic Shipping News Worldwide",
+     "publisher": "hellenicshippingnews.com",
+     "url": "https://www.hellenicshippingnews.com/asia-week-ahead-bok-rate-decision-data-from-china-taiwan-japan/",
+     "time": "2026-11-22T21:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 13,
-     "title": "Guermantes Lailari On Taiwan: A Proposal for Taiwan's Whole-of-Society Deterrence Framework",
+     "title": "Victory lap - Taipei Times",
      "publisher": "taipeitimes.com",
-     "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/23/2003868209",
-     "time": "2026-11-22T17:30:00.000Z",
+     "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/23/2003868238",
+     "time": "2026-11-22T20:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }

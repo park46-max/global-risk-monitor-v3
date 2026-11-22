@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-22T19:14:59.606Z",
- "checkedAt": "2026-11-22T19:14:59.606Z",
- "lastSuccessAt": "2026-11-22T19:14:59.606Z",
+ "generatedAt": "2026-11-22T22:02:53.339Z",
+ "checkedAt": "2026-11-22T22:02:53.339Z",
+ "lastSuccessAt": "2026-11-22T22:02:53.339Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 13,
-  "groupedDuplicates": 27,
+  "groupedDuplicates": 25,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,10 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-22T19:14:59.606Z",
-   "lastSuccessAt": "2026-11-22T19:14:59.606Z",
+   "checkedAt": "2026-11-22T22:02:53.339Z",
+   "lastSuccessAt": "2026-11-22T22:02:53.339Z",
    "error": null,
-   "latestFile": "20261122191500"
+   "latestFile": "20261122220000"
   }
  },
  "files": {
@@ -270,7 +270,18 @@
   "20261122183000": "ok",
   "20261122184500": "ok",
   "20261122190000": "ok",
-  "20261122191500": "ok"
+  "20261122191500": "ok",
+  "20261122193000": "ok",
+  "20261122194500": "ok",
+  "20261122200000": "ok",
+  "20261122201500": "ok",
+  "20261122203000": "ok",
+  "20261122204500": "ok",
+  "20261122210000": "ok",
+  "20261122211500": "ok",
+  "20261122213000": "ok",
+  "20261122214500": "ok",
+  "20261122220000": "ok"
  },
  "items": [
   {
@@ -1274,6 +1285,46 @@
    }
   },
   {
+   "title": "Cyprus expels Russian diplomats on suspicion of espionage",
+   "url": "https://www.politico.eu/article/cyprus-expels-russian-diplomats-on-suspicion-of-espionage/",
+   "publisher": "politico.eu",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T15:56:00.000Z",
+   "seenByGdelt": "2026-11-22T20:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "espionage"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomats"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "US Treasury presses Singapore, Malaysia on Iran sanctions compliance - Economy",
    "url": "http://www.thejakartapost.com/business/2026/11/21/us-treasury-presses-singapore-malaysia-on-iran-sanctions-compliance",
    "publisher": "thejakartapost.com",
@@ -1360,51 +1411,6 @@
    },
    "firstSeenAt": "2026-11-20T09:32:52.048Z",
    "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Shenzhen Summit: China, US and Russia Face Global Challenges",
-   "url": "https://www.pakistantoday.com.pk/2026/11/21/three-giants-one-summit-and-a-world-left-behind",
-   "publisher": "pakistantoday.com.pk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T21:18:00.000Z",
-   "seenByGdelt": "2026-11-21T02:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -2717,87 +2723,6 @@
    }
   },
   {
-   "title": "[Interview] Ukraine's former defence chief predicts new EU security alliance, gives behind-the-scenes look at Russia diplomacy – EUobserver",
-   "url": "https://euobserver.com/249521/interview-ukraines-former-defence-chief-predicts-new-eu-security-alliance-gives-behind-the-scenes-look-at-russia-diplomacy/",
-   "publisher": "euobserver.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T08:29:00.000Z",
-   "seenByGdelt": "2026-11-22T10:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T10:07:49.777Z",
-   "lastSeenAt": "2026-11-22T10:07:49.777Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "diplomacy",
-       "alliance"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russian Missile & Drone Strikes Kill 2 In Ukraine's Lviv As Zelenskyy Presses For NATO Membership",
-   "url": "https://www.freepressjournal.in/world/russian-missile-drone-strikes-kill-2-in-ukraines-lviv-as-zelenskyy-presses-for-nato-membership",
-   "publisher": "freepressjournal.in",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T08:59:00.000Z",
-   "seenByGdelt": "2026-11-22T12:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone strikes",
-       "missile",
-       "NATO"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "'Putin is a butcher': Cabinet minister hits out at Trump over 'my friend' post after summit with Russian president and China's Xi",
    "url": "https://www.dailymail.com/news/article-16312959/Putin-Cabinet-minister-Trump-friend-summit-Russia-China.html",
    "publisher": "dailymail.com",
@@ -2831,86 +2756,6 @@
       "label": "Diplomacy",
       "terms": [
        "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Air raid sirens go off in Kaliningrad amid fears of Ukrainian drone attack in Russia's European enclave - a month after Putin threatened to use nuclear weapons to defend it",
-   "url": "https://www.dailymail.com/news/article-16312901/Air-raid-sirens-Kaliningrad-fears-Ukrainian-drone-attack-Russia-Kaliningrad.html",
-   "publisher": "dailymail.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T09:22:00.000Z",
-   "seenByGdelt": "2026-11-22T11:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone attack",
-       "nuclear",
-       "weapons"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukrainian drones: Ukranian drones strike Russian cargo ship off Finland, escalating tensions over NATO involvement",
-   "url": "https://economictimes.indiatimes.com/news/defence/ukranian-drones-strike-russian-cargo-ship-off-finland-escalating-tensions-over-nato-involvement/articleshow/136070492.cms",
-   "publisher": "indiatimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T09:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T10:07:49.777Z",
-   "lastSeenAt": "2026-11-22T10:07:49.777Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO"
       ]
      }
     ]
@@ -3028,133 +2873,6 @@
       "label": "Security",
       "terms": [
        "offensive"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russian drone strike collapses apartment building in Kyiv region, 14 feared trapped",
-   "url": "https://timesofindia.indiatimes.com/world/europe/russian-drone-strike-collapses-apartment-building-in-kyiv-region-14-feared-trapped/articleshow/136072334.cms",
-   "publisher": "indiatimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T11:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "institution",
-     "terms": [
-      "Kyiv"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone strike"
-      ]
-     }
-    ]
-   },
-   "variants": [
-    {
-     "publisher": "moneycontrol.com",
-     "publisherId": "gdelt",
-     "url": "https://www.moneycontrol.com/world/at-least-14-feared-trapped-after-russian-drone-strike-collapses-building-in-ukraine-s-kyiv-region-article-14086600.html",
-     "published": null,
-     "seenByGdelt": "2026-11-22T12:30:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
-  },
-  {
-   "title": "Russian couple who met after they both defected to fight for Ukraine following Putin's invasion tie the knot in touching wedding ceremony",
-   "url": "https://www.dailymail.com/news/article-16313015/Russian-couple-defected-fight-Ukraine-married.html",
-   "publisher": "dailymail.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T11:38:00.000Z",
-   "seenByGdelt": "2026-11-22T13:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "invasion"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russian MFA Spox Slams Meloni For Biased Approach to Ukraine's Mirotvorets Blacklist",
-   "url": "https://sputnikglobe.com/20261122/russian-mfa-spox-slams-meloni-for-biased-approach-to-ukraines-mirotvorets-blacklist-1125130999.html",
-   "publisher": "sputnikglobe.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T12:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "blacklist"
       ]
      }
     ]
@@ -3614,7 +3332,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T16:04:40.596Z",
-   "lastSeenAt": "2026-11-22T19:14:59.606Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -3855,7 +3573,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T19:14:59.606Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4105,6 +3823,45 @@
    }
   },
   {
+   "title": "Ukrainian Security Service Conducted A Long-range Strike On A Russian Warship In Libya - Report",
+   "url": "https://www.i24news.tv/en/news/international/ukraine-russia-war/artc-ukrainian-security-service-conducted-a-long-range-strike-on-a-russian-warship-in-libya-report",
+   "publisher": "i24news.tv",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T16:51:00.000Z",
+   "seenByGdelt": "2026-11-22T21:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Zelenskyy urges US to release Patriot missiles as Russia kills 5 in Ukraine",
    "url": "https://www.aljazeera.com/news/2026/11/22/zelenskyy-urges-us-to-release-patriot-missiles",
    "publisher": "aljazeera.com",
@@ -4150,6 +3907,55 @@
    }
   },
   {
+   "title": "Suspected Ukrainian Sea Drones Hit Russian Warship at Benghazi",
+   "url": "https://www.breitbart.com/europe/2026/11/22/suspected-ukrainian-sea-drones-hit-russian-warship-at-benghazi-naval-base-libyan-officials-say/",
+   "publisher": "breitbart.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T17:20:00.000Z",
+   "seenByGdelt": "2026-11-22T21:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   },
+   "variants": [
+    {
+     "publisher": "chicagotribune.com",
+     "publisherId": "gdelt",
+     "url": "https://www.chicagotribune.com/2026/11/22/suspected-ukrainian-sea-drones-hit-russian-warship-benghazi-naval-base/",
+     "published": "2026-11-22T18:50:00.000Z",
+     "seenByGdelt": "2026-11-22T20:15:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
    "title": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base, Libyan officials say",
    "url": "https://www.durangoherald.com/articles/associated-press/suspected-ukrainian-sea-drones-hit-russian-warship-at-benghazi-naval-base-libyan-officials-say/",
    "publisher": "durangoherald.com",
@@ -4173,7 +3979,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T19:14:59.606Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4263,7 +4069,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T19:14:59.606Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4287,6 +4093,45 @@
     }
    ],
    "variantsTotal": 1
+  },
+  {
+   "title": "Russian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials",
+   "url": "https://cedarnews.net/newstasks/1181204/russian-ship-hit-benghazi-suspected-ukrainian-drone/",
+   "publisher": "cedarnews.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T19:01:00.000Z",
+   "seenByGdelt": "2026-11-22T19:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone attack"
+      ]
+     }
+    ]
+   }
   },
   {
    "title": "Russian vessel hit by suspected sea drone at Libya's Benghazi naval base | Russia-Ukraine war News",
@@ -4364,6 +4209,281 @@
       "terms": [
        "ambassador",
        "embassy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Poland identifies Russian cruise missiles behind strikes near Ukraine border; NATO to hold discussions",
+   "url": "https://www.hindustantimes.com/world-news/poland-identifies-russian-cruise-missiles-behind-strikes-near-ukraine-border-nato-to-hold-discussions-101795373162372.html",
+   "publisher": "hindustantimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T19:26:00.000Z",
+   "seenByGdelt": "2026-11-22T20:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missiles",
+       "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Libya drone strike: Russian warship engulfed in flames following suspected Ukrainian attack in Benghazi",
+   "url": "https://www.watoday.com.au/world/europe/russian-warship-goes-up-in-flames-at-libyan-port-in-suspected-ukraine-sea-drone-attack-20261123-p61gbo.html",
+   "publisher": "watoday.com.au",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T19:44:00.000Z",
+   "seenByGdelt": "2026-11-22T20:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strike",
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US House Committee Urges Federal Blacklist of Chinese Entities Implicated in Forced Organ Harvesting",
+   "url": "https://www.theepochtimes.com/china/us-house-committee-urges-federal-blacklist-of-chinese-entities-implicated-in-forced-organ-harvesting-6127972",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T19:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "blacklist"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian Ship Towed From Finnish Waters After Suspected Ukrainian Drone Strike",
+   "url": "https://www.theepochtimes.com/world/russian-ship-towed-from-finnish-waters-after-suspected-ukrainian-drone-strike-6127999",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T19:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strike"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Kushner Doubles Down On Claim Russia Is Open To NATO-Style Security Guarantees For Ukraine",
+   "url": "https://www.ibtimes.com/kushner-russia-ukraine-article-5-like-guarantees-3810066",
+   "publisher": "ibtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T20:02:00.000Z",
+   "seenByGdelt": "2026-11-22T20:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Suspected Ukrainian drones hit Russian warship in Libya port",
+   "url": "https://www.ckom.com/2026/11/22/suspected-ukrainian-drones-hit-russian-warship-in-libya-port/",
+   "publisher": "ckom.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T20:31:00.000Z",
+   "seenByGdelt": "2026-11-22T21:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Kushner says US seeks to convince Russia of NATO's peaceful intentions",
+   "url": "https://en.apa.az/america/kushner-says-us-seeks-to-convince-russia-of-natos-peaceful-intentions-537804",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T21:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO"
       ]
      }
     ]
@@ -4502,6 +4622,72 @@
    }
   },
   {
+   "title": "《TAIPEI TIMES》 CCP legal warfare evolving: minister - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649964",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T19:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warfare"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Taiwan banks deploy AI to prevent cyberattacks",
+   "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/23/2003868206",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T20:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "cyberattacks"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Taiwan to cooperate in joint circular economy",
    "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
    "publisher": "taipeitimes.com",
@@ -4543,193 +4729,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "No to sexual jokes in campaigns - Taipei Times",
-   "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/22/2003868157",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T18:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Indigenous voices deserve a say - Taipei Times",
-   "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/22/2003868158",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T18:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "EDITORIAL CARTOON - Taipei Times",
-   "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/22/2003868160",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T18:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan in Time: The ghosts of Kinmen's movie theaters",
-   "url": "https://www.taipeitimes.com/News/feat/archives/2026/11/22/2003868164",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T18:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "US lawmaker upbeat on Taiwan ties - Taipei Times",
-   "url": "https://www.taipeitimes.com/News/front/archives/2026/11/22/2003868165",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T18:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan's stop-motion animation 'Pai Pai' wins Grand Prix at Japan Prize",
-   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868186",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T18:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "U.S. Soybean Buyers Outlook Conference 2026: Japan-Taiwan Held - 博客",
-   "url": "https://blog.wenxuecity.com/myblog/80451/202611/16961.html",
-   "publisher": "wenxuecity.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T18:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T19:13:41.230Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
   },
   {
    "title": "《TAIPEI TIMES》 US lawmaker upbeat on Taiwan ties - 焦點",
@@ -4801,56 +4800,6 @@
      "level": "institution",
      "terms": [
       "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T22:00:35.566Z",
-   "lastSeenAt": "2026-11-21T22:00:35.566Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "《TAIPEI TIMES》 2026 ELECTIONS: Chiang, Shen clash at second debate - 焦點",
-   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649136",
-   "publisher": "ltn.com.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T19:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T22:00:35.566Z",
-   "lastSeenAt": "2026-11-21T22:00:35.566Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "《TAIPEI TIMES》 Taiwan archers claim women's team silver at Asian Cup - 焦點",
-   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649138",
-   "publisher": "ltn.com.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T19:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
      ]
     }
    },
@@ -5096,7 +5045,17 @@
     "score": 0,
     "tier": "other",
     "topics": []
-   }
+   },
+   "variants": [
+    {
+     "publisher": "ltn.com.tw",
+     "publisherId": "gdelt",
+     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649969",
+     "published": null,
+     "seenByGdelt": "2026-11-22T19:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "Motorcade, street festival mark Taipei mayoral rivals' 'Super Sunday' push",
@@ -5410,6 +5369,203 @@
    },
    "firstSeenAt": "2026-11-22T19:14:59.606Z",
    "lastSeenAt": "2026-11-22T19:14:59.606Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "variants": [
+    {
+     "publisher": "ltn.com.tw",
+     "publisherId": "gdelt",
+     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649965",
+     "published": null,
+     "seenByGdelt": "2026-11-22T19:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "《TAIPEI TIMES》 Parties hold 'Super Sunday' events ahead of elections - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649966",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T19:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 Dasyueshan forest road closed after black bear sighting - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649968",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T19:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 MND detects 10 Chinese balloons over three days - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649977",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T19:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    },
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Victory lap - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/23/2003868238",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T20:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Bridge inauguration - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/23/2003868239",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T20:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Marketplace portrait - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/world/archives/2026/11/23/2003868246",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T20:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Asia week ahead: BoK rate decision, data from China, Taiwan, Japan | Hellenic Shipping News Worldwide",
+   "url": "https://www.hellenicshippingnews.com/asia-week-ahead-bok-rate-decision-data-from-china-taiwan-japan/",
+   "publisher": "hellenicshippingnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T21:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-22T22:02:53.339Z",
    "relevance": {
     "score": 0,
     "tier": "other",
