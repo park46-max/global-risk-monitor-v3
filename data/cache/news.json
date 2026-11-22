@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-22T13:13:40.454Z",
-  "lastSuccessAt": "2026-11-22T07:29:44.279Z",
+  "checkedAt": "2026-11-22T19:05:35.739Z",
+  "lastSuccessAt": "2026-11-22T19:08:24.764Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T07:28:16.371Z",
-      "checkedAt": "2026-11-22T13:16:41.053Z",
+      "checkedAt": "2026-11-22T19:10:02.352Z",
       "articles": [
         {
           "title": "Officials : Washington pulp mill violated safety standards before ruptured chemical tank killed 11",
@@ -178,169 +178,169 @@
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
-      "fetchedAt": "2026-11-22T01:28:29.132Z",
-      "checkedAt": "2026-11-22T13:16:41.053Z",
+      "status": "ok",
+      "attempted": true,
+      "error": null,
+      "fetchedAt": "2026-11-22T19:08:24.764Z",
+      "checkedAt": "2026-11-22T19:08:24.764Z",
       "articles": [
         {
-          "title": "Asia sees explosion of cultural confidence , says Singaporean scholar Kishore Mahbubani",
-          "url": "http://www.shanghaisun.com/news/279447294/asia-sees-explosion-of-cultural-confidence-says-singaporean-scholar-kishore-mahbubani",
-          "domain": "shanghaisun.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "What did Xi Jinping get from the bear hug with Trump at the Shenzhen summit ?",
-          "url": "https://www.kccu.org/world/2026-11-21/what-did-xi-jinping-get-from-the-bear-hug-with-trump-at-the-shenzhen-summit",
-          "domain": "kccu.org",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "RAF next jet perhaps last crewed fighter , says Air Chief Marshal",
-          "url": "https://www.malverngazette.co.uk/news/national/26751287.rafs-next-jet-perhaps-last-crewed-fighter-says-air-chief-marshal/",
-          "domain": "malverngazette.co.uk",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Guarding green rainforest in China southernmost province",
-          "url": "http://www.shanghaisun.com/news/279447329/guarding-green-rainforest-in-china-southernmost-province",
-          "domain": "shanghaisun.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "Makinde image on campaign balloon stirs controversy at Tinubu Ibadan rally",
-          "url": "https://www.vanguardngr.com/2026/11/makindes-image-on-campaign-balloon-stirs-controversy-at-tinubus-ibadan-rally-2/",
-          "domain": "vanguardngr.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "Nigeria"
-        },
-        {
-          "title": "Labor pushes back on Trump data centre tax threat",
-          "url": "https://www.maitlandmercury.com.au/story/9395877/labor-pushes-back-on-trump-data-centre-tax-threat/",
-          "domain": "maitlandmercury.com.au",
-          "seendate": "20261122T003000Z",
+          "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
+          "url": "https://www.theleader.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "theleader.com.au",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "Australia"
         },
         {
-          "title": "Lorne Gunter : Carney Liberals too eager to ink EV deal with China",
-          "url": "https://edmontonjournal.com/opinion/columnists/lorne-gunter-carney-liberals-too-eager-to-ink-ev-deal-with-china",
-          "domain": "edmontonjournal.com",
-          "seendate": "20261122T003000Z",
+          "title": "Australia falls short in Asia as US power declines",
+          "url": "https://www.nynganobserver.com.au/story/9396089/australia-falls-short-in-asia-as-us-power-declines/",
+          "domain": "nynganobserver.com.au",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "Canada"
+          "sourcecountry": "Australia"
         },
         {
-          "title": "Iran attacks US bases in Bahrain as its tankers get ready to break the US blockade",
-          "url": "https://www.euronews.com/2026/11/21/iran-attacks-us-bases-in-bahrain-as-its-tankers-get-ready-to-break-the-us-blockade",
-          "domain": "euronews.com",
-          "seendate": "20261122T003000Z",
+          "title": "a2 Milk Shares Downgraded , As Pressure Mounts",
+          "url": "https://thebull.com.au/news/a2-milk-shares-downgraded-as-pressure-mounts/",
+          "domain": "thebull.com.au",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Australia"
         },
         {
-          "title": "RAF next jet perhaps last crewed fighter , says Air Chief Marshal | The Wiltshire Gazette and Herald",
-          "url": "https://www.gazetteandherald.co.uk/news/national/26751287.rafs-next-jet-perhaps-last-crewed-fighter-says-air-chief-marshal/",
-          "domain": "gazetteandherald.co.uk",
-          "seendate": "20261122T003000Z",
+          "title": "Kim Jong - un is ghosting Trump while building North Korea nuclear stockpile",
+          "url": "https://www.nzherald.co.nz/world/kim-jong-un-is-ghosting-trump-while-building-north-koreas-nuclear-stockpile/F4PYIRLLBNAKBNSSLVVRXE4HQQ/",
+          "domain": "nzherald.co.nz",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "United Kingdom"
+          "sourcecountry": "New Zealand"
         },
         {
-          "title": "Fear of Rahul Gandhi that ministers are busy tweeting at AM : Supriya Shrinate hits out at Kiren Rijiju",
-          "url": "http://www.shanghaisun.com/news/279447411/fear-of-rahul-gandhi-that-ministers-are-busy-tweeting-at-am-supriya-shrinate-hits-out-at-kiren-rijiju",
-          "domain": "shanghaisun.com",
-          "seendate": "20261122T003000Z",
+          "title": "NAVI crowned Brawl Stars World Champions as 7 , 000 fans celebrate historic World Finals in Tokyo – Thailand Business News",
+          "url": "https://www.thailand-business-news.com/pr-news/navi-crowned-brawl-stars-world-champions-as-7000-fans-celebrate-historic-world-finals-in-tokyo",
+          "domain": "thailand-business-news.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "China"
+          "sourcecountry": "Thailand"
         },
         {
-          "title": "Lakshya Sen loses Hong Kong Open semi - final to Anders Antonsen",
-          "url": "http://www.shanghaisun.com/news/279447573/lakshya-sen-loses-hong-kong-open-semi-final-to-anders-antonsen",
-          "domain": "shanghaisun.com",
-          "seendate": "20261122T003000Z",
+          "title": "India eyeing best - ever medal haul at World Para Powerlifting Championships , says head coach JP Singh",
+          "url": "http://www.greekherald.com/news/279449001/india-eyeing-best-ever-medal-haul-at-world-para-powerlifting-championships-says-head-coach-jp-singh",
+          "domain": "greekherald.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "China"
+          "sourcecountry": "Greece"
         },
         {
-          "title": "Princeton neuroscientist detained by ICE at D . C . airport – NBC Los Angeles",
-          "url": "https://www.nbclosangeles.com/news/national-international/princeton-neuroscientist-detained-ice-reagan-airport-conference/3973826/",
-          "domain": "nbclosangeles.com",
-          "seendate": "20261122T003000Z",
+          "title": "Echidna | Sandpapergate saga crowds out major news | Yass Tribune",
+          "url": "https://www.yasstribune.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "yasstribune.com.au",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Australia"
         },
         {
-          "title": "India edge past South Korea 2 - 1 to register second consecutive win at Madhya Pradesh Women Asian Champions Trophy Bhopal 2026",
-          "url": "http://www.shanghaisun.com/news/279447574/india-edge-past-south-korea-2-1-to-register-second-consecutive-win-at-madhya-pradesh-women-asian-champions-trophy-bhopal-2026",
-          "domain": "shanghaisun.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "Taiwan warns Canada Carney that deeper ties with China come with risks",
-          "url": "https://www.wsbradio.com/news/business/taiwan-warns-canada/2S7JLF54OE25TKOZNCMHJE6J5Y/",
-          "domain": "wsbradio.com",
-          "seendate": "20261122T003000Z",
+          "title": "No one wants to talk with a gun pointed at their head : Shashi Tharoor says India - Pakistan dialogue possible only after dismantling of terror infrastructure",
+          "url": "http://www.heraldglobe.com/news/279449035/no-one-wants-to-talk-with-a-gun-pointed-at-their-head-shashi-tharoor-says-india-pakistan-dialogue-possible-only-after-dismantling-of-terror-infrastructure",
+          "domain": "heraldglobe.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Alarms ring as military drone tenders specify China - linked parts , Indian industry cites security risk",
-          "url": "https://timesofindia.indiatimes.com/defence/news/alarms-ring-as-military-drone-tenders-specify-china-linked-parts-indian-industry-cites-security-risk/articleshow/136062501.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261121T203000Z",
+          "title": "US - China power gap at narrowest as Washington loses ground , Lowy report finds - 23 - Nov - 2026",
+          "url": "https://home.nzcity.co.nz/news/article.aspx?id=458460",
+          "domain": "home.nzcity.co.nz",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "New Zealand"
+        },
+        {
+          "title": "German strikes hit Mercedes and BMW",
+          "url": "https://www.aol.com/articles/german-strikes-hit-mercedes-bmw-151209000.html",
+          "domain": "aol.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "US intelligence chief says Trump description of Putin as a friend is entirely appropriate",
+          "url": "https://www.goshennews.com/news/national_news/us-intelligence-chief-says-trumps-description-of-putin-as-a-friend-is-entirely-appropriate/article_b0b21679-0b5a-587d-81aa-446d93a9b20c.html",
+          "domain": "goshennews.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "First SCO Civilisational Dialogue Forum concludes with adoption of",
+          "url": "http://www.bignewsnetwork.com/news/279449139/first-sco-civilisational-dialogue-forum-concludes-with-adoption-of-indraprastha-communique-to-advance-cultural-cooperation",
+          "domain": "bignewsnetwork.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Echidna | Sandpapergate saga crowds out major news | Nyngan Observer",
+          "url": "https://www.nynganobserver.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "nynganobserver.com.au",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Pernod Ricard weighs India IPO as market closes in on US in global sales",
+          "url": "https://economictimes.indiatimes.com/industry/cons-products/liquor/pernod-ricard-weighs-india-ipo-as-market-closes-in-on-us-in-global-sales/articleshow/136081688.cms",
+          "domain": "economictimes.indiatimes.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "China military backing to Pak raises two - front threat for India : US report",
-          "url": "https://www.tribuneindia.com/news/india/chinas-military-backing-to-pak-raises-two-front-threat-for-india-us-report/",
-          "domain": "tribuneindia.com",
-          "seendate": "20261121T203000Z",
+          "title": "We are very excited about championship : Jhandu Kumar , Ashok eye medals at World Para Powerlifting Championships 2026",
+          "url": "http://www.arabherald.com/news/279448886/we-are-very-excited-about-championship-jhandu-kumar-ashok-eye-medals-at-world-para-powerlifting-championships-2026",
+          "domain": "arabherald.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "Syria"
         },
         {
-          "title": "Former White House press secretary faces investigation | The Highland County Press",
-          "url": "https://highlandcountypress.com/headlines/former-white-house-press-secretary-faces-investigation",
-          "domain": "highlandcountypress.com",
-          "seendate": "20261121T203000Z",
+          "title": "Howard Lutnick was on the chopping block until he donated to Trump library : report",
+          "url": "https://www.aol.com/articles/howard-lutnick-chopping-block-until-171058000.html",
+          "domain": "aol.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Disclose 100 % deal with Trump | Daily Tribune",
-          "url": "https://tribune.net.ph/2026/11/21/disclose-100-deal-with-trump",
-          "domain": "tribune.net.ph",
-          "seendate": "20261121T203000Z",
+          "title": "Breakfast briefing : Waiting for the herd",
+          "url": "https://www.interest.co.nz/economy/141180/eyes-wall-street-japan-inflation-china-foreign-direct-investment-inflows-slow-taiwan",
+          "domain": "interest.co.nz",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "Philippines"
+          "sourcecountry": "New Zealand"
         },
         {
-          "title": "Scientists Have Discovered an Unusual 405 , 000 - Year Cycle in Earth Ancient Storms",
-          "url": "http://www.bgnes.com/science/scientists-have-discovered-an-unusual-405-000-year-cycle-in-earth-s-ancient-storms",
-          "domain": "bgnes.com",
-          "seendate": "20261121T203000Z",
+          "title": "Echidna | Sandpapergate saga crowds out major news | Daily Liberal",
+          "url": "https://www.dailyliberal.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "dailyliberal.com.au",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "Bulgaria"
+          "sourcecountry": "Australia"
         },
         {
-          "title": "All 25 Beautiful Winners From the Black and White Photo Awards 2026",
-          "url": "https://petapixel.com/2026/11/21/all-25-beautiful-bw-winners-from-the-black-and-white-photo-awards-2026/",
-          "domain": "petapixel.com",
-          "seendate": "20261121T203000Z",
+          "title": "Echidna | Sandpapergate saga crowds out major news | Camden Haven Courier",
+          "url": "https://www.camdencourier.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "camdencourier.com.au",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Froma Harrop - The Mining Gazette",
+          "url": "https://www.mininggazette.com/opinion/columns/2026/11/froma-harrop-71/",
+          "domain": "mininggazette.com",
+          "seendate": "20261122T163000Z",
           "language": "English",
           "sourcecountry": "United States"
         }
@@ -349,10 +349,10 @@
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T07:29:44.279Z",
-      "checkedAt": "2026-11-22T13:16:41.053Z",
+      "checkedAt": "2026-11-22T19:11:40.193Z",
       "articles": [
         {
           "title": "In Ukraine , the fight to keep winter outside begins with a broken window – Winnipeg Free Press",
@@ -518,171 +518,171 @@
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-22T01:26:50.818Z",
-      "checkedAt": "2026-11-22T13:16:41.053Z",
+      "error": null,
+      "fetchedAt": "2026-11-22T19:07:32.257Z",
+      "checkedAt": "2026-11-22T19:07:32.257Z",
       "articles": [
         {
-          "title": "Biden - era spending law found unconstitutional by federal appeals court",
-          "url": "https://www.kimt.com/news/biden-era-spending-law-found-unconstitutional-by-federal-appeals-court/article_5dad779d-ddea-578b-980d-f31123d0e7e1.html",
-          "domain": "kimt.com",
-          "seendate": "20261122T003000Z",
+          "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
+          "url": "https://www.theleader.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "theleader.com.au",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Australia"
         },
         {
-          "title": "Trump makes late - day move seen as ploy to kneecap Dem looming probes",
-          "url": "https://www.rawstory.com/trump-2678486613/",
-          "domain": "rawstory.com",
-          "seendate": "20261122T003000Z",
+          "title": "Kim Jong - un is ghosting Trump while building North Korea nuclear stockpile",
+          "url": "https://www.nzherald.co.nz/world/kim-jong-un-is-ghosting-trump-while-building-north-koreas-nuclear-stockpile/F4PYIRLLBNAKBNSSLVVRXE4HQQ/",
+          "domain": "nzherald.co.nz",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "New Zealand"
         },
         {
-          "title": "Drones hit Russian cargo ship in Baltic , Finland tightens security",
-          "url": "https://timesofindia.indiatimes.com/world/europe/drones-hit-russian-cargo-ship-in-baltic-finland-tightens-security/articleshow/136065032.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Denmark Expels Russian Attaché Over Foiled Plot to Kill Rapper",
-          "url": "https://www.hngn.com/articles/273915/20261121/denmark-expels-russian-attache-over-foiled-plot-kill-rapper.htm",
-          "domain": "hngn.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "India , Bulgaria discuss bilateral ties , IMEC , Black Sea situation",
-          "url": "https://www.hindustantimes.com/india-news/india-bulgaria-discuss-bilateral-ties-imec-black-sea-situation-101795289073921.html",
-          "domain": "hindustantimes.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "RAF building its last manned fighter jet as drones take over",
-          "url": "https://www.telegraph.co.uk/news/2026/11/21/raf-building-last-manned-fighter-jet-drones-harv-smyth/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
+          "title": "Three killed after Russian attack near Ukraine capital strikes apartment building",
+          "url": "https://www.surreycomet.co.uk/news/national/26751822.three-killed-russian-attack-near-ukraines-capital-strikes-apartment-building/",
+          "domain": "surreycomet.co.uk",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United Kingdom"
         },
         {
-          "title": "31 Years After Dayton : How Milorad Dodik Is Threatening Stability in Bosnia and the Western Balkans",
-          "url": "http://www.bgnes.com/no-filter/31-years-after-dayton-how-milorad-dodik-is-threatening-stability-in-bosnia-and-the-western-balkans",
-          "domain": "bgnes.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "Bulgaria"
-        },
-        {
-          "title": "Russian triple - tap attack in Ukraine kills emergency worker and 7 - year - old in Zelensky home city - LocalNews8 . com",
-          "url": "https://localnews8.com/news/national-world/cnn-world/2026/11/21/russian-triple-tap-attack-in-ukraine-kills-emergency-worker-and-7-year-old-in-zelenskys-home-city/",
-          "domain": "localnews8.com",
-          "seendate": "20261121T203000Z",
+          "title": "Suspected Ukrainian sea drones hit Russian warship at Benghazi naval base , Libyan officials say",
+          "url": "https://mymotherlode.com/news/world/11331550/a-suspected-drone-strike-hits-a-russian-vessel-in-libya.html",
+          "domain": "mymotherlode.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Poland failure to call Putin bluff exposes Nato fragility",
-          "url": "https://www.telegraph.co.uk/world-news/2026/11/21/polands-failure-to-call-putins-bluff-exposes-nato-fragility/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
+          "title": "Echidna | Sandpapergate saga crowds out major news | Yass Tribune",
+          "url": "https://www.yasstribune.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "yasstribune.com.au",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "United Kingdom"
+          "sourcecountry": "Australia"
         },
         {
-          "title": "NATO will defend every inch of Polish territory , Rutte says",
-          "url": "https://www.hindustantimes.com/world-news/us-news/nato-will-defend-every-inch-of-polish-territory-rutte-says-101795288086921.html",
-          "domain": "hindustantimes.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "FBI criminal database hacked for second time in three months",
-          "url": "https://www.telegraph.co.uk/us/news/2026/11/21/fbi-criminal-database-hacked-second-time-trump-cyber-attack/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "RAF fighter jets wont need pilots for much longer",
-          "url": "https://www.telegraph.co.uk/news/2026/11/21/raf-fighter-jets-wont-need-pilots-much-longer/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Wes Streeting : Zelensky is our generation Churchill",
-          "url": "https://www.telegraph.co.uk/world-news/2026/11/21/streeting-zelensky-is-our-generations-churchill/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Russian cargo ship bound for Kaliningrad hit by drones near Finland",
-          "url": "https://www.telegraph.co.uk/world-news/2026/11/21/russian-cargo-ship-bound-for-kaliningrad-hit-by-drones-near/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Fawning MAGA Senator Mike Lee Puts Wild Spin on Trump China Summit Putin Bromance",
-          "url": "https://www.thedailybeast.com/fawning-maga-senator-mike-lee-puts-wild-spin-on-trumps-china-summit-putin-bromance",
-          "domain": "thedailybeast.com",
-          "seendate": "20261121T203000Z",
+          "title": "Russian attack near Ukraine capital strikes apartment building , killing 2",
+          "url": "https://www.wtkr.com/world/russian-attack-near-ukraines-capital-strikes-apartment-building-killing-2",
+          "domain": "wtkr.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Russian strikes kill child , paramedic in Zelenskyy hometown ; rescuers targeted",
-          "url": "https://nebraska.tv/news/nation-world/russian-strikes-kill-child-paramedic-zelenskyys-hometown-rescuers-targeted",
-          "domain": "nebraska.tv",
-          "seendate": "20261121T163000Z",
+          "title": "The Iranian theocracy is the scorpion We must not play its frog",
+          "url": "https://torontosun.com/opinion/columnists/iranian-theocracy-scorpion-we-must-not-play-its-frog",
+          "domain": "torontosun.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Poland says Russia allegedly twice tried to kill a Ukrainian American rapper",
+          "url": "https://mymotherlode.com/news/world/11331788/poland-says-russia-allegedly-twice-tried-to-kill-a-ukrainian-american-rapper.html",
+          "domain": "mymotherlode.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Killer robots : U . N . talks fall short of hopes for legally binding rules",
-          "url": "https://www.northcountrypublicradio.org/news/npr/nx-s1-6047916/killer-robots-u-n-talks-fall-short-of-hopes-for-legally-binding-rules",
-          "domain": "northcountrypublicradio.org",
-          "seendate": "20261121T163000Z",
+          "title": "Russian attack near Ukraine capital strikes apartment building , killing 3 and burying others",
+          "url": "https://www.news-gazette.com/news/nation-world/russian-attack-near-ukraines-capital-strikes-apartment-building-killing-3-and-burying-others/article_6d0c35cc-139b-51b3-87d4-02ea5c5be082.html",
+          "domain": "news-gazette.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Penrith and Solway MP : Fuel support data should be public",
-          "url": "https://www.nwemail.co.uk/news/26745936.penrith-solway-mp-fuel-support-data-public/",
-          "domain": "nwemail.co.uk",
-          "seendate": "20261121T163000Z",
+          "title": "India , Netherlands eye deeper strategic ties across technology , defence , renewable energy : EAM during talks with Dutch FM",
+          "url": "http://www.heraldglobe.com/news/279449135/india-netherlands-eye-deeper-strategic-ties-across-technology-defence-renewable-energy-eam-during-talks-with-dutch-fm",
+          "domain": "heraldglobe.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Ukraine Hits Russian Warship and Naval Base ; Brings the Baltic Fleet Backyard Into Play",
+          "url": "https://redstate.com/streiff/2026/11/22/ukraine-hits-russian-warship-and-naval-base-brings-the-baltic-fleets-backyard-into-play-n2209678",
+          "domain": "redstate.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Echidna | Sandpapergate saga crowds out major news | Nyngan Observer",
+          "url": "https://www.nynganobserver.com.au/story/9395335/echidna-sandpapergate-saga-crowds-out-major-news/",
+          "domain": "nynganobserver.com.au",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Three killed after Russian attack near Ukraine capital strikes apartment building | Dumbarton and Vale of Leven Reporter",
+          "url": "https://www.dumbartonreporter.co.uk/news/national/26751822.three-killed-russian-attack-near-ukraines-capital-strikes-apartment-building/",
+          "domain": "dumbartonreporter.co.uk",
+          "seendate": "20261122T184500Z",
           "language": "English",
           "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Allies stand with Poland after airspace breach by Russia : NATO chief",
-          "url": "https://aa.com.tr/en/world/allies-stand-with-poland-after-airspace-breach-by-russia-nato-chief/4133047",
-          "domain": "aa.com.tr",
-          "seendate": "20261121T163000Z",
+          "title": "US intelligence chief says Trump description of Putin as a friend is entirely appropriate",
+          "url": "http://www.goskagit.com/news/nation/us-intelligence-chief-says-trumps-description-of-putin-as-a-friend-is-entirely-appropriate/article_420d5605-81d0-5963-b6a4-5026a1d3a7bc.html",
+          "domain": "goskagit.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "Turkey"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Who is Vidhya Parshuramkar ? IIT graduate millet innovation earns her a place on TIME 100 Next India 2026 list",
-          "url": "https://www.livemint.com/news/trends/who-is-vidhya-parshuramkar-iit-graduate-s-millet-innovation-earns-her-a-place-on-time-s-100-next-india-2026-list-11795271566009.html",
-          "domain": "livemint.com",
-          "seendate": "20261121T163000Z",
+          "title": "Appreciate PM Modi appeal to Russia to stop Ukraine war , return to talks : Netherlands FM",
+          "url": "http://www.bignewsnetwork.com/news/279449171/appreciate-pm-modi-appeal-to-russia-to-stop-ukraine-war-return-to-talks-netherlands-fm",
+          "domain": "bignewsnetwork.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Arab News | Libya eastern government suspects drone attack caused explosion on Russian ship in Benghazi",
+          "url": "https://www.arabnews.com/middle-east/libyas-eastern-government-suspects-drone-attack-caused-explosion-on-russian-ship-in-benghazi-3013570",
+          "domain": "arabnews.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "Saudi Arabia"
+        },
+        {
+          "title": "Novi ruski napad dronovima na kijevsku regiju , ima mrtvih",
+          "url": "https://www.tportal.hr/vijesti/clanak/novi-ruski-napad-dronovima-na-kijevsku-regiju-ima-mrtvih-20261122",
+          "domain": "tportal.hr",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "Croatia"
+        },
+        {
+          "title": "Ukrainians search for missing after Russia strikes Kyiv region",
+          "url": "https://www.bbc.co.uk/news/videos/cre3dvd1k9y1o",
+          "domain": "bbc.co.uk",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Howard Lutnick was on the chopping block until he donated to Trump library : report",
+          "url": "https://www.aol.com/articles/howard-lutnick-chopping-block-until-171058000.html",
+          "domain": "aol.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "India , Netherlands can cooperate to reduce dependence on energy , critical minerals : Dutch FM",
+          "url": "http://www.bignewsnetwork.com/news/279449172/india-netherlands-can-cooperate-to-reduce-dependence-on-energy-critical-minerals-dutch-fm",
+          "domain": "bignewsnetwork.com",
+          "seendate": "20261122T184500Z",
+          "language": "English",
+          "sourcecountry": "United States"
         }
       ]
     },
@@ -692,7 +692,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-21T19:07:50.417Z",
-      "checkedAt": "2026-11-22T13:15:08.584Z",
+      "checkedAt": "2026-11-22T19:06:46.356Z",
       "articles": [
         {
           "title": "Taiwan flags improper treatment by China during APEC meetings",
