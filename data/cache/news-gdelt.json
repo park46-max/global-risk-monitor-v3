@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-21T22:00:35.566Z",
- "checkedAt": "2026-11-21T22:00:35.566Z",
- "lastSuccessAt": "2026-11-21T22:00:35.566Z",
+ "generatedAt": "2026-11-22T01:35:48.595Z",
+ "checkedAt": "2026-11-22T01:35:48.595Z",
+ "lastSuccessAt": "2026-11-22T01:35:48.595Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 12,
-  "groupedDuplicates": 42,
+  "groupedDuplicates": 23,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,11 +90,10 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-21T22:00:35.566Z",
-   "lastSuccessAt": "2026-11-21T22:00:35.566Z",
+   "checkedAt": "2026-11-22T01:35:48.595Z",
+   "lastSuccessAt": "2026-11-22T01:35:48.595Z",
    "error": null,
-   "latestFile": "20261121220000",
-   "warning": "2 of 11 files could not be read this run"
+   "latestFile": "20261122014500"
   }
  },
  "files": {
@@ -192,7 +191,19 @@
   "20261121211500": "ok",
   "20261121213000": "missing",
   "20261121214500": "missing",
-  "20261121220000": "ok"
+  "20261121220000": "ok",
+  "20261121230000": "ok",
+  "20261121231500": "ok",
+  "20261121233000": "ok",
+  "20261121234500": "ok",
+  "20261122000000": "ok",
+  "20261122001500": "ok",
+  "20261122003000": "ok",
+  "20261122004500": "ok",
+  "20261122010000": "ok",
+  "20261122011500": "ok",
+  "20261122013000": "ok",
+  "20261122014500": "ok"
  },
  "items": [
   {
@@ -984,6 +995,86 @@
    }
   },
   {
+   "title": "GAO Finds Pentagon Lacks Coordinated View of Military Space Supply Chain Risks – SatNews",
+   "url": "https://satnews.com/2026/11/21/gao-finds-pentagon-lacks-coordinated-view-of-military-space-supply-chain-risks/",
+   "publisher": "satnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T23:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "institution",
+     "terms": [
+      "Pentagon"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "supply chain"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Iran's threats 'real and actionable': MP warns US must choose missiles or diplomacy",
+   "url": "https://www.presstv.co.uk/Detail/2026/11/21/781288/iranian-mp-warns-us-tehrans-threats-real-and-actionable",
+   "publisher": "presstv.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T01:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missiles"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomacy"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "US Treasury presses Singapore, Malaysia on Iran sanctions compliance - Economy",
    "url": "http://www.thejakartapost.com/business/2026/11/21/us-treasury-presses-singapore-malaysia-on-iran-sanctions-compliance",
    "publisher": "thejakartapost.com",
@@ -1079,90 +1170,6 @@
       "label": "Diplomacy",
       "terms": [
        "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Trump says nuclear arms limits with China, Russia will be very hard to achieve",
-   "url": "https://tribune.com.pk/story/2641340/trump-says-nuclear-arms-limits-with-china-russia-will-be-very-hard-to-achieve",
-   "publisher": "tribune.com.pk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T08:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "nuclear"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russia Pushes Back Against US Idea of NATO-Style Security Guarantees for Ukraine",
-   "url": "https://english.aawsat.com/world/5343506-russia-pushes-back-against-us-idea-nato-style-security-guarantees-ukraine",
-   "publisher": "aawsat.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T08:49:00.000Z",
-   "seenByGdelt": "2026-11-20T10:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:51:58.387Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO"
       ]
      }
     ]
@@ -1779,85 +1786,6 @@
       "label": "Security",
       "terms": [
        "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Pretty certain Russia would not accept an Article 5-style security guarantee for Ukraine.. NATO is the Reason for the war in the first place.",
-   "url": "https://www.investmentwatchblog.com/pretty-certain-russia-would-not-accept-an-article-5-style-security-guarantee-for-ukraine-nato-is-the-reason-for-the-war-in-the-first-place/",
-   "publisher": "investmentwatchblog.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T03:59:00.000Z",
-   "seenByGdelt": "2026-11-21T08:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO",
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russia Threatens to Derail Ukraine Peace Talks if EU's Kaja Kallas Participates",
-   "url": "https://www.kyivpost.com/post/90781",
-   "publisher": "kyivpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T05:41:00.000Z",
-   "seenByGdelt": "2026-11-21T09:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "peace talks"
       ]
      }
     ]
@@ -3435,6 +3363,45 @@
    }
   },
   {
+   "title": "Russia Ukraine War",
+   "url": "https://www.goshennews.com/news/national_news/russia-ukraine-war/image_a441c755-348d-5c87-b605-4da9b8b7323e.html",
+   "publisher": "goshennews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T16:55:00.000Z",
+   "seenByGdelt": "2026-11-21T23:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Ukrainian strike kills six civilians in frontline Russian region",
    "url": "http://www.russiaherald.com/news/279447255/ukrainian-strike-kills-six-civilians-in-frontline-russian-region-officials",
    "publisher": "russiaherald.com",
@@ -3909,6 +3876,45 @@
    }
   },
   {
+   "title": "Russia Is Losing 35,000 Troops a Month in Ukraine — and Replacing Just 25,000",
+   "url": "https://redstate.com/wardclark/2026/11/21/russia-is-losing-35000-troops-a-month-in-ukraineand-replacing-just-25000-n2209662",
+   "publisher": "redstate.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T20:29:00.000Z",
+   "seenByGdelt": "2026-11-21T23:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "troops"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "China's military backing to Pak raises two-front threat for India: US report",
    "url": "https://www.tribuneindia.com/news/india/chinas-military-backing-to-pak-raises-two-front-threat-for-india-us-report/",
    "publisher": "tribuneindia.com",
@@ -3942,6 +3948,51 @@
       "label": "Security",
       "terms": [
        "military"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Why China-Russia-U.S. summit hailed historic for world stability, peace--China Economic Net",
+   "url": "http://en.ce.cn/main/latest/202611/t20261122_3301742.shtml",
+   "publisher": "en.ce.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T01:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
       ]
      }
     ]
@@ -4055,81 +4106,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "PCO urges OFWs in Taiwan to exercise right to information",
-   "url": "https://www.manilatimes.net/2026/11/21/news/pco-urges-ofws-in-taiwan-to-exercise-right-to-information/2475476",
-   "publisher": "manilatimes.net",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T10:34:00.000Z",
-   "seenByGdelt": "2026-11-21T12:45:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taipei mayoral candidates Chiang, Shen debate child, food, water safety",
-   "url": "https://focustaiwan.tw/politics/202611210014",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T10:48:00.000Z",
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan welcomes 4 allies' support for inclusion in U.N. climate talks",
-   "url": "https://focustaiwan.tw/politics/202611210016",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T11:37:00.000Z",
-   "seenByGdelt": "2026-11-21T16:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T16:06:06.880Z",
-   "lastSeenAt": "2026-11-21T16:06:06.880Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
   },
   {
    "title": "Taiwan parties ramp up campaigning one week before local elections",
@@ -4539,9 +4515,23 @@
      "url": "http://www.reflector.com/news/national/taiwan-warns-canada-s-carney-that-deeper-ties-with-china-come-with-risks/article_6f46042a-a20d-567d-b481-8c0d1e832d37.html",
      "published": "2026-11-21T20:48:00.000Z",
      "seenByGdelt": "2026-11-21T22:00:00.000Z"
+    },
+    {
+     "publisher": "the-messenger.com",
+     "publisherId": "gdelt",
+     "url": "https://www.the-messenger.com/news/world/article_6b25a76d-caa8-5e66-8626-7df412a12768.html",
+     "published": "2026-11-21T20:48:00.000Z",
+     "seenByGdelt": "2026-11-21T23:15:00.000Z"
+    },
+    {
+     "publisher": "manilatimes.net",
+     "publisherId": "gdelt",
+     "url": "https://www.manilatimes.net/2026/11/22/world/taiwan-warns-canadas-carney-that-deeper-ties-with-china-come-with-risks/2475573",
+     "published": "2026-11-21T21:00:00.000Z",
+     "seenByGdelt": "2026-11-21T23:15:00.000Z"
     }
    ],
-   "variantsTotal": 3
+   "variantsTotal": 5
   },
   {
    "title": "Taiwan warns Canada faces the China risks Carney has cautioned against",
@@ -4967,6 +4957,97 @@
    },
    "firstSeenAt": "2026-11-21T22:00:35.566Z",
    "lastSeenAt": "2026-11-21T22:00:35.566Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "The AI sell-off now has Taiwan taking emergency steps to calm its chip-heavy market",
+   "url": "https://www.aol.com/articles/ai-sell-off-now-taiwan-220252000.html",
+   "publisher": "aol.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-21T22:02:00.000Z",
+   "seenByGdelt": "2026-11-22T00:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "One-China principle unshakable, DPP's \"Taiwan independence\" attempts doomed to fail: experts-Xinhua",
+   "url": "https://english.news.cn/20261121/0947bb184b09496587ff5cec4cadd3ec/c.html",
+   "publisher": "english.news.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-21T23:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "variants": [
+    {
+     "publisher": "en.ce.cn",
+     "publisherId": "gdelt",
+     "url": "http://en.ce.cn/main/latest/202611/t20261122_3301744.shtml",
+     "published": null,
+     "seenByGdelt": "2026-11-22T01:00:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "Taiwan's stock-market defense: tougher short-sale rules and a state buyer · Digg",
+   "url": "https://digg.com/world-business/wtzjw715",
+   "publisher": "digg.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T00:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T01:35:48.595Z",
    "relevance": {
     "score": 0,
     "tier": "other",
