@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-22T01:36:09.374Z",
- "lastSuccessAt": "2026-11-22T01:36:09.374Z",
- "checkedAt": "2026-11-22T01:36:09.374Z",
+ "generatedAt": "2026-11-22T04:19:57.158Z",
+ "lastSuccessAt": "2026-11-22T04:19:57.158Z",
+ "checkedAt": "2026-11-22T04:19:57.158Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 140,
-   "lastSuccessAt": "2026-11-22T01:35:48.595Z",
-   "checkedAt": "2026-11-22T01:35:48.595Z",
+   "items": 141,
+   "lastSuccessAt": "2026-11-22T04:19:37.224Z",
+   "checkedAt": "2026-11-22T04:19:37.224Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,7 +22,7 @@
   }
  },
  "itemStats": {
-  "read": 140,
+  "read": 141,
   "noSource": 0,
   "noTime": 0,
   "outsideWindow": 0,
@@ -32,18 +32,18 @@
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-22T01:36:09.374Z",
+   "generatedAt": "2026-11-22T04:19:57.158Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T01:36:09.374Z",
-    "to": "2026-11-22T01:36:09.374Z"
+    "from": "2026-11-19T04:19:57.158Z",
+    "to": "2026-11-22T04:19:57.158Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 46,
+   "reportsFound": 47,
    "overview": {
     "kind": "fact",
-    "text": "46 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-22 01:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): diplomacy 9, security 9, sanctions and trade 4, economic policy 1.",
+    "text": "47 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-22 01:18 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8, sanctions and trade 4, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -163,22 +163,6 @@
    ],
    "why": [
     {
-     "rule": "topic:diplomacy",
-     "kind": "analysis",
-     "evidence": [
-      2,
-      3,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      13
-     ],
-     "text": "9 of the 12 listed reports use diplomacy wording (summit, diplomacy, nuclear talks, envoy) [2][3][5][6][7][8][9][10][13]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
      "rule": "topic:security",
      "kind": "analysis",
      "evidence": [
@@ -190,9 +174,25 @@
       7,
       8,
       9,
+      10,
+      13
+     ],
+     "text": "10 of the 12 listed reports use security wording (war, nuclear, weapons, missiles) [1][2][3][4][5][7][8][9][10][13]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
       10
      ],
-     "text": "9 of the 12 listed reports use security wording (war, nuclear, weapons, missiles) [1][2][3][4][5][7][8][9][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "8 of the 12 listed reports use diplomacy wording (summit, diplomacy, nuclear talks, envoy) [2][3][5][6][7][8][9][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -336,11 +336,11 @@
     },
     {
      "n": 13,
-     "title": "Why China-Russia-U.S. summit hailed historic for world stability, peace--China Economic Net",
-     "publisher": "en.ce.cn",
-     "url": "http://en.ce.cn/main/latest/202611/t20261122_3301742.shtml",
-     "time": "2026-11-22T01:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Russia dusts off pre-war demands as US floats European security at talks",
+     "publisher": "theshillongtimes.com",
+     "url": "https://theshillongtimes.com/2026/11/22/russia-dusts-off-pre-war-demands-as-us-floats-european-security-at-talks/",
+     "time": "2026-11-22T01:18:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
@@ -349,11 +349,11 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-22T01:36:09.374Z",
+   "generatedAt": "2026-11-22T04:19:57.158Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T01:36:09.374Z",
-    "to": "2026-11-22T01:36:09.374Z"
+    "from": "2026-11-19T04:19:57.158Z",
+    "to": "2026-11-22T04:19:57.158Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
@@ -671,18 +671,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-22T01:36:09.374Z",
+   "generatedAt": "2026-11-22T04:19:57.158Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T01:36:09.374Z",
-    "to": "2026-11-22T01:36:09.374Z"
+    "from": "2026-11-19T04:19:57.158Z",
+    "to": "2026-11-22T04:19:57.158Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 53,
+   "reportsFound": 54,
    "overview": {
     "kind": "fact",
-    "text": "53 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 01:00 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8.",
+    "text": "54 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 03:15 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8.",
     "evidence": [
      1,
      3,
@@ -813,12 +813,12 @@
       5,
       6,
       7,
+      8,
       9,
-      11,
-      12,
-      13
+      10,
+      12
      ],
-     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][3][4][5][6][7][9][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][3][4][5][6][7][8][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -830,10 +830,10 @@
       5,
       6,
       7,
-      8,
-      10
+      11,
+      13
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (foreign minister, summit, peace talks, ambassador) [1][3][4][5][6][7][8][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "8 of the 12 listed reports use diplomacy wording (foreign minister, summit, peace talks, ambassador) [1][3][4][5][6][7][11][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -930,6 +930,33 @@
     },
     {
      "n": 8,
+     "title": "'War is spilling over': Finland accuses Ukraine of hitting Russian vessel in Baltic Sea",
+     "publisher": "indiatimes.com",
+     "url": "https://timesofindia.indiatimes.com/world/europe/war-is-spilling-over-finland-accuses-ukraine-of-hitting-russian-vessel-in-baltic-sea/articleshow/136065990.cms",
+     "time": "2026-11-22T03:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Ukraine war briefing: Russian cargo ship hit by drone in Baltic Sea as Finland PM says conflict 'spilling over' | Ukraine",
+     "publisher": "theguardian.com",
+     "url": "https://www.theguardian.com/world/2026/nov/22/ukraine-war-briefing-russian-cargo-ship-hit-by-drone-in-baltic-sea-as-finland-pm-says-conflict-spilling-over",
+     "time": "2026-11-22T03:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Russia dusts off pre-war demands as US floats European security at talks",
+     "publisher": "theshillongtimes.com",
+     "url": "https://theshillongtimes.com/2026/11/22/russia-dusts-off-pre-war-demands-as-us-floats-european-security-at-talks/",
+     "time": "2026-11-22T01:18:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
      "title": "Why China-Russia-U.S. summit hailed historic for world stability, peace--China Economic Net",
      "publisher": "en.ce.cn",
      "url": "http://en.ce.cn/main/latest/202611/t20261122_3301742.shtml",
@@ -938,7 +965,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 12,
      "title": "Russia Is Losing 35,000 Troops a Month in Ukraine — and Replacing Just 25,000",
      "publisher": "redstate.com",
      "url": "https://redstate.com/wardclark/2026/11/21/russia-is-losing-35000-troops-a-month-in-ukraineand-replacing-just-25000-n2209662",
@@ -947,38 +974,11 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 13,
      "title": "Moscow Slams the Door on Kallas as Ukraine Peace Talks Negotiator",
      "publisher": "latintimes.com",
      "url": "https://www.latintimes.com/russia-rejects-kaja-kallas-eu-envoy-ukraine-talks-601668",
      "time": "2026-11-21T20:19:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Project Aerodynamic: How CIA Used Ukraine As A Platform For Covert War Against Russia",
-     "publisher": "zerohedge.com",
-     "url": "https://www.zerohedge.com/geopolitical/project-aerodynamic-how-cia-used-ukraine-platform-covert-war-against-russia",
-     "time": "2026-11-21T20:00:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "After Oleshky ceasefire, Melania Trump wants more Russia-Ukraine ceasefires before Christmas; Zelenskyy reacts",
-     "publisher": "indiatimes.com",
-     "url": "https://timesofindia.indiatimes.com/world/us/after-oleshky-ceasefire-melania-trump-wants-more-ukraine-ceasefires-before-christmas-zelenskyy-reacts/articleshow/136061877.cms",
-     "time": "2026-11-21T19:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "Trump signals push for wider Russia-Ukraine ceasefire",
-     "publisher": "azernews.az",
-     "url": "https://www.azernews.az/region/267861.html",
-     "time": "2026-11-21T18:53:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     }
@@ -988,18 +988,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-22T01:36:09.374Z",
+   "generatedAt": "2026-11-22T04:19:57.158Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T01:36:09.374Z",
-    "to": "2026-11-22T01:36:09.374Z"
+    "from": "2026-11-19T04:19:57.158Z",
+    "to": "2026-11-22T04:19:57.158Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 42,
    "overview": {
     "kind": "fact",
-    "text": "42 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-21 20:29 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8.",
+    "text": "42 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 03:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 7.",
     "evidence": [
      1,
      2,
@@ -1129,11 +1129,12 @@
       5,
       6,
       7,
+      8,
       9,
-      10,
-      11
+      11,
+      12
      ],
-     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][7][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][7][8][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1145,10 +1146,9 @@
       4,
       5,
       6,
-      8,
-      12
+      10
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6][8][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "7 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1225,6 +1225,24 @@
     },
     {
      "n": 7,
+     "title": "'War is spilling over': Finland accuses Ukraine of hitting Russian vessel in Baltic Sea",
+     "publisher": "indiatimes.com",
+     "url": "https://timesofindia.indiatimes.com/world/europe/war-is-spilling-over-finland-accuses-ukraine-of-hitting-russian-vessel-in-baltic-sea/articleshow/136065990.cms",
+     "time": "2026-11-22T03:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "Ukraine war briefing: Russian cargo ship hit by drone in Baltic Sea as Finland PM says conflict 'spilling over' | Ukraine",
+     "publisher": "theguardian.com",
+     "url": "https://www.theguardian.com/world/2026/nov/22/ukraine-war-briefing-russian-cargo-ship-hit-by-drone-in-baltic-sea-as-finland-pm-says-conflict-spilling-over",
+     "time": "2026-11-22T03:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
      "title": "Russia Is Losing 35,000 Troops a Month in Ukraine — and Replacing Just 25,000",
      "publisher": "redstate.com",
      "url": "https://redstate.com/wardclark/2026/11/21/russia-is-losing-35000-troops-a-month-in-ukraineand-replacing-just-25000-n2209662",
@@ -1233,7 +1251,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 10,
      "title": "Moscow Slams the Door on Kallas as Ukraine Peace Talks Negotiator",
      "publisher": "latintimes.com",
      "url": "https://www.latintimes.com/russia-rejects-kaja-kallas-eu-envoy-ukraine-talks-601668",
@@ -1242,7 +1260,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 11,
      "title": "Project Aerodynamic: How CIA Used Ukraine As A Platform For Covert War Against Russia",
      "publisher": "zerohedge.com",
      "url": "https://www.zerohedge.com/geopolitical/project-aerodynamic-how-cia-used-ukraine-platform-covert-war-against-russia",
@@ -1251,29 +1269,11 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 12,
      "title": "After Oleshky ceasefire, Melania Trump wants more Russia-Ukraine ceasefires before Christmas; Zelenskyy reacts",
      "publisher": "indiatimes.com",
      "url": "https://timesofindia.indiatimes.com/world/us/after-oleshky-ceasefire-melania-trump-wants-more-ukraine-ceasefires-before-christmas-zelenskyy-reacts/articleshow/136061877.cms",
      "time": "2026-11-21T19:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Trump signals push for wider Russia-Ukraine ceasefire",
-     "publisher": "azernews.az",
-     "url": "https://www.azernews.az/region/267861.html",
-     "time": "2026-11-21T18:53:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Denmark Expels Russian Diplomat Over Assassination Plot Against Ukrainian Rapper",
-     "publisher": "udaipurkiran.com",
-     "url": "https://udaipurkiran.com/denmark-expels-russian-diplomat-over-assassination-plot-against-ukrainian-rapper/",
-     "time": "2026-11-21T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -1283,11 +1283,11 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-22T01:36:09.374Z",
+   "generatedAt": "2026-11-22T04:19:57.158Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T01:36:09.374Z",
-    "to": "2026-11-22T01:36:09.374Z"
+    "from": "2026-11-19T04:19:57.158Z",
+    "to": "2026-11-22T04:19:57.158Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",

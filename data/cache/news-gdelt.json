@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-22T01:35:48.595Z",
- "checkedAt": "2026-11-22T01:35:48.595Z",
- "lastSuccessAt": "2026-11-22T01:35:48.595Z",
+ "generatedAt": "2026-11-22T04:19:37.224Z",
+ "checkedAt": "2026-11-22T04:19:37.224Z",
+ "lastSuccessAt": "2026-11-22T04:19:37.224Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 12,
-  "groupedDuplicates": 23,
+  "groupedDuplicates": 1,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,10 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-22T01:35:48.595Z",
-   "lastSuccessAt": "2026-11-22T01:35:48.595Z",
+   "checkedAt": "2026-11-22T04:19:37.224Z",
+   "lastSuccessAt": "2026-11-22T04:19:37.224Z",
    "error": null,
-   "latestFile": "20261122014500"
+   "latestFile": "20261122043000"
   }
  },
  "files": {
@@ -203,7 +203,18 @@
   "20261122010000": "ok",
   "20261122011500": "ok",
   "20261122013000": "ok",
-  "20261122014500": "ok"
+  "20261122014500": "ok",
+  "20261122020000": "ok",
+  "20261122021500": "ok",
+  "20261122023000": "ok",
+  "20261122024500": "ok",
+  "20261122030000": "ok",
+  "20261122031500": "ok",
+  "20261122033000": "ok",
+  "20261122034500": "ok",
+  "20261122040000": "ok",
+  "20261122041500": "ok",
+  "20261122043000": "ok"
  },
  "items": [
   {
@@ -1792,95 +1803,6 @@
    }
   },
   {
-   "title": "Trump says Putin wants diplomatic solution to Russia Ukraine conflict",
-   "url": "https://article.wn.com/view/2026/11/21/Trump_says_Putin_wants_diplomatic_solution_to_Russia_Ukraine/",
-   "publisher": "wn.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T06:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T07:37:32.181Z",
-   "lastSeenAt": "2026-11-21T07:37:32.181Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "diplomatic"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russian missile hits Poland as Ukraine's allies hold military exercise",
-   "url": "https://www.the-star.co.ke/news/world/2026-11-21-russian-missile-hits-poland-as-ukraines-allies-hold-military-exercise-says-tusk",
-   "publisher": "the-star.co.ke",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T06:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T07:37:32.181Z",
-   "lastSeenAt": "2026-11-21T07:37:32.181Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military",
-       "missile"
-      ]
-     }
-    ]
-   },
-   "variants": [
-    {
-     "publisher": "dailymirror.lk",
-     "publisherId": "gdelt",
-     "url": "https://www.dailymirror.lk/international/Russian-missile-hits-Poland-as-Ukraines-allies-hold-military-exercise-says-Tusk/107-355434",
-     "published": "2026-11-21T08:25:00.000Z",
-     "seenByGdelt": "2026-11-21T06:00:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
-  },
-  {
    "title": "Trump Warns Beijing Will Catch US 'Within 10 Years' In Nuclear Weapons",
    "url": "https://www.outlookindia.com/international/donald-trump-china-nuclear-weapons-us-10-years-xi-putin-meeting",
    "publisher": "outlookindia.com",
@@ -3386,7 +3308,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T01:35:48.595Z",
-   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "lastSeenAt": "2026-11-22T04:19:37.224Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -3993,6 +3915,123 @@
       "label": "Diplomacy",
       "terms": [
        "summit"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russia dusts off pre-war demands as US floats European security at talks",
+   "url": "https://theshillongtimes.com/2026/11/22/russia-dusts-off-pre-war-demands-as-us-floats-european-security-at-talks/",
+   "publisher": "theshillongtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T01:18:00.000Z",
+   "seenByGdelt": "2026-11-22T02:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T04:19:37.224Z",
+   "lastSeenAt": "2026-11-22T04:19:37.224Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "'War is spilling over': Finland accuses Ukraine of hitting Russian vessel in Baltic Sea",
+   "url": "https://timesofindia.indiatimes.com/world/europe/war-is-spilling-over-finland-accuses-ukraine-of-hitting-russian-vessel-in-baltic-sea/articleshow/136065990.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T03:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T04:19:37.224Z",
+   "lastSeenAt": "2026-11-22T04:19:37.224Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine war briefing: Russian cargo ship hit by drone in Baltic Sea as Finland PM says conflict 'spilling over' | Ukraine",
+   "url": "https://www.theguardian.com/world/2026/nov/22/ukraine-war-briefing-russian-cargo-ship-hit-by-drone-in-baltic-sea-as-finland-pm-says-conflict-spilling-over",
+   "publisher": "theguardian.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T03:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T04:19:37.224Z",
+   "lastSeenAt": "2026-11-22T04:19:37.224Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
       ]
      }
     ]
