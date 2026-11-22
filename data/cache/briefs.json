@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-22T04:19:57.158Z",
- "lastSuccessAt": "2026-11-22T04:19:57.158Z",
- "checkedAt": "2026-11-22T04:19:57.158Z",
+ "generatedAt": "2026-11-22T07:37:41.479Z",
+ "lastSuccessAt": "2026-11-22T07:37:41.479Z",
+ "checkedAt": "2026-11-22T07:37:41.479Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
    "items": 141,
-   "lastSuccessAt": "2026-11-22T04:19:37.224Z",
-   "checkedAt": "2026-11-22T04:19:37.224Z",
+   "lastSuccessAt": "2026-11-22T07:37:20.160Z",
+   "checkedAt": "2026-11-22T07:37:20.160Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -32,18 +32,18 @@
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-22T04:19:57.158Z",
+   "generatedAt": "2026-11-22T07:37:41.479Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T04:19:57.158Z",
-    "to": "2026-11-22T04:19:57.158Z"
+    "from": "2026-11-19T07:37:41.479Z",
+    "to": "2026-11-22T07:37:41.479Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 47,
    "overview": {
     "kind": "fact",
-    "text": "47 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-22 01:18 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8, sanctions and trade 4, economic policy 1.",
+    "text": "47 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 09:15 UTC to 2026-11-22 07:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8, sanctions and trade 4, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -336,11 +336,11 @@
     },
     {
      "n": 13,
-     "title": "Russia dusts off pre-war demands as US floats European security at talks",
-     "publisher": "theshillongtimes.com",
-     "url": "https://theshillongtimes.com/2026/11/22/russia-dusts-off-pre-war-demands-as-us-floats-european-security-at-talks/",
-     "time": "2026-11-22T01:18:00.000Z",
-     "timeBasis": "published",
+     "title": "🟢 USA Watchdog Greg Hunter | AI Bust, China, War & Voter Fraud Mean Chaos–Ed Dowd",
+     "publisher": "alipac.us",
+     "url": "https://www.alipac.us/f19/usa-watchdog-greg-hunter-%7C-ai-bust-china-war-voter-fraud-mean-chaos%96ed-dowd-429200/index18.html",
+     "time": "2026-11-22T07:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
@@ -349,18 +349,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-22T04:19:57.158Z",
+   "generatedAt": "2026-11-22T07:37:41.479Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T04:19:57.158Z",
-    "to": "2026-11-22T04:19:57.158Z"
+    "from": "2026-11-19T07:37:41.479Z",
+    "to": "2026-11-22T07:37:41.479Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 46,
+   "reportsFound": 45,
    "overview": {
     "kind": "fact",
-    "text": "46 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-22 01:00 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 6, sanctions and trade 3.",
+    "text": "45 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-22 07:00 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 6, sanctions and trade 3.",
     "evidence": [
      1,
      3,
@@ -492,11 +492,11 @@
       6,
       7,
       8,
-      10,
+      9,
       11,
-      13
+      12
      ],
-     "text": "10 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][3][4][5][6][7][8][10][11][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][3][4][5][6][7][8][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -506,10 +506,10 @@
       4,
       5,
       8,
-      9,
-      12
+      10,
+      13
      ],
-     "text": "6 of the 12 listed reports use diplomacy wording (foreign minister, summit) [1][4][5][8][9][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use diplomacy wording (foreign minister, summit) [1][4][5][8][10][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -622,6 +622,15 @@
     },
     {
      "n": 9,
+     "title": "🟢 USA Watchdog Greg Hunter | AI Bust, China, War & Voter Fraud Mean Chaos–Ed Dowd",
+     "publisher": "alipac.us",
+     "url": "https://www.alipac.us/f19/usa-watchdog-greg-hunter-%7C-ai-bust-china-war-voter-fraud-mean-chaos%96ed-dowd-429200/index18.html",
+     "time": "2026-11-22T07:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
      "title": "Why China-Russia-U.S. summit hailed historic for world stability, peace--China Economic Net",
      "publisher": "en.ce.cn",
      "url": "http://en.ce.cn/main/latest/202611/t20261122_3301742.shtml",
@@ -630,7 +639,7 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "China's military backing to Pak raises two-front threat for India: US report",
      "publisher": "tribuneindia.com",
      "url": "https://www.tribuneindia.com/news/india/chinas-military-backing-to-pak-raises-two-front-threat-for-india-us-report/",
@@ -639,7 +648,7 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "US report flags China-Pakistan military ties as two-front risk for India",
      "publisher": "mid-day.com",
      "url": "https://www.mid-day.com/news/world-news/article/us-report-flags-china-pakistan-military-ties-as-two-front-risk-for-india-23660822",
@@ -648,20 +657,11 @@
      "via": "GDELT"
     },
     {
-     "n": 12,
+     "n": 13,
      "title": "Volodymyr Zelensky says Vladimir Putin failed at China summit, Donald Trump pressures Ukraine for peace",
      "publisher": "jpost.com",
      "url": "http://www.jpost.com/international/article-915639",
      "time": "2026-11-21T17:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "China Can Back Pak Without Entering War: US Panel",
-     "publisher": "deccanchronicle.com",
-     "url": "https://www.deccanchronicle.com/nation/china-can-back-pak-without-entering-war-us-panel-2006668",
-     "time": "2026-11-21T17:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -671,18 +671,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-22T04:19:57.158Z",
+   "generatedAt": "2026-11-22T07:37:41.479Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T04:19:57.158Z",
-    "to": "2026-11-22T04:19:57.158Z"
+    "from": "2026-11-19T07:37:41.479Z",
+    "to": "2026-11-22T07:37:41.479Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 54,
    "overview": {
     "kind": "fact",
-    "text": "54 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 03:15 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8.",
+    "text": "54 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 07:30 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 6.",
     "evidence": [
      1,
      3,
@@ -691,11 +691,11 @@
      6,
      7,
      8,
-     9,
      10,
      11,
      12,
-     13
+     13,
+     14
     ]
    },
    "developments": [
@@ -814,11 +814,13 @@
       6,
       7,
       8,
-      9,
       10,
-      12
+      11,
+      12,
+      13,
+      14
      ],
-     "text": "10 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][3][4][5][6][7][8][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][3][4][5][6][7][8][10][11][12][13][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -829,11 +831,9 @@
       4,
       5,
       6,
-      7,
-      11,
-      13
+      7
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (foreign minister, summit, peace talks, ambassador) [1][3][4][5][6][7][11][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use diplomacy wording (foreign minister, summit, peace talks, ambassador) [1][3][4][5][6][7]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -846,22 +846,24 @@
       6,
       7,
       8,
-      9,
       10,
       11,
       12,
-      13
+      13,
+      14
      ],
-     "text": "12 listed reports with topic keywords also name China, the United States and Ukraine [1][3][4][5][6][7][8][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
+     "text": "12 listed reports with topic keywords also name China, the United States and Ukraine [1][3][4][5][6][7][8][10][11][12][13][14]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
       1,
-      2
+      2,
+      8,
+      9
      ],
-     "text": "1 listed headline was carried by more than one outlet [1]. The same headline appearing in several places is not independent verification."
+     "text": "2 listed headlines were carried by more than one outlet [1][8]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -930,6 +932,42 @@
     },
     {
      "n": 8,
+     "title": "Two killed, 10 injured as Russian missile strikes building in Ukraine's Lviv",
+     "publisher": "russiaherald.com",
+     "url": "http://www.russiaherald.com/news/279448547/two-killed-10-injured-as-russian-missile-strikes-building-in-ukraine-lviv",
+     "time": "2026-11-22T07:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Two killed, 10 injured as Russian missile strikes building in Ukraine's Lviv",
+     "publisher": "webindia123.com",
+     "url": "https://news.webindia123.com/news/Articles/World/20261122/4522942.html",
+     "time": "2026-11-22T07:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "duplicateOf": 8
+    },
+    {
+     "n": 10,
+     "title": "Russia faces 'unsustainable' losses approaching WWII scale in Ukraine war, Mike Waltz warns",
+     "publisher": "nypost.com",
+     "url": "https://nypost.com/2026/11/22/us-news/russia-faces-unsustainable-losses-approaching-wwii-scale-in-ukraine-war-mike-waltz-warns/",
+     "time": "2026-11-22T07:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
+     "title": "Russian cargo ship ablaze after suspected Ukrainian drone strike",
+     "publisher": "samaa.tv",
+     "url": "https://www.samaa.tv/2087360765-russian-cargo-ship-ablaze-after-suspected-ukrainian-drone-strike",
+     "time": "2026-11-22T06:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
      "title": "'War is spilling over': Finland accuses Ukraine of hitting Russian vessel in Baltic Sea",
      "publisher": "indiatimes.com",
      "url": "https://timesofindia.indiatimes.com/world/europe/war-is-spilling-over-finland-accuses-ukraine-of-hitting-russian-vessel-in-baltic-sea/articleshow/136065990.cms",
@@ -938,7 +976,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 13,
      "title": "Ukraine war briefing: Russian cargo ship hit by drone in Baltic Sea as Finland PM says conflict 'spilling over' | Ukraine",
      "publisher": "theguardian.com",
      "url": "https://www.theguardian.com/world/2026/nov/22/ukraine-war-briefing-russian-cargo-ship-hit-by-drone-in-baltic-sea-as-finland-pm-says-conflict-spilling-over",
@@ -947,38 +985,11 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 14,
      "title": "Russia dusts off pre-war demands as US floats European security at talks",
      "publisher": "theshillongtimes.com",
      "url": "https://theshillongtimes.com/2026/11/22/russia-dusts-off-pre-war-demands-as-us-floats-european-security-at-talks/",
      "time": "2026-11-22T01:18:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Why China-Russia-U.S. summit hailed historic for world stability, peace--China Economic Net",
-     "publisher": "en.ce.cn",
-     "url": "http://en.ce.cn/main/latest/202611/t20261122_3301742.shtml",
-     "time": "2026-11-22T01:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Russia Is Losing 35,000 Troops a Month in Ukraine — and Replacing Just 25,000",
-     "publisher": "redstate.com",
-     "url": "https://redstate.com/wardclark/2026/11/21/russia-is-losing-35000-troops-a-month-in-ukraineand-replacing-just-25000-n2209662",
-     "time": "2026-11-21T20:29:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "Moscow Slams the Door on Kallas as Ukraine Peace Talks Negotiator",
-     "publisher": "latintimes.com",
-     "url": "https://www.latintimes.com/russia-rejects-kaja-kallas-eu-envoy-ukraine-talks-601668",
-     "time": "2026-11-21T20:19:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     }
@@ -988,18 +999,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-22T04:19:57.158Z",
+   "generatedAt": "2026-11-22T07:37:41.479Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T04:19:57.158Z",
-    "to": "2026-11-22T04:19:57.158Z"
+    "from": "2026-11-19T07:37:41.479Z",
+    "to": "2026-11-22T07:37:41.479Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 42,
    "overview": {
     "kind": "fact",
-    "text": "42 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 03:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 7.",
+    "text": "42 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-22 07:30 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 6.",
     "evidence": [
      1,
      2,
@@ -1008,11 +1019,11 @@
      5,
      6,
      7,
-     8,
      9,
      10,
      11,
-     12
+     12,
+     13
     ]
    },
    "developments": [
@@ -1129,12 +1140,13 @@
       5,
       6,
       7,
-      8,
       9,
+      10,
       11,
-      12
+      12,
+      13
      ],
-     "text": "11 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][7][8][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (nuclear, weapons, war, invasion) [1][2][3][4][5][6][7][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1145,10 +1157,9 @@
       3,
       4,
       5,
-      6,
-      10
+      6
      ],
-     "text": "7 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use diplomacy wording (summit, peace talks, ambassador, peace plan) [1][2][3][4][5][6]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1159,13 +1170,22 @@
       3,
       4,
       7,
-      8,
       9,
       10,
       11,
-      12
+      12,
+      13
      ],
-     "text": "10 listed reports with topic keywords also name the United States, China and Russia [1][2][3][4][7][8][9][10][11][12]. A headline that names two countries does not show how they are connected."
+     "text": "10 listed reports with topic keywords also name the United States, China and Russia [1][2][3][4][7][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
+    },
+    {
+     "rule": "several-outlets",
+     "kind": "analysis",
+     "evidence": [
+      7,
+      8
+     ],
+     "text": "1 listed headline was carried by more than one outlet [7]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -1225,6 +1245,42 @@
     },
     {
      "n": 7,
+     "title": "Two killed, 10 injured as Russian missile strikes building in Ukraine's Lviv",
+     "publisher": "russiaherald.com",
+     "url": "http://www.russiaherald.com/news/279448547/two-killed-10-injured-as-russian-missile-strikes-building-in-ukraine-lviv",
+     "time": "2026-11-22T07:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "Two killed, 10 injured as Russian missile strikes building in Ukraine's Lviv",
+     "publisher": "webindia123.com",
+     "url": "https://news.webindia123.com/news/Articles/World/20261122/4522942.html",
+     "time": "2026-11-22T07:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "duplicateOf": 7
+    },
+    {
+     "n": 9,
+     "title": "Russia faces 'unsustainable' losses approaching WWII scale in Ukraine war, Mike Waltz warns",
+     "publisher": "nypost.com",
+     "url": "https://nypost.com/2026/11/22/us-news/russia-faces-unsustainable-losses-approaching-wwii-scale-in-ukraine-war-mike-waltz-warns/",
+     "time": "2026-11-22T07:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Russian cargo ship ablaze after suspected Ukrainian drone strike",
+     "publisher": "samaa.tv",
+     "url": "https://www.samaa.tv/2087360765-russian-cargo-ship-ablaze-after-suspected-ukrainian-drone-strike",
+     "time": "2026-11-22T06:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
      "title": "'War is spilling over': Finland accuses Ukraine of hitting Russian vessel in Baltic Sea",
      "publisher": "indiatimes.com",
      "url": "https://timesofindia.indiatimes.com/world/europe/war-is-spilling-over-finland-accuses-ukraine-of-hitting-russian-vessel-in-baltic-sea/articleshow/136065990.cms",
@@ -1233,7 +1289,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 12,
      "title": "Ukraine war briefing: Russian cargo ship hit by drone in Baltic Sea as Finland PM says conflict 'spilling over' | Ukraine",
      "publisher": "theguardian.com",
      "url": "https://www.theguardian.com/world/2026/nov/22/ukraine-war-briefing-russian-cargo-ship-hit-by-drone-in-baltic-sea-as-finland-pm-says-conflict-spilling-over",
@@ -1242,39 +1298,12 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 13,
      "title": "Russia Is Losing 35,000 Troops a Month in Ukraine — and Replacing Just 25,000",
      "publisher": "redstate.com",
      "url": "https://redstate.com/wardclark/2026/11/21/russia-is-losing-35000-troops-a-month-in-ukraineand-replacing-just-25000-n2209662",
      "time": "2026-11-21T20:29:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
-     "title": "Moscow Slams the Door on Kallas as Ukraine Peace Talks Negotiator",
-     "publisher": "latintimes.com",
-     "url": "https://www.latintimes.com/russia-rejects-kaja-kallas-eu-envoy-ukraine-talks-601668",
-     "time": "2026-11-21T20:19:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Project Aerodynamic: How CIA Used Ukraine As A Platform For Covert War Against Russia",
-     "publisher": "zerohedge.com",
-     "url": "https://www.zerohedge.com/geopolitical/project-aerodynamic-how-cia-used-ukraine-platform-covert-war-against-russia",
-     "time": "2026-11-21T20:00:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "After Oleshky ceasefire, Melania Trump wants more Russia-Ukraine ceasefires before Christmas; Zelenskyy reacts",
-     "publisher": "indiatimes.com",
-     "url": "https://timesofindia.indiatimes.com/world/us/after-oleshky-ceasefire-melania-trump-wants-more-ukraine-ceasefires-before-christmas-zelenskyy-reacts/articleshow/136061877.cms",
-     "time": "2026-11-21T19:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
@@ -1283,18 +1312,18 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-22T04:19:57.158Z",
+   "generatedAt": "2026-11-22T07:37:41.479Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-19T04:19:57.158Z",
-    "to": "2026-11-22T04:19:57.158Z"
+    "from": "2026-11-19T07:37:41.479Z",
+    "to": "2026-11-22T07:37:41.479Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-22 00:00 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): diplomacy 3, security 2, economic policy 1.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 05:03 UTC to 2026-11-22 07:00 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): diplomacy 3, security 3, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -1302,12 +1331,12 @@
      4,
      5,
      6,
-     8,
+     7,
      9,
+     10,
      11,
      12,
-     13,
-     14
+     16
     ]
    },
    "developments": [
@@ -1371,6 +1400,25 @@
     {
      "kind": "reporting",
      "n": 4,
+     "headline": "Taiwan Is Preparing for a War That Could Reshape the World",
+     "publisher": "slguardian.org",
+     "url": "https://slguardian.org/taiwan-is-preparing-for-a-war-that-could-reshape-the-world/",
+     "time": "2026-11-22T06:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 5,
      "headline": "Taiwan's APEC participation smooth amid great-power diplomacy: Scholars",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611200009",
@@ -1386,25 +1434,6 @@
       "Diplomacy"
      ],
      "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 5,
-     "headline": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
-     "publisher": "armstrongeconomics.com",
-     "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
-     "time": "2026-11-20T05:03:00.000Z",
-     "timeBasis": "published",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "Taiwan"
-      ]
-     },
-     "topics": [
-      "Security"
-     ],
-     "alsoReportedBy": []
     }
    ],
    "why": [
@@ -1414,18 +1443,19 @@
      "evidence": [
       1,
       3,
-      4
+      5
      ],
-     "text": "3 of the 12 listed reports use diplomacy wording (foreign minister, summit, diplomacy) [1][3][4]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use diplomacy wording (foreign minister, summit, diplomacy) [1][3][5]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
      "kind": "analysis",
      "evidence": [
       2,
-      5
+      4,
+      6
      ],
-     "text": "2 of the 12 listed reports use security wording (military, war) [2][5]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use security wording (military, war) [2][4][6]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1441,12 +1471,14 @@
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      6,
       7,
-      9,
-      10
+      8,
+      12,
+      13,
+      14,
+      15
      ],
-     "text": "2 listed headlines were carried by more than one outlet [6][9]. The same headline appearing in several places is not independent verification."
+     "text": "2 listed headlines were carried by more than one outlet [7][12]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -1479,6 +1511,15 @@
     },
     {
      "n": 4,
+     "title": "Taiwan Is Preparing for a War That Could Reshape the World",
+     "publisher": "slguardian.org",
+     "url": "https://slguardian.org/taiwan-is-preparing-for-a-war-that-could-reshape-the-world/",
+     "time": "2026-11-22T06:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
      "title": "Taiwan's APEC participation smooth amid great-power diplomacy: Scholars",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611200009",
@@ -1487,7 +1528,7 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 6,
      "title": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
      "publisher": "armstrongeconomics.com",
      "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
@@ -1496,7 +1537,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 7,
      "title": "Taiwan to cooperate in joint circular economy",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
@@ -1505,16 +1546,34 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 8,
      "title": "Taiwan to cooperate in joint circular economy",
      "publisher": "ltn.com.tw",
      "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649137",
      "time": "2026-11-21T19:30:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "duplicateOf": 6
+     "duplicateOf": 7
     },
     {
-     "n": 8,
+     "n": 9,
+     "title": "Women's Poker Is Booming in Taipei, and Linda Johnson Is Cashing In",
+     "publisher": "pokernews.com",
+     "url": "https://www.pokernews.com/news/2026/11/it-makes-my-heart-happy-linda-johnson-on-seeing-women-fill-52855.htm",
+     "time": "2026-11-22T07:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Taiwan headline news - Focus Taiwan",
+     "publisher": "focustaiwan.tw",
+     "url": "https://focustaiwan.tw/society/202611220001",
+     "time": "2026-11-22T05:14:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
      "title": "Taiwan's stock-market defense: tougher short-sale rules and a state buyer · Digg",
      "publisher": "digg.com",
      "url": "https://digg.com/world-business/wtzjw715",
@@ -1523,7 +1582,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 12,
      "title": "One-China principle unshakable, DPP's \"Taiwan independence\" attempts doomed to fail: experts-Xinhua",
      "publisher": "english.news.cn",
      "url": "https://english.news.cn/20261121/0947bb184b09496587ff5cec4cadd3ec/c.html",
@@ -1532,48 +1591,39 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 13,
      "title": "One-China principle unshakable, DPP's \"Taiwan independence\" attempts doomed to fail: experts-Xinhua",
      "publisher": "en.ce.cn",
      "url": "http://en.ce.cn/main/latest/202611/t20261122_3301744.shtml",
      "time": "2026-11-22T01:00:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "duplicateOf": 9
+     "duplicateOf": 12
     },
     {
-     "n": 11,
+     "n": 14,
+     "title": "One-China principle unshakable, DPP's \"Taiwan independence\" attempts doomed to fail: experts-Xinhua",
+     "publisher": "china.org.cn",
+     "url": "http://www.china.org.cn/2026-11/22/content_118784515.shtml",
+     "time": "2026-11-22T06:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "duplicateOf": 12
+    },
+    {
+     "n": 15,
+     "title": "One-China principle unshakable, DPP's \"Taiwan independence\" attempts doomed to fail: experts-Xinhua",
+     "publisher": "en.people.cn",
+     "url": "http://en.people.cn/n3/2026/1122/c90000-20521817.html",
+     "time": "2026-11-22T07:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "duplicateOf": 12
+    },
+    {
+     "n": 16,
      "title": "The AI sell-off now has Taiwan taking emergency steps to calm its chip-heavy market",
      "publisher": "aol.com",
      "url": "https://www.aol.com/articles/ai-sell-off-now-taiwan-220252000.html",
      "time": "2026-11-21T22:02:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Taiwan Cautions Canada About Increasing Trade With China",
-     "publisher": "newser.com",
-     "url": "https://www.newser.com/story/400421/taiwan-cautions-canada-about-increasing-trade-with-china.html",
-     "time": "2026-11-21T21:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "《TAIPEI TIMES》 US lawmaker upbeat on Taiwan ties - 焦點",
-     "publisher": "ltn.com.tw",
-     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649131",
-     "time": "2026-11-21T19:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 14,
-     "title": "《TAIPEI TIMES》 FSC announces measures after stock market losses - 焦點",
-     "publisher": "ltn.com.tw",
-     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649132",
-     "time": "2026-11-21T19:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],

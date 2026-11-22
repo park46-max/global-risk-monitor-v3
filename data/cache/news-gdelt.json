@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-22T04:19:37.224Z",
- "checkedAt": "2026-11-22T04:19:37.224Z",
- "lastSuccessAt": "2026-11-22T04:19:37.224Z",
+ "generatedAt": "2026-11-22T07:37:20.160Z",
+ "checkedAt": "2026-11-22T07:37:20.160Z",
+ "lastSuccessAt": "2026-11-22T07:37:20.160Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 12,
-  "groupedDuplicates": 1,
+  "groupedDuplicates": 16,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,10 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-22T04:19:37.224Z",
-   "lastSuccessAt": "2026-11-22T04:19:37.224Z",
+   "checkedAt": "2026-11-22T07:37:20.160Z",
+   "lastSuccessAt": "2026-11-22T07:37:20.160Z",
    "error": null,
-   "latestFile": "20261122043000"
+   "latestFile": "20261122074500"
   }
  },
  "files": {
@@ -214,7 +214,19 @@
   "20261122034500": "ok",
   "20261122040000": "ok",
   "20261122041500": "ok",
-  "20261122043000": "ok"
+  "20261122043000": "ok",
+  "20261122050000": "ok",
+  "20261122051500": "ok",
+  "20261122053000": "ok",
+  "20261122054500": "ok",
+  "20261122060000": "ok",
+  "20261122061500": "ok",
+  "20261122063000": "ok",
+  "20261122064500": "ok",
+  "20261122070000": "ok",
+  "20261122071500": "ok",
+  "20261122073000": "ok",
+  "20261122074500": "ok"
  },
  "items": [
   {
@@ -1187,45 +1199,6 @@
    }
   },
   {
-   "title": "UK conducts offensive cyber operations against Russia, China, Iran, North Korea - top commander",
-   "url": "https://news.az/news/uk-conducts-offensive-cyber-operations-against-russia-china-iran-north-korea-top-commander",
-   "publisher": "news.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T09:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T09:32:52.048Z",
-   "lastSeenAt": "2026-11-20T09:32:52.048Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "offensive"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "China's Xi holds talks with regional leaders after APEC, trilateral summit with US, Russia",
    "url": "https://aa.com.tr/en/asia-pacific/chinas-xi-holds-talks-with-regional-leaders-after-apec-trilateral-summit-with-us-russia/4131664",
    "publisher": "aa.com.tr",
@@ -1388,45 +1361,6 @@
       "label": "Security",
       "terms": [
        "offensive"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US Envoys See Ukraine Peace Progress As NATO Debate Resurfaces",
-   "url": "http://www.heraldglobe.com/news/279444964/us-envoys-see-ukraine-peace-progress-as-nato-debate-resurfaces",
-   "publisher": "heraldglobe.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-20T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-20T10:12:21.823Z",
-   "lastSeenAt": "2026-11-20T10:12:21.823Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO"
       ]
      }
     ]
@@ -1837,84 +1771,6 @@
       "terms": [
        "nuclear",
        "weapons"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukraine War, Day 1,731: Russia Murders Child and Paramedic, Injures 52 in Kryvyi Rih",
-   "url": "https://eaworldview.com/2026/11/ukraine-war-kryvyi-rih-russia-murders-child-paramedic/",
-   "publisher": "eaworldview.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T07:01:00.000Z",
-   "seenByGdelt": "2026-11-21T10:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Melania Trump Expresses Hope for Ukraine-Russia Ceasefire by Christmas",
-   "url": "https://www.kyivpost.com/post/90788",
-   "publisher": "kyivpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T07:25:00.000Z",
-   "seenByGdelt": "2026-11-21T09:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "ceasefire"
       ]
      }
     ]
@@ -2727,7 +2583,7 @@
     }
    },
    "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -3165,7 +3021,24 @@
       ]
      }
     ]
-   }
+   },
+   "variants": [
+    {
+     "publisher": "china.org.cn",
+     "publisherId": "gdelt",
+     "url": "http://www.china.org.cn/2026-11/22/content_118784307.shtml",
+     "published": null,
+     "seenByGdelt": "2026-11-22T06:00:00.000Z"
+    },
+    {
+     "publisher": "en.people.cn",
+     "publisherId": "gdelt",
+     "url": "http://en.people.cn/n3/2026/1122/c90000-20521815.html",
+     "published": null,
+     "seenByGdelt": "2026-11-22T07:30:00.000Z"
+    }
+   ],
+   "variantsTotal": 2
   },
   {
    "title": "Britain's New Russia Sanctions Show Ukraine Has Not Been Abandoned at the Negotiating Table",
@@ -4038,6 +3911,172 @@
    }
   },
   {
+   "title": "Russian cargo ship ablaze after suspected Ukrainian drone strike",
+   "url": "https://www.samaa.tv/2087360765-russian-cargo-ship-ablaze-after-suspected-ukrainian-drone-strike",
+   "publisher": "samaa.tv",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T06:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strike"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russia faces 'unsustainable' losses approaching WWII scale in Ukraine war, Mike Waltz warns",
+   "url": "https://nypost.com/2026/11/22/us-news/russia-faces-unsustainable-losses-approaching-wwii-scale-in-ukraine-war-mike-waltz-warns/",
+   "publisher": "nypost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T07:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "🟢 USA Watchdog Greg Hunter | AI Bust, China, War & Voter Fraud Mean Chaos–Ed Dowd",
+   "url": "https://www.alipac.us/f19/usa-watchdog-greg-hunter-%7C-ai-bust-china-war-voter-fraud-mean-chaos%96ed-dowd-429200/index18.html",
+   "publisher": "alipac.us",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T07:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "USA"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Two killed, 10 injured as Russian missile strikes building in Ukraine's Lviv",
+   "url": "http://www.russiaherald.com/news/279448547/two-killed-10-injured-as-russian-missile-strikes-building-in-ukraine-lviv",
+   "publisher": "russiaherald.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T07:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missile"
+      ]
+     }
+    ]
+   },
+   "variants": [
+    {
+     "publisher": "webindia123.com",
+     "publisherId": "gdelt",
+     "url": "https://news.webindia123.com/news/Articles/World/20261122/4522942.html",
+     "published": null,
+     "seenByGdelt": "2026-11-22T07:30:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
    "title": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
    "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
    "publisher": "armstrongeconomics.com",
@@ -4104,6 +4143,39 @@
    }
   },
   {
+   "title": "Taiwan Is Preparing for a War That Could Reshape the World",
+   "url": "https://slguardian.org/taiwan-is-preparing-for-a-war-that-could-reshape-the-world/",
+   "publisher": "slguardian.org",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T06:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Taiwan to cooperate in joint circular economy",
    "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
    "publisher": "taipeitimes.com",
@@ -4145,87 +4217,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "Taiwan parties ramp up campaigning one week before local elections",
-   "url": "https://focustaiwan.tw/politics/202611210017",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T12:26:00.000Z",
-   "seenByGdelt": "2026-11-21T16:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T16:06:06.880Z",
-   "lastSeenAt": "2026-11-21T16:06:06.880Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Why Takaichi should stick to her guns on Taiwan",
-   "url": "https://article.wn.com/view/2026/11/21/Why_Takaichi_should_stick_to_her_guns_on_Taiwan/",
-   "publisher": "wn.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T12:45:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan flags improper treatment by China during APEC meetings",
-   "url": "https://news.webindia123.com/news/Articles/World/20261121/4522742.html",
-   "publisher": "webindia123.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T12:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T22:00:35.566Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
   },
   {
    "title": "Veteran Taiwanese poet Xiang Ming dies, leaving literary legacy",
@@ -4568,9 +4559,16 @@
      "url": "https://www.manilatimes.net/2026/11/22/world/taiwan-warns-canadas-carney-that-deeper-ties-with-china-come-with-risks/2475573",
      "published": "2026-11-21T21:00:00.000Z",
      "seenByGdelt": "2026-11-21T23:15:00.000Z"
+    },
+    {
+     "publisher": "newindianexpress.com",
+     "publisherId": "gdelt",
+     "url": "https://www.newindianexpress.com/world/2026/Nov/22/taiwan-warns-canadas-carney-that-deeper-ties-with-china-come-with-risks",
+     "published": null,
+     "seenByGdelt": "2026-11-22T05:30:00.000Z"
     }
    ],
-   "variantsTotal": 5
+   "variantsTotal": 6
   },
   {
    "title": "Taiwan warns Canada faces the China risks Carney has cautioned against",
@@ -5064,9 +5062,23 @@
      "url": "http://en.ce.cn/main/latest/202611/t20261122_3301744.shtml",
      "published": null,
      "seenByGdelt": "2026-11-22T01:00:00.000Z"
+    },
+    {
+     "publisher": "china.org.cn",
+     "publisherId": "gdelt",
+     "url": "http://www.china.org.cn/2026-11/22/content_118784515.shtml",
+     "published": null,
+     "seenByGdelt": "2026-11-22T06:00:00.000Z"
+    },
+    {
+     "publisher": "en.people.cn",
+     "publisherId": "gdelt",
+     "url": "http://en.people.cn/n3/2026/1122/c90000-20521817.html",
+     "published": null,
+     "seenByGdelt": "2026-11-22T07:30:00.000Z"
     }
    ],
-   "variantsTotal": 1
+   "variantsTotal": 3
   },
   {
    "title": "Taiwan's stock-market defense: tougher short-sale rules and a state buyer · Digg",
@@ -5087,6 +5099,56 @@
    },
    "firstSeenAt": "2026-11-22T01:35:48.595Z",
    "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan headline news - Focus Taiwan",
+   "url": "https://focustaiwan.tw/society/202611220001",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T05:14:00.000Z",
+   "seenByGdelt": "2026-11-22T06:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Women's Poker Is Booming in Taipei, and Linda Johnson Is Cashing In",
+   "url": "https://www.pokernews.com/news/2026/11/it-makes-my-heart-happy-linda-johnson-on-seeing-women-fill-52855.htm",
+   "publisher": "pokernews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T07:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T07:37:20.160Z",
    "relevance": {
     "score": 0,
     "tier": "other",
