@@ -3,186 +3,186 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-22T01:26:16.838Z",
-  "lastSuccessAt": "2026-11-22T01:28:29.132Z",
+  "checkedAt": "2026-11-22T07:28:05.026Z",
+  "lastSuccessAt": "2026-11-22T07:29:44.279Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-21T19:06:07.236Z",
-      "checkedAt": "2026-11-22T01:29:58.421Z",
+      "error": null,
+      "fetchedAt": "2026-11-22T07:28:16.371Z",
+      "checkedAt": "2026-11-22T07:28:16.371Z",
       "articles": [
         {
-          "title": "Iran strikes 3 tankers as it shows off missile launchers , and other Mideast news",
-          "url": "http://www.idahopress.com/ap_news/us/iran-strikes-3-tankers-as-it-shows-off-missile-launchers-and-other-mideast-news/article_d69706d0-0aa1-5a72-85d7-55f28dbbb892.html",
-          "domain": "idahopress.com",
-          "seendate": "20261121T163000Z",
+          "title": "Officials : Washington pulp mill violated safety standards before ruptured chemical tank killed 11",
+          "url": "https://www.troyrecord.com/2026/11/20/washington-state-chemical-tank-failure-investigation/",
+          "domain": "troyrecord.com",
+          "seendate": "20261122T053000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Gold , copper , aluminium dive to at least 7 - month lows",
-          "url": "https://www.thehindu.com/business/gold-copper-aluminium-dive-to-at-least-7-month-lows/article71729065.ece",
-          "domain": "thehindu.com",
-          "seendate": "20261121T163000Z",
+          "title": "Arab News | Pakistan FM hopeful for US - Iran deal , warns against prolonged war",
+          "url": "https://www.arabnews.com/world/pakistan-fm-hopeful-for-us-iran-deal-warns-against-prolonged-war-3013478",
+          "domain": "arabnews.com",
+          "seendate": "20261122T053000Z",
+          "language": "English",
+          "sourcecountry": "Saudi Arabia"
+        },
+        {
+          "title": "Zaidan Harun dies after Bronx apartment fire on Metcalf Avenue – The New Statesman :: Ghana Oldest Mainstream Newspaper since 1949",
+          "url": "https://thestatesmanonline.com/zaidan-harun-dies-after-bronx-apartment-fire-on-metcalf-avenue/",
+          "domain": "thestatesmanonline.com",
+          "seendate": "20261122T053000Z",
+          "language": "English",
+          "sourcecountry": "Ghana"
+        },
+        {
+          "title": "Jackson Hole Airport , the Only U . S . Commercial Airport Wholly Inside a National Park , Faces Limits on Environmental Challenges | AviNews",
+          "url": "https://cedarnews.net/newstasks/1177931/jackson-hole-airport-only-u-s-commercial/",
+          "domain": "cedarnews.net",
+          "seendate": "20261122T053000Z",
+          "language": "English",
+          "sourcecountry": "Lebanon"
+        },
+        {
+          "title": "FBI says its most - wanted drug lord El Chapo Isidro was caught by Mexico with US assistance",
+          "url": "https://www.hindustantimes.com/world-news/us-news/fbi-says-its-most-wanted-drug-lord-el-chapo-isidro-was-caught-by-mexico-with-us-assistance-101795322907502.html",
+          "domain": "hindustantimes.com",
+          "seendate": "20261122T053000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Voters oust some sheriffs who signed pacts to help Trump immigration enforcement efforts",
-          "url": "https://newschannel9.com/news/local/voters-oust-some-sheriffs-who-signed-pacts-to-help-trumps-immigration-enforcement-efforts",
-          "domain": "newschannel9.com",
-          "seendate": "20261121T163000Z",
+          "title": "Trump says confronting dangers on Korean Peninsula discussed at 3 - way summit with Xi , Putin",
+          "url": "https://www.koreaherald.com:443/article/10944597",
+          "domain": "koreaherald.com",
+          "seendate": "20261122T053000Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "Trump orders federal contractors to check with White House before responding to Congress",
+          "url": "https://www.aspenpublicradio.org/2026-11-21/trump-orders-federal-contractors-to-check-with-white-house-before-responding-to-congress",
+          "domain": "aspenpublicradio.org",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "KXCO Model Books Are Three for Three on FDA Decisions , by Shayne Heffernan",
-          "url": "https://www.livetradingnews.com/kxcos-model-books-are-three-for-three-on-fda-decisions",
-          "domain": "livetradingnews.com",
-          "seendate": "20261121T163000Z",
+          "title": "Trump vows to work with Democrats to cap credit card interest rates at 10 %",
+          "url": "https://www.mcall.com/2026/11/21/trump-vows-to-work-with-democrats-to-cap-credit-card-interest-rates-at-10/",
+          "domain": "mcall.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Princeton Ph . D . student Eva Yi Xie detained by ICE",
-          "url": "https://abc7ny.com/post/princeton-phd-student-eva-yi-xie-detained-ice/20063301/",
-          "domain": "abc7ny.com",
-          "seendate": "20261121T163000Z",
+          "title": "FBI most wanted cartel boss captured as gunfire , chaos erupt across Mexico",
+          "url": "https://fox17.com/news/nation-world/fbis-most-wanted-cartel-boss-captured-as-gunfire-chaos-erupt-across-mexico-united-states-america-drugs-el-chapo-isidro-kingpin",
+          "domain": "fox17.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Killer robots : U . N . talks fall short of hopes for legally binding rules",
-          "url": "https://www.northcountrypublicradio.org/news/npr/nx-s1-6047916/killer-robots-u-n-talks-fall-short-of-hopes-for-legally-binding-rules",
-          "domain": "northcountrypublicradio.org",
-          "seendate": "20261121T163000Z",
+          "title": "Trump order tells federal contractors to coordinate with White House on Congress inquiries",
+          "url": "https://news4sanantonio.com/news/nation-world/trump-order-federal-contractors-white-house-congress-",
+          "domain": "news4sanantonio.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "US denies Iranian account that missile damaged F - 16 over Gulf",
-          "url": "https://cyprus-mail.com/2026/11/21/us-denies-iranian-account-that-missile-damaged-f-16-over-gulf",
-          "domain": "cyprus-mail.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "Cyprus"
-        },
-        {
-          "title": "Bitcoin price crash : ​Falls to lowest level in two years - What behind plunge of world largest cryptocurrency",
-          "url": "https://www.livemint.com/market/cryptocurrency/bitcoin-price-crash-falls-to-lowest-level-in-two-years-what-s-behind-plunge-of-world-s-largest-cryptocurrency-11795267687216.html",
-          "domain": "livemint.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Being a prepper once came with a stigma . Recent outages are turning skeptics into believers",
-          "url": "https://www.wglt.org/2026-11-20/being-a-prepper-once-came-with-a-stigma-recent-outages-are-turning-skeptics-into-believers",
-          "domain": "wglt.org",
-          "seendate": "20261121T163000Z",
+          "title": "Respected Horseman Dr . John Chandler Dies at 86",
+          "url": "https://www.bloodhorse.com/horse-racing/articles/296153/respected-horseman-dr-john-chandler-dies-at-86",
+          "domain": "bloodhorse.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Mexico detains top cartel boss El Chapo Isidro , one of FBI 10 most wanted fugitives",
-          "url": "http://www.idahopress.com/news/world/mexico-detains-top-cartel-boss-el-chapo-isidro-one-of-fbis-10-most-wanted-fugitives/article_d6338143-d6c7-5f3b-9a54-e1590ffb3ade.html",
-          "domain": "idahopress.com",
-          "seendate": "20261121T163000Z",
+          "title": "Climate talks in overtime as nations wrestle with response to worsening global warming",
+          "url": "https://www.wdsu.com/article/turkey-cop31-climate-talks-fossil-fuels/74498741",
+          "domain": "wdsu.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Nations agree to extend talks on AI killer robots but no firm commitment to rein them in",
-          "url": "http://www.rockymounttelegram.com/news/world/nations-agree-to-extend-talks-on-ai-killer-robots-but-no-firm-commitment-to-rein/article_9e134606-6514-5d0c-b98c-4919624b4921.html",
-          "domain": "rockymounttelegram.com",
-          "seendate": "20261121T163000Z",
+          "title": "Trump pledges to work with Democrats to cap credit card interest rates",
+          "url": "https://www.ktvu.com/money/trump-pledges-work-democrats-cap-credit-card-interest-rates",
+          "domain": "ktvu.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Top Apple - related stories for the week of November 16 - 20",
-          "url": "https://www.mactech.com/2026/11/21/top-apple-related-stories-for-the-week-of-november-16-20/",
-          "domain": "mactech.com",
-          "seendate": "20261121T163000Z",
+          "title": "Klobuchar , Smith divided on permitting bill",
+          "url": "https://www.brainerddispatch.com/news/local/klobuchar-smith-divided-on-permitting-bill",
+          "domain": "brainerddispatch.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "US panel says India balances security with economic needs amid Chinese pressure , flags supply - chain trade - offs",
-          "url": "http://www.africaleader.com/news/279446850/us-panel-says-india-balances-security-with-economic-needs-amid-chinese-pressure-flags-supply-chain-trade-offs",
-          "domain": "africaleader.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "South Africa"
-        },
-        {
-          "title": "Emma Stone & Jennifer Lawrence New Movie For 57 - Year - Old Franchise Gets Exciting Writing Update",
-          "url": "https://screenrant.com/emma-stone-miss-piggy-movie-jennifer-lawrence-draft-update/",
-          "domain": "screenrant.com",
-          "seendate": "20261121T163000Z",
+          "title": "Why Is the AC Condenser Making Loud Noises in Menifee , CA ? Reese Mechanical Answers as HVAC Repair Murrieta Demand Rises",
+          "url": "https://www.mykxlg.com/online_features/press_releases/why-is-the-ac-condenser-making-loud-noises-in-menifee-ca-reese-mechanical-answers-as/article_dd07d8d9-c9a1-51cc-b660-2735077419c7.html",
+          "domain": "mykxlg.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "The economic crisis in Black America",
-          "url": "https://www.canoncitydailyrecord.com/2026/11/21/the-economic-crisis-in-black-america/",
-          "domain": "canoncitydailyrecord.com",
-          "seendate": "20261121T163000Z",
+          "title": "Jake Gyllenhaal 124 - Minute Sci - Fi Action Thriller Is Officially the # 1 Movie on Netflix",
+          "url": "https://movieweb.com/netflix-day-after-tomorrow-ratings/",
+          "domain": "movieweb.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Mexico captures top drug lord El Chapo Isidro",
-          "url": "https://cyprus-mail.com/2026/11/21/mexico-captures-top-drug-lord-el-chapo-isidro",
-          "domain": "cyprus-mail.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "Cyprus"
-        },
-        {
-          "title": "2028 Democratic primary : Is Raphael Warnock running for president ?",
-          "url": "https://www.vox.com/america-actually/511301/raphael-warnock-2028-presidential-speculation",
-          "domain": "vox.com",
-          "seendate": "20261121T163000Z",
+          "title": "Trump midterm wipeout came with a message Democrats cant afford to ignore : columnist",
+          "url": "https://www.rawstory.com/trump-2678486851/",
+          "domain": "rawstory.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "10 Retro Drinking Habits Younger Generations Dont Understand",
-          "url": "https://www.thedailymeal.com/2317082/retro-drinking-habits-younger-generations-dont-understand/",
-          "domain": "thedailymeal.com",
-          "seendate": "20261121T163000Z",
+          "title": "Prince Harry visa issues led to core trouble in U . S .",
+          "url": "https://www.thenews.com.pk/latest/1424556-prince-harry-visa-issues-led-to-core-trouble-in-us",
+          "domain": "thenews.com.pk",
+          "seendate": "20261122T003000Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Trump ex - partner spills on Epstein regular role at his beauty pageants : report",
+          "url": "https://www.rawstory.com/trump-epstein-2678486319/",
+          "domain": "rawstory.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Young boy one of two killed in ballistic missile attack on Zelensky home city",
-          "url": "https://www.countytimes.co.uk/news/national/26750572.young-boy-one-two-killed-ballistic-missile-attack-zelenskys-home-city/",
-          "domain": "countytimes.co.uk",
-          "seendate": "20261121T163000Z",
+          "title": "Labor pushes back on Trump data centre tax threat",
+          "url": "https://www.maitlandmercury.com.au/story/9395877/labor-pushes-back-on-trump-data-centre-tax-threat/",
+          "domain": "maitlandmercury.com.au",
+          "seendate": "20261122T003000Z",
           "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "No change : Top Canadian officials deny U . S . is restricting military co - operation",
-          "url": "https://nationalpost.com/news/canada/no-change-top-canadian-officials-deny-u-s-is-restricting-military-co-operation/",
-          "domain": "nationalpost.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "Canada"
+          "sourcecountry": "Australia"
         }
       ]
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-22T01:28:29.132Z",
-      "checkedAt": "2026-11-22T01:28:29.132Z",
+      "checkedAt": "2026-11-22T07:32:48.235Z",
       "articles": [
         {
           "title": "Asia sees explosion of cultural confidence , says Singaporean scholar Kishore Mahbubani",
@@ -348,181 +348,181 @@
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
-      "fetchedAt": "2026-11-21T19:07:01.844Z",
-      "checkedAt": "2026-11-22T01:31:18.010Z",
+      "error": null,
+      "fetchedAt": "2026-11-22T07:29:44.279Z",
+      "checkedAt": "2026-11-22T07:29:44.279Z",
       "articles": [
         {
-          "title": "Russian strikes kill child , paramedic in Zelenskyy hometown ; rescuers targeted",
-          "url": "https://nebraska.tv/news/nation-world/russian-strikes-kill-child-paramedic-zelenskyys-hometown-rescuers-targeted",
-          "domain": "nebraska.tv",
-          "seendate": "20261121T163000Z",
+          "title": "In Ukraine , the fight to keep winter outside begins with a broken window – Winnipeg Free Press",
+          "url": "https://www.winnipegfreepress.com/world/2026/11/22/in-ukraine-the-fight-to-keep-winter-outside-begins-with-a-broken-window",
+          "domain": "winnipegfreepress.com",
+          "seendate": "20261122T053000Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "In Ukraine , the fight to keep winter outside begins with a broken window",
+          "url": "https://www.clickorlando.com/news/world/2026/11/22/in-ukraine-the-fight-to-keep-winter-outside-begins-with-a-broken-window/",
+          "domain": "clickorlando.com",
+          "seendate": "20261122T053000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Killer robots : U . N . talks fall short of hopes for legally binding rules",
-          "url": "https://www.northcountrypublicradio.org/news/npr/nx-s1-6047916/killer-robots-u-n-talks-fall-short-of-hopes-for-legally-binding-rules",
-          "domain": "northcountrypublicradio.org",
-          "seendate": "20261121T163000Z",
+          "title": "Trump says confronting dangers on Korean Peninsula discussed at 3 - way summit with Xi , Putin",
+          "url": "https://www.koreaherald.com:443/article/10944597",
+          "domain": "koreaherald.com",
+          "seendate": "20261122T053000Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "Luxury for the elite , hardship for the masses : North Korea economic divide",
+          "url": "https://www.koreaherald.com/article/10945063",
+          "domain": "koreaherald.com",
+          "seendate": "20261122T053000Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "Shared cultural heritage a strong bridge connecting SCO nations : Union Minister Gajendra Shekhawat",
+          "url": "http://www.shanghaisun.com/news/279447418/shared-cultural-heritage-a-strong-bridge-connecting-sco-nations-union-minister-gajendra-shekhawat",
+          "domain": "shanghaisun.com",
+          "seendate": "20261122T003000Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "RAF next jet perhaps last crewed fighter , says Air Chief Marshal",
+          "url": "https://www.malverngazette.co.uk/news/national/26751287.rafs-next-jet-perhaps-last-crewed-fighter-says-air-chief-marshal/",
+          "domain": "malverngazette.co.uk",
+          "seendate": "20261122T003000Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Trump ex - partner spills on Epstein regular role at his beauty pageants : report",
+          "url": "https://www.rawstory.com/trump-epstein-2678486319/",
+          "domain": "rawstory.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Nations agree to extend talks on AI killer robots but no firm commitment to rein them in",
-          "url": "http://www.rockymounttelegram.com/news/world/nations-agree-to-extend-talks-on-ai-killer-robots-but-no-firm-commitment-to-rein/article_9e134606-6514-5d0c-b98c-4919624b4921.html",
-          "domain": "rockymounttelegram.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Allies stand with Poland after airspace breach by Russia : NATO chief",
-          "url": "https://aa.com.tr/en/world/allies-stand-with-poland-after-airspace-breach-by-russia-nato-chief/4133047",
-          "domain": "aa.com.tr",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "Turkey"
-        },
-        {
-          "title": "Who is Vidhya Parshuramkar ? IIT graduate millet innovation earns her a place on TIME 100 Next India 2026 list",
-          "url": "https://www.livemint.com/news/trends/who-is-vidhya-parshuramkar-iit-graduate-s-millet-innovation-earns-her-a-place-on-time-s-100-next-india-2026-list-11795271566009.html",
-          "domain": "livemint.com",
-          "seendate": "20261121T163000Z",
+          "title": "Drones hit Russian cargo ship in Baltic , Finland tightens security",
+          "url": "https://timesofindia.indiatimes.com/world/europe/drones-hit-russian-cargo-ship-in-baltic-finland-tightens-security/articleshow/136065032.cms",
+          "domain": "timesofindia.indiatimes.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Colin Powell Chief of Staff : CIA Does Covert Operations In Accordance With What Pays The Most , Ukraine A Cash Cow",
-          "url": "http://www.zerohedge.com/geopolitical/colin-powells-chief-staff-cia-does-covert-operations-accordance-what-pays-most-ukraine",
-          "domain": "zerohedge.com",
-          "seendate": "20261121T163000Z",
+          "title": "Top 17 Comics , Graphic Novels & Manga",
+          "url": "https://paulgravett.com/articles/article/top_17_comics_graphic_novels_manga21",
+          "domain": "paulgravett.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Wes Streeting compares Volodymyr Zelensky to Winston Churchill and slams cold - blooded Putin",
-          "url": "https://www.mirror.co.uk/news/politics/wes-streeting-zelensky-churchill-putin-37901865",
-          "domain": "mirror.co.uk",
-          "seendate": "20261121T163000Z",
+          "title": "RAF next jet perhaps last crewed fighter , says Air Chief Marshal | The Wiltshire Gazette and Herald",
+          "url": "https://www.gazetteandherald.co.uk/news/national/26751287.rafs-next-jet-perhaps-last-crewed-fighter-says-air-chief-marshal/",
+          "domain": "gazetteandherald.co.uk",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Russian missiles land in Poland ; NATO scrambles aircraft",
-          "url": "https://www.israelnationalnews.com/flashes/698095",
-          "domain": "israelnationalnews.com",
-          "seendate": "20261121T163000Z",
+          "title": "Denmark Expels Russian Attaché Over Foiled Plot to Kill Rapper",
+          "url": "https://www.hngn.com/articles/273915/20261121/denmark-expels-russian-attache-over-foiled-plot-kill-rapper.htm",
+          "domain": "hngn.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
-          "sourcecountry": "Israel"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Young boy one of two killed in ballistic missile attack on Zelensky home city",
-          "url": "https://www.countytimes.co.uk/news/national/26750572.young-boy-one-two-killed-ballistic-missile-attack-zelenskys-home-city/",
-          "domain": "countytimes.co.uk",
-          "seendate": "20261121T163000Z",
+          "title": "RAF building its last manned fighter jet as drones take over",
+          "url": "https://www.telegraph.co.uk/news/2026/11/21/raf-building-last-manned-fighter-jet-drones-harv-smyth/",
+          "domain": "telegraph.co.uk",
+          "seendate": "20261121T203000Z",
           "language": "English",
           "sourcecountry": "United Kingdom"
         },
         {
-          "title": "NYT Reporter Gets Taken to the Cleaners by American Military Tech Executive Over Trump and Ukraine",
-          "url": "https://townhall.com/news/mattvespa/2026/11/21/nyt-reporter-gets-taken-to-the-cleaners-by-american-military-tech-executive-n2686849",
-          "domain": "townhall.com",
-          "seendate": "20261121T163000Z",
+          "title": "31 Years After Dayton : How Milorad Dodik Is Threatening Stability in Bosnia and the Western Balkans",
+          "url": "http://www.bgnes.com/no-filter/31-years-after-dayton-how-milorad-dodik-is-threatening-stability-in-bosnia-and-the-western-balkans",
+          "domain": "bgnes.com",
+          "seendate": "20261121T203000Z",
+          "language": "English",
+          "sourcecountry": "Bulgaria"
+        },
+        {
+          "title": "FBI investigates apparent hack of database holding records on fugitives , missing people",
+          "url": "https://wlos.com/news/nation-world/fbi-investigates-apparent-hack-of-database-holding-records-on-fugitives-missing-people",
+          "domain": "wlos.com",
+          "seendate": "20261121T203000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Stapilus : Looks like vouchers from here",
-          "url": "http://www.idahopress.com/opinion/columnists/stapilus-looks-like-vouchers-from-here/article_14399153-c736-4075-b827-1aeeb3b029a6.html",
-          "domain": "idahopress.com",
-          "seendate": "20261121T163000Z",
+          "title": "Russian triple - tap attack in Ukraine kills emergency worker and 7 - year - old in Zelensky home city - LocalNews8 . com",
+          "url": "https://localnews8.com/news/national-world/cnn-world/2026/11/21/russian-triple-tap-attack-in-ukraine-kills-emergency-worker-and-7-year-old-in-zelenskys-home-city/",
+          "domain": "localnews8.com",
+          "seendate": "20261121T203000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Ukraine Strikes Commercial Vessel In Gulf Of Finland In War First",
-          "url": "http://www.zerohedge.com/geopolitical/ukraine-strikes-commercial-vessel-gulf-finland-war-first",
-          "domain": "zerohedge.com",
-          "seendate": "20261121T163000Z",
+          "title": "Poland failure to call Putin bluff exposes Nato fragility",
+          "url": "https://www.telegraph.co.uk/world-news/2026/11/21/polands-failure-to-call-putins-bluff-exposes-nato-fragility/",
+          "domain": "telegraph.co.uk",
+          "seendate": "20261121T203000Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "NATO will defend every inch of Polish territory , Rutte says",
+          "url": "https://www.hindustantimes.com/world-news/us-news/nato-will-defend-every-inch-of-polish-territory-rutte-says-101795288086921.html",
+          "domain": "hindustantimes.com",
+          "seendate": "20261121T203000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "FBI criminal database hacked for second time in three months",
+          "url": "https://www.telegraph.co.uk/us/news/2026/11/21/fbi-criminal-database-hacked-second-time-trump-cyber-attack/",
+          "domain": "telegraph.co.uk",
+          "seendate": "20261121T203000Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Trump orders contractors to check with White House first",
+          "url": "https://www.wgal.com/article/white-house-order-federal-contractors-congress/74497986",
+          "domain": "wgal.com",
+          "seendate": "20261121T203000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Defence Secretary meets President Zelensky and Minister Khmara in Kyiv as united kingdom deepens industrial support for Ukraine",
-          "url": "https://cedarnews.net/newstasks/1175949/defence-secretary-meets-president-zelensky-minister-khmara/",
-          "domain": "cedarnews.net",
-          "seendate": "20261121T163000Z",
+          "title": "RAF fighter jets wont need pilots for much longer",
+          "url": "https://www.telegraph.co.uk/news/2026/11/21/raf-fighter-jets-wont-need-pilots-much-longer/",
+          "domain": "telegraph.co.uk",
+          "seendate": "20261121T203000Z",
           "language": "English",
-          "sourcecountry": "Lebanon"
-        },
-        {
-          "title": "Gold Hits 14 - Month Low",
-          "url": "https://www.theepochtimes.com/business/gold-hits-14-month-low-6127794",
-          "domain": "theepochtimes.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Rickards : Hard Truths On Iran And Ukraine",
-          "url": "http://www.zerohedge.com/geopolitical/rickards-hard-truths-iran-and-ukraine",
-          "domain": "zerohedge.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Russia grasps US offer on European security to revive old demands",
-          "url": "https://www.wboc.com/news/international/russia-grasps-us-offer-on-european-security-to-revive-old-demands/article_f9d4ee81-a153-5170-941b-6a4f977019f7.html",
-          "domain": "wboc.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Alcaraz digs deep to beat Shelton and reach ATP Finals showpiece",
-          "url": "https://cyprus-mail.com/2026/11/21/alcaraz-digs-deep-to-beat-shelton-and-reach-atp-finals-showpiece",
-          "domain": "cyprus-mail.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "Cyprus"
-        },
-        {
-          "title": "Estonia - Russia border closure sends residents rushing to cross before deadline",
-          "url": "https://www.euronews.com/2026/11/21/estonia-russia-border-closure-sends-residents-rushing-to-cross-before-deadline",
-          "domain": "euronews.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Build It Here : Trump Threatens Tax on Companies That Put Data Centers Overseas | Business & Energy",
-          "url": "https://www.citynewsokc.com/business/build-it-here-trump-threatens-tax-on-companies-that-put-data-centers-overseas/article_5fe48a73-5d0c-402b-b47c-a1cf9d2162ad.html",
-          "domain": "citynewsokc.com",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": null
-        },
-        {
-          "title": "Antimon : Antimony : Two Gold Projects Put the Semimetal in the Spotlight",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70195567-antimon-antimony-two-gold-projects-put-the-semimetal-in-the-spotlight-413.htm",
-          "domain": "finanznachrichten.de",
-          "seendate": "20261121T163000Z",
-          "language": "English",
-          "sourcecountry": "Germany"
+          "sourcecountry": "United Kingdom"
         }
       ]
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "ok",
+      "status": "error",
       "attempted": true,
-      "error": null,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T01:26:50.818Z",
-      "checkedAt": "2026-11-22T01:26:50.818Z",
+      "checkedAt": "2026-11-22T07:32:48.235Z",
       "articles": [
         {
           "title": "Biden - era spending law found unconstitutional by federal appeals court",
@@ -689,10 +689,10 @@
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-21T19:07:50.417Z",
-      "checkedAt": "2026-11-22T01:31:18.010Z",
+      "checkedAt": "2026-11-22T07:31:14.960Z",
       "articles": [
         {
           "title": "Taiwan flags improper treatment by China during APEC meetings",
