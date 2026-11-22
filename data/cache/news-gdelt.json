@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-22T07:37:20.160Z",
- "checkedAt": "2026-11-22T07:37:20.160Z",
- "lastSuccessAt": "2026-11-22T07:37:20.160Z",
+ "generatedAt": "2026-11-22T10:07:49.777Z",
+ "checkedAt": "2026-11-22T10:07:49.777Z",
+ "lastSuccessAt": "2026-11-22T10:07:49.777Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 12,
-  "groupedDuplicates": 16,
+  "groupedDuplicates": 10,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,10 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-22T07:37:20.160Z",
-   "lastSuccessAt": "2026-11-22T07:37:20.160Z",
+   "checkedAt": "2026-11-22T10:07:49.777Z",
+   "lastSuccessAt": "2026-11-22T10:07:49.777Z",
    "error": null,
-   "latestFile": "20261122074500"
+   "latestFile": "20261122101500"
   }
  },
  "files": {
@@ -226,7 +226,17 @@
   "20261122070000": "ok",
   "20261122071500": "ok",
   "20261122073000": "ok",
-  "20261122074500": "ok"
+  "20261122074500": "ok",
+  "20261122080000": "ok",
+  "20261122081500": "ok",
+  "20261122083000": "ok",
+  "20261122084500": "ok",
+  "20261122090000": "ok",
+  "20261122091500": "ok",
+  "20261122093000": "ok",
+  "20261122094500": "ok",
+  "20261122100000": "ok",
+  "20261122101500": "ok"
  },
  "items": [
   {
@@ -576,6 +586,58 @@
     }
    ],
    "variantsTotal": 1
+  },
+  {
+   "title": "Russia Losing Up to 35,000 Soldiers a Month in Ukraine War, US Envoy Says",
+   "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
+   "publisher": "bgnes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T10:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T10:07:49.777Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "envoy"
+      ]
+     }
+    ]
+   }
   },
   {
    "title": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
@@ -1092,6 +1154,46 @@
       "label": "Diplomacy",
       "terms": [
        "diplomacy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "The Iran–USA conflict and the future of the Nuclear Non-Proliferation Treaty",
+   "url": "https://nuclear-news.net/2026/11/22/the-iran-usa-conflict-and-the-future-of-the-nuclear-non-proliferation-treaty/",
+   "publisher": "nuclear-news.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T05:14:00.000Z",
+   "seenByGdelt": "2026-11-22T10:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "USA"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T10:07:49.777Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "treaty"
       ]
      }
     ]
@@ -1839,45 +1941,6 @@
    "variantsTotal": 2
   },
   {
-   "title": "Donald Trump pushes Ukraine-Russia peace deal by January before Democrats take Congress",
-   "url": "https://www.jpost.com/international/internationalrussia-ukraine-war/article-915625",
-   "publisher": "jpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T07:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T07:37:32.181Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "peace deal"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "Germany Apologizes After Calling Pentagon Stance On Ukraine's Offensive Strikes 'Stupid'",
    "url": "http://www.zerohedge.com/geopolitical/germany-apologizes-after-calling-pentagon-stance-ukraines-offensive-strikes-stupid",
    "publisher": "zerohedge.com",
@@ -2084,84 +2147,6 @@
    "variantsTotal": 1
   },
   {
-   "title": "News Summary-Intelligence Report 11/20/2026*Newsdump Friday*Weed Killer Deal*New Gov't Israel?*NASDAQ Down 5%*Russia Hits Kiev Hard*Yemen War*Putin-Trump-Xi Slam Court Targeting Netanyahu*Trump Hints New Year War?*",
-   "url": "https://freerepublic.com/focus/f-bloggers/4403831/posts",
-   "publisher": "freerepublic.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T09:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "institution",
-     "terms": [
-      "Kiev"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Lavrov: «Russia's objectives in Ukraine do not change». And on the EU: «He wants to get on the last train of negotiations»",
-   "url": "https://www.odnako.org/lavrov-russias-objectives-in-ukraine-do-not-change-and-on-the-eu-he-wants-to-get-on-the-last-train-of-negotiations/",
-   "publisher": "odnako.org",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T09:08:00.000Z",
-   "seenByGdelt": "2026-11-21T12:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "negotiations"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "Jared Kushner floats Ukraine NATO membership if Kyiv cedes Donbas to Russia",
    "url": "http://www.jpost.com/international/internationalrussia-ukraine-war/article-915627",
    "publisher": "jpost.com",
@@ -2240,45 +2225,6 @@
       "label": "Security",
       "terms": [
        "ceasefire"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russian drone strike on residential building in Ukraine's Kharkiv region injures 11",
-   "url": "https://en.apa.az/europe/russian-drone-strike-on-residential-building-in-ukraines-kharkiv-region-injures-11-537611",
-   "publisher": "en.apa.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T09:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T10:09:41.061Z",
-   "lastSeenAt": "2026-11-21T10:09:41.061Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone strike"
       ]
      }
     ]
@@ -3950,6 +3896,45 @@
    }
   },
   {
+   "title": "Russian Cargo Ship Catches Fire After Suspected Ukrainian Drone Attack in Gulf of Finland",
+   "url": "https://www.ghafla.co.ke/russian-cargo-ship-catches-fire-after-suspected-ukrainian-drone-attack-in-gulf-of-finland/",
+   "publisher": "ghafla.co.ke",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T06:33:00.000Z",
+   "seenByGdelt": "2026-11-22T08:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T10:07:49.777Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone attack"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Russia faces 'unsustainable' losses approaching WWII scale in Ukraine war, Mike Waltz warns",
    "url": "https://nypost.com/2026/11/22/us-news/russia-faces-unsustainable-losses-approaching-wwii-scale-in-ukraine-war-mike-waltz-warns/",
    "publisher": "nypost.com",
@@ -4051,7 +4036,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T07:37:20.160Z",
-   "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4075,6 +4060,130 @@
     }
    ],
    "variantsTotal": 1
+  },
+  {
+   "title": "Trump Says US Working on 'Larger-Scale' Ukraine-Russia Ceasefire",
+   "url": "https://www.kyivpost.com/post/90834",
+   "publisher": "kyivpost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T07:51:00.000Z",
+   "seenByGdelt": "2026-11-22T08:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T10:07:49.777Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "ceasefire"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "[Interview] Ukraine's former defence chief predicts new EU security alliance, gives behind-the-scenes look at Russia diplomacy – EUobserver",
+   "url": "https://euobserver.com/249521/interview-ukraines-former-defence-chief-predicts-new-eu-security-alliance-gives-behind-the-scenes-look-at-russia-diplomacy/",
+   "publisher": "euobserver.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T08:29:00.000Z",
+   "seenByGdelt": "2026-11-22T10:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T10:07:49.777Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomacy",
+       "alliance"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukrainian drones: Ukranian drones strike Russian cargo ship off Finland, escalating tensions over NATO involvement",
+   "url": "https://economictimes.indiatimes.com/news/defence/ukranian-drones-strike-russian-cargo-ship-off-finland-escalating-tensions-over-nato-involvement/articleshow/136070492.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T09:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T10:07:49.777Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO"
+      ]
+     }
+    ]
+   }
   },
   {
    "title": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
@@ -4217,31 +4326,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "Veteran Taiwanese poet Xiang Ming dies, leaving literary legacy",
-   "url": "https://focustaiwan.tw/culture/202611210018",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T12:59:00.000Z",
-   "seenByGdelt": "2026-11-21T16:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwanese"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T16:06:06.880Z",
-   "lastSeenAt": "2026-11-21T19:13:41.230Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
   },
   {
    "title": "National Museum of Taiwan Literature Expands Spanish Translations of Taiwanese Works – Indonesia Tribune",
@@ -5124,6 +5208,31 @@
    },
    "firstSeenAt": "2026-11-22T07:37:20.160Z",
    "lastSeenAt": "2026-11-22T07:37:20.160Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Laos 'least-developed' status shift, Tata meeting, Taiwan local elections",
+   "url": "https://asia.nikkei.com/spotlight/your-week-in-asia/laos-least-developed-status-shift-tata-meeting-taiwan-local-elections",
+   "publisher": "nikkei.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T06:34:00.000Z",
+   "seenByGdelt": "2026-11-22T10:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-22T10:07:49.777Z",
+   "lastSeenAt": "2026-11-22T10:07:49.777Z",
    "relevance": {
     "score": 0,
     "tier": "other",
