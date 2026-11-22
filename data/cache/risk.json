@@ -3,13 +3,13 @@
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
  "methodologyVersion": 1,
- "generatedAt": "2026-11-21T06:37:29.947Z",
- "lastSuccessAt": "2026-11-21T06:37:29.947Z",
- "checkedAt": "2026-11-21T06:37:29.947Z",
+ "generatedAt": "2026-11-22T06:35:46.498Z",
+ "lastSuccessAt": "2026-11-22T06:35:46.498Z",
+ "checkedAt": "2026-11-22T06:35:46.498Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-21T06:37:29.897Z",
+   "checkedAt": "2026-11-22T06:35:46.450Z",
    "lastSuccessAt": "2026-11-21T03:15:43.287Z"
   },
   "indicators": {
@@ -18,7 +18,7 @@
    "lastSuccessAt": "2026-11-20T08:07:28.320Z"
   },
   "briefs": {
-   "generatedAt": "2026-11-21T03:51:40.948Z"
+   "generatedAt": "2026-11-22T04:19:57.158Z"
   }
  },
  "countries": {
@@ -107,28 +107,28 @@
     ],
     "context": [
      {
-      "headline": "Araghchi ridicules Israeli envoy for acting as 'commander-in-chief' of US military",
-      "publisher": "presstv.co.uk",
-      "url": "https://www.presstv.co.uk/Detail/2026/11/20/781159/iran-fires-back-at-israeli-envoy-for-setting-conditions-for-return-of-us-troops",
-      "time": "2026-11-20T10:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
-      "publisher": "webindia123.com",
-      "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
-      "time": "2026-11-20T09:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "U.S. Faces Unprecedented Three-Way Nuclear Rivalry With China and Russia, WSJ Reports – NaturalNews.com",
+      "headline": "Competitive exploitation: Kenya picks U.S. group for Mrima Hill rare earths, igniting supply chain tug of war with China – NaturalNews.com",
       "publisher": "naturalnews.com",
-      "url": "https://www.naturalnews.com/2026-11-20-us-faces-nuclear-rivalry-china-russia-wsj.html",
-      "time": "2026-11-21T03:15:00.000Z",
+      "url": "https://www.naturalnews.com/2026-11-21-kenya-picks-us-group-mrima-hill-rare-earths.html",
+      "time": "2026-11-21T13:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Iran's threats 'real and actionable': MP warns US must choose missiles or diplomacy",
+      "publisher": "presstv.co.uk",
+      "url": "https://www.presstv.co.uk/Detail/2026/11/21/781288/iranian-mp-warns-us-tehrans-threats-real-and-actionable",
+      "time": "2026-11-22T01:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    },
    "economic": {
     "category": "economic",
@@ -232,28 +232,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Araghchi ridicules Israeli envoy for acting as 'commander-in-chief' of US military",
+      "headline": "Competitive exploitation: Kenya picks U.S. group for Mrima Hill rare earths, igniting supply chain tug of war with China – NaturalNews.com",
+      "publisher": "naturalnews.com",
+      "url": "https://www.naturalnews.com/2026-11-21-kenya-picks-us-group-mrima-hill-rare-earths.html",
+      "time": "2026-11-21T13:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Iran's threats 'real and actionable': MP warns US must choose missiles or diplomacy",
       "publisher": "presstv.co.uk",
-      "url": "https://www.presstv.co.uk/Detail/2026/11/20/781159/iran-fires-back-at-israeli-envoy-for-setting-conditions-for-return-of-us-troops",
-      "time": "2026-11-20T10:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "\"Didn't know Israeli envoy to Washington was Commander-in-Chief of US military\": Araghchi",
-      "publisher": "webindia123.com",
-      "url": "https://news.webindia123.com/news/Articles/World/20261120/4522247.html",
-      "time": "2026-11-20T09:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "China using Pakistan, supply chains to constrain India's rise: US Panel",
-      "publisher": "indiatimes.com",
-      "url": "https://economictimes.indiatimes.com/news/defence/china-using-pakistan-supply-chains-to-constrain-indias-rise-us-panel/articleshow/136042992.cms",
-      "time": "2026-11-21T03:00:00.000Z",
+      "url": "https://www.presstv.co.uk/Detail/2026/11/21/781288/iranian-mp-warns-us-tehrans-threats-real-and-actionable",
+      "time": "2026-11-22T01:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    }
   },
   "CHN": {
@@ -293,28 +293,28 @@
     ],
     "context": [
      {
-      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
-      "publisher": "wsws.org",
-      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
-      "time": "2026-11-20T08:45:00.000Z",
+      "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
+      "publisher": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
+      "time": "2026-11-21T15:30:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
-      "publisher": "baystreet.ca",
-      "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
-      "time": "2026-11-20T09:30:00.000Z",
+      "headline": "Competitive exploitation: Kenya picks U.S. group for Mrima Hill rare earths, igniting supply chain tug of war with China – NaturalNews.com",
+      "publisher": "naturalnews.com",
+      "url": "https://www.naturalnews.com/2026-11-21-kenya-picks-us-group-mrima-hill-rare-earths.html",
+      "time": "2026-11-21T13:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump Calls from Air Force One After China Summit, Questions",
-      "publisher": "athens-times.com",
-      "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
-      "time": "2026-11-20T09:26:00.000Z",
-      "timeBasis": "published"
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    },
    "economic": {
     "category": "economic",
@@ -418,28 +418,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
-      "publisher": "wsws.org",
-      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
-      "time": "2026-11-20T08:45:00.000Z",
+      "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
+      "publisher": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
+      "time": "2026-11-21T15:30:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
-      "publisher": "baystreet.ca",
-      "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
-      "time": "2026-11-20T09:30:00.000Z",
+      "headline": "Competitive exploitation: Kenya picks U.S. group for Mrima Hill rare earths, igniting supply chain tug of war with China – NaturalNews.com",
+      "publisher": "naturalnews.com",
+      "url": "https://www.naturalnews.com/2026-11-21-kenya-picks-us-group-mrima-hill-rare-earths.html",
+      "time": "2026-11-21T13:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump Calls from Air Force One After China Summit, Questions",
-      "publisher": "athens-times.com",
-      "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
-      "time": "2026-11-20T09:26:00.000Z",
-      "timeBasis": "published"
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    }
   },
   "RUS": {
@@ -511,28 +511,28 @@
     ],
     "context": [
      {
-      "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
-      "publisher": "aa.com.tr",
-      "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
-      "time": "2026-11-20T09:15:00.000Z",
+      "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
+      "publisher": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
+      "time": "2026-11-21T15:30:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
-      "publisher": "wsws.org",
-      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
-      "time": "2026-11-20T08:45:00.000Z",
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
-      "publisher": "en.apa.az",
-      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
-      "time": "2026-11-20T08:15:00.000Z",
+      "headline": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
+      "publisher": "freerepublic.com",
+      "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
+      "time": "2026-11-21T06:45:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    },
    "economic": {
     "category": "economic",
@@ -637,28 +637,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
-      "publisher": "aa.com.tr",
-      "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
-      "time": "2026-11-20T09:15:00.000Z",
+      "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
+      "publisher": "moneycontrol.com",
+      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
+      "time": "2026-11-21T15:30:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
-      "publisher": "wsws.org",
-      "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
-      "time": "2026-11-20T08:45:00.000Z",
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
-      "publisher": "en.apa.az",
-      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
-      "time": "2026-11-20T08:15:00.000Z",
+      "headline": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
+      "publisher": "freerepublic.com",
+      "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
+      "time": "2026-11-21T06:45:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    }
   },
   "UKR": {
@@ -698,28 +698,28 @@
     ],
     "context": [
      {
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
+      "publisher": "freerepublic.com",
+      "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
+      "time": "2026-11-21T06:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
       "publisher": "aa.com.tr",
       "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
       "time": "2026-11-20T09:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
-      "publisher": "en.apa.az",
-      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
-      "time": "2026-11-20T08:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump tells Europe Putin ready to end Ukraine war and willing for peace deal",
-      "publisher": "dailyexcelsior.com",
-      "url": "https://www.dailyexcelsior.com/trump-tells-europe-putin-ready-to-end-ukraine-war-and-willing-for-peace-deal/",
-      "time": "2026-11-21T03:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    },
    "economic": {
     "category": "economic",
@@ -804,28 +804,28 @@
     "insufficientReason": "method",
     "context": [
      {
+      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
+      "time": "2026-11-21T07:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
+      "publisher": "freerepublic.com",
+      "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
+      "time": "2026-11-21T06:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
       "publisher": "aa.com.tr",
       "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
       "time": "2026-11-20T09:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
-      "publisher": "en.apa.az",
-      "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
-      "time": "2026-11-20T08:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump tells Europe Putin ready to end Ukraine war and willing for peace deal",
-      "publisher": "dailyexcelsior.com",
-      "url": "https://www.dailyexcelsior.com/trump-tells-europe-putin-ready-to-end-ukraine-war-and-willing-for-peace-deal/",
-      "time": "2026-11-21T03:15:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    }
   },
   "TWN": {
@@ -882,6 +882,13 @@
     ],
     "context": [
      {
+      "headline": "U.S.-Taiwan military cooperation at unprecedented level: Congressman",
+      "publisher": "focustaiwan.tw",
+      "url": "https://focustaiwan.tw/politics/202611210004",
+      "time": "2026-11-21T03:42:00.000Z",
+      "timeBasis": "published"
+     },
+     {
       "headline": "Xi Warns Trump Over Taiwan As The War Cycle Intensifies",
       "publisher": "armstrongeconomics.com",
       "url": "https://www.armstrongeconomics.com/world-news/war/xi-warns-trump-over-taiwan-as-the-war-cycle-intensifies/",
@@ -889,7 +896,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    },
    "economic": {
     "category": "economic",
@@ -928,6 +935,13 @@
     "insufficientReason": "method",
     "context": [
      {
+      "headline": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
+      "publisher": "indonesiatribune.com",
+      "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
+      "time": "2026-11-21T13:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
       "publisher": "chinamil.com.cn",
       "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
@@ -942,7 +956,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-21T03:51:40.948Z"
+    "contextAsOf": "2026-11-22T04:19:57.158Z"
    }
   }
  }
