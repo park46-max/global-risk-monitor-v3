@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-22T22:02:53.339Z",
- "checkedAt": "2026-11-22T22:02:53.339Z",
- "lastSuccessAt": "2026-11-22T22:02:53.339Z",
+ "generatedAt": "2026-11-23T01:42:18.687Z",
+ "checkedAt": "2026-11-23T01:42:18.687Z",
+ "lastSuccessAt": "2026-11-23T01:42:18.687Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 13,
-  "groupedDuplicates": 25,
+  "groupedDuplicates": 12,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,11 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-22T22:02:53.339Z",
-   "lastSuccessAt": "2026-11-22T22:02:53.339Z",
+   "checkedAt": "2026-11-23T01:42:18.687Z",
+   "lastSuccessAt": "2026-11-23T01:42:18.687Z",
    "error": null,
-   "latestFile": "20261122220000"
+   "latestFile": "20261123014500",
+   "warning": "2 of 12 files could not be read this run"
   }
  },
  "files": {
@@ -281,7 +282,19 @@
   "20261122211500": "ok",
   "20261122213000": "ok",
   "20261122214500": "ok",
-  "20261122220000": "ok"
+  "20261122220000": "ok",
+  "20261122230000": "ok",
+  "20261122231500": "ok",
+  "20261122233000": "ok",
+  "20261122234500": "ok",
+  "20261123000000": "ok",
+  "20261123001500": "ok",
+  "20261123003000": "ok",
+  "20261123004500": "ok",
+  "20261123010000": "ok",
+  "20261123011500": "ok",
+  "20261123013000": "missing",
+  "20261123014500": "missing"
  },
  "items": [
   {
@@ -1420,45 +1433,6 @@
       "label": "Diplomacy",
       "terms": [
        "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Trump says only older US chips should go to China amid broader trade talks",
-   "url": "https://www.thenews.com.pk/latest/1424447-trump-says-only-older-us-chips-should-go-to-china-amid-broader-trade-talks",
-   "publisher": "thenews.com.pk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T22:23:00.000Z",
-   "seenByGdelt": "2026-11-21T01:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "trade talks"
       ]
      }
     ]
@@ -2919,84 +2893,6 @@
    }
   },
   {
-   "title": "LIVE: Russian drone attack damages apartment building near Kyiv, Ukraine faces overnight strikes",
-   "url": "https://news.az/news/live-russian-drone-attack-damages-apartment-building-near-kyiv-ukraine-faces-overnight-strikes",
-   "publisher": "news.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T12:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone attack"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russia and Ukraine are bombing bridges. Who's winning? - International - derStandard.at › International",
-   "url": "https://www.derstandard.at/consent/tcf/story/3000000350142/russia-and-ukraine-are-bombing-bridges-whos-winning",
-   "publisher": "derstandard.at",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T12:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "bombing"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "Huge explosion 'rips through Russian warship' 1,000s of miles from Ukraine",
    "url": "https://www.aol.co.uk/articles/huge-explosion-rips-russian-warship-125200000.html",
    "publisher": "aol.co.uk",
@@ -3147,6 +3043,45 @@
       "label": "Security",
       "terms": [
        "army"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russia Ukraine War",
+   "url": "https://www.goshennews.com/news/national_news/russia-ukraine-war/image_82e644a4-41c9-5988-994d-16678d4e9d5a.html",
+   "publisher": "goshennews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T13:31:00.000Z",
+   "seenByGdelt": "2026-11-22T23:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
       ]
      }
     ]
@@ -3979,7 +3914,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4001,9 +3936,16 @@
      "url": "https://www.cbsnews.com/news/russian-warship-struck-suspected-ukrainian-sea-drones-benghazi-naval-base-libya-officials/",
      "published": null,
      "seenByGdelt": "2026-11-22T19:15:00.000Z"
+    },
+    {
+     "publisher": "kurv.com",
+     "publisherId": "gdelt",
+     "url": "https://www.kurv.com/suspected-ukrainian-sea-drones-hit-russian-warship-at-benghazi-naval-base-libyan-officials-say/",
+     "published": null,
+     "seenByGdelt": "2026-11-22T23:15:00.000Z"
     }
    ],
-   "variantsTotal": 1
+   "variantsTotal": 2
   },
   {
    "title": "Ukraine Hits Russian Warship and Naval Base; Brings the Baltic Fleet's Backyard Into Play",
@@ -4069,7 +4011,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4435,7 +4377,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T22:02:53.339Z",
-   "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4484,6 +4426,85 @@
       "label": "Security",
       "terms": [
        "NATO"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Watch: Russian warship hit by suspected Ukrainian drones at Benghazi naval base, bursts into flames",
+   "url": "https://timesofindia.indiatimes.com/world/rest-of-world/watch-russian-warship-hit-by-suspected-ukrainian-drones-at-benghazi-naval-base-bursts-into-flames/articleshow/136085577.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T00:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship",
+       "naval"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US ambassador Jared Novelly defends remarks about Wayne Brown over China",
+   "url": "https://www.nzherald.co.nz/nz/politics/us-ambassador-jared-novelly-defends-remarks-about-wayne-brown-over-china/DHJGIQ6ZHJAQ5FESCLWMSB2QSQ/",
+   "publisher": "nzherald.co.nz",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T00:27:00.000Z",
+   "seenByGdelt": "2026-11-23T01:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "ambassador"
       ]
      }
     ]
@@ -4729,87 +4750,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "《TAIPEI TIMES》 US lawmaker upbeat on Taiwan ties - 焦點",
-   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649131",
-   "publisher": "ltn.com.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T19:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T22:00:35.566Z",
-   "lastSeenAt": "2026-11-21T22:00:35.566Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "《TAIPEI TIMES》 FSC announces measures after stock market losses - 焦點",
-   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649132",
-   "publisher": "ltn.com.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T19:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T22:00:35.566Z",
-   "lastSeenAt": "2026-11-21T22:00:35.566Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "《TAIPEI TIMES》 Temperatures could drop to 11°C in low areas: CWA - 焦點",
-   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649134",
-   "publisher": "ltn.com.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T19:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T22:00:35.566Z",
-   "lastSeenAt": "2026-11-21T22:00:35.566Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
   },
   {
    "title": "Taiwan Cautions Canada About Increasing Trade With China",
@@ -5566,6 +5506,87 @@
    },
    "firstSeenAt": "2026-11-22T22:02:53.339Z",
    "lastSeenAt": "2026-11-22T22:02:53.339Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan Kills The Shorts: Blanket Ban, Stock-Lending Freeze And A $15 Billion Rescue Fund After The Taiex's Worst Week Since 1991",
+   "url": "http://www.zerohedge.com/markets/taiwan-kills-shorts-blanket-ban-stock-lending-freeze-and-15-billion-rescue-fund-after",
+   "publisher": "zerohedge.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T23:10:00.000Z",
+   "seenByGdelt": "2026-11-23T01:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Experts: One-China principle unshakable, 'Taiwan independence' doomed",
+   "url": "http://www.taiwansun.com/news/279448970/experts-one-china-principle-unshakable-taiwan-independence-doomed",
+   "publisher": "taiwansun.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-22T23:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "You can PayLah! in Taiwan, but cash is still needed",
+   "url": "https://www.straitstimes.com/asia/east-asia/you-can-paylah-in-taiwan-but-heres-why-cash-is-still-very-much-needed",
+   "publisher": "straitstimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T01:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T01:42:18.687Z",
    "relevance": {
     "score": 0,
     "tier": "other",
