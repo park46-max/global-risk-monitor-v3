@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-23T16:26:03.214Z",
- "lastSuccessAt": "2026-11-23T16:26:03.214Z",
- "checkedAt": "2026-11-23T16:26:03.214Z",
+ "generatedAt": "2026-11-23T19:26:18.155Z",
+ "lastSuccessAt": "2026-11-23T19:26:18.155Z",
+ "checkedAt": "2026-11-23T19:26:18.155Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 162,
-   "lastSuccessAt": "2026-11-23T16:25:42.202Z",
-   "checkedAt": "2026-11-23T16:25:42.202Z",
+   "items": 164,
+   "lastSuccessAt": "2026-11-23T19:25:55.324Z",
+   "checkedAt": "2026-11-23T19:25:55.324Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,7 +22,7 @@
   }
  },
  "itemStats": {
-  "read": 162,
+  "read": 164,
   "noSource": 0,
   "noTime": 0,
   "outsideWindow": 0,
@@ -32,18 +32,18 @@
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-23T16:26:03.214Z",
+   "generatedAt": "2026-11-23T19:26:18.155Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T16:26:03.214Z",
-    "to": "2026-11-23T16:26:03.214Z"
+    "from": "2026-11-20T19:26:18.155Z",
+    "to": "2026-11-23T19:26:18.155Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 60,
+   "reportsFound": 57,
    "overview": {
     "kind": "fact",
-    "text": "60 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 12:30 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 8, sanctions and trade 5.",
+    "text": "57 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 19:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 7, sanctions and trade 5.",
     "evidence": [
      1,
      2,
@@ -143,10 +143,10 @@
     {
      "kind": "reporting",
      "n": 5,
-     "headline": "Tehran: Hormuz security can be restored fast if US ends martime blockade and sanctions",
-     "publisher": "presstv.co.uk",
-     "url": "https://www.presstv.co.uk/Detail/2026/11/23/781391/tehran-hormuz-security-can-be-restored-fast-if-us-honors-commitments",
-     "time": "2026-11-23T12:30:00.000Z",
+     "headline": "US pact lifts Kenya's nuclear energy dream",
+     "publisher": "businessdailyafrica.com",
+     "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/us-pact-lifts-kenya-s-nuclear-energy-dream-5681868",
+     "time": "2026-11-23T19:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -156,7 +156,7 @@
      },
      "topics": [
       "Security",
-      "Sanctions and trade"
+      "Diplomacy"
      ],
      "alsoReportedBy": []
     }
@@ -176,9 +176,10 @@
       8,
       9,
       10,
-      11
+      11,
+      12
      ],
-     "text": "11 of the 12 listed reports use security wording (NATO, war, nuclear, weapons) [1][2][3][4][5][6][7][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (NATO, war, nuclear, weapons) [1][2][3][4][5][6][7][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -187,25 +188,24 @@
       1,
       2,
       4,
-      6,
+      5,
       8,
-      9,
-      11,
-      12
+      10,
+      11
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (envoy, summit, peace talks, treaty) [1][2][4][6][8][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "7 of the 12 listed reports use diplomacy wording (envoy, summit, pact, peace talks) [1][2][4][5][8][10][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
       3,
-      5,
+      6,
       7,
-      10,
+      9,
       12
      ],
-     "text": "5 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, sanctions, tariffs) [3][5][7][10][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, sanctions, tariffs) [3][6][7][9][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -258,6 +258,24 @@
     },
     {
      "n": 5,
+     "title": "US pact lifts Kenya's nuclear energy dream",
+     "publisher": "businessdailyafrica.com",
+     "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/us-pact-lifts-kenya-s-nuclear-energy-dream-5681868",
+     "time": "2026-11-23T19:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 6,
+     "title": "Iran seeks $290 billion in damages from the US over sanctions and military strikes",
+     "publisher": "newindianexpress.com",
+     "url": "https://www.newindianexpress.com/world/2026/Nov/23/iran-seeks-290-billion-in-damages-from-the-us-over-sanctions-and-military-strikes",
+     "time": "2026-11-23T17:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
      "title": "Tehran: Hormuz security can be restored fast if US ends martime blockade and sanctions",
      "publisher": "presstv.co.uk",
      "url": "https://www.presstv.co.uk/Detail/2026/11/23/781391/tehran-hormuz-security-can-be-restored-fast-if-us-honors-commitments",
@@ -266,7 +284,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 8,
      "title": "RIGHT SPEAK: 143 Combat Clashes (15 Pokrovsk, 15 Kostiantynivka, 7 Huliaipole); Waltz: RU Faces 'Unsustainable' WWII-Scale Losses; RU Warship Hit; RU Warship Sinks Off Libya (Suspected UKR Strikes); US Intel: Putin 'Not US Friend in UKR'; Peace Talks Won't End War in 2027; RU HITS: Apt Bldg, 3 Dead, More Buried; UKR HITS: RU Natl Guard HQ (Krasnodar), NZNP Oil Plant, LIVE UPDATES, DETAILS & MORE",
      "publisher": "rightspeak.net",
      "url": "http://www.rightspeak.net/2026/11/143-combat-clashes-15-pokrovsk-15.html",
@@ -275,7 +293,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 9,
      "title": "US Congressman puts Iran war, tariffs and healthcare on early House agenda",
      "publisher": "prokerala.com",
      "url": "https://www.prokerala.com/news/articles/a1839957.html",
@@ -284,7 +302,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 10,
      "title": "The Iran–USA conflict and the future of the Nuclear Non-Proliferation Treaty",
      "publisher": "nuclear-news.net",
      "url": "https://nuclear-news.net/2026/11/22/the-iran-usa-conflict-and-the-future-of-the-nuclear-non-proliferation-treaty/",
@@ -293,7 +311,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 11,
      "title": "Iran's threats 'real and actionable': MP warns US must choose missiles or diplomacy",
      "publisher": "presstv.co.uk",
      "url": "https://www.presstv.co.uk/Detail/2026/11/21/781288/iranian-mp-warns-us-tehrans-threats-real-and-actionable",
@@ -302,30 +320,12 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 12,
      "title": "GAO Finds Pentagon Lacks Coordinated View of Military Space Supply Chain Risks – SatNews",
      "publisher": "satnews.com",
      "url": "https://satnews.com/2026/11/21/gao-finds-pentagon-lacks-coordinated-view-of-military-space-supply-chain-risks/",
      "time": "2026-11-21T23:45:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Iran wants diplomacy to end war, says Araghchi as U.S. rejects terms",
-     "publisher": "thehindu.com",
-     "url": "https://www.thehindu.com/news/international/iran-wants-diplomacy-to-end-war-says-araghchi-as-us-rejects-terms/article71729396.ece",
-     "time": "2026-11-21T17:53:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Analyst Downgrades Hit Summit Therapeutics (NASDAQ: SMMT), PepsiCo (NASDAQ: PEP) And USA Rare Earth (NASDAQ: USAR)",
-     "publisher": "foreignpolicyjournal.com",
-     "url": "https://www.foreignpolicyjournal.com/2026/11/21/analyst-downgrades-hit-summit-therapeutics-nasdaq-smmt-pepsico-nasdaq-pep-and-usa-rare-earth-nasdaq-usar/",
-     "time": "2026-11-21T14:07:00.000Z",
-     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
@@ -334,18 +334,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-23T16:26:03.214Z",
+   "generatedAt": "2026-11-23T19:26:18.155Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T16:26:03.214Z",
-    "to": "2026-11-23T16:26:03.214Z"
+    "from": "2026-11-20T19:26:18.155Z",
+    "to": "2026-11-23T19:26:18.155Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 47,
+   "reportsFound": 44,
    "overview": {
     "kind": "fact",
-    "text": "47 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 16:15 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 9, diplomacy 6, sanctions and trade 2.",
+    "text": "44 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 17:44 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 5, sanctions and trade 2.",
     "evidence": [
      1,
      2,
@@ -476,11 +476,12 @@
       5,
       6,
       7,
+      8,
       9,
-      10,
-      12
+      12,
+      13
      ],
-     "text": "9 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][7][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][7][8][9][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -489,11 +490,10 @@
       1,
       2,
       5,
-      8,
-      11,
-      13
+      10,
+      11
      ],
-     "text": "6 of the 12 listed reports use diplomacy wording (foreign minister, summit, G20, bilateral) [1][2][5][8][11][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use diplomacy wording (foreign minister, summit, G20, diplomacy) [1][2][5][10][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -589,6 +589,24 @@
     },
     {
      "n": 7,
+     "title": "China expands nuclear submarine fleet with US strike capability",
+     "publisher": "nikkei.com",
+     "url": "https://asia.nikkei.com/politics/defense/china-expands-nuclear-submarine-fleet-with-us-strike-capability",
+     "time": "2026-11-23T17:44:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "AI-Powered Cyber Espionage from China and Russia Sparks Global Cybersecurity Crisis – NaturalNews.com",
+     "publisher": "naturalnews.com",
+     "url": "https://www.naturalnews.com/2026-11-23-ai-powered-cyber-espionage-china-russia-crisis.html",
+     "time": "2026-11-23T16:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
      "title": "US report flags China's military assistance to Pakistan during Operation Sindoor",
      "publisher": "ianslive.in",
      "url": "https://ianslive.in/us-report-flags-chinas-military-assistance-to-pakistan-during-operation-sindoor--20261123210855",
@@ -597,7 +615,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 10,
      "title": "China holds separate financial dialogues with EU, Russia, with G20 Finance Track cooperation on the agenda",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1374884.shtml",
@@ -606,7 +624,16 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 11,
+     "title": "Pak Astronaut On Chinese Mission A New Phase In Space Diplomacy: US Expert",
+     "publisher": "cinaradio.com",
+     "url": "https://www.cinaradio.com/2026/11/23/pak-astronaut-on-chinese-mission-a-new-phase-in-space-diplomacy-us-expert/",
+     "time": "2026-11-23T15:20:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
      "title": "'Fake jobs, consulting gigs': Months before Nvidia row, FBI busted Chinese espionage plot to acquire US secrets",
      "publisher": "hindustantimes.com",
      "url": "https://www.hindustantimes.com/world-news/fake-jobs-consulting-gigs-months-before-nvidia-row-fbi-busted-chinese-espionage-plot-to-acquire-us-secrets-jensen-huang-alice-huang-spying-row-101795423262043.html",
@@ -615,39 +642,12 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 13,
      "title": "China's military fears US AI could expose its nuclear missiles, NYT reports",
      "publisher": "thenextweb.com",
      "url": "https://thenextweb.com/news/china-military-ai-nuclear-deterrent-90-seconds-nyt",
      "time": "2026-11-23T10:35:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Russia and China Set Sights on New Bilateral Trade Record",
-     "publisher": "sputnikglobe.com",
-     "url": "https://sputnikglobe.com/20261123/russia-and-china-set-sights-on-new-bilateral-trade-record-1125132821.html",
-     "time": "2026-11-23T10:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "US edge over China in military power, influence in Asia narrowed to minimum: report",
-     "publisher": "thestar.com.my",
-     "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/23/us-edge-over-china-in-military-power-influence-in-asia-narrowed-to-minimum-report",
-     "time": "2026-11-23T07:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "How will the world change after the China-US-Russia summit?",
-     "publisher": "businesstimes.com.sg",
-     "url": "https://www.businesstimes.com.sg/opinion-features/how-will-world-change-after-china-us-russia-summit",
-     "time": "2026-11-23T07:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
@@ -656,18 +656,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-23T16:26:03.214Z",
+   "generatedAt": "2026-11-23T19:26:18.155Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T16:26:03.214Z",
-    "to": "2026-11-23T16:26:03.214Z"
+    "from": "2026-11-20T19:26:18.155Z",
+    "to": "2026-11-23T19:26:18.155Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 56,
    "overview": {
     "kind": "fact",
-    "text": "56 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 06:45 UTC to 2026-11-23 16:15 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 9, sanctions and trade 1.",
+    "text": "56 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 06:45 UTC to 2026-11-23 19:00 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 10, sanctions and trade 1.",
     "evidence": [
      1,
      2,
@@ -819,9 +819,10 @@
       7,
       8,
       9,
-      11
+      10,
+      12
      ],
-     "text": "9 of the 12 listed reports use diplomacy wording (foreign minister, envoy, summit, diplomats) [1][2][3][5][6][7][8][9][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use diplomacy wording (foreign minister, envoy, summit, alliance) [1][2][3][5][6][7][8][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -832,10 +833,9 @@
       3,
       5,
       6,
-      12,
       13
      ],
-     "text": "7 listed reports with topic keywords also name China, the United States and Ukraine [1][2][3][5][6][12][13]. A headline that names two countries does not show how they are connected."
+     "text": "6 listed reports with topic keywords also name China, the United States and Ukraine [1][2][3][5][6][13]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
@@ -904,6 +904,15 @@
     },
     {
      "n": 7,
+     "title": "Tonse Alliance Leaders Accused of Treason Plot, Sending Recruits to Russia for Military Training",
+     "publisher": "malawivoice.com",
+     "url": "https://www.malawivoice.com/2026/11/23/tonse-alliance-leaders-accused-of-treason-plot-sending-recruits-to-russia-for-military-training/",
+     "time": "2026-11-23T15:27:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
      "title": "Warsaw to summon Russian envoy over alleged missile incursion",
      "publisher": "news.az",
      "url": "https://news.az/news/warsaw-to-summon-russian-envoy-over-alleged-missile-incursion",
@@ -912,7 +921,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 9,
      "title": "Cyprus Expels Russian Diplomats Suspected of Espionage, Reports Say",
      "publisher": "themoscowtimes.com",
      "url": "https://www.themoscowtimes.com/2026/11/23/cyprus-expels-russian-diplomats-suspected-of-espionage-reports-say-a94348",
@@ -921,7 +930,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 10,
      "title": "Start of World War 3? NATO chief Rutte reaffirms the Western alliance's Article 5 commitment after Russian missile incursions into Poland",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/world/us/start-of-world-war-3-nato-chief-rutte-reaffirms-the-western-alliances-article-5-commitment-after-russian-missile-incursions-into-poland/articleshow/136097233.cms",
@@ -930,7 +939,7 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "Drone strike on sanctioned Russian ship brings war risk to Baltic shipping lanes",
      "publisher": "insurancebusinessmag.com",
      "url": "https://www.insurancebusinessmag.com/us/news/marine/drone-strike-on-sanctioned-russian-ship-brings-war-risk-to-baltic-shipping-lanes-598353.aspx",
@@ -939,7 +948,7 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "Cyprus expels Russian diplomats on suspicion of espionage",
      "publisher": "politico.eu",
      "url": "https://www.politico.eu/article/cyprus-expels-russian-diplomats-on-suspicion-of-espionage/",
@@ -948,20 +957,11 @@
      "via": "GDELT"
     },
     {
-     "n": 12,
-     "title": "Ukrainian Naval Drones Sink Russian Warship in Libya",
-     "publisher": "oilprice.com",
-     "url": "https://oilprice.com/Latest-Energy-News/World-News/Ukrainian-Naval-Drones-Sink-Russian-Warship-in-Libya.html",
-     "time": "2026-11-23T16:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
      "n": 13,
-     "title": "Russian Forces Strike Ukrainian Military Supply Routes – MoD",
-     "publisher": "sputnikglobe.com",
-     "url": "https://sputnikglobe.com/20261123/russian-forces-strike-ukrainian-military-supply-routes--mod-1125135897.html",
-     "time": "2026-11-23T16:15:00.000Z",
+     "title": "Latvia lodges a protest with the Russian Federation regarding the consequences of its war of aggression against Ukraine and violations of the airspace of European Union and NATO member states",
+     "publisher": "mfa.gov.lv",
+     "url": "https://www.mfa.gov.lv/en/article/latvia-lodges-protest-russian-federation-regarding-consequences-its-war-aggression-against-ukraine-and-violations-airspace-european-union-and-nato-member-states",
+     "time": "2026-11-23T19:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -971,18 +971,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-23T16:26:03.214Z",
+   "generatedAt": "2026-11-23T19:26:18.155Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T16:26:03.214Z",
-    "to": "2026-11-23T16:26:03.214Z"
+    "from": "2026-11-20T19:26:18.155Z",
+    "to": "2026-11-23T19:26:18.155Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 45,
    "overview": {
     "kind": "fact",
-    "text": "45 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:15 UTC to 2026-11-23 16:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 2.",
+    "text": "45 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:15 UTC to 2026-11-23 19:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 9, sanctions and trade 2.",
     "evidence": [
      1,
      2,
@@ -1115,10 +1115,9 @@
       8,
       9,
       10,
-      11,
-      12
+      11
      ],
-     "text": "12 of the 12 listed reports use security wording (NATO, war, nuclear, weapons) [1][2][3][4][5][6][7][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use security wording (NATO, war, nuclear, weapons) [1][2][3][4][5][6][7][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1131,9 +1130,10 @@
       5,
       7,
       9,
-      10
+      10,
+      12
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (envoy, summit, alliance, ambassador) [1][2][3][4][5][7][9][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use diplomacy wording (envoy, summit, alliance, ambassador) [1][2][3][4][5][7][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -1251,20 +1251,20 @@
     },
     {
      "n": 11,
-     "title": "Ukrainian Naval Drones Sink Russian Warship in Libya",
-     "publisher": "oilprice.com",
-     "url": "https://oilprice.com/Latest-Energy-News/World-News/Ukrainian-Naval-Drones-Sink-Russian-Warship-in-Libya.html",
-     "time": "2026-11-23T16:15:00.000Z",
+     "title": "Latvia lodges a protest with the Russian Federation regarding the consequences of its war of aggression against Ukraine and violations of the airspace of European Union and NATO member states",
+     "publisher": "mfa.gov.lv",
+     "url": "https://www.mfa.gov.lv/en/article/latvia-lodges-protest-russian-federation-regarding-consequences-its-war-aggression-against-ukraine-and-violations-airspace-european-union-and-nato-member-states",
+     "time": "2026-11-23T19:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Russian Forces Strike Ukrainian Military Supply Routes – MoD",
-     "publisher": "sputnikglobe.com",
-     "url": "https://sputnikglobe.com/20261123/russian-forces-strike-ukrainian-military-supply-routes--mod-1125135897.html",
-     "time": "2026-11-23T16:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Ukraine Peace Talks Expose a U.S.–European Divide Over Sequencing",
+     "publisher": "finchannel.com",
+     "url": "https://finchannel.com/ukraine-peace-talks-expose-a-u-s-european-divide-over-sequencing/142723/world-2/2026/11/",
+     "time": "2026-11-23T18:51:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
@@ -1273,11 +1273,11 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-23T16:26:03.214Z",
+   "generatedAt": "2026-11-23T19:26:18.155Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T16:26:03.214Z",
-    "to": "2026-11-23T16:26:03.214Z"
+    "from": "2026-11-20T19:26:18.155Z",
+    "to": "2026-11-23T19:26:18.155Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",

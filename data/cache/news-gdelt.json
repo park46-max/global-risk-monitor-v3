@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-23T16:25:42.202Z",
- "checkedAt": "2026-11-23T16:25:42.202Z",
- "lastSuccessAt": "2026-11-23T16:25:42.202Z",
+ "generatedAt": "2026-11-23T19:25:55.324Z",
+ "checkedAt": "2026-11-23T19:25:55.324Z",
+ "lastSuccessAt": "2026-11-23T19:25:55.324Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 18,
-  "groupedDuplicates": 51,
+  "groupedDuplicates": 61,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,11 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-23T16:25:42.202Z",
-   "lastSuccessAt": "2026-11-23T16:25:42.202Z",
+   "checkedAt": "2026-11-23T19:25:55.324Z",
+   "lastSuccessAt": "2026-11-23T19:25:55.324Z",
    "error": null,
-   "latestFile": "20261123163000"
+   "latestFile": "20261123193000",
+   "warning": "1 of 12 files could not be read this run"
   }
  },
  "files": {
@@ -350,7 +351,19 @@
   "20261123154500": "ok",
   "20261123160000": "ok",
   "20261123161500": "ok",
-  "20261123163000": "ok"
+  "20261123163000": "ok",
+  "20261123164500": "ok",
+  "20261123170000": "ok",
+  "20261123171500": "ok",
+  "20261123173000": "ok",
+  "20261123174500": "ok",
+  "20261123180000": "ok",
+  "20261123181500": "ok",
+  "20261123183000": "ok",
+  "20261123184500": "ok",
+  "20261123190000": "ok",
+  "20261123191500": "ok",
+  "20261123193000": "missing"
  },
  "items": [
   {
@@ -1592,6 +1605,126 @@
    }
   },
   {
+   "title": "Tonse Alliance Leaders Accused of Treason Plot, Sending Recruits to Russia for Military Training",
+   "url": "https://www.malawivoice.com/2026/11/23/tonse-alliance-leaders-accused-of-treason-plot-sending-recruits-to-russia-for-military-training/",
+   "publisher": "malawivoice.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T15:27:00.000Z",
+   "seenByGdelt": "2026-11-23T17:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "alliance"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Iran seeks $290 billion in damages from the US over sanctions and military strikes",
+   "url": "https://www.newindianexpress.com/world/2026/Nov/23/iran-seeks-290-billion-in-damages-from-the-us-over-sanctions-and-military-strikes",
+   "publisher": "newindianexpress.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T17:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "sanctions"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US pact lifts Kenya's nuclear energy dream",
+   "url": "https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/us-pact-lifts-kenya-s-nuclear-energy-dream-5681868",
+   "publisher": "businessdailyafrica.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "pact"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "US Treasury presses Singapore, Malaysia on Iran sanctions compliance - Economy",
    "url": "http://www.thejakartapost.com/business/2026/11/21/us-treasury-presses-singapore-malaysia-on-iran-sanctions-compliance",
    "publisher": "thejakartapost.com",
@@ -1747,123 +1880,6 @@
    },
    "firstSeenAt": "2026-11-21T07:37:32.181Z",
    "lastSeenAt": "2026-11-21T07:37:32.181Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ford Ranger vs BYD Shark: USA and China hold a feisty pick-up summit",
-   "url": "https://www.autoexpress.co.uk/car-group-tests/370961/ford-ranger-vs-byd-shark-usa-and-china-hold-feisty-pick-summit",
-   "publisher": "autoexpress.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T10:00:00.000Z",
-   "seenByGdelt": "2026-11-21T13:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "USA"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US-China Chip War AI Export Restrictions Explained - Pragativadi I Latest Odisha News in English I Breaking News",
-   "url": "https://pragativadi.com/us-china-chip-war-ai-export-restrictions-impact/",
-   "publisher": "pragativadi.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T10:55:00.000Z",
-   "seenByGdelt": "2026-11-21T11:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "China Pakistan Military Support During Operation Sindoor: US Report Says Beijing Seeks To Suppress India's Rise",
-   "url": "https://www.outlookindia.com/international/china-pakistan-military-support-operation-sindoor-china-india-relations-us-commission",
-   "publisher": "outlookindia.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T11:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T13:25:08.922Z",
-   "lastSeenAt": "2026-11-21T13:25:08.922Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -2677,91 +2693,6 @@
    }
   },
   {
-   "title": "Zelenskyy urges US to release Patriot missiles as Russia kills 3 in Ukraine - Dominican Republic Post – Caribbean News, Business, Travel & Culture",
-   "url": "https://dominicanrepublicpost.com/zelenskyy-urges-us-to-release-patriot-missiles-as-russia-kills-3-in-ukraine/",
-   "publisher": "dominicanrepublicpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T15:51:00.000Z",
-   "seenByGdelt": "2026-11-22T17:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T19:14:59.606Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missiles"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Zelensky renews pressure on US to provide patriot missiles after latest Russian drone strike",
-   "url": "http://www.washingtonexaminer.com/news/world/4811591/zelensky-pressure-us-patriot-missiles-russian-strike/",
-   "publisher": "washingtonexaminer.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T16:02:00.000Z",
-   "seenByGdelt": "2026-11-22T17:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T19:14:59.606Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone strike",
-       "missiles"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "China's Intelligence Agency Targets Advanced AI Chips Amid U.S. Export Controls – China Money Network",
    "url": "https://www.chinamoneynetwork.com/2026/11/22/chinas-intelligence-agency-targets-advanced-ai-chips-amid-u-s-export-controls",
    "publisher": "chinamoneynetwork.com",
@@ -2795,51 +2726,6 @@
       "label": "Sanctions and trade",
       "terms": [
        "export controls"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Zelenskyy urges US to release Patriot missiles as Russia kills 5 in Ukraine",
-   "url": "https://www.aljazeera.com/news/2026/11/22/zelenskyy-urges-us-to-release-patriot-missiles",
-   "publisher": "aljazeera.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T17:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-22T19:14:59.606Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missiles"
       ]
      }
     ]
@@ -3412,84 +3298,6 @@
    }
   },
   {
-   "title": "Zelenskyy says Ukrainian naval drones sank Russian corvette off Libya",
-   "url": "https://www.foxnews.com/world/zelenskyy-hails-exemplary-ukrainian-operation-sinking-russian-warship-libya",
-   "publisher": "foxnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T12:35:00.000Z",
-   "seenByGdelt": "2026-11-23T13:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "naval"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "The Ukraine-Russia war is seeping out across Europe and there are two reasons it will get worse",
-   "url": "https://cyprusnews.eu/cnn-kosmos/the-ukraine-russia-war-is-seeping-out-across-europe-and-there-are-two-reasons-it-will-get-worse/",
-   "publisher": "cyprusnews.eu",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T12:44:00.000Z",
-   "seenByGdelt": "2026-11-23T13:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "EU must have seat at Russia-Ukraine negotiating table: Speaker to US ambassador",
    "url": "https://timesofmalta.com/article/eu-seat-russiaukraine-negotiating-table-speaker-us-ambassador.1137534",
    "publisher": "timesofmalta.com",
@@ -3535,362 +3343,6 @@
    }
   },
   {
-   "title": "Russia-Ukraine war spreads to Africa as ships attacked",
-   "url": "https://www.premiumtimesng.com/foreign/world-foreign/927377-russia-ukraine-war-spreads-to-africa-as-ships-attacked.html",
-   "publisher": "premiumtimesng.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T12:47:00.000Z",
-   "seenByGdelt": "2026-11-23T13:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russia-Ukraine War: President Zelenskyy Claims Ukraine Sank Russian Warship, Struck Arms Cargo Vessel Off Libya",
-   "url": "https://www.freepressjournal.in/world/russia-ukraine-war-president-zelenskyy-claims-ukraine-sank-russian-warship-struck-arms-cargo-vessel-off-libya",
-   "publisher": "freepressjournal.in",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T12:50:00.000Z",
-   "seenByGdelt": "2026-11-23T14:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia",
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship",
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukraine sank Russian corvette off Libya coast using naval drones: Zelensky",
-   "url": "https://ianslive.in/ukraine-sank-russian-corvette-off-libya-coast-using-naval-drones-zelensky--20261123164543",
-   "publisher": "ianslive.in",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T13:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "naval"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukrainian drones strike Russian warship in Libya, raising war risk scope",
-   "url": "https://www.insurancebusinessmag.com/us/news/marine/ukrainian-drones-strike-russian-warship-in-libya-raising-war-risk-scope-598379.aspx",
-   "publisher": "insurancebusinessmag.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T13:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship",
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russia-Ukraine War Spreads to Libya",
-   "url": "https://www.newser.com/story/400461/ukraine-sinks-russian-warship-in-libya.html",
-   "publisher": "newser.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T13:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukrainian naval drones strike new Russian warship in Libya, and other Mideast news",
-   "url": "https://www.the-messenger.com/news/world/article_e18126f8-81be-59bc-ba71-a53c841737e1.html",
-   "publisher": "the-messenger.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T13:25:00.000Z",
-   "seenByGdelt": "2026-11-23T14:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship",
-       "naval"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "How Ukraine is taking the war to Russia thousands of kilometres from its borders",
-   "url": "https://www.breakingnews.ie/world/how-ukraine-is-taking-the-war-to-russia-thousands-of-kilometres-from-its-borders-1959789.html",
-   "publisher": "breakingnews.ie",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T13:30:00.000Z",
-   "seenByGdelt": "2026-11-23T15:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukraine Claims Russian Warship Merkury Sunk in Libya After Seven-Drone Operation",
-   "url": "https://www.ibtimes.co.uk/ukraine-claims-naval-drone-attack-russian-corvette-libya-1834156",
-   "publisher": "ibtimes.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T13:45:00.000Z",
-   "seenByGdelt": "2026-11-23T14:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukraine's Naval Drones Sink Russian Warship in Libya: Zelenskyy Confirms Attack",
-   "url": "https://dailypioneer.com/world/zelenskyy-confirms-ukraine-was-behind-drone-attack-that-struck-russian-warship-at-libya-naval-base",
-   "publisher": "dailypioneer.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T14:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship",
-       "naval"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "The U.S. is ready to discuss the option of providing Ukraine with guarantees similar to the provisions of Article 5 of NATO's charter.",
    "url": "https://nt.am/en/news/363667/",
    "publisher": "nt.am",
@@ -3930,47 +3382,6 @@
    }
   },
   {
-   "title": "Ukraine claims drone attack that sank Russian warship at Libyan naval base",
-   "url": "https://www.middleeasteye.net/news/ukraine-claims-russian-warship-sunk-drone-attack-libyan-naval-base",
-   "publisher": "middleeasteye.net",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T14:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone attack",
-       "warship",
-       "naval"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "Kremlin comments on Ukrainian naval attacks",
    "url": "http://www.bignewsnetwork.com/news/279450541/kremlin-comments-on-ukrainian-naval-attacks",
    "publisher": "bignewsnetwork.com",
@@ -3994,7 +3405,7 @@
     }
    },
    "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4127,46 +3538,6 @@
    }
   },
   {
-   "title": "Zelenskyy: Ukraine carried out drone attack that hit Russian warship",
-   "url": "https://www.wxii12.com/article/zelenskyy-ukraine-drone-attack-hit-russian-warship/74504700",
-   "publisher": "wxii12.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T14:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone attack",
-       "warship"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "'Russia considers launching a nuclear strike' as Medvedev delivers chilling message to Kyiv and the West - London Business News",
    "url": "https://londonlovesbusiness.com/russia-considers-launching-a-nuclear-strike-as-medvedev-delivers-chilling-message-to-kyiv-and-the-west/",
    "publisher": "londonlovesbusiness.com",
@@ -4245,6 +3616,84 @@
    }
   },
   {
+   "title": "Why Russian Warship Sunk by Ukraine off Libyan Coast Regarded as Special",
+   "url": "https://www.kyivpost.com/post/90949",
+   "publisher": "kyivpost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T14:44:00.000Z",
+   "seenByGdelt": "2026-11-23T18:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russia Makes a Ballistic Missile Every 5 Hours, Ukraine Says",
+   "url": "https://www.businessinsider.com/russia-ballistic-missile-production-ramping-up-ukraine-2026-11",
+   "publisher": "businessinsider.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T15:14:00.000Z",
+   "seenByGdelt": "2026-11-23T17:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missile"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Ukrainian drones hit Russian warship at Libyan port, Zelenskyy says - National",
    "url": "https://globalnews.ca/news/12162155/ukraine-drone-russian-warship-libya/",
    "publisher": "globalnews.ca",
@@ -4278,6 +3727,45 @@
       "label": "Security",
       "terms": [
        "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "India's ties with Russia can help push for end to Ukraine war: Dutch FM",
+   "url": "https://idrw.org/indias-ties-with-russia-can-help-push-for-end-to-ukraine-war-dutch-fm/",
+   "publisher": "idrw.org",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T15:15:00.000Z",
+   "seenByGdelt": "2026-11-23T16:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
       ]
      }
     ]
@@ -4331,6 +3819,45 @@
     }
    ],
    "variantsTotal": 1
+  },
+  {
+   "title": "Pak Astronaut On Chinese Mission A New Phase In Space Diplomacy: US Expert",
+   "url": "https://www.cinaradio.com/2026/11/23/pak-astronaut-on-chinese-mission-a-new-phase-in-space-diplomacy-us-expert/",
+   "publisher": "cinaradio.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T15:20:00.000Z",
+   "seenByGdelt": "2026-11-23T18:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomacy"
+      ]
+     }
+    ]
+   }
   },
   {
    "title": "US Weighs NATO-Style Security Guarantees for Ukraine as Russia Pushes Back",
@@ -4417,30 +3944,30 @@
    }
   },
   {
-   "title": "Ukrainian drones hit Russian warship in Libya, Zelenskyy says",
-   "url": "https://www.cp24.com/news/world/2026/11/23/zelenskyy-hails-ukraines-attack-on-a-russian-warship-docked-at-a-naval-base-in-libya/",
-   "publisher": "cp24.com",
+   "title": "War between Russia and Ukraine: Could Putin and Zelenskyy reach a peace agreement?",
+   "url": "https://www.lbc.co.uk/article/war-ukraine-over-2027-putin-russia-5HjdnQs_2/",
+   "publisher": "lbc.co.uk",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T15:45:00.000Z",
+   "published": "2026-11-23T15:34:00.000Z",
+   "seenByGdelt": "2026-11-23T17:15:00.000Z",
    "matches": {
     "RUS": {
      "level": "country",
      "terms": [
-      "Russian"
+      "Russia"
      ]
     },
     "UKR": {
      "level": "country",
      "terms": [
-      "Ukrainian"
+      "Ukraine"
      ]
     }
    },
-   "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4449,7 +3976,7 @@
       "id": "security",
       "label": "Security",
       "terms": [
-       "warship"
+       "war"
       ]
      }
     ]
@@ -4479,7 +4006,7 @@
     }
    },
    "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4532,6 +4059,134 @@
       ]
      }
     ]
+   },
+   "variants": [
+    {
+     "publisher": "theguardian.com",
+     "publisherId": "gdelt",
+     "url": "https://www.theguardian.com/world/2026/nov/23/russia-war-dead-hidden-toll-ukraine-conflict",
+     "published": null,
+     "seenByGdelt": "2026-11-23T17:00:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "24 Zimbabweans Reportedly Killed in Russia-Ukraine War Amid Recruitment Fears - The Zimbabwe Mail 24 Zimbabweans Reportedly Killed in Russia-Ukraine War Amid Recruitment Fears | Zimbabwe News",
+   "url": "https://thezimbabwemail.com/news/zimbabwe/24-zimbabweans-reportedly-killed-in-russia-ukraine-war-amid-recruitment-fears/",
+   "publisher": "thezimbabwemail.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T16:03:00.000Z",
+   "seenByGdelt": "2026-11-23T16:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Images Show Before and After Ukrainian Drone Attack on Russian Warship",
+   "url": "https://www.businessinsider.com/satellite-images-before-and-after-ukrainian-drone-attack-russian-warship-2026-11",
+   "publisher": "businessinsider.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T16:09:00.000Z",
+   "seenByGdelt": "2026-11-23T17:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone attack",
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine Claims Responsibility For Sinking Russian Warship in Libyan Port",
+   "url": "https://www.breitbart.com/europe/2026/11/23/ukraine-claims-responsibility-for-sinking-russian-warship-in-libyan-port/",
+   "publisher": "breitbart.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T16:12:00.000Z",
+   "seenByGdelt": "2026-11-23T17:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
    }
   },
   {
@@ -4559,6 +4214,45 @@
    },
    "firstSeenAt": "2026-11-23T16:25:42.202Z",
    "lastSeenAt": "2026-11-23T16:25:42.202Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "The hidden toll of the Ukraine conflict — Russia's war dead",
+   "url": "https://cedarnews.net/newstasks/1185437/hidden-toll-ukraine-conflict-russias-war-dead/",
+   "publisher": "cedarnews.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T16:15:00.000Z",
+   "seenByGdelt": "2026-11-23T16:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4725,6 +4419,397 @@
       "label": "Diplomacy",
       "terms": [
        "G20"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "AI-Powered Cyber Espionage from China and Russia Sparks Global Cybersecurity Crisis – NaturalNews.com",
+   "url": "https://www.naturalnews.com/2026-11-23-ai-powered-cyber-espionage-china-russia-crisis.html",
+   "publisher": "naturalnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T16:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "espionage"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine Attacks Russian Warship in Libya",
+   "url": "https://www.theepochtimes.com/world/ukraine-attacks-russian-warship-in-libya-6128147",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T16:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "The Russia-Ukraine war is not a world war – yet",
+   "url": "https://www.telegraph.co.uk/news/2026/11/23/roland-oliphant-ukraine-is-not-a-world-war-yet/",
+   "publisher": "telegraph.co.uk",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T17:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "China expands nuclear submarine fleet with US strike capability",
+   "url": "https://asia.nikkei.com/politics/defense/china-expands-nuclear-submarine-fleet-with-us-strike-capability",
+   "publisher": "nikkei.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T17:44:00.000Z",
+   "seenByGdelt": "2026-11-23T19:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Zelenskyy says Ukraine sank Russian warship in Libya",
+   "url": "https://article.wn.com/view/2026/11/23/Zelenskyy_says_Ukraine_sank_Russian_warship_in_Libya/",
+   "publisher": "wn.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T17:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine Sinks Russian Warship Off Libya, Escalating Conflict",
+   "url": "https://udaipurkiran.com/ukraine-sinks-russian-warship-off-libya-escalating-conflict/",
+   "publisher": "udaipurkiran.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T17:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine sinks Russian ship as war spreads beyond Europe",
+   "url": "https://www.merimbulanewsweekly.com.au/story/9396883/ukraine-sinks-russian-ship-as-war-spreads-beyond-europe/",
+   "publisher": "merimbulanewsweekly.com.au",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T18:20:00.000Z",
+   "seenByGdelt": "2026-11-23T18:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russia warns Ukraine of 'dangerous trend' after Libya and Baltic attacks | Drone Strikes News",
+   "url": "https://www.aljazeera.com/news/2026/11/23/russia-warns-ukraine-of-dangerous-trend-after-libya-and-baltic-attacks",
+   "publisher": "aljazeera.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T18:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strikes"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine Peace Talks Expose a U.S.–European Divide Over Sequencing",
+   "url": "https://finchannel.com/ukraine-peace-talks-expose-a-u-s-european-divide-over-sequencing/142723/world-2/2026/11/",
+   "publisher": "finchannel.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T18:51:00.000Z",
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "peace talks"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Latvia lodges a protest with the Russian Federation regarding the consequences of its war of aggression against Ukraine and violations of the airspace of European Union and NATO member states",
+   "url": "https://www.mfa.gov.lv/en/article/latvia-lodges-protest-russian-federation-regarding-consequences-its-war-aggression-against-ukraine-and-violations-airspace-european-union-and-nato-member-states",
+   "publisher": "mfa.gov.lv",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO",
+       "war"
       ]
      }
     ]
@@ -4946,7 +5031,7 @@
     }
    },
    "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 3,
     "tier": "high",
@@ -5102,311 +5187,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "2 Taiwanese dignitaries attend Japan's Shuri Castle restoration ceremony",
-   "url": "https://focustaiwan.tw/politics/202611230006",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T05:13:00.000Z",
-   "seenByGdelt": "2026-11-23T06:45:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwanese"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Snowland Forum Opens in Taipei with Warnings Over China's Ethnic Unity Law – Central Tibetan Administration",
-   "url": "https://tibet.net/snowland-forum-opens-in-taipei-with-warnings-over-chinas-ethnic-unity-law/",
-   "publisher": "tibet.net",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T05:30:00.000Z",
-   "seenByGdelt": "2026-11-23T08:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T10:33:04.304Z",
-   "lastSeenAt": "2026-11-23T10:33:04.304Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan average hotel occupancy rate hits 54% in first 9 months of 2026",
-   "url": "https://focustaiwan.tw/business/202611230007",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T05:37:00.000Z",
-   "seenByGdelt": "2026-11-23T06:45:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Hong Kong cinema takes spotlight at Taiwan's Golden Horse Awards",
-   "url": "https://www.thestar.com.my/lifestyle/entertainment/2026/11/23/hong-kong-cinema-takes-spotlight-at-taiwans-golden-horse-awards",
-   "publisher": "thestar.com.my",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T06:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan enforces wider short-selling curbs after market rout",
-   "url": "https://thearabianpost.com/taiwan-enforces-wider-short-selling-curbs-after-market-rout/",
-   "publisher": "thearabianpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T06:08:00.000Z",
-   "seenByGdelt": "2026-11-23T13:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan warns Canada against deeper China trade ties",
-   "url": "https://www.euronews.com/2026/11/23/taiwan-warns-canada-against-deeper-china-trade-ties-as-carney-seeks-to-diversify",
-   "publisher": "euronews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T06:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan electronics, ICT export orders surge in October as US remains top buyer",
-   "url": "https://www.digitimes.com/news/a20261122PD201/taiwan-moea-electronics-growth-2025.html",
-   "publisher": "digitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T06:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "US chip restrictions offer Taiwan IC designers a market-share opening, but will it last?",
-   "url": "https://www.digitimes.com/news/a20261123PD204/ic-taiwan-chips-ic-design-2026.html",
-   "publisher": "digitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T06:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Time-to-power crunch pushes Taiwan power equipment suppliers up the AI value chain",
-   "url": "https://www.digitimes.com/news/a20261123PD208/equipment-data-center-taiwan-infrastructure-demand.html",
-   "publisher": "digitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T06:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan premier summons finance, industry leaders as Jensen Huang scandal ripples outward",
-   "url": "https://www.digitimes.com/news/a20261123PD221/taiwan-scandal-government-economy-technology.html",
-   "publisher": "digitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T06:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T07:59:04.764Z",
-   "lastSeenAt": "2026-11-23T07:59:04.764Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taipei Forum Warns China's Ethnic-Unity Law Could Intensify Pressure at Home and Abroad – Central Tibetan Administration",
-   "url": "https://tibet.net/taipei-forum-warns-chinas-ethnic-unity-law-could-intensify-pressure-at-home-and-abroad/",
-   "publisher": "tibet.net",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T06:38:00.000Z",
-   "seenByGdelt": "2026-11-23T08:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T10:33:04.304Z",
-   "lastSeenAt": "2026-11-23T10:33:04.304Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
   },
   {
    "title": "Tokyo won't fall as hard as Seoul or Taipei when the AI trade cools, says JPX CEO Hiromi Yamaji",
@@ -5839,7 +5619,7 @@
     }
    },
    "firstSeenAt": "2026-11-23T16:25:42.202Z",
-   "lastSeenAt": "2026-11-23T16:25:42.202Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 0,
     "tier": "other",
@@ -5865,6 +5645,291 @@
    },
    "firstSeenAt": "2026-11-23T16:25:42.202Z",
    "lastSeenAt": "2026-11-23T16:25:42.202Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "How Taiwan Is Turning Tech Supremacy Into a Security Shield",
+   "url": "https://time.com/article/2026/11/23/how-taiwan-is-turning-tech-supremacy-into-a-security-shield/",
+   "publisher": "time.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T16:50:00.000Z",
+   "seenByGdelt": "2026-11-23T17:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Singapore bags 3 wins at 63rd Golden Horse Awards in Taipei",
+   "url": "https://www.channelnewsasia.com/watch/singapore-bags-3-wins-63rd-golden-horse-awards-in-taipei-6575536",
+   "publisher": "channelnewsasia.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T17:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwanese technology park, providing 40,000 jobs, to be built in Miękini near Wrocław",
+   "url": "https://wbj.pl/business/taiwanese-technology-park-providing-40000-jobs-to-be-built-in-miekini-near-wroclaw-1034221",
+   "publisher": "wbj.pl",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T17:31:00.000Z",
+   "seenByGdelt": "2026-11-23T18:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwanese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Mainland bank to expand financing support for Taiwan enterprises on mainland-Xinhua",
+   "url": "https://english.news.cn/20261124/a75115414c064896a0533688d8433dcd/c.html",
+   "publisher": "english.news.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T18:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "《TAIPEI TIMES》 Taiwanese representatives attend Okinawa ceremony - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5651086",
+   "publisher": "ltn.com.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwanese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "variants": [
+    {
+     "publisher": "taipeitimes.com",
+     "publisherId": "gdelt",
+     "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/24/2003868287",
+     "published": null,
+     "seenByGdelt": "2026-11-23T19:15:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "TWSE acts to ease selling pressure - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/24/2003868251",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "TSMC dismisses AI market risks - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/24/2003868252",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan and Japan in the same boat - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/24/2003868260",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taipei's quiet rise as a media hub - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/24/2003868261",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Huang reinstated as Nvidia CEO - Taipei Times",
+   "url": "https://www.taipeitimes.com/News/front/archives/2026/11/24/2003868271",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan to continue fossil fuel phase-out: minister",
+   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/24/2003868289",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T19:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T19:25:55.324Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 0,
     "tier": "other",
@@ -5982,7 +6047,7 @@
     }
    },
    "firstSeenAt": "2026-11-23T13:45:43.846Z",
-   "lastSeenAt": "2026-11-23T13:45:43.846Z",
+   "lastSeenAt": "2026-11-23T19:25:55.324Z",
    "relevance": {
     "score": 0,
     "tier": "other",
