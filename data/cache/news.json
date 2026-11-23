@@ -3,7 +3,7 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-22T19:05:35.739Z",
+  "checkedAt": "2026-11-23T01:31:44.891Z",
   "lastSuccessAt": "2026-11-22T19:08:24.764Z",
   "countries": {
     "USA": {
@@ -12,7 +12,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T07:28:16.371Z",
-      "checkedAt": "2026-11-22T19:10:02.352Z",
+      "checkedAt": "2026-11-23T01:34:37.006Z",
       "articles": [
         {
           "title": "Officials : Washington pulp mill violated safety standards before ruptured chemical tank killed 11",
@@ -178,11 +178,11 @@
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-22T19:08:24.764Z",
-      "checkedAt": "2026-11-22T19:08:24.764Z",
+      "checkedAt": "2026-11-23T01:34:37.006Z",
       "articles": [
         {
           "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
@@ -349,10 +349,10 @@
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
       "status": "error",
-      "attempted": true,
-      "error": "GDELT is rate limiting requests.",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-22T07:29:44.279Z",
-      "checkedAt": "2026-11-22T19:11:40.193Z",
+      "checkedAt": "2026-11-23T01:34:37.006Z",
       "articles": [
         {
           "title": "In Ukraine , the fight to keep winter outside begins with a broken window – Winnipeg Free Press",
@@ -518,11 +518,11 @@
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-22T19:07:32.257Z",
-      "checkedAt": "2026-11-22T19:07:32.257Z",
+      "checkedAt": "2026-11-23T01:34:37.006Z",
       "articles": [
         {
           "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
@@ -692,7 +692,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-21T19:07:50.417Z",
-      "checkedAt": "2026-11-22T19:06:46.356Z",
+      "checkedAt": "2026-11-23T01:33:03.467Z",
       "articles": [
         {
           "title": "Taiwan flags improper treatment by China during APEC meetings",
