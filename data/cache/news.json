@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-23T07:53:09.130Z",
+  "checkedAt": "2026-11-23T13:38:38.368Z",
   "lastSuccessAt": "2026-11-23T07:54:11.810Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-23T07:54:11.810Z",
-      "checkedAt": "2026-11-23T07:54:11.810Z",
+      "checkedAt": "2026-11-23T13:41:32.260Z",
       "articles": [
         {
           "title": "China urges US to revoke curbs on Chinese telecom firms",
@@ -182,7 +182,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-22T19:08:24.764Z",
-      "checkedAt": "2026-11-23T07:56:50.350Z",
+      "checkedAt": "2026-11-23T13:41:32.260Z",
       "articles": [
         {
           "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
@@ -352,7 +352,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T07:29:44.279Z",
-      "checkedAt": "2026-11-23T07:55:31.631Z",
+      "checkedAt": "2026-11-23T13:40:01.099Z",
       "articles": [
         {
           "title": "In Ukraine , the fight to keep winter outside begins with a broken window – Winnipeg Free Press",
@@ -522,7 +522,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T19:07:32.257Z",
-      "checkedAt": "2026-11-23T07:56:50.350Z",
+      "checkedAt": "2026-11-23T13:41:32.260Z",
       "articles": [
         {
           "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
@@ -688,11 +688,11 @@
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-23T07:53:22.319Z",
-      "checkedAt": "2026-11-23T07:53:22.319Z",
+      "checkedAt": "2026-11-23T13:41:32.260Z",
       "articles": [
         {
           "title": "Stock market outlook today , 23 Nov : Sensex , Nifty prediction - DJIA , S & P , NASDAQ , GIFT Nifty , Kospi , Nikkei , Taiwan cues",
