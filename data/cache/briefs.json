@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-23T07:59:26.310Z",
- "lastSuccessAt": "2026-11-23T07:59:26.310Z",
- "checkedAt": "2026-11-23T07:59:26.310Z",
+ "generatedAt": "2026-11-23T10:33:22.539Z",
+ "lastSuccessAt": "2026-11-23T10:33:22.539Z",
+ "checkedAt": "2026-11-23T10:33:22.539Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 157,
-   "lastSuccessAt": "2026-11-23T07:59:04.764Z",
-   "checkedAt": "2026-11-23T07:59:04.764Z",
+   "items": 154,
+   "lastSuccessAt": "2026-11-23T10:33:04.304Z",
+   "checkedAt": "2026-11-23T10:33:04.304Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,28 +22,28 @@
   }
  },
  "itemStats": {
-  "read": 157,
+  "read": 154,
   "noSource": 0,
   "noTime": 0,
-  "outsideWindow": 2,
+  "outsideWindow": 0,
   "noCountry": 0,
-  "routineNotices": 14,
+  "routineNotices": 12,
   "grouped": 0
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-23T07:59:26.310Z",
+   "generatedAt": "2026-11-23T10:33:22.539Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T07:59:26.310Z",
-    "to": "2026-11-23T07:59:26.310Z"
+    "from": "2026-11-20T10:33:22.539Z",
+    "to": "2026-11-23T10:33:22.539Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 55,
+   "reportsFound": 56,
    "overview": {
     "kind": "fact",
-    "text": "55 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 05:30 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 9, sanctions and trade 4.",
+    "text": "56 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 05:30 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 9, sanctions and trade 4.",
     "evidence": [
      1,
      2,
@@ -334,18 +334,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-23T07:59:26.310Z",
+   "generatedAt": "2026-11-23T10:33:22.539Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T07:59:26.310Z",
-    "to": "2026-11-23T07:59:26.310Z"
+    "from": "2026-11-20T10:33:22.539Z",
+    "to": "2026-11-23T10:33:22.539Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 45,
+   "reportsFound": 46,
    "overview": {
     "kind": "fact",
-    "text": "45 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:45 UTC to 2026-11-23 08:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 9, diplomacy 7, sanctions and trade 4.",
+    "text": "46 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 10:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): diplomacy 7, security 6, sanctions and trade 4.",
     "evidence": [
      1,
      2,
@@ -447,10 +447,10 @@
     {
      "kind": "reporting",
      "n": 6,
-     "headline": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
-     "publisher": "wsws.org",
-     "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
-     "time": "2026-11-20T08:45:00.000Z",
+     "headline": "China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline - China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline",
+     "publisher": "inewsgr.com",
+     "url": "https://www.inewsgr.com/330/Chinas-Rare-Earth-Truce-Gets-a-Two-Month-Extension--Industry-Still-Faces-a-Supply-Deadline.htm",
+     "time": "2026-11-21T08:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -460,12 +460,26 @@
      },
      "topics": [
       "Security",
-      "Diplomacy"
+      "Sanctions and trade"
      ],
      "alsoReportedBy": []
     }
    ],
    "why": [
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      5,
+      7,
+      9,
+      10,
+      13
+     ],
+     "text": "7 of the 12 listed reports use diplomacy wording (foreign minister, summit, bilateral, ambassador) [1][2][5][7][9][10][13]. This shows what the headlines are about, not what happened or what comes next."
+    },
     {
      "rule": "topic:security",
      "kind": "analysis",
@@ -475,37 +489,20 @@
       4,
       5,
       6,
-      7,
-      8,
-      9,
-      10
+      8
      ],
-     "text": "9 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][7][8][9][10]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
-     "rule": "topic:diplomacy",
-     "kind": "analysis",
-     "evidence": [
-      1,
-      2,
-      5,
-      6,
-      9,
-      11,
-      12
-     ],
-     "text": "7 of the 12 listed reports use diplomacy wording (foreign minister, summit) [1][2][5][6][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][8]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
       4,
-      7,
-      8,
-      13
+      6,
+      11,
+      12
      ],
-     "text": "4 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth, trade surplus) [4][7][8][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "4 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth, trade surplus) [4][6][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -515,13 +512,15 @@
       2,
       4,
       5,
-      6,
+      7,
+      8,
+      9,
       10,
       11,
       12,
       13
      ],
-     "text": "9 listed reports with topic keywords also name Russia, the United States and Ukraine [1][2][4][5][6][10][11][12][13]. A headline that names two countries does not show how they are connected."
+     "text": "11 listed reports with topic keywords also name Russia, the United States and Ukraine [1][2][4][5][7][8][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
@@ -581,15 +580,6 @@
     },
     {
      "n": 6,
-     "title": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
-     "publisher": "wsws.org",
-     "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
-     "time": "2026-11-20T08:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 7,
      "title": "China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline - China's Rare Earth Truce Gets a Two-Month Extension — Industry Still Faces a Supply Deadline",
      "publisher": "inewsgr.com",
      "url": "https://www.inewsgr.com/330/Chinas-Rare-Earth-Truce-Gets-a-Two-Month-Extension--Industry-Still-Faces-a-Supply-Deadline.htm",
@@ -598,25 +588,16 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
-     "title": "Baystreet.ca - The Army Just Did Something Extraordinary To Break China's Rare Earth Monopoly",
-     "publisher": "baystreet.ca",
-     "url": "https://baystreet.ca/articles/commodities/125409/The-Army-Just-Did-Something-Extraordinary-To-Break-Chinas-Rare-Earth-Monopoly",
-     "time": "2026-11-20T09:30:00.000Z",
+     "n": 7,
+     "title": "Russia and China Set Sights on New Bilateral Trade Record",
+     "publisher": "sputnikglobe.com",
+     "url": "https://sputnikglobe.com/20261123/russia-and-china-set-sights-on-new-bilateral-trade-record-1125132821.html",
+     "time": "2026-11-23T10:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
-     "n": 9,
-     "title": "Trump Calls from Air Force One After China Summit, Questions",
-     "publisher": "athens-times.com",
-     "url": "https://athens-times.com/trump-calls-from-air-force-one-after-china-summit-questions-ukraine-aid/",
-     "time": "2026-11-20T09:26:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
+     "n": 8,
      "title": "US edge over China in military power, influence in Asia narrowed to minimum: report",
      "publisher": "thestar.com.my",
      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/23/us-edge-over-china-in-military-power-influence-in-asia-narrowed-to-minimum-report",
@@ -625,7 +606,7 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 9,
      "title": "How will the world change after the China-US-Russia summit?",
      "publisher": "businesstimes.com.sg",
      "url": "https://www.businesstimes.com.sg/opinion-features/how-will-world-change-after-china-us-russia-summit",
@@ -634,7 +615,7 @@
      "via": "GDELT"
     },
     {
-     "n": 12,
+     "n": 10,
      "title": "Historic China-Russia-US summit helps lay the groundwork for global stability",
      "publisher": "chinamil.com.cn",
      "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501480.html",
@@ -643,12 +624,30 @@
      "via": "GDELT"
     },
     {
-     "n": 13,
+     "n": 11,
      "title": "Gold deluge keeps China's US$1 trillion trade surplus in check",
      "publisher": "businesstimes.com.sg",
      "url": "https://www.businesstimes.com.sg/companies-markets/energy-commodities/gold-deluge-keeps-chinas-us1-trillion-trade-surplus-check",
      "time": "2026-11-23T03:00:00.000Z",
      "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 12,
+     "title": "U.S. trade chief sees progress in trade talks but faults Canada for Beijing-friendly moves",
+     "publisher": "cbc.ca",
+     "url": "https://www.cbc.ca/news/world/u-s-trade-chief-canada-trade-talks-9.7432158",
+     "time": "2026-11-23T02:51:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 13,
+     "title": "US ambassador Jared Novelly defends remarks about Wayne Brown over China",
+     "publisher": "nzherald.co.nz",
+     "url": "https://www.nzherald.co.nz/nz/politics/us-ambassador-jared-novelly-defends-remarks-about-wayne-brown-over-china/DHJGIQ6ZHJAQ5FESCLWMSB2QSQ/",
+     "time": "2026-11-23T00:27:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
@@ -657,18 +656,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-23T07:59:26.310Z",
+   "generatedAt": "2026-11-23T10:33:22.539Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T07:59:26.310Z",
-    "to": "2026-11-23T07:59:26.310Z"
+    "from": "2026-11-20T10:33:22.539Z",
+    "to": "2026-11-23T10:33:22.539Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 58,
+   "reportsFound": 56,
    "overview": {
     "kind": "fact",
-    "text": "58 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-23 08:00 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 9.",
+    "text": "56 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 06:45 UTC to 2026-11-23 10:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 8, sanctions and trade 1.",
     "evidence": [
      1,
      2,
@@ -800,13 +799,11 @@
       6,
       7,
       8,
-      9,
-      10,
       11,
       12,
       13
      ],
-     "text": "12 of the 12 listed reports use security wording (nuclear, war, weapons, invasion) [1][2][3][5][6][7][8][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, war, weapons, invasion) [1][2][3][5][6][7][8][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -817,12 +814,11 @@
       3,
       5,
       6,
-      7,
       8,
       9,
       10
      ],
-     "text": "9 of the 12 listed reports use diplomacy wording (foreign minister, envoy, summit, peace talks) [1][2][3][5][6][7][8][9][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "8 of the 12 listed reports use diplomacy wording (foreign minister, envoy, summit, diplomats) [1][2][3][5][6][8][9][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -833,14 +829,13 @@
       3,
       5,
       6,
-      7,
-      8,
       9,
+      10,
       11,
       12,
       13
      ],
-     "text": "11 listed reports with topic keywords also name China, the United States and Ukraine [1][2][3][5][6][7][8][9][11][12][13]. A headline that names two countries does not show how they are connected."
+     "text": "10 listed reports with topic keywords also name China, the United States and Ukraine [1][2][3][5][6][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
@@ -909,33 +904,15 @@
     },
     {
      "n": 7,
-     "title": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
-     "publisher": "aa.com.tr",
-     "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
-     "time": "2026-11-20T09:15:00.000Z",
+     "title": "Drone strike on sanctioned Russian ship brings war risk to Baltic shipping lanes",
+     "publisher": "insurancebusinessmag.com",
+     "url": "https://www.insurancebusinessmag.com/us/news/marine/drone-strike-on-sanctioned-russian-ship-brings-war-risk-to-baltic-shipping-lanes-598353.aspx",
+     "time": "2026-11-23T08:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 8,
-     "title": "Trump meets Putin and Xi in China, while European imperialists plot escalation of war on Russia at Berlin summit",
-     "publisher": "wsws.org",
-     "url": "https://www.wsws.org/en/articles/2026/11/20/jujz-n20.html",
-     "time": "2026-11-20T08:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 9,
-     "title": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
-     "publisher": "en.apa.az",
-     "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
-     "time": "2026-11-20T08:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
      "title": "Cyprus expels Russian diplomats on suspicion of espionage",
      "publisher": "politico.eu",
      "url": "https://www.politico.eu/article/cyprus-expels-russian-diplomats-on-suspicion-of-espionage/",
@@ -944,29 +921,47 @@
      "via": "GDELT"
     },
     {
+     "n": 9,
+     "title": "The next round of Russia-US-Ukraine negotiations will take place soon, Peskov",
+     "publisher": "nt.am",
+     "url": "https://nt.am/en/news/363631/",
+     "time": "2026-11-23T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Russia and China Set Sights on New Bilateral Trade Record",
+     "publisher": "sputnikglobe.com",
+     "url": "https://sputnikglobe.com/20261123/russia-and-china-set-sights-on-new-bilateral-trade-record-1125132821.html",
+     "time": "2026-11-23T10:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
      "n": 11,
-     "title": "Russia-Ukraine war latest: Moscow strikes Odesa port and Black Sea cargo ship",
-     "publisher": "news.az",
-     "url": "https://news.az/news/russia-ukraine-war-latest-moscow-strikes-odesa-port-and-black-sea-cargo-ship",
-     "time": "2026-11-23T08:00:00.000Z",
+     "title": "Russian Forces Inflict Heavy Losses on Ukrainian Troops – MoD",
+     "publisher": "sputnikglobe.com",
+     "url": "https://sputnikglobe.com/20261123/russian-forces-inflict-heavy-losses-on-ukrainian-troops-along-front-line--mod-1125133271.html",
+     "time": "2026-11-23T10:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Russia Hits Energy Facilities and Port Infrastructure Used by Ukrainian Army",
-     "publisher": "sputnikglobe.com",
-     "url": "https://sputnikglobe.com/20261123/russia-pounds-energy-facilities-logistics-and-port-infrastructure-used-by-ukrainian-forces-1125132377.html",
-     "time": "2026-11-23T07:30:00.000Z",
+     "title": "Zelensky says Ukraine sank Russian warship in Libya",
+     "publisher": "bdnews24.com",
+     "url": "https://bdnews24.com/world/europe/d1mbo1m1si",
+     "time": "2026-11-23T10:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 13,
-     "title": "Russian air strikes kill at least 15 people across Kyiv region, Ukraine says",
-     "publisher": "euronews.com",
-     "url": "https://www.euronews.com/2026/11/23/russian-air-strikes-kill-at-least-15-people-across-kyiv-region-ukraine-says",
-     "time": "2026-11-23T07:15:00.000Z",
+     "title": "Zelenskyy says Ukraine responsible for sinking Russian warship in Libya – Europe live",
+     "publisher": "theguardian.com",
+     "url": "https://www.theguardian.com/world/live/2026/nov/23/russia-ukraine-war-zelenskyy-libya-benghazi-drone-attack-ship-merkury-un-nato-europe-latest-news-updates",
+     "time": "2026-11-23T09:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -976,18 +971,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-23T07:59:26.310Z",
+   "generatedAt": "2026-11-23T10:33:22.539Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T07:59:26.310Z",
-    "to": "2026-11-23T07:59:26.310Z"
+    "from": "2026-11-20T10:33:22.539Z",
+    "to": "2026-11-23T10:33:22.539Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 46,
+   "reportsFound": 47,
    "overview": {
     "kind": "fact",
-    "text": "46 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-20 08:15 UTC to 2026-11-23 08:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 1.",
+    "text": "47 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:15 UTC to 2026-11-23 10:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 8, sanctions and trade 2.",
     "evidence": [
      1,
      2,
@@ -1087,10 +1082,10 @@
     {
      "kind": "reporting",
      "n": 5,
-     "headline": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
-     "publisher": "aa.com.tr",
-     "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
-     "time": "2026-11-20T09:15:00.000Z",
+     "headline": "Former ambassador on the effects of the Ukraine war spilling into other countries",
+     "publisher": "kgou.org",
+     "url": "https://www.kgou.org/world/2026-11-23/former-ambassador-on-the-effects-of-the-ukraine-war-spilling-into-other-countries",
+     "time": "2026-11-23T10:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -1119,11 +1114,10 @@
       7,
       8,
       9,
-      10,
       11,
       12
      ],
-     "text": "12 of the 12 listed reports use security wording (NATO, war, nuclear, weapons) [1][2][3][4][5][6][7][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use security wording (NATO, war, nuclear, weapons) [1][2][3][4][5][6][7][8][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1134,11 +1128,20 @@
       3,
       4,
       5,
-      6,
       8,
-      9
+      9,
+      10
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (envoy, summit, peace talks, ambassador) [1][2][3][4][5][6][8][9]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "8 of the 12 listed reports use diplomacy wording (envoy, summit, ambassador, peace plan) [1][2][3][4][5][8][9][10]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:sanctions-and-trade",
+     "kind": "analysis",
+     "evidence": [
+      6,
+      7
+     ],
+     "text": "2 of the 12 listed reports use sanctions and trade wording (sanctions, sanctioned) [6][7]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1148,13 +1151,11 @@
       2,
       3,
       4,
-      5,
-      6,
       10,
       11,
       12
      ],
-     "text": "9 listed reports with topic keywords also name the United States, Russia and China [1][2][3][4][5][6][10][11][12]. A headline that names two countries does not show how they are connected."
+     "text": "7 listed reports with topic keywords also name the United States, Russia and China [1][2][3][4][10][11][12]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
@@ -1196,19 +1197,19 @@
     },
     {
      "n": 5,
-     "title": "Trump questions European military aid to Ukraine, says Russia ready for peace talks: Report",
-     "publisher": "aa.com.tr",
-     "url": "https://aa.com.tr/en/americas/trump-questions-european-military-aid-to-ukraine-says-russia-ready-for-peace-talks-report/4131836",
-     "time": "2026-11-20T09:15:00.000Z",
+     "title": "Former ambassador on the effects of the Ukraine war spilling into other countries",
+     "publisher": "kgou.org",
+     "url": "https://www.kgou.org/world/2026-11-23/former-ambassador-on-the-effects-of-the-ukraine-war-spilling-into-other-countries",
+     "time": "2026-11-23T10:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 6,
-     "title": "EU ambassador to Ukraine narrowly escapes Russian drone attack in Kyiv",
-     "publisher": "en.apa.az",
-     "url": "https://en.apa.az/europe/eu-ambassador-to-ukraine-narrowly-escapes-russian-drone-attack-in-kyiv-537370",
-     "time": "2026-11-20T08:15:00.000Z",
+     "title": "Sanctions, summits and strikes: The war in Ukraine shows no sign of slowing",
+     "publisher": "euronews.com",
+     "url": "https://www.euronews.com/2026/11/23/sanctions-summits-and-strikes-the-war-in-ukraine-shows-no-sign-of-slowing",
+     "time": "2026-11-23T09:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
@@ -1241,28 +1242,28 @@
     },
     {
      "n": 10,
-     "title": "Russia-Ukraine war latest: Moscow strikes Odesa port and Black Sea cargo ship",
-     "publisher": "news.az",
-     "url": "https://news.az/news/russia-ukraine-war-latest-moscow-strikes-odesa-port-and-black-sea-cargo-ship",
-     "time": "2026-11-23T08:00:00.000Z",
+     "title": "The next round of Russia-US-Ukraine negotiations will take place soon, Peskov",
+     "publisher": "nt.am",
+     "url": "https://nt.am/en/news/363631/",
+     "time": "2026-11-23T10:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 11,
-     "title": "Russia Hits Energy Facilities and Port Infrastructure Used by Ukrainian Army",
+     "title": "Russian Forces Inflict Heavy Losses on Ukrainian Troops – MoD",
      "publisher": "sputnikglobe.com",
-     "url": "https://sputnikglobe.com/20261123/russia-pounds-energy-facilities-logistics-and-port-infrastructure-used-by-ukrainian-forces-1125132377.html",
-     "time": "2026-11-23T07:30:00.000Z",
+     "url": "https://sputnikglobe.com/20261123/russian-forces-inflict-heavy-losses-on-ukrainian-troops-along-front-line--mod-1125133271.html",
+     "time": "2026-11-23T10:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Russian air strikes kill at least 15 people across Kyiv region, Ukraine says",
-     "publisher": "euronews.com",
-     "url": "https://www.euronews.com/2026/11/23/russian-air-strikes-kill-at-least-15-people-across-kyiv-region-ukraine-says",
-     "time": "2026-11-23T07:15:00.000Z",
+     "title": "Zelensky says Ukraine sank Russian warship in Libya",
+     "publisher": "bdnews24.com",
+     "url": "https://bdnews24.com/world/europe/d1mbo1m1si",
+     "time": "2026-11-23T10:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -1272,18 +1273,18 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-23T07:59:26.310Z",
+   "generatedAt": "2026-11-23T10:33:22.539Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T07:59:26.310Z",
-    "to": "2026-11-23T07:59:26.310Z"
+    "from": "2026-11-20T10:33:22.539Z",
+    "to": "2026-11-23T10:33:22.539Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 39,
+   "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "39 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:42 UTC to 2026-11-23 06:30 UTC and come from 7 outlets. Reports with topic keywords (a report can have several): security 5, sanctions and trade 2, diplomacy 1, economic policy 1.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:42 UTC to 2026-11-23 09:08 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 5, sanctions and trade 2, diplomacy 1, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -1432,9 +1433,11 @@
      "kind": "analysis",
      "evidence": [
       9,
-      10
+      10,
+      13,
+      14
      ],
-     "text": "1 listed headline was carried by more than one outlet [9]. The same headline appearing in several places is not independent verification."
+     "text": "2 listed headlines were carried by more than one outlet [9][13]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -1530,30 +1533,39 @@
     },
     {
      "n": 11,
-     "title": "Taiwan electronics, ICT export orders surge in October as US remains top buyer",
-     "publisher": "digitimes.com",
-     "url": "https://www.digitimes.com/news/a20261122PD201/taiwan-moea-electronics-growth-2025.html",
-     "time": "2026-11-23T06:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "MOEA-Supported Research Earns Taiwan Nine R&D 100 Awards",
+     "publisher": "manilatimes.net",
+     "url": "https://www.manilatimes.net/2026/11/23/tmt-newswire/pr-newswire/moea-supported-research-earns-taiwan-nine-rd-100-awards/2475957",
+     "time": "2026-11-23T09:08:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "US chip restrictions offer Taiwan IC designers a market-share opening, but will it last?",
-     "publisher": "digitimes.com",
-     "url": "https://www.digitimes.com/news/a20261123PD204/ic-taiwan-chips-ic-design-2026.html",
-     "time": "2026-11-23T06:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Indonesia's BPOM tests Ladaku pepper after Taiwan's rejection",
+     "publisher": "antaranews.com",
+     "url": "https://en.antaranews.com/news/444647/indonesias-bpom-tests-ladaku-pepper-after-taiwans-rejection",
+     "time": "2026-11-23T08:56:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 13,
-     "title": "Time-to-power crunch pushes Taiwan power equipment suppliers up the AI value chain",
-     "publisher": "digitimes.com",
-     "url": "https://www.digitimes.com/news/a20261123PD208/equipment-data-center-taiwan-infrastructure-demand.html",
-     "time": "2026-11-23T06:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "Taiwan Weeks 2026 Records Nearly 40,000 in Attendance, Strengthens Global Capital Market Links",
+     "publisher": "prnewswire.com",
+     "url": "https://www.prnewswire.com/news-releases/taiwan-weeks-2026-records-nearly-40-000-in-attendance-strengthens-global-capital-market-links-302948037.html",
+     "time": "2026-11-23T08:48:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
+    },
+    {
+     "n": 14,
+     "title": "Taiwan Weeks 2026 Records Nearly 40,000 in Attendance, Strengthens Global Capital Market Links",
+     "publisher": "finanznachrichten.de",
+     "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70201003-taiwan-stock-exchange-corporation-taiwan-weeks-2026-records-nearly-40-000-in-attendance-strengthens-global-capital-market-links-008.htm",
+     "time": "2026-11-23T09:42:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 13
     }
    ],
    "limitations": [
