@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-23T01:42:18.687Z",
- "checkedAt": "2026-11-23T01:42:18.687Z",
- "lastSuccessAt": "2026-11-23T01:42:18.687Z",
+ "generatedAt": "2026-11-23T04:34:52.757Z",
+ "checkedAt": "2026-11-23T04:34:52.757Z",
+ "lastSuccessAt": "2026-11-23T04:34:52.757Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -78,8 +78,8 @@
  },
  "relevance": {
   "droppedNoMatch": 0,
-  "filteredNotices": 13,
-  "groupedDuplicates": 12,
+  "filteredNotices": 14,
+  "groupedDuplicates": 11,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,10 +90,10 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-23T01:42:18.687Z",
-   "lastSuccessAt": "2026-11-23T01:42:18.687Z",
+   "checkedAt": "2026-11-23T04:34:52.757Z",
+   "lastSuccessAt": "2026-11-23T04:34:52.757Z",
    "error": null,
-   "latestFile": "20261123014500",
+   "latestFile": "20261123044500",
    "warning": "2 of 12 files could not be read this run"
   }
  },
@@ -294,7 +294,19 @@
   "20261123010000": "ok",
   "20261123011500": "ok",
   "20261123013000": "missing",
-  "20261123014500": "missing"
+  "20261123014500": "missing",
+  "20261123020000": "ok",
+  "20261123021500": "ok",
+  "20261123023000": "ok",
+  "20261123024500": "ok",
+  "20261123030000": "ok",
+  "20261123031500": "ok",
+  "20261123033000": "ok",
+  "20261123034500": "ok",
+  "20261123040000": "ok",
+  "20261123041500": "ok",
+  "20261123043000": "missing",
+  "20261123044500": "missing"
  },
  "items": [
   {
@@ -685,6 +697,52 @@
       "label": "Security",
       "terms": [
        "war"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "envoy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
+   "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
+   "publisher": "rferl.org",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T03:05:00.000Z",
+   "seenByGdelt": "2026-11-23T04:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO"
       ]
      },
      {
@@ -1433,124 +1491,6 @@
       "label": "Diplomacy",
       "terms": [
        "summit"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Trump says China is building nuclear weapons 'hot and heavy', warns it could catch US in 10 years",
-   "url": "https://www.hindustantimes.com/world-news/trump-says-china-is-building-nuclear-weapons-hot-and-heavy-warns-it-could-catch-us-in-10-years-101795211740167.html",
-   "publisher": "hindustantimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-20T22:34:00.000Z",
-   "seenByGdelt": "2026-11-21T01:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "nuclear",
-       "weapons"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "China, U.S. hold military maritime consultative agreement working group meeting",
-   "url": "http://en.people.cn/n3/2026/1120/c90000-20521779.html",
-   "publisher": "en.people.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T02:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "China using Pakistan, supply chains to constrain India's rise: US Panel",
-   "url": "https://economictimes.indiatimes.com/news/defence/china-using-pakistan-supply-chains-to-constrain-indias-rise-us-panel/articleshow/136042992.cms",
-   "publisher": "indiatimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T03:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T03:51:19.268Z",
-   "lastSeenAt": "2026-11-21T03:51:19.268Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "supply chains"
       ]
      }
     ]
@@ -2893,84 +2833,6 @@
    }
   },
   {
-   "title": "Huge explosion 'rips through Russian warship' 1,000s of miles from Ukraine",
-   "url": "https://www.aol.co.uk/articles/huge-explosion-rips-russian-warship-125200000.html",
-   "publisher": "aol.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T12:52:00.000Z",
-   "seenByGdelt": "2026-11-22T14:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T16:04:40.596Z",
-   "lastSeenAt": "2026-11-22T16:04:40.596Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Huge explosion 'destroys Russian warship' 1,000s of miles from Ukraine | World | News",
-   "url": "https://www.express.co.uk/news/world/2268314/russian-warship-explodes-putin-ukraine-libya",
-   "publisher": "express.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T12:52:00.000Z",
-   "seenByGdelt": "2026-11-22T13:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T16:04:40.596Z",
-   "lastSeenAt": "2026-11-22T16:04:40.596Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "US admission on Ukraine: Everything collapsed, Sachs says G20 in Miami could seal peace and rebuilding",
    "url": "https://www.bankingnews.gr/diethni/articles/912568/us-admission-on-ukraine-everything-collapsed-sachs-says-g20-in-miami-could-seal-peace-and-rebuilding",
    "publisher": "bankingnews.gr",
@@ -3043,45 +2905,6 @@
       "label": "Security",
       "terms": [
        "army"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Russia Ukraine War",
-   "url": "https://www.goshennews.com/news/national_news/russia-ukraine-war/image_82e644a4-41c9-5988-994d-16678d4e9d5a.html",
-   "publisher": "goshennews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T13:31:00.000Z",
-   "seenByGdelt": "2026-11-22T23:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T01:42:18.687Z",
-   "lastSeenAt": "2026-11-23T01:42:18.687Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
       ]
      }
     ]
@@ -3914,7 +3737,7 @@
     }
    },
    "firstSeenAt": "2026-11-22T19:14:59.606Z",
-   "lastSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -3982,6 +3805,45 @@
       "terms": [
        "warship",
        "naval"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Trump cites 'peace declaration' in Shenzen on heels of 'Quad' summit; 'Whoever wins SI wins' – World Tribune: U.S. Politics and Culture, Geostrategy, China, North Korea, Corporate Watch, Media Watch",
+   "url": "https://worldtribune.com/trump-cites-peace-declaration-at-3-way-summit-on-heels-of-quad-summit-whoever-wins-si-wins/",
+   "publisher": "worldtribune.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T18:29:00.000Z",
+   "seenByGdelt": "2026-11-23T03:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "summit"
       ]
      }
     ]
@@ -4495,7 +4357,7 @@
     }
    },
    "firstSeenAt": "2026-11-23T01:42:18.687Z",
-   "lastSeenAt": "2026-11-23T01:42:18.687Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4505,6 +4367,202 @@
       "label": "Diplomacy",
       "terms": [
        "ambassador"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Russian warship sinks in Libya after suspected Ukrainian sea drone attack",
+   "url": "https://www.foxnews.com/world/russian-warship-sinks-libya-suspected-ukrainian-strikes-take-war-beyond-black-sea",
+   "publisher": "foxnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T01:30:00.000Z",
+   "seenByGdelt": "2026-11-23T03:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone attack",
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Ukraine war briefing: Race to find survivors after Russian attack on apartment block kills at least nine",
+   "url": "https://www.theguardian.com/world/2026/nov/23/ukraine-war-briefing-race-to-find-survivors-after-russian-attack-on-apartment-block-kills-at-least-nine",
+   "publisher": "theguardian.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T02:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "U.S. trade chief sees progress in trade talks but faults Canada for Beijing-friendly moves",
+   "url": "https://www.cbc.ca/news/world/u-s-trade-chief-canada-trade-talks-9.7432158",
+   "publisher": "cbc.ca",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T02:51:00.000Z",
+   "seenByGdelt": "2026-11-23T03:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "institution",
+     "terms": [
+      "Beijing"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "trade talks"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Gold deluge keeps China's US$1 trillion trade surplus in check",
+   "url": "https://www.businesstimes.com.sg/companies-markets/energy-commodities/gold-deluge-keeps-chinas-us1-trillion-trade-surplus-check",
+   "publisher": "businesstimes.com.sg",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T03:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "trade surplus"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Kushner Doubles Down on Push for NATO-Style Security Guarantees for Ukraine Despite Russian Rejection",
+   "url": "https://news.antiwar.com/2026/11/22/kushner-doubles-down-on-push-for-nato-style-security-guarantees-for-ukraine-despite-russian-rejection/",
+   "publisher": "antiwar.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T03:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO"
       ]
      }
     ]
@@ -4709,6 +4767,39 @@
    }
   },
   {
+   "title": "Taiwan startup investment contracts as AI, semiconductors attract capital",
+   "url": "https://www.digitimes.com/news/a20261120PD246/investment-taiwan-startup-venture-capital-semiconductors.html",
+   "publisher": "digitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T02:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "semiconductors"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "Taiwan to cooperate in joint circular economy",
    "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/22/2003868184",
    "publisher": "taipeitimes.com",
@@ -4750,302 +4841,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "Taiwan Cautions Canada About Increasing Trade With China",
-   "url": "https://www.newser.com/story/400421/taiwan-cautions-canada-about-increasing-trade-with-china.html",
-   "publisher": "newser.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T21:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-21T22:00:35.566Z",
-   "lastSeenAt": "2026-11-21T22:00:35.566Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "The AI sell-off now has Taiwan taking emergency steps to calm its chip-heavy market",
-   "url": "https://www.aol.com/articles/ai-sell-off-now-taiwan-220252000.html",
-   "publisher": "aol.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-21T22:02:00.000Z",
-   "seenByGdelt": "2026-11-22T00:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T01:35:48.595Z",
-   "lastSeenAt": "2026-11-22T01:35:48.595Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "One-China principle unshakable, DPP's \"Taiwan independence\" attempts doomed to fail: experts-Xinhua",
-   "url": "https://english.news.cn/20261121/0947bb184b09496587ff5cec4cadd3ec/c.html",
-   "publisher": "english.news.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T23:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T01:35:48.595Z",
-   "lastSeenAt": "2026-11-22T01:35:48.595Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "variants": [
-    {
-     "publisher": "en.ce.cn",
-     "publisherId": "gdelt",
-     "url": "http://en.ce.cn/main/latest/202611/t20261122_3301744.shtml",
-     "published": null,
-     "seenByGdelt": "2026-11-22T01:00:00.000Z"
-    },
-    {
-     "publisher": "china.org.cn",
-     "publisherId": "gdelt",
-     "url": "http://www.china.org.cn/2026-11/22/content_118784515.shtml",
-     "published": null,
-     "seenByGdelt": "2026-11-22T06:00:00.000Z"
-    },
-    {
-     "publisher": "en.people.cn",
-     "publisherId": "gdelt",
-     "url": "http://en.people.cn/n3/2026/1122/c90000-20521817.html",
-     "published": null,
-     "seenByGdelt": "2026-11-22T07:30:00.000Z"
-    }
-   ],
-   "variantsTotal": 3
-  },
-  {
-   "title": "Taiwan's stock-market defense: tougher short-sale rules and a state buyer · Digg",
-   "url": "https://digg.com/world-business/wtzjw715",
-   "publisher": "digg.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T00:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T01:35:48.595Z",
-   "lastSeenAt": "2026-11-22T01:35:48.595Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan headline news - Focus Taiwan",
-   "url": "https://focustaiwan.tw/society/202611220001",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T05:14:00.000Z",
-   "seenByGdelt": "2026-11-22T06:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T07:37:20.160Z",
-   "lastSeenAt": "2026-11-22T07:37:20.160Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Laos 'least-developed' status shift, Tata meeting, Taiwan local elections",
-   "url": "https://asia.nikkei.com/spotlight/your-week-in-asia/laos-least-developed-status-shift-tata-meeting-taiwan-local-elections",
-   "publisher": "nikkei.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T06:34:00.000Z",
-   "seenByGdelt": "2026-11-22T10:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T10:07:49.777Z",
-   "lastSeenAt": "2026-11-22T10:07:49.777Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Women's Poker Is Booming in Taipei, and Linda Johnson Is Cashing In",
-   "url": "https://www.pokernews.com/news/2026/11/it-makes-my-heart-happy-linda-johnson-on-seeing-women-fill-52855.htm",
-   "publisher": "pokernews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T07:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T07:37:20.160Z",
-   "lastSeenAt": "2026-11-22T07:37:20.160Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan health minister praises BTS fans' charity initiative",
-   "url": "https://focustaiwan.tw/society/202611220011",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T11:49:00.000Z",
-   "seenByGdelt": "2026-11-22T15:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T16:04:40.596Z",
-   "lastSeenAt": "2026-11-22T16:04:40.596Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "variants": [
-    {
-     "publisher": "ltn.com.tw",
-     "publisherId": "gdelt",
-     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649969",
-     "published": null,
-     "seenByGdelt": "2026-11-22T19:45:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
-  },
-  {
-   "title": "Motorcade, street festival mark Taipei mayoral rivals' 'Super Sunday' push",
-   "url": "https://focustaiwan.tw/politics/202611220012",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-22T13:00:00.000Z",
-   "seenByGdelt": "2026-11-22T15:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T16:04:40.596Z",
-   "lastSeenAt": "2026-11-22T16:04:40.596Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Malaysian actor Nandagopal Mohan makes history with Taiwan's Golden Horse win",
-   "url": "https://www.thestar.com.my/lifestyle/entertainment/2026/11/22/malaysian-actor-nandagopal-mohan-makes-history-with-taiwan039s-golden-horse-win",
-   "publisher": "thestar.com.my",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T13:00:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T13:23:15.274Z",
-   "lastSeenAt": "2026-11-22T13:23:15.274Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
   },
   {
    "title": "Plan your holiday around lantern season: 4 festivals to visit in Thailand, Taiwan, Vietnam and Japan",
@@ -5569,6 +5364,56 @@
    }
   },
   {
+   "title": "Why People Are Paying to Get Chopped With Knives at Massage Parlors in Taiwan",
+   "url": "https://www.vice.com/en/article/why-people-are-paying-to-get-chopped-with-knives-at-massage-parlors-in-taiwan/",
+   "publisher": "vice.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-22T23:57:00.000Z",
+   "seenByGdelt": "2026-11-23T02:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan Stock Market May Find Traction On Monday",
+   "url": "https://www.finanzen.ch/nachrichten/aktien/taiwan-stock-market-may-find-traction-on-monday-1036790167",
+   "publisher": "finanzen.ch",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T00:31:00.000Z",
+   "seenByGdelt": "2026-11-23T02:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
    "title": "You can PayLah! in Taiwan, but cash is still needed",
    "url": "https://www.straitstimes.com/asia/east-asia/you-can-paylah-in-taiwan-but-heres-why-cash-is-still-very-much-needed",
    "publisher": "straitstimes.com",
@@ -5591,6 +5436,218 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   }
+  },
+  {
+   "title": "Taiwan To Acquire, Develop Drones To Strengthen Defense, Boost Exports",
+   "url": "https://www.eurasiareview.com/23112026-taiwan-to-acquire-develop-drones-to-strengthen-defense-boost-exports/",
+   "publisher": "eurasiareview.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-23T01:33:00.000Z",
+   "seenByGdelt": "2026-11-23T03:15:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan seeks 12-month patent grace period to support market testing",
+   "url": "https://www.digitimes.com/news/a20261120PD205/taiwan-patent-market-2024.html",
+   "publisher": "digitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T02:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Nvidia leadership shake-up tests AI rack cadence, while Taiwan suppliers eye dual GPU-ASIC opportunities",
+   "url": "https://www.digitimes.com/news/a20261120PD233/nvidia-jensen-huang-president-google-component.html",
+   "publisher": "digitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T02:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "PCB and robotics demand drive Taiwan Chelic's 3Q26 growth",
+   "url": "https://www.digitimes.com/news/a20261120PD244/taiwan-growth-pcb-revenue-demand.html",
+   "publisher": "digitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T02:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Bangkok Post - Hong Kong cinema takes spotlight at Taiwan top film award",
+   "url": "https://www.bangkokpost.com/life/arts-and-entertainment/3359714/hong-kong-cinema-takes-spotlight-at-taiwan-top-film-award",
+   "publisher": "bangkokpost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T03:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan Warns Carney About China's 'Weaponization of Interdependence' as Ottawa Seeks Deeper Ties",
+   "url": "https://www.theepochtimes.com/world/taiwan-warns-carney-about-chinas-weaponization-of-interdependence-as-ottawa-seeks-deeper-ties-6128004",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T03:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Stock market outlook today,23 Nov:Sensex, Nifty prediction-DJIA, S&P, NASDAQ, GIFT Nifty, Kospi, Nikkei, Taiwan cues",
+   "url": "https://www.livemint.com/market/stock-market-news/stock-market-outlook-today-23-nov-sensex-nifty-prediction-djia-s-p-nasdaq-gift-nifty-kospi-nikkei-taiwan-cues-11795394068928.html",
+   "publisher": "livemint.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T03:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "DayOne said to shelve US IPO plans amid market uncertainty: report",
+   "url": "https://www.dealstreetasia.com/stories/dayone-us-ipo-plans-501861",
+   "publisher": "dealstreetasia.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-23T04:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-23T04:34:52.757Z",
+   "lastSeenAt": "2026-11-23T04:34:52.757Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "IPO"
+    ]
    }
   },
   {
