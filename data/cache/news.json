@@ -3,176 +3,176 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-23T01:31:44.891Z",
-  "lastSuccessAt": "2026-11-22T19:08:24.764Z",
+  "checkedAt": "2026-11-23T07:53:09.130Z",
+  "lastSuccessAt": "2026-11-23T07:54:11.810Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-22T07:28:16.371Z",
-      "checkedAt": "2026-11-23T01:34:37.006Z",
+      "error": null,
+      "fetchedAt": "2026-11-23T07:54:11.810Z",
+      "checkedAt": "2026-11-23T07:54:11.810Z",
       "articles": [
         {
-          "title": "Officials : Washington pulp mill violated safety standards before ruptured chemical tank killed 11",
-          "url": "https://www.troyrecord.com/2026/11/20/washington-state-chemical-tank-failure-investigation/",
-          "domain": "troyrecord.com",
-          "seendate": "20261122T053000Z",
+          "title": "China urges US to revoke curbs on Chinese telecom firms",
+          "url": "https://asianews.network/china-urges-us-to-revoke-curbs-on-chinese-telecom-firms/",
+          "domain": "asianews.network",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "Pediatrician shares recommendations as communities prepare for lead azide detonation",
+          "url": "https://www.kwqc.com:443/2026/11/21/pediatrician-shares-recommendations-communities-prepare-lead-azide-detonation/",
+          "domain": "kwqc.com",
+          "seendate": "20261123T033000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Arab News | Pakistan FM hopeful for US - Iran deal , warns against prolonged war",
-          "url": "https://www.arabnews.com/world/pakistan-fm-hopeful-for-us-iran-deal-warns-against-prolonged-war-3013478",
-          "domain": "arabnews.com",
-          "seendate": "20261122T053000Z",
-          "language": "English",
-          "sourcecountry": "Saudi Arabia"
-        },
-        {
-          "title": "Zaidan Harun dies after Bronx apartment fire on Metcalf Avenue – The New Statesman :: Ghana Oldest Mainstream Newspaper since 1949",
-          "url": "https://thestatesmanonline.com/zaidan-harun-dies-after-bronx-apartment-fire-on-metcalf-avenue/",
-          "domain": "thestatesmanonline.com",
-          "seendate": "20261122T053000Z",
-          "language": "English",
-          "sourcecountry": "Ghana"
-        },
-        {
-          "title": "Jackson Hole Airport , the Only U . S . Commercial Airport Wholly Inside a National Park , Faces Limits on Environmental Challenges | AviNews",
-          "url": "https://cedarnews.net/newstasks/1177931/jackson-hole-airport-only-u-s-commercial/",
-          "domain": "cedarnews.net",
-          "seendate": "20261122T053000Z",
-          "language": "English",
-          "sourcecountry": "Lebanon"
-        },
-        {
-          "title": "FBI says its most - wanted drug lord El Chapo Isidro was caught by Mexico with US assistance",
-          "url": "https://www.hindustantimes.com/world-news/us-news/fbi-says-its-most-wanted-drug-lord-el-chapo-isidro-was-caught-by-mexico-with-us-assistance-101795322907502.html",
-          "domain": "hindustantimes.com",
-          "seendate": "20261122T053000Z",
+          "title": "How Kim Jong Un gets away with building nukes and ghosting Trump",
+          "url": "https://www.livemint.com/global/how-kim-jong-un-gets-away-with-building-nukes-and-ghosting-trump-11795397191350.html",
+          "domain": "livemint.com",
+          "seendate": "20261123T033000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Trump says confronting dangers on Korean Peninsula discussed at 3 - way summit with Xi , Putin",
-          "url": "https://www.koreaherald.com:443/article/10944597",
-          "domain": "koreaherald.com",
-          "seendate": "20261122T053000Z",
+          "title": "US President Trump - North Korean leader Kim summit still possible despite APEC setback , but major hurdles persist : analysts",
+          "url": "https://asianews.network/us-president-trump-north-korean-leader-kim-summit-still-possible-despite-apec-setback-but-major-hurdles-persist-analysts/",
+          "domain": "asianews.network",
+          "seendate": "20261123T033000Z",
           "language": "English",
-          "sourcecountry": "South Korea"
+          "sourcecountry": "China"
         },
         {
-          "title": "Trump orders federal contractors to check with White House before responding to Congress",
-          "url": "https://www.aspenpublicradio.org/2026-11-21/trump-orders-federal-contractors-to-check-with-white-house-before-responding-to-congress",
-          "domain": "aspenpublicradio.org",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Trump vows to work with Democrats to cap credit card interest rates at 10 %",
-          "url": "https://www.mcall.com/2026/11/21/trump-vows-to-work-with-democrats-to-cap-credit-card-interest-rates-at-10/",
-          "domain": "mcall.com",
-          "seendate": "20261122T003000Z",
+          "title": "Dylan Larkin trade grades in Red Wings - Canadiens blockbuster",
+          "url": "https://www.sbnation.com/nhl/1137096/dylan-larkin-trade-grades-red-wings-canadiens-nhl",
+          "domain": "sbnation.com",
+          "seendate": "20261123T033000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "FBI most wanted cartel boss captured as gunfire , chaos erupt across Mexico",
-          "url": "https://fox17.com/news/nation-world/fbis-most-wanted-cartel-boss-captured-as-gunfire-chaos-erupt-across-mexico-united-states-america-drugs-el-chapo-isidro-kingpin",
-          "domain": "fox17.com",
-          "seendate": "20261122T003000Z",
+          "title": "Post Office issues warning over sending Christmas parcels",
+          "url": "https://www.cravenherald.co.uk/news/national/uk-today/26751919.post-office-issues-warning-sending-christmas-parcels/",
+          "domain": "cravenherald.co.uk",
+          "seendate": "20261123T033000Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Trump order tells federal contractors to coordinate with White House on Congress inquiries",
-          "url": "https://news4sanantonio.com/news/nation-world/trump-order-federal-contractors-white-house-congress-",
-          "domain": "news4sanantonio.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Respected Horseman Dr . John Chandler Dies at 86",
-          "url": "https://www.bloodhorse.com/horse-racing/articles/296153/respected-horseman-dr-john-chandler-dies-at-86",
-          "domain": "bloodhorse.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Climate talks in overtime as nations wrestle with response to worsening global warming",
-          "url": "https://www.wdsu.com/article/turkey-cop31-climate-talks-fossil-fuels/74498741",
-          "domain": "wdsu.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Trump pledges to work with Democrats to cap credit card interest rates",
-          "url": "https://www.ktvu.com/money/trump-pledges-work-democrats-cap-credit-card-interest-rates",
-          "domain": "ktvu.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Klobuchar , Smith divided on permitting bill",
-          "url": "https://www.brainerddispatch.com/news/local/klobuchar-smith-divided-on-permitting-bill",
-          "domain": "brainerddispatch.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Why Is the AC Condenser Making Loud Noises in Menifee , CA ? Reese Mechanical Answers as HVAC Repair Murrieta Demand Rises",
-          "url": "https://www.mykxlg.com/online_features/press_releases/why-is-the-ac-condenser-making-loud-noises-in-menifee-ca-reese-mechanical-answers-as/article_dd07d8d9-c9a1-51cc-b660-2735077419c7.html",
-          "domain": "mykxlg.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Jake Gyllenhaal 124 - Minute Sci - Fi Action Thriller Is Officially the # 1 Movie on Netflix",
-          "url": "https://movieweb.com/netflix-day-after-tomorrow-ratings/",
-          "domain": "movieweb.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Trump midterm wipeout came with a message Democrats cant afford to ignore : columnist",
-          "url": "https://www.rawstory.com/trump-2678486851/",
-          "domain": "rawstory.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Prince Harry visa issues led to core trouble in U . S .",
-          "url": "https://www.thenews.com.pk/latest/1424556-prince-harry-visa-issues-led-to-core-trouble-in-us",
-          "domain": "thenews.com.pk",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Trump ex - partner spills on Epstein regular role at his beauty pageants : report",
-          "url": "https://www.rawstory.com/trump-epstein-2678486319/",
-          "domain": "rawstory.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Labor pushes back on Trump data centre tax threat",
-          "url": "https://www.maitlandmercury.com.au/story/9395877/labor-pushes-back-on-trump-data-centre-tax-threat/",
-          "domain": "maitlandmercury.com.au",
-          "seendate": "20261122T003000Z",
+          "title": "Terrible : British PM Burnham EU deal slammed",
+          "url": "https://www.thecourier.com.au/story/9396445/terrible-british-pm-burnhams-eu-deal-slammed/",
+          "domain": "thecourier.com.au",
+          "seendate": "20261123T033000Z",
           "language": "English",
           "sourcecountry": "Australia"
+        },
+        {
+          "title": "The Lawyer Guide Chooses Singapore as Its Next Test of Legal Discovery",
+          "url": "https://www.cantechletter.com/newswires/the-lawyer-guide-chooses-singapore-as-its-next-test-of-legal-discovery/",
+          "domain": "cantechletter.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Treasury Finalizes 401 ( k ) Auto - Enrollment Rules for Plan Years After 2027",
+          "url": "http://www.mexicostar.com/news/279449392/treasury-finalizes-401k-auto-enrollment-rules-for-plan-years-after-2027",
+          "domain": "mexicostar.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "Mexico"
+        },
+        {
+          "title": "300 - plus gather at UNLV for Hope in Action to spotlight youth mental wellness",
+          "url": "https://news3lv.com/news/local/300-plus-gather-at-unlv-for-hope-in-action-to-spotlight-youth-mental-wellness",
+          "domain": "news3lv.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "The fault lines threatening democracy",
+          "url": "https://www.livemint.com/opinion/columns/the-fault-lines-threatening-democracy-11795359705968.html",
+          "domain": "livemint.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Single - digit inflation : Nigeria test after 14 . 06 % October",
+          "url": "https://punchng.com/single-digit-test-of-dropping-inflation/",
+          "domain": "punchng.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "Nigeria"
+        },
+        {
+          "title": "Is the AI Stock Market Boom Coming to an End ?",
+          "url": "https://newsonjapan.com/article/151486.php",
+          "domain": "newsonjapan.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "Japan"
+        },
+        {
+          "title": "US Army plans to invoke emergency provisions to detonate bomb - making chemicals in Iowa",
+          "url": "https://www.wyff4.com/article/des-moines-area-army-emergency-bomb-chemical-blast/74502722",
+          "domain": "wyff4.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "US senator - elect El - Sayed opposes funding Pakistan military",
+          "url": "https://ianslive.in/us-senator-elect-el-sayed-opposes-funding-pakistans-military--20261123074503",
+          "domain": "ianslive.in",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Thanksgiving turkeys arrive at Willard Hotel ahead of White House pardon",
+          "url": "https://upnorthlive.com/news/nation-world/thanksgiving-turkeys-arrive-willard-hotel-pardon-ceremony-president-donald-trump-white-house-south-lawn",
+          "domain": "upnorthlive.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Travelers frustrated after 700+ Delta flights delayed out of Atlanta",
+          "url": "https://www.wsbtv.com/news/local/travelers-frustrated-after-700-delta-flights-delayed-out-atlanta/7LX3PMVXRFFRFOANG6LX6ASCPU/",
+          "domain": "wsbtv.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "In shift , U . S . Space Force prioritizes cislunar space as potential warfighting domain – World Tribune : U . S . Politics and Culture , Geostrategy , China , North Korea , Corporate Watch , Media Watch",
+          "url": "https://worldtribune.com/in-shift-u-s-space-force-prioritizes-cislunar-space-as-potential-warfighting-domain/",
+          "domain": "worldtribune.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Mexican forces arrest suspected cartel leader El Chapo Isidro",
+          "url": "http://www.argentinastar.com/news/279447455/mexican-forces-arrest-suspected-cartel-leader-el-chapo-isidro",
+          "domain": "argentinastar.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "Argentina"
+        },
+        {
+          "title": "Luxury development planned on land some Albanians say is theirs , not Jared Kushner",
+          "url": "https://www.wbaa.org/npr-news/2026-11-22/luxury-development-planned-on-land-some-albanians-say-is-theirs-not-jared-kushners",
+          "domain": "wbaa.org",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "United States"
         }
       ]
     },
@@ -182,7 +182,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-22T19:08:24.764Z",
-      "checkedAt": "2026-11-23T01:34:37.006Z",
+      "checkedAt": "2026-11-23T07:56:50.350Z",
       "articles": [
         {
           "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
@@ -349,10 +349,10 @@
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T07:29:44.279Z",
-      "checkedAt": "2026-11-23T01:34:37.006Z",
+      "checkedAt": "2026-11-23T07:55:31.631Z",
       "articles": [
         {
           "title": "In Ukraine , the fight to keep winter outside begins with a broken window – Winnipeg Free Press",
@@ -519,10 +519,10 @@
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T19:07:32.257Z",
-      "checkedAt": "2026-11-23T01:34:37.006Z",
+      "checkedAt": "2026-11-23T07:56:50.350Z",
       "articles": [
         {
           "title": "Echidna | Sandpapergate saga crowds out major news | St George & Sutherland Shire Leader",
@@ -688,169 +688,169 @@
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-21T19:07:50.417Z",
-      "checkedAt": "2026-11-23T01:33:03.467Z",
+      "error": null,
+      "fetchedAt": "2026-11-23T07:53:22.319Z",
+      "checkedAt": "2026-11-23T07:53:22.319Z",
       "articles": [
         {
-          "title": "Taiwan flags improper treatment by China during APEC meetings",
-          "url": "http://www.asiabulletin.com/news/279447110/taiwan-flags-improper-treatment-by-china-during-apec-meetings",
-          "domain": "asiabulletin.com",
-          "seendate": "20261121T163000Z",
+          "title": "Stock market outlook today , 23 Nov : Sensex , Nifty prediction - DJIA , S & P , NASDAQ , GIFT Nifty , Kospi , Nikkei , Taiwan cues",
+          "url": "https://www.livemint.com/market/stock-market-news/stock-market-outlook-today-23-nov-sensex-nifty-prediction-djia-s-p-nasdaq-gift-nifty-kospi-nikkei-taiwan-cues-11795394068928.html",
+          "domain": "livemint.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Vietnam economic rise creates a growing middle class , but not everyone is better off – Asia News Network",
+          "url": "https://asianews.network/vietnams-economic-rise-creates-a-growing-middle-class-but-not-everyone-is-better-off/",
+          "domain": "asianews.network",
+          "seendate": "20261123T033000Z",
           "language": "English",
           "sourcecountry": "China"
         },
         {
-          "title": "Ashok Leyland to set up truck plant in Singur , work to begin soon : Minister",
-          "url": "https://www.business-standard.com/companies/news/ashok-leyland-to-set-up-truck-plant-in-singur-work-to-begin-soon-minister-126112100594_1.html",
+          "title": "Swap the Winter Wonderland for a Seaside Paradise : Agoda Picks Five Sun - Soaked Shores Across Asia",
+          "url": "http://www.philippinetimes.com/news/279449442/swap-the-winter-wonderland-for-a-seaside-paradise-agoda-picks-five-sun-soaked-shores-across-asia",
+          "domain": "philippinetimes.com",
+          "seendate": "20261123T033000Z",
+          "language": "English",
+          "sourcecountry": "Philippines"
+        },
+        {
+          "title": "High stakes in the tech capital : China welcomes world leaders to 33rd APEC Summit",
+          "url": "https://www.chinatechnews.com/2026/11/23/133515-high-stakes-in-the-tech-capital-china-welcomes-world-leaders-to-33rd-apec-summit",
+          "domain": "chinatechnews.com",
+          "seendate": "20261122T213000Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "South Korea readies market stabilisation funds as KOSPI hits 10 - month low",
+          "url": "https://www.business-standard.com/world-news/south-korea-readies-market-stabilisation-funds-as-kospi-hits-10-month-low-126112200807_1.html",
           "domain": "business-standard.com",
-          "seendate": "20261121T133000Z",
+          "seendate": "20261122T203000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Shenzhen Summit Puts Limits of China – Russia Partnership in Focus",
-          "url": "https://www.theepochtimes.com/china/shenzhen-summit-puts-limits-of-china-russia-partnership-in-focus-6127510",
-          "domain": "theepochtimes.com",
-          "seendate": "20261121T133000Z",
+          "title": "INPEX sanctions next offshore phase of Ichthys LNG",
+          "url": "https://www.worldoil.com/news/2026/11/20/inpex-sanctions-next-offshore-phase-of-ichthys-lng/",
+          "domain": "worldoil.com",
+          "seendate": "20261122T203000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "If AI Chips Become Commoditized , Nvidia Has the Most to Lose , While These 3 Stocks Are Set to Gain",
-          "url": "https://www.aol.com/articles/ai-chips-become-commoditized-nvidia-113502000.html",
-          "domain": "aol.com",
-          "seendate": "20261121T133000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Presidential hopeful wants Guatemala to become the Israel of Latin America",
-          "url": "http://www.jpost.com/international/article-915535",
-          "domain": "jpost.com",
-          "seendate": "20261121T133000Z",
-          "language": "English",
-          "sourcecountry": "Israel"
-        },
-        {
-          "title": "As Trump basks in summit pomp , China Xi strengthens his hand",
-          "url": "https://tribune.com.pk/story/2641527/as-trump-basks-in-summit-pomp-chinas-xi-strengthens-his-hand",
-          "domain": "tribune.com.pk",
-          "seendate": "20261121T123000Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Carney keeps an insane pace in his quest for a saner world",
-          "url": "https://www.stcatharinesstandard.ca/politics/federal/mark-carney-keeps-an-insane-pace-in-his-quest-for-a-saner-world/article_7767477b-1f76-54cf-94e0-d3f95548fac0.html",
-          "domain": "stcatharinesstandard.ca",
-          "seendate": "20261121T123000Z",
-          "language": "English",
-          "sourcecountry": "Canada"
-        },
-        {
-          "title": "Nvidia stock crash : Record market cap wipeout deepens global tech sell - off ; shares plunge 14 %, Alphabet overtakes chipmaker",
-          "url": "https://www.ibtimes.co.in/nvidia-stock-crash-record-market-cap-wipeout-deepens-global-tech-sell-off-shares-plunge-14-908552",
-          "domain": "ibtimes.co.in",
-          "seendate": "20261121T123000Z",
+          "title": "Letters to the Editor dated November 22 , 2026 - The HinduBusinessLine",
+          "url": "https://www.thehindubusinessline.com/opinion/letters/letters-to-editor/article71731958.ece",
+          "domain": "thehindubusinessline.com",
+          "seendate": "20261122T190000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Why Korean occult films are casting a spell on audiences in Vietnam and Indonesia",
-          "url": "https://www.koreatimes.co.kr/entertainment/films/20261121/why-korean-occult-films-are-casting-a-spell-on-audiences-in-vietnam-and-indonesia",
-          "domain": "koreatimes.co.kr",
-          "seendate": "20261121T113000Z",
+          "title": "Breakfast briefing : Waiting for the herd",
+          "url": "https://www.interest.co.nz/economy/141180/eyes-wall-street-japan-inflation-china-foreign-direct-investment-inflows-slow-taiwan",
+          "domain": "interest.co.nz",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "South Korea"
+          "sourcecountry": "New Zealand"
         },
         {
-          "title": "TSMC reportedly tightens China AI chip curbs as new US rules close manufacturing loophole",
-          "url": "https://www.businesstimes.com.sg/international/global/tsmc-reportedly-tightens-china-ai-chip-curbs-new-us-rules-close-manufacturing-loophole",
-          "domain": "businesstimes.com.sg",
-          "seendate": "20261121T113000Z",
+          "title": "Elon Musk Warns Data Center Delays Could Leave AI Companies Cash Poor",
+          "url": "https://www.businessinsider.com/elon-musk-warning-ai-compute-data-centers-cash-spacex-tesla-2026-11",
+          "domain": "businessinsider.com",
+          "seendate": "20261122T184500Z",
           "language": "English",
-          "sourcecountry": "Singapore"
+          "sourcecountry": "United States"
         },
         {
-          "title": "AI sell - off batters Wall Street ; S & P 500 enters correction , Nasdaq turns negative for year",
-          "url": "https://timesofindia.indiatimes.com/business/international-business/ai-sell-off-batters-wall-street-sp-500-enters-correction-nasdaq-turns-negative-for-year/articleshow/136041935.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261121T003000Z",
+          "title": "South Korea prepares market stabilisation funds after KOSPI hits 10 - month low",
+          "url": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/south-korea-prepares-market-stabilisation-funds-after-kospi-hits-10-month-low/articleshow/136073016.cms",
+          "domain": "economictimes.indiatimes.com",
+          "seendate": "20261122T123000Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Dow Jones plunges 950 points , Nasdaq loses more than 5 percent",
-          "url": "http://www.sandiegosun.com/news/279446207/dow-jones-plunges-950-points-nasdaq-loses-more-than-5-percent",
-          "domain": "sandiegosun.com",
-          "seendate": "20261121T003000Z",
+          "title": "Taiwanese business groups in Philippines merge to pool resources",
+          "url": "https://focustaiwan.tw:443/business/202611220004",
+          "domain": "focustaiwan.tw",
+          "seendate": "20261122T103000Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Taiwan"
         },
         {
-          "title": "Trump , Xi , Putin Declaration Omits Ukraine ; Moscow Rejects NATO - Style Guarantee",
-          "url": "https://www.hngn.com/articles/273878/20261120/trump-xi-putin-issue-peace-declaration-that-omits-ukraine.htm",
-          "domain": "hngn.com",
-          "seendate": "20261121T003000Z",
+          "title": "2 dead after multi - vehicle collision in Tainan",
+          "url": "https://focustaiwan.tw/society/202611220002",
+          "domain": "focustaiwan.tw",
+          "seendate": "20261122T103000Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Taiwan"
         },
         {
-          "title": "The Kitchen Master owner takes his cooking up a notch with a new restaurant called Wabi Sabi",
-          "url": "https://www.atlantamagazine.com/dining-news/the-kitchen-master-owner-takes-his-cooking-up-a-notch-with-a-new-restaurant-called-wabi-sabi/",
-          "domain": "atlantamagazine.com",
-          "seendate": "20261121T003000Z",
+          "title": "18 people stung by Asian hornets near Shifen Waterfall",
+          "url": "https://focustaiwan.tw/society/202611220005",
+          "domain": "focustaiwan.tw",
+          "seendate": "20261122T103000Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Taiwan"
         },
         {
-          "title": "Would like Jensen to be given second chance : Trump backs embattled former Nvidia CEO",
-          "url": "http://www.taiwansun.com/news/279446209/would-like-jensen-to-be-given-second-chance-trump-backs-embattled-former-nvidia-ceo",
-          "domain": "taiwansun.com",
-          "seendate": "20261121T003000Z",
+          "title": "Nvidia supply - chain expansion boosts confidence among Taiwan firms : Analyst",
+          "url": "https://focustaiwan.tw:443/business/202611220006",
+          "domain": "focustaiwan.tw",
+          "seendate": "20261122T103000Z",
+          "language": "English",
+          "sourcecountry": "Taiwan"
+        },
+        {
+          "title": "Vietnam economic rise creates a growing middle class , but not everyone is better off",
+          "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/11/22/vietnams-economic-rise-creates-a-growing-middle-class-but-not-everyone-is-better-off",
+          "domain": "thestar.com.my",
+          "seendate": "20261122T103000Z",
+          "language": "English",
+          "sourcecountry": "Malaysia"
+        },
+        {
+          "title": "Taiwan banks deploy AI to prevent cyberattacks",
+          "url": "https://focustaiwan.tw/sci-tech/202611220007",
+          "domain": "focustaiwan.tw",
+          "seendate": "20261122T103000Z",
+          "language": "English",
+          "sourcecountry": "Taiwan"
+        },
+        {
+          "title": "Roundup : One - China principle unshakable , DPP Taiwan independence attempts doomed to fail : experts",
+          "url": "http://en.people.cn/n3/2026/1122/c90000-20521817.html",
+          "domain": "en.people.cn",
+          "seendate": "20261122T073000Z",
           "language": "English",
           "sourcecountry": "China"
         },
         {
-          "title": "Horror end to week on Wall Street , Nasdaq plunges 1 , 261 points",
-          "url": "http://www.bignewsnetwork.com/news/279446207/horror-end-to-week-on-wall-street-nasdaq-plunges-1-261-points",
-          "domain": "bignewsnetwork.com",
-          "seendate": "20261120T214500Z",
+          "title": "After more than 80 years , Richard P . Lindemuth is laid to rest with full military honors",
+          "url": "https://lancasteronline.com/news/after-more-than-80-years-richard-p-lindemuth-is-laid-to-rest-with-full-military/article_a31b6a79-758c-4b6d-a8ca-2cb63a0cf702.html",
+          "domain": "lancasteronline.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Shenzhen Hypocritical Nonsense , War Escalation in Ukraine and Asia",
-          "url": "https://www.greanvillepost.com/shenzhen-hypocritical-nonsense-war-escalation-in-ukraine-and-asia/",
-          "domain": "greanvillepost.com",
-          "seendate": "20261120T214500Z",
+          "title": "International Men Day also Celebrated the Transition From Men to Boys !",
+          "url": "https://thevoiceslu.com/2026/11/international-mens-day-also-celebrated-the-transition-from-men-to-boys/",
+          "domain": "thevoiceslu.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Saint Lucia"
         },
         {
-          "title": "Infineon Technologies ( IFNNY ) Stock Price , News & Analysis",
-          "url": "https://247wallst.com/companies/ifnny/",
-          "domain": "247wallst.com",
-          "seendate": "20261120T214500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Anthropic plunges as Wall Street suffers AI sell - off",
-          "url": "https://www.aol.com/articles/anthropic-plunges-wall-street-suffers-210718000.html",
-          "domain": "aol.com",
-          "seendate": "20261120T214500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "WorldGym Q3 Income Rises",
-          "url": "https://www.rttnews.com/3716902/worldgym-q3-income-rises.aspx",
-          "domain": "rttnews.com",
-          "seendate": "20261120T214500Z",
+          "title": "Taiwan warns Canada Carney that deeper ties with China come with risks",
+          "url": "https://www.wsbradio.com/news/business/taiwan-warns-canada/2S7JLF54OE25TKOZNCMHJE6J5Y/",
+          "domain": "wsbradio.com",
+          "seendate": "20261122T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         }
