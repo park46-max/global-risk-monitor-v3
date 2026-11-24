@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-24T01:42:27.247Z",
- "lastSuccessAt": "2026-11-24T01:42:27.247Z",
- "checkedAt": "2026-11-24T01:42:27.247Z",
+ "generatedAt": "2026-11-24T04:25:53.162Z",
+ "lastSuccessAt": "2026-11-24T04:25:53.162Z",
+ "checkedAt": "2026-11-24T04:25:53.162Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 166,
-   "lastSuccessAt": "2026-11-24T01:42:04.757Z",
-   "checkedAt": "2026-11-24T01:42:04.757Z",
+   "items": 171,
+   "lastSuccessAt": "2026-11-24T04:25:34.662Z",
+   "checkedAt": "2026-11-24T04:25:34.662Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,21 +22,21 @@
   }
  },
  "itemStats": {
-  "read": 166,
+  "read": 171,
   "noSource": 0,
   "noTime": 0,
   "outsideWindow": 0,
   "noCountry": 0,
-  "routineNotices": 21,
+  "routineNotices": 24,
   "grouped": 0
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-24T01:42:27.247Z",
+   "generatedAt": "2026-11-24T04:25:53.162Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-21T01:42:27.247Z",
-    "to": "2026-11-24T01:42:27.247Z"
+    "from": "2026-11-21T04:25:53.162Z",
+    "to": "2026-11-24T04:25:53.162Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
@@ -334,18 +334,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-24T01:42:27.247Z",
+   "generatedAt": "2026-11-24T04:25:53.162Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-21T01:42:27.247Z",
-    "to": "2026-11-24T01:42:27.247Z"
+    "from": "2026-11-21T04:25:53.162Z",
+    "to": "2026-11-24T04:25:53.162Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 41,
+   "reportsFound": 42,
    "overview": {
     "kind": "fact",
-    "text": "41 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 23:42 UTC and come from 15 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 5, sanctions and trade 2.",
+    "text": "42 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-24 03:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 9, diplomacy 5, sanctions and trade 3.",
     "evidence": [
      1,
      2,
@@ -357,8 +357,8 @@
      9,
      10,
      11,
-     14,
-     15
+     12,
+     13
     ]
    },
    "developments": [
@@ -476,12 +476,11 @@
       5,
       6,
       7,
-      9,
-      10,
-      14,
-      15
+      8,
+      11,
+      13
      ],
-     "text": "10 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][7][9][10][14][15]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][7][8][11][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -490,19 +489,20 @@
       1,
       2,
       5,
-      8,
-      11
+      10,
+      12
      ],
-     "text": "5 of the 12 listed reports use diplomacy wording (foreign minister, summit, envoy) [1][2][5][8][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use diplomacy wording (foreign minister, summit, envoy) [1][2][5][10][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
       4,
-      6
+      6,
+      9
      ],
-     "text": "2 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth) [4][6]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use sanctions and trade wording (supply chain, rare earths, rare earth, trade deal) [4][6][9]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -517,22 +517,19 @@
       9,
       10,
       11,
-      14,
-      15
+      12,
+      13
      ],
-     "text": "11 listed reports with topic keywords also name Russia, the United States, Ukraine and Taiwan [1][2][4][5][7][8][9][10][11][14][15]. A headline that names two countries does not show how they are connected."
+     "text": "11 listed reports with topic keywords also name Russia, the United States, Ukraine and Taiwan [1][2][4][5][7][8][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
       2,
-      3,
-      11,
-      12,
-      13
+      3
      ],
-     "text": "2 listed headlines were carried by more than one outlet [2][11]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [2]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -592,6 +589,42 @@
     },
     {
      "n": 7,
+     "title": "Washington-based U.S. soldier pleads guilty to selling classified military info to China",
+     "publisher": "kptv.com",
+     "url": "https://www.kptv.com/2026/11/24/washington-based-us-soldier-pleads-guilty-selling-classified-military-info-china/",
+     "time": "2026-11-24T03:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "US Army sergeant pleads guilty in China-linked defence information scheme",
+     "publisher": "prokerala.com",
+     "url": "https://www.prokerala.com/news/articles/a1840339.html",
+     "time": "2026-11-24T02:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Taiwan Trade Deal Could Help Canada Limit China's Economic Leverage – China Money Network",
+     "publisher": "chinamoneynetwork.com",
+     "url": "https://www.chinamoneynetwork.com/2026/11/24/taiwan-trade-deal-could-help-canada-limit-chinas-economic-leverage",
+     "time": "2026-11-24T02:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
+     "title": "Foreign Minister warns US-China rivalry threatens peace",
+     "publisher": "abc.net.au",
+     "url": "https://www.abc.net.au/listen/programs/am/foreign-minister-warns-us-china-rivalry-threatens-peace/107419678",
+     "time": "2026-11-23T23:43:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
      "title": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
@@ -600,7 +633,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 12,
      "title": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
      "publisher": "globalnews.ca",
      "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
@@ -609,65 +642,11 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 13,
      "title": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
      "publisher": "atlanticcouncil.org",
      "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
      "time": "2026-11-23T21:35:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
-     "title": "Chinese Tech Espionage and Retaliation Against U.S. Investor",
-     "publisher": "natlawreview.com",
-     "url": "https://natlawreview.com/article/chinese-american-hero-whose-name-should-be-trump-administrations-lips",
-     "time": "2026-11-23T21:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
-     "publisher": "medicinehatnews.com",
-     "url": "https://medicinehatnews.com/news/national-news/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/",
-     "time": "2026-11-23T20:47:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
-     "publisher": "wellandtribune.ca",
-     "url": "https://www.wellandtribune.ca/business/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/article_b950dfae-b9ef-5fdd-82c8-4967e4eb7ff7.html",
-     "time": "2026-11-23T20:47:00.000Z",
-     "timeBasis": "published",
-     "duplicateOf": 11
-    },
-    {
-     "n": 13,
-     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
-     "publisher": "winnipegfreepress.com",
-     "url": "https://www.winnipegfreepress.com/arts-and-life/life/sci-tech/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion",
-     "time": "2026-11-23T20:47:00.000Z",
-     "timeBasis": "published",
-     "duplicateOf": 11
-    },
-    {
-     "n": 14,
-     "title": "Should the US Preempt China With a Naval Blockade Before It's Too Late?",
-     "publisher": "theepochtimes.com",
-     "url": "https://www.theepochtimes.com/opinion/should-the-us-preempt-china-with-a-naval-blockade-before-its-too-late-6126437",
-     "time": "2026-11-23T20:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 15,
-     "title": "The Iran war drained U.S. missile stocks needed to deter China. The Pentagon has no plan to restock",
-     "publisher": "fortune.com",
-     "url": "https://fortune.com/2026/11/23/pentagon-munitions-shortage-gao-report-iran-war/",
-     "time": "2026-11-23T20:10:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     }
@@ -677,23 +656,23 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-24T01:42:27.247Z",
+   "generatedAt": "2026-11-24T04:25:53.162Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-21T01:42:27.247Z",
-    "to": "2026-11-24T01:42:27.247Z"
+    "from": "2026-11-21T04:25:53.162Z",
+    "to": "2026-11-24T04:25:53.162Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 53,
+   "reportsFound": 57,
    "overview": {
     "kind": "fact",
-    "text": "53 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 06:45 UTC to 2026-11-23 23:00 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 10, sanctions and trade 2.",
+    "text": "57 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 06:45 UTC to 2026-11-24 03:45 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 11, sanctions and trade 1.",
     "evidence": [
      1,
      2,
      3,
-     5,
+     4,
      6,
      7,
      8,
@@ -708,6 +687,26 @@
     {
      "kind": "reporting",
      "n": 1,
+     "headline": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+     "time": "2026-11-24T03:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Russian"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
      "headline": "NUCLEAR POLICY: Iranian Foreign Minister Says China And Russia Oppose Any Change In Tehran's Doctrine – The Yeshiva World",
      "publisher": "theyeshivaworld.com",
      "url": "https://www.theyeshivaworld.com/news/israel-news/2626319/nuclear-policy-iranian-foreign-minister-says-china-and-russia-oppose-any-change-in-tehrans-doctrine.html",
@@ -727,7 +726,7 @@
     },
     {
      "kind": "reporting",
-     "n": 2,
+     "n": 3,
      "headline": "Russia Losing Up to 35,000 Soldiers a Month in Ukraine War, US Envoy Says",
      "publisher": "bgnes.com",
      "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
@@ -747,7 +746,7 @@
     },
     {
      "kind": "reporting",
-     "n": 3,
+     "n": 4,
      "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
      "publisher": "moneycontrol.com",
      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
@@ -764,36 +763,16 @@
       "Diplomacy"
      ],
      "alsoReportedBy": [
-      4
+      5
      ]
     },
     {
      "kind": "reporting",
-     "n": 5,
+     "n": 6,
      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
      "publisher": "outlookindia.com",
      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
      "time": "2026-11-21T07:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "Russia"
-      ]
-     },
-     "topics": [
-      "Security",
-      "Diplomacy"
-     ],
-     "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 6,
-     "headline": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
-     "publisher": "freerepublic.com",
-     "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
-     "time": "2026-11-21T06:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -816,7 +795,7 @@
       1,
       2,
       3,
-      5,
+      4,
       6,
       7,
       8,
@@ -826,7 +805,7 @@
       12,
       13
      ],
-     "text": "12 of the 12 listed reports use security wording (nuclear, war, weapons, invasion) [1][2][3][5][6][7][8][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (nuclear, NATO, war, weapons) [1][2][3][4][6][7][8][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -835,24 +814,16 @@
       1,
       2,
       3,
-      5,
+      4,
       6,
-      8,
+      7,
       9,
       10,
       11,
+      12,
       13
      ],
-     "text": "10 of the 12 listed reports use diplomacy wording (foreign minister, envoy, summit, alliance) [1][2][3][5][6][8][9][10][11][13]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
-     "rule": "topic:sanctions-and-trade",
-     "kind": "analysis",
-     "evidence": [
-      7,
-      12
-     ],
-     "text": "2 of the 12 listed reports use sanctions and trade wording (sanctions, sanctioned) [7][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use diplomacy wording (security council, foreign minister, envoy, summit) [1][2][3][4][6][7][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -861,24 +832,34 @@
       1,
       2,
       3,
-      5,
-      6
+      4,
+      6,
+      7
      ],
-     "text": "5 listed reports with topic keywords also name China, the United States and Ukraine [1][2][3][5][6]. A headline that names two countries does not show how they are connected."
+     "text": "6 listed reports with topic keywords also name Ukraine, China and the United States [1][2][3][4][6][7]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      3,
-      4
+      4,
+      5
      ],
-     "text": "1 listed headline was carried by more than one outlet [3]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [4]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
     {
      "n": 1,
+     "title": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+     "time": "2026-11-24T03:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
      "title": "NUCLEAR POLICY: Iranian Foreign Minister Says China And Russia Oppose Any Change In Tehran's Doctrine – The Yeshiva World",
      "publisher": "theyeshivaworld.com",
      "url": "https://www.theyeshivaworld.com/news/israel-news/2626319/nuclear-policy-iranian-foreign-minister-says-china-and-russia-oppose-any-change-in-tehrans-doctrine.html",
@@ -887,7 +868,7 @@
      "via": "GDELT"
     },
     {
-     "n": 2,
+     "n": 3,
      "title": "Russia Losing Up to 35,000 Soldiers a Month in Ukraine War, US Envoy Says",
      "publisher": "bgnes.com",
      "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
@@ -896,7 +877,7 @@
      "via": "GDELT"
     },
     {
-     "n": 3,
+     "n": 4,
      "title": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
      "publisher": "moneycontrol.com",
      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
@@ -905,16 +886,16 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
      "publisher": "arynews.tv",
      "url": "https://arynews.tv/iran-allies-china-russia-oppose-change-nuclear-doctrine",
      "time": "2026-11-21T12:10:00.000Z",
      "timeBasis": "published",
-     "duplicateOf": 3
+     "duplicateOf": 4
     },
     {
-     "n": 5,
+     "n": 6,
      "title": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
      "publisher": "outlookindia.com",
      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
@@ -923,7 +904,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 7,
      "title": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
      "publisher": "freerepublic.com",
      "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
@@ -932,7 +913,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 8,
      "title": "EU targets Russian athletes and war veterans in new sanctions push",
      "publisher": "europesun.com",
      "url": "http://www.europesun.com/news/279451195/eu-targets-russian-athletes-and-war-veterans-in-new-sanctions-push",
@@ -941,7 +922,16 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 9,
+     "title": "NATO witnesses a surge of airspace violations by Russia as Moscow seeks to test alliance",
+     "publisher": "theconversation.com",
+     "url": "https://theconversation.com/nato-witnesses-a-surge-of-airspace-violations-by-russia-as-moscow-seeks-to-test-alliance-297361",
+     "time": "2026-11-23T22:52:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
      "title": "Tonse Alliance Leaders Accused of Treason Plot, Sending Recruits to Russia for Military Training",
      "publisher": "malawivoice.com",
      "url": "https://www.malawivoice.com/2026/11/23/tonse-alliance-leaders-accused-of-treason-plot-sending-recruits-to-russia-for-military-training/",
@@ -950,7 +940,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 11,
      "title": "Warsaw to summon Russian envoy over alleged missile incursion",
      "publisher": "news.az",
      "url": "https://news.az/news/warsaw-to-summon-russian-envoy-over-alleged-missile-incursion",
@@ -959,7 +949,7 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 12,
      "title": "Cyprus Expels Russian Diplomats Suspected of Espionage, Reports Say",
      "publisher": "themoscowtimes.com",
      "url": "https://www.themoscowtimes.com/2026/11/23/cyprus-expels-russian-diplomats-suspected-of-espionage-reports-say-a94348",
@@ -968,30 +958,12 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 13,
      "title": "Start of World War 3? NATO chief Rutte reaffirms the Western alliance's Article 5 commitment after Russian missile incursions into Poland",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/world/us/start-of-world-war-3-nato-chief-rutte-reaffirms-the-western-alliances-article-5-commitment-after-russian-missile-incursions-into-poland/articleshow/136097233.cms",
      "time": "2026-11-23T11:00:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Drone strike on sanctioned Russian ship brings war risk to Baltic shipping lanes",
-     "publisher": "insurancebusinessmag.com",
-     "url": "https://www.insurancebusinessmag.com/us/news/marine/drone-strike-on-sanctioned-russian-ship-brings-war-risk-to-baltic-shipping-lanes-598353.aspx",
-     "time": "2026-11-23T08:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "Cyprus expels Russian diplomats on suspicion of espionage",
-     "publisher": "politico.eu",
-     "url": "https://www.politico.eu/article/cyprus-expels-russian-diplomats-on-suspicion-of-espionage/",
-     "time": "2026-11-22T15:56:00.000Z",
-     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
@@ -1000,18 +972,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-24T01:42:27.247Z",
+   "generatedAt": "2026-11-24T04:25:53.162Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-21T01:42:27.247Z",
-    "to": "2026-11-24T01:42:27.247Z"
+    "from": "2026-11-21T04:25:53.162Z",
+    "to": "2026-11-24T04:25:53.162Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 47,
+   "reportsFound": 46,
    "overview": {
     "kind": "fact",
-    "text": "47 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:15 UTC to 2026-11-24 01:30 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 2.",
+    "text": "46 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 05:00 UTC to 2026-11-24 04:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 9, sanctions and trade 2.",
     "evidence": [
      1,
      2,
@@ -1031,6 +1003,26 @@
     {
      "kind": "reporting",
      "n": 1,
+     "headline": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+     "time": "2026-11-24T03:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Ukraine"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
      "headline": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
      "publisher": "rferl.org",
      "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
@@ -1050,7 +1042,7 @@
     },
     {
      "kind": "reporting",
-     "n": 2,
+     "n": 3,
      "headline": "Russia Losing Up to 35,000 Soldiers a Month in Ukraine War, US Envoy Says",
      "publisher": "bgnes.com",
      "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
@@ -1070,7 +1062,7 @@
     },
     {
      "kind": "reporting",
-     "n": 3,
+     "n": 4,
      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
      "publisher": "outlookindia.com",
      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
@@ -1090,31 +1082,11 @@
     },
     {
      "kind": "reporting",
-     "n": 4,
+     "n": 5,
      "headline": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
      "publisher": "freerepublic.com",
      "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
      "time": "2026-11-21T06:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "Ukraine"
-      ]
-     },
-     "topics": [
-      "Security",
-      "Diplomacy"
-     ],
-     "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 5,
-     "headline": "Secretary General: NATO countries lack consensus on Ukraine's membership in alliance",
-     "publisher": "en.apa.az",
-     "url": "https://en.apa.az/europe/secretary-general-nato-countries-lack-consensus-on-ukraines-membership-in-alliance-538023",
-     "time": "2026-11-23T14:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -1147,7 +1119,7 @@
       11,
       12
      ],
-     "text": "12 of the 12 listed reports use security wording (NATO, war, nuclear, weapons) [1][2][3][4][5][6][7][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (nuclear, NATO, war, weapons) [1][2][3][4][5][6][7][8][9][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1158,20 +1130,21 @@
       3,
       4,
       5,
+      6,
       7,
       9,
-      10
+      11
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (envoy, summit, alliance, ambassador) [1][2][3][4][5][7][9][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use diplomacy wording (security council, envoy, summit, G20) [1][2][3][4][5][6][7][9][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
-      6,
-      8
+      8,
+      10
      ],
-     "text": "2 of the 12 listed reports use sanctions and trade wording (sanctions, sanctioned) [6][8]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use sanctions and trade wording (sanctions, sanctioned) [8][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1181,15 +1154,24 @@
       2,
       3,
       4,
-      11,
+      5,
       12
      ],
-     "text": "6 listed reports with topic keywords also name the United States, Russia and China [1][2][3][4][11][12]. A headline that names two countries does not show how they are connected."
+     "text": "6 listed reports with topic keywords also name Russia, the United States and China [1][2][3][4][5][12]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
     {
      "n": 1,
+     "title": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+     "time": "2026-11-24T03:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
      "title": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
      "publisher": "rferl.org",
      "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
@@ -1198,7 +1180,7 @@
      "via": "GDELT"
     },
     {
-     "n": 2,
+     "n": 3,
      "title": "Russia Losing Up to 35,000 Soldiers a Month in Ukraine War, US Envoy Says",
      "publisher": "bgnes.com",
      "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
@@ -1207,7 +1189,7 @@
      "via": "GDELT"
     },
     {
-     "n": 3,
+     "n": 4,
      "title": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
      "publisher": "outlookindia.com",
      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
@@ -1216,7 +1198,7 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "With Putin in the room, Carney condemns Russia's illegal invasion of Ukraine: Speaking at APEC summit, Carney tells Putin what he thinks of Ukraine war",
      "publisher": "freerepublic.com",
      "url": "https://freerepublic.com/focus/f-chat/4403822/posts",
@@ -1225,7 +1207,16 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 6,
+     "title": "\"Betrayal of our troops, support of enemies\": Bipartisan lawmakers demand Trump revoke Putin's G20 invite over Ukraine war and Iran intel reports",
+     "publisher": "aninews.in",
+     "url": "https://aninews.in/news/world/us/betrayal-of-our-troops-support-of-enemies-bipartisan-lawmakers-demand-trump-revoke-putin8217s-g20-invite-over-ukraine-war-and-iran-intel-reports20261124083250/",
+     "time": "2026-11-24T04:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 7,
      "title": "Secretary General: NATO countries lack consensus on Ukraine's membership in alliance",
      "publisher": "en.apa.az",
      "url": "https://en.apa.az/europe/secretary-general-nato-countries-lack-consensus-on-ukraines-membership-in-alliance-538023",
@@ -1234,7 +1225,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 8,
      "title": "Sanctions, summits and strikes: The war in Ukraine shows no sign of slowing",
      "publisher": "euronews.com",
      "url": "https://www.euronews.com/2026/11/23/sanctions-summits-and-strikes-the-war-in-ukraine-shows-no-sign-of-slowing",
@@ -1243,7 +1234,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 9,
      "title": "Former ambassador on the effects of the Ukraine war spilling into other countries",
      "publisher": "kgou.org",
      "url": "https://www.kgou.org/world/2026-11-23/former-ambassador-on-the-effects-of-the-ukraine-war-spilling-into-other-countries",
@@ -1252,7 +1243,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 10,
      "title": "EU Declares WAR ON FREE SPEECH! Irish Journalist Chay Bowes SANCTIONED for Reporting on Ukraine!",
      "publisher": "investmentwatchblog.com",
      "url": "https://www.investmentwatchblog.com/eu-declares-war-on-free-speech-irish-journalist-chay-bowes-sanctioned-for-reporting-on-ukraine/",
@@ -1261,7 +1252,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 11,
      "title": "Ukraine could get NATO-style security, Putin could keep seized land: What Trump's peace plan may offer",
      "publisher": "livemint.com",
      "url": "https://www.livemint.com/news/world/ukraine-could-get-nato-style-security-putin-could-keep-seized-land-what-trump-s-peace-plan-may-offer-11795232093104.html",
@@ -1270,29 +1261,11 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
-     "title": "Trump tells Europe Putin ready to end Ukraine war and willing for peace deal",
-     "publisher": "dailyexcelsior.com",
-     "url": "https://www.dailyexcelsior.com/trump-tells-europe-putin-ready-to-end-ukraine-war-and-willing-for-peace-deal/",
-     "time": "2026-11-21T03:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Ukraine war briefing: Kyiv's strike on Russian ships in Benghazi condemned by Libya's UN-backed government | Ukraine",
-     "publisher": "theguardian.com",
-     "url": "https://www.theguardian.com/world/2026/nov/24/ukraine-war-briefing-kyiv-strike-on-russian-ships-in-benghazi-condemned-by-un-backed-libya-government",
-     "time": "2026-11-24T01:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
      "n": 12,
-     "title": "Ukraine sinks Russian warship in Libya as conflict spreads beyond Europe",
-     "publisher": "japantoday.com",
-     "url": "https://japantoday.com/category/world/ukraine-sinks-russian-warship-in-libya-as-conflict-spreads-beyond-europe2",
-     "time": "2026-11-24T00:30:00.000Z",
+     "title": "Libyan prime minister warns military groups against dragging Libya into Russia-Ukraine war",
+     "publisher": "aa.com.tr",
+     "url": "https://aa.com.tr/en/russia-ukraine-war/libyan-prime-minister-warns-military-groups-against-dragging-libya-into-russia-ukraine-war/4135211",
+     "time": "2026-11-24T04:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -1302,24 +1275,24 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-24T01:42:27.247Z",
+   "generatedAt": "2026-11-24T04:25:53.162Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-21T01:42:27.247Z",
-    "to": "2026-11-24T01:42:27.247Z"
+    "from": "2026-11-21T04:25:53.162Z",
+    "to": "2026-11-24T04:25:53.162Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:42 UTC to 2026-11-23 23:42 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): sanctions and trade 5, diplomacy 4, security 3.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 13:15 UTC to 2026-11-24 02:00 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): sanctions and trade 6, diplomacy 4, security 2.",
     "evidence": [
      1,
      2,
      3,
      4,
-     7,
+     5,
      8,
      9,
      10,
@@ -1333,6 +1306,25 @@
     {
      "kind": "reporting",
      "n": 1,
+     "headline": "Taiwan Trade Deal Could Help Canada Limit China's Economic Leverage – China Money Network",
+     "publisher": "chinamoneynetwork.com",
+     "url": "https://www.chinamoneynetwork.com/2026/11/24/taiwan-trade-deal-could-help-canada-limit-chinas-economic-leverage",
+     "time": "2026-11-24T02:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [
+      "Sanctions and trade"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
      "headline": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
@@ -1351,7 +1343,7 @@
     },
     {
      "kind": "reporting",
-     "n": 2,
+     "n": 3,
      "headline": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
      "publisher": "globalnews.ca",
      "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
@@ -1370,7 +1362,7 @@
     },
     {
      "kind": "reporting",
-     "n": 3,
+     "n": 4,
      "headline": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
      "publisher": "atlanticcouncil.org",
      "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
@@ -1389,7 +1381,7 @@
     },
     {
      "kind": "reporting",
-     "n": 4,
+     "n": 5,
      "headline": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
      "publisher": "medicinehatnews.com",
      "url": "https://medicinehatnews.com/news/national-news/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/",
@@ -1405,28 +1397,9 @@
       "Diplomacy"
      ],
      "alsoReportedBy": [
-      5,
-      6
+      6,
+      7
      ]
-    },
-    {
-     "kind": "reporting",
-     "n": 7,
-     "headline": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
-     "publisher": "indonesiatribune.com",
-     "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
-     "time": "2026-11-21T13:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "Taiwan"
-      ]
-     },
-     "topics": [
-      "Diplomacy"
-     ],
-     "alsoReportedBy": []
     }
    ],
    "why": [
@@ -1434,34 +1407,34 @@
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
+      1,
       9,
       10,
       11,
       13,
       14
      ],
-     "text": "5 of the 12 listed reports use sanctions and trade wording (semiconductor, supply chain, semiconductors) [9][10][11][13][14]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use sanctions and trade wording (trade deal, semiconductor, supply chain, semiconductors) [1][9][10][11][13][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
      "kind": "analysis",
      "evidence": [
-      2,
-      4,
-      7,
+      3,
+      5,
+      8,
       12
      ],
-     "text": "4 of the 12 listed reports use diplomacy wording (envoy, foreign minister) [2][4][7][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "4 of the 12 listed reports use diplomacy wording (envoy, foreign minister) [3][5][8][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
      "kind": "analysis",
      "evidence": [
-      1,
-      3,
-      8
+      2,
+      4
      ],
-     "text": "3 of the 12 listed reports use security wording (fighter jets, war, military) [1][3][8]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use security wording (fighter jets, war) [2][4]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1471,25 +1444,34 @@
       2,
       3,
       4,
-      7,
+      5,
       8
      ],
-     "text": "6 listed reports with topic keywords also name China and the United States [1][2][3][4][7][8]. A headline that names two countries does not show how they are connected."
+     "text": "6 listed reports with topic keywords also name China and the United States [1][2][3][4][5][8]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      4,
       5,
-      6
+      6,
+      7
      ],
-     "text": "1 listed headline was carried by more than one outlet [4]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [5]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
     {
      "n": 1,
+     "title": "Taiwan Trade Deal Could Help Canada Limit China's Economic Leverage – China Money Network",
+     "publisher": "chinamoneynetwork.com",
+     "url": "https://www.chinamoneynetwork.com/2026/11/24/taiwan-trade-deal-could-help-canada-limit-chinas-economic-leverage",
+     "time": "2026-11-24T02:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
      "title": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
@@ -1498,7 +1480,7 @@
      "via": "GDELT"
     },
     {
-     "n": 2,
+     "n": 3,
      "title": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
      "publisher": "globalnews.ca",
      "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
@@ -1507,7 +1489,7 @@
      "via": "GDELT"
     },
     {
-     "n": 3,
+     "n": 4,
      "title": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
      "publisher": "atlanticcouncil.org",
      "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
@@ -1516,7 +1498,7 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
      "publisher": "medicinehatnews.com",
      "url": "https://medicinehatnews.com/news/national-news/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/",
@@ -1525,39 +1507,30 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 6,
      "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
      "publisher": "wellandtribune.ca",
      "url": "https://www.wellandtribune.ca/business/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/article_b950dfae-b9ef-5fdd-82c8-4967e4eb7ff7.html",
      "time": "2026-11-23T20:47:00.000Z",
      "timeBasis": "published",
-     "duplicateOf": 4
+     "duplicateOf": 5
     },
     {
-     "n": 6,
+     "n": 7,
      "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
      "publisher": "winnipegfreepress.com",
      "url": "https://www.winnipegfreepress.com/arts-and-life/life/sci-tech/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion",
      "time": "2026-11-23T20:47:00.000Z",
      "timeBasis": "published",
-     "duplicateOf": 4
+     "duplicateOf": 5
     },
     {
-     "n": 7,
+     "n": 8,
      "title": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
      "publisher": "indonesiatribune.com",
      "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
      "time": "2026-11-21T13:15:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 8,
-     "title": "U.S.-Taiwan military cooperation at unprecedented level: Congressman",
-     "publisher": "focustaiwan.tw",
-     "url": "https://focustaiwan.tw/politics/202611210004",
-     "time": "2026-11-21T03:42:00.000Z",
-     "timeBasis": "published",
      "via": "GDELT"
     },
     {
