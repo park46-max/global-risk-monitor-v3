@@ -3,186 +3,186 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-24T13:33:07.477Z",
-  "lastSuccessAt": "2026-11-24T07:43:32.397Z",
+  "checkedAt": "2026-11-24T19:16:41.170Z",
+  "lastSuccessAt": "2026-11-24T19:19:09.035Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-23T07:54:11.810Z",
-      "checkedAt": "2026-11-24T13:35:59.396Z",
+      "error": null,
+      "fetchedAt": "2026-11-24T19:19:09.035Z",
+      "checkedAt": "2026-11-24T19:19:09.035Z",
       "articles": [
         {
-          "title": "China urges US to revoke curbs on Chinese telecom firms",
-          "url": "https://asianews.network/china-urges-us-to-revoke-curbs-on-chinese-telecom-firms/",
-          "domain": "asianews.network",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "Pediatrician shares recommendations as communities prepare for lead azide detonation",
-          "url": "https://www.kwqc.com:443/2026/11/21/pediatrician-shares-recommendations-communities-prepare-lead-azide-detonation/",
-          "domain": "kwqc.com",
-          "seendate": "20261123T033000Z",
+          "title": "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO",
+          "url": "https://mymotherlode.com/news/national/11335708/asian-stocks-rally-after-wall-street-rebound-as-jensen-huang-returns-as-nvidias-ceo.html",
+          "domain": "mymotherlode.com",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "How Kim Jong Un gets away with building nukes and ghosting Trump",
-          "url": "https://www.livemint.com/global/how-kim-jong-un-gets-away-with-building-nukes-and-ghosting-trump-11795397191350.html",
-          "domain": "livemint.com",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "US President Trump - North Korean leader Kim summit still possible despite APEC setback , but major hurdles persist : analysts",
-          "url": "https://asianews.network/us-president-trump-north-korean-leader-kim-summit-still-possible-despite-apec-setback-but-major-hurdles-persist-analysts/",
-          "domain": "asianews.network",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "Dylan Larkin trade grades in Red Wings - Canadiens blockbuster",
-          "url": "https://www.sbnation.com/nhl/1137096/dylan-larkin-trade-grades-red-wings-canadiens-nhl",
-          "domain": "sbnation.com",
-          "seendate": "20261123T033000Z",
+          "title": "United States picked by FIFA to co - host 2031 Women World Cup",
+          "url": "https://www.coloradohometownweekly.com/2026/11/23/usa-2031-womens-world-cup-hosts/",
+          "domain": "coloradohometownweekly.com",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Post Office issues warning over sending Christmas parcels",
-          "url": "https://www.cravenherald.co.uk/news/national/uk-today/26751919.post-office-issues-warning-sending-christmas-parcels/",
-          "domain": "cravenherald.co.uk",
-          "seendate": "20261123T033000Z",
+          "title": "Trump to offer Thanksgiving pardons for turkeys Freedom and Feather at the White House",
+          "url": "https://www.wfmz.com/news/trump-to-offer-thanksgiving-pardons-for-turkeys-freedom-and-feather-at-the-white-house/article_f8204289-9e71-5890-92f2-82344824647c.html",
+          "domain": "wfmz.com",
+          "seendate": "20261124T074500Z",
           "language": "English",
-          "sourcecountry": "United Kingdom"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Terrible : British PM Burnham EU deal slammed",
-          "url": "https://www.thecourier.com.au/story/9396445/terrible-british-pm-burnhams-eu-deal-slammed/",
-          "domain": "thecourier.com.au",
-          "seendate": "20261123T033000Z",
+          "title": "SHSAA continues supporting student development",
+          "url": "https://www.salemnews.net/news/local-news/2026/11/shsaa-continues-supporting-student-development/",
+          "domain": "salemnews.net",
+          "seendate": "20261124T074500Z",
           "language": "English",
-          "sourcecountry": "Australia"
+          "sourcecountry": "United States"
         },
         {
-          "title": "The Lawyer Guide Chooses Singapore as Its Next Test of Legal Discovery",
-          "url": "https://www.cantechletter.com/newswires/the-lawyer-guide-chooses-singapore-as-its-next-test-of-legal-discovery/",
-          "domain": "cantechletter.com",
-          "seendate": "20261123T033000Z",
+          "title": "Nvidia comeback bet : Why Jensen Huang return calmed markets , for now",
+          "url": "https://www.stcatharinesstandard.ca/business/nvidia-s-comeback-bet-why-jensen-huang-s-return-calmed-markets-for-now/article_ce5a14e5-645b-5fd6-a212-35bbe422cfd9.html",
+          "domain": "stcatharinesstandard.ca",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "Canada"
         },
         {
-          "title": "Treasury Finalizes 401 ( k ) Auto - Enrollment Rules for Plan Years After 2027",
-          "url": "http://www.mexicostar.com/news/279449392/treasury-finalizes-401k-auto-enrollment-rules-for-plan-years-after-2027",
-          "domain": "mexicostar.com",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "Mexico"
-        },
-        {
-          "title": "300 - plus gather at UNLV for Hope in Action to spotlight youth mental wellness",
-          "url": "https://news3lv.com/news/local/300-plus-gather-at-unlv-for-hope-in-action-to-spotlight-youth-mental-wellness",
-          "domain": "news3lv.com",
-          "seendate": "20261123T033000Z",
+          "title": "newsroomamerica . com",
+          "url": "https://newsroomamerica.com/?before=124274",
+          "domain": "newsroomamerica.com",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "The fault lines threatening democracy",
-          "url": "https://www.livemint.com/opinion/columns/the-fault-lines-threatening-democracy-11795359705968.html",
-          "domain": "livemint.com",
-          "seendate": "20261123T033000Z",
+          "title": "Ontario Minister Victor Fedeli flags untapped business potential in India , urges companies to tap infrastructure opportunities",
+          "url": "https://news.webindia123.com/news/Articles/Business/20261124/4523808.html",
+          "domain": "news.webindia123.com",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Single - digit inflation : Nigeria test after 14 . 06 % October",
-          "url": "https://punchng.com/single-digit-test-of-dropping-inflation/",
-          "domain": "punchng.com",
-          "seendate": "20261123T033000Z",
+          "title": "Apple HomePod mini 2 Review : A Closer Look at Its Features , Specifications , and Biggest Letdowns",
+          "url": "https://www.itechpost.com/articles/237872/20261124/apple-homepod-mini-2-review-closer-look-its-features-specifications-biggest-letdowns.htm",
+          "domain": "itechpost.com",
+          "seendate": "20261124T074500Z",
           "language": "English",
-          "sourcecountry": "Nigeria"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Is the AI Stock Market Boom Coming to an End ?",
-          "url": "https://newsonjapan.com/article/151486.php",
+          "title": "Australia warned against abandoning US ties under Trump",
+          "url": "https://www.wellingtontimes.com.au/story/9396878/australia-warned-against-abandoning-us-ties-under-trump/",
+          "domain": "wellingtontimes.com.au",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Neuroscientist is held by ICE after detention at Washington airport",
+          "url": "https://www.coloradohometownweekly.com/2026/11/23/ice-detains-princeton-neuroscientist/",
+          "domain": "coloradohometownweekly.com",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "FIFA picks U . S . to co - host 2031 Women World Cup and united kingdom for 2035 edition",
+          "url": "https://www.texarkanagazette.com/news/2026/nov/23/fifa-picks-us-to-co-host-2031-womens-world-cup/",
+          "domain": "texarkanagazette.com",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "How Big Meat transformed the slaughterhouse",
+          "url": "https://marshfieldmail.com/syndicated/how-big-meat-transformed-the-slaughterhouse",
+          "domain": "marshfieldmail.com",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Lab Thread links AI to lab data - SelectScience news",
+          "url": "https://www.selectscience.net/article/lab-thread-launches-new-ai-tools-and-strengthens-platform-with-universal-ai-assistant-compatibility",
+          "domain": "selectscience.net",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Small US trucking firms scramble to survive mounting diesel costs",
+          "url": "http://www.thedailytimes.com/news/small-us-trucking-firms-scramble-to-survive-mounting-diesel-costs/article_1ac49d6e-571a-59fc-a0b7-caa4ef630a84.html",
+          "domain": "thedailytimes.com",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Nvidia comeback bet : Why Jensen Huang return calmed markets , for now | Ap - business",
+          "url": "https://www.wfmz.com/business/nvidia-s-comeback-bet-why-jensen-huang-s-return-calmed-markets-for-now/article_f5a98898-aa5c-56e3-8fa0-ce529a5247b8.html",
+          "domain": "wfmz.com",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Japan Makes Investor Information AI - Friendly",
+          "url": "https://newsonjapan.com/article/151512.php",
           "domain": "newsonjapan.com",
-          "seendate": "20261123T033000Z",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "Japan"
         },
         {
-          "title": "US Army plans to invoke emergency provisions to detonate bomb - making chemicals in Iowa",
-          "url": "https://www.wyff4.com/article/des-moines-area-army-emergency-bomb-chemical-blast/74502722",
-          "domain": "wyff4.com",
-          "seendate": "20261123T033000Z",
+          "title": "AI speeds clinical trial screening - SelectScience news",
+          "url": "https://www.selectscience.net/article/fujitsu-japan-verifies-utility-of-ai-and-us-based-paradigm-platform-to-streamline-clinical-trial",
+          "domain": "selectscience.net",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "US senator - elect El - Sayed opposes funding Pakistan military",
-          "url": "https://ianslive.in/us-senator-elect-el-sayed-opposes-funding-pakistans-military--20261123074503",
-          "domain": "ianslive.in",
-          "seendate": "20261123T033000Z",
+          "title": "Woman in pain on night out went home for bath - and had unexpected baby",
+          "url": "https://www.dailystar.co.uk/news/latest-news/woman-pain-night-out-went-37908462",
+          "domain": "dailystar.co.uk",
+          "seendate": "20261124T074500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Marathi thriller Gondhal and Angh enter 2027 International Feature Film eligibility list",
+          "url": "https://www.hindustantimes.com/entertainment/bollywood/marathi-thriller-gondhal-and-angh-enter-2027-international-feature-film-eligibility-list-101795504308957.html",
+          "domain": "hindustantimes.com",
+          "seendate": "20261124T074500Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Thanksgiving turkeys arrive at Willard Hotel ahead of White House pardon",
-          "url": "https://upnorthlive.com/news/nation-world/thanksgiving-turkeys-arrive-willard-hotel-pardon-ceremony-president-donald-trump-white-house-south-lawn",
-          "domain": "upnorthlive.com",
-          "seendate": "20261123T033000Z",
+          "title": "UBA Calls For Intelligence Sharing Among Banks , Telcos , Regulators To Curb Digital Fraud",
+          "url": "https://leadership.ng/uba-calls-for-intelligence-sharing-among-banks-telcos-regulators-to-curb-digital-fraud/",
+          "domain": "leadership.ng",
+          "seendate": "20261124T074500Z",
           "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Travelers frustrated after 700+ Delta flights delayed out of Atlanta",
-          "url": "https://www.wsbtv.com/news/local/travelers-frustrated-after-700-delta-flights-delayed-out-atlanta/7LX3PMVXRFFRFOANG6LX6ASCPU/",
-          "domain": "wsbtv.com",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "In shift , U . S . Space Force prioritizes cislunar space as potential warfighting domain – World Tribune : U . S . Politics and Culture , Geostrategy , China , North Korea , Corporate Watch , Media Watch",
-          "url": "https://worldtribune.com/in-shift-u-s-space-force-prioritizes-cislunar-space-as-potential-warfighting-domain/",
-          "domain": "worldtribune.com",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Mexican forces arrest suspected cartel leader El Chapo Isidro",
-          "url": "http://www.argentinastar.com/news/279447455/mexican-forces-arrest-suspected-cartel-leader-el-chapo-isidro",
-          "domain": "argentinastar.com",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "Argentina"
-        },
-        {
-          "title": "Luxury development planned on land some Albanians say is theirs , not Jared Kushner",
-          "url": "https://www.wbaa.org/npr-news/2026-11-22/luxury-development-planned-on-land-some-albanians-say-is-theirs-not-jared-kushners",
-          "domain": "wbaa.org",
-          "seendate": "20261123T033000Z",
-          "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Nigeria"
         }
       ]
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:42:12.515Z",
-      "checkedAt": "2026-11-24T13:35:59.396Z",
+      "checkedAt": "2026-11-24T19:22:08.628Z",
       "articles": [
         {
           "title": "Massive win for Australia as Solomon Islands scraps China security deal",
@@ -352,7 +352,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-22T07:29:44.279Z",
-      "checkedAt": "2026-11-24T13:34:33.795Z",
+      "checkedAt": "2026-11-24T19:17:50.190Z",
       "articles": [
         {
           "title": "In Ukraine , the fight to keep winter outside begins with a broken window – Winnipeg Free Press",
@@ -519,10 +519,10 @@
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:40:47.476Z",
-      "checkedAt": "2026-11-24T13:35:59.396Z",
+      "checkedAt": "2026-11-24T19:20:38.835Z",
       "articles": [
         {
           "title": "Sen . John Kennedy says he may run for president if he gets fed up",
@@ -692,7 +692,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-24T13:35:59.396Z",
+      "checkedAt": "2026-11-24T19:22:08.629Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
