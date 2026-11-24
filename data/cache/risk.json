@@ -3,13 +3,13 @@
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
  "methodologyVersion": 1,
- "generatedAt": "2026-11-23T06:47:15.887Z",
- "lastSuccessAt": "2026-11-23T06:47:15.887Z",
- "checkedAt": "2026-11-23T06:47:15.887Z",
+ "generatedAt": "2026-11-24T06:35:52.471Z",
+ "lastSuccessAt": "2026-11-24T06:35:52.471Z",
+ "checkedAt": "2026-11-24T06:35:52.471Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-23T06:47:15.834Z",
+   "checkedAt": "2026-11-24T06:35:52.421Z",
    "lastSuccessAt": "2026-11-21T03:15:43.287Z"
   },
   "indicators": {
@@ -18,7 +18,7 @@
    "lastSuccessAt": "2026-11-23T05:42:52.179Z"
   },
   "briefs": {
-   "generatedAt": "2026-11-23T04:35:13.652Z"
+   "generatedAt": "2026-11-24T04:25:53.162Z"
   }
  },
  "countries": {
@@ -128,7 +128,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    },
    "economic": {
     "category": "economic",
@@ -253,7 +253,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    }
   },
   "CHN": {
@@ -293,6 +293,13 @@
     ],
     "context": [
      {
+      "headline": "NUCLEAR POLICY: Iranian Foreign Minister Says China And Russia Oppose Any Change In Tehran's Doctrine – The Yeshiva World",
+      "publisher": "theyeshivaworld.com",
+      "url": "https://www.theyeshivaworld.com/news/israel-news/2626319/nuclear-policy-iranian-foreign-minister-says-china-and-russia-oppose-any-change-in-tehrans-doctrine.html",
+      "time": "2026-11-23T08:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
       "publisher": "moneycontrol.com",
       "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
@@ -305,16 +312,9 @@
       "url": "https://www.naturalnews.com/2026-11-21-kenya-picks-us-group-mrima-hill-rare-earths.html",
       "time": "2026-11-21T13:00:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
-      "publisher": "outlookindia.com",
-      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
-      "time": "2026-11-21T07:00:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    },
    "economic": {
     "category": "economic",
@@ -418,6 +418,13 @@
     "insufficientReason": "method",
     "context": [
      {
+      "headline": "NUCLEAR POLICY: Iranian Foreign Minister Says China And Russia Oppose Any Change In Tehran's Doctrine – The Yeshiva World",
+      "publisher": "theyeshivaworld.com",
+      "url": "https://www.theyeshivaworld.com/news/israel-news/2626319/nuclear-policy-iranian-foreign-minister-says-china-and-russia-oppose-any-change-in-tehrans-doctrine.html",
+      "time": "2026-11-23T08:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
       "publisher": "moneycontrol.com",
       "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
@@ -430,16 +437,9 @@
       "url": "https://www.naturalnews.com/2026-11-21-kenya-picks-us-group-mrima-hill-rare-earths.html",
       "time": "2026-11-21T13:00:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
-      "publisher": "outlookindia.com",
-      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
-      "time": "2026-11-21T07:00:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    }
   },
   "RUS": {
@@ -511,28 +511,28 @@
     ],
     "context": [
      {
+      "headline": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+      "publisher": "europesun.com",
+      "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+      "time": "2026-11-24T03:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "NUCLEAR POLICY: Iranian Foreign Minister Says China And Russia Oppose Any Change In Tehran's Doctrine – The Yeshiva World",
+      "publisher": "theyeshivaworld.com",
+      "url": "https://www.theyeshivaworld.com/news/israel-news/2626319/nuclear-policy-iranian-foreign-minister-says-china-and-russia-oppose-any-change-in-tehrans-doctrine.html",
+      "time": "2026-11-23T08:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "Russia Losing Up to 35,000 Soldiers a Month in Ukraine War, US Envoy Says",
       "publisher": "bgnes.com",
       "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
       "time": "2026-11-22T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
-      "publisher": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
-      "time": "2026-11-21T15:30:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
-      "publisher": "outlookindia.com",
-      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
-      "time": "2026-11-21T07:00:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    },
    "economic": {
     "category": "economic",
@@ -637,28 +637,28 @@
     "insufficientReason": "method",
     "context": [
      {
+      "headline": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+      "publisher": "europesun.com",
+      "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+      "time": "2026-11-24T03:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "NUCLEAR POLICY: Iranian Foreign Minister Says China And Russia Oppose Any Change In Tehran's Doctrine – The Yeshiva World",
+      "publisher": "theyeshivaworld.com",
+      "url": "https://www.theyeshivaworld.com/news/israel-news/2626319/nuclear-policy-iranian-foreign-minister-says-china-and-russia-oppose-any-change-in-tehrans-doctrine.html",
+      "time": "2026-11-23T08:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "Russia Losing Up to 35,000 Soldiers a Month in Ukraine War, US Envoy Says",
       "publisher": "bgnes.com",
       "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
       "time": "2026-11-22T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "China, Russia oppose change in Iran's nuclear doctrine, says Foreign Minister Abbas Araghchi",
-      "publisher": "moneycontrol.com",
-      "url": "https://www.moneycontrol.com/world/china-russia-oppose-change-in-iran-s-nuclear-doctrine-says-foreign-minister-abbas-araghchi-article-14086280.html",
-      "time": "2026-11-21T15:30:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
-      "publisher": "outlookindia.com",
-      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
-      "time": "2026-11-21T07:00:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    }
   },
   "UKR": {
@@ -698,6 +698,13 @@
     ],
     "context": [
      {
+      "headline": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+      "publisher": "europesun.com",
+      "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+      "time": "2026-11-24T03:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
       "publisher": "rferl.org",
       "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
@@ -710,16 +717,9 @@
       "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
       "time": "2026-11-22T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
-      "publisher": "outlookindia.com",
-      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
-      "time": "2026-11-21T07:00:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    },
    "economic": {
     "category": "economic",
@@ -804,6 +804,13 @@
     "insufficientReason": "method",
     "context": [
      {
+      "headline": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
+      "publisher": "europesun.com",
+      "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
+      "time": "2026-11-24T03:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
       "publisher": "rferl.org",
       "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
@@ -816,16 +823,9 @@
       "url": "http://www.bgnes.com/conflicts/russia-losing-up-to-35-000-soldiers-a-month-in-ukraine-war-us-envoy-says",
       "time": "2026-11-22T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "Trump-Xi-Putin Summit 2026: India Reaction, Modi Government, US-China-Russia Meeting, Nuclear Weapons And Ukraine War",
-      "publisher": "outlookindia.com",
-      "url": "https://www.outlookindia.com/international/trump-xi-putin-summit-2026-india-reaction-modi-government-us-china-russia-meeting-nuclear-weapons-ukraine-war-iran-conflict-apec",
-      "time": "2026-11-21T07:00:00.000Z",
-      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    }
   },
   "TWN": {
@@ -882,21 +882,21 @@
     ],
     "context": [
      {
-      "headline": "U.S.-Taiwan military cooperation at unprecedented level: Congressman",
-      "publisher": "focustaiwan.tw",
-      "url": "https://focustaiwan.tw/politics/202611210004",
-      "time": "2026-11-21T03:42:00.000Z",
+      "headline": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
+      "publisher": "ibtimes.com",
+      "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
+      "time": "2026-11-23T23:42:00.000Z",
       "timeBasis": "published"
      },
      {
-      "headline": "Taiwan banks deploy AI to prevent cyberattacks",
-      "publisher": "taipeitimes.com",
-      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/23/2003868206",
-      "time": "2026-11-22T20:45:00.000Z",
-      "timeBasis": "first seen by GDELT"
+      "headline": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
+      "publisher": "atlanticcouncil.org",
+      "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
+      "time": "2026-11-23T21:35:00.000Z",
+      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    },
    "economic": {
     "category": "economic",
@@ -935,28 +935,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
-      "publisher": "indonesiatribune.com",
-      "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
-      "time": "2026-11-21T13:15:00.000Z",
+      "headline": "Taiwan Trade Deal Could Help Canada Limit China's Economic Leverage – China Money Network",
+      "publisher": "chinamoneynetwork.com",
+      "url": "https://www.chinamoneynetwork.com/2026/11/24/taiwan-trade-deal-could-help-canada-limit-chinas-economic-leverage",
+      "time": "2026-11-24T02:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Historic China-Russia-US summit delivers a heavy blow to 'Taiwan independence' forces",
-      "publisher": "chinamil.com.cn",
-      "url": "http://eng.chinamil.com.cn/2025xb/O_251451/16501068.html",
-      "time": "2026-11-20T07:45:00.000Z",
+      "headline": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
+      "publisher": "globalnews.ca",
+      "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
+      "time": "2026-11-23T23:30:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Taiwan startup investment contracts as AI, semiconductors attract capital",
-      "publisher": "digitimes.com",
-      "url": "https://www.digitimes.com/news/a20261120PD246/investment-taiwan-startup-venture-capital-semiconductors.html",
-      "time": "2026-11-23T02:00:00.000Z",
-      "timeBasis": "first seen by GDELT"
+      "headline": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+      "publisher": "medicinehatnews.com",
+      "url": "https://medicinehatnews.com/news/national-news/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/",
+      "time": "2026-11-23T20:47:00.000Z",
+      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-23T04:35:13.652Z"
+    "contextAsOf": "2026-11-24T04:25:53.162Z"
    }
   }
  }
