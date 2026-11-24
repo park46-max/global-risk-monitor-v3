@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-23T22:14:05.558Z",
- "lastSuccessAt": "2026-11-23T22:14:05.558Z",
- "checkedAt": "2026-11-23T22:14:05.558Z",
+ "generatedAt": "2026-11-24T01:42:27.247Z",
+ "lastSuccessAt": "2026-11-24T01:42:27.247Z",
+ "checkedAt": "2026-11-24T01:42:27.247Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
    "items": 166,
-   "lastSuccessAt": "2026-11-23T22:13:47.011Z",
-   "checkedAt": "2026-11-23T22:13:47.011Z",
+   "lastSuccessAt": "2026-11-24T01:42:04.757Z",
+   "checkedAt": "2026-11-24T01:42:04.757Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -27,16 +27,16 @@
   "noTime": 0,
   "outsideWindow": 0,
   "noCountry": 0,
-  "routineNotices": 20,
+  "routineNotices": 21,
   "grouped": 0
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-23T22:14:05.558Z",
+   "generatedAt": "2026-11-24T01:42:27.247Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T22:14:05.558Z",
-    "to": "2026-11-23T22:14:05.558Z"
+    "from": "2026-11-21T01:42:27.247Z",
+    "to": "2026-11-24T01:42:27.247Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
@@ -334,18 +334,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-23T22:14:05.558Z",
+   "generatedAt": "2026-11-24T01:42:27.247Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T22:14:05.558Z",
-    "to": "2026-11-23T22:14:05.558Z"
+    "from": "2026-11-21T01:42:27.247Z",
+    "to": "2026-11-24T01:42:27.247Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 42,
+   "reportsFound": 41,
    "overview": {
     "kind": "fact",
-    "text": "42 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 21:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 11, diplomacy 4, sanctions and trade 2.",
+    "text": "41 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 07:00 UTC to 2026-11-23 23:42 UTC and come from 15 outlets. Reports with topic keywords (a report can have several): security 10, diplomacy 5, sanctions and trade 2.",
     "evidence": [
      1,
      2,
@@ -357,8 +357,8 @@
      9,
      10,
      11,
-     12,
-     13
+     14,
+     15
     ]
    },
    "developments": [
@@ -478,11 +478,10 @@
       7,
       9,
       10,
-      11,
-      12,
-      13
+      14,
+      15
      ],
-     "text": "11 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][7][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (nuclear, war, weapons, truce) [1][2][4][5][6][7][9][10][14][15]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -491,9 +490,10 @@
       1,
       2,
       5,
-      8
+      8,
+      11
      ],
-     "text": "4 of the 12 listed reports use diplomacy wording (foreign minister, summit, envoy) [1][2][5][8]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use diplomacy wording (foreign minister, summit, envoy) [1][2][5][8][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -517,19 +517,22 @@
       9,
       10,
       11,
-      12,
-      13
+      14,
+      15
      ],
-     "text": "11 listed reports with topic keywords also name Russia, the United States, Ukraine and Taiwan [1][2][4][5][7][8][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
+     "text": "11 listed reports with topic keywords also name Russia, the United States, Ukraine and Taiwan [1][2][4][5][7][8][9][10][11][14][15]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
       2,
-      3
+      3,
+      11,
+      12,
+      13
      ],
-     "text": "1 listed headline was carried by more than one outlet [2]. The same headline appearing in several places is not independent verification."
+     "text": "2 listed headlines were carried by more than one outlet [2][11]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -589,6 +592,33 @@
     },
     {
      "n": 7,
+     "title": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
+     "publisher": "ibtimes.com",
+     "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
+     "time": "2026-11-23T23:42:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
+     "title": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
+     "publisher": "globalnews.ca",
+     "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
+     "time": "2026-11-23T23:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 9,
+     "title": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
+     "publisher": "atlanticcouncil.org",
+     "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
+     "time": "2026-11-23T21:35:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 10,
      "title": "Chinese Tech Espionage and Retaliation Against U.S. Investor",
      "publisher": "natlawreview.com",
      "url": "https://natlawreview.com/article/chinese-american-hero-whose-name-should-be-trump-administrations-lips",
@@ -597,16 +627,34 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
-     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion – Winnipeg Free Press",
-     "publisher": "winnipegfreepress.com",
-     "url": "https://www.winnipegfreepress.com/arts-and-life/life/sci-tech/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion",
+     "n": 11,
+     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+     "publisher": "medicinehatnews.com",
+     "url": "https://medicinehatnews.com/news/national-news/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/",
      "time": "2026-11-23T20:47:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 12,
+     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+     "publisher": "wellandtribune.ca",
+     "url": "https://www.wellandtribune.ca/business/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/article_b950dfae-b9ef-5fdd-82c8-4967e4eb7ff7.html",
+     "time": "2026-11-23T20:47:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 11
+    },
+    {
+     "n": 13,
+     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+     "publisher": "winnipegfreepress.com",
+     "url": "https://www.winnipegfreepress.com/arts-and-life/life/sci-tech/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion",
+     "time": "2026-11-23T20:47:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 11
+    },
+    {
+     "n": 14,
      "title": "Should the US Preempt China With a Naval Blockade Before It's Too Late?",
      "publisher": "theepochtimes.com",
      "url": "https://www.theepochtimes.com/opinion/should-the-us-preempt-china-with-a-naval-blockade-before-its-too-late-6126437",
@@ -615,39 +663,12 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 15,
      "title": "The Iran war drained U.S. missile stocks needed to deter China. The Pentagon has no plan to restock",
      "publisher": "fortune.com",
      "url": "https://fortune.com/2026/11/23/pentagon-munitions-shortage-gao-report-iran-war/",
      "time": "2026-11-23T20:10:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "China expands nuclear submarine fleet with US strike capability",
-     "publisher": "nikkei.com",
-     "url": "https://asia.nikkei.com/politics/defense/china-expands-nuclear-submarine-fleet-with-us-strike-capability",
-     "time": "2026-11-23T17:44:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "AI-Powered Cyber Espionage from China and Russia Sparks Global Cybersecurity Crisis – NaturalNews.com",
-     "publisher": "naturalnews.com",
-     "url": "https://www.naturalnews.com/2026-11-23-ai-powered-cyber-espionage-china-russia-crisis.html",
-     "time": "2026-11-23T16:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "US report flags China's military assistance to Pakistan during Operation Sindoor",
-     "publisher": "ianslive.in",
-     "url": "https://ianslive.in/us-report-flags-chinas-military-assistance-to-pakistan-during-operation-sindoor--20261123210855",
-     "time": "2026-11-23T16:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
@@ -656,18 +677,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-23T22:14:05.558Z",
+   "generatedAt": "2026-11-24T01:42:27.247Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T22:14:05.558Z",
-    "to": "2026-11-23T22:14:05.558Z"
+    "from": "2026-11-21T01:42:27.247Z",
+    "to": "2026-11-24T01:42:27.247Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 55,
+   "reportsFound": 53,
    "overview": {
     "kind": "fact",
-    "text": "55 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 06:45 UTC to 2026-11-23 21:15 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 10, sanctions and trade 1.",
+    "text": "53 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 06:45 UTC to 2026-11-23 23:00 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 10, sanctions and trade 2.",
     "evidence": [
      1,
      2,
@@ -816,13 +837,22 @@
       3,
       5,
       6,
-      7,
       8,
       9,
       10,
+      11,
+      13
+     ],
+     "text": "10 of the 12 listed reports use diplomacy wording (foreign minister, envoy, summit, alliance) [1][2][3][5][6][8][9][10][11][13]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:sanctions-and-trade",
+     "kind": "analysis",
+     "evidence": [
+      7,
       12
      ],
-     "text": "10 of the 12 listed reports use diplomacy wording (foreign minister, envoy, summit, alliance) [1][2][3][5][6][7][8][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use sanctions and trade wording (sanctions, sanctioned) [7][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -832,10 +862,9 @@
       2,
       3,
       5,
-      6,
-      13
+      6
      ],
-     "text": "6 listed reports with topic keywords also name China, the United States and Ukraine [1][2][3][5][6][13]. A headline that names two countries does not show how they are connected."
+     "text": "5 listed reports with topic keywords also name China, the United States and Ukraine [1][2][3][5][6]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
@@ -904,6 +933,15 @@
     },
     {
      "n": 7,
+     "title": "EU targets Russian athletes and war veterans in new sanctions push",
+     "publisher": "europesun.com",
+     "url": "http://www.europesun.com/news/279451195/eu-targets-russian-athletes-and-war-veterans-in-new-sanctions-push",
+     "time": "2026-11-23T23:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 8,
      "title": "Tonse Alliance Leaders Accused of Treason Plot, Sending Recruits to Russia for Military Training",
      "publisher": "malawivoice.com",
      "url": "https://www.malawivoice.com/2026/11/23/tonse-alliance-leaders-accused-of-treason-plot-sending-recruits-to-russia-for-military-training/",
@@ -912,7 +950,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 9,
      "title": "Warsaw to summon Russian envoy over alleged missile incursion",
      "publisher": "news.az",
      "url": "https://news.az/news/warsaw-to-summon-russian-envoy-over-alleged-missile-incursion",
@@ -921,7 +959,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 10,
      "title": "Cyprus Expels Russian Diplomats Suspected of Espionage, Reports Say",
      "publisher": "themoscowtimes.com",
      "url": "https://www.themoscowtimes.com/2026/11/23/cyprus-expels-russian-diplomats-suspected-of-espionage-reports-say-a94348",
@@ -930,7 +968,7 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "Start of World War 3? NATO chief Rutte reaffirms the Western alliance's Article 5 commitment after Russian missile incursions into Poland",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/world/us/start-of-world-war-3-nato-chief-rutte-reaffirms-the-western-alliances-article-5-commitment-after-russian-missile-incursions-into-poland/articleshow/136097233.cms",
@@ -939,7 +977,7 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "Drone strike on sanctioned Russian ship brings war risk to Baltic shipping lanes",
      "publisher": "insurancebusinessmag.com",
      "url": "https://www.insurancebusinessmag.com/us/news/marine/drone-strike-on-sanctioned-russian-ship-brings-war-risk-to-baltic-shipping-lanes-598353.aspx",
@@ -948,21 +986,12 @@
      "via": "GDELT"
     },
     {
-     "n": 12,
+     "n": 13,
      "title": "Cyprus expels Russian diplomats on suspicion of espionage",
      "publisher": "politico.eu",
      "url": "https://www.politico.eu/article/cyprus-expels-russian-diplomats-on-suspicion-of-espionage/",
      "time": "2026-11-22T15:56:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 13,
-     "title": "Benghazi drone attack: Is Ukraine opening a Mediterranean front against Russia?",
-     "publisher": "middleeasteye.net",
-     "url": "https://www.middleeasteye.net/opinion/ukraine-opening-mediterranean-front-against-russia",
-     "time": "2026-11-23T21:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
    ],
@@ -971,18 +1000,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-23T22:14:05.558Z",
+   "generatedAt": "2026-11-24T01:42:27.247Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T22:14:05.558Z",
-    "to": "2026-11-23T22:14:05.558Z"
+    "from": "2026-11-21T01:42:27.247Z",
+    "to": "2026-11-24T01:42:27.247Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 47,
    "overview": {
     "kind": "fact",
-    "text": "47 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:15 UTC to 2026-11-23 21:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 2.",
+    "text": "47 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:15 UTC to 2026-11-24 01:30 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 2.",
     "evidence": [
      1,
      2,
@@ -1251,19 +1280,19 @@
     },
     {
      "n": 11,
-     "title": "Benghazi drone attack: Is Ukraine opening a Mediterranean front against Russia?",
-     "publisher": "middleeasteye.net",
-     "url": "https://www.middleeasteye.net/opinion/ukraine-opening-mediterranean-front-against-russia",
-     "time": "2026-11-23T21:15:00.000Z",
+     "title": "Ukraine war briefing: Kyiv's strike on Russian ships in Benghazi condemned by Libya's UN-backed government | Ukraine",
+     "publisher": "theguardian.com",
+     "url": "https://www.theguardian.com/world/2026/nov/24/ukraine-war-briefing-kyiv-strike-on-russian-ships-in-benghazi-condemned-by-un-backed-libya-government",
+     "time": "2026-11-24T01:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "Russia has lost astonishing 700K soldiers since start of Ukraine war — 1 in every 200 citizens killed, study finds",
-     "publisher": "nypost.com",
-     "url": "https://nypost.com/2026/11/23/world-news/russia-has-lost-astonishing-700k-soldiers-since-start-of-ukraine-war-1-in-every-200-citizens-killed-study-finds/",
-     "time": "2026-11-23T21:00:00.000Z",
+     "title": "Ukraine sinks Russian warship in Libya as conflict spreads beyond Europe",
+     "publisher": "japantoday.com",
+     "url": "https://japantoday.com/category/world/ukraine-sinks-russian-warship-in-libya-as-conflict-spreads-beyond-europe2",
+     "time": "2026-11-24T00:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -1273,41 +1302,41 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-23T22:14:05.558Z",
+   "generatedAt": "2026-11-24T01:42:27.247Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-20T22:14:05.558Z",
-    "to": "2026-11-23T22:14:05.558Z"
+    "from": "2026-11-21T01:42:27.247Z",
+    "to": "2026-11-24T01:42:27.247Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:42 UTC to 2026-11-23 20:47 UTC and come from 9 outlets. Reports with topic keywords (a report can have several): sanctions and trade 5, security 4, diplomacy 3.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-21 03:42 UTC to 2026-11-23 23:42 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): sanctions and trade 5, diplomacy 4, security 3.",
     "evidence": [
      1,
      2,
      3,
      4,
-     5,
-     6,
      7,
      8,
      9,
      10,
      11,
-     12
+     12,
+     13,
+     14
     ]
    },
    "developments": [
     {
      "kind": "reporting",
      "n": 1,
-     "headline": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion – Winnipeg Free Press",
-     "publisher": "winnipegfreepress.com",
-     "url": "https://www.winnipegfreepress.com/arts-and-life/life/sci-tech/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion",
-     "time": "2026-11-23T20:47:00.000Z",
+     "headline": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
+     "publisher": "ibtimes.com",
+     "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
+     "time": "2026-11-23T23:42:00.000Z",
      "timeBasis": "published",
      "matched": {
       "level": "country",
@@ -1316,17 +1345,17 @@
       ]
      },
      "topics": [
-      "Diplomacy"
+      "Security"
      ],
      "alsoReportedBy": []
     },
     {
      "kind": "reporting",
      "n": 2,
-     "headline": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
-     "publisher": "indonesiatribune.com",
-     "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
-     "time": "2026-11-21T13:15:00.000Z",
+     "headline": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
+     "publisher": "globalnews.ca",
+     "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
+     "time": "2026-11-23T23:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -1342,10 +1371,10 @@
     {
      "kind": "reporting",
      "n": 3,
-     "headline": "U.S.-Taiwan military cooperation at unprecedented level: Congressman",
-     "publisher": "focustaiwan.tw",
-     "url": "https://focustaiwan.tw/politics/202611210004",
-     "time": "2026-11-21T03:42:00.000Z",
+     "headline": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
+     "publisher": "atlanticcouncil.org",
+     "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
+     "time": "2026-11-23T21:35:00.000Z",
      "timeBasis": "published",
      "matched": {
       "level": "country",
@@ -1361,10 +1390,10 @@
     {
      "kind": "reporting",
      "n": 4,
-     "headline": "Taiwan Semiconductor Manufacturing Up Nearly 17%, on Pace for Largest Percent Increase Since October 2008 — Data Talk",
-     "publisher": "morningstar.com",
-     "url": "https://www.morningstar.com/news/dow-jones/202611235972/taiwan-semiconductor-manufacturing-up-nearly-17-on-pace-for-largest-percent-increase-since-october-2008-data-talk",
-     "time": "2026-11-23T15:46:00.000Z",
+     "headline": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+     "publisher": "medicinehatnews.com",
+     "url": "https://medicinehatnews.com/news/national-news/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/",
+     "time": "2026-11-23T20:47:00.000Z",
      "timeBasis": "published",
      "matched": {
       "level": "country",
@@ -1373,18 +1402,21 @@
       ]
      },
      "topics": [
-      "Sanctions and trade"
+      "Diplomacy"
      ],
-     "alsoReportedBy": []
+     "alsoReportedBy": [
+      5,
+      6
+     ]
     },
     {
      "kind": "reporting",
-     "n": 5,
-     "headline": "Tollbooths Like Taiwan Semiconductor Rarely Get This Cheap and With October Revenue Up 60%, I am Taking Advantage",
-     "publisher": "247wallst.com",
-     "url": "https://247wallst.com/investing/2026/11/23/tollbooths-like-taiwan-semiconductor-rarely-get-this-cheap-and-with-october-revenue-up-60-i-am-taking-advantage/",
-     "time": "2026-11-23T13:45:00.000Z",
-     "timeBasis": "published",
+     "n": 7,
+     "headline": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
+     "publisher": "indonesiatribune.com",
+     "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
+     "time": "2026-11-21T13:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
       "terms": [
@@ -1392,7 +1424,7 @@
       ]
      },
      "topics": [
-      "Sanctions and trade"
+      "Diplomacy"
      ],
      "alsoReportedBy": []
     }
@@ -1402,34 +1434,34 @@
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
-      4,
-      5,
-      6,
-      8,
-      9
-     ],
-     "text": "5 of the 12 listed reports use sanctions and trade wording (semiconductor, supply chain, semiconductors) [4][5][6][8][9]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
-     "rule": "topic:security",
-     "kind": "analysis",
-     "evidence": [
-      3,
+      9,
       10,
       11,
-      12
+      13,
+      14
      ],
-     "text": "4 of the 12 listed reports use security wording (military, cyberattacks, warfare, cyberattack) [3][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use sanctions and trade wording (semiconductor, supply chain, semiconductors) [9][10][11][13][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
      "kind": "analysis",
      "evidence": [
-      1,
       2,
-      7
+      4,
+      7,
+      12
      ],
-     "text": "3 of the 12 listed reports use diplomacy wording (envoy, foreign minister) [1][2][7]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "4 of the 12 listed reports use diplomacy wording (envoy, foreign minister) [2][4][7][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:security",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      3,
+      8
+     ],
+     "text": "3 of the 12 listed reports use security wording (fighter jets, war, military) [1][3][8]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1437,23 +1469,81 @@
      "evidence": [
       1,
       2,
-      3
+      3,
+      4,
+      7,
+      8
      ],
-     "text": "3 listed reports with topic keywords also name China and the United States [1][2][3]. A headline that names two countries does not show how they are connected."
+     "text": "6 listed reports with topic keywords also name China and the United States [1][2][3][4][7][8]. A headline that names two countries does not show how they are connected."
+    },
+    {
+     "rule": "several-outlets",
+     "kind": "analysis",
+     "evidence": [
+      4,
+      5,
+      6
+     ],
+     "text": "1 listed headline was carried by more than one outlet [4]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
     {
      "n": 1,
-     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion – Winnipeg Free Press",
-     "publisher": "winnipegfreepress.com",
-     "url": "https://www.winnipegfreepress.com/arts-and-life/life/sci-tech/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion",
-     "time": "2026-11-23T20:47:00.000Z",
+     "title": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
+     "publisher": "ibtimes.com",
+     "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
+     "time": "2026-11-23T23:42:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 2,
+     "title": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
+     "publisher": "globalnews.ca",
+     "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
+     "time": "2026-11-23T23:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
+     "title": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
+     "publisher": "atlanticcouncil.org",
+     "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
+     "time": "2026-11-23T21:35:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 4,
+     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+     "publisher": "medicinehatnews.com",
+     "url": "https://medicinehatnews.com/news/national-news/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/",
+     "time": "2026-11-23T20:47:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 5,
+     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+     "publisher": "wellandtribune.ca",
+     "url": "https://www.wellandtribune.ca/business/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion/article_b950dfae-b9ef-5fdd-82c8-4967e4eb7ff7.html",
+     "time": "2026-11-23T20:47:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 4
+    },
+    {
+     "n": 6,
+     "title": "Taiwan envoy says proposed deal could help shield Canada from Chinese trade coercion - Medicine Hat NewsMedicine Hat News",
+     "publisher": "winnipegfreepress.com",
+     "url": "https://www.winnipegfreepress.com/arts-and-life/life/sci-tech/2026/11/23/taiwan-envoy-says-proposed-deal-could-help-shield-canada-from-chinese-trade-coercion",
+     "time": "2026-11-23T20:47:00.000Z",
+     "timeBasis": "published",
+     "duplicateOf": 4
+    },
+    {
+     "n": 7,
      "title": "Foreign Minister Lin Chia-lung Highlights U.S.-Taiwan Collaboration at Texas Conference – Indonesia Tribune",
      "publisher": "indonesiatribune.com",
      "url": "https://indonesiatribune.com/foreign-minister-lin-chia-lung-highlights-u-s-taiwan-collaboration-at-texas-conference/",
@@ -1462,7 +1552,7 @@
      "via": "GDELT"
     },
     {
-     "n": 3,
+     "n": 8,
      "title": "U.S.-Taiwan military cooperation at unprecedented level: Congressman",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611210004",
@@ -1471,7 +1561,7 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 9,
      "title": "Taiwan Semiconductor Manufacturing Up Nearly 17%, on Pace for Largest Percent Increase Since October 2008 — Data Talk",
      "publisher": "morningstar.com",
      "url": "https://www.morningstar.com/news/dow-jones/202611235972/taiwan-semiconductor-manufacturing-up-nearly-17-on-pace-for-largest-percent-increase-since-october-2008-data-talk",
@@ -1480,7 +1570,7 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 10,
      "title": "Tollbooths Like Taiwan Semiconductor Rarely Get This Cheap and With October Revenue Up 60%, I am Taking Advantage",
      "publisher": "247wallst.com",
      "url": "https://247wallst.com/investing/2026/11/23/tollbooths-like-taiwan-semiconductor-rarely-get-this-cheap-and-with-october-revenue-up-60-i-am-taking-advantage/",
@@ -1489,7 +1579,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 11,
      "title": "ASML Vs. Taiwan Semiconductor: Here's Why You Choose One as Your AI-Anchor Now",
      "publisher": "247wallst.com",
      "url": "https://247wallst.com/investing/2026/11/23/asml-vs-taiwan-semiconductor-heres-why-you-choose-one-as-your-ai-anchor-now/",
@@ -1498,7 +1588,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 12,
      "title": "'Long live Japan-Taiwan friendship': Departing envoy Katayama bids farewell",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611230017",
@@ -1507,7 +1597,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 13,
      "title": "AI stock rout puts Taiwan's tech supply chain on alert, prompting government scrutiny of capital flows",
      "publisher": "digitimes.com",
      "url": "https://www.digitimes.com/news/a20261123PD224/taiwan-government-moea-stock-market-industrial-supply-chain.html",
@@ -1516,39 +1606,12 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 14,
      "title": "Taiwan startup investment contracts as AI, semiconductors attract capital",
      "publisher": "digitimes.com",
      "url": "https://www.digitimes.com/news/a20261120PD246/investment-taiwan-startup-venture-capital-semiconductors.html",
      "time": "2026-11-23T02:00:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 10,
-     "title": "Taiwan banks deploy AI to prevent cyberattacks",
-     "publisher": "taipeitimes.com",
-     "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/23/2003868206",
-     "time": "2026-11-22T20:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "《TAIPEI TIMES》 CCP legal warfare evolving: minister - 焦點",
-     "publisher": "ltn.com.tw",
-     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5649964",
-     "time": "2026-11-22T19:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Taiwanese banks turn to AI defenses as cyberattack activity climbs",
-     "publisher": "cedarnews.net",
-     "url": "https://cedarnews.net/newstasks/1179256/taiwanese-banks-turn-ai-defenses-cyberattack-activity/",
-     "time": "2026-11-22T11:03:00.000Z",
-     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
