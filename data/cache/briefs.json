@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 1,
- "generatedAt": "2026-11-25T19:21:46.751Z",
- "lastSuccessAt": "2026-11-25T19:21:46.751Z",
- "checkedAt": "2026-11-25T19:21:46.751Z",
+ "generatedAt": "2026-11-25T22:18:56.154Z",
+ "lastSuccessAt": "2026-11-25T22:18:56.154Z",
+ "checkedAt": "2026-11-25T22:18:56.154Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 189,
-   "lastSuccessAt": "2026-11-25T19:21:25.022Z",
-   "checkedAt": "2026-11-25T19:21:25.022Z",
+   "items": 186,
+   "lastSuccessAt": "2026-11-25T22:18:34.902Z",
+   "checkedAt": "2026-11-25T22:18:34.902Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,7 +22,7 @@
   }
  },
  "itemStats": {
-  "read": 189,
+  "read": 186,
   "noSource": 0,
   "noTime": 0,
   "outsideWindow": 0,
@@ -32,18 +32,18 @@
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-25T19:21:46.751Z",
+   "generatedAt": "2026-11-25T22:18:56.154Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-22T19:21:46.751Z",
-    "to": "2026-11-25T19:21:46.751Z"
+    "from": "2026-11-22T22:18:56.154Z",
+    "to": "2026-11-25T22:18:56.154Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 67,
+   "reportsFound": 64,
    "overview": {
     "kind": "fact",
-    "text": "67 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 03:05 UTC to 2026-11-25 18:00 UTC and come from 10 outlets. Reports with topic keywords (a report can have several): sanctions and trade 10, security 9, diplomacy 5, economic policy 1.",
+    "text": "64 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 03:05 UTC to 2026-11-25 20:14 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): sanctions and trade 9, security 9, diplomacy 5, economic policy 2.",
     "evidence": [
      1,
      2,
@@ -84,6 +84,26 @@
     {
      "kind": "reporting",
      "n": 2,
+     "headline": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+     "publisher": "arabnews.com",
+     "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+     "time": "2026-11-25T20:14:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "US"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
      "headline": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
      "publisher": "jpost.com",
      "url": "http://www.jpost.com/international/article-916124",
@@ -103,7 +123,7 @@
     },
     {
      "kind": "reporting",
-     "n": 3,
+     "n": 4,
      "headline": "US tariff plan targeting China, other economies risks offsetting trade negotiation gains, business confidence: experts",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1375070.shtml",
@@ -123,31 +143,11 @@
     },
     {
      "kind": "reporting",
-     "n": 4,
+     "n": 5,
      "headline": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
      "time": "2026-11-25T09:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "US"
-      ]
-     },
-     "topics": [
-      "Security",
-      "Sanctions and trade"
-     ],
-     "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 5,
-     "headline": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
-     "publisher": "digitimes.com",
-     "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
-     "time": "2026-11-25T04:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -168,17 +168,16 @@
      "kind": "analysis",
      "evidence": [
       1,
-      2,
       3,
       4,
       5,
       6,
       7,
-      10,
+      8,
       11,
       12
      ],
-     "text": "10 of the 12 listed reports use sanctions and trade wording (sanctions, tariff, tariffs) [1][2][3][4][5][6][7][10][11][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use sanctions and trade wording (sanctions, tariff, tariffs) [1][3][4][5][6][7][8][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
@@ -186,27 +185,36 @@
      "evidence": [
       1,
       2,
-      4,
+      3,
       5,
       6,
       7,
       8,
       9,
-      12
+      10
      ],
-     "text": "9 of the 12 listed reports use security wording (war, espionage, truce, military) [1][2][4][5][6][7][8][9][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use security wording (war, espionage, truce, military) [1][2][3][5][6][7][8][9][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
      "kind": "analysis",
      "evidence": [
-      3,
-      8,
+      2,
+      4,
       9,
       10,
+      12
+     ],
+     "text": "5 of the 12 listed reports use diplomacy wording (envoy, negotiation, peace deal, pact) [2][4][9][10][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:economic-policy",
+     "kind": "analysis",
+     "evidence": [
+      1,
       11
      ],
-     "text": "5 of the 12 listed reports use diplomacy wording (negotiation, peace deal, envoy, pact) [3][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -220,9 +228,11 @@
       6,
       7,
       8,
-      9
+      9,
+      10,
+      11
      ],
-     "text": "9 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][5][6][7][8][9]. A headline that names two countries does not show how they are connected."
+     "text": "11 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][5][6][7][8][9][10][11]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
@@ -237,6 +247,15 @@
     },
     {
      "n": 2,
+     "title": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+     "publisher": "arabnews.com",
+     "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+     "time": "2026-11-25T20:14:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
      "title": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
      "publisher": "jpost.com",
      "url": "http://www.jpost.com/international/article-916124",
@@ -245,7 +264,7 @@
      "via": "GDELT"
     },
     {
-     "n": 3,
+     "n": 4,
      "title": "US tariff plan targeting China, other economies risks offsetting trade negotiation gains, business confidence: experts",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1375070.shtml",
@@ -254,7 +273,7 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
@@ -263,7 +282,7 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 6,
      "title": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
      "publisher": "digitimes.com",
      "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
@@ -272,7 +291,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 7,
      "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
@@ -281,7 +300,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 8,
      "title": "Zelenskyy plans to appeal to new US Congress for military aid, tougher sanctions against Russia",
      "publisher": "interfax.com.ua",
      "url": "https://en.interfax.com.ua/news/general/1241510.html",
@@ -290,7 +309,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 9,
      "title": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/pentagon-delays-patriot-missiles-ukraine-3810122",
@@ -299,7 +318,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 10,
      "title": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
      "publisher": "rferl.org",
      "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
@@ -308,29 +327,20 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
-     "title": "Proposed US tariff gives India slight edge over Asian competitors if trade pact is sealed: Think-tank GTRI",
-     "publisher": "tribuneindia.com",
-     "url": "https://www.tribuneindia.com/news/business/proposed-us-tariff-gives-india-slight-edge-over-asian-competitors-if-trade-pact-is-sealed-think-tank-gtri/",
-     "time": "2026-11-25T16:45:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
      "n": 11,
-     "title": "New U.S. tariffs don't include Canada as negotiations drag",
-     "publisher": "cp24.com",
-     "url": "https://www.cp24.com/news/world/2026/11/25/us-trade-deal-must-accommodate-canada-says-trumps-representative/",
-     "time": "2026-11-25T15:15:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "White House tariffs announced on China, Vietnam, as inflation data comes back hot",
+     "publisher": "fortune.com",
+     "url": "https://fortune.com/2026/11/25/white-house-new-tariffs-inflation-data-expectations-fed/",
+     "time": "2026-11-25T17:06:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT"
     },
     {
      "n": 12,
-     "title": "US targets India, six other economies with tariffs of up to 25% in fresh trade offensive",
-     "publisher": "indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/us-targets-india-six-other-economies-with-proposed-tariffs-of-up-to-25-in-fresh-trade-offensive-report/articleshow/136163453.cms",
-     "time": "2026-11-25T14:00:00.000Z",
+     "title": "Proposed US tariff gives India slight edge over Asian competitors if trade pact is sealed: Think-tank GTRI",
+     "publisher": "tribuneindia.com",
+     "url": "https://www.tribuneindia.com/news/business/proposed-us-tariff-gives-india-slight-edge-over-asian-competitors-if-trade-pact-is-sealed-think-tank-gtri/",
+     "time": "2026-11-25T16:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT"
     }
@@ -340,18 +350,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-25T19:21:46.751Z",
+   "generatedAt": "2026-11-25T22:18:56.154Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-22T19:21:46.751Z",
-    "to": "2026-11-25T19:21:46.751Z"
+    "from": "2026-11-22T22:18:56.154Z",
+    "to": "2026-11-25T22:18:56.154Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 51,
+   "reportsFound": 50,
    "overview": {
     "kind": "fact",
-    "text": "51 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 08:00 UTC to 2026-11-25 18:45 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, sanctions and trade 9, diplomacy 4, economic policy 2.",
+    "text": "50 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 08:00 UTC to 2026-11-25 18:45 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): security 10, sanctions and trade 9, diplomacy 4, economic policy 2.",
     "evidence": [
      1,
      2,
@@ -483,10 +493,10 @@
       7,
       8,
       9,
-      10,
-      11
+      11,
+      12
      ],
-     "text": "10 of the 12 listed reports use security wording (war, espionage, truce, nuclear) [1][2][4][5][6][7][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (war, espionage, truce, nuclear) [1][2][4][5][6][7][8][9][11][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
@@ -520,9 +530,9 @@
      "kind": "analysis",
      "evidence": [
       1,
-      12
+      10
      ],
-     "text": "2 of the 12 listed reports use economic policy wording (oil price, subsidies) [1][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -536,9 +546,9 @@
       6,
       7,
       8,
-      12
+      10
      ],
-     "text": "9 listed reports with topic keywords also name the United States and Russia [1][2][3][4][5][6][7][8][12]. A headline that names two countries does not show how they are connected."
+     "text": "9 listed reports with topic keywords also name the United States and Russia [1][2][3][4][5][6][7][8][10]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
@@ -625,6 +635,15 @@
     },
     {
      "n": 10,
+     "title": "White House tariffs announced on China, Vietnam, as inflation data comes back hot",
+     "publisher": "fortune.com",
+     "url": "https://fortune.com/2026/11/25/white-house-new-tariffs-inflation-data-expectations-fed/",
+     "time": "2026-11-25T17:06:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 11,
      "title": "New Trump tariff shock on 14 countries under Section 301 - China, Europe, Japan, and India on the front line",
      "publisher": "bankingnews.gr",
      "url": "https://www.bankingnews.gr/diethni/articles/913212/new-trump-tariff-shock-on-14-countries-under-section-301-china-europe-japan-and-india-on-the-front-line%20title=",
@@ -633,21 +652,12 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "Trump Administration Prepares New Tariff Offensive Against China and European Union",
      "publisher": "slguardian.org",
      "url": "https://slguardian.org/trump-administration-prepares-new-tariff-offensive-against-china-and-european-union/",
      "time": "2026-11-25T03:15:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "US prepares new tariffs for China, EU and others over subsidies",
-     "publisher": "wgauradio.com",
-     "url": "https://www.wgauradio.com/news/business/us-ready-slap/HV7YY43ELQ4TXGSXGZJFKRYWEM/",
-     "time": "2026-11-25T01:24:00.000Z",
-     "timeBasis": "published",
      "via": "GDELT"
     }
    ],
@@ -656,11 +666,11 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-25T19:21:46.751Z",
+   "generatedAt": "2026-11-25T22:18:56.154Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-22T19:21:46.751Z",
-    "to": "2026-11-25T19:21:46.751Z"
+    "from": "2026-11-22T22:18:56.154Z",
+    "to": "2026-11-25T22:18:56.154Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
@@ -992,23 +1002,23 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-25T19:21:46.751Z",
+   "generatedAt": "2026-11-25T22:18:56.154Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-22T19:21:46.751Z",
-    "to": "2026-11-25T19:21:46.751Z"
+    "from": "2026-11-22T22:18:56.154Z",
+    "to": "2026-11-25T22:18:56.154Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
-   "reportsFound": 42,
+   "reportsFound": 41,
    "overview": {
     "kind": "fact",
-    "text": "42 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 03:05 UTC to 2026-11-25 15:44 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): diplomacy 11, security 10, sanctions and trade 4.",
+    "text": "41 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 03:05 UTC to 2026-11-25 20:14 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): diplomacy 11, security 10, sanctions and trade 4.",
     "evidence": [
      1,
      2,
      3,
-     6,
+     4,
      7,
      8,
      9,
@@ -1044,6 +1054,26 @@
     {
      "kind": "reporting",
      "n": 2,
+     "headline": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+     "publisher": "arabnews.com",
+     "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+     "time": "2026-11-25T20:14:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Ukraine"
+      ]
+     },
+     "topics": [
+      "Security",
+      "Diplomacy"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
      "headline": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/pentagon-delays-patriot-missiles-ukraine-3810122",
@@ -1063,7 +1093,7 @@
     },
     {
      "kind": "reporting",
-     "n": 3,
+     "n": 4,
      "headline": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
      "publisher": "netscape.com",
      "url": "https://isp.netscape.com/pf/story/0001/20261124/831297473fcc9a83d92d02ca5ee770f5",
@@ -1080,38 +1110,18 @@
       "Sanctions and trade"
      ],
      "alsoReportedBy": [
-      4,
-      5
+      5,
+      6
      ]
     },
     {
      "kind": "reporting",
-     "n": 6,
+     "n": 7,
      "headline": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
      "publisher": "europesun.com",
      "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
      "time": "2026-11-24T03:45:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "Ukraine"
-      ]
-     },
-     "topics": [
-      "Security",
-      "Diplomacy"
-     ],
-     "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 7,
-     "headline": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
-     "publisher": "rferl.org",
-     "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
-     "time": "2026-11-23T03:05:00.000Z",
-     "timeBasis": "published",
      "matched": {
       "level": "country",
       "terms": [
@@ -1132,7 +1142,7 @@
      "evidence": [
       1,
       2,
-      6,
+      3,
       7,
       8,
       9,
@@ -1142,7 +1152,7 @@
       13,
       14
      ],
-     "text": "11 of the 12 listed reports use diplomacy wording (peace deal, security council, envoy, summit) [1][2][6][7][8][9][10][11][12][13][14]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use diplomacy wording (peace deal, envoy, security council, summit) [1][2][3][7][8][9][10][11][12][13][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
@@ -1151,26 +1161,26 @@
       1,
       2,
       3,
-      6,
+      4,
       7,
       8,
-      10,
+      9,
       11,
-      13,
+      12,
       14
      ],
-     "text": "10 of the 12 listed reports use security wording (NATO, missiles, war, nuclear) [1][2][3][6][7][8][10][11][13][14]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "10 of the 12 listed reports use security wording (NATO, war, missiles, nuclear) [1][2][3][4][7][8][9][11][12][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
       1,
-      3,
-      9,
-      12
+      4,
+      10,
+      13
      ],
-     "text": "4 of the 12 listed reports use sanctions and trade wording (sanctions) [1][3][9][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "4 of the 12 listed reports use sanctions and trade wording (sanctions) [1][4][10][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1178,20 +1188,21 @@
      "evidence": [
       2,
       3,
-      6,
-      7
+      4,
+      7,
+      8
      ],
-     "text": "4 listed reports with topic keywords also name the United States and Russia [2][3][6][7]. A headline that names two countries does not show how they are connected."
+     "text": "5 listed reports with topic keywords also name the United States and Russia [2][3][4][7][8]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      3,
       4,
-      5
+      5,
+      6
      ],
-     "text": "1 listed headline was carried by more than one outlet [3]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [4]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -1206,6 +1217,15 @@
     },
     {
      "n": 2,
+     "title": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+     "publisher": "arabnews.com",
+     "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+     "time": "2026-11-25T20:14:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
      "title": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/pentagon-delays-patriot-missiles-ukraine-3810122",
@@ -1214,7 +1234,7 @@
      "via": "GDELT"
     },
     {
-     "n": 3,
+     "n": 4,
      "title": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
      "publisher": "netscape.com",
      "url": "https://isp.netscape.com/pf/story/0001/20261124/831297473fcc9a83d92d02ca5ee770f5",
@@ -1223,25 +1243,25 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
      "publisher": "winnipegfreepress.com",
      "url": "https://www.winnipegfreepress.com/business/2026/11/24/north-korea-reviews-switzerland-relations-after-sanctions-on-youth-camp-linked-to-russia-ukraine-war",
      "time": "2026-11-24T07:35:00.000Z",
      "timeBasis": "published",
-     "duplicateOf": 3
+     "duplicateOf": 4
     },
     {
-     "n": 5,
+     "n": 6,
      "title": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
      "publisher": "dailyexcelsior.com",
      "url": "https://www.dailyexcelsior.com/n-korea-reviews-switzerland-relations-after-sanctions-on-youth-camp-linked-to-russia-ukraine-war/",
      "time": "2026-11-25T00:45:00.000Z",
      "timeBasis": "first seen by GDELT",
-     "duplicateOf": 3
+     "duplicateOf": 4
     },
     {
-     "n": 6,
+     "n": 7,
      "title": "Russian Security Council Dy Chairman claims Ukraine and NATO actions have triggered nuclear strike considerations",
      "publisher": "europesun.com",
      "url": "http://www.europesun.com/news/279451359/russian-security-council-dy-chairman-claims-ukraine-and-nato-actions-have-triggered-nuclear-strike-considerations",
@@ -1250,7 +1270,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 8,
      "title": "NATO-Like Guarantees For Ukraine? US Envoy Signals Possibility, But Questions Remain",
      "publisher": "rferl.org",
      "url": "https://www.rferl.org/a/kushner-trump-nato-ukraine-russia-security/33903834.html",
@@ -1259,7 +1279,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 9,
      "title": "Germany's Defense Budget Triples As NATO Summit Exposes Deep Divisions Over Ukraine Membership",
      "publisher": "foreignpolicyjournal.com",
      "url": "https://www.foreignpolicyjournal.com/2026/11/25/germanys-defense-budget-triples-as-nato-summit-exposes-deep-divisions-over-ukraine-membership/",
@@ -1268,7 +1288,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 10,
      "title": "North Korea expels Swiss diplomat over Ukraine sanctions",
      "publisher": "dw.com",
      "url": "https://www.dw.com/en/north-korea-expels-swiss-envoy-over-sanctions-on-camp-accused-of-indoctrinating-ukrainian-children/a-80043648",
@@ -1277,7 +1297,7 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "North Korea Kicks Out Swiss Diplomats in Spat Linked to Ukraine War",
      "publisher": "wn.com",
      "url": "https://article.wn.com/view/2026/11/25/North_Korea_Kicks_Out_Swiss_Diplomats_in_Spat_Linked_to_Ukra/",
@@ -1286,7 +1306,7 @@
      "via": "GDELT"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "Italy concerned about Ukraine's military operations in Libya – Foreign Ministry",
      "publisher": "interfax.com.ua",
      "url": "https://en.interfax.com.ua/news/general/1241765.html",
@@ -1295,7 +1315,7 @@
      "via": "GDELT"
     },
     {
-     "n": 12,
+     "n": 13,
      "title": "Ukraine's sanctions envoy urges EU to target Rosatom and alumina",
      "publisher": "euronews.com",
      "url": "https://www.euronews.com/2026/11/24/ukraines-sanctions-envoy-urges-eu-to-target-rosatom-and-alumina-sales",
@@ -1304,20 +1324,11 @@
      "via": "GDELT"
     },
     {
-     "n": 13,
+     "n": 14,
      "title": "Trump to meet NATO Chief Mark Rutte in Florida amid tensions over Ukraine peace talks | Ariana News",
      "publisher": "ariananews.af",
      "url": "https://www.ariananews.af/trump-to-meet-nato-chief-mark-rutte-in-florida-amid-tensions-over-ukraine-peace-talks/",
      "time": "2026-11-24T06:26:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 14,
-     "title": "Plan C-The EU gears up for more checkbook anti-diplomacy with Zelensky's Ukraine « nuclear-news",
-     "publisher": "nuclear-news.net",
-     "url": "https://nuclear-news.net/2026/11/24/4-b1-plan-c-the-eu-gears-up-for-more-checkbook-anti-diplomacy-with-zelenskys-ukraine/",
-     "time": "2026-11-24T04:56:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     }
@@ -1327,23 +1338,22 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-25T19:21:46.751Z",
+   "generatedAt": "2026-11-25T22:18:56.154Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-22T19:21:46.751Z",
-    "to": "2026-11-25T19:21:46.751Z"
+    "from": "2026-11-22T22:18:56.154Z",
+    "to": "2026-11-25T22:18:56.154Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles.",
    "status": "ok",
    "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 21:35 UTC to 2026-11-25 17:45 UTC and come from 10 outlets. Reports with topic keywords (a report can have several): security 6, diplomacy 3, sanctions and trade 3.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-23 23:42 UTC to 2026-11-25 21:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): security 6, sanctions and trade 4, diplomacy 2.",
     "evidence": [
      1,
      2,
      3,
-     4,
      5,
      6,
      7,
@@ -1351,13 +1361,52 @@
      9,
      10,
      11,
-     12
+     12,
+     13
     ]
    },
    "developments": [
     {
      "kind": "reporting",
      "n": 1,
+     "headline": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
+     "publisher": "antiwar.com",
+     "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
+     "time": "2026-11-25T21:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [
+      "Security"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 2,
+     "headline": "Australia news LIVE: Leah Blyth joins One Nation; US tariffs hiked on products from EU, Japan, Taiwan and more; stagflation warning for Australia",
+     "publisher": "brisbanetimes.com.au",
+     "url": "https://www.brisbanetimes.com.au/national/australia-news-live-liberal-senator-joins-one-nation-economists-warn-of-looming-stagflation-us-hikes-tariffs-by-20-per-cent-for-dozens-of-countries-20261126-p61hdi.html",
+     "time": "2026-11-25T19:45:00.000Z",
+     "timeBasis": "published",
+     "matched": {
+      "level": "country",
+      "terms": [
+       "Taiwan"
+      ]
+     },
+     "topics": [
+      "Sanctions and trade"
+     ],
+     "alsoReportedBy": []
+    },
+    {
+     "kind": "reporting",
+     "n": 3,
      "headline": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405",
@@ -1372,11 +1421,13 @@
      "topics": [
       "Sanctions and trade"
      ],
-     "alsoReportedBy": []
+     "alsoReportedBy": [
+      4
+     ]
     },
     {
      "kind": "reporting",
-     "n": 2,
+     "n": 5,
      "headline": "US Marine missile range boost faces reality check on Taiwan",
      "publisher": "wn.com",
      "url": "https://article.wn.com/view/2026/11/25/US_Marine_missile_range_boost_faces_reality_check_on_Taiwan/",
@@ -1395,7 +1446,7 @@
     },
     {
      "kind": "reporting",
-     "n": 3,
+     "n": 6,
      "headline": "Chinese Military Hospital Blocked FDA Inspectors Over Taiwan, House Report Says",
      "publisher": "theepochtimes.com",
      "url": "https://www.theepochtimes.com/china/chinese-military-hospital-blocked-fda-inspectors-over-taiwan-house-report-says-6129026",
@@ -1411,44 +1462,6 @@
       "Security"
      ],
      "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 4,
-     "headline": "TIER expects U.S. tariffs on Taiwan goods not to top 15%",
-     "publisher": "focustaiwan.tw",
-     "url": "https://focustaiwan.tw/business/202611250020",
-     "time": "2026-11-25T11:13:00.000Z",
-     "timeBasis": "published",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "Taiwan"
-      ]
-     },
-     "topics": [
-      "Sanctions and trade"
-     ],
-     "alsoReportedBy": []
-    },
-    {
-     "kind": "reporting",
-     "n": 5,
-     "headline": "Taiwan Reaffirms Somaliland Ties With New Envoy Amid Opposition From Somalia and China",
-     "publisher": "garoweonline.com",
-     "url": "https://garoweonline.com/en/news/somalia/taiwan-reaffirms-somaliland-ties-with-new-envoy-amid-opposition-from-somalia-and-china",
-     "time": "2026-11-25T06:02:00.000Z",
-     "timeBasis": "published",
-     "matched": {
-      "level": "country",
-      "terms": [
-       "Taiwan"
-      ]
-     },
-     "topics": [
-      "Diplomacy"
-     ],
-     "alsoReportedBy": []
     }
    ],
    "why": [
@@ -1456,34 +1469,34 @@
      "rule": "topic:security",
      "kind": "analysis",
      "evidence": [
-      2,
-      3,
-      6,
-      8,
-      10,
-      12
-     ],
-     "text": "6 of the 12 listed reports use security wording (missile, military, warfare, fighter jets) [2][3][6][8][10][12]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
-     "rule": "topic:diplomacy",
-     "kind": "analysis",
-     "evidence": [
+      1,
       5,
-      7,
-      11
+      6,
+      9,
+      11,
+      13
      ],
-     "text": "3 of the 12 listed reports use diplomacy wording (envoy) [5][7][11]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use security wording (military, missile, warfare, fighter jets) [1][5][6][9][11][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
-      1,
-      4,
-      9
+      2,
+      3,
+      7,
+      12
      ],
-     "text": "3 of the 12 listed reports use sanctions and trade wording (tariffs, trade deal) [1][4][9]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "4 of the 12 listed reports use sanctions and trade wording (tariffs, trade deal) [2][3][7][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:diplomacy",
+     "kind": "analysis",
+     "evidence": [
+      8,
+      10
+     ],
+     "text": "2 of the 12 listed reports use diplomacy wording (envoy) [8][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -1492,7 +1505,6 @@
       1,
       2,
       3,
-      4,
       5,
       6,
       7,
@@ -1500,14 +1512,42 @@
       9,
       10,
       11,
-      12
+      12,
+      13
      ],
-     "text": "12 listed reports with topic keywords also name the United States, China and Russia [1][2][3][4][5][6][7][8][9][10][11][12]. A headline that names two countries does not show how they are connected."
+     "text": "12 listed reports with topic keywords also name the United States, China and Russia [1][2][3][5][6][7][8][9][10][11][12][13]. A headline that names two countries does not show how they are connected."
+    },
+    {
+     "rule": "several-outlets",
+     "kind": "analysis",
+     "evidence": [
+      3,
+      4
+     ],
+     "text": "1 listed headline was carried by more than one outlet [3]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
     {
      "n": 1,
+     "title": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
+     "publisher": "antiwar.com",
+     "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
+     "time": "2026-11-25T21:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT"
+    },
+    {
+     "n": 2,
+     "title": "Australia news LIVE: Leah Blyth joins One Nation; US tariffs hiked on products from EU, Japan, Taiwan and more; stagflation warning for Australia",
+     "publisher": "brisbanetimes.com.au",
+     "url": "https://www.brisbanetimes.com.au/national/australia-news-live-liberal-senator-joins-one-nation-economists-warn-of-looming-stagflation-us-hikes-tariffs-by-20-per-cent-for-dozens-of-countries-20261126-p61hdi.html",
+     "time": "2026-11-25T19:45:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT"
+    },
+    {
+     "n": 3,
      "title": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405",
@@ -1516,7 +1556,16 @@
      "via": "GDELT"
     },
     {
-     "n": 2,
+     "n": 4,
+     "title": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
+     "publisher": "ltn.com.tw",
+     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5653523",
+     "time": "2026-11-25T19:45:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "duplicateOf": 3
+    },
+    {
+     "n": 5,
      "title": "US Marine missile range boost faces reality check on Taiwan",
      "publisher": "wn.com",
      "url": "https://article.wn.com/view/2026/11/25/US_Marine_missile_range_boost_faces_reality_check_on_Taiwan/",
@@ -1525,7 +1574,7 @@
      "via": "GDELT"
     },
     {
-     "n": 3,
+     "n": 6,
      "title": "Chinese Military Hospital Blocked FDA Inspectors Over Taiwan, House Report Says",
      "publisher": "theepochtimes.com",
      "url": "https://www.theepochtimes.com/china/chinese-military-hospital-blocked-fda-inspectors-over-taiwan-house-report-says-6129026",
@@ -1534,7 +1583,7 @@
      "via": "GDELT"
     },
     {
-     "n": 4,
+     "n": 7,
      "title": "TIER expects U.S. tariffs on Taiwan goods not to top 15%",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/business/202611250020",
@@ -1543,7 +1592,7 @@
      "via": "GDELT"
     },
     {
-     "n": 5,
+     "n": 8,
      "title": "Taiwan Reaffirms Somaliland Ties With New Envoy Amid Opposition From Somalia and China",
      "publisher": "garoweonline.com",
      "url": "https://garoweonline.com/en/news/somalia/taiwan-reaffirms-somaliland-ties-with-new-envoy-amid-opposition-from-somalia-and-china",
@@ -1552,7 +1601,7 @@
      "via": "GDELT"
     },
     {
-     "n": 6,
+     "n": 9,
      "title": "China's J-10C Fighter Spotted With Russian 'Bunker-Buster' Missile. Taiwan's Airfields Could Face A New Threat.",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/chinese-j-10c-modified-kh-29t-missile-3810159",
@@ -1561,7 +1610,7 @@
      "via": "GDELT"
     },
     {
-     "n": 7,
+     "n": 10,
      "title": "Taiwan Envoy Urges Canada to Sign Pending Deal, Says It Will Help Shield Ottawa From Coercion by Beijing",
      "publisher": "theepochtimes.com",
      "url": "https://www.theepochtimes.com/world/taiwan-envoy-urges-canada-to-sign-pending-deal-says-it-will-help-shield-ottawa-from-coercion-by-beijing-6128841",
@@ -1570,7 +1619,7 @@
      "via": "GDELT"
     },
     {
-     "n": 8,
+     "n": 11,
      "title": "Taipei Mayoral Candidate Puma Shen on Fighting Chinese Cognitive Warfare",
      "publisher": "time.com",
      "url": "https://time.com/article/2026/11/24/puma-shen-taipei-mayor-taiwan-china-interview/",
@@ -1579,7 +1628,7 @@
      "via": "GDELT"
     },
     {
-     "n": 9,
+     "n": 12,
      "title": "Taiwan Trade Deal Could Help Canada Limit China's Economic Leverage – China Money Network",
      "publisher": "chinamoneynetwork.com",
      "url": "https://www.chinamoneynetwork.com/2026/11/24/taiwan-trade-deal-could-help-canada-limit-chinas-economic-leverage",
@@ -1588,29 +1637,11 @@
      "via": "GDELT"
     },
     {
-     "n": 10,
+     "n": 13,
      "title": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
      "publisher": "ibtimes.com",
      "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
      "time": "2026-11-23T23:42:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT"
-    },
-    {
-     "n": 11,
-     "title": "Canada could be shielded from China trade coercion with Taiwan deal: envoy - National",
-     "publisher": "globalnews.ca",
-     "url": "https://globalnews.ca/news/12163147/taiwan-canada-china-trade-deal/",
-     "time": "2026-11-23T23:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT"
-    },
-    {
-     "n": 12,
-     "title": "Dispatch from 2032: After Chinese salvos fail to defeat Taiwan, Beijing is trapped in a war of attrition",
-     "publisher": "atlanticcouncil.org",
-     "url": "https://www.atlanticcouncil.org/dispatches/dispatch-from-2032-after-chinese-salvos-fail-to-defeat-taiwan-beijing-is-trapped-in-a-war-of-attrition/",
-     "time": "2026-11-23T21:35:00.000Z",
      "timeBasis": "published",
      "via": "GDELT"
     }
