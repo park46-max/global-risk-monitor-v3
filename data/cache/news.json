@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-25T13:39:14.663Z",
-  "lastSuccessAt": "2026-11-25T13:42:11.392Z",
+  "checkedAt": "2026-11-25T19:12:03.750Z",
+  "lastSuccessAt": "2026-11-25T19:17:33.935Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "ok",
+      "status": "error",
       "attempted": true,
-      "error": null,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-25T13:41:50.428Z",
-      "checkedAt": "2026-11-25T13:41:50.428Z",
+      "checkedAt": "2026-11-25T19:16:09.060Z",
       "articles": [
         {
           "title": "We end it whenever we want - Trump lies about US victory , stop now Americans tell him",
@@ -181,168 +181,168 @@
       "status": "ok",
       "attempted": true,
       "error": null,
-      "fetchedAt": "2026-11-25T13:39:29.441Z",
-      "checkedAt": "2026-11-25T13:39:29.441Z",
+      "fetchedAt": "2026-11-25T19:14:35.268Z",
+      "checkedAt": "2026-11-25T19:14:35.268Z",
       "articles": [
         {
-          "title": "China Daily Website - Connecting China Connecting the World",
-          "url": "http://www.chinadaily.com.cn/www.chinadaily.com.cn/a/202611/25/WS6b068ee9e4b03ebf8519e9bc.html",
-          "domain": "chinadaily.com.cn",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "Bangkok Post - Northerners invite PM to toxic meal at Parliament",
-          "url": "https://www.bangkokpost.com/thailand/general/3361076/northerners-invite-pm-to-toxic-meal-at-parliament",
-          "domain": "bangkokpost.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "Thailand"
-        },
-        {
-          "title": "NVIDIA And Jensen Huang : Lessons For Nigeria - By Pius Mordi",
-          "url": "https://www.opinionnigeria.com/nvidia-and-jensen-huang-lessons-for-nigeria-by-pius-mordi/",
-          "domain": "opinionnigeria.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "Nigeria"
-        },
-        {
-          "title": "1 . 15 million applications , 1 . 8 lakh rejections : What Schengen visa data reveals about Indian travellers",
-          "url": "https://economictimes.indiatimes.com/nri/latest-updates/1-15-million-applications-1-8-lakh-rejections-what-schengen-visa-data-reveals-about-indian-travellers/articleshow/136155012.cms",
-          "domain": "economictimes.indiatimes.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "China launches Shenzhou 24 carrying first Pakistani astronaut to space station",
-          "url": "https://www.elystandard.co.uk/news/national/26760371.china-launches-shenzhou-24-carrying-first-pakistani-astronaut-space-station/",
-          "domain": "elystandard.co.uk",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Almost unfathomable , and still ongoing : The Great Chinese IP Heist - Rich Lowry",
-          "url": "https://jewishworldreview.com/1126/lowry112526.php",
-          "domain": "jewishworldreview.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "China Shenzhou - 24 Docks at Space Station with Pakistani National as 1st Foreign Astronaut",
-          "url": "https://english.aawsat.com/varieties/5345393-chinas-shenzhou-24-docks-space-station-pakistani-national-1st-foreign-astronaut",
-          "domain": "english.aawsat.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "Syria"
-        },
-        {
-          "title": "BYD plans car production in France to boost its push into the European market",
-          "url": "https://www.euronews.com/2026/11/25/byd-plans-car-production-in-france-to-boost-its-push-into-the-european-market",
-          "domain": "euronews.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Bangladesh Increases Garment Worker Minimum Wage by 36 % Amid Protests",
-          "url": "https://dailypioneer.com/world/bangladesh-raises-garment-workers-minimum-wage-by-36-after-protests",
-          "domain": "dailypioneer.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Huawei Convicted on 10 Criminal Charges in US Trial Over Iran Business and Technology Theft",
-          "url": "https://telecomlead.com/telecom-equipment/huawei-convicted-on-10-criminal-charges-in-us-trial-over-iran-business-and-technology-theft-128837",
-          "domain": "telecomlead.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Bangchak Hosts Hong Kong Site Visit to Showcase BHK Operations",
-          "url": "https://www.newswit.com/en/ien0yyghxauov22v247gu8gunj2n3ye2",
-          "domain": "newswit.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "Thailand"
-        },
-        {
-          "title": "Ethics and Responsible Conduct in Biomedical Research",
-          "url": "https://link.springer.com/book/10.1007/978-3-032-42759-5",
-          "domain": "link.springer.com",
-          "seendate": "20261125T093000Z",
-          "language": "English",
-          "sourcecountry": "Netherlands"
-        },
-        {
-          "title": "Indian bank valuations no longer expensive compared with global peers : Jefferies",
-          "url": "http://www.sanantoniopost.com/news/279453142/indian-banks-valuations-no-longer-expensive-compared-with-global-peers-jefferies",
-          "domain": "sanantoniopost.com",
-          "seendate": "20261125T093000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "China vows to safeguard rights , interests of domestic industries following EU hybrid vehicle measures",
-          "url": "http://en.people.cn/n3/2026/1125/c90000-20522840.html",
-          "domain": "en.people.cn",
-          "seendate": "20261125T064500Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "Separating fact from political fantasy not as easy as it seems - The Hill Times",
-          "url": "https://www.hilltimes.com/2026/11/25/separating-fact-from-political-fantasy-not-as-easy-as-it-seems/527372/",
-          "domain": "hilltimes.com",
-          "seendate": "20261125T064500Z",
+          "title": "Provinces waiting to see if Trump follows through on data centre tax threat",
+          "url": "https://www.bnnbloomberg.ca/tariffs/2026/11/25/provinces-waiting-to-see-if-trump-follows-through-on-data-centre-tax-threat/",
+          "domain": "bnnbloomberg.ca",
+          "seendate": "20261125T141500Z",
           "language": "English",
           "sourcecountry": "Canada"
         },
         {
-          "title": "Bangladesh garment workers win 36 percent wage rise",
-          "url": "https://arynews.tv/bangladesh-garment-workers-win-36-percent-wage-rise",
-          "domain": "arynews.tv",
-          "seendate": "20261125T064500Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Muslim Influencer Sneako Goes On Embarrassing Taliban Propaganda Tour",
-          "url": "https://www.zerohedge.com/political/muslim-influencer-sneako-goes-embarrassing-taliban-propaganda-tour",
-          "domain": "zerohedge.com",
-          "seendate": "20261125T064500Z",
+          "title": "5 Things Investors Need to Know About Wednesday Markets",
+          "url": "https://www.aol.com/articles/5-things-investors-know-wednesday-133820000.html",
+          "domain": "aol.com",
+          "seendate": "20261125T141500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Leekr Technology Brings Automotive - Grade Brake - by - Wire Solutions to Support Mass Production of Autonomous Vehicles",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70221755-leekr-technology-brings-automotive-grade-brake-by-wire-solutions-to-support-mass-production-of-autonomous-vehicles-008.htm",
-          "domain": "finanznachrichten.de",
-          "seendate": "20261125T064500Z",
+          "title": "Dutch foreign minister urges U . S . to drop proposed restrictions on ASML in China",
+          "url": "https://nltimes.nl/2026/11/25/dutch-foreign-minister-urges-us-drop-proposed-restrictions-asml-china",
+          "domain": "nltimes.nl",
+          "seendate": "20261125T141500Z",
           "language": "English",
-          "sourcecountry": "Germany"
+          "sourcecountry": "Netherlands"
         },
         {
-          "title": "Gold price prediction today : Is there any end to gold price fall ? Check November 25 , 2026 outlook",
-          "url": "https://timesofindia.indiatimes.com/business/india-business/gold-price-prediction-today-india-where-is-gold-silver-rate-headed-on-november-25-2026-mcx-gold-futures-outlook-us-iran-war-middle-east-tensions-federal-reserve/articleshow/136150452.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261125T064500Z",
+          "title": "School Assembly News Headlines ( November 26 , 2026 ): Top National , World , Education , Business News",
+          "url": "https://www.jagranjosh.com/news/school-assembly-news-headlines-november-26-2026-top-national-world-education-business-news-189203",
+          "domain": "jagranjosh.com",
+          "seendate": "20261125T141500Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "China Fujian is a coastline of clues",
-          "url": "https://asianews.network/fujian-china-a-coastline-of-clues/",
-          "domain": "asianews.network",
-          "seendate": "20261125T054500Z",
+          "title": "Pearl River Bridge Hosts China - Japan Culinary Exchange Focused on Foodservice Innovation",
+          "url": "http://www.australiannews.net/news/279452912/pearl-river-bridge-hosts-china-japan-culinary-exchange-focused-on-foodservice-innovation",
+          "domain": "australiannews.net",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "CHINA - BEIJING - CAI QI - PARTY REGULATION - NATIONAL MEETING ( CN )",
+          "url": "http://www.chinanationalnews.com/news/279453920/china-beijing-cai-qi-party-regulation-national-meeting-cn",
+          "domain": "chinanationalnews.com",
+          "seendate": "20261125T141500Z",
           "language": "English",
           "sourcecountry": "China"
+        },
+        {
+          "title": "Cabinet approves Rs 11 , 000 crore scheme to boost domestic manufacturing of construction equipment",
+          "url": "http://www.chinanationalnews.com/news/279453757/cabinet-approves-rs-11000-crore-scheme-to-boost-domestic-manufacturing-of-construction-equipment",
+          "domain": "chinanationalnews.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "40 , 000 smuggled Chinese goods destroyed at cement plant in northern Vietnam",
+          "url": "https://news.tuoitre.vn/40000-smuggled-chinese-goods-destroyed-at-cement-plant-in-northern-vietnam-103261125183239157.htm",
+          "domain": "news.tuoitre.vn",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": null
+        },
+        {
+          "title": "Why has China sent the first Pakistani astronaut to space ?",
+          "url": "https://www.bbc.co.uk/news/videos/cj5y1p067kxno",
+          "domain": "bbc.co.uk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "e . l . f . Beauty 2027 Outlook : Can This Beauty Disruptor Double in Five Years ?",
+          "url": "https://www.aol.com/articles/e-l-f-beautys-2027-134402000.html",
+          "domain": "aol.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "The world strangest travel superstitions",
+          "url": "https://www.aol.com/articles/world-strangest-travel-superstitions-100000000.html",
+          "domain": "aol.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Trump role in Jensen Huang controversy sparks fresh debate over tech political influence",
+          "url": "https://www.thenews.com.pk/latest/1425075-trumps-role-in-jensen-huangs-controversy-sparks-fresh-debate-over-techs-political-influence",
+          "domain": "thenews.com.pk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Shenzhou - 24 astronauts , including first foreigner , enter China Tiangong space station",
+          "url": "http://www.chinanationalnews.com/news/279453807/shenzhou-24-astronauts-including-first-foreigner-enter-china-tiangong-space-station",
+          "domain": "chinanationalnews.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "Jensen Huang return to Nvidia reignites Washington fight over China chip access",
+          "url": "https://www.thenews.com.pk/latest/1425062-jensen-huangs-return-to-nvidia-reignites-washington-fight-over-chinas-chip-access",
+          "domain": "thenews.com.pk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Bira warns independent retailers face pressure from cheap imports and new knife licensing rules - ATV Today",
+          "url": "https://www.atvtoday.co.uk/321947-retail-feature/",
+          "domain": "atvtoday.co.uk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "FOCUS | Shenzhou - 24 astronauts , including first foreigner , enter China Tiangong space station",
+          "url": "http://www.chinanationalnews.com/news/279453806/focus-shenzhou-24-astronauts-including-first-foreigner-enter-china-tiangong-space-station",
+          "domain": "chinanationalnews.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "Zoomlion Unveils New Strategic Positioning and Showcases AI and Electrification Solutions at bauma CHINA 2026",
+          "url": "http://www.australiannews.net/news/279453818/zoomlion-unveils-new-strategic-positioning-and-showcases-ai-and-electrification-solutions-at-bauma-china-2026",
+          "domain": "australiannews.net",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Lego expands in Europe with around 1 - billion - euro Portugal plant",
+          "url": "http://www.australiannews.net/news/279450858/lego-expands-in-europe-with-around-1-billion-euro-portugal-plant",
+          "domain": "australiannews.net",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "China warns US against imposing new tariffs",
+          "url": "https://arynews.tv/china-warns-us-imposing-new-tariffs",
+          "domain": "arynews.tv",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "BGM0504 Monotherapy Outperforms Tirzepatide in Glucose Lowering ; Combination Therapy Shows Head - to - Head Superiority to Semaglutide -- BrightGene BGM0504 Takes on Global Benchmarks in Diabetes Treatment",
+          "url": "https://www.prnewswire.com/news-releases/bgm0504-monotherapy-outperforms-tirzepatide-in-glucose-lowering-combination-therapy-shows-head-to-head-superiority-to-semaglutide--brightgenes-bgm0504-takes-on-global-benchmarks-in-diabetes-treatment-302950554.html",
+          "domain": "prnewswire.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
         }
       ]
     },
@@ -351,9 +351,129 @@
       "status": "ok",
       "attempted": true,
       "error": null,
-      "fetchedAt": "2026-11-25T13:42:11.392Z",
-      "checkedAt": "2026-11-25T13:42:11.392Z",
+      "fetchedAt": "2026-11-25T19:17:33.935Z",
+      "checkedAt": "2026-11-25T19:17:33.935Z",
       "articles": [
+        {
+          "title": "UK moving military aircraft to hangars at night over possible drone threats , media reports say",
+          "url": "https://www.aol.com/articles/uk-raf-moving-aircraft-hangars-121827000.html",
+          "domain": "aol.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "School Assembly News Headlines ( November 26 , 2026 ): Top National , World , Education , Business News",
+          "url": "https://www.jagranjosh.com/news/school-assembly-news-headlines-november-26-2026-top-national-world-education-business-news-189203",
+          "domain": "jagranjosh.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Christmas decorations found in washed up container from ship hit by drones off Bulgaria Black Sea coast",
+          "url": "https://www.euronews.com/2026/11/25/christmas-decorations-found-in-washed-up-container-from-ship-hit-by-drones-off-bulgarias-b",
+          "domain": "euronews.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Vietnam Nha Trang unveils Christmas , New Year deals for visitors",
+          "url": "https://news.tuoitre.vn/vietnams-nha-trang-unveils-christmas-new-year-deals-for-visitors-103261125160758297.htm",
+          "domain": "news.tuoitre.vn",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": null
+        },
+        {
+          "title": "North Korea closes Swiss office in Pyongyang over sanctions on children camp",
+          "url": "https://www.morungexpress.com/north-korea-closes-swiss-office-in-pyongyang-over-sanctions-on-childrens-camp",
+          "domain": "morungexpress.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Libya vows retaliation for deaths in Ukrainian attack",
+          "url": "https://www.bordermail.com.au/story/9398434/libya-vows-retaliation-for-deaths-in-ukrainian-attack/",
+          "domain": "bordermail.com.au",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Indian Design and Healthcare Experts Share Insights at Moscow Culture . Media . Digital",
+          "url": "http://www.northkoreatimes.com/news/279453764/indian-design-and-healthcare-experts-share-insights-at-moscow-culture-media-digital",
+          "domain": "northkoreatimes.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "North Korea"
+        },
+        {
+          "title": "EAM Jaishankar , Russian FM Lavrov exchanged views on bilateral , global issues during phone call : MEA",
+          "url": "https://ianslive.in/eam-jaishankar-russian-fm-lavrov-exchanged-views-on-bilateral-global-issues-during-phone-call-mea--20261125190228",
+          "domain": "ianslive.in",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Krasnodar Quality of Life Rises Amid Russia Widest Housing Affordability Gap",
+          "url": "https://english.pravda.ru/news/russia/174334-krasnodar-quality-of-life-housing-gap/",
+          "domain": "english.pravda.ru",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Russia"
+        },
+        {
+          "title": "Dick Polman : Blue wave could help rid us of the Electoral College",
+          "url": "https://www.saratogian.com/2026/11/25/dick-polman-blue-wave-could-help-rid-us-of-the-electoral-college/",
+          "domain": "saratogian.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Russia draws red line on foreign troops in Ukraine",
+          "url": "https://www.thenews.com.pk/latest/1425060-russia-draws-red-line-on-foreign-troops-in-ukraine",
+          "domain": "thenews.com.pk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Sexiest arms dealer in the world flogs giant inflatable warplanes to Russia",
+          "url": "https://www.dailystar.co.uk/news/world-news/sexiest-arms-dealer-world-flogs-37914354",
+          "domain": "dailystar.co.uk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Spotting Drones Can Be Harder Than Downing Them , Latvia Says",
+          "url": "https://www.businessinsider.com/spotting-drones-be-harder-downing-them-latvia-says-russia-2026-11",
+          "domain": "businessinsider.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "The perception deepens that united states is abdicating to China",
+          "url": "http://www.australiannews.net/news/279450369/the-perception-deepens-that-usa-is-abdicating-to-china",
+          "domain": "australiannews.net",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "French FM defends Ukraine attacks on Russian ships in Libya",
+          "url": "http://www.bignewsnetwork.com/news/279454009/french-fm-defends-ukraine-attacks-on-russian-ships-in-libya",
+          "domain": "bignewsnetwork.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
         {
           "title": "U . S . Shelves Plans for Business Deals With Russia to End Ukraine War – FT",
           "url": "https://www.themoscowtimes.com/2026/11/25/us-shelves-plans-for-business-deals-with-russia-to-end-ukraine-war-ft-a94370",
@@ -393,6 +513,136 @@
           "seendate": "20261125T103000Z",
           "language": "English",
           "sourcecountry": "United States"
+        }
+      ]
+    },
+    "UKR": {
+      "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
+      "status": "ok",
+      "attempted": true,
+      "error": null,
+      "fetchedAt": "2026-11-25T19:13:47.458Z",
+      "checkedAt": "2026-11-25T19:13:47.458Z",
+      "articles": [
+        {
+          "title": "School Assembly News Headlines ( November 26 , 2026 ): Top National , World , Education , Business News",
+          "url": "https://www.jagranjosh.com/news/school-assembly-news-headlines-november-26-2026-top-national-world-education-business-news-189203",
+          "domain": "jagranjosh.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Russian attack damages Ukraine energy and gas sites , cuts power in five regions",
+          "url": "https://www.aol.com/articles/russian-attack-damages-ukraines-energy-125903000.html",
+          "domain": "aol.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Christmas decorations found in washed up container from ship hit by drones off Bulgaria Black Sea coast",
+          "url": "https://www.euronews.com/2026/11/25/christmas-decorations-found-in-washed-up-container-from-ship-hit-by-drones-off-bulgarias-b",
+          "domain": "euronews.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Libya vows retaliation for deaths in Ukrainian attack",
+          "url": "https://www.bordermail.com.au/story/9398434/libya-vows-retaliation-for-deaths-in-ukrainian-attack/",
+          "domain": "bordermail.com.au",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "EAM Jaishankar , Russian FM Lavrov exchanged views on bilateral , global issues during phone call : MEA",
+          "url": "https://ianslive.in/eam-jaishankar-russian-fm-lavrov-exchanged-views-on-bilateral-global-issues-during-phone-call-mea--20261125190228",
+          "domain": "ianslive.in",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Russia draws red line on foreign troops in Ukraine",
+          "url": "https://www.thenews.com.pk/latest/1425060-russia-draws-red-line-on-foreign-troops-in-ukraine",
+          "domain": "thenews.com.pk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Sexiest arms dealer in the world flogs giant inflatable warplanes to Russia",
+          "url": "https://www.dailystar.co.uk/news/world-news/sexiest-arms-dealer-world-flogs-37914354",
+          "domain": "dailystar.co.uk",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "If you have one of these 50 names , youre almost certainly Gen X",
+          "url": "https://www.aol.com/articles/one-50-names-probably-gen-144953000.html",
+          "domain": "aol.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Spotting Drones Can Be Harder Than Downing Them , Latvia Says",
+          "url": "https://www.businessinsider.com/spotting-drones-be-harder-downing-them-latvia-says-russia-2026-11",
+          "domain": "businessinsider.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "The perception deepens that united states is abdicating to China",
+          "url": "http://www.australiannews.net/news/279450369/the-perception-deepens-that-usa-is-abdicating-to-china",
+          "domain": "australiannews.net",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "French FM defends Ukraine attacks on Russian ships in Libya",
+          "url": "http://www.bignewsnetwork.com/news/279454009/french-fm-defends-ukraine-attacks-on-russian-ships-in-libya",
+          "domain": "bignewsnetwork.com",
+          "seendate": "20261125T141500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "U . S . Shelves Plans for Business Deals With Russia to End Ukraine War – FT",
+          "url": "https://www.themoscowtimes.com/2026/11/25/us-shelves-plans-for-business-deals-with-russia-to-end-ukraine-war-ft-a94370",
+          "domain": "themoscowtimes.com",
+          "seendate": "20261125T103000Z",
+          "language": "English",
+          "sourcecountry": "Russia"
+        },
+        {
+          "title": "First Hydrogen Showcases Completed UGV Drone",
+          "url": "https://www.thewhig.com/press-releases/newsfile/first-hydrogen-showcases-completed-ugv-drone/",
+          "domain": "thewhig.com",
+          "seendate": "20261125T103000Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Lukashenko on Trump role in Ukrainian issue : he prevented WWIII",
+          "url": "https://www.sb.by/en/lukashenko-on-trump-s-role-in-ukrainian-issue-he-prevented-wwiii-.html",
+          "domain": "sb.by",
+          "seendate": "20261125T103000Z",
+          "language": "English",
+          "sourcecountry": "Belarus"
+        },
+        {
+          "title": "Peter Magyar and Volodymyr Zelenskyy open new chapter in Ukraine - Hungary relations",
+          "url": "https://www.euronews.com/2026/11/25/peter-magyar-and-volodymyr-zelenskyy-open-new-chapter-in-ukraine-hungary-relations",
+          "domain": "euronews.com",
+          "seendate": "20261125T103000Z",
+          "language": "English",
+          "sourcecountry": "United States"
         },
         {
           "title": "PureLube wins GH¢150 , 000 at Green Tech Innovation Challenge",
@@ -403,44 +653,12 @@
           "sourcecountry": "Ghana"
         },
         {
-          "title": "This day in history : How Spokane compared to the Soviet Union , according to the city mayor post tour . Plus , Bing and Al were back",
-          "url": "https://www.spokesman.com/stories/2026/nov/25/this-day-in-history-how-spokane-compared-to-the-so/",
-          "domain": "spokesman.com",
-          "seendate": "20261125T103000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Best Bets : 5 Things to Do , November 25 , 2026",
-          "url": "https://www.republicanherald.com/2026/11/25/best-bets-5-things-to-do-november-25-2026/",
-          "domain": "republicanherald.com",
+          "title": "Burnham calls for watershed moment as Government moves to limit NDAs",
+          "url": "https://www.northwichguardian.co.uk/news/national/26760099.burnham-calls-watershed-moment-government-moves-limit-ndas/",
+          "domain": "northwichguardian.co.uk",
           "seendate": "20261125T093000Z",
           "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Germany braces for possible US troop cuts as Pentagon nears decision",
-          "url": "https://www.politico.eu/article/germany-us-troop-cut-pentagon-decision/",
-          "domain": "politico.eu",
-          "seendate": "20261125T064500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Russia Announces $200 Million in Goods Supply .",
-          "url": "https://www.khaama.com/russia-afghanistan-200-million-goods-supply-agreements/",
-          "domain": "khaama.com",
-          "seendate": "20261125T064500Z",
-          "language": "English",
-          "sourcecountry": "Afghanistan"
-        },
-        {
-          "title": "Seoul voices regret to Moscow over Russian jet flight near Ulleung Island",
-          "url": "http://english.hani.co.kr/arti/english_edition/e_national/1288997.html",
-          "domain": "english.hani.co.kr",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "South Korea"
+          "sourcecountry": "United Kingdom"
         },
         {
           "title": "North Korea demands closure of Switzerland new diplomatic office and orders diplomat to leave – Brandon Sun",
@@ -463,224 +681,6 @@
           "url": "https://www.thevermilion.com/ukrainian-drones-sink-two-russian-ships-tajani-the-war-a-few-hundred-kilometers-from-italy/article_23227/",
           "domain": "thevermilion.com",
           "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Belarus Continues To Persecute Activists , Journalists And Defence Lawyers , Warn UN Experts",
-          "url": "https://www.scoop.co.nz/stories/WO2611/S00243/belarus-continues-to-persecute-activists-journalists-and-defence-lawyers-warn-un-experts.htm",
-          "domain": "scoop.co.nz",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "New Zealand"
-        },
-        {
-          "title": "North Korea demands closure of Switzerland new diplomatic office and orders diplomat to leave",
-          "url": "http://www.thegazette.com/news/world/north-korea-demands-closure-of-switzerlands-new-diplomatic-office-and-orders-diplomat-to-leave/article_0442c405-e858-5f8b-8d28-28931ba9e579.html",
-          "domain": "thegazette.com",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "​China Launches First Foreign Astronaut , Pakistan Muhammad Zeeshan Ali , to Tiangong Space Station Aboard Shenzhou - 24 on Long March 2F Rocket - Pragativadi I Latest Odisha News in English I Breaking News",
-          "url": "https://pragativadi.com/china-launches-first-foreign-astronaut-pakistans-muhammad-zeeshan-ali-to-tiangong-space-station-aboard-shenzhou-24-on-long-march-2f-rocket/",
-          "domain": "pragativadi.com",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Zelenskyy confirms strike on Russian vessel - News Today",
-          "url": "https://newstodaynet.com/2026/11/25/zelenskyy-confirms-strike-on-russian-vessel/",
-          "domain": "newstodaynet.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Putin calls domestic fuel market stable , vows response to refinery attacks",
-          "url": "https://akipress.com/news:933041:Putin_calls_domestic_fuel_market_stable,_vows_response_to_refinery_attacks/",
-          "domain": "akipress.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Kyrgyzstan"
-        },
-        {
-          "title": "Caspian Shipping Routes into Iran Under Pressure",
-          "url": "https://maritime-executive.com/editorials/caspian-shipping-routes-into-iran-under-pressure",
-          "domain": "maritime-executive.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        }
-      ]
-    },
-    "UKR": {
-      "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "error",
-      "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-25T07:42:49.288Z",
-      "checkedAt": "2026-11-25T13:43:39.932Z",
-      "articles": [
-        {
-          "title": "North Korea demands closure of Switzerland new diplomatic office and orders diplomat to leave – Brandon Sun",
-          "url": "https://www.brandonsun.com/world/2026/11/24/north-korea-declares-a-swiss-diplomat-persona-non-grata-and-orders-him-to-leave",
-          "domain": "brandonsun.com",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "Canada"
-        },
-        {
-          "title": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia - Grenada Chronicle – Daily Grenada And Caribbean News",
-          "url": "https://grenadachronicle.com/south-africa-convicts-zimbabwean-who-tried-to-fight-ukraine-for-russia/",
-          "domain": "grenadachronicle.com",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Ukrainian drones sink two Russian ships , Tajani : The war a few hundred kilometers from Italy",
-          "url": "https://www.thevermilion.com/ukrainian-drones-sink-two-russian-ships-tajani-the-war-a-few-hundred-kilometers-from-italy/article_23227/",
-          "domain": "thevermilion.com",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Spain economy has grown under Sánchez , but many voters arent feeling it . 5 charts explain why",
-          "url": "http://www.thegazette.com/news/world/spains-economy-has-grown-under-s-nchez-but-many-voters-arent-feeling-it-5-charts/article_979414fc-5aeb-5e2e-881e-21f99a90982f.html",
-          "domain": "thegazette.com",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Belarus Continues To Persecute Activists , Journalists And Defence Lawyers , Warn UN Experts",
-          "url": "https://www.scoop.co.nz/stories/WO2611/S00243/belarus-continues-to-persecute-activists-journalists-and-defence-lawyers-warn-un-experts.htm",
-          "domain": "scoop.co.nz",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "New Zealand"
-        },
-        {
-          "title": "North Korea demands closure of Switzerland new diplomatic office and orders diplomat to leave",
-          "url": "http://www.thegazette.com/news/world/north-korea-demands-closure-of-switzerlands-new-diplomatic-office-and-orders-diplomat-to-leave/article_0442c405-e858-5f8b-8d28-28931ba9e579.html",
-          "domain": "thegazette.com",
-          "seendate": "20261125T054500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Zelenskyy confirms strike on Russian vessel - News Today",
-          "url": "https://newstodaynet.com/2026/11/25/zelenskyy-confirms-strike-on-russian-vessel/",
-          "domain": "newstodaynet.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "In landmine - ravaged Myanmar , a rebel with an artificial leg vows to fight on",
-          "url": "https://bdnews24.com/neighbours/63mknuxu6n",
-          "domain": "bdnews24.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "Yalta 2 . 0 ? Please .",
-          "url": "https://original.antiwar.com/james-carden/2026/11/24/yalta-2-0-please/",
-          "domain": "original.antiwar.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Global landmine toll climbs to six ‑ year high , 6 , 929 killed or injured in 2025",
-          "url": "https://kenya-today.com/report-global-landmine-toll-climbs-to-sixyear-high-6929-killed-or-injured-in-2025-32831/",
-          "domain": "kenya-today.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Kenya"
-        },
-        {
-          "title": "The Rand Corporation speaks of war in Europe",
-          "url": "http://www.venezuelastar.com/news/279452916/the-rand-corporation-speaks-of-war-in-europe",
-          "domain": "venezuelastar.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Venezuela"
-        },
-        {
-          "title": "Benghazi : 2 dead after Ukrainian attack on Russian warship",
-          "url": "https://www.dw.com/en/libya-ukrainian-attack-benghazi-2-dead/a-80042348",
-          "domain": "dw.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Germany"
-        },
-        {
-          "title": "Global disaster misinfo fuels panic - buying at chain stores",
-          "url": "https://www.koreatimes.co.kr/world/20261125/global-disaster-misinfo-fuels-panic-buying-at-chain-stores",
-          "domain": "koreatimes.co.kr",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "South Korea"
-        },
-        {
-          "title": "Pentagon sharply rebukes Canada over defense spending and the F - 35 fighter jet review",
-          "url": "https://www.pottsmerc.com/2026/11/23/canada-us-defense/",
-          "domain": "pottsmerc.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Ukraine war support : Why European voters are increasingly turning against Kyiv military aid",
-          "url": "https://www.theage.com.au/world/europe/ukraine-just-scored-a-stunning-success-now-it-needs-a-win-with-european-voters-20261125-p61gzz.html",
-          "domain": "theage.com.au",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Australia"
-        },
-        {
-          "title": "B . C . couple app celebrating chonky cats goes global",
-          "url": "https://www.cp24.com/news/canada/2026/11/25/whimsy-and-community-bc-couples-app-celebrating-chonky-cats-gains-traction-online/",
-          "domain": "cp24.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Canada"
-        },
-        {
-          "title": "Peskov : Europe wants to expand Ukraine talks format",
-          "url": "https://www.azernews.az/region/268038.html",
-          "domain": "azernews.az",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Azerbaijan"
-        },
-        {
-          "title": "North Korea declares Swiss diplomat persona non grata , orders him to leave",
-          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/north-korea-declares-swiss-diplomat-persona-non-grata-orders-him-to-leave",
-          "domain": "koreatimes.co.kr",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "South Korea"
-        },
-        {
-          "title": "Russian strike kills two people in Ukraine Odesa region , governor says",
-          "url": "https://bdnews24.com/world/europe/95qng1e396",
-          "domain": "bdnews24.com",
-          "seendate": "20261125T051500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "No Room for Complacency at Ukrainian Training Camp",
-          "url": "https://www.miragenews.com/no-room-for-complacency-at-ukrainian-training-1783408/",
-          "domain": "miragenews.com",
-          "seendate": "20261125T044500Z",
           "language": "English",
           "sourcecountry": "United States"
         }
@@ -690,9 +690,9 @@
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
       "status": "error",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-25T13:41:04.289Z",
+      "checkedAt": "2026-11-25T19:13:23.891Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
