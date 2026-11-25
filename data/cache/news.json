@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-24T19:16:41.170Z",
-  "lastSuccessAt": "2026-11-24T19:19:09.035Z",
+  "checkedAt": "2026-11-25T01:35:41.726Z",
+  "lastSuccessAt": "2026-11-25T01:35:55.812Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-24T19:19:09.035Z",
-      "checkedAt": "2026-11-24T19:19:09.035Z",
+      "checkedAt": "2026-11-25T01:39:07.450Z",
       "articles": [
         {
           "title": "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO",
@@ -182,7 +182,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:42:12.515Z",
-      "checkedAt": "2026-11-24T19:22:08.628Z",
+      "checkedAt": "2026-11-25T01:39:07.450Z",
       "articles": [
         {
           "title": "Massive win for Australia as Solomon Islands scraps China security deal",
@@ -348,171 +348,171 @@
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-22T07:29:44.279Z",
-      "checkedAt": "2026-11-24T19:17:50.190Z",
+      "error": null,
+      "fetchedAt": "2026-11-25T01:35:55.812Z",
+      "checkedAt": "2026-11-25T01:35:55.812Z",
       "articles": [
         {
-          "title": "In Ukraine , the fight to keep winter outside begins with a broken window – Winnipeg Free Press",
-          "url": "https://www.winnipegfreepress.com/world/2026/11/22/in-ukraine-the-fight-to-keep-winter-outside-begins-with-a-broken-window",
-          "domain": "winnipegfreepress.com",
-          "seendate": "20261122T053000Z",
+          "title": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia",
+          "url": "https://www.aljazeera.com/news/2026/11/24/south-africa-convicts-zimbabwean-who-tried-to-fight-ukraine-for-russia",
+          "domain": "aljazeera.com",
+          "seendate": "20261125T011500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Huang return to Nvidia on Trump say - so raises red flags about corporate governance",
+          "url": "https://www.theglobeandmail.com/business/commentary/article-huangs-return-to-nvidia-on-trumps-say-so-raises-red-flags-about/",
+          "domain": "theglobeandmail.com",
+          "seendate": "20261125T011500Z",
           "language": "English",
           "sourcecountry": "Canada"
         },
         {
-          "title": "In Ukraine , the fight to keep winter outside begins with a broken window",
-          "url": "https://www.clickorlando.com/news/world/2026/11/22/in-ukraine-the-fight-to-keep-winter-outside-begins-with-a-broken-window/",
-          "domain": "clickorlando.com",
-          "seendate": "20261122T053000Z",
+          "title": "These are the 17 greatest spy movies of all time – how many have you watched ?",
+          "url": "https://www.historyextra.com/membership/17-greatest-spy-movies-films-james-bond/",
+          "domain": "historyextra.com",
+          "seendate": "20261125T011500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Huawei is guilty of conspiracy to steal trade secrets , US jury finds",
+          "url": "https://www.thetimes-tribune.com/2026/11/24/huawei-guilty-conspiracy-trial/",
+          "domain": "thetimes-tribune.com",
+          "seendate": "20261125T011500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Trump says confronting dangers on Korean Peninsula discussed at 3 - way summit with Xi , Putin",
-          "url": "https://www.koreaherald.com:443/article/10944597",
-          "domain": "koreaherald.com",
-          "seendate": "20261122T053000Z",
+          "title": "6 Psychological Thrillers From the 2000s That Are 10 / 10 Masterpieces",
+          "url": "https://collider.com/psychological-thrillers-2000s-perfect-masterpieces/",
+          "domain": "collider.com",
+          "seendate": "20261125T011500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Russia and Ukraine – Opportunity Knocks",
+          "url": "https://oregoncatalyst.com/100732-russia-ukraine-opportunity-knocks.html",
+          "domain": "oregoncatalyst.com",
+          "seendate": "20261125T011500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Russia Says Tu - 160 Strategic Bombers Conducted Planned Flight over International Waters in East Sea",
+          "url": "https://world.kbs.co.kr/service/news_view.htm?lang=e&Seq_Code=205804",
+          "domain": "world.kbs.co.kr",
+          "seendate": "20261125T004500Z",
           "language": "English",
           "sourcecountry": "South Korea"
         },
         {
-          "title": "Luxury for the elite , hardship for the masses : North Korea economic divide",
-          "url": "https://www.koreaherald.com/article/10945063",
-          "domain": "koreaherald.com",
-          "seendate": "20261122T053000Z",
+          "title": "World : Britain warns united kingdom military suppliers to Ukraine over R",
+          "url": "https://www.newvision.co.ug/category/world/britain-warns-uk-military-suppliers-to-ukrain-NV_244748_112026",
+          "domain": "newvision.co.ug",
+          "seendate": "20261125T004500Z",
           "language": "English",
-          "sourcecountry": "South Korea"
+          "sourcecountry": "Uganda"
         },
         {
-          "title": "Shared cultural heritage a strong bridge connecting SCO nations : Union Minister Gajendra Shekhawat",
-          "url": "http://www.shanghaisun.com/news/279447418/shared-cultural-heritage-a-strong-bridge-connecting-sco-nations-union-minister-gajendra-shekhawat",
-          "domain": "shanghaisun.com",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "China"
-        },
-        {
-          "title": "RAF next jet perhaps last crewed fighter , says Air Chief Marshal",
-          "url": "https://www.malverngazette.co.uk/news/national/26751287.rafs-next-jet-perhaps-last-crewed-fighter-says-air-chief-marshal/",
-          "domain": "malverngazette.co.uk",
-          "seendate": "20261122T003000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Trump ex - partner spills on Epstein regular role at his beauty pageants : report",
-          "url": "https://www.rawstory.com/trump-epstein-2678486319/",
-          "domain": "rawstory.com",
-          "seendate": "20261122T003000Z",
+          "title": "Ukraine says attack on Russian ships in Libya was self - defence",
+          "url": "https://lufkindailynews.com/news_reuters/top_news/ukraine-says-attack-on-russian-ships-in-libya-was-self-defence/article_5f45e05c-23bf-5da3-bf9c-87349a98c0d7.html",
+          "domain": "lufkindailynews.com",
+          "seendate": "20261125T004500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Drones hit Russian cargo ship in Baltic , Finland tightens security",
-          "url": "https://timesofindia.indiatimes.com/world/europe/drones-hit-russian-cargo-ship-in-baltic-finland-tightens-security/articleshow/136065032.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261122T003000Z",
+          "title": "Washington Is Buying Its Way Out of China Tungsten Grip",
+          "url": "https://oilprice.com/Metals/Commodities/Washington-Is-Buying-Its-Way-Out-of-Chinas-Tungsten-Grip.html",
+          "domain": "oilprice.com",
+          "seendate": "20261125T004500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "FSB detains suspect over alleged border crossing from Norway – Norwegian police unaware",
+          "url": "https://www.thebarentsobserver.com/news/fsb-detains-suspect-over-alleged-border-crossing-from-norway-norwegian-police-unaware/462606",
+          "domain": "thebarentsobserver.com",
+          "seendate": "20261125T004500Z",
+          "language": "English",
+          "sourcecountry": "Russia"
+        },
+        {
+          "title": "Libya Haftar visits Turkiye days after Ukraine hits Russian warship - Grenada Chronicle – Daily Grenada And Caribbean News",
+          "url": "https://grenadachronicle.com/libyas-haftar-visits-turkiye-days-after-ukraine-hits-russian-warship/",
+          "domain": "grenadachronicle.com",
+          "seendate": "20261125T004500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "WHO Chief Offers Cuba Aid for Health Crisis",
+          "url": "https://www.riotimesonline.com/who-chief-offers-cuba-aid-health-crisis/",
+          "domain": "riotimesonline.com",
+          "seendate": "20261125T004500Z",
+          "language": "English",
+          "sourcecountry": "Brazil"
+        },
+        {
+          "title": "N Korea reviews Switzerland relations after sanctions on youth camp linked to Russia - Ukraine war",
+          "url": "https://www.dailyexcelsior.com/n-korea-reviews-switzerland-relations-after-sanctions-on-youth-camp-linked-to-russia-ukraine-war/",
+          "domain": "dailyexcelsior.com",
+          "seendate": "20261125T004500Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "Top 17 Comics , Graphic Novels & Manga",
-          "url": "https://paulgravett.com/articles/article/top_17_comics_graphic_novels_manga21",
-          "domain": "paulgravett.com",
-          "seendate": "20261122T003000Z",
+          "title": "India to field top athletes for inaugural BIMSTEC Under - 23 Athletics Championships 2026",
+          "url": "http://www.southeastasiapost.com/news/279452698/india-to-field-top-athletes-for-inaugural-bimstec-under-23-athletics-championships-2026",
+          "domain": "southeastasiapost.com",
+          "seendate": "20261125T004500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "Central African Roadblock Tolls Alleged",
+          "url": "https://www.riotimesonline.com/central-african-roadblock-tolls-alleged/",
+          "domain": "riotimesonline.com",
+          "seendate": "20261125T004500Z",
+          "language": "English",
+          "sourcecountry": "Brazil"
+        },
+        {
+          "title": "Venezuela reveals $237 . 5 billion debt pile in key step towards restructuring",
+          "url": "https://lufkindailynews.com/news_reuters/business/venezuela-reveals-237-5-billion-debt-pile-in-key-step-towards-restructuring/article_45c76735-c2f1-50cc-825a-0935a162fd8a.html",
+          "domain": "lufkindailynews.com",
+          "seendate": "20261125T004500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "RAF next jet perhaps last crewed fighter , says Air Chief Marshal | The Wiltshire Gazette and Herald",
-          "url": "https://www.gazetteandherald.co.uk/news/national/26751287.rafs-next-jet-perhaps-last-crewed-fighter-says-air-chief-marshal/",
-          "domain": "gazetteandherald.co.uk",
-          "seendate": "20261122T003000Z",
+          "title": "Ukraine , Hungary agree to deepen energy cooperation : Zelenskyy",
+          "url": "https://aa.com.tr/en/world/ukraine-hungary-agree-to-deepen-energy-cooperation-zelenskyy/4136384",
+          "domain": "aa.com.tr",
+          "seendate": "20261125T003000Z",
           "language": "English",
-          "sourcecountry": "United Kingdom"
+          "sourcecountry": "Turkey"
         },
         {
-          "title": "Denmark Expels Russian Attaché Over Foiled Plot to Kill Rapper",
-          "url": "https://www.hngn.com/articles/273915/20261121/denmark-expels-russian-attache-over-foiled-plot-kill-rapper.htm",
-          "domain": "hngn.com",
-          "seendate": "20261122T003000Z",
+          "title": "Washington pushes NATO 3 . 0",
+          "url": "http://www.batonrougepost.com/news/279452782/washington-pushes-nato-30",
+          "domain": "batonrougepost.com",
+          "seendate": "20261125T003000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "RAF building its last manned fighter jet as drones take over",
-          "url": "https://www.telegraph.co.uk/news/2026/11/21/raf-building-last-manned-fighter-jet-drones-harv-smyth/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
+          "title": "Trump is attempting to hijack Canada Department of National Defence via NORAD : The Canadian Business Daily",
+          "url": "https://www.agoracosmopolitan.com/news/canadian_politics/2026/11/24/15167-trump-is-attempting-to-hijack-canadas-department-of-national-defence-via-norad.html",
+          "domain": "agoracosmopolitan.com",
+          "seendate": "20261125T003000Z",
           "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "31 Years After Dayton : How Milorad Dodik Is Threatening Stability in Bosnia and the Western Balkans",
-          "url": "http://www.bgnes.com/no-filter/31-years-after-dayton-how-milorad-dodik-is-threatening-stability-in-bosnia-and-the-western-balkans",
-          "domain": "bgnes.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "Bulgaria"
-        },
-        {
-          "title": "FBI investigates apparent hack of database holding records on fugitives , missing people",
-          "url": "https://wlos.com/news/nation-world/fbi-investigates-apparent-hack-of-database-holding-records-on-fugitives-missing-people",
-          "domain": "wlos.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Russian triple - tap attack in Ukraine kills emergency worker and 7 - year - old in Zelensky home city - LocalNews8 . com",
-          "url": "https://localnews8.com/news/national-world/cnn-world/2026/11/21/russian-triple-tap-attack-in-ukraine-kills-emergency-worker-and-7-year-old-in-zelenskys-home-city/",
-          "domain": "localnews8.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Poland failure to call Putin bluff exposes Nato fragility",
-          "url": "https://www.telegraph.co.uk/world-news/2026/11/21/polands-failure-to-call-putins-bluff-exposes-nato-fragility/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "NATO will defend every inch of Polish territory , Rutte says",
-          "url": "https://www.hindustantimes.com/world-news/us-news/nato-will-defend-every-inch-of-polish-territory-rutte-says-101795288086921.html",
-          "domain": "hindustantimes.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "FBI criminal database hacked for second time in three months",
-          "url": "https://www.telegraph.co.uk/us/news/2026/11/21/fbi-criminal-database-hacked-second-time-trump-cyber-attack/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Trump orders contractors to check with White House first",
-          "url": "https://www.wgal.com/article/white-house-order-federal-contractors-congress/74497986",
-          "domain": "wgal.com",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "RAF fighter jets wont need pilots for much longer",
-          "url": "https://www.telegraph.co.uk/news/2026/11/21/raf-fighter-jets-wont-need-pilots-much-longer/",
-          "domain": "telegraph.co.uk",
-          "seendate": "20261121T203000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
+          "sourcecountry": "Canada"
         }
       ]
     },
@@ -522,7 +522,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:40:47.476Z",
-      "checkedAt": "2026-11-24T19:20:38.835Z",
+      "checkedAt": "2026-11-25T01:37:30.697Z",
       "articles": [
         {
           "title": "Sen . John Kennedy says he may run for president if he gets fed up",
@@ -692,7 +692,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-24T19:22:08.629Z",
+      "checkedAt": "2026-11-25T01:39:07.450Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
