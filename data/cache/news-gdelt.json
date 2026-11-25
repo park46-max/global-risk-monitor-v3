@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-24T22:19:26.499Z",
- "checkedAt": "2026-11-24T22:19:26.499Z",
- "lastSuccessAt": "2026-11-24T22:19:26.499Z",
+ "generatedAt": "2026-11-25T01:46:06.110Z",
+ "checkedAt": "2026-11-25T01:46:06.110Z",
+ "lastSuccessAt": "2026-11-25T01:46:06.110Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,7 +79,7 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 33,
-  "groupedDuplicates": 90,
+  "groupedDuplicates": 44,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "feeds": {
@@ -90,16 +90,14 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-24T22:19:26.499Z",
-   "lastSuccessAt": "2026-11-24T22:19:26.499Z",
+   "checkedAt": "2026-11-25T01:46:06.110Z",
+   "lastSuccessAt": "2026-11-25T01:46:06.110Z",
    "error": null,
-   "latestFile": "20261124221500"
+   "latestFile": "20261125014500",
+   "warning": "3 of 12 files could not be read this run"
   }
  },
  "files": {
-  "20261121011500": "ok",
-  "20261121013000": "ok",
-  "20261121014500": "ok",
   "20261121020000": "ok",
   "20261121021500": "ok",
   "20261121023000": "ok",
@@ -450,7 +448,19 @@
   "20261124213000": "ok",
   "20261124214500": "ok",
   "20261124220000": "ok",
-  "20261124221500": "ok"
+  "20261124221500": "ok",
+  "20261124230000": "ok",
+  "20261124231500": "ok",
+  "20261124233000": "ok",
+  "20261124234500": "ok",
+  "20261125000000": "ok",
+  "20261125001500": "ok",
+  "20261125003000": "ok",
+  "20261125004500": "ok",
+  "20261125010000": "ok",
+  "20261125011500": "missing",
+  "20261125013000": "missing",
+  "20261125014500": "missing"
  },
  "items": [
   {
@@ -715,7 +725,7 @@
     }
    },
    "firstSeenAt": "2026-11-24T10:26:38.519Z",
-   "lastSeenAt": "2026-11-24T16:32:15.953Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
    "relevance": {
     "score": 8,
     "tier": "high",
@@ -743,9 +753,16 @@
      "url": "https://www.winnipegfreepress.com/business/2026/11/24/north-korea-reviews-switzerland-relations-after-sanctions-on-youth-camp-linked-to-russia-ukraine-war",
      "published": "2026-11-24T07:35:00.000Z",
      "seenByGdelt": "2026-11-24T08:00:00.000Z"
+    },
+    {
+     "publisher": "dailyexcelsior.com",
+     "publisherId": "gdelt",
+     "url": "https://www.dailyexcelsior.com/n-korea-reviews-switzerland-relations-after-sanctions-on-youth-camp-linked-to-russia-ukraine-war/",
+     "published": null,
+     "seenByGdelt": "2026-11-25T00:45:00.000Z"
     }
    ],
-   "variantsTotal": 1
+   "variantsTotal": 2
   },
   {
    "title": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
@@ -840,73 +857,39 @@
    }
   },
   {
-   "title": "GAO Finds Pentagon Lacks Coordinated View of Military Space Supply Chain Risks – SatNews",
-   "url": "https://satnews.com/2026/11/21/gao-finds-pentagon-lacks-coordinated-view-of-military-space-supply-chain-risks/",
-   "publisher": "satnews.com",
+   "title": "China's space diplomacy belied by Russia's nuclear weapon satellite",
+   "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
+   "publisher": "washingtonexaminer.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-21T23:45:00.000Z",
+   "published": "2026-11-24T21:11:00.000Z",
+   "seenByGdelt": "2026-11-25T00:30:00.000Z",
    "matches": {
-    "USA": {
-     "level": "institution",
-     "terms": [
-      "Pentagon"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-22T01:35:48.595Z",
-   "lastSeenAt": "2026-11-22T01:35:48.595Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "supply chain"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Iran's threats 'real and actionable': MP warns US must choose missiles or diplomacy",
-   "url": "https://www.presstv.co.uk/Detail/2026/11/21/781288/iranian-mp-warns-us-tehrans-threats-real-and-actionable",
-   "publisher": "presstv.co.uk",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-22T01:00:00.000Z",
-   "matches": {
-    "USA": {
+    "CHN": {
      "level": "country",
      "terms": [
-      "US"
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
      ]
     }
    },
-   "firstSeenAt": "2026-11-22T01:35:48.595Z",
-   "lastSeenAt": "2026-11-22T01:35:48.595Z",
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
    "relevance": {
-    "score": 7,
+    "score": 8,
     "tier": "high",
     "topics": [
      {
       "id": "security",
       "label": "Security",
       "terms": [
-       "missiles"
+       "nuclear"
       ]
      },
      {
@@ -914,6 +897,52 @@
       "label": "Diplomacy",
       "terms": [
        "diplomacy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
+   "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
+   "publisher": "ibtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T22:53:00.000Z",
+   "seenByGdelt": "2026-11-24T23:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "espionage"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "sanctions"
       ]
      }
     ]
@@ -2637,6 +2666,46 @@
    }
   },
   {
+   "title": "U.S. Dollar Slides Amid Renewed Concerns Of Fresh Tariff War",
+   "url": "https://www.rttnews.com/3717686/u-s-dollar-slides-amid-renewed-concerns-of-fresh-tariff-war.aspx",
+   "publisher": "rttnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T22:00:00.000Z",
+   "seenByGdelt": "2026-11-24T23:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariff"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "US War on Iran, Day 270: Iranians Face Power Cuts and Surging Inflation",
    "url": "https://eaworldview.com/2026/11/us-war-on-iran-power-cuts-and-surging-inflation/",
    "publisher": "eaworldview.com",
@@ -2988,45 +3057,6 @@
    }
   },
   {
-   "title": "Foreign Minister warns US-China rivalry threatens peace",
-   "url": "https://www.abc.net.au/listen/programs/am/foreign-minister-warns-us-china-rivalry-threatens-peace/107419678",
-   "publisher": "abc.net.au",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T23:43:00.000Z",
-   "seenByGdelt": "2026-11-24T02:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T04:25:34.662Z",
-   "lastSeenAt": "2026-11-24T04:25:34.662Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "foreign minister"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "Taiwan Trade Deal Could Help Canada Limit China's Economic Leverage – China Money Network",
    "url": "https://www.chinamoneynetwork.com/2026/11/24/taiwan-trade-deal-could-help-canada-limit-chinas-economic-leverage",
    "publisher": "chinamoneynetwork.com",
@@ -3064,259 +3094,6 @@
      }
     ]
    }
-  },
-  {
-   "title": "US Army sergeant pleads guilty in China-linked defence information scheme",
-   "url": "https://www.prokerala.com/news/articles/a1840339.html",
-   "publisher": "prokerala.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T02:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T04:25:34.662Z",
-   "lastSeenAt": "2026-11-24T04:25:34.662Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "army"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Army sergeant pleads guilty to cashing in on US military secrets in China-linked plot, DOJ says",
-   "url": "https://www.wrganews.com/2026/11/23/army-sergeant-pleads-guilty-to-cashing-in-on-us-military-secrets-in-china-linked-plot-doj-says/",
-   "publisher": "wrganews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T02:48:00.000Z",
-   "seenByGdelt": "2026-11-24T07:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T07:47:29.086Z",
-   "lastSeenAt": "2026-11-24T16:32:15.953Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military",
-       "army"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Washington-based U.S. soldier pleads guilty to selling classified military info to China",
-   "url": "https://www.kptv.com/2026/11/24/washington-based-us-soldier-pleads-guilty-selling-classified-military-info-china/",
-   "publisher": "kptv.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T03:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T04:25:34.662Z",
-   "lastSeenAt": "2026-11-24T04:25:34.662Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Trump Says US Will Catch China On Rare Earth Mineral Production In 10 Months",
-   "url": "https://www.zerohedge.com/markets/trump-says-us-will-catch-china-rare-earth-mineral-production-10-months",
-   "publisher": "zerohedge.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T04:25:00.000Z",
-   "seenByGdelt": "2026-11-24T05:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T07:47:29.086Z",
-   "lastSeenAt": "2026-11-24T07:47:29.086Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "rare earth"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US ambassador to New Zealand denounces Auckland mayor's pro-China statements",
-   "url": "https://www.wsws.org/en/articles/2026/11/24/ouir-n24.html",
-   "publisher": "wsws.org",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T08:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T10:26:38.519Z",
-   "lastSeenAt": "2026-11-24T10:26:38.519Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "ambassador"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Army Sergeant Jian Zhao pleads guilty to selling US military secrets to China",
-   "url": "https://nypost.com/2026/11/24/us-news/army-sergeant-jian-zhao-pleads-guilty-to-selling-us-military-secrets-to-china/",
-   "publisher": "nypost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T08:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T10:26:38.519Z",
-   "lastSeenAt": "2026-11-24T10:26:38.519Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military",
-       "army"
-      ]
-     }
-    ]
-   },
-   "variants": [
-    {
-     "publisher": "stripes.com",
-     "publisherId": "gdelt",
-     "url": "https://www.stripes.com/branches/army/2026-11-24/army-sergeant-guilty-secrets-china-23563043.html",
-     "published": "2026-11-24T13:54:00.000Z",
-     "seenByGdelt": "2026-11-24T16:45:00.000Z"
-    },
-    {
-     "publisher": "news.az",
-     "publisherId": "gdelt",
-     "url": "https://news.az/news/us-army-sergeant-pleads-guilty-to-selling-military-secrets-to-china",
-     "published": null,
-     "seenByGdelt": "2026-11-24T22:00:00.000Z"
-    }
-   ],
-   "variantsTotal": 2
   },
   {
    "title": "China extends pause on US minerals ban to maintain truce",
@@ -3750,90 +3527,6 @@
    }
   },
   {
-   "title": "UK warns companies supporting Ukraine's military of potential Russian sabotage",
-   "url": "https://www.orissapost.com/uk-warns-companies-supporting-ukraines-military-of-potential-russian-sabotage/",
-   "publisher": "orissapost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T15:11:00.000Z",
-   "seenByGdelt": "2026-11-24T15:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T16:32:15.953Z",
-   "lastSeenAt": "2026-11-24T16:32:15.953Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Pentagon Boss Hegseth's Refusal to Ship Patriots Lets Russian Missiles Hit, Kill Ukrainian Civilians",
-   "url": "https://www.kyivpost.com/post/91070",
-   "publisher": "kyivpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T15:22:00.000Z",
-   "seenByGdelt": "2026-11-24T17:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "institution",
-     "terms": [
-      "Pentagon"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T19:25:26.804Z",
-   "lastSeenAt": "2026-11-24T19:25:26.804Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missiles"
-      ]
-     }
-    ]
-   }
-  },
-  {
    "title": "\"Get ready, the war is spiraling out of control\": Russians \"taking\" Sumy, Kharkiv - What will Europe do when Ukraine collapses",
    "url": "https://www.bankingnews.gr/diethni/articles/912988/get-ready-the-war-is-spiraling-out-of-control-russians-taking-sumy-kharkiv-what-will-europe-do-when-ukraine-collapses",
    "publisher": "bankingnews.gr",
@@ -3867,45 +3560,6 @@
       "label": "Security",
       "terms": [
        "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Zelensky Confirms Ukraine Was Behind Drone Attack on Russian Cargo Ship in Gulf of Finland",
-   "url": "https://www.themoscowtimes.com/2026/11/24/zelensky-confirms-ukraine-was-behind-drone-attack-on-russian-cargo-ship-in-gulf-of-finland-a94364",
-   "publisher": "themoscowtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T15:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T16:32:15.953Z",
-   "lastSeenAt": "2026-11-24T16:32:15.953Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "drone attack"
       ]
      }
     ]
@@ -4501,6 +4155,45 @@
    }
   },
   {
+   "title": "Chinese Embassy Trolls U.S. Embassy in Mexico Over Cartels, Drugs",
+   "url": "https://www.breitbart.com/border/2026/11/24/chinese-embassy-trolls-u-s-embassy-in-mexico-over-cartels-and-drugs/",
+   "publisher": "breitbart.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T17:58:00.000Z",
+   "seenByGdelt": "2026-11-25T00:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "embassy"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "As Ukraine sinks Russian ships, some NATO nations voice anxiety over war's spread to new regions",
    "url": "https://www.cbsnews.com/news/ukraine-russia-war-warship-cargo-ship-attacks-nato-allies-anxiety/",
    "publisher": "cbsnews.com",
@@ -4694,7 +4387,17 @@
       ]
      }
     ]
-   }
+   },
+   "variants": [
+    {
+     "publisher": "rediff.com",
+     "publisherId": "gdelt",
+     "url": "https://tv.rediff.com/news/us-plans-tariff-hike-on-india-china-among-several-nations/415082",
+     "published": null,
+     "seenByGdelt": "2026-11-25T01:00:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "Nvidia degrades U.S. national security as Chinese military snags its chips",
@@ -4799,6 +4502,51 @@
    },
    "firstSeenAt": "2026-11-24T22:19:26.499Z",
    "lastSeenAt": "2026-11-24T22:19:26.499Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "Putin's Body Count Just Surpassed Every Major U.S. War Combined: 720,000 Russians Dead in Ukraine – Twitchy: Hilarious Political Commentary & Current Events",
+   "url": "https://twitchy.com/justmindy/2026/11/24/russian-soldiers-killed-during-ukrainian-war-n2434732",
+   "publisher": "twitchy.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T20:30:00.000Z",
+   "seenByGdelt": "2026-11-24T23:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russians"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -5195,6 +4943,84 @@
    }
   },
   {
+   "title": "Libya's Haftar visits Turkiye days after Ukraine hits Russian warship - Grenada Chronicle – Daily Grenada And Caribbean News",
+   "url": "https://grenadachronicle.com/libyas-haftar-visits-turkiye-days-after-ukraine-hits-russian-warship/",
+   "publisher": "grenadachronicle.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T21:24:00.000Z",
+   "seenByGdelt": "2026-11-25T00:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "JBLM soldier pleads guilty to conspiring to send sensitive U.S. military information to China",
+   "url": "https://www.kiro7.com/news/local/jblm-soldier-pleads-guilty-conspiring-send-sensitive-us-military-information-china/AWH7ZKMGNNFV7M7PEWP64NZTBE/",
+   "publisher": "kiro7.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T21:28:00.000Z",
+   "seenByGdelt": "2026-11-25T00:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   }
+  },
+  {
    "title": "China Urges US to Revoke Proposed Telecom Restrictions, Warns of Damage to Bilateral Ties",
    "url": "https://sputnikglobe.com/20261124/china-urges-us-to-revoke-proposed-telecom-restrictions-warns-of-damage-to-bilateral-ties-1125140345.html",
    "publisher": "sputnikglobe.com",
@@ -5463,6 +5289,209 @@
       "label": "Security",
       "terms": [
        "military"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "'We have pissed them off': Watch as Chinese embassy in U.S. blasts 'ear shattering' cacophony against American women praying * WorldNetDaily * by Bob Unruh",
+   "url": "https://www.wnd.com/2026/11/we-have-pissed-them-watch-as-chinese-embassy/",
+   "publisher": "wnd.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T21:49:00.000Z",
+   "seenByGdelt": "2026-11-24T23:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "embassy"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US Army sergeant pleads guilty in scheme to sell military info to Chinese buyers",
+   "url": "https://www.jns.org/news/u-s-news/us-army-sergeant-pleads-guilty-in-scheme-to-sell-military-info-to-chinese-buyers",
+   "publisher": "jns.org",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T22:21:00.000Z",
+   "seenByGdelt": "2026-11-25T00:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military",
+       "army"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "State has spent €4.2bn on accommodating Ukrainians since Russian invasion",
+   "url": "https://www.irishtimes.com/ireland/2026/11/24/state-has-spent-42bn-on-accommodating-ukrainians-since-russian-invasion/",
+   "publisher": "irishtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-24T23:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainians"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "invasion"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "US Army Sergeant Pleads Guilty in Scheme to Sell Military Secrets to China",
+   "url": "https://www.theepochtimes.com/china/us-army-sergeant-pleads-guilty-in-scheme-to-sell-military-secrets-to-china-6128891",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-24T23:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military",
+       "army"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "title": "China's J-10C Fighter Spotted With Russian 'Bunker-Buster' Missile. Taiwan's Airfields Could Face A New Threat.",
+   "url": "https://www.ibtimes.com/chinese-j-10c-modified-kh-29t-missile-3810159",
+   "publisher": "ibtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T23:59:00.000Z",
+   "seenByGdelt": "2026-11-25T00:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missile"
       ]
      }
     ]
@@ -5865,91 +5894,6 @@
    }
   },
   {
-   "title": "Some in Jensen Huang's native Taiwan welcome his return to Nvidia",
-   "url": "https://www.readingeagle.com/2026/11/24/jensen-huang-nvidia-return-taiwan/",
-   "publisher": "readingeagle.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T15:14:00.000Z",
-   "seenByGdelt": "2026-11-24T19:45:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T22:19:26.499Z",
-   "lastSeenAt": "2026-11-24T22:19:26.499Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "variants": [
-    {
-     "publisher": "mymotherlode.com",
-     "publisherId": "gdelt",
-     "url": "https://mymotherlode.com/news/national/11336100/some-in-jensen-huangs-native-taiwan-welcome-his-return-to-nvidia-despite-scandal.html",
-     "published": null,
-     "seenByGdelt": "2026-11-24T21:15:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
-  },
-  {
-   "title": "Jensen Huang return boosts Taiwan tech stock market",
-   "url": "https://www.straitstimes.com/asia/east-asia/jensen-huang-is-back-but-it-wont-be-business-as-usual-for-taiwans-tech-industry",
-   "publisher": "straitstimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T15:15:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T16:32:15.953Z",
-   "lastSeenAt": "2026-11-24T16:32:15.953Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
-   "title": "Taiwan celebrates Jensen Huang's return to Nvidia | Honolulu Star-Advertiser",
-   "url": "https://www.staradvertiser.com/2026/11/24/breaking-news/taiwan-celebrates-jensen-huangs-return-to-nvidia/",
-   "publisher": "staradvertiser.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T16:00:00.000Z",
-   "seenByGdelt": "2026-11-24T21:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T22:19:26.499Z",
-   "lastSeenAt": "2026-11-24T22:19:26.499Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   }
-  },
-  {
    "title": "Catering to Taiwan's super-aged society",
    "url": "https://www.taipeitimes.com/News/editorials/archives/2026/11/25/2003868327",
    "publisher": "taipeitimes.com",
@@ -6053,47 +5997,6 @@
      "publisher": "ltn.com.tw",
      "publisherId": "gdelt",
      "url": "https://news.ltn.com.tw/news/focus/breakingnews/5652248",
-     "published": null,
-     "seenByGdelt": "2026-11-24T20:15:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
-  },
-  {
-   "title": "Taiwan Labor Party official arrested for using Chinese funding for political campaigning",
-   "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/25/2003868355",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T16:30:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T16:32:15.953Z",
-   "lastSeenAt": "2026-11-24T16:32:15.953Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "variants": [
-    {
-     "publisher": "ltn.com.tw",
-     "publisherId": "gdelt",
-     "url": "https://news.ltn.com.tw/news/focus/breakingnews/5652219",
      "published": null,
      "seenByGdelt": "2026-11-24T20:15:00.000Z"
     }
@@ -6429,6 +6332,186 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   }
+  },
+  {
+   "title": "China-linked network using AI fakes to smear Taiwan election candidates, BBC Verify finds",
+   "url": "https://www.bbc.com/news/articles/cv702rw7dzx5o",
+   "publisher": "bbc.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T23:05:00.000Z",
+   "seenByGdelt": "2026-11-24T23:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Taiwan City Council Candidate Indicted Over Alleged China Funding",
+   "url": "https://www.theepochtimes.com/china/taiwan-city-council-candidate-indicted-over-alleged-china-funding-6128873",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-24T23:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ]
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Jensen Huang is back, but it won't be business as usual for Taiwan's tech industry – Asia News Network",
+   "url": "https://asianews.network/jensen-huang-is-back-but-it-wont-be-business-as-usual-for-taiwans-tech-industry/",
+   "publisher": "asianews.network",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T01:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   }
+  },
+  {
+   "title": "Nvidia shares surge and boost Chinese tech stocks after CEO reinstatement",
+   "url": "https://primamedia.ru/news/2692467/",
+   "publisher": "primamedia.ru",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T00:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "shares surge"
+    ]
+   }
+  },
+  {
+   "title": "Mineros General Shareholders Assembly Approves Extraordinary Dividend of Approximately US$58 Million, Equivalent to US$0.20 Per Share",
+   "url": "https://www.manilatimes.net/2026/11/25/tmt-newswire/globenewswire/mineros-general-shareholders-assembly-approves-extraordinary-dividend-of-approximately-us58-million-equivalent-to-us020-per-share/2477672",
+   "publisher": "manilatimes.net",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-25T00:35:00.000Z",
+   "seenByGdelt": "2026-11-25T01:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "dividend"
+    ]
+   }
+  },
+  {
+   "title": "Trump floats a US government stake in Nvidia, calling the chipmaker vital to AI leadership",
+   "url": "https://investinglive.com/stocks/trump-floats-a-us-government-stake-in-nvidia-calling-the-chipmaker-vital-to-ai-leadership/",
+   "publisher": "investinglive.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T23:18:00.000Z",
+   "seenByGdelt": "2026-11-25T00:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ]
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "stake in"
+    ]
    }
   },
   {
@@ -7185,37 +7268,6 @@
    }
   },
   {
-   "title": "U.S. Spot Bitcoin and Ether ETFs Shed $1.47 Billion in a Week as IBIT Posted Its Largest Daily Outflow Since Launch:",
-   "url": "https://hedgeco.net/news/11/2026/u-s-spot-bitcoin-and-ether-etfs-shed-1-47-billion-in-a-week-as-ibit-posted-its-largest-daily-outflow-since-launch.html",
-   "publisher": "hedgeco.net",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-23T08:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T10:33:04.304Z",
-   "lastSeenAt": "2026-11-23T10:33:04.304Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "ETFs"
-    ]
-   }
-  },
-  {
    "title": "China's next AI deals clouded by sell-off after Anthropic IPO",
    "url": "https://www.businesstimes.com.sg/companies-markets/chinas-next-ai-deals-clouded-sell-after-anthropic-ipo",
    "publisher": "businesstimes.com.sg",
@@ -7296,68 +7348,6 @@
    },
    "firstSeenAt": "2026-11-23T10:33:04.304Z",
    "lastSeenAt": "2026-11-24T13:41:32.881Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "net asset value"
-    ]
-   }
-  },
-  {
-   "title": "Amundi Global ex-US Government Bond UCITS ETF Acc: Net Asset Value(s)",
-   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70200904-amundi-global-ex-us-government-bond-ucits-etf-acc-net-asset-value-s-015.htm",
-   "publisher": "finanznachrichten.de",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T09:39:00.000Z",
-   "seenByGdelt": "2026-11-23T09:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T10:33:04.304Z",
-   "lastSeenAt": "2026-11-23T10:33:04.304Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "net asset value"
-    ]
-   }
-  },
-  {
-   "title": "Amundi US Treasury Bond Long Dated UCITS ETF Acc: Net Asset Value(s)",
-   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70200895-amundi-us-treasury-bond-long-dated-ucits-etf-acc-net-asset-value-s-015.htm",
-   "publisher": "finanznachrichten.de",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-23T09:39:00.000Z",
-   "seenByGdelt": "2026-11-23T09:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-23T10:33:04.304Z",
-   "lastSeenAt": "2026-11-23T10:33:04.304Z",
    "relevance": {
     "score": 0,
     "tier": "other",
