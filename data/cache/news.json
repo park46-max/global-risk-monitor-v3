@@ -3,8 +3,8 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-25T01:35:41.726Z",
-  "lastSuccessAt": "2026-11-25T01:35:55.812Z",
+  "checkedAt": "2026-11-25T07:42:15.861Z",
+  "lastSuccessAt": "2026-11-25T07:42:49.288Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
@@ -12,7 +12,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-24T19:19:09.035Z",
-      "checkedAt": "2026-11-25T01:39:07.450Z",
+      "checkedAt": "2026-11-25T07:45:43.892Z",
       "articles": [
         {
           "title": "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO",
@@ -182,7 +182,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:42:12.515Z",
-      "checkedAt": "2026-11-25T01:39:07.450Z",
+      "checkedAt": "2026-11-25T07:44:18.934Z",
       "articles": [
         {
           "title": "Massive win for Australia as Solomon Islands scraps China security deal",
@@ -348,11 +348,11 @@
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-25T01:35:55.812Z",
-      "checkedAt": "2026-11-25T01:35:55.812Z",
+      "checkedAt": "2026-11-25T07:45:43.892Z",
       "articles": [
         {
           "title": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia",
@@ -518,181 +518,181 @@
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-24T07:40:47.476Z",
-      "checkedAt": "2026-11-25T01:37:30.697Z",
+      "error": null,
+      "fetchedAt": "2026-11-25T07:42:49.288Z",
+      "checkedAt": "2026-11-25T07:42:49.288Z",
       "articles": [
         {
-          "title": "Sen . John Kennedy says he may run for president if he gets fed up",
-          "url": "https://www.kplctv.com/2026/11/24/sen-john-kennedy-says-he-may-run-president-if-he-gets-fed-up/",
-          "domain": "kplctv.com",
-          "seendate": "20261124T071500Z",
+          "title": "North Korea demands closure of Switzerland new diplomatic office and orders diplomat to leave – Brandon Sun",
+          "url": "https://www.brandonsun.com/world/2026/11/24/north-korea-declares-a-swiss-diplomat-persona-non-grata-and-orders-him-to-leave",
+          "domain": "brandonsun.com",
+          "seendate": "20261125T054500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia - Grenada Chronicle – Daily Grenada And Caribbean News",
+          "url": "https://grenadachronicle.com/south-africa-convicts-zimbabwean-who-tried-to-fight-ukraine-for-russia/",
+          "domain": "grenadachronicle.com",
+          "seendate": "20261125T054500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "How Ukraine drone war is reshaping Germany army – POLITICO",
-          "url": "https://www.politico.eu/article/how-ukraines-drone-war-is-reshaping-germanys-army/",
-          "domain": "politico.eu",
-          "seendate": "20261124T071500Z",
+          "title": "Ukrainian drones sink two Russian ships , Tajani : The war a few hundred kilometers from Italy",
+          "url": "https://www.thevermilion.com/ukrainian-drones-sink-two-russian-ships-tajani-the-war-a-few-hundred-kilometers-from-italy/article_23227/",
+          "domain": "thevermilion.com",
+          "seendate": "20261125T054500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "What is Russia signaling with repeated military flights near Korea ?",
-          "url": "https://www.koreaherald.com/article/10947647",
-          "domain": "koreaherald.com",
-          "seendate": "20261124T071500Z",
+          "title": "Spain economy has grown under Sánchez , but many voters arent feeling it . 5 charts explain why",
+          "url": "http://www.thegazette.com/news/world/spains-economy-has-grown-under-s-nchez-but-many-voters-arent-feeling-it-5-charts/article_979414fc-5aeb-5e2e-881e-21f99a90982f.html",
+          "domain": "thegazette.com",
+          "seendate": "20261125T054500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Belarus Continues To Persecute Activists , Journalists And Defence Lawyers , Warn UN Experts",
+          "url": "https://www.scoop.co.nz/stories/WO2611/S00243/belarus-continues-to-persecute-activists-journalists-and-defence-lawyers-warn-un-experts.htm",
+          "domain": "scoop.co.nz",
+          "seendate": "20261125T054500Z",
+          "language": "English",
+          "sourcecountry": "New Zealand"
+        },
+        {
+          "title": "North Korea demands closure of Switzerland new diplomatic office and orders diplomat to leave",
+          "url": "http://www.thegazette.com/news/world/north-korea-demands-closure-of-switzerlands-new-diplomatic-office-and-orders-diplomat-to-leave/article_0442c405-e858-5f8b-8d28-28931ba9e579.html",
+          "domain": "thegazette.com",
+          "seendate": "20261125T054500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Zelenskyy confirms strike on Russian vessel - News Today",
+          "url": "https://newstodaynet.com/2026/11/25/zelenskyy-confirms-strike-on-russian-vessel/",
+          "domain": "newstodaynet.com",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "In landmine - ravaged Myanmar , a rebel with an artificial leg vows to fight on",
+          "url": "https://bdnews24.com/neighbours/63mknuxu6n",
+          "domain": "bdnews24.com",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Yalta 2 . 0 ? Please .",
+          "url": "https://original.antiwar.com/james-carden/2026/11/24/yalta-2-0-please/",
+          "domain": "original.antiwar.com",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Global landmine toll climbs to six ‑ year high , 6 , 929 killed or injured in 2025",
+          "url": "https://kenya-today.com/report-global-landmine-toll-climbs-to-sixyear-high-6929-killed-or-injured-in-2025-32831/",
+          "domain": "kenya-today.com",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "Kenya"
+        },
+        {
+          "title": "The Rand Corporation speaks of war in Europe",
+          "url": "http://www.venezuelastar.com/news/279452916/the-rand-corporation-speaks-of-war-in-europe",
+          "domain": "venezuelastar.com",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "Venezuela"
+        },
+        {
+          "title": "Benghazi : 2 dead after Ukrainian attack on Russian warship",
+          "url": "https://www.dw.com/en/libya-ukrainian-attack-benghazi-2-dead/a-80042348",
+          "domain": "dw.com",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "Germany"
+        },
+        {
+          "title": "Global disaster misinfo fuels panic - buying at chain stores",
+          "url": "https://www.koreatimes.co.kr/world/20261125/global-disaster-misinfo-fuels-panic-buying-at-chain-stores",
+          "domain": "koreatimes.co.kr",
+          "seendate": "20261125T051500Z",
           "language": "English",
           "sourcecountry": "South Korea"
         },
         {
-          "title": "Divided EU Struggles with Russian Gas Exit : Legal Disputes and Economic Fallout Loom – NaturalNews . com",
-          "url": "https://www.naturalnews.com/2026-11-23-divided-eu-struggles-with-russian-gas-exit.html",
-          "domain": "naturalnews.com",
-          "seendate": "20261124T071500Z",
+          "title": "Pentagon sharply rebukes Canada over defense spending and the F - 35 fighter jet review",
+          "url": "https://www.pottsmerc.com/2026/11/23/canada-us-defense/",
+          "domain": "pottsmerc.com",
+          "seendate": "20261125T051500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "UN food agency chief warns wars jeopardise food aid for 7 . 3m more people",
-          "url": "https://tribune.com.pk/story/2642033/un-food-agency-chief-warns-wars-jeopardise-food-aid-for-73m-more-people",
-          "domain": "tribune.com.pk",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Prince Harry just put a target on his back - he needs to shut up | Royal | News",
-          "url": "https://www.express.co.uk/news/royal/2268386/prince-harry-just-put-target",
-          "domain": "express.co.uk",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "US Army Iowa Blast Is Back On",
-          "url": "https://www.newser.com/story/400519/us-armys-iowa-blast-is-back-on.html",
-          "domain": "newser.com",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Russian attack kills 2 people , wounds 22 in Ukraine Zaporizhzhia , official says",
-          "url": "https://lufkindailynews.com/news_reuters/top_news/russian-attack-kills-2-people-wounds-22-in-ukraines-zaporizhzhia-official-says/article_9e779c87-f2dd-536e-ac65-9ca10665bdae.html",
-          "domain": "lufkindailynews.com",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Ramayana Box Office Collection Day 19 : The Epic Eyes Are Set On Pushpa 2",
-          "url": "https://www.filmfare.com/news/bollywood/ramayana-box-office-collection-day-19-the-epics-eyes-are-set-on-pushpa-2_-87337.html",
-          "domain": "filmfare.com",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Labour issued dire World War 3 warning as Britain not ready to fight Russia | Politics | News",
-          "url": "https://www.express.co.uk/news/politics/2268712/labours-1000-day-war-warning-risks-hollow-tories-defence",
-          "domain": "express.co.uk",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Ukraine takes war deeper into Mediterranean",
-          "url": "https://tribune.com.pk/story/2641978/ukraine-takes-war-deeper-into-mediterranean",
-          "domain": "tribune.com.pk",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "5 ways Europe could revamp its security architecture to please Putin and Trump",
-          "url": "https://www.politico.eu/article/5-ways-europe-could-revamp-its-security-architecture-to-please-russia-vladimir-putin-us-donald-trump/",
-          "domain": "politico.eu",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "EU demands immediate Ukraine ceasefire at UNSC - News Today",
-          "url": "https://newstodaynet.com/2026/11/24/eu-demands-immediate-ukraine-ceasefire-at-unsc/",
-          "domain": "newstodaynet.com",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "India calls for end to attacks on commercial shipping , safe navigation in Black Sea at UNSC amid Russia - Ukraine conflict",
-          "url": "http://www.europesun.com/news/279451261/india-calls-for-end-to-attacks-on-commercial-shipping-safe-navigation-in-black-sea-at-unsc-amid-russia-ukraine-conflict",
-          "domain": "europesun.com",
-          "seendate": "20261124T063000Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "As Winter closes in on Gaza , Palestinians must be given a route to Safety",
-          "url": "https://www.juancole.com/2026/11/winter-closes-palestinians.html",
-          "domain": "juancole.com",
-          "seendate": "20261124T063000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Former Russian General Who Called for Putin Resignation Tells Him You Lost in Ukraine War",
-          "url": "https://www.ibtimes.co.uk/retired-russian-general-tells-putin-lost-ukraine-war-1834274",
-          "domain": "ibtimes.co.uk",
-          "seendate": "20261124T063000Z",
-          "language": "English",
-          "sourcecountry": "United Kingdom"
-        },
-        {
-          "title": "Ukraine admits attack at Libyan port",
-          "url": "https://www.abc.net.au/listen/programs/worldtoday/ukraine-admits-attack-at-libyan-port/107421272",
-          "domain": "abc.net.au",
-          "seendate": "20261124T063000Z",
+          "title": "Ukraine war support : Why European voters are increasingly turning against Kyiv military aid",
+          "url": "https://www.theage.com.au/world/europe/ukraine-just-scored-a-stunning-success-now-it-needs-a-win-with-european-voters-20261125-p61gzz.html",
+          "domain": "theage.com.au",
+          "seendate": "20261125T051500Z",
           "language": "English",
           "sourcecountry": "Australia"
         },
         {
-          "title": "Betrayal of our troops , support of enemies : Bipartisan lawmakers demand Trump revoke Putin G20 invite over Ukraine war and Iran intel reports",
-          "url": "http://www.europesun.com/news/279451415/betrayal-of-our-troops-support-of-enemies-bipartisan-lawmakers-demand-trump-revoke-putin-g20-invite-over-ukraine-war-and-iran-intel-reports",
-          "domain": "europesun.com",
-          "seendate": "20261124T063000Z",
+          "title": "B . C . couple app celebrating chonky cats goes global",
+          "url": "https://www.cp24.com/news/canada/2026/11/25/whimsy-and-community-bc-couples-app-celebrating-chonky-cats-gains-traction-online/",
+          "domain": "cp24.com",
+          "seendate": "20261125T051500Z",
           "language": "English",
-          "sourcecountry": "Russia"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "Trump tough - on - China talk always just an act",
-          "url": "https://www.ironmountaindailynews.com/opinion/2026/11/trumps-tough-on-china-talk-always-just-an-act/",
-          "domain": "ironmountaindailynews.com",
-          "seendate": "20261124T063000Z",
+          "title": "Peskov : Europe wants to expand Ukraine talks format",
+          "url": "https://www.azernews.az/region/268038.html",
+          "domain": "azernews.az",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "Azerbaijan"
+        },
+        {
+          "title": "North Korea declares Swiss diplomat persona non grata , orders him to leave",
+          "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261125/north-korea-declares-swiss-diplomat-persona-non-grata-orders-him-to-leave",
+          "domain": "koreatimes.co.kr",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "Russian strike kills two people in Ukraine Odesa region , governor says",
+          "url": "https://bdnews24.com/world/europe/95qng1e396",
+          "domain": "bdnews24.com",
+          "seendate": "20261125T051500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "No Room for Complacency at Ukrainian Training Camp",
+          "url": "https://www.miragenews.com/no-room-for-complacency-at-ukrainian-training-1783408/",
+          "domain": "miragenews.com",
+          "seendate": "20261125T044500Z",
           "language": "English",
           "sourcecountry": "United States"
-        },
-        {
-          "title": "India invokes 1943 Bengal famine at UN over Ukraine food crisis",
-          "url": "https://avenuemail.in/india-invokes-1943-bengal-famine-unsc-ukraine-food-crisis/",
-          "domain": "avenuemail.in",
-          "seendate": "20261124T063000Z",
-          "language": "English",
-          "sourcecountry": "India"
         }
       ]
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-25T01:39:07.450Z",
+      "checkedAt": "2026-11-25T07:45:43.892Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
