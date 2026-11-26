@@ -3,176 +3,176 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-26T01:35:58.799Z",
-  "lastSuccessAt": "2026-11-26T01:42:04.438Z",
+  "checkedAt": "2026-11-26T07:40:15.977Z",
+  "lastSuccessAt": "2026-11-26T07:44:24.412Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
       "status": "ok",
       "attempted": true,
       "error": null,
-      "fetchedAt": "2026-11-26T01:38:16.126Z",
-      "checkedAt": "2026-11-26T01:38:16.126Z",
+      "fetchedAt": "2026-11-26T07:42:24.086Z",
+      "checkedAt": "2026-11-26T07:42:24.086Z",
       "articles": [
         {
-          "title": "CBS News investigation finds US - based firms with Chinese owners buying advanced Nvidia most advanced chips",
-          "url": "https://news.webindia123.com/news/Articles/Business/20261126/4524588.html",
-          "domain": "news.webindia123.com",
-          "seendate": "20261126T011500Z",
+          "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
+          "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
+          "domain": "thepeterboroughexaminer.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "Common Sense Media warns parents against AI toys for young kids this holiday season",
-          "url": "https://ktul.com/news/nation-world/common-sense-media-warns-parents-against-ai-toys-for-young-kids-this-holiday-season",
-          "domain": "ktul.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Trump targets China , EU in new round of tariffs",
-          "url": "https://www.cbs58.com/news/trump-targets-china-eu-in-new-round-of-tariffs",
-          "domain": "cbs58.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Congress Demands to See the Rubio Memo on Nvidia",
-          "url": "https://theconservativetreehouse.com/blog/2026/11/25/nyt-congress-demands-to-see-the-rubio-memo-on-nvidia/",
-          "domain": "theconservativetreehouse.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Michigan wild turkeys reach 200 , 000 , completing a century - long recovery . – 9and10News . com",
-          "url": "https://www.9and10news.com/2026/11/25/michigans-wild-turkeys-reach-200000-completing-a-century-long-recovery/",
-          "domain": "9and10news.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "9 Underrated National Parks in the U . S . Youll Love | National",
-          "url": "https://www.the-messenger.com/news/national/article_cf6050fd-0eaf-55e7-a8c4-5520d586289e.html",
-          "domain": "the-messenger.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Trump privately furiou over Iowa crisis as White House weighs replacing top Army leader",
-          "url": "https://www.rawstory.com/iowa-army-2678531860/",
-          "domain": "rawstory.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories",
-          "url": "https://www.dailypress.com/2026/11/25/trump-tsmc/",
-          "domain": "dailypress.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "V8 Lexus Sedan Models Ranked : From Tame To Over 470 HP",
-          "url": "https://carbuzz.com/lexus-v8-sedan-ranked-by-hp/",
-          "domain": "carbuzz.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Fort Hood Killer Nidal Hasan Begs for Stay of Execution by Firing Squad",
-          "url": "https://radaronline.com/p/fort-hood-killer-nidal-hasan-stay-execution-firing-squad-army-rights-violated/",
-          "domain": "radaronline.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "World war three was never so fun",
-          "url": "https://www.legallyindia.com/Blogs/world-war-three-was-never-so-fun/",
-          "domain": "legallyindia.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Thanksgiving tides",
-          "url": "https://laist.com/brief/news/climate-environment/king-tides-break-southern-california-records-more-on-thanksgiving",
-          "domain": "laist.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Chuck Schumer will likely keep his job . The vote against him is what matters",
-          "url": "https://www.sbsun.com/2026/11/25/chuck-schumer-will-likely-keep-his-job-the-vote-against-him-is-what-matters/",
-          "domain": "sbsun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Judge declines to issue a long - term ban on taxpayer - funded , pro - Trump ads critics called propaganda",
-          "url": "http://www.stardem.com/ap/nation/judge-declines-to-issue-a-long-term-ban-on-taxpayer-funded-pro-trump-ads-critics/article_fef59acf-2afa-59c9-8230-358e7ab06f61.html",
-          "domain": "stardem.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Privacy Freak ? Learn to beat Facebook at its own game !",
-          "url": "https://www.legallyindia.com/Blogs/privacy-freak-learn-to-beat-facebook-at-its-own-game/",
-          "domain": "legallyindia.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Trump blames midterm election results for stock market slump , says stocks would be booming if he had run",
-          "url": "https://www.hindustantimes.com/world-news/us-news/trump-blames-midterm-election-results-for-stock-market-slump-says-stocks-would-be-booming-if-he-had-run-101795629234416.html",
-          "domain": "hindustantimes.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "India could secure lower US tariffs than several Asian competitors if trade deal materialises",
-          "url": "http://www.europesun.com/news/279454251/india-could-secure-lower-us-tariffs-than-several-asian-competitors-if-trade-deal-materialises",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
+          "title": "Israel , Netanyahu aims to be prime minister until 2028 . Eisenkot wants a law to block his way",
+          "url": "https://www.odnako.org/israel-netanyahu-aims-to-be-prime-minister-until-2028-eisenkot-wants-a-law-to-block-his-way/",
+          "domain": "odnako.org",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "Russia"
         },
         {
-          "title": "Al Gore Buys Hometown Newspaper , Carthage Courier | KOA 850 AM & 94 . 1 FM",
-          "url": "https://koacolorado.iheart.com/content/2026-11-25-al-gore-buys-hometown-newspaper-carthage-courier/",
-          "domain": "koacolorado.iheart.com",
-          "seendate": "20261126T011500Z",
+          "title": "A Chinese consumer advocate is stranded in South Korea as a crackdown in China targets campaigners",
+          "url": "https://www.therecord.com/business/a-chinese-consumer-advocate-is-stranded-in-south-korea-as-a-crackdown-in-china-targets-campaigners/article_825b06b1-b5b3-5d22-b74b-7327958d3147.html",
+          "domain": "therecord.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "SUPERINTELLIGENCE is KILLING GOLD And SILVER !",
-          "url": "https://www.shtfplan.com/headline-news/superintelligence-is-killing-gold-and-silver",
-          "domain": "shtfplan.com",
-          "seendate": "20261126T011500Z",
+          "title": "GTRI calls US tariff under Section 301 coercive bargaining tool , urges India to reject it",
+          "url": "http://www.newzealandstar.com/news/279454790/gtri-calls-us-tariff-under-section-301-coercive-bargaining-tool-urges-india-to-reject-it",
+          "domain": "newzealandstar.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "New Zealand"
         },
         {
-          "title": "Trump wants to demonstrate he is still the boss : Foreign affairs expert Sushant Sareen on proposed US tariffs",
-          "url": "https://news.webindia123.com/news/Articles/World/20261126/4524586.html",
-          "domain": "news.webindia123.com",
-          "seendate": "20261126T011500Z",
+          "title": "Govt approves tariffs for Payra , Rampal power plants , clears 4 . 40 lakh tonnes of US wheat imports",
+          "url": "https://www.thedailystar.net/business/news/govt-approves-tariffs-payra-rampal-power-plants-clears-440-lakh-tonnes-us-wheat-imports-4333661",
+          "domain": "thedailystar.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Letters to the Editor : Nov . 25 , 2026",
+          "url": "https://www.kelownadailycourier.ca/opinion/letters_to_editor/article_7b50b9a7-5d08-4470-9994-d7286134fa66.html",
+          "domain": "kelownadailycourier.ca",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Galantas Gold Reports Third Quarter 2026 Results",
+          "url": "https://www.intelligencer.ca/press-releases/newsfile/galantas-gold-reports-third-quarter-2026-results/",
+          "domain": "intelligencer.ca",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "JD Vance and Family Serve Thanksgiving Meal to US Troops in Ohio",
+          "url": "https://www.asianage.com/world/americas/jd-vance-and-family-serve-thanksgiving-meal-to-us-troops-in-ohio-2008076",
+          "domain": "asianage.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "India"
+        },
+        {
+          "title": "U . S . Judge rules FCC violated ABC free speech rights to please Trump",
+          "url": "https://www.wncw.org/2026-11-26/u-s-judge-rules-fcc-violated-abcs-free-speech-rights-to-please-trump",
+          "domain": "wncw.org",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Major economies balk at new US tariffs over unfair trade",
+          "url": "https://www.thedailystar.net/business/news/major-economies-balk-new-us-tariffs-over-unfair-trade-4333651",
+          "domain": "thedailystar.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Tariff Shock : Trump Targets 14 Economies , Rattling Markets and Global Trade",
+          "url": "https://www.reviewnepal.com/tariff-shock-trump-targets-14-economies-rattling-markets-and-global-trade/",
+          "domain": "reviewnepal.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Nepal"
+        },
+        {
+          "title": "The US Army says it had no choice but to detonate tonnes of toxic chemical near farmland - 26 - Nov - 2026",
+          "url": "https://home.nzcity.co.nz/news/article.aspx?id=458804&fm=psp,tsf",
+          "domain": "home.nzcity.co.nz",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "New Zealand"
+        },
+        {
+          "title": "UPDATE : Island Lava Java in Kona authorized to reopen : Big Island Now",
+          "url": "https://bigislandnow.com/2026/11/25/update-island-lava-java-in-kona-authorized-to-reopen/",
+          "domain": "bigislandnow.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Kim Jong - un seeks arms control talks with US , not denuclearization : experts",
+          "url": "https://www.koreaherald.com/article/10950465",
+          "domain": "koreaherald.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "The looming threat of an authoritarian triumvirate",
+          "url": "https://independentaustralia.net/politics/politics-display/the-looming-threat-of-an-authoritarian-triumvirate,21862",
+          "domain": "independentaustralia.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "For Trump , doubling down on tariffs is about power , not popularity",
+          "url": "https://www.thedailystar.net/business/news/trump-doubling-down-tariffs-about-power-not-popularity-4333571",
+          "domain": "thedailystar.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Australia strikes deal on online safety law despite US objections",
+          "url": "http://www.newzealandstar.com/news/279452545/australia-strikes-deal-on-online-safety-law-despite-us-objections",
+          "domain": "newzealandstar.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "New Zealand"
+        },
+        {
+          "title": "Nvidia CEO comeback fuels debate over misogyny and impunity for the rich and powerful",
+          "url": "https://www.news8000.com/news/politics/national-politics/nvidia-ceos-comeback-fuels-debate-over-misogyny-and-impunity-for-the-rich-and-powerful/article_d3550e32-a5d6-58d1-9084-080e428d49ea.html",
+          "domain": "news8000.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Washington tariff move : What is at stake for Bangladesh economy ?",
+          "url": "https://www.thedailystar.net/business/news/washingtons-tariff-move-what-stake-bangladeshs-economy-4333631",
+          "domain": "thedailystar.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Mexico most powerful cartels adapt as arrests and leadership battles reshape their ranks",
+          "url": "https://abcnews.com/International/wireStory/mexicos-powerful-cartels-adapt-arrests-leadership-battles-reshape-138448280",
+          "domain": "abcnews.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "United States"
         }
       ]
     },
@@ -181,178 +181,178 @@
       "status": "ok",
       "attempted": true,
       "error": null,
-      "fetchedAt": "2026-11-26T01:41:21.604Z",
-      "checkedAt": "2026-11-26T01:41:21.604Z",
+      "fetchedAt": "2026-11-26T07:44:24.412Z",
+      "checkedAt": "2026-11-26T07:44:24.412Z",
       "articles": [
         {
-          "title": "CBS News investigation finds US - based firms with Chinese owners buying advanced Nvidia most advanced chips",
-          "url": "https://news.webindia123.com/news/Articles/Business/20261126/4524588.html",
-          "domain": "news.webindia123.com",
-          "seendate": "20261126T011500Z",
+          "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses – Winnipeg Free Press",
+          "url": "https://www.winnipegfreepress.com/business/2026/11/26/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses",
+          "domain": "winnipegfreepress.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "Trump targets China , EU in new round of tariffs",
-          "url": "https://www.cbs58.com/news/trump-targets-china-eu-in-new-round-of-tariffs",
-          "domain": "cbs58.com",
-          "seendate": "20261126T011500Z",
+          "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses",
+          "url": "https://www.therecord.com/business/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses/article_8270cc26-5a29-5ca6-a5a7-d7c0db4ae6bd.html",
+          "domain": "therecord.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "Congress Demands to See the Rubio Memo on Nvidia",
-          "url": "https://theconservativetreehouse.com/blog/2026/11/25/nyt-congress-demands-to-see-the-rubio-memo-on-nvidia/",
-          "domain": "theconservativetreehouse.com",
-          "seendate": "20261126T011500Z",
+          "title": "A Chinese consumer advocate is stranded in South Korea as a crackdown in China targets campaigners",
+          "url": "https://www.therecord.com/business/a-chinese-consumer-advocate-is-stranded-in-south-korea-as-a-crackdown-in-china-targets-campaigners/article_825b06b1-b5b3-5d22-b74b-7327958d3147.html",
+          "domain": "therecord.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "Inflation returns to year highest level ahead of Black Friday ; president proposes new tariffs",
-          "url": "https://www.wmtw.com/article/inflation-returns-to-years-highest-level-ahead-of-black-friday-president-proposes-new-tariffs/74535311",
-          "domain": "wmtw.com",
-          "seendate": "20261126T011500Z",
+          "title": "GTRI calls US tariff under Section 301 coercive bargaining tool , urges India to reject it",
+          "url": "http://www.newzealandstar.com/news/279454790/gtri-calls-us-tariff-under-section-301-coercive-bargaining-tool-urges-india-to-reject-it",
+          "domain": "newzealandstar.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "New Zealand"
         },
         {
-          "title": "Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories",
-          "url": "https://www.dailypress.com/2026/11/25/trump-tsmc/",
-          "domain": "dailypress.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "World war three was never so fun",
-          "url": "https://www.legallyindia.com/Blogs/world-war-three-was-never-so-fun/",
-          "domain": "legallyindia.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Pakistan seeks partnerships with European food firms",
-          "url": "https://tribune.com.pk/story/2642350/pakistan-seeks-partnerships-with-european-food-firms",
-          "domain": "tribune.com.pk",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Letters for Nov . 26 : Election Day was a stress - test for our democracy",
-          "url": "https://www.dailypress.com/2026/11/25/letters-for-nov-26-election-day-was-a-stress-test-for-our-democracy/",
-          "domain": "dailypress.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "India could secure lower US tariffs than several Asian competitors if trade deal materialises",
-          "url": "http://www.europesun.com/news/279454251/india-could-secure-lower-us-tariffs-than-several-asian-competitors-if-trade-deal-materialises",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "Village heads reject Siang dam , oppose displacement",
-          "url": "https://timesofindia.indiatimes.com/city/guwahati/village-heads-reject-siang-dam-oppose-displacement/articleshow/136170701.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Trump wants to demonstrate he is still the boss : Foreign affairs expert Sushant Sareen on proposed US tariffs",
-          "url": "https://news.webindia123.com/news/Articles/World/20261126/4524586.html",
-          "domain": "news.webindia123.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Trump Accused of Focusing on Self - Enrichment Amid Nvidia Scandal",
-          "url": "https://radaronline.com/p/the-view-accuse-trump-stock-market-self-enrichments-jensen-huang-nvidia/",
-          "domain": "radaronline.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Pax Silica : Malaysia delicate balancing act",
-          "url": "https://www.thestar.com.my/business/insight/2026/11/26/pax-silica-malaysias-delicate-balancing-act",
-          "domain": "thestar.com.my",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Malaysia"
-        },
-        {
-          "title": "Fresh US tariff for Bangladesh , 13 other countries",
-          "url": "https://www.thedailystar.net/news/bangladesh/news/fresh-us-tariff-bangladesh-13-other-countries-4333516",
+          "title": "Govt approves tariffs for Payra , Rampal power plants , clears 4 . 40 lakh tonnes of US wheat imports",
+          "url": "https://www.thedailystar.net/business/news/govt-approves-tariffs-payra-rampal-power-plants-clears-440-lakh-tonnes-us-wheat-imports-4333661",
           "domain": "thedailystar.net",
-          "seendate": "20261126T011500Z",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "Bangladesh"
         },
         {
-          "title": "US proposes new tariffs on 14 economies , including India , over",
-          "url": "http://www.europesun.com/news/279454467/us-proposes-new-tariffs-on-14-economies-including-india-over-excess-capacity",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "US proposes new tariffs on 14 major trading partners ; Singapore to get capped rate of 10 %",
-          "url": "https://www.businesstimes.com.sg/international/global/us-proposes-new-tariffs-14-major-trading-partners-singapore-get-capped-rate-10",
-          "domain": "businesstimes.com.sg",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Singapore"
-        },
-        {
-          "title": "Dow Jones rises 124 points , as Nasdaq sheds 148",
-          "url": "http://www.utahindependent.com/news/279454444/dow-jones-rises-124-points-as-nasdaq-sheds-148",
-          "domain": "utahindependent.com",
-          "seendate": "20261126T011500Z",
+          "title": "LiuGong Showcases Advanced Equipment and Intelligent Technologies at bauma CHINA 2026",
+          "url": "https://www.prnewswire.com/news-releases/liugong-showcases-advanced-equipment-and-intelligent-technologies-at-bauma-china-2026-302951032.html",
+          "domain": "prnewswire.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Wall Street recovers most early losses as pullback in AI stocks eases",
-          "url": "https://www.wmur.com/article/wall-street-recovers-ai-stocks/74536237",
-          "domain": "wmur.com",
-          "seendate": "20261126T011500Z",
+          "title": "Major economies balk at new US tariffs over unfair trade",
+          "url": "https://www.thedailystar.net/business/news/major-economies-balk-new-us-tariffs-over-unfair-trade-4333651",
+          "domain": "thedailystar.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Tariff Shock : Trump Targets 14 Economies , Rattling Markets and Global Trade",
+          "url": "https://www.reviewnepal.com/tariff-shock-trump-targets-14-economies-rattling-markets-and-global-trade/",
+          "domain": "reviewnepal.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Nepal"
+        },
+        {
+          "title": "Global markets rebound as tech shares recover and tariff fears ease",
+          "url": "https://www.aol.co.uk/articles/global-markets-rebound-tech-shares-042539000.html",
+          "domain": "aol.co.uk",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Kim Jong - un seeks arms control talks with US , not denuclearization : experts",
+          "url": "https://www.koreaherald.com/article/10950465",
+          "domain": "koreaherald.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "LGMG Unveils VTH150 Electric - Wheel Mining Truck at bauma CHINA 2026",
+          "url": "https://www.theobserver.ca/press-releases/pr-newswire/lgmg-unveils-vth150-electric-wheel-mining-truck-at-bauma-china-2026/",
+          "domain": "theobserver.ca",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "The looming threat of an authoritarian triumvirate",
+          "url": "https://independentaustralia.net/politics/politics-display/the-looming-threat-of-an-authoritarian-triumvirate,21862",
+          "domain": "independentaustralia.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "For Trump , doubling down on tariffs is about power , not popularity",
+          "url": "https://www.thedailystar.net/business/news/trump-doubling-down-tariffs-about-power-not-popularity-4333571",
+          "domain": "thedailystar.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
+        },
+        {
+          "title": "Xiaomi shipments plunge 29 % as Samsung holds lead amid memory crunch",
+          "url": "https://www.koreaherald.com/article/10950486",
+          "domain": "koreaherald.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "South Korea"
+        },
+        {
+          "title": "Zoomlion Launches Industry First AI Excavation Robot Powered by Embodied Intelligence at bauma CHINA 2026",
+          "url": "https://www.prnewswire.com/news-releases/zoomlion-launches-industrys-first-ai-excavation-robot-powered-by-embodied-intelligence-at-bauma-china-2026-302950993.html",
+          "domain": "prnewswire.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
-          "url": "https://www.dailypress.com/2026/11/25/nvidia-vance/",
-          "domain": "dailypress.com",
-          "seendate": "20261126T011500Z",
+          "title": "Commentary : New US tariff threat seeks to ramp up pressure on trading partners – will it work ?",
+          "url": "https://www.channelnewsasia.com/commentary/trump-new-us-tariffs-excess-industrial-capacity-impact-singapore-trading-partners-6584001",
+          "domain": "channelnewsasia.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "CAPAC Chair Meng slams Trump administration proposal to impose new tariffs on asian nations , says local businesses hit especially hard",
-          "url": "http://www.laosnews.net/news/279454548/capac-chair-meng-slams-trump-administration-proposal-to-impose-new-tariffs-on-asian-nations-says-local-businesses-hit-especially-hard",
-          "domain": "laosnews.net",
-          "seendate": "20261126T011500Z",
+          "title": "Sierra Leone sees steep decline in maternal mortality , but barriers to care persist",
+          "url": "https://abcnews.com/International/wireStory/sierra-leone-sees-steep-decline-maternal-mortality-barriers-138462429",
+          "domain": "abcnews.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "United States"
+        },
+        {
+          "title": "Goat transaction levy increase voted down at MLA annual meeting | Queensland Country Life",
+          "url": "https://www.queenslandcountrylife.com.au/story/9398277/goat-transaction-levy-increase-voted-down-at-mla-annual-meeting/",
+          "domain": "queenslandcountrylife.com.au",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "S & P warns Nvidia board may be compromised , puts chipmaker rating on downgrade watch",
+          "url": "https://www.channelnewsasia.com/business/s-and-p-nvidia-board-compromised-rating-downgrade-watch-6582441",
+          "domain": "channelnewsasia.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Dhaka mulls new corridor to China via Myanmar",
+          "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/dhaka-mulls-new-corridor-china-myanmar-4333321",
+          "domain": "thedailystar.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Bangladesh"
         }
       ]
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "ok",
+      "status": "error",
       "attempted": true,
-      "error": null,
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-26T01:42:04.438Z",
-      "checkedAt": "2026-11-26T01:42:04.439Z",
+      "checkedAt": "2026-11-26T07:45:46.668Z",
       "articles": [
         {
           "title": "Just keep quiet : Revulsion after Jared Kushner shameful gushing over adversary",
@@ -518,11 +518,11 @@
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "ok",
+      "status": "error",
       "attempted": true,
-      "error": null,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-26T01:39:39.895Z",
-      "checkedAt": "2026-11-26T01:39:39.895Z",
+      "checkedAt": "2026-11-26T07:44:01.578Z",
       "articles": [
         {
           "title": "Just keep quiet : Revulsion after Jared Kushner shameful gushing over adversary",
@@ -692,7 +692,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-26T01:37:27.026Z",
+      "checkedAt": "2026-11-26T07:41:32.293Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
