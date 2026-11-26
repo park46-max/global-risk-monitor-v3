@@ -3,174 +3,174 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-26T13:38:31.070Z",
-  "lastSuccessAt": "2026-11-26T07:44:24.412Z",
+  "checkedAt": "2026-11-26T19:16:41.408Z",
+  "lastSuccessAt": "2026-11-26T19:20:09.326Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
-      "fetchedAt": "2026-11-26T07:42:24.086Z",
-      "checkedAt": "2026-11-26T13:41:32.166Z",
+      "status": "ok",
+      "attempted": true,
+      "error": null,
+      "fetchedAt": "2026-11-26T19:20:09.326Z",
+      "checkedAt": "2026-11-26T19:20:09.326Z",
       "articles": [
         {
-          "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
-          "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
-          "domain": "thepeterboroughexaminer.com",
-          "seendate": "20261126T061500Z",
+          "title": "Make Amazon Pay Day 2026 : Amazon workers and supporters to strike and protest in over 20 countries as union wins first North American collective agreement",
+          "url": "https://uniglobalunion.org/news/map26/",
+          "domain": "uniglobalunion.org",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Powerful storms disrupt holiday travel , as Macy Thanksgiving Day Parade is postponed",
+          "url": "https://www.kazu.org/npr-news/2026-11-26/powerful-storms-disrupt-holiday-travel-as-macys-thanksgiving-day-parade-is-postponed",
+          "domain": "kazu.org",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "10 Things to Know About Maria Middleton",
+          "url": "https://www.ncregister.com/features/ten-things-to-know-about-maria-middleton",
+          "domain": "ncregister.com",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Storms disrupt Thanksgiving travel . And , FCC violated ABC free speech , judge says",
+          "url": "https://knpr.org/npr/2026-11-26/storms-disrupt-thanksgiving-travel-and-fcc-violated-abcs-free-speech-judge-says",
+          "domain": "knpr.org",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "COVID Levels Rise Across U . S . Ahead Of Holidays | Talk Radio 98 . 3 WLAC",
+          "url": "https://wlac.iheart.com/content/2026-11-26-covid-levels-rise-across-us-ahead-of-holidays/",
+          "domain": "wlac.iheart.com",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Stamford Man Charged with Fentanyl Distribution Offenses",
+          "url": "https://greenwichfreepress.com/news/government/stamford-man-charged-with-fentanyl-distribution-offenses-257589/",
+          "domain": "greenwichfreepress.com",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "What Is a Card Rip ? Pack Rips vs Card Breaks Explained",
+          "url": "https://everything-pr.com/what-is-a-card-rip",
+          "domain": "everything-pr.com",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Gap in employment rate between immigrants and Danes lower than ever",
+          "url": "https://www.thelocal.dk/20261126/gap-in-employment-between-non-western-immigrants-and-danes-lower-than-ever",
+          "domain": "thelocal.dk",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Denmark"
+        },
+        {
+          "title": "Thanksgiving Day NFL Games : Bears vs . Lions , Eagles vs . Cowboys , And Chiefs vs . Bills",
+          "url": "https://kgot.iheart.com/content/2026-11-25-thanksgiving-day-nfl-games-bears-vs-lions-eagles-vs-cowboys-and-chiefs-vs-bills/",
+          "domain": "kgot.iheart.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Texas Democrats are about to take power in Austin : Here what to expect",
+          "url": "https://marshallnewsmessenger.com/2026/11/26/texas-democrats-are-about-to-take-power-in-austin-heres-what-to-expect/",
+          "domain": "marshallnewsmessenger.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "The unspoken reason Trump and MAGA are trying to erase history",
+          "url": "https://www.alternet.org/alternet-exclusives/trump-history-2678529177/",
+          "domain": "alternet.org",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Rogers Sugar Reports Profitability Growth in 2026 , Driven by Strong Execution in a Challenging Market",
+          "url": "https://www.northernnews.ca/press-releases/globe-newswire/rogers-sugar-reports-profitability-growth-in-2026-driven-by-strong-execution-in-a-challenging-market/",
+          "domain": "northernnews.ca",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "Canada"
         },
         {
-          "title": "Israel , Netanyahu aims to be prime minister until 2028 . Eisenkot wants a law to block his way",
-          "url": "https://www.odnako.org/israel-netanyahu-aims-to-be-prime-minister-until-2028-eisenkot-wants-a-law-to-block-his-way/",
-          "domain": "odnako.org",
-          "seendate": "20261126T061500Z",
+          "title": "Massachusetts Lottery Winner Arrested By ICE",
+          "url": "https://talkradio1080.iheart.com/content/2026-11-26-massachusetts-lottery-winner-arrested-by-ice/",
+          "domain": "talkradio1080.iheart.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Russia"
+          "sourcecountry": "United States"
         },
         {
-          "title": "A Chinese consumer advocate is stranded in South Korea as a crackdown in China targets campaigners",
-          "url": "https://www.therecord.com/business/a-chinese-consumer-advocate-is-stranded-in-south-korea-as-a-crackdown-in-china-targets-campaigners/article_825b06b1-b5b3-5d22-b74b-7327958d3147.html",
-          "domain": "therecord.com",
-          "seendate": "20261126T061500Z",
+          "title": "Massachusetts Lottery Winner Arrested By ICE | NewsRadio 1110 KFAB",
+          "url": "https://kfab.iheart.com/content/2026-11-26-massachusetts-lottery-winner-arrested-by-ice/",
+          "domain": "kfab.iheart.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Canada"
+          "sourcecountry": "United States"
         },
         {
-          "title": "GTRI calls US tariff under Section 301 coercive bargaining tool , urges India to reject it",
-          "url": "http://www.newzealandstar.com/news/279454790/gtri-calls-us-tariff-under-section-301-coercive-bargaining-tool-urges-india-to-reject-it",
-          "domain": "newzealandstar.com",
-          "seendate": "20261126T061500Z",
+          "title": "China firmly opposes U . S . additional tariffs on China , other economies : commerce ministry - Xinhua",
+          "url": "https://english.news.cn/20261126/8c1dee5ce2df4f5e936be1468bf4c3b1/c.html",
+          "domain": "english.news.cn",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "New Zealand"
+          "sourcecountry": null
         },
         {
-          "title": "Govt approves tariffs for Payra , Rampal power plants , clears 4 . 40 lakh tonnes of US wheat imports",
-          "url": "https://www.thedailystar.net/business/news/govt-approves-tariffs-payra-rampal-power-plants-clears-440-lakh-tonnes-us-wheat-imports-4333661",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "Letters to the Editor : Nov . 25 , 2026",
-          "url": "https://www.kelownadailycourier.ca/opinion/letters_to_editor/article_7b50b9a7-5d08-4470-9994-d7286134fa66.html",
-          "domain": "kelownadailycourier.ca",
-          "seendate": "20261126T061500Z",
+          "title": "Rogers Sugar Inc . Declares Dividend to Shareholders",
+          "url": "https://nationalpost.com/press-releases/globe-newswire/rogers-sugar-inc-declares-dividend-to-shareholders/",
+          "domain": "nationalpost.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "Canada"
         },
         {
-          "title": "Galantas Gold Reports Third Quarter 2026 Results",
-          "url": "https://www.intelligencer.ca/press-releases/newsfile/galantas-gold-reports-third-quarter-2026-results/",
-          "domain": "intelligencer.ca",
-          "seendate": "20261126T061500Z",
+          "title": "Memories of a Good Meal : How food made a difference during WWII",
+          "url": "https://www.wkyufm.org/news/2026-11-26/memories-of-a-good-meal-how-food-made-a-difference-during-wwii",
+          "domain": "wkyufm.org",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "India Largest Bank Goes Live on Upgraded Pelican Platform",
+          "url": "https://www.nugget.ca/press-releases/newsfile/indias-largest-bank-goes-live-on-upgraded-pelican-platform/",
+          "domain": "nugget.ca",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "Canada"
         },
         {
-          "title": "JD Vance and Family Serve Thanksgiving Meal to US Troops in Ohio",
-          "url": "https://www.asianage.com/world/americas/jd-vance-and-family-serve-thanksgiving-meal-to-us-troops-in-ohio-2008076",
-          "domain": "asianage.com",
-          "seendate": "20261126T061500Z",
+          "title": "US Imposes Export Restrictions on Megaspeed and Alibaba Unit Over Security Concerns",
+          "url": "https://www.sentinelassam.com/more-news/international/us-imposes-export-restrictions-on-megaspeed-and-alibaba-unit-over-security-concerns",
+          "domain": "sentinelassam.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "India"
         },
         {
-          "title": "U . S . Judge rules FCC violated ABC free speech rights to please Trump",
-          "url": "https://www.wncw.org/2026-11-26/u-s-judge-rules-fcc-violated-abcs-free-speech-rights-to-please-trump",
-          "domain": "wncw.org",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Major economies balk at new US tariffs over unfair trade",
-          "url": "https://www.thedailystar.net/business/news/major-economies-balk-new-us-tariffs-over-unfair-trade-4333651",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "Tariff Shock : Trump Targets 14 Economies , Rattling Markets and Global Trade",
-          "url": "https://www.reviewnepal.com/tariff-shock-trump-targets-14-economies-rattling-markets-and-global-trade/",
-          "domain": "reviewnepal.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Nepal"
-        },
-        {
-          "title": "The US Army says it had no choice but to detonate tonnes of toxic chemical near farmland - 26 - Nov - 2026",
-          "url": "https://home.nzcity.co.nz/news/article.aspx?id=458804&fm=psp,tsf",
-          "domain": "home.nzcity.co.nz",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "New Zealand"
-        },
-        {
-          "title": "UPDATE : Island Lava Java in Kona authorized to reopen : Big Island Now",
-          "url": "https://bigislandnow.com/2026/11/25/update-island-lava-java-in-kona-authorized-to-reopen/",
-          "domain": "bigislandnow.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Kim Jong - un seeks arms control talks with US , not denuclearization : experts",
-          "url": "https://www.koreaherald.com/article/10950465",
-          "domain": "koreaherald.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "South Korea"
-        },
-        {
-          "title": "The looming threat of an authoritarian triumvirate",
-          "url": "https://independentaustralia.net/politics/politics-display/the-looming-threat-of-an-authoritarian-triumvirate,21862",
-          "domain": "independentaustralia.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Australia"
-        },
-        {
-          "title": "For Trump , doubling down on tariffs is about power , not popularity",
-          "url": "https://www.thedailystar.net/business/news/trump-doubling-down-tariffs-about-power-not-popularity-4333571",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "Australia strikes deal on online safety law despite US objections",
-          "url": "http://www.newzealandstar.com/news/279452545/australia-strikes-deal-on-online-safety-law-despite-us-objections",
-          "domain": "newzealandstar.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "New Zealand"
-        },
-        {
-          "title": "Nvidia CEO comeback fuels debate over misogyny and impunity for the rich and powerful",
-          "url": "https://www.news8000.com/news/politics/national-politics/nvidia-ceos-comeback-fuels-debate-over-misogyny-and-impunity-for-the-rich-and-powerful/article_d3550e32-a5d6-58d1-9084-080e428d49ea.html",
-          "domain": "news8000.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Washington tariff move : What is at stake for Bangladesh economy ?",
-          "url": "https://www.thedailystar.net/business/news/washingtons-tariff-move-what-stake-bangladeshs-economy-4333631",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "Mexico most powerful cartels adapt as arrests and leadership battles reshape their ranks",
-          "url": "https://abcnews.com/International/wireStory/mexicos-powerful-cartels-adapt-arrests-leadership-battles-reshape-138448280",
-          "domain": "abcnews.com",
-          "seendate": "20261126T061500Z",
+          "title": "Children fantasy follows twin siblings who restore colour to a grey kingdom through teamwork and quick thinking | Press Releases",
+          "url": "https://www.ktbs.com/online_features/press_releases/children-s-fantasy-follows-twin-siblings-who-restore-colour-to-a-grey-kingdom-through-teamwork/article_c6e84205-7080-5e33-953e-6ea9e2066111.html",
+          "domain": "ktbs.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "United States"
         }
@@ -179,10 +179,10 @@
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-26T07:44:24.412Z",
-      "checkedAt": "2026-11-26T13:41:32.166Z",
+      "checkedAt": "2026-11-26T19:21:33.195Z",
       "articles": [
         {
           "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses – Winnipeg Free Press",
@@ -348,341 +348,341 @@
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
-      "fetchedAt": "2026-11-26T01:42:04.438Z",
-      "checkedAt": "2026-11-26T13:41:32.166Z",
+      "status": "ok",
+      "attempted": true,
+      "error": null,
+      "fetchedAt": "2026-11-26T19:19:12.555Z",
+      "checkedAt": "2026-11-26T19:19:12.555Z",
       "articles": [
         {
-          "title": "Just keep quiet : Revulsion after Jared Kushner shameful gushing over adversary",
-          "url": "https://www.rawstory.com/jared-kushner-vladimir-putin/",
-          "domain": "rawstory.com",
-          "seendate": "20261126T011500Z",
+          "title": "Veruschka , one of world first supermodels , dies at 87",
+          "url": "https://www.koco.com/article/veruschka-supermodel-dies-at-87/74540629",
+          "domain": "koco.com",
+          "seendate": "20261126T144500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Congress Demands to See the Rubio Memo on Nvidia",
-          "url": "https://theconservativetreehouse.com/blog/2026/11/25/nyt-congress-demands-to-see-the-rubio-memo-on-nvidia/",
-          "domain": "theconservativetreehouse.com",
-          "seendate": "20261126T011500Z",
+          "title": "Russia accuses Ukraine of trying to widen conflict zone",
+          "url": "https://www.northerndailyleader.com.au/story/9399142/russia-accuses-ukraine-of-trying-to-widen-conflict-zone/",
+          "domain": "northerndailyleader.com.au",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Türkiye warns against spillover of Russia - Ukraine war into Mediterranean",
+          "url": "https://www.dailysabah.com/politics/turkiye-warns-against-spillover-of-russia-ukraine-war-into-mediterranean/news",
+          "domain": "dailysabah.com",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "Turkey"
+        },
+        {
+          "title": "IIHF to appeal CAS ruling on Russia to Swiss Federal Tribunal",
+          "url": "https://cyprus-mail.com/2026/11/26/iihf-to-appeal-cas-ruling-on-russia-to-swiss-federal-tribunal",
+          "domain": "cyprus-mail.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Cyprus"
+        },
+        {
+          "title": "Ukraine says it has intercepted a Russian jet - powered drone with a laser for the first time",
+          "url": "https://www.cbsnews.com/news/russia-ukraine-war-laser-interception-russian-jet-powered-geran-drone/",
+          "domain": "cbsnews.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "World war three was never so fun",
-          "url": "https://www.legallyindia.com/Blogs/world-war-three-was-never-so-fun/",
-          "domain": "legallyindia.com",
-          "seendate": "20261126T011500Z",
+          "title": "Bumrungrad Boosts Phuket Healthcare with THB 5 . 4B Investment",
+          "url": "https://phuketnews.phuketindex.com/features/bumrungrad-phuket-223659.html",
+          "domain": "phuketnews.phuketindex.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "Thailand"
         },
         {
-          "title": "Orvana Minerals Corp .: ORVANA ANNOUNCES FY2026 RESULTS & FY2027 GUIDANCE",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70231767-orvana-minerals-corp-orvana-announces-fy2026-results-fy2027-guidance-008.htm",
-          "domain": "finanznachrichten.de",
-          "seendate": "20261126T011500Z",
+          "title": "More investment in defence means less chance of war , says Streeting",
+          "url": "https://www.standard.co.uk/news/politics/wes-streeting-government-volodymyr-zelensky-ministry-of-defence-russia-b1306488.html",
+          "domain": "standard.co.uk",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Germany"
+          "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Letters for Nov . 26 : Election Day was a stress - test for our democracy",
-          "url": "https://www.dailypress.com/2026/11/25/letters-for-nov-26-election-day-was-a-stress-test-for-our-democracy/",
-          "domain": "dailypress.com",
-          "seendate": "20261126T011500Z",
+          "title": "UCCI Strengthens Academic Leadership with Two Distinguished Academic Appointments",
+          "url": "https://www.radiocayman.gov.ky/news/ucci-strengthens-academic-leadership-with-two-distinguished-academic-appointments",
+          "domain": "radiocayman.gov.ky",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Cayman Islands"
         },
         {
-          "title": "Russia wants more than Ukraine , says Germany Merz as he defends aid for Kyiv",
-          "url": "https://www.channelnewsasia.com/world/russia-wants-more-ukraine-says-germanys-merz-he-defends-aid-kyiv-6582701",
-          "domain": "channelnewsasia.com",
-          "seendate": "20261126T011500Z",
+          "title": "A Norwegian airline nears bankruptcy , cancels all flights",
+          "url": "https://cphpost.dk/2026-11-26/news/round-up/a-norwegian-airline-nears-bankruptcy-cancels-all-flights/",
+          "domain": "cphpost.dk",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Denmark"
         },
         {
-          "title": "Pax Silica : Malaysia delicate balancing act",
-          "url": "https://www.thestar.com.my/business/insight/2026/11/26/pax-silica-malaysias-delicate-balancing-act",
-          "domain": "thestar.com.my",
-          "seendate": "20261126T011500Z",
+          "title": "Lukoil global retreat driven by politics , says co - founder",
+          "url": "https://www.freemalaysiatoday.com/category/business/2026/11/26/lukoil-s-global-retreat-driven-by-politics-says-co-founder",
+          "domain": "freemalaysiatoday.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "Malaysia"
         },
         {
-          "title": "Phala Phala : Ramaphosa vs Ngcobo NO : The High Court judgment",
-          "url": "https://www.politicsweb.co.za/news/phala-phala-ramaphosa-vs-ngcobo-no-the-high-court-judgment",
-          "domain": "politicsweb.co.za",
-          "seendate": "20261126T011500Z",
+          "title": "Can the International Criminal Court survive Trump attacks – and hold world leaders to account ?",
+          "url": "https://theconversation.com/can-the-international-criminal-court-survive-trumps-attacks-and-hold-world-leaders-to-account-297530",
+          "domain": "theconversation.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "South Africa"
+          "sourcecountry": "Australia"
         },
         {
-          "title": "Baltic states divided over Estonian border closure",
-          "url": "http://www.europesun.com/news/279454414/baltic-states-divided-over-estonian-border-closure",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
+          "title": "Ukraine Hits Key Russian Air Base , Damaging Multiple Aircraft - Jowhar News Leader",
+          "url": "https://jowhar.com/ukraine-hits-key-russian-air-base-damaging-multiple-aircraft/",
+          "domain": "jowhar.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Russia"
+          "sourcecountry": "Somalia"
         },
         {
-          "title": "Russ Vought embroiled in rollout of unusual US gov website spotted in Russian campaign",
-          "url": "https://www.rawstory.com/unusual-us-govt-website-detected-in-russian-campaign-ahead-of-russ-vought-rollout/",
-          "domain": "rawstory.com",
-          "seendate": "20261126T011500Z",
+          "title": "Ministry of Defence signs £8 . 7bn deal with Babcock to maintain submarines",
+          "url": "https://www.theguardian.com/politics/2026/nov/26/ministry-of-defence-deal-babcock-maintain-submarines",
+          "domain": "theguardian.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Live - Саммит ЕС в Брюсселе : спор о бюджете и кредите Украине",
+          "url": "https://ru.euronews.com/2026/11/26/eu-summit-brussels-ukraine-and-budget-talks",
+          "domain": "ru.euronews.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Lavrov warns of Europeans with feet on the table",
-          "url": "http://www.europesun.com/news/279454571/lavrov-warns-of-europeans-with-feet-on-the-table",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
+          "title": "Pashinyan : Armenia should assume full responsibility for its borders",
+          "url": "https://www.pan.am/en/628057",
+          "domain": "pan.am",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Russia"
+          "sourcecountry": null
         },
         {
-          "title": "Lavrov questions value of EU role in Ukraine talks",
-          "url": "http://www.europesun.com/news/279454530/lavrov-questions-value-of-eu-role-in-ukraine-talks",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
+          "title": "Iconic model Veruschka dies , aged 87",
+          "url": "https://www.nzherald.co.nz/entertainment/iconic-model-veruschka-dies-aged-87/NRVB4KUCCBEPVLIJV6Y44JLQVY/",
+          "domain": "nzherald.co.nz",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Russia"
+          "sourcecountry": "New Zealand"
         },
         {
-          "title": "The Russia panic circus isnt selling in Germany",
-          "url": "http://www.europesun.com/news/279454497/the-russia-panic-circus-isnt-selling-in-germany",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
+          "title": "Copenhagen Nørrebro Station area set for major renovation",
+          "url": "https://cphpost.dk/2026-11-26/life-in-denmark/copenhagens-norrebro-station-area-set-for-major-renovation/",
+          "domain": "cphpost.dk",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Russia"
+          "sourcecountry": "Denmark"
         },
         {
-          "title": "Russia Baltic bastion : Why is NATO threatening Kaliningrad ?",
-          "url": "http://www.europesun.com/news/279454415/russia-baltic-bastion-why-is-nato-threatening-kaliningrad",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
+          "title": "Film Traces highlights Ukrainian survivors of Russian abuse",
+          "url": "https://www.hampshirechronicle.co.uk/news/26755888.film-traces-highlights-ukrainian-survivors-russian-abuse/",
+          "domain": "hampshirechronicle.co.uk",
+          "seendate": "20261126T124500Z",
           "language": "English",
-          "sourcecountry": "Russia"
+          "sourcecountry": "United Kingdom"
         },
         {
-          "title": "USAID gave government employees an anti - Trump reading list that compared him to Hitler",
-          "url": "https://www.theblaze.com/news/usaid-anti-trump-hitler-russia",
-          "domain": "theblaze.com",
-          "seendate": "20261126T011500Z",
+          "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
+          "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
+          "domain": "thepeterboroughexaminer.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "Jensen Huang is Back but National Security Issues Linger",
-          "url": "https://radio.foxnews.com/2026/11/25/jensen-huang-is-back-but-national-security-issues-linger/",
-          "domain": "radio.foxnews.com",
-          "seendate": "20261126T011500Z",
+          "title": "UK to invest £9 . 5m in Ukraine windfarm to bolster war - hit energy system",
+          "url": "https://www.aol.co.uk/articles/uk-invest-9-5m-ukraine-050046000.html",
+          "domain": "aol.co.uk",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Ammosexual fear porn proves a tough sell in Germany",
-          "url": "http://www.europesun.com/news/279454356/ammosexual-fear-porn-proves-a-tough-sell-in-germany",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "Melania Trump reunites her seventh group of Ukrainian and Russian children with their families",
-          "url": "https://www.texarkanagazette.com/news/2026/nov/25/melania-trump-reunites-her-seventh-group-of/",
-          "domain": "texarkanagazette.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Spain heads to the polls : What at stake ?",
-          "url": "http://www.europesun.com/news/279454568/spain-heads-to-the-polls-what-at-stake",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "8 Third - Generation Fighter Jets Still In Service",
-          "url": "https://www.slashgear.com/2324020/third-generation-fighter-jets-still-in-service/",
-          "domain": "slashgear.com",
-          "seendate": "20261126T004500Z",
-          "language": "English",
-          "sourcecountry": "United States"
+          "sourcecountry": "United Kingdom"
         }
       ]
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-26T01:39:39.895Z",
-      "checkedAt": "2026-11-26T13:41:32.166Z",
+      "error": null,
+      "fetchedAt": "2026-11-26T19:18:48.608Z",
+      "checkedAt": "2026-11-26T19:18:48.609Z",
       "articles": [
         {
-          "title": "Just keep quiet : Revulsion after Jared Kushner shameful gushing over adversary",
-          "url": "https://www.rawstory.com/jared-kushner-vladimir-putin/",
-          "domain": "rawstory.com",
-          "seendate": "20261126T011500Z",
+          "title": "Russia accuses Ukraine of trying to widen conflict zone",
+          "url": "https://www.northerndailyleader.com.au/story/9399142/russia-accuses-ukraine-of-trying-to-widen-conflict-zone/",
+          "domain": "northerndailyleader.com.au",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Türkiye warns against spillover of Russia - Ukraine war into Mediterranean",
+          "url": "https://www.dailysabah.com/politics/turkiye-warns-against-spillover-of-russia-ukraine-war-into-mediterranean/news",
+          "domain": "dailysabah.com",
+          "seendate": "20261126T144500Z",
+          "language": "English",
+          "sourcecountry": "Turkey"
+        },
+        {
+          "title": "Gap in employment rate between immigrants and Danes lower than ever",
+          "url": "https://www.thelocal.dk/20261126/gap-in-employment-between-non-western-immigrants-and-danes-lower-than-ever",
+          "domain": "thelocal.dk",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Denmark"
+        },
+        {
+          "title": "IIHF to appeal CAS ruling on Russia to Swiss Federal Tribunal",
+          "url": "https://cyprus-mail.com/2026/11/26/iihf-to-appeal-cas-ruling-on-russia-to-swiss-federal-tribunal",
+          "domain": "cyprus-mail.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Cyprus"
+        },
+        {
+          "title": "Ukraine says it has intercepted a Russian jet - powered drone with a laser for the first time",
+          "url": "https://www.cbsnews.com/news/russia-ukraine-war-laser-interception-russian-jet-powered-geran-drone/",
+          "domain": "cbsnews.com",
+          "seendate": "20261126T124500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Orvana Minerals Corp .: ORVANA ANNOUNCES FY2026 RESULTS & FY2027 GUIDANCE",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70231767-orvana-minerals-corp-orvana-announces-fy2026-results-fy2027-guidance-008.htm",
-          "domain": "finanznachrichten.de",
-          "seendate": "20261126T011500Z",
+          "title": "A Norwegian airline nears bankruptcy , cancels all flights",
+          "url": "https://cphpost.dk/2026-11-26/news/round-up/a-norwegian-airline-nears-bankruptcy-cancels-all-flights/",
+          "domain": "cphpost.dk",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Denmark"
+        },
+        {
+          "title": "OPINION : Share Thanksgiving with the rest of the community by donating",
+          "url": "https://www.daytondailynews.com/local/opinion/opinion-share-thanksgiving-with-the-rest-of-the-community-by-donating/article_c3cab5b7-ec52-5479-831c-23279e888fa6.html",
+          "domain": "daytondailynews.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Lukoil global retreat driven by politics , says co - founder",
+          "url": "https://www.freemalaysiatoday.com/category/business/2026/11/26/lukoil-s-global-retreat-driven-by-politics-says-co-founder",
+          "domain": "freemalaysiatoday.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Malaysia"
+        },
+        {
+          "title": "Shock in Berlin : Germany is running out of money because they are sending it to Ukraine",
+          "url": "https://www.bankingnews.gr/diethni/articles/913403/shock-in-berlin-germany-is-running-out-of-money-because-they-are-sending-it-to-ukraine",
+          "domain": "bankingnews.gr",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Greece"
+        },
+        {
+          "title": "Ukraine Hits Key Russian Air Base , Damaging Multiple Aircraft - Jowhar News Leader",
+          "url": "https://jowhar.com/ukraine-hits-key-russian-air-base-damaging-multiple-aircraft/",
+          "domain": "jowhar.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Somalia"
+        },
+        {
+          "title": "Live - Саммит ЕС в Брюсселе : спор о бюджете и кредите Украине",
+          "url": "https://ru.euronews.com/2026/11/26/eu-summit-brussels-ukraine-and-budget-talks",
+          "domain": "ru.euronews.com",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Copenhagen Nørrebro Station area set for major renovation",
+          "url": "https://cphpost.dk/2026-11-26/life-in-denmark/copenhagens-norrebro-station-area-set-for-major-renovation/",
+          "domain": "cphpost.dk",
+          "seendate": "20261126T124500Z",
+          "language": "English",
+          "sourcecountry": "Denmark"
+        },
+        {
+          "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
+          "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
+          "domain": "thepeterboroughexaminer.com",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "UK to invest £9 . 5m in Ukraine windfarm to bolster war - hit energy system",
+          "url": "https://www.aol.co.uk/articles/uk-invest-9-5m-ukraine-050046000.html",
+          "domain": "aol.co.uk",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Letters to the Editor : Nov . 25 , 2026",
+          "url": "https://www.kelownadailycourier.ca/opinion/letters_to_editor/article_7b50b9a7-5d08-4470-9994-d7286134fa66.html",
+          "domain": "kelownadailycourier.ca",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Rassvet , Russia Starlink is expanding rapidly",
+          "url": "https://www.dw.com/en/can-rassvet-russias-starlink-change-the-course-of-the-war-in-ukraine/a-80052579",
+          "domain": "dw.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "Germany"
         },
         {
-          "title": "Letters for Nov . 26 : Election Day was a stress - test for our democracy",
-          "url": "https://www.dailypress.com/2026/11/25/letters-for-nov-26-election-day-was-a-stress-test-for-our-democracy/",
-          "domain": "dailypress.com",
-          "seendate": "20261126T011500Z",
+          "title": "The looming threat of an authoritarian triumvirate",
+          "url": "https://independentaustralia.net/politics/politics-display/the-looming-threat-of-an-authoritarian-triumvirate,21862",
+          "domain": "independentaustralia.net",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Russia hits Kyiv with ballistic missiles , mayor says",
+          "url": "https://www.newcastleherald.com.au/story/9398450/russia-hits-kyiv-with-ballistic-missiles-mayor-says/",
+          "domain": "newcastleherald.com.au",
+          "seendate": "20261126T061500Z",
+          "language": "English",
+          "sourcecountry": null
+        },
+        {
+          "title": "Jared Kushner Thirsts Over Grandmaster Putin in Bonkers Interview",
+          "url": "https://www.thedailybeast.com/jared-kushner-thirsts-over-grandmaster-putin-in-bonkers-interview",
+          "domain": "thedailybeast.com",
+          "seendate": "20261126T061500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Russia wants more than Ukraine , says Germany Merz as he defends aid for Kyiv",
-          "url": "https://www.channelnewsasia.com/world/russia-wants-more-ukraine-says-germanys-merz-he-defends-aid-kyiv-6582701",
-          "domain": "channelnewsasia.com",
-          "seendate": "20261126T011500Z",
+          "title": "a proxy war between kiev european backers and russia .....",
+          "url": "https://yourdemocracy.net/drupal/node/62002",
+          "domain": "yourdemocracy.net",
+          "seendate": "20261126T061500Z",
           "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Baltic states divided over Estonian border closure",
-          "url": "http://www.europesun.com/news/279454414/baltic-states-divided-over-estonian-border-closure",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "Russ Vought embroiled in rollout of unusual US gov website spotted in Russian campaign",
-          "url": "https://www.rawstory.com/unusual-us-govt-website-detected-in-russian-campaign-ahead-of-russ-vought-rollout/",
-          "domain": "rawstory.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Lavrov warns of Europeans with feet on the table",
-          "url": "http://www.europesun.com/news/279454571/lavrov-warns-of-europeans-with-feet-on-the-table",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "Lavrov questions value of EU role in Ukraine talks",
-          "url": "http://www.europesun.com/news/279454530/lavrov-questions-value-of-eu-role-in-ukraine-talks",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "The Russia panic circus isnt selling in Germany",
-          "url": "http://www.europesun.com/news/279454497/the-russia-panic-circus-isnt-selling-in-germany",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "Mayor of Kaniv Wishes Happy Thanksgiving to Sonoma",
-          "url": "https://sonomasun.com/2026/11/25/mayor-of-kaniv-wishes-happy-thanksgiving-to-sonoma/",
-          "domain": "sonomasun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Russia Baltic bastion : Why is NATO threatening Kaliningrad ?",
-          "url": "http://www.europesun.com/news/279454415/russia-baltic-bastion-why-is-nato-threatening-kaliningrad",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "EAM Jaishankar interacts with defence journalists from over 30 countries , highlights India growing defence capabilities",
-          "url": "http://www.europesun.com/news/279454534/eam-jaishankar-interacts-with-defence-journalists-from-over-30-countries-highlights-india-growing-defence-capabilities",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "USAID gave government employees an anti - Trump reading list that compared him to Hitler",
-          "url": "https://www.theblaze.com/news/usaid-anti-trump-hitler-russia",
-          "domain": "theblaze.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "DRONE THREAT : Britain Moves Fighter Jets Into Protected Shelters , Considers Anti - Drone Netting",
-          "url": "https://www.theyeshivaworld.com/news/israel-news/2628298/drone-threat-britain-moves-fighter-jets-into-protected-shelters-considers-anti-drone-netting.html",
-          "domain": "theyeshivaworld.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Ammosexual fear porn proves a tough sell in Germany",
-          "url": "http://www.europesun.com/news/279454356/ammosexual-fear-porn-proves-a-tough-sell-in-germany",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "Melania Trump reunites her seventh group of Ukrainian and Russian children with their families",
-          "url": "https://www.texarkanagazette.com/news/2026/nov/25/melania-trump-reunites-her-seventh-group-of/",
-          "domain": "texarkanagazette.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Spain heads to the polls : What at stake ?",
-          "url": "http://www.europesun.com/news/279454568/spain-heads-to-the-polls-what-at-stake",
-          "domain": "europesun.com",
-          "seendate": "20261126T011500Z",
-          "language": "English",
-          "sourcecountry": "Russia"
-        },
-        {
-          "title": "8 Third - Generation Fighter Jets Still In Service",
-          "url": "https://www.slashgear.com/2324020/third-generation-fighter-jets-still-in-service/",
-          "domain": "slashgear.com",
-          "seendate": "20261126T004500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "What life is like in Kyiv under near - daily bombardments",
-          "url": "https://www.wcbe.org/2026-11-25/what-life-is-like-in-kyiv-under-near-daily-bombardments",
-          "domain": "wcbe.org",
-          "seendate": "20261126T004500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "PODCAST : Ottawa pushes back as Canada - U . S . trade dispute strains defence ties",
-          "url": "https://www.620ckrm.com/2026/11/25/podcast-ottawa-pushes-back-as-canada-u-s-trade-dispute-strains-defence-ties/",
-          "domain": "620ckrm.com",
-          "seendate": "20261126T004500Z",
-          "language": "English",
-          "sourcecountry": "Canada"
+          "sourcecountry": null
         }
       ]
     },
@@ -692,7 +692,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-26T13:39:54.295Z",
+      "checkedAt": "2026-11-26T19:18:00.057Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
