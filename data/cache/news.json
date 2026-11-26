@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-26T07:40:15.977Z",
+  "checkedAt": "2026-11-26T13:38:31.070Z",
   "lastSuccessAt": "2026-11-26T07:44:24.412Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-26T07:42:24.086Z",
-      "checkedAt": "2026-11-26T07:42:24.086Z",
+      "checkedAt": "2026-11-26T13:41:32.166Z",
       "articles": [
         {
           "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
@@ -178,11 +178,11 @@
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-26T07:44:24.412Z",
-      "checkedAt": "2026-11-26T07:44:24.412Z",
+      "checkedAt": "2026-11-26T13:41:32.166Z",
       "articles": [
         {
           "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses – Winnipeg Free Press",
@@ -349,10 +349,10 @@
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
       "status": "error",
-      "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-26T01:42:04.438Z",
-      "checkedAt": "2026-11-26T07:45:46.668Z",
+      "checkedAt": "2026-11-26T13:41:32.166Z",
       "articles": [
         {
           "title": "Just keep quiet : Revulsion after Jared Kushner shameful gushing over adversary",
@@ -522,7 +522,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-26T01:39:39.895Z",
-      "checkedAt": "2026-11-26T07:44:01.578Z",
+      "checkedAt": "2026-11-26T13:41:32.166Z",
       "articles": [
         {
           "title": "Just keep quiet : Revulsion after Jared Kushner shameful gushing over adversary",
@@ -692,7 +692,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-26T07:41:32.293Z",
+      "checkedAt": "2026-11-26T13:39:54.295Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
