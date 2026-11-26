@@ -3,13 +3,13 @@
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
  "methodologyVersion": 1,
- "generatedAt": "2026-11-25T06:36:26.903Z",
- "lastSuccessAt": "2026-11-25T06:36:26.903Z",
- "checkedAt": "2026-11-25T06:36:26.903Z",
+ "generatedAt": "2026-11-26T06:37:21.583Z",
+ "lastSuccessAt": "2026-11-26T06:37:21.583Z",
+ "checkedAt": "2026-11-26T06:37:21.583Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-25T06:36:26.843Z",
+   "checkedAt": "2026-11-26T06:37:21.542Z",
    "lastSuccessAt": "2026-11-21T03:15:43.287Z"
   },
   "indicators": {
@@ -18,7 +18,7 @@
    "lastSuccessAt": "2026-11-23T05:42:52.179Z"
   },
   "briefs": {
-   "generatedAt": "2026-11-25T04:33:01.645Z"
+   "generatedAt": "2026-11-26T04:28:47.931Z"
   }
  },
  "countries": {
@@ -107,28 +107,28 @@
     ],
     "context": [
      {
-      "headline": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
-      "publisher": "digitimes.com",
-      "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
-      "time": "2026-11-25T04:30:00.000Z",
+      "headline": "Iran War Oil Crisis Explained: India, China Record Russian Oil Imports In 2026 Amid Strait Of Hormuz Tensions, US Sanctions And Global Crude Oil Price Surge",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/iran-war-oil-crisis-india-china-record-russian-crude-oil-imports-2026-strait-of-hormuz-us-sanctions-brent-price",
+      "time": "2026-11-25T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-      "publisher": "ibtimes.com",
-      "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
-      "time": "2026-11-24T22:53:00.000Z",
+      "headline": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+      "publisher": "arabnews.com",
+      "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+      "time": "2026-11-25T20:14:00.000Z",
       "timeBasis": "published"
      },
      {
-      "headline": "Zelenskyy plans to appeal to new US Congress for military aid, tougher sanctions against Russia",
-      "publisher": "interfax.com.ua",
-      "url": "https://en.interfax.com.ua/news/general/1241510.html",
-      "time": "2026-11-24T14:15:00.000Z",
+      "headline": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
+      "publisher": "jpost.com",
+      "url": "http://www.jpost.com/international/article-916124",
+      "time": "2026-11-25T18:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    },
    "economic": {
     "category": "economic",
@@ -232,28 +232,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
-      "publisher": "digitimes.com",
-      "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
-      "time": "2026-11-25T04:30:00.000Z",
+      "headline": "Iran War Oil Crisis Explained: India, China Record Russian Oil Imports In 2026 Amid Strait Of Hormuz Tensions, US Sanctions And Global Crude Oil Price Surge",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/iran-war-oil-crisis-india-china-record-russian-crude-oil-imports-2026-strait-of-hormuz-us-sanctions-brent-price",
+      "time": "2026-11-25T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-      "publisher": "ibtimes.com",
-      "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
-      "time": "2026-11-24T22:53:00.000Z",
+      "headline": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+      "publisher": "arabnews.com",
+      "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+      "time": "2026-11-25T20:14:00.000Z",
       "timeBasis": "published"
      },
      {
-      "headline": "Zelenskyy plans to appeal to new US Congress for military aid, tougher sanctions against Russia",
-      "publisher": "interfax.com.ua",
-      "url": "https://en.interfax.com.ua/news/general/1241510.html",
-      "time": "2026-11-24T14:15:00.000Z",
+      "headline": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
+      "publisher": "jpost.com",
+      "url": "http://www.jpost.com/international/article-916124",
+      "time": "2026-11-25T18:00:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    }
   },
   "CHN": {
@@ -293,28 +293,28 @@
     ],
     "context": [
      {
-      "headline": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
-      "publisher": "digitimes.com",
-      "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
-      "time": "2026-11-25T04:30:00.000Z",
+      "headline": "Iran War Oil Crisis Explained: India, China Record Russian Oil Imports In 2026 Amid Strait Of Hormuz Tensions, US Sanctions And Global Crude Oil Price Surge",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/iran-war-oil-crisis-india-china-record-russian-crude-oil-imports-2026-strait-of-hormuz-us-sanctions-brent-price",
+      "time": "2026-11-25T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-      "publisher": "ibtimes.com",
-      "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
-      "time": "2026-11-24T22:53:00.000Z",
-      "timeBasis": "published"
+      "headline": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
+      "publisher": "jpost.com",
+      "url": "http://www.jpost.com/international/article-916124",
+      "time": "2026-11-25T18:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "China's space diplomacy belied by Russia's nuclear weapon satellite",
-      "publisher": "washingtonexaminer.com",
-      "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
-      "time": "2026-11-24T21:11:00.000Z",
-      "timeBasis": "published"
+      "headline": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
+      "publisher": "indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
+      "time": "2026-11-25T09:30:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    },
    "economic": {
     "category": "economic",
@@ -418,28 +418,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
-      "publisher": "digitimes.com",
-      "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
-      "time": "2026-11-25T04:30:00.000Z",
+      "headline": "Iran War Oil Crisis Explained: India, China Record Russian Oil Imports In 2026 Amid Strait Of Hormuz Tensions, US Sanctions And Global Crude Oil Price Surge",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/iran-war-oil-crisis-india-china-record-russian-crude-oil-imports-2026-strait-of-hormuz-us-sanctions-brent-price",
+      "time": "2026-11-25T10:15:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-      "publisher": "ibtimes.com",
-      "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
-      "time": "2026-11-24T22:53:00.000Z",
-      "timeBasis": "published"
+      "headline": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
+      "publisher": "jpost.com",
+      "url": "http://www.jpost.com/international/article-916124",
+      "time": "2026-11-25T18:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "China's space diplomacy belied by Russia's nuclear weapon satellite",
-      "publisher": "washingtonexaminer.com",
-      "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
-      "time": "2026-11-24T21:11:00.000Z",
-      "timeBasis": "published"
+      "headline": "US tariff plan targeting China, other economies risks offsetting trade negotiation gains, business confidence: experts",
+      "publisher": "globaltimes.cn",
+      "url": "https://www.globaltimes.cn/page/202611/1375070.shtml",
+      "time": "2026-11-25T17:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    }
   },
   "RUS": {
@@ -511,6 +511,13 @@
     ],
     "context": [
      {
+      "headline": "Iran War Oil Crisis Explained: India, China Record Russian Oil Imports In 2026 Amid Strait Of Hormuz Tensions, US Sanctions And Global Crude Oil Price Surge",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/iran-war-oil-crisis-india-china-record-russian-crude-oil-imports-2026-strait-of-hormuz-us-sanctions-brent-price",
+      "time": "2026-11-25T10:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "China's space diplomacy belied by Russia's nuclear weapon satellite",
       "publisher": "washingtonexaminer.com",
       "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
@@ -523,16 +530,9 @@
       "url": "https://en.interfax.com.ua/news/general/1241510.html",
       "time": "2026-11-24T14:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
-      "publisher": "netscape.com",
-      "url": "https://isp.netscape.com/pf/story/0001/20261124/831297473fcc9a83d92d02ca5ee770f5",
-      "time": "2026-11-24T07:34:00.000Z",
-      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    },
    "economic": {
     "category": "economic",
@@ -637,6 +637,13 @@
     "insufficientReason": "method",
     "context": [
      {
+      "headline": "Iran War Oil Crisis Explained: India, China Record Russian Oil Imports In 2026 Amid Strait Of Hormuz Tensions, US Sanctions And Global Crude Oil Price Surge",
+      "publisher": "outlookindia.com",
+      "url": "https://www.outlookindia.com/international/iran-war-oil-crisis-india-china-record-russian-crude-oil-imports-2026-strait-of-hormuz-us-sanctions-brent-price",
+      "time": "2026-11-25T10:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
+     },
+     {
       "headline": "China's space diplomacy belied by Russia's nuclear weapon satellite",
       "publisher": "washingtonexaminer.com",
       "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
@@ -649,16 +656,9 @@
       "url": "https://en.interfax.com.ua/news/general/1241510.html",
       "time": "2026-11-24T14:15:00.000Z",
       "timeBasis": "first seen by GDELT"
-     },
-     {
-      "headline": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
-      "publisher": "netscape.com",
-      "url": "https://isp.netscape.com/pf/story/0001/20261124/831297473fcc9a83d92d02ca5ee770f5",
-      "time": "2026-11-24T07:34:00.000Z",
-      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    }
   },
   "UKR": {
@@ -705,21 +705,21 @@
       "timeBasis": "first seen by GDELT"
      },
      {
+      "headline": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+      "publisher": "arabnews.com",
+      "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+      "time": "2026-11-25T20:14:00.000Z",
+      "timeBasis": "published"
+     },
+     {
       "headline": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
       "publisher": "ibtimes.com",
       "url": "https://www.ibtimes.com/pentagon-delays-patriot-missiles-ukraine-3810122",
       "time": "2026-11-24T11:52:00.000Z",
       "timeBasis": "published"
-     },
-     {
-      "headline": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
-      "publisher": "netscape.com",
-      "url": "https://isp.netscape.com/pf/story/0001/20261124/831297473fcc9a83d92d02ca5ee770f5",
-      "time": "2026-11-24T07:34:00.000Z",
-      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    },
    "economic": {
     "category": "economic",
@@ -811,21 +811,21 @@
       "timeBasis": "first seen by GDELT"
      },
      {
+      "headline": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+      "publisher": "arabnews.com",
+      "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+      "time": "2026-11-25T20:14:00.000Z",
+      "timeBasis": "published"
+     },
+     {
       "headline": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
       "publisher": "ibtimes.com",
       "url": "https://www.ibtimes.com/pentagon-delays-patriot-missiles-ukraine-3810122",
       "time": "2026-11-24T11:52:00.000Z",
       "timeBasis": "published"
-     },
-     {
-      "headline": "North Korea reviews Switzerland relations after sanctions on youth camp linked to Russia-Ukraine war",
-      "publisher": "netscape.com",
-      "url": "https://isp.netscape.com/pf/story/0001/20261124/831297473fcc9a83d92d02ca5ee770f5",
-      "time": "2026-11-24T07:34:00.000Z",
-      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    }
   },
   "TWN": {
@@ -882,28 +882,21 @@
     ],
     "context": [
      {
-      "headline": "China's J-10C Fighter Spotted With Russian 'Bunker-Buster' Missile. Taiwan's Airfields Could Face A New Threat.",
+      "headline": "China Trains Fighter Pilots With AI Combat Drones. US Army Warns Of Threat To Taiwan And American Forces.",
       "publisher": "ibtimes.com",
-      "url": "https://www.ibtimes.com/chinese-j-10c-modified-kh-29t-missile-3810159",
-      "time": "2026-11-24T23:59:00.000Z",
+      "url": "https://www.ibtimes.com/china-trains-pilots-ai-combat-drones-3810201",
+      "time": "2026-11-25T21:37:00.000Z",
       "timeBasis": "published"
      },
      {
-      "headline": "Taipei Mayoral Candidate Puma Shen on Fighting Chinese Cognitive Warfare",
-      "publisher": "time.com",
-      "url": "https://time.com/article/2026/11/24/puma-shen-taipei-mayor-taiwan-china-interview/",
-      "time": "2026-11-24T20:42:00.000Z",
-      "timeBasis": "published"
-     },
-     {
-      "headline": "China Deploys Bombers, Fighter Jets Near Taiwan. 15 Aircraft Cross Median Line In Coordinated Patrol.",
-      "publisher": "ibtimes.com",
-      "url": "https://www.ibtimes.com/china-military-patrol-aircraft-around-taiwan-3810111",
-      "time": "2026-11-23T23:42:00.000Z",
-      "timeBasis": "published"
+      "headline": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
+      "publisher": "antiwar.com",
+      "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
+      "time": "2026-11-25T21:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    },
    "economic": {
     "category": "economic",
@@ -942,21 +935,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Taiwan Envoy Urges Canada to Sign Pending Deal, Says It Will Help Shield Ottawa From Coercion by Beijing",
-      "publisher": "theepochtimes.com",
-      "url": "https://www.theepochtimes.com/world/taiwan-envoy-urges-canada-to-sign-pending-deal-says-it-will-help-shield-ottawa-from-coercion-by-beijing-6128841",
-      "time": "2026-11-24T20:45:00.000Z",
+      "headline": "US tariff proposal would place Taiwan equal to FTA partners: official",
+      "publisher": "taipeitimes.com",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868438",
+      "time": "2026-11-26T04:30:00.000Z",
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Taiwan Trade Deal Could Help Canada Limit China's Economic Leverage – China Money Network",
-      "publisher": "chinamoneynetwork.com",
-      "url": "https://www.chinamoneynetwork.com/2026/11/24/taiwan-trade-deal-could-help-canada-limit-chinas-economic-leverage",
-      "time": "2026-11-24T02:00:00.000Z",
+      "headline": "Taiwan says it is confident of keeping previously agreed tariffs with US",
+      "publisher": "businesstimes.com.sg",
+      "url": "https://www.businesstimes.com.sg/international/taiwan-says-it-confident-keeping-previously-agreed-tariffs-us",
+      "time": "2026-11-26T03:45:00.000Z",
       "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Australia news LIVE: Leah Blyth joins One Nation; US tariffs hiked on products from EU, Japan, Taiwan and more; stagflation warning for Australia",
+      "publisher": "brisbanetimes.com.au",
+      "url": "https://www.brisbanetimes.com.au/national/australia-news-live-liberal-senator-joins-one-nation-economists-warn-of-looming-stagflation-us-hikes-tariffs-by-20-per-cent-for-dozens-of-countries-20261126-p61hdi.html",
+      "time": "2026-11-25T19:45:00.000Z",
+      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-25T04:33:01.645Z"
+    "contextAsOf": "2026-11-26T04:28:47.931Z"
    }
   }
  }
