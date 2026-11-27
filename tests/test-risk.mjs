@@ -180,7 +180,7 @@ const md5 = f => crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT,
 ok(md5('js/globe.js') === 'c8c9ebaff9c79cd3a2a09d1f0aea9f8b' && md5('css/style.css') === '40e667d30ab897118de04ff89fd785ca', 'the approved globe and style files are byte-for-byte unchanged');
 const wf = f => fs.readFileSync(path.join(ROOT, '.github', 'workflows', f), 'utf8');
 ok(!/risk/i.test(wf('update-rss.yml')) && !/risk/i.test(wf('update-data.yml')), 'the news and indicator workflows were not changed to include risk steps');
-ok(/group: update-data/.test(wf('update-risk.yml')) && /#\s+schedule:/.test(wf('update-risk.yml')) && /mode:[\s\S]*default: verify/.test(wf('update-risk.yml')), 'the risk workflow shares the concurrency group, has its schedule off and defaults to verify');
+ok(/group: update-data/.test(wf('update-risk.yml')) && /^\s+- cron: '41 5 \* \* \*'/m.test(wf('update-risk.yml')) && /pages: write/.test(wf('update-risk.yml')) && /mode:[\s\S]*default: verify/.test(wf('update-risk.yml')), 'the risk workflow shares the concurrency group, has the owner-enabled schedule (05:41 UTC) and pages: write, and defaults to verify (production workflow)');
 const app = fs.readFileSync(path.join(ROOT, 'js', 'app.js'), 'utf8'); ok(['function paintData', 'function paintNews', 'function brief', 'function articleBlock', 'initGlobe'].every(x => app.includes(x)), 'existing page functions (indicators, news, briefs, globe) are still present');
 
 console.log(`\n${n - bad} of ${n} checks passed${bad ? `, ${bad} FAILED` : ''}. Simulated only: no real UCDP or World Bank request was made and nothing was run on GitHub.`);
