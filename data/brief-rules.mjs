@@ -7,7 +7,7 @@
 // Test them with:  node tests/test-briefs.mjs
 
 export const BRIEF_RULES = {
-  rulesVersion: 1,
+  rulesVersion: 2,   // 2: reports that name the country only in passing are left out; sources carry an outlet label (data/source-quality.mjs)
   names: { USA: 'the United States', CHN: 'China', RUS: 'Russia', UKR: 'Ukraine', TWN: 'Taiwan' },
   windowHours: 72,          // only reports from the last 72 hours are used (publication time; otherwise the time GDELT saw it; otherwise first cached)
   maxReports: 12,           // the highest-ranked grouped reports that are analysed and listed as sources (all numbers in the brief refer to these)
@@ -20,5 +20,5 @@ export const BRIEF_RULES = {
   // tests/test-briefs.mjs enforces this on every generated sentence.
   bannedInAnalysis: ['because', 'therefore', 'due to', 'caused', 'proves', 'proved', 'confirms', 'confirmed', 'as a result', 'leading to', 'will ', 'would ', 'likely', 'escalat', 'threat', 'risk of'],
   // The one-line caveat shown on every brief.
-  notice: 'Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under "Why it matters" come from fixed keyword rules, not from reading the articles.'
+  notice: 'Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under "Why it matters" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.'
 };

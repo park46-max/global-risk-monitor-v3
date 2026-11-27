@@ -14,6 +14,18 @@
 //  3. DUPLICATES. Headlines with the same words (ignoring a trailing " - Publisher" and word order), published within 48 hours, are grouped: one is
 //     shown and the others are listed as "Also reported by", each with its own link.
 //
+//  4. COUNTRY ROLE (new). A country named in a headline is not always what the story is about. For each matched country the headline gets a role:
+//        "shared"     two or more monitored countries are named (US-China, Russia-Ukraine, Taiwan Strait ...), or another country is named first
+//                     but the headline carries a security, diplomacy or sanctions/trade signal (an interstate story);
+//        "incidental" another country (list `role.foreign`) is named BEFORE this one, this one is not among the first `role.earlyWords` words, and there is
+//                     no such signal; or the name is only a company/person descriptor ("US-based", "China-born");
+//        "primary"    everything else.
+//     Incidental items are not deleted: the page lists them under "Mentioned in passing" and the country briefs leave them out.
+//     Word position is a rough proxy for "what the story is about", so it can be wrong; the label is always shown.
+//  5. OFF-TOPIC. Headlines with sport, entertainment or local-crime wording (`offTopic`) and NO security, diplomacy or sanctions/trade topic
+//     are filtered into the same "Filtered out" list with the reason, so nothing disappears silently.
+//  6. SOURCE AND STYLE. See data/source-quality.mjs (outlet label, sensational-style flag). Labels never hide an article.
+//
 // Matching is whole-word and case-insensitive unless cs:true. Add a plain string, or { t:'word', cs:true }.
 export const RULES = {
   topics: {
@@ -52,7 +64,31 @@ export const RULES = {
       { t: 'ETF', cs: true }, { t: 'ETFs', cs: true }, 'portfolio', 'stock price', 'share price', 'earnings', 'quarterly results',
       'shares rise', 'shares fall', 'shares jump', 'shares slump', 'shares surge', 'stock market today', 'stocks to watch', { t: 'IPO', cs: true }, 'market cap' ]
   },
-  dedupe: { similarity: 0.7, minWords: 4, windowHours: 48, maxVariants: 8 },
+  // Country role (rule 4). Other countries and blocs, so that "Iran says ... in the US" can be told apart from "US imposes ...". Demonyms included.
+  role: {
+    earlyWords: 3,
+    descriptors: ['based', 'listed', 'headquartered', 'born', 'owned'],
+    foreign: [ 'Iran', 'Iranian', 'Israel', 'Israeli', 'India', 'Indian', 'Japan', 'Japanese', 'North Korea', 'North Korean', 'South Korea', 'South Korean', 'Korea', 'Korean',
+      'Germany', 'German', 'France', 'French', 'Britain', 'British', { t: 'UK', cs: true }, 'Italy', 'Italian', 'Spain', 'Spanish', 'Poland', 'Polish', 'Canada', 'Canadian',
+      'Mexico', 'Mexican', 'Brazil', 'Brazilian', 'Argentina', 'Venezuela', 'Venezuelan', 'Cuba', 'Cuban', 'Australia', 'Australian', 'Turkey', 'Turkish', 'Saudi', 'Egypt', 'Egyptian',
+      'Syria', 'Syrian', 'Iraq', 'Iraqi', 'Lebanon', 'Lebanese', 'Gaza', 'Palestinian', 'Pakistan', 'Pakistani', 'Afghanistan', 'Afghan', 'Belarus', 'Belarusian',
+      'Philippines', 'Philippine', 'Vietnam', 'Vietnamese', 'Indonesia', 'Indonesian', 'Thailand', 'Thai', 'Nigeria', 'Nigerian', 'Kenya', 'Ethiopia', 'South Africa', 'African',
+      'Kenyan', 'Ethiopian', 'Ghanaian', 'Moroccan', 'Qatar', 'Qatari', 'Emirati', { t: 'UAE', cs: true }, 'Switzerland', 'Swiss', 'Sweden', 'Swedish', 'Norway', 'Norwegian', 'Finland', 'Finnish',
+      'Netherlands', 'Dutch', 'Greece', 'Greek', 'Portugal', 'Portuguese', 'Ireland', 'Irish', 'Hungary', 'Hungarian', 'Serbia', 'Serbian', 'Romania', 'Romanian', 'Bulgaria', 'Bulgarian', 'Czech',
+      'Colombia', 'Colombian', 'Chile', 'Chilean', 'Peru', 'Peruvian', 'Singapore', 'Singaporean', 'Malaysia', 'Malaysian', 'Bangladesh', 'Bangladeshi', 'Myanmar', 'Cambodia', 'Cambodian',
+      'Europe', 'European', { t: 'EU', cs: true }, 'European Union', 'Asia', 'Africa', 'Middle East', 'Latin America' ]
+  },
+  // Off-topic wording (rule 5). Applied only when the headline has no security, diplomacy or sanctions/trade topic.
+  offTopic: {
+    sport: [ { t: 'NFL', cs: true }, { t: 'NBA', cs: true }, { t: 'MLB', cs: true }, { t: 'NHL', cs: true }, { t: 'NCAA', cs: true }, { t: 'PGA', cs: true }, 'Super Bowl', 'World Series',
+      'Premier League', 'La Liga', 'touchdown', 'quarterback', 'home run', 'playoffs', 'playoff', 'Grand Slam', 'Wimbledon', 'golf tournament', 'soccer', 'basketball', 'baseball',
+      'football match', 'football game', 'transfer window', 'fantasy football' ],
+    entertainment: [ 'celebrity', 'celebrities', 'box office', 'red carpet', 'Grammy', 'Grammys', 'Oscars', 'Emmy', 'Emmys', 'Golden Globes', 'movie review', 'film review', 'album',
+      'concert tour', 'singer', 'actress', 'reality TV', 'horoscope', 'royal family', 'wedding', 'influencer', 'viral video', 'fashion week', 'recipe', 'lottery', 'Powerball', 'Mega Millions' ],
+    local: [ 'mass shooting', 'shot dead', 'stabbing', 'stabbed', 'car crash', 'house fire', 'missing child', 'Amber Alert', 'police say', 'arrested for', 'murder trial',
+      'high school', 'school board', 'city council', 'homicide', 'robbery', 'burglary', 'road rage', 'sinkhole', 'weather forecast', 'snowstorm' ]
+  },
+  dedupe: { similarity: 0.7, minWords: 4, windowHours: 48, maxVariants: 8, containment: 0.85, containmentMinWords: 5 },
   // Score thresholds for the tiers shown on the page.
   tiers: { high: 3, medium: 1 }
 };
