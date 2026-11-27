@@ -44,7 +44,7 @@ const hasDate = s => typeof s === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(s);
 const client = createClient({ ua: UA, timeoutMs: S.timeoutMs, maxTries: S.maxTries, retryBaseMs: S.retryBaseMs, maxBytes: S0.maxBytes, allowHttp: process.env.RSS_ALLOW_HTTP === '1' });
 const RSS_ACCEPT = 'application/rss+xml, application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.1';
 // All addresses go through scripts/http-lib.mjs: https only, publisher feed hosts only, every redirect checked before it is requested.
-const request = (feed, pub, cond, log) => client.request(feed.url, { hosts: pub.feedHosts, who: pub.name, cond, accept: RSS_ACCEPT }, log);
+const request = (feed, pub, cond, log) => client.request(feed.url, { hosts: pub.feedHosts, who: pub.name, cond, accept: RSS_ACCEPT, before: (u, hop) => beforeHop(pub, u, hop, log) }, log);
 
 // ---------- politeness helpers: robots.txt, pacing, restricted answers ----------
 // robots.txt is read once per host per run (same safe client, same host rules) BEFORE any feed on that host is requested.
@@ -61,7 +61,7 @@ async function robots(pub, urlStr, log) {
   const u = new URL(urlStr), robotsUrl = u.origin + '/robots.txt';
   if (!robotsCache.has(u.origin)) robotsCache.set(u.origin, (async () => {
     try {
-      await pace();
+      await pace(u.origin);
       const r = await client.request(robotsUrl, { hosts: pub.feedHosts, who: pub.name, accept: 'text/plain,*/*;q=0.1', maxBytes: 512 * 1024 }, log);
       return { state: 'read', groups: parseRobots(r.text) };
     } catch (e) {
@@ -74,15 +74,30 @@ async function robots(pub, urlStr, log) {
   const info = await robotsCache.get(u.origin);
   if (info.state === 'read') {
     const d = robotsDecision(info.groups, ROBOTS_TOKEN, u.pathname + u.search);
-    if (d.crawlDelay != null) crawlDelay = Math.max(crawlDelay, Math.min(d.crawlDelay, 30));
+    if (d.allowed && d.crawlDelay != null) {
+      if (d.crawlDelay > MAX_CRAWL_DELAY) return { allowed: false, crawlDelay: d.crawlDelay, text: `${robotsUrl} asks for a Crawl-delay of ${d.crawlDelay} s, longer than the ${MAX_CRAWL_DELAY} s this script is willing to wait, so it is not requested` };
+      delays.set(u.origin, d.crawlDelay);
+    }
     return { allowed: d.allowed, crawlDelay: d.crawlDelay, text: d.allowed ? `${robotsUrl} allows this address${d.rule ? ' (' + d.rule + ')' : ' (no matching rule)'}${d.crawlDelay != null ? '; Crawl-delay ' + d.crawlDelay + ' s honoured' : ''}` : `${robotsUrl} DISALLOWS this address (${d.rule}), so it is not requested` };
   }
   return { allowed: info.state === 'none', crawlDelay: null, text: info.why };
 }
-let started = false, crawlDelay = 0;
-async function pace() {   // pause between two requests to publishers (never before the very first one)
-  if (started) { const base = Math.max(S.gapMs, crawlDelay * 1000); if (base) await sleep(base + Math.random() * 1000); }
-  started = true;
+// Pacing: at least gapMs (plus up to 1 s of jitter) between any two requests, and at least the host's Crawl-delay between two requests to the same host.
+// A redirect destination is paced like any other request (beforeHop below).
+const MAX_CRAWL_DELAY = 30, delays = new Map(), lastAt = new Map(); let lastAny = 0;
+async function pace(origin) {
+  let until = lastAny ? lastAny + (S.gapMs ? S.gapMs + Math.random() * 1000 : 0) : 0;
+  if (origin && delays.has(origin) && lastAt.has(origin)) until = Math.max(until, lastAt.get(origin) + delays.get(origin) * 1000);
+  if (until > Date.now()) await sleep(until - Date.now());
+  lastAny = Date.now(); if (origin) lastAt.set(origin, lastAny);
+}
+// Runs before EVERY request of a feed's redirect chain (scripts/http-lib.mjs o.before): the destination's own robots.txt is read (same-host and
+// cross-host alike; a host outside the publisher's feedHosts was already refused), a Disallow, a 401/403, an unreadable robots.txt or a Crawl-delay
+// that is too long STOPS the chain, and later hops wait for the destination's Crawl-delay. Nothing is retried with other headers, addresses or proxies.
+async function beforeHop(pub, url, hop, log) {
+  const rb = await robots(pub, url, log);
+  if (!rb.allowed) throw new Restricted((hop ? `redirect destination ${url}: ` : '') + rb.text);
+  if (hop > 0) await pace(new URL(url).origin);
 }
 const typeLabel = p => (SOURCE_TYPES[p.sourceType || 'journalism'] || {}).label || String(p.sourceType);
 
@@ -109,8 +124,8 @@ if (VERIFY) {
         const rb = await robots(pub, pub.discoverUrl, say);
         say(`  discovery page ${pub.discoverUrl}: ${rb.text}`);
         if (!rb.allowed) throw new Restricted(rb.text);
-        await pace(rb.crawlDelay);
-        const r = await client.request(pub.discoverUrl, { hosts: pub.feedHosts, who: pub.name, accept: 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.1' }, say);
+        await pace(new URL(pub.discoverUrl).origin);
+        const r = await client.request(pub.discoverUrl, { hosts: pub.feedHosts, who: pub.name, accept: 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.1', before: (u, hop) => beforeHop(pub, u, hop, say) }, say);
         const links = extractFeedLinks(r.text, pub.discoverUrl, pub.feedHosts);
         say(`${pub.name}: feed discovery on ${pub.discoverUrl}: ${links.length} candidate address(es)`);
         links.slice(0, 40).forEach(l => say('    candidate: ' + l.url + '   (' + l.why + ')'));
@@ -124,7 +139,7 @@ if (VERIFY) {
       try {
         const rb = await robots(pub, feed.url, say); rbText = rb.text;
         if (!rb.allowed) throw new Restricted(rb.text);
-        await pace(rb.crawlDelay);
+        await pace(new URL(feed.url).origin);
         const r = await request(feed, pub, null, say);
         const entries = parseFeed(r.text), F = feedFormat(r.text), Au = auditEntries(entries, { publisher: pub, now: NOW });
         const { items, stat } = buildItems(entries, { publisher: pub, feedId: feed.id, now: NOW, matchers });
@@ -137,7 +152,8 @@ if (VERIFY) {
         row = `| ${feed.id} | OK (HTTP ${r.status}) | ${valid} | ${newest} | ${stat.undated} | ${stat.offHost} | ${per} |`;
         say(line);
         say(`        requested: ${feed.url}`);
-        say(`        final address: ${r.finalUrl}${r.finalUrl === feed.url ? ' (no redirect)' : ' (redirect followed within the publisher\'s own hosts)'}`);
+        say(`        final address: ${r.finalUrl}${r.finalUrl === feed.url ? ' (no redirect)' : ' (redirect followed within the publisher\'s own hosts; robots.txt was checked for every address in the chain)'}`);
+        if (r.chain && r.chain.length > 1) say(`        redirect chain: ${r.chain.join(' -> ')}`);
         say(`        format: ${F.format}${F.title ? ', feed title: "' + F.title + '"' : ', no feed title'}; Content-Type: ${r.headers.get('content-type') || 'not stated'}${r.headers.get('x-robots-tag') ? '; X-Robots-Tag: ' + r.headers.get('x-robots-tag') : ''}`);
         say(`        fields in ${Au.entries} entries: headline ${Au.headline}, original article address ${Au.link} (${Au.ownLink} on the publisher's own site), publication date ${Au.date}; publisher name is not given per entry: taken from the configuration ("${pub.name}")`);
         say(`        newest ${newest}, oldest ${Au.oldest || 'none'}`);
@@ -202,7 +218,7 @@ for (const pub of active) for (const feed of pub.feeds) {
   try {
     const rb = await robots(pub, feed.url, say);
     if (!rb.allowed) throw new Restricted(rb.text);
-    await pace(rb.crawlDelay);
+    await pace(new URL(feed.url).origin);
     const r = await request(feed, pub, old.lastSuccessAt ? old : null, say);
     rec.httpStatus = r.status;
     if (r.status === 304) { rec.status = 'ok'; rec.lastSuccessAt = iso(NOW); rec.notModified = true; say('  not modified (HTTP 304): cached articles are current'); summaryLines.push(`| ${feed.id} | not modified | 0 |`); worked++; feeds[feed.id] = rec; continue; }

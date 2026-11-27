@@ -2,7 +2,10 @@
 //
 // Address safety (SSRF protection): every address is checked BEFORE it is requested, both the address you pass in and every redirect target.
 // Allowed: https only, no user name or password, standard port, not an IP address, and a host on the list you pass in (`hosts`).
-// Redirects are followed by hand, at most `maxRedirects`. A call without a host list is refused. allowHttp relaxes the https/port/IP
+// Redirects are followed by hand, at most `maxRedirects`. A redirect back to an address already requested is a loop and stops. A call without a host list is refused.
+// OPTIONAL HOOK  o.before(url, hop): awaited before EVERY request of the chain (hop 0 = the address you passed, 1.. = each redirect destination),
+// after the address itself has passed the checks above. If it throws, nothing is requested and the error is passed on unchanged (it is never retried).
+// scripts/fetch-rss.mjs uses it to read robots.txt for each destination and to wait for a Crawl-delay before following a redirect. allowHttp relaxes the https/port/IP
 // rules and exists only so the tests can talk to a local server (the scripts read it from RSS_ALLOW_HTTP=1).
 import { safeUrl, hostAllowed } from './rss-lib.mjs';
 
@@ -37,7 +40,9 @@ export function createClient({ ua, timeoutMs = 15000, maxTries = 3, retryBaseMs 
     if (o.cond && o.cond.lastModified) headers['If-Modified-Since'] = o.cond.lastModified;
     const tmo = o.timeoutMs || timeoutMs, cap = o.maxBytes || maxBytes, signal = AbortSignal.timeout(tmo);
     let url = checkUrl(url0, o.hosts, o.who, allowHttp).href, res, hops = 0;
+    const chain = [url];
     for (;; hops++) {
+      if (o.before) await o.before(url, hops);
       try { res = await fetch(url, { headers, redirect: 'manual', signal }); }
       catch (e) { throw new FetchError(e && e.name === 'TimeoutError' ? `timed out after ${tmo / 1000} s` : 'network error: ' + (e.cause && e.cause.code || e.message), true); }
       if (res.status >= 300 && res.status < 400 && res.status !== 304) {
@@ -47,6 +52,8 @@ export function createClient({ ua, timeoutMs = 15000, maxTries = 3, retryBaseMs 
         if (hops >= maxRedirects) throw new FetchError('more than ' + maxRedirects + ' redirects');
         let next; try { next = new URL(loc, url).href; } catch { throw new FetchError('redirect to an unreadable address'); }
         url = checkUrl(next, o.hosts, o.who, allowHttp).href;   // refused here, before anything is requested from it
+        if (chain.includes(url)) throw new FetchError('redirect loop: ' + url + ' was already requested in this chain');
+        chain.push(url);
         continue;
       }
       break;
@@ -61,7 +68,7 @@ export function createClient({ ua, timeoutMs = 15000, maxTries = 3, retryBaseMs 
     if (len > cap) { try { await res.body?.cancel(); } catch {} throw new FetchError('response larger than ' + Math.round(cap / 1048576) + ' MB, ignored'); }
     const buf = new Uint8Array(await res.arrayBuffer());
     if (buf.length > cap) throw new FetchError('response larger than ' + Math.round(cap / 1048576) + ' MB, ignored');
-    return { status: res.status, headers: res.headers, hops, buf, text: o.binary ? null : decodeBody(buf, res.headers.get('content-type')), finalUrl: url };
+    return { status: res.status, headers: res.headers, hops, buf, text: o.binary ? null : decodeBody(buf, res.headers.get('content-type')), finalUrl: url, chain };
   }
   // Retries only network errors, timeouts, 429 and 5xx, with exponential backoff and jitter, never less than Retry-After.
   async function request(url, o, log = () => {}) {
