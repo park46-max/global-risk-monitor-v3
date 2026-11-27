@@ -25,6 +25,7 @@ import { buildMatchers, matchCountries, mergeItems, safeUrl, clean } from './rss
 import { compileRules, refreshItems, capItems, termSummary, policySummary } from './relevance-lib.mjs';
 import { createClient } from './http-lib.mjs';
 import { readFirstZipEntry } from './zip-lib.mjs';
+import { loadExclusions, scrubItems, assertClean } from './exclusion-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = n => (process.argv.find(a => a.startsWith('--' + n + '=')) || '').split('=')[1];
@@ -42,6 +43,9 @@ const BUDGET_MS = num(process.env.GKG_BUDGET_MS, 7 * 60 * 1000);
 const RETENTION_DAYS = 3, PER_COUNTRY = 40;
 const { COUNTRY_TERMS } = await import(pathToFileURL(process.env.RSS_CONFIG ? path.resolve(process.env.RSS_CONFIG) : path.join(ROOT, 'data', 'rss-sources.mjs')).href);
 const matchers = buildMatchers(COUNTRY_TERMS);
+// Publisher exclusion list (data/publisher-exclusions.js). Applied BEFORE anything is written, to new articles and to the articles already in the cache. Fails closed.
+const EXC = loadExclusions();
+let excludedNew = 0, purgedOld = 0, purgedVariants = 0;
 const { RULES } = await import(pathToFileURL(process.env.RELEVANCE_RULES ? path.resolve(process.env.RELEVANCE_RULES) : path.join(ROOT, 'data', 'relevance-rules.mjs')).href);
 const compiled = compileRules(RULES);
 const UA = `GlobalRiskMonitor/3 (personal non-commercial dashboard; ${process.env.GITHUB_REPOSITORY ? 'https://github.com/' + process.env.GITHUB_REPOSITORY : 'contact via the project repository'})`;
@@ -126,6 +130,7 @@ try { const j = JSON.parse(fs.readFileSync(FILE, 'utf8')); if (j && j.schema ===
 const rec = { id: 'gdelt-gkg', publisherId: 'gdelt', publisher: 'GDELT Project (open data files)', label: 'GKG 2.0 files, every 15 minutes', url: BASE, status: 'error', checkedAt: iso(NOW),
   lastSuccessAt: (prev && prev.feeds && prev.feeds['gdelt-gkg'] && prev.feeds['gdelt-gkg'].lastSuccessAt) || null, error: null, latestFile: (prev && prev.feeds && prev.feeds['gdelt-gkg'] && prev.feeds['gdelt-gkg'].latestFile) || null };
 let items = ((prev && prev.items) || []), files = { ...((prev && prev.files) || {}) };
+{ const s = scrubItems(items, EXC); items = s.items; purgedOld = s.removed; purgedVariants = s.variants; }   // existing cache: excluded articles leave on the next run
 let ok = 0, tried = 0, failed = 0, added = 0, dupes = 0, lastErr = '';
 lines.push('## GDELT file fetch', '', '| File | Result |', '|---|---|');
 try {
@@ -142,8 +147,8 @@ try {
     try {
       const g = await getGkg(s, say);
       if (g.st.lines && g.st.shortLines === g.st.lines) throw new Error('unexpected column layout');
-      const found = gkgToItems(g.rows, matchers, 'gdelt-gkg'), m = mergeItems(items, found, { now: NOW, retentionDays: RETENTION_DAYS, maxItems: 5000 });
-      items = m.items; added += m.added; dupes += m.dupes; files[s] = 'ok'; ok++;
+      const foundAll = gkgToItems(g.rows, matchers, 'gdelt-gkg'), fs0 = scrubItems(foundAll, EXC), found = fs0.items, m = mergeItems(items, found, { now: NOW, retentionDays: RETENTION_DAYS, maxItems: 5000 });
+      excludedNew += fs0.removed; items = m.items; added += m.added; dupes += m.dupes; files[s] = 'ok'; ok++;
       say(`  ${s}: OK, ${g.st.lines} lines, ${g.st.titled} with headline, ${found.length} named a country, ${m.added} new`); lines.push(`| ${s} | OK, ${m.added} new |`);
     } catch (e) {
       failed++; const miss = e.httpStatus === 404; lastErr = miss ? 'not published (404)' : e.message;
@@ -161,6 +166,7 @@ items = mergeItems(items, [], { now: NOW, retentionDays: RETENTION_DAYS, maxItem
 // Re-judge every cached article with the current rules (country match, topics, routine financial notices, duplicate groups), then keep each country's best.
 const refreshed = refreshItems(items, { matchers, compiled });
 items = capItems(refreshed.items, Object.keys(COUNTRY_TERMS), PER_COUNTRY, 30);
+{ const s = scrubItems(items, EXC); items = s.items; purgedOld += s.removed; purgedVariants += s.variants; }   // belt and braces: nothing excluded survives refresh or capping
 const relevance = { ...refreshed.stats, rulesNote: 'See data/relevance-rules.mjs and data/country-terms.mjs' };
 say(`Relevance: ${refreshed.stats.droppedNoMatch} dropped (no valid country match), ${refreshed.stats.filteredNotices} filtered (${refreshed.stats.filteredOffTopic} off-topic, the rest routine financial notices), ${refreshed.stats.groupedDuplicates} grouped as duplicates, ${refreshed.stats.incidentalMentions} incidental country mentions, ${refreshed.stats.sensationalStyle} with sensational wording.`);
 const stampCut = msToStamp(NOW - RETENTION_DAYS * 864e5 - 864e5);
@@ -169,6 +175,8 @@ const out = { schema: 1, generatedAt: iso(NOW), checkedAt: iso(NOW), lastSuccess
   attribution: { name: 'The GDELT Project', url: 'https://www.gdeltproject.org/', text: 'Data: The GDELT Project (open dataset, used under its terms)' },
   publishers: [{ id: 'gdelt', name: 'GDELT Project open data files', termsChecked: '2026-11-20' }],
   terms: termSummary(COUNTRY_TERMS), relevance, sourcePolicy: policySummary(), feeds: { 'gdelt-gkg': rec }, files, items };
+assertClean(out, EXC, 'news-gdelt.json');
+say(`Publisher exclusions: ${excludedNew} new and ${purgedOld} cached article(s) removed, ${purgedVariants} duplicate entr${purgedVariants === 1 ? 'y' : 'ies'} removed (list: data/publisher-exclusions.js; counts only, no headline text).`); lines.push('', `Publisher exclusions: ${excludedNew} new and ${purgedOld} cached article(s) removed, ${purgedVariants} duplicate entries removed.`);
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(FILE + '.tmp', JSON.stringify(out, null, 1)); fs.renameSync(FILE + '.tmp', FILE);
 say(`\nSummary: status ${rec.status}; ${ok} of ${tried} files read, ${added} new articles, ${dupes} duplicates ignored, ${items.length} in the cache.${rec.status === 'error' ? ' Cached articles were kept and marked with the error.' : ''}`);

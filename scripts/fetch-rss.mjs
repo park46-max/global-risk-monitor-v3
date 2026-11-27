@@ -19,6 +19,7 @@ import { parseRobots, robotsDecision } from './robots-lib.mjs';
 import { SOURCE_TYPES, isKnownType, typeSummary } from '../data/source-types.mjs';
 import { compileRules, refreshItems, capItems, termSummary, policySummary } from './relevance-lib.mjs';
 import { createClient, checkUrl } from './http-lib.mjs';
+import { loadExclusions, matchPublisherEntry, scrubItems, assertClean } from './exclusion-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = n => (process.argv.find(a => a.startsWith('--' + n + '=')) || '').split('=')[1];
@@ -186,10 +187,14 @@ if (VERIFY) {
 // ======================= FETCH =======================
 let prev = null;
 try { const j = JSON.parse(fs.readFileSync(FILE, 'utf8')); if (j && j.schema === 1) prev = j; } catch {}
-const blocked = p => (p.blockers || []).length > 0;   // unresolved permission items written in data/rss-sources.mjs; only the project owner clears them
+const EXC = loadExclusions();   // publisher exclusion list (data/publisher-exclusions.js); fails closed
+const unresolved = p => (p.blockers || []).length > 0;   // unresolved permission items written in data/rss-sources.mjs; only the project owner clears them
+const onExclusionList = p => !!matchPublisherEntry(p, EXC);   // a publisher on the exclusion list is never fetched, even if someone enables it
+const blocked = p => unresolved(p) || onExclusionList(p);
 const active = publishers.filter(p => p.enabled && hasDate(p.termsChecked) && !blocked(p));
 for (const p of publishers.filter(p => p.enabled && !hasDate(p.termsChecked))) say(`REFUSED: ${p.name} is enabled but has no termsChecked date, so it was not fetched.`);
-for (const p of publishers.filter(p => p.enabled && blocked(p))) say(`REFUSED: ${p.name} is enabled but has ${p.blockers.length} unresolved permission item(s) in "blockers" (${p.blockers.join(' | ')}), so it was not fetched.`);
+for (const p of publishers.filter(p => p.enabled && onExclusionList(p))) say(`REFUSED: ${p.name} is on the publisher exclusion list (data/publisher-exclusions.js), so it was not fetched.`);
+for (const p of publishers.filter(p => p.enabled && unresolved(p))) say(`REFUSED: ${p.name} is enabled but has ${p.blockers.length} unresolved permission item(s) in "blockers" (${p.blockers.join(' | ')}), so it was not fetched.`);
 if (!active.length) {
   say('No publisher is enabled with a termsChecked date, so nothing was fetched and the cache was not changed.\nRun this workflow with mode = verify first, read each publisher\'s terms, then edit data/rss-sources.mjs (see the README).');
   summaryLines.push('## RSS fetch', 'No publisher is enabled with a termsChecked date. Nothing was fetched.'); writeSummary();
@@ -241,10 +246,12 @@ for (const pub of active) for (const feed of pub.feeds) {
 items = mergeItems(items, [], { now: NOW, retentionDays: S.retentionDays, maxItems: S.maxItems }).items;
 const refreshed = refreshItems(items, { matchers, compiled });
 items = capItems(refreshed.items, Object.keys(COUNTRY_TERMS), 60, 30);
+{ const sc = scrubItems(items, EXC); items = sc.items; if (sc.removed || sc.variants) say(`Publisher exclusions: ${sc.removed} article(s) and ${sc.variants} duplicate entr${sc.variants === 1 ? 'y' : 'ies'} removed (counts only).`); }
 const relevance = refreshed.stats;
 const lastSuccessAt = Object.values(feeds).map(f => f.lastSuccessAt).filter(Boolean).sort().pop() || null;
 const out = { schema: 1, generatedAt: iso(NOW), checkedAt: iso(NOW), lastSuccessAt, retentionDays: S.retentionDays, publishers: active.map(p => ({ id: p.id, name: p.name, termsChecked: p.termsChecked, sourceType: p.sourceType || 'journalism' })), sourceTypes: typeSummary(),
   terms: termSummary(COUNTRY_TERMS), relevance, sourcePolicy: policySummary(), feeds, items };
+assertClean(out, EXC, 'news-rss.json');
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(FILE + '.tmp', JSON.stringify(out, null, 1)); fs.renameSync(FILE + '.tmp', FILE);
 say(`\nSummary: ${worked} of ${tried} feeds updated, ${added} new articles, ${dupes} duplicates ignored, ${items.length} articles in the cache.`);

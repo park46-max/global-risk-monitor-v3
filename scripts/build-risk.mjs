@@ -9,6 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { buildRisk, markFailed } from './risk-lib.mjs';
+import { loadExclusions, dropExcludedDevelopments, scrubRiskDoc, assertClean } from './exclusion-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = n => { const a = process.argv.find(x => x.startsWith('--' + n + '=')); return a ? a.slice(n.length + 3) : null; };
@@ -19,10 +20,12 @@ const lines = [], say = m => { console.log(m); lines.push(m); };
 const writeSummary = md => { if (process.env.GITHUB_STEP_SUMMARY) { try { fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md + '\n'); } catch {} } };
 const readJson = f => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return null; } };
 const atomic = (f, s) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f + '.tmp', s); fs.renameSync(f + '.tmp', f); };
-const prevRaw = readJson(FILE), prev = prevRaw && prevRaw.schema === 1 && prevRaw.countries ? prevRaw : null;
+const EXC = loadExclusions();   // publisher exclusion list (data/publisher-exclusions.js); fails closed
+const prevRaw = readJson(FILE), prev0 = prevRaw && prevRaw.schema === 1 && prevRaw.countries ? prevRaw : null, prev = prev0 ? scrubRiskDoc(prev0, EXC).doc : null;   // a carried-over file never re-publishes an excluded headline
 try {
   const { RISK } = await import(pathToFileURL(path.join(ROOT, 'data', 'risk-methodology.mjs')).href);
-  const out = buildRisk({ riskInputs: readJson(path.join(DIR, 'risk-inputs.json')), indicators: readJson(path.join(DIR, 'indicators.json')), briefs: readJson(path.join(DIR, 'briefs.json')), now: NOW, R: RISK });
+  const out = buildRisk({ riskInputs: readJson(path.join(DIR, 'risk-inputs.json')), indicators: readJson(path.join(DIR, 'indicators.json')), briefs: dropExcludedDevelopments(readJson(path.join(DIR, 'briefs.json')), EXC).doc, now: NOW, R: RISK });
+  assertClean(out, EXC, 'risk.json');
   const md = ['## Risk assessments', '', '| Country | Security | Economic | Diplomatic |', '|---|---|---|---|'];
   for (const [id, c] of Object.entries(out.countries)) {
     const cell = a => (a.level || 'Insufficient data') + (a.stale ? ' (stale inputs)' : '');

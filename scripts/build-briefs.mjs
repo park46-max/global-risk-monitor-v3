@@ -9,6 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { buildAll, markFailed } from './brief-lib.mjs';
+import { loadExclusions, scrubItemsDoc, scrubBriefsDoc, assertClean } from './exclusion-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = n => { const a = process.argv.find(x => x.startsWith('--' + n + '=')); return a ? a.slice(n.length + 3) : null; };
@@ -22,15 +23,22 @@ const readJson = f => { try { return { json: JSON.parse(fs.readFileSync(f, 'utf8
 const atomic = (f, s) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f + '.tmp', s); fs.renameSync(f + '.tmp', f); };
 
 let prev = null; { const p = readJson(FILE); if (p.json && p.json.schema === 1 && p.json.countries) prev = p.json; }
+// Publisher exclusion list (data/publisher-exclusions.js). Fails closed: if it cannot be read the script stops and writes nothing.
+const EXC = loadExclusions();
+let neutralizedPrev = [];
+if (prev) { const sc = scrubBriefsDoc(prev, EXC); prev = sc.doc; neutralizedPrev = sc.neutralized; }   // an earlier brief that names an excluded publisher is never carried forward or re-written
 try {
   const { BRIEF_RULES } = await import(pathToFileURL(path.join(ROOT, 'data', 'brief-rules.mjs')).href);
   const { COUNTRY_TERMS } = await import(pathToFileURL(path.join(ROOT, 'data', 'country-terms.mjs')).href);
   const { RULES } = await import(pathToFileURL(path.join(ROOT, 'data', 'relevance-rules.mjs')).href);
   const g = readJson(path.join(DIR, 'news-gdelt.json')), r = readJson(path.join(DIR, 'news-rss.json'));
   // json null = file absent (normal when RSS is switched off); undefined = present but unreadable
-  const out = buildAll({ caches: { gdelt: g.json === undefined ? 0 : g.json, rss: r.json === undefined ? 0 : r.json }, prev, now: NOW, R: BRIEF_RULES, countryTerms: COUNTRY_TERMS, rules: RULES });
+  const gs = g.json ? scrubItemsDoc(g.json, EXC) : { doc: g.json, removed: 0 }, rs = r.json ? scrubItemsDoc(r.json, EXC) : { doc: r.json, removed: 0 };   // excluded articles never reach the brief rules
+  const out = buildAll({ caches: { gdelt: g.json === undefined ? 0 : gs.doc, rss: r.json === undefined ? 0 : rs.doc }, prev, now: NOW, R: BRIEF_RULES, countryTerms: COUNTRY_TERMS, rules: RULES });
   say(`Inputs: GDELT files ${out.inputs.gdelt.status}${out.inputs.gdelt.items != null ? ' (' + out.inputs.gdelt.items + ' items' + (out.inputs.gdelt.stale ? ', STALE' : '') + ')' : ''}; RSS ${out.inputs.rss.status}${out.inputs.rss.status === 'ok' ? ' (' + out.inputs.rss.items + ' items' + (out.inputs.rss.stale ? ', STALE' : '') + ')' : ''}.`);
   say(`Articles read ${out.itemStats.read}: dropped ${out.itemStats.noSource} without headline/publisher/link, ${out.itemStats.noTime} without any time, ${out.itemStats.outsideWindow} outside the window, ${out.itemStats.noCountry} naming none of the five countries, ${out.itemStats.routineNotices} routine financial notices; ${out.itemStats.grouped} grouped as duplicates.`);
+  assertClean(out, EXC, 'briefs.json');
+  say(`Publisher exclusions: ${gs.removed + rs.removed} cached article(s) ignored; ${neutralizedPrev.length} earlier brief(s) discarded (${neutralizedPrev.join(', ') || 'none'}). Counts only.`);
   const md = ['## Country briefs', '', '| Country | Status | Reports found | Listed | Sentences under "Why it matters" |', '|---|---|---|---|---|'];
   for (const [id, b] of Object.entries(out.countries)) {
     const st = b.carriedForward ? b.status + ' (earlier brief kept, stale)' : b.status;

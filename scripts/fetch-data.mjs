@@ -17,6 +17,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { loadExclusions, scrubNewsDoc, assertClean } from './exclusion-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = n => (process.argv.find(a => a.startsWith('--' + n + '=')) || '').split('=')[1];
@@ -136,10 +137,12 @@ async function runNews() {
       if (BREAKER > 0 && consec >= BREAKER) stopReason = `GDELT kept refusing or timing out (${consec} countries in a row), so the remaining requests were skipped to avoid making it worse`;
     }
   }
-  const final = Object.fromEntries(IDS.map(k => [k, countries[k]]));
+  const EXC = loadExclusions();   // publisher exclusion list (data/publisher-exclusions.js): applied to new AND carried-over articles before anything is written; fails closed
+  const scrubbed = scrubNewsDoc({ countries: Object.fromEntries(IDS.map(k => [k, countries[k]])) }, EXC), final = scrubbed.doc.countries;
+  assertClean(final, EXC, 'news.json'); if (scrubbed.removed) log(`Publisher exclusions: ${scrubbed.removed} article(s) removed from news.json (counts only, no headline text).`);
   writeAtomic(file, { schema: 2, source: 'GDELT DOC 2.0 API', sourceUrl: 'https://www.gdeltproject.org/', timespan: TIMESPAN, checkedAt: t,
     lastSuccessAt: latest(Object.values(final).map(c => c.fetchedAt)), countries: final });
-  return { name: 'news', ok, total: IDS.length, extra: `GDELT requests started: ${requests}. Not re-requested because the cache was fresh: ${skipped.size}.`,
+  return { name: 'news', ok, total: IDS.length, extra: `GDELT requests started: ${requests}. Not re-requested because the cache was fresh: ${skipped.size}. Publisher exclusions removed ${scrubbed.removed} article(s).`,
     rows: IDS.map(k => `${k}: ${final[k].status}${final[k].status === 'ok' ? (skipped.has(k) ? ' (cached, not re-requested)' : ' (' + final[k].articles.length + ' articles)') : final[k].attempted === false ? ' - not attempted: ' + final[k].error : ' - ' + final[k].error}`) };
 }
 
