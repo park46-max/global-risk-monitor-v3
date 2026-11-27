@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-26T19:16:41.408Z",
-  "lastSuccessAt": "2026-11-26T19:20:09.326Z",
+  "checkedAt": "2026-11-27T01:38:30.654Z",
+  "lastSuccessAt": "2026-11-27T01:40:11.602Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-26T19:20:09.326Z",
-      "checkedAt": "2026-11-26T19:20:09.326Z",
+      "checkedAt": "2026-11-27T01:43:07.918Z",
       "articles": [
         {
           "title": "Make Amazon Pay Day 2026 : Amazon workers and supporters to strike and protest in over 20 countries as union wins first North American collective agreement",
@@ -178,181 +178,181 @@
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-26T07:44:24.412Z",
-      "checkedAt": "2026-11-26T19:21:33.195Z",
+      "error": null,
+      "fetchedAt": "2026-11-27T01:40:11.602Z",
+      "checkedAt": "2026-11-27T01:40:11.602Z",
       "articles": [
         {
-          "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses – Winnipeg Free Press",
-          "url": "https://www.winnipegfreepress.com/business/2026/11/26/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses",
-          "domain": "winnipegfreepress.com",
-          "seendate": "20261126T061500Z",
+          "title": "Rare earth beneath our palms : Opportunity or opportunism ?",
+          "url": "https://www.thestar.com.my/business/insight/2026/11/27/rare-earth-beneath-our-palms-opportunity-or-opportunism",
+          "domain": "thestar.com.my",
+          "seendate": "20261127T011500Z",
           "language": "English",
-          "sourcecountry": "Canada"
+          "sourcecountry": "Malaysia"
         },
         {
-          "title": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses",
-          "url": "https://www.therecord.com/business/asian-shares-rebound-led-by-ai-stocks-after-wall-street-pares-sharp-losses/article_8270cc26-5a29-5ca6-a5a7-d7c0db4ae6bd.html",
-          "domain": "therecord.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Canada"
-        },
-        {
-          "title": "A Chinese consumer advocate is stranded in South Korea as a crackdown in China targets campaigners",
-          "url": "https://www.therecord.com/business/a-chinese-consumer-advocate-is-stranded-in-south-korea-as-a-crackdown-in-china-targets-campaigners/article_825b06b1-b5b3-5d22-b74b-7327958d3147.html",
-          "domain": "therecord.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Canada"
-        },
-        {
-          "title": "GTRI calls US tariff under Section 301 coercive bargaining tool , urges India to reject it",
-          "url": "http://www.newzealandstar.com/news/279454790/gtri-calls-us-tariff-under-section-301-coercive-bargaining-tool-urges-india-to-reject-it",
-          "domain": "newzealandstar.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "New Zealand"
-        },
-        {
-          "title": "Govt approves tariffs for Payra , Rampal power plants , clears 4 . 40 lakh tonnes of US wheat imports",
-          "url": "https://www.thedailystar.net/business/news/govt-approves-tariffs-payra-rampal-power-plants-clears-440-lakh-tonnes-us-wheat-imports-4333661",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "LiuGong Showcases Advanced Equipment and Intelligent Technologies at bauma CHINA 2026",
-          "url": "https://www.prnewswire.com/news-releases/liugong-showcases-advanced-equipment-and-intelligent-technologies-at-bauma-china-2026-302951032.html",
-          "domain": "prnewswire.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Major economies balk at new US tariffs over unfair trade",
-          "url": "https://www.thedailystar.net/business/news/major-economies-balk-new-us-tariffs-over-unfair-trade-4333651",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "Tariff Shock : Trump Targets 14 Economies , Rattling Markets and Global Trade",
-          "url": "https://www.reviewnepal.com/tariff-shock-trump-targets-14-economies-rattling-markets-and-global-trade/",
-          "domain": "reviewnepal.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Nepal"
-        },
-        {
-          "title": "Global markets rebound as tech shares recover and tariff fears ease",
-          "url": "https://www.aol.co.uk/articles/global-markets-rebound-tech-shares-042539000.html",
-          "domain": "aol.co.uk",
-          "seendate": "20261126T061500Z",
+          "title": "A million homeowners face £200 jump in monthly mortgage payments next year",
+          "url": "https://www.southwalesguardian.co.uk/news/national/26764762.million-homeowners-face-gbp200-jump-monthly-mortgage-payments-next-year/",
+          "domain": "southwalesguardian.co.uk",
+          "seendate": "20261127T011500Z",
           "language": "English",
           "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Kim Jong - un seeks arms control talks with US , not denuclearization : experts",
-          "url": "https://www.koreaherald.com/article/10950465",
-          "domain": "koreaherald.com",
-          "seendate": "20261126T061500Z",
+          "title": "I will not forgive you : Grieving mum unmoved as daughter boyfriend kneels at wake after fatal Malaysia crash",
+          "url": "https://www.asiaone.com:443/malaysia/mum-refuses-forgive-daughters-boyfriend-fatal-malaysia-crash",
+          "domain": "asiaone.com",
+          "seendate": "20261127T011500Z",
           "language": "English",
-          "sourcecountry": "South Korea"
+          "sourcecountry": "Singapore"
         },
         {
-          "title": "LGMG Unveils VTH150 Electric - Wheel Mining Truck at bauma CHINA 2026",
-          "url": "https://www.theobserver.ca/press-releases/pr-newswire/lgmg-unveils-vth150-electric-wheel-mining-truck-at-bauma-china-2026/",
-          "domain": "theobserver.ca",
-          "seendate": "20261126T061500Z",
+          "title": "Singapore and China Judiciaries Mark a Milestone in Bilateral Relations",
+          "url": "http://www.vietnamtribune.com/news/279463470/singapore-and-china-judiciaries-mark-a-milestone-in-bilateral-relations",
+          "domain": "vietnamtribune.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "Vietnam"
+        },
+        {
+          "title": "Myanmar leader says country will refuse to fully comply with ICJ requirements",
+          "url": "https://www.inquirer.com/news/nation-world/myanmar-genocide-icj-requirements-20261126.html",
+          "domain": "inquirer.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": null
+        },
+        {
+          "title": "Who watching the boss ? | interest . co . nz",
+          "url": "https://www.interest.co.nz/business/141254/jensen-huang%E2%80%99s-controversial-return-nvidia-poses-question-%E2%80%93-what%E2%80%99s-point-%C2%A0board",
+          "domain": "interest.co.nz",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "New Zealand"
+        },
+        {
+          "title": "Five questions over Nvidia China chip trail that Huang return has not settled",
+          "url": "https://investinglive.com/stocks/five-questions-over-nvidia-s-china-chip-trail-that-huang-s-return-has-not-settled/",
+          "domain": "investinglive.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": null
+        },
+        {
+          "title": "Meet the politician fighting for Taiwan independence – Channel 4 News",
+          "url": "https://www.channel4.com/news/meet-the-politician-fighting-for-taiwans-independence",
+          "domain": "channel4.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "FoodAg signs $168m in deals , MoUs",
+          "url": "https://tribune.com.pk/story/2642551/foodag-signs-168m-in-deals-mous",
+          "domain": "tribune.com.pk",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "Pakistan"
+        },
+        {
+          "title": "ROSEN , TRUSTED INVESTOR COUNSEL , Encourages Lululemon Athletica Inc . ...",
+          "url": "https://www.pr-inside.com/rosen-trusted-investor-counsel-encourages-lululemon-athletica-inc-r5248001.htm",
+          "domain": "pr-inside.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Solomon Islands signs new security pact with Australia",
+          "url": "http://www.ohiostandard.com/news/279454293/solomon-islands-signs-new-security-pact-with-australia",
+          "domain": "ohiostandard.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Carney wraps up meeting with Moe at the Legislature",
+          "url": "https://www.620ckrm.com/2026/11/26/carney-wraps-up-meeting-with-moe-at-the-legislature/",
+          "domain": "620ckrm.com",
+          "seendate": "20261127T011500Z",
           "language": "English",
           "sourcecountry": "Canada"
         },
         {
-          "title": "The looming threat of an authoritarian triumvirate",
-          "url": "https://independentaustralia.net/politics/politics-display/the-looming-threat-of-an-authoritarian-triumvirate,21862",
-          "domain": "independentaustralia.net",
-          "seendate": "20261126T061500Z",
+          "title": "BQE Water Reports Q3 2026 Results",
+          "url": "https://www.intelligencer.ca/press-releases/newsfile/bqe-water-reports-q3-2026-results/",
+          "domain": "intelligencer.ca",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Trump new tariffs aim to prise global trade from China grip",
+          "url": "https://www.asiaone.com:443/world/trumps-new-tariffs-aim-prise-global-trade-chinas-grip",
+          "domain": "asiaone.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": "Singapore"
+        },
+        {
+          "title": "Russia preparing new mass strike soon : Zelenskiy",
+          "url": "https://www.crookwellgazette.com.au/story/9399142/russia-preparing-new-mass-strike-soon-zelenskiy/",
+          "domain": "crookwellgazette.com.au",
+          "seendate": "20261127T011500Z",
           "language": "English",
           "sourcecountry": "Australia"
         },
         {
-          "title": "For Trump , doubling down on tariffs is about power , not popularity",
-          "url": "https://www.thedailystar.net/business/news/trump-doubling-down-tariffs-about-power-not-popularity-4333571",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Bangladesh"
-        },
-        {
-          "title": "Xiaomi shipments plunge 29 % as Samsung holds lead amid memory crunch",
-          "url": "https://www.koreaherald.com/article/10950486",
-          "domain": "koreaherald.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "South Korea"
-        },
-        {
-          "title": "Zoomlion Launches Industry First AI Excavation Robot Powered by Embodied Intelligence at bauma CHINA 2026",
-          "url": "https://www.prnewswire.com/news-releases/zoomlion-launches-industrys-first-ai-excavation-robot-powered-by-embodied-intelligence-at-bauma-china-2026-302950993.html",
-          "domain": "prnewswire.com",
-          "seendate": "20261126T061500Z",
+          "title": "British woman drugged and raped by husband didnt initially believe police , court hears",
+          "url": "https://krdo.com/news/national-world/cnn-world/2026/11/26/british-woman-whose-husband-drugged-and-raped-her-for-decades-testifies-in-mass-sexual-assault-trial/",
+          "domain": "krdo.com",
+          "seendate": "20261127T011500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Commentary : New US tariff threat seeks to ramp up pressure on trading partners – will it work ?",
-          "url": "https://www.channelnewsasia.com/commentary/trump-new-us-tariffs-excess-industrial-capacity-impact-singapore-trading-partners-6584001",
-          "domain": "channelnewsasia.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Sierra Leone sees steep decline in maternal mortality , but barriers to care persist",
-          "url": "https://abcnews.com/International/wireStory/sierra-leone-sees-steep-decline-maternal-mortality-barriers-138462429",
-          "domain": "abcnews.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Goat transaction levy increase voted down at MLA annual meeting | Queensland Country Life",
-          "url": "https://www.queenslandcountrylife.com.au/story/9398277/goat-transaction-levy-increase-voted-down-at-mla-annual-meeting/",
-          "domain": "queenslandcountrylife.com.au",
-          "seendate": "20261126T061500Z",
+          "title": "Puma appoints new leader in Oceania rejig",
+          "url": "https://www.ragtrader.com.au/news/puma-appoints-new-leader-in-oceania-rejig",
+          "domain": "ragtrader.com.au",
+          "seendate": "20261127T011500Z",
           "language": "English",
           "sourcecountry": "Australia"
         },
         {
-          "title": "S & P warns Nvidia board may be compromised , puts chipmaker rating on downgrade watch",
-          "url": "https://www.channelnewsasia.com/business/s-and-p-nvidia-board-compromised-rating-downgrade-watch-6582441",
-          "domain": "channelnewsasia.com",
-          "seendate": "20261126T061500Z",
+          "title": "PBOC is expected to set the USD / CNY reference rate at 6 . 6604 – Reuters estimate",
+          "url": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6604-reuters-estimate/",
+          "domain": "investinglive.com",
+          "seendate": "20261127T011500Z",
+          "language": "English",
+          "sourcecountry": null
+        },
+        {
+          "title": "New trade war could be brewing following tariff proposal",
+          "url": "https://wcti12.com/news/nation-world/new-trade-war-could-be-brewing-following-tariff-proposal-china-eu-india-japan",
+          "domain": "wcti12.com",
+          "seendate": "20261127T011500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Dhaka mulls new corridor to China via Myanmar",
-          "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/dhaka-mulls-new-corridor-china-myanmar-4333321",
-          "domain": "thedailystar.net",
-          "seendate": "20261126T061500Z",
+          "title": "India to host 25th IORA Council of Ministers meeting in Delhi today",
+          "url": "https://ianslive.in/india-to-host-25th-iora-council-of-ministers-meeting-in-delhi-today--20261127061941",
+          "domain": "ianslive.in",
+          "seendate": "20261127T011500Z",
           "language": "English",
-          "sourcecountry": "Bangladesh"
+          "sourcecountry": "India"
         }
       ]
     },
     "RUS": {
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
-      "status": "ok",
+      "status": "error",
       "attempted": true,
-      "error": null,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-26T19:19:12.555Z",
-      "checkedAt": "2026-11-26T19:19:12.555Z",
+      "checkedAt": "2026-11-27T01:43:07.918Z",
       "articles": [
         {
           "title": "Veruschka , one of world first supermodels , dies at 87",
@@ -518,11 +518,11 @@
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "ok",
+      "status": "error",
       "attempted": true,
-      "error": null,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-26T19:18:48.608Z",
-      "checkedAt": "2026-11-26T19:18:48.609Z",
+      "checkedAt": "2026-11-27T01:41:34.905Z",
       "articles": [
         {
           "title": "Russia accuses Ukraine of trying to widen conflict zone",
@@ -692,7 +692,7 @@
       "attempted": true,
       "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-26T19:18:00.057Z",
+      "checkedAt": "2026-11-27T01:39:48.903Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
