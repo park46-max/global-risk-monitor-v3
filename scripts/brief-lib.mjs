@@ -20,7 +20,7 @@ export function describeInput(name, json, { now, staleAfterHours }) {
 // Turns the raw cached articles of all sources into one list of grouped, attributable reports inside the time window.
 // An article is dropped (and counted) if it lacks a headline, a publisher, a usable link or any time. It is never cited without a source.
 export function prepareReports(caches, { now, matchers, compiled, R }) {
-  const stat = { read: 0, noSource: 0, noTime: 0, outsideWindow: 0, noCountry: 0, routineNotices: 0, grouped: 0 }, items = [];
+  const stat = { read: 0, noSource: 0, noTime: 0, outsideWindow: 0, noCountry: 0, routineNotices: 0, offTopic: 0, incidentalMentions: 0, grouped: 0 }, items = [];
   const cutoff = now - R.windowHours * 36e5;
   for (const [via, json] of Object.entries(caches)) {
     if (!json || !Array.isArray(json.items)) continue;
@@ -36,11 +36,12 @@ export function prepareReports(caches, { now, matchers, compiled, R }) {
   }
   // Same judgement as the page and the news pipelines: country match from the headline, topics, routine-notice filter, duplicate groups.
   const r = refreshItems(items, { matchers, compiled });
-  stat.noCountry = r.stats.droppedNoMatch; stat.routineNotices = r.stats.filteredNotices; stat.grouped = r.stats.groupedDuplicates;
+  stat.noCountry = r.stats.droppedNoMatch; stat.routineNotices = r.stats.filteredNotices; stat.offTopic = r.stats.filteredOffTopic; stat.incidentalMentions = r.stats.incidentalMentions; stat.grouped = r.stats.groupedDuplicates;
   return { reports: r.items.filter(i => !i.filtered), stat };
 }
 
-const byRank = (a, b) => ((b.relevance && b.relevance.score) || 0) - ((a.relevance && a.relevance.score) || 0) || Date.parse(b._time.at) - Date.parse(a._time.at) || String(a.url).localeCompare(String(b.url));
+const tierOf = r => (r.source && r.source.tier) || 'unassessed';
+const byRank = (a, b) => ((b.relevance && b.relevance.score) || 0) - ((a.relevance && a.relevance.score) || 0) || (tierOf(a) === 'established' ? 0 : 1) - (tierOf(b) === 'established' ? 0 : 1) || Date.parse(b._time.at) - Date.parse(a._time.at) || String(a.url).localeCompare(String(b.url));
 const plural = (n, one, many) => n === 1 ? one : many;
 const list = a => a.length <= 1 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
 const refs = ns => ns.map(n => `[${n}]`).join('');
@@ -48,7 +49,9 @@ const refs = ns => ns.map(n => `[${n}]`).join('');
 // One country's brief. `reports` = prepared, grouped reports (all countries). Returns a plain JSON-able object.
 export function buildCountryBrief(id, reports, ctx) {
   const { R, now, inputs } = ctx, name = R.names[id] || id;
-  const own = reports.filter(r => r.matches && r.matches[id] && OK_LEVEL.has(r.matches[id].level)).sort(byRank);
+  // Reports that name the country only in passing (role 'incidental', see data/relevance-rules.mjs rule 4) are counted but not used.
+  const named = reports.filter(r => r.matches && r.matches[id] && OK_LEVEL.has(r.matches[id].level)), passing = named.filter(r => r.matches[id].role === 'incidental').length;
+  const own = named.filter(r => r.matches[id].role !== 'incidental').sort(byRank);
   const listed = own.slice(0, R.maxReports);
   const limitations = [];
   for (const [k, inp] of Object.entries(inputs)) {
@@ -62,14 +65,15 @@ export function buildCountryBrief(id, reports, ctx) {
   const base = { generatedAt: iso(now), window: { hours: R.windowHours, from: iso(now - R.windowHours * 36e5), to: iso(now) }, notice: R.notice };
   if (!listed.length) {
     return { ...base, status: 'unavailable', reportsFound: 0, overview: null, developments: [], why: null, sources: [],
-      limitations: [`No cached headline from the last ${R.windowHours} hours names ${name} (or its capital or government) in a way the matching rules accept. This describes the cached feeds only; it does not mean nothing happened.`, ...limitations] };
+      limitations: [`No cached headline from the last ${R.windowHours} hours names ${name} (or its capital or government) in a way the matching rules accept. This describes the cached feeds only; it does not mean nothing happened.`,
+        ...(passing ? [`${passing} ${plural(passing, 'report names', 'reports name')} ${name} only in passing (another country comes first and there is no security, diplomacy or sanctions wording), so ${plural(passing, 'it was', 'they were')} not used.`] : []), ...limitations] };
   }
   // Source list: every listed report, each followed by the other outlets that carried the same headline.
   const sources = []; const num = new Map();
   for (const r of listed) {
     const n = sources.length + 1; num.set(r, n);
-    sources.push({ n, title: r.title, publisher: r.publisher, url: r.url, time: r._time.at, timeBasis: r._time.basis, via: r.via || null });
-    for (const v of (r.variants || [])) { const u = safeUrl(v.url); if (u && v.publisher) sources.push({ n: sources.length + 1, title: r.title, publisher: v.publisher, url: u.href, time: (v.published || v.seenByGdelt || null), timeBasis: v.published ? 'published' : v.seenByGdelt ? 'first seen by GDELT' : null, duplicateOf: n }); }
+    sources.push({ n, title: r.title, publisher: r.publisher, url: r.url, time: r._time.at, timeBasis: r._time.basis, via: r.via || null, sourceLabel: tierOf(r) });
+    for (const v of (r.variants || [])) { const u = safeUrl(v.url); if (u && v.publisher) sources.push({ n: sources.length + 1, title: r.title, publisher: v.publisher, url: u.href, time: (v.published || v.seenByGdelt || null), timeBasis: v.published ? 'published' : v.seenByGdelt ? 'first seen by GDELT' : null, sourceLabel: v.tier || 'unassessed', duplicateOf: n }); }
   }
   const alsoNums = r => sources.filter(s => s.duplicateOf === num.get(r)).map(s => s.n);
   const topicCount = {}; for (const r of listed) for (const t of (r.relevance && r.relevance.topics) || []) (topicCount[t.label] = topicCount[t.label] || []).push(r);
@@ -78,11 +82,14 @@ export function buildCountryBrief(id, reports, ctx) {
   const tp = Object.entries(topicCount).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0])).map(([l, rs]) => `${l.toLowerCase()} ${rs.length}`);
   const overview = { kind: 'fact', text: `${own.length} distinct ${plural(own.length, 'report', 'reports')} naming ${name} (or its capital or government) ${plural(own.length, 'was', 'were')} found in the cached headlines for the last ${R.windowHours} hours` +
     (own.length > listed.length ? `; the ${listed.length} highest-ranked ${plural(listed.length, 'is', 'are')} used below` : '') +
-    `. They span ${utc(from)} to ${utc(to)} and come from ${pubs.size} ${plural(pubs.size, 'outlet', 'outlets')}. Reports with topic keywords (a report can have several): ${tp.length ? tp.join(', ') : 'none'}.`, evidence: listed.map(r => num.get(r)) };
+    `. They span ${utc(from)} to ${utc(to)} and come from ${pubs.size} ${plural(pubs.size, 'outlet', 'outlets')}. Reports with topic keywords (a report can have several): ${tp.length ? tp.join(', ') : 'none'}.` +
+    (passing ? ` A further ${passing} ${plural(passing, 'report names', 'reports name')} ${name} only in passing and ${plural(passing, 'is', 'are')} not used.` : ''), evidence: listed.map(r => num.get(r)) };
 
   const developments = listed.slice(0, R.maxDevelopments).map(r => ({ kind: 'reporting', n: num.get(r), headline: r.title, publisher: r.publisher, url: r.url, time: r._time.at, timeBasis: r._time.basis,
     matched: { level: r.matches[id].level, terms: r.matches[id].terms }, topics: ((r.relevance && r.relevance.topics) || []).map(t => t.label), alsoReportedBy: alsoNums(r) }));
 
+  const unassessed = listed.filter(r => tierOf(r) === 'unassessed').length;
+  if (unassessed * 2 > listed.length) limitations.push(`${unassessed} of the ${listed.length} listed ${plural(listed.length, 'report comes', 'reports come')} from outlets the source policy has not assessed. That is not a finding that they are unreliable. Source labels describe the outlet, not whether a headline was fact-checked.`);
   // "Why it matters": each sentence is produced by one named rule from the listed reports and cites them. Fewer than minReportsForWhy reports: none.
   let why = null;
   if (listed.length < R.minReportsForWhy) limitations.push(`Only ${listed.length} ${plural(listed.length, 'report was', 'reports were')} found; at least ${R.minReportsForWhy} are needed before any analytical sentence is written.`);

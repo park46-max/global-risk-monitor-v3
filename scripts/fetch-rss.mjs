@@ -15,7 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseFeed, buildItems, mergeItems, buildMatchers, extractFeedLinks, ParseError } from './rss-lib.mjs';
-import { compileRules, refreshItems, capItems, termSummary } from './relevance-lib.mjs';
+import { compileRules, refreshItems, capItems, termSummary, policySummary } from './relevance-lib.mjs';
 import { createClient } from './http-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -159,7 +159,7 @@ items = capItems(refreshed.items, Object.keys(COUNTRY_TERMS), 60, 30);
 const relevance = refreshed.stats;
 const lastSuccessAt = Object.values(feeds).map(f => f.lastSuccessAt).filter(Boolean).sort().pop() || null;
 const out = { schema: 1, generatedAt: iso(NOW), checkedAt: iso(NOW), lastSuccessAt, retentionDays: S.retentionDays, publishers: active.map(p => ({ id: p.id, name: p.name, termsChecked: p.termsChecked })),
-  terms: termSummary(COUNTRY_TERMS), relevance, feeds, items };
+  terms: termSummary(COUNTRY_TERMS), relevance, sourcePolicy: policySummary(), feeds, items };
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(FILE + '.tmp', JSON.stringify(out, null, 1)); fs.renameSync(FILE + '.tmp', FILE);
 say(`\nSummary: ${worked} of ${tried} feeds updated, ${added} new articles, ${dupes} duplicates ignored, ${items.length} articles in the cache.`);

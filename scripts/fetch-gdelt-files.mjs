@@ -22,7 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { buildMatchers, matchCountries, mergeItems, safeUrl, clean } from './rss-lib.mjs';
-import { compileRules, refreshItems, capItems, termSummary } from './relevance-lib.mjs';
+import { compileRules, refreshItems, capItems, termSummary, policySummary } from './relevance-lib.mjs';
 import { createClient } from './http-lib.mjs';
 import { readFirstZipEntry } from './zip-lib.mjs';
 
@@ -162,13 +162,13 @@ items = mergeItems(items, [], { now: NOW, retentionDays: RETENTION_DAYS, maxItem
 const refreshed = refreshItems(items, { matchers, compiled });
 items = capItems(refreshed.items, Object.keys(COUNTRY_TERMS), PER_COUNTRY, 30);
 const relevance = { ...refreshed.stats, rulesNote: 'See data/relevance-rules.mjs and data/country-terms.mjs' };
-say(`Relevance: ${refreshed.stats.droppedNoMatch} dropped (no valid country match), ${refreshed.stats.filteredNotices} filtered as routine financial notices, ${refreshed.stats.groupedDuplicates} grouped as duplicates.`);
+say(`Relevance: ${refreshed.stats.droppedNoMatch} dropped (no valid country match), ${refreshed.stats.filteredNotices} filtered (${refreshed.stats.filteredOffTopic} off-topic, the rest routine financial notices), ${refreshed.stats.groupedDuplicates} grouped as duplicates, ${refreshed.stats.incidentalMentions} incidental country mentions, ${refreshed.stats.sensationalStyle} with sensational wording.`);
 const stampCut = msToStamp(NOW - RETENTION_DAYS * 864e5 - 864e5);
 for (const k of Object.keys(files)) if (k < stampCut) delete files[k];
 const out = { schema: 1, generatedAt: iso(NOW), checkedAt: iso(NOW), lastSuccessAt: rec.lastSuccessAt, retentionDays: RETENTION_DAYS,
   attribution: { name: 'The GDELT Project', url: 'https://www.gdeltproject.org/', text: 'Data: The GDELT Project (open dataset, used under its terms)' },
   publishers: [{ id: 'gdelt', name: 'GDELT Project open data files', termsChecked: '2026-11-20' }],
-  terms: termSummary(COUNTRY_TERMS), relevance, feeds: { 'gdelt-gkg': rec }, files, items };
+  terms: termSummary(COUNTRY_TERMS), relevance, sourcePolicy: policySummary(), feeds: { 'gdelt-gkg': rec }, files, items };
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(FILE + '.tmp', JSON.stringify(out, null, 1)); fs.renameSync(FILE + '.tmp', FILE);
 say(`\nSummary: status ${rec.status}; ${ok} of ${tried} files read, ${added} new articles, ${dupes} duplicates ignored, ${items.length} in the cache.${rec.status === 'error' ? ' Cached articles were kept and marked with the error.' : ''}`);
