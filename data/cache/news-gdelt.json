@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-27T07:47:17.748Z",
- "checkedAt": "2026-11-27T07:47:17.748Z",
- "lastSuccessAt": "2026-11-27T07:47:17.748Z",
+ "generatedAt": "2026-11-27T08:37:51.924Z",
+ "checkedAt": "2026-11-27T08:37:51.924Z",
+ "lastSuccessAt": "2026-11-27T08:37:51.924Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -78,9 +78,20 @@
  },
  "relevance": {
   "droppedNoMatch": 0,
-  "filteredNotices": 30,
-  "groupedDuplicates": 21,
+  "filteredNotices": 31,
+  "filteredOffTopic": 1,
+  "groupedDuplicates": 14,
+  "incidentalMentions": 10,
+  "sensationalStyle": 1,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
+ },
+ "sourcePolicy": {
+  "version": 1,
+  "labels": {
+   "established": "Established outlet (news agency, broadcaster or long-running publication with a published editorial policy). Not a fact-check of this headline.",
+   "state": "State-owned or government-run outlet: expect the government's own framing. Ownership label only, not a finding about accuracy.",
+   "unassessed": "Outlet not assessed by this project. This does not mean it is unreliable."
+  }
  },
  "feeds": {
   "gdelt-gkg": {
@@ -90,16 +101,14 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-27T07:47:17.748Z",
-   "lastSuccessAt": "2026-11-27T07:47:17.748Z",
+   "checkedAt": "2026-11-27T08:37:51.924Z",
+   "lastSuccessAt": "2026-11-27T08:37:51.924Z",
    "error": null,
-   "latestFile": "20261127074500"
+   "latestFile": "20261127084500",
+   "warning": "1 of 4 files could not be read this run"
   }
  },
  "files": {
-  "20261123080000": "ok",
-  "20261123081500": "ok",
-  "20261123083000": "ok",
   "20261123084500": "ok",
   "20261123090000": "ok",
   "20261123091500": "ok",
@@ -463,7 +472,11 @@
   "20261127070000": "ok",
   "20261127071500": "ok",
   "20261127073000": "ok",
-  "20261127074500": "ok"
+  "20261127074500": "ok",
+  "20261127080000": "ok",
+  "20261127081500": "ok",
+  "20261127083000": "missing",
+  "20261127084500": "ok"
  },
  "items": [
   {
@@ -480,7 +493,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-24T16:32:15.953Z",
@@ -511,6 +525,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -527,19 +544,22 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     },
     "RUS": {
      "level": "country",
      "terms": [
       "Russian"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T10:28:35.972Z",
@@ -570,6 +590,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -586,7 +609,8 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T13:44:25.762Z",
@@ -617,466 +641,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
-   "url": "https://www.ibtimes.com/pentagon-delays-patriot-missiles-ukraine-3810122",
-   "publisher": "ibtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T11:52:00.000Z",
-   "seenByGdelt": "2026-11-24T12:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-24T13:41:32.881Z",
-   "lastSeenAt": "2026-11-24T13:41:32.881Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missiles"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "peace deal"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Zelenskyy plans to appeal to new US Congress for military aid, tougher sanctions against Russia",
-   "url": "https://en.interfax.com.ua/news/general/1241510.html",
-   "publisher": "interfax.com.ua",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T14:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-24T16:32:15.953Z",
-   "lastSeenAt": "2026-11-24T16:32:15.953Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "sanctions"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "China's space diplomacy belied by Russia's nuclear weapon satellite",
-   "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
-   "publisher": "washingtonexaminer.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T21:11:00.000Z",
-   "seenByGdelt": "2026-11-25T00:30:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T01:46:06.110Z",
-   "lastSeenAt": "2026-11-25T01:46:06.110Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "nuclear"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "diplomacy"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-   "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
-   "publisher": "ibtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T22:53:00.000Z",
-   "seenByGdelt": "2026-11-24T23:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T01:46:06.110Z",
-   "lastSeenAt": "2026-11-25T01:46:06.110Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "espionage"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "sanctions"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
-   "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
-   "publisher": "digitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T04:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T04:32:41.744Z",
-   "lastSeenAt": "2026-11-25T04:32:41.744Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "truce"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
-   "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
-   "publisher": "indiatimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T09:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T10:28:35.972Z",
-   "lastSeenAt": "2026-11-25T10:28:35.972Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "truce"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariff"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US tariff plan targeting China, other economies risks offsetting trade negotiation gains, business confidence: experts",
-   "url": "https://www.globaltimes.cn/page/202611/1375070.shtml",
-   "publisher": "globaltimes.cn",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T17:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T19:21:25.022Z",
-   "lastSeenAt": "2026-11-25T19:21:25.022Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "negotiation"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariff"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
-   "url": "http://www.jpost.com/international/article-916124",
-   "publisher": "jpost.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T18:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T19:21:25.022Z",
-   "lastSeenAt": "2026-11-25T19:21:25.022Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "espionage"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "sanctions"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Arab News | US envoy Kushner warns against Ukraine war escalation",
-   "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
-   "publisher": "arabnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T20:14:00.000Z",
-   "seenByGdelt": "2026-11-25T21:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T22:18:34.902Z",
-   "lastSeenAt": "2026-11-25T22:18:34.902Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "envoy"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Chips and rare earths keep US-China truce fragile",
-   "url": "https://economictimes.indiatimes.com/news/international/world-news/chips-and-rare-earths-keep-us-china-truce-fragile/articleshow/136185727.cms",
-   "publisher": "indiatimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T09:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T10:28:35.298Z",
-   "lastSeenAt": "2026-11-26T10:28:35.298Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "truce"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "rare earths"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1093,13 +660,15 @@
      "level": "institution",
      "terms": [
       "Moscow"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -1133,7 +702,480 @@
      "seenByGdelt": "2026-11-26T20:45:00.000Z"
     }
    ],
+   "variantsTotal": 1,
+   "source": {
+    "tier": "established"
+   }
+  },
+  {
+   "title": "Pentagon Holds Up Approval For 60 Patriot Missiles For Ukraine. Kyiv Fears US Pressure Over Peace Deal: Report",
+   "url": "https://www.ibtimes.com/pentagon-delays-patriot-missiles-ukraine-3810122",
+   "publisher": "ibtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T11:52:00.000Z",
+   "seenByGdelt": "2026-11-24T12:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-24T13:41:32.881Z",
+   "lastSeenAt": "2026-11-24T13:41:32.881Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missiles"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "peace deal"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Zelenskyy plans to appeal to new US Congress for military aid, tougher sanctions against Russia",
+   "url": "https://en.interfax.com.ua/news/general/1241510.html",
+   "publisher": "interfax.com.ua",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-24T14:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-24T16:32:15.953Z",
+   "lastSeenAt": "2026-11-24T16:32:15.953Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "sanctions"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "China's space diplomacy belied by Russia's nuclear weapon satellite",
+   "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
+   "publisher": "washingtonexaminer.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T21:11:00.000Z",
+   "seenByGdelt": "2026-11-25T00:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "diplomacy"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
+   "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
+   "publisher": "ibtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T22:53:00.000Z",
+   "seenByGdelt": "2026-11-24T23:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "espionage"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "sanctions"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "jpost.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "http://www.jpost.com/international/article-916124",
+     "published": null,
+     "seenByGdelt": "2026-11-25T18:00:00.000Z"
+    }
+   ],
    "variantsTotal": 1
+  },
+  {
+   "title": "Trump's next Section 301 tariffs raise stakes for US-China trade truce deadline",
+   "url": "https://www.digitimes.com/news/a20261125VL220/capacity-taiwan-investigation-eu-production.html",
+   "publisher": "digitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T04:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T04:32:41.744Z",
+   "lastSeenAt": "2026-11-25T04:32:41.744Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "truce"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
+   "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T09:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T10:28:35.972Z",
+   "lastSeenAt": "2026-11-25T10:28:35.972Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "truce"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariff"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "US tariff plan targeting China, other economies risks offsetting trade negotiation gains, business confidence: experts",
+   "url": "https://www.globaltimes.cn/page/202611/1375070.shtml",
+   "publisher": "globaltimes.cn",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T17:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T19:21:25.022Z",
+   "lastSeenAt": "2026-11-25T19:21:25.022Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "negotiation"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariff"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "state"
+   }
+  },
+  {
+   "title": "Arab News | US envoy Kushner warns against Ukraine war escalation",
+   "url": "https://www.arabnews.com/world/us-envoy-kushner-warns-against-ukraine-war-escalation-3014051",
+   "publisher": "arabnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-25T20:14:00.000Z",
+   "seenByGdelt": "2026-11-25T21:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T22:18:34.902Z",
+   "lastSeenAt": "2026-11-25T22:18:34.902Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "envoy"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Chips and rare earths keep US-China truce fragile",
+   "url": "https://economictimes.indiatimes.com/news/international/world-news/chips-and-rare-earths-keep-us-china-truce-fragile/articleshow/136185727.cms",
+   "publisher": "indiatimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-26T09:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T10:28:35.298Z",
+   "lastSeenAt": "2026-11-26T10:28:35.298Z",
+   "relevance": {
+    "score": 8,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "truce"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "rare earths"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
   },
   {
    "title": "Trump Urges Putin To End Military Aggression Across Europe, Says Russia-Ukraine Peace Deal 'Strong Possibility'",
@@ -1149,13 +1191,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -1179,6 +1223,64 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "openthemagazine.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://openthemagazine.com/world/pull-back-all-military-aggression-trump-urges-putin-to-clear-the-way-for-a-ukraine-peace-deal",
+     "published": null,
+     "seenByGdelt": "2026-11-26T21:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "Ukrainian foreign minister says military action was never directed against Libya",
+   "url": "https://www.straitstimes.com/world/europe/ukrainian-foreign-minister-says-military-action-was-never-directed-against-libya",
+   "publisher": "straitstimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T00:00:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-27T01:46:08.190Z",
+   "lastSeenAt": "2026-11-27T01:46:08.190Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "foreign minister"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "established"
    }
   },
   {
@@ -1195,7 +1297,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-24T10:26:38.519Z",
@@ -1219,6 +1322,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1235,13 +1341,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-24T16:32:15.953Z",
@@ -1265,6 +1373,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1281,7 +1392,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-24T16:32:15.953Z",
@@ -1306,6 +1418,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1322,13 +1437,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-24T16:32:15.953Z",
@@ -1352,6 +1469,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1368,13 +1488,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-24T19:25:26.804Z",
@@ -1398,6 +1520,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1414,13 +1539,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-24T19:25:26.804Z",
@@ -1444,6 +1571,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1460,7 +1590,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-24T22:19:26.499Z",
@@ -1484,6 +1615,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1500,7 +1634,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-24T22:19:26.499Z",
@@ -1524,6 +1659,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1540,7 +1678,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T01:46:06.110Z",
@@ -1564,6 +1703,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1580,7 +1722,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -1604,6 +1747,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1620,13 +1766,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -1650,6 +1798,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1666,7 +1817,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -1690,6 +1842,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1706,7 +1861,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T07:51:16.105Z",
@@ -1730,6 +1886,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1746,7 +1905,8 @@
      "level": "country",
      "terms": [
       "Russian"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T10:28:35.972Z",
@@ -1770,6 +1930,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1786,7 +1949,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T10:28:35.972Z",
@@ -1810,6 +1974,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1826,7 +1993,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T10:28:35.972Z",
@@ -1850,6 +2018,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1866,7 +2037,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -1890,6 +2062,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1906,7 +2081,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -1930,6 +2106,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1946,7 +2125,8 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -1970,6 +2150,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -1986,7 +2169,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -2010,6 +2194,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2026,7 +2213,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -2050,6 +2238,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2066,7 +2257,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -2090,6 +2282,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2106,7 +2301,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T22:18:34.902Z",
@@ -2130,6 +2326,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2146,7 +2345,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -2170,6 +2370,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2186,7 +2389,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -2210,6 +2414,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2226,13 +2433,15 @@
      "level": "institution",
      "terms": [
       "White House"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T22:18:34.902Z",
@@ -2256,6 +2465,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2272,7 +2484,8 @@
      "level": "country",
      "terms": [
       "Russian"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -2296,6 +2509,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2312,7 +2528,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -2337,6 +2554,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2353,7 +2573,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T01:45:45.203Z",
@@ -2378,6 +2599,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2394,7 +2618,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -2418,6 +2643,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2434,7 +2662,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T04:28:27.892Z",
@@ -2458,6 +2687,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2474,7 +2706,8 @@
      "level": "country",
      "terms": [
       "Chinese"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -2498,6 +2731,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2514,7 +2750,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -2539,6 +2776,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2555,7 +2795,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -2580,6 +2821,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2596,7 +2840,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -2620,6 +2865,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2636,7 +2884,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T10:28:35.298Z",
@@ -2660,47 +2909,21 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "ICC judge Kimberly Prost tries war crimes. She's a target of US sanctions | ICC News",
-   "url": "https://www.aljazeera.com/news/2026/11/26/icc-judge-kimberly-prost-tries-war-crimes-shes-a-target-of-us-sanctions",
-   "publisher": "aljazeera.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T07:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-26T07:49:16.689Z",
-   "lastSeenAt": "2026-11-26T07:49:16.689Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "sanctions"
-      ]
-     }
-    ]
-   }
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "aljazeera.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.aljazeera.com/news/2026/11/26/icc-judge-kimberly-prost-tries-war-crimes-shes-a-target-of-us-sanctions",
+     "published": null,
+     "seenByGdelt": "2026-11-26T07:30:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "US partners respond to Trump's fresh tariff proposal with anger, protest and diplomacy",
@@ -2716,7 +2939,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T10:28:35.298Z",
@@ -2740,7 +2964,21 @@
       ]
      }
     ]
-   }
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "business-standard.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.business-standard.com/world-news/us-trading-partners-respond-to-tariffs-with-anger-protest-and-diplomacy-126112600547_1.html",
+     "published": null,
+     "seenByGdelt": "2026-11-26T08:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "Sybiha welcomes EU sanctions on 15 Russian military-industrial entities",
@@ -2756,7 +2994,8 @@
      "level": "country",
      "terms": [
       "Russian"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T10:28:35.298Z",
@@ -2780,6 +3019,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2796,7 +3038,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T10:28:35.298Z",
@@ -2820,6 +3063,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2836,7 +3082,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T13:44:25.762Z",
@@ -2860,46 +3107,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "US trading partners respond to tariffs with anger, protest and diplomacy",
-   "url": "https://www.business-standard.com/world-news/us-trading-partners-respond-to-tariffs-with-anger-protest-and-diplomacy-126112600547_1.html",
-   "publisher": "business-standard.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T08:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-26T10:28:35.298Z",
-   "lastSeenAt": "2026-11-26T10:28:35.298Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "diplomacy"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2916,7 +3126,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T10:28:35.298Z",
@@ -2940,6 +3151,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2956,7 +3170,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T13:44:25.762Z",
@@ -2981,6 +3196,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -2997,7 +3215,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T13:44:25.762Z",
@@ -3021,6 +3240,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3037,7 +3259,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T13:44:25.762Z",
@@ -3078,7 +3301,10 @@
      "seenByGdelt": "2026-11-27T02:45:00.000Z"
     }
    ],
-   "variantsTotal": 2
+   "variantsTotal": 2,
+   "source": {
+    "tier": "unassessed"
+   }
   },
   {
    "title": "Germany calls on Russia to show peace talks readiness through Black Sea ceasefire",
@@ -3094,7 +3320,8 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -3118,6 +3345,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3134,7 +3364,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -3158,6 +3389,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3174,7 +3408,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -3198,6 +3433,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3214,7 +3452,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -3262,7 +3501,10 @@
      "seenByGdelt": "2026-11-26T23:15:00.000Z"
     }
    ],
-   "variantsTotal": 3
+   "variantsTotal": 3,
+   "source": {
+    "tier": "unassessed"
+   }
   },
   {
    "title": "Trump pushes for Ukraine peace deal as Kushner says Putin has shown 'restraint' on nuclear weapons",
@@ -3278,7 +3520,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -3303,46 +3546,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Trump Urges Putin to End Military Aggression for Swift Ukraine Peace Deal",
-   "url": "https://openthemagazine.com/world/pull-back-all-military-aggression-trump-urges-putin-to-clear-the-way-for-a-ukraine-peace-deal",
-   "publisher": "openthemagazine.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T21:45:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-26T22:19:11.319Z",
-   "lastSeenAt": "2026-11-26T22:19:11.319Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "peace deal"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3359,7 +3565,8 @@
      "level": "country",
      "terms": [
       "Russian"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T01:46:08.190Z",
@@ -3385,67 +3592,31 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Ukrainian foreign minister says military action was never directed against Libya",
-   "url": "https://www.straitstimes.com/world/europe/ukrainian-foreign-minister-says-military-action-was-never-directed-against-libya",
-   "publisher": "straitstimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T00:00:00.000Z",
-   "matches": {
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-27T01:46:08.190Z",
-   "lastSeenAt": "2026-11-27T01:46:08.190Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "foreign minister"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
-   "title": "India-US trade pact and tariffs: An explainer",
-   "url": "https://www.newindianexpress.com/business/2026/Nov/27/india-us-trade-pact-and-tariffs-an-explainer-3",
-   "publisher": "newindianexpress.com",
+   "title": "India-US trade pact and tariffs: An explainer - The HinduBusinessLine",
+   "url": "https://www.thehindubusinessline.com/economy/india-us-trade-pact-and-tariffs-an-explainer/article71749577.ece",
+   "publisher": "thehindubusinessline.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T06:30:00.000Z",
+   "published": "2026-11-27T06:13:00.000Z",
+   "seenByGdelt": "2026-11-27T08:15:00.000Z",
    "matches": {
     "USA": {
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
+   "firstSeenAt": "2026-11-27T08:37:51.924Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
    "relevance": {
     "score": 7,
     "tier": "high",
@@ -3465,7 +3636,21 @@
       ]
      }
     ]
-   }
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "newindianexpress.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.newindianexpress.com/business/2026/Nov/27/india-us-trade-pact-and-tariffs-an-explainer-3",
+     "published": null,
+     "seenByGdelt": "2026-11-27T06:30:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "India-US Trade Deal Nears Finalization as Piyush Goyal Signals Progress in Bilateral Negotiations",
@@ -3481,7 +3666,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -3506,6 +3692,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3522,7 +3711,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -3546,6 +3736,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3562,7 +3755,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -3586,6 +3780,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3602,7 +3799,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -3626,6 +3824,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3642,7 +3843,8 @@
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -3666,6 +3868,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3682,7 +3887,8 @@
      "level": "institution",
      "terms": [
       "Kyiv"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -3706,6 +3912,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -3722,13 +3931,15 @@
      "level": "country",
      "terms": [
       "Chinese"
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "institution",
      "terms": [
       "Taipei"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-24T22:19:26.499Z",
@@ -3745,246 +3956,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Taiwan Envoy Urges Canada to Sign Pending Deal, Says It Will Help Shield Ottawa From Coercion by Beijing",
-   "url": "https://www.theepochtimes.com/world/taiwan-envoy-urges-canada-to-sign-pending-deal-says-it-will-help-shield-ottawa-from-coercion-by-beijing-6128841",
-   "publisher": "theepochtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T20:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "institution",
-     "terms": [
-      "Beijing"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-24T22:19:26.499Z",
-   "lastSeenAt": "2026-11-24T22:19:26.499Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "envoy"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "China's J-10C Fighter Spotted With Russian 'Bunker-Buster' Missile. Taiwan's Airfields Could Face A New Threat.",
-   "url": "https://www.ibtimes.com/chinese-j-10c-modified-kh-29t-missile-3810159",
-   "publisher": "ibtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T23:59:00.000Z",
-   "seenByGdelt": "2026-11-25T00:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T01:46:06.110Z",
-   "lastSeenAt": "2026-11-25T01:46:06.110Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missile"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Taiwan Reaffirms Somaliland Ties With New Envoy Amid Opposition From Somalia and China",
-   "url": "https://garoweonline.com/en/news/somalia/taiwan-reaffirms-somaliland-ties-with-new-envoy-amid-opposition-from-somalia-and-china",
-   "publisher": "garoweonline.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T06:02:00.000Z",
-   "seenByGdelt": "2026-11-25T06:30:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T07:51:16.105Z",
-   "lastSeenAt": "2026-11-25T10:28:35.972Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "envoy"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "TIER expects U.S. tariffs on Taiwan goods not to top 15%",
-   "url": "https://focustaiwan.tw/business/202611250020",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T11:13:00.000Z",
-   "seenByGdelt": "2026-11-25T11:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T13:45:49.942Z",
-   "lastSeenAt": "2026-11-25T13:45:49.942Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Chinese Military Hospital Blocked FDA Inspectors Over Taiwan, House Report Says",
-   "url": "https://www.theepochtimes.com/china/chinese-military-hospital-blocked-fda-inspectors-over-taiwan-house-report-says-6129026",
-   "publisher": "theepochtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T12:30:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T13:45:49.942Z",
-   "lastSeenAt": "2026-11-25T13:45:49.942Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "US Marine missile range boost faces reality check on Taiwan",
-   "url": "https://article.wn.com/view/2026/11/25/US_Marine_missile_range_boost_faces_reality_check_on_Taiwan/",
-   "publisher": "wn.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T14:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T16:31:13.165Z",
-   "lastSeenAt": "2026-11-25T16:31:13.165Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missile"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "established"
    }
   },
   {
@@ -4001,19 +3975,22 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -4040,168 +4017,9 @@
      "seenByGdelt": "2026-11-25T19:45:00.000Z"
     }
    ],
-   "variantsTotal": 1
-  },
-  {
-   "title": "Australia news LIVE: Leah Blyth joins One Nation; US tariffs hiked on products from EU, Japan, Taiwan and more; stagflation warning for Australia",
-   "url": "https://www.brisbanetimes.com.au/national/australia-news-live-liberal-senator-joins-one-nation-economists-warn-of-looming-stagflation-us-hikes-tariffs-by-20-per-cent-for-dozens-of-countries-20261126-p61hdi.html",
-   "publisher": "brisbanetimes.com.au",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T19:45:00.000Z",
-   "seenByGdelt": "2026-11-25T21:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T22:18:34.902Z",
-   "lastSeenAt": "2026-11-25T22:18:34.902Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
-   "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
-   "publisher": "antiwar.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T21:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-25T22:18:34.902Z",
-   "lastSeenAt": "2026-11-25T22:18:34.902Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "China Trains Fighter Pilots With AI Combat Drones. US Army Warns Of Threat To Taiwan And American Forces.",
-   "url": "https://www.ibtimes.com/china-trains-pilots-ai-combat-drones-3810201",
-   "publisher": "ibtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T21:37:00.000Z",
-   "seenByGdelt": "2026-11-26T00:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T01:45:45.203Z",
-   "lastSeenAt": "2026-11-26T01:45:45.203Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "army"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Taiwan says it is confident of keeping previously agreed tariffs with US",
-   "url": "https://www.businesstimes.com.sg/international/taiwan-says-it-confident-keeping-previously-agreed-tariffs-us",
-   "publisher": "businesstimes.com.sg",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T03:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T04:28:27.892Z",
-   "lastSeenAt": "2026-11-26T04:28:27.892Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
+   "variantsTotal": 1,
+   "source": {
+    "tier": "established"
    }
   },
   {
@@ -4218,13 +4036,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T04:28:27.892Z",
@@ -4241,225 +4061,41 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "established"
    }
   },
   {
-   "title": "Vice premier outlines tariffs, support for U.S. investments by Taiwan firms",
-   "url": "https://focustaiwan.tw/politics/202611260010",
-   "publisher": "focustaiwan.tw",
+   "title": "How the Black Sea front in the Russia-Ukraine war is threatening to pull the U.S. into the conflict",
+   "url": "https://www.cbsnews.com/news/black-sea-incidents-nato-russia-ukraine-war/",
+   "publisher": "cbsnews.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": "2026-11-26T06:45:00.000Z",
-   "seenByGdelt": "2026-11-26T11:15:00.000Z",
+   "published": null,
+   "seenByGdelt": "2026-11-26T17:15:00.000Z",
    "matches": {
     "USA": {
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "shared"
     },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T13:44:25.762Z",
-   "lastSeenAt": "2026-11-26T13:44:25.762Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Agricultural minister says no new U.S. tariffs on 322 Taiwan products",
-   "url": "https://focustaiwan.tw/politics/202611260013",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-26T08:11:00.000Z",
-   "seenByGdelt": "2026-11-26T11:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T13:44:25.762Z",
-   "lastSeenAt": "2026-11-26T13:44:25.762Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "What to know about the latest U.S. tariff proposals for Taiwan",
-   "url": "https://focustaiwan.tw/business/202611260019",
-   "publisher": "focustaiwan.tw",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-26T12:38:00.000Z",
-   "seenByGdelt": "2026-11-26T15:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T16:27:22.008Z",
-   "lastSeenAt": "2026-11-26T16:27:22.008Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariff"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Zelenskyy confirms Ukraine struck Russian warship, cargo vessel near Benghazi – The Ukrainian Weekly",
-   "url": "https://subscription.ukrweekly.com/zelenskyy-confirms-ukraine-struck-russian-warship-cargo-vessel-near-benghazi/",
-   "publisher": "ukrweekly.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-26T16:19:00.000Z",
-   "seenByGdelt": "2026-11-26T20:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine",
-      "Ukrainian"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T22:19:11.319Z",
-   "lastSeenAt": "2026-11-26T22:19:11.319Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warship"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ukraine Has Shaken Russia's Confidence in Its Naval Power Projection",
-   "url": "https://www.themoscowtimes.com/2026/11/26/ukraine-has-shaken-russia-s-confidence-in-its-naval-power-projection-a812382",
-   "publisher": "themoscowtimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-26T16:41:00.000Z",
-   "seenByGdelt": "2026-11-26T19:45:00.000Z",
-   "matches": {
     "RUS": {
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T22:19:11.319Z",
-   "lastSeenAt": "2026-11-26T22:19:11.319Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "naval"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "Ronald Reagan's Cold War Leadership vs. Donald Trump's Approach to China and Russia.",
-   "url": "https://thyblackman.com/2026/11/25/ronald-reagan-donald-trump-china-russia-foreign-policy/comment-page-1/",
-   "publisher": "thyblackman.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T16:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -4476,6 +4112,827 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "established"
+   }
+  },
+  {
+   "title": "US, NATO urge Russia not to 'expand' war",
+   "url": "https://www.taipeitimes.com/News/world/archives/2026/11/27/2003868502",
+   "publisher": "taipeitimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-26T18:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T19:26:50.015Z",
+   "lastSeenAt": "2026-11-26T19:26:50.015Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO",
+       "war"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "established"
+   }
+  },
+  {
+   "title": "The Guardian view on Russia's war dead: the toll won't stop Putin. Resolve in backing Ukraine remains essential | Editorial",
+   "url": "https://www.theguardian.com/commentisfree/2026/nov/26/the-guardian-view-on-russias-war-dead-the-toll-wont-stop-putin-resolve-in-backing-ukraine-remains-essential",
+   "publisher": "theguardian.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-26T20:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T22:19:11.319Z",
+   "lastSeenAt": "2026-11-26T22:19:11.319Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "established"
+   }
+  },
+  {
+   "title": "Chinese military tests new Taiwan landing tactics in coastal drills",
+   "url": "https://www.straitstimes.com/asia/chinese-military-tests-new-taiwan-landing-tactics-in-coastal-drills",
+   "publisher": "straitstimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T04:56:00.000Z",
+   "seenByGdelt": "2026-11-27T05:00:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T07:47:17.748Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "established"
+   },
+   "variants": [
+    {
+     "publisher": "news.az",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://news.az/news/china-tests-new-amphibious-landing-tactics-in-military-drills-near-taiwan",
+     "published": null,
+     "seenByGdelt": "2026-11-27T07:15:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "Taiwan Envoy Urges Canada to Sign Pending Deal, Says It Will Help Shield Ottawa From Coercion by Beijing",
+   "url": "https://www.theepochtimes.com/world/taiwan-envoy-urges-canada-to-sign-pending-deal-says-it-will-help-shield-ottawa-from-coercion-by-beijing-6128841",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-24T20:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "institution",
+     "terms": [
+      "Beijing"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-24T22:19:26.499Z",
+   "lastSeenAt": "2026-11-24T22:19:26.499Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "envoy"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "China's J-10C Fighter Spotted With Russian 'Bunker-Buster' Missile. Taiwan's Airfields Could Face A New Threat.",
+   "url": "https://www.ibtimes.com/chinese-j-10c-modified-kh-29t-missile-3810159",
+   "publisher": "ibtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-24T23:59:00.000Z",
+   "seenByGdelt": "2026-11-25T00:15:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T01:46:06.110Z",
+   "lastSeenAt": "2026-11-25T01:46:06.110Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missile"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Taiwan Reaffirms Somaliland Ties With New Envoy Amid Opposition From Somalia and China",
+   "url": "https://garoweonline.com/en/news/somalia/taiwan-reaffirms-somaliland-ties-with-new-envoy-amid-opposition-from-somalia-and-china",
+   "publisher": "garoweonline.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-25T06:02:00.000Z",
+   "seenByGdelt": "2026-11-25T06:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T07:51:16.105Z",
+   "lastSeenAt": "2026-11-25T10:28:35.972Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "envoy"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "TIER expects U.S. tariffs on Taiwan goods not to top 15%",
+   "url": "https://focustaiwan.tw/business/202611250020",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-25T11:13:00.000Z",
+   "seenByGdelt": "2026-11-25T11:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T13:45:49.942Z",
+   "lastSeenAt": "2026-11-25T13:45:49.942Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Chinese Military Hospital Blocked FDA Inspectors Over Taiwan, House Report Says",
+   "url": "https://www.theepochtimes.com/china/chinese-military-hospital-blocked-fda-inspectors-over-taiwan-house-report-says-6129026",
+   "publisher": "theepochtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T12:30:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T13:45:49.942Z",
+   "lastSeenAt": "2026-11-25T13:45:49.942Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "US Marine missile range boost faces reality check on Taiwan",
+   "url": "https://article.wn.com/view/2026/11/25/US_Marine_missile_range_boost_faces_reality_check_on_Taiwan/",
+   "publisher": "wn.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T14:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T16:31:13.165Z",
+   "lastSeenAt": "2026-11-25T16:31:13.165Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missile"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Australia news LIVE: Leah Blyth joins One Nation; US tariffs hiked on products from EU, Japan, Taiwan and more; stagflation warning for Australia",
+   "url": "https://www.brisbanetimes.com.au/national/australia-news-live-liberal-senator-joins-one-nation-economists-warn-of-looming-stagflation-us-hikes-tariffs-by-20-per-cent-for-dozens-of-countries-20261126-p61hdi.html",
+   "publisher": "brisbanetimes.com.au",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-25T19:45:00.000Z",
+   "seenByGdelt": "2026-11-25T21:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T22:18:34.902Z",
+   "lastSeenAt": "2026-11-25T22:18:34.902Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
+   "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
+   "publisher": "antiwar.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-25T21:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T22:18:34.902Z",
+   "lastSeenAt": "2026-11-25T22:18:34.902Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "China Trains Fighter Pilots With AI Combat Drones. US Army Warns Of Threat To Taiwan And American Forces.",
+   "url": "https://www.ibtimes.com/china-trains-pilots-ai-combat-drones-3810201",
+   "publisher": "ibtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-25T21:37:00.000Z",
+   "seenByGdelt": "2026-11-26T00:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T01:45:45.203Z",
+   "lastSeenAt": "2026-11-26T01:45:45.203Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "army"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Taiwan says it is confident of keeping previously agreed tariffs with US",
+   "url": "https://www.businesstimes.com.sg/international/taiwan-says-it-confident-keeping-previously-agreed-tariffs-us",
+   "publisher": "businesstimes.com.sg",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-26T03:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T04:28:27.892Z",
+   "lastSeenAt": "2026-11-26T04:28:27.892Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Vice premier outlines tariffs, support for U.S. investments by Taiwan firms",
+   "url": "https://focustaiwan.tw/politics/202611260010",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-26T06:45:00.000Z",
+   "seenByGdelt": "2026-11-26T11:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T13:44:25.762Z",
+   "lastSeenAt": "2026-11-26T13:44:25.762Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Agricultural minister says no new U.S. tariffs on 322 Taiwan products",
+   "url": "https://focustaiwan.tw/politics/202611260013",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-26T08:11:00.000Z",
+   "seenByGdelt": "2026-11-26T11:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T13:44:25.762Z",
+   "lastSeenAt": "2026-11-26T13:44:25.762Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "What to know about the latest U.S. tariff proposals for Taiwan",
+   "url": "https://focustaiwan.tw/business/202611260019",
+   "publisher": "focustaiwan.tw",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-26T12:38:00.000Z",
+   "seenByGdelt": "2026-11-26T15:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T16:27:22.008Z",
+   "lastSeenAt": "2026-11-26T16:27:22.008Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariff"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ukraine Has Shaken Russia's Confidence in Its Naval Power Projection",
+   "url": "https://www.themoscowtimes.com/2026/11/26/ukraine-has-shaken-russia-s-confidence-in-its-naval-power-projection-a812382",
+   "publisher": "themoscowtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-26T16:41:00.000Z",
+   "seenByGdelt": "2026-11-26T19:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T22:19:11.319Z",
+   "lastSeenAt": "2026-11-26T22:19:11.319Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "naval"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ronald Reagan's Cold War Leadership vs. Donald Trump's Approach to China and Russia.",
+   "url": "https://thyblackman.com/2026/11/25/ronald-reagan-donald-trump-china-russia-foreign-policy/comment-page-1/",
+   "publisher": "thyblackman.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-26T16:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-26T19:26:50.015Z",
+   "lastSeenAt": "2026-11-26T19:26:50.015Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4492,13 +4949,15 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     },
     "RUS": {
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -4515,6 +4974,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4531,13 +4993,15 @@
      "level": "country",
      "terms": [
       "Russian"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "institution",
      "terms": [
       "Kyiv"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -4554,6 +5018,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4570,13 +5037,15 @@
      "level": "institution",
      "terms": [
       "Moscow"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -4604,7 +5073,10 @@
      "seenByGdelt": "2026-11-26T20:45:00.000Z"
     }
    ],
-   "variantsTotal": 1
+   "variantsTotal": 1,
+   "source": {
+    "tier": "unassessed"
+   }
   },
   {
    "title": "Trump's mystery edit to NATO statement adds Ukraine to warning aimed at Russia",
@@ -4620,13 +5092,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -4643,51 +5117,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "How the Black Sea front in the Russia-Ukraine war is threatening to pull the U.S. into the conflict",
-   "url": "https://www.cbsnews.com/news/black-sea-incidents-nato-russia-ukraine-war/",
-   "publisher": "cbsnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T17:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-26T19:26:50.015Z",
-   "lastSeenAt": "2026-11-26T19:26:50.015Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4704,13 +5136,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -4737,7 +5171,10 @@
      "seenByGdelt": "2026-11-26T19:00:00.000Z"
     }
    ],
-   "variantsTotal": 1
+   "variantsTotal": 1,
+   "source": {
+    "tier": "unassessed"
+   }
   },
   {
    "title": "'Desperate' Kiev seeking to draw NATO into war with Russia",
@@ -4753,13 +5190,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "institution",
      "terms": [
       "Kiev"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -4777,85 +5216,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "US, NATO urge Russia not to 'expand' war",
-   "url": "https://www.taipeitimes.com/News/world/archives/2026/11/27/2003868502",
-   "publisher": "taipeitimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T18:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-26T19:26:50.015Z",
-   "lastSeenAt": "2026-11-26T19:26:50.015Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "NATO",
-       "war"
-      ]
-     }
-    ]
-   }
-  },
-  {
-   "title": "The Guardian view on Russia's war dead: the toll won't stop Putin. Resolve in backing Ukraine remains essential | Editorial",
-   "url": "https://www.theguardian.com/commentisfree/2026/nov/26/the-guardian-view-on-russias-war-dead-the-toll-wont-stop-putin-resolve-in-backing-ukraine-remains-essential",
-   "publisher": "theguardian.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-26T20:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ]
-    }
-   },
-   "firstSeenAt": "2026-11-26T22:19:11.319Z",
-   "lastSeenAt": "2026-11-26T22:19:11.319Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4872,13 +5235,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukrainian"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T22:19:11.319Z",
@@ -4895,6 +5260,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4911,13 +5279,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T22:19:11.319Z",
@@ -4934,6 +5304,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4950,13 +5323,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T22:19:11.319Z",
@@ -4973,6 +5348,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -4989,13 +5367,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T01:46:08.190Z",
@@ -5012,6 +5392,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5028,13 +5411,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukrainian"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5051,6 +5436,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5067,13 +5455,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-26T19:26:50.015Z",
@@ -5090,6 +5480,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5106,13 +5499,15 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "institution",
      "terms": [
       "Taipei"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5144,9 +5539,20 @@
      "url": "http://www.dailyadvance.com/news/world/meet-the-rising-mayoral-candidate-in-taiwan-whos-also-sanctioned-by-china/article_14572ba9-4849-543b-bfec-b942e41fbf7f.html",
      "published": "2026-11-27T01:18:00.000Z",
      "seenByGdelt": "2026-11-27T05:00:00.000Z"
+    },
+    {
+     "publisher": "hindustantimes.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.hindustantimes.com/world-news/puma-shen-taiwans-rising-taepei-mayoral-candidate-who-is-also-sanctioned-by-china-101795742729439.html",
+     "published": "2026-11-27T01:55:00.000Z",
+     "seenByGdelt": "2026-11-27T02:15:00.000Z"
     }
    ],
-   "variantsTotal": 2
+   "variantsTotal": 3,
+   "source": {
+    "tier": "unassessed"
+   }
   },
   {
    "title": "IAEA working with Russia, Ukraine on ceasefire to repair power link at Zaporizhzhia nuclear plant",
@@ -5162,13 +5568,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T01:46:08.190Z",
@@ -5186,45 +5594,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Puma Shen: Taiwan's rising Taipei mayoral candidate who is also sanctioned by China",
-   "url": "https://www.hindustantimes.com/world-news/puma-shen-taiwans-rising-taepei-mayoral-candidate-who-is-also-sanctioned-by-china-101795742729439.html",
-   "publisher": "hindustantimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T01:55:00.000Z",
-   "seenByGdelt": "2026-11-27T02:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-27T04:30:07.072Z",
-   "lastSeenAt": "2026-11-27T04:30:07.072Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "sanctioned"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5241,13 +5613,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5264,6 +5638,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5280,13 +5657,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5303,6 +5682,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5319,13 +5701,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "Chinese"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5343,6 +5727,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5359,13 +5746,15 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5382,6 +5771,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5399,13 +5791,15 @@
      "terms": [
       "Russia",
       "Russian"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5422,6 +5816,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5438,13 +5835,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5461,6 +5860,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5477,13 +5879,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5500,6 +5904,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5516,13 +5923,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5539,6 +5948,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5555,13 +5967,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "RUS": {
      "level": "country",
      "terms": [
       "Russian"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -5579,6 +5993,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5595,19 +6012,22 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     },
     "RUS": {
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5624,7 +6044,21 @@
       ]
      }
     ]
-   }
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "aljazeera.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.aljazeera.com/news/2026/11/27/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops",
+     "published": null,
+     "seenByGdelt": "2026-11-27T05:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "Trump downplays Russia, China support for Iran during talks with US troops - Dominican Republic Post – Caribbean News, Business, Travel & Culture",
@@ -5640,19 +6074,22 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     },
     "RUS": {
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5669,6 +6106,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5685,13 +6125,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5708,45 +6150,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Chinese military tests new Taiwan landing tactics in coastal drills",
-   "url": "https://www.straitstimes.com/asia/chinese-military-tests-new-taiwan-landing-tactics-in-coastal-drills",
-   "publisher": "straitstimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T04:56:00.000Z",
-   "seenByGdelt": "2026-11-27T05:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ]
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5763,13 +6169,15 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5786,6 +6194,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5802,13 +6213,15 @@
      "level": "country",
      "terms": [
       "Russia"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5825,51 +6238,9 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "title": "Trump downplays Russia, China support for Iran during talks with US troops",
-   "url": "https://www.aljazeera.com/news/2026/11/27/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops",
-   "publisher": "aljazeera.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T05:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ]
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "troops"
-      ]
-     }
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5886,13 +6257,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "UKR": {
      "level": "country",
      "terms": [
       "Ukraine"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5909,6 +6282,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5925,13 +6301,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -5948,6 +6326,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -5964,17 +6345,19 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -5987,6 +6370,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6003,13 +6389,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6026,6 +6414,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6042,13 +6433,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6065,6 +6458,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6081,13 +6477,15 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "shared"
     },
     "CHN": {
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6104,33 +6502,38 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
-   "title": "China tests new amphibious landing tactics in military drills near Taiwan",
-   "url": "https://news.az/news/china-tests-new-amphibious-landing-tactics-in-military-drills-near-taiwan",
-   "publisher": "news.az",
+   "title": "The Russian Armed Forces have delivered new strikes on Ukraine's defense industry facilities, according to the Ministry of Defense.",
+   "url": "https://nt.am/en/news/363926/",
+   "publisher": "nt.am",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
    "published": null,
-   "seenByGdelt": "2026-11-27T07:15:00.000Z",
+   "seenByGdelt": "2026-11-27T08:00:00.000Z",
    "matches": {
-    "CHN": {
+    "RUS": {
      "level": "country",
      "terms": [
-      "China"
-     ]
+      "Russian"
+     ],
+     "role": "shared"
     },
-    "TWN": {
+    "UKR": {
      "level": "country",
      "terms": [
-      "Taiwan"
-     ]
+      "Ukraine"
+     ],
+     "role": "shared"
     }
    },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
+   "firstSeenAt": "2026-11-27T08:37:51.924Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -6139,10 +6542,101 @@
       "id": "security",
       "label": "Security",
       "terms": [
-       "military drills"
+       "armed forces"
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "FSB Foils Ukrainian Plot to Assassinate Senior Russian Military Officer in Donetsk",
+   "url": "https://sputnikglobe.com/20261127/fsb-foils-ukrainian-plot-to-assassinate-senior-russian-military-officer-in-donetsk-1125150712.html",
+   "publisher": "sputnikglobe.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T08:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T08:37:51.924Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "state"
+   }
+  },
+  {
+   "title": "US to hike tariffs on China, EU, Brazil and others over subsidized factories | News, Sports, Jobs",
+   "url": "https://www.lahainanews.com/wire/?category=5041&ID=403123",
+   "publisher": "lahainanews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T08:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T08:37:51.924Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6159,7 +6653,8 @@
      "level": "institution",
      "terms": [
       "Taipei"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-24T22:19:26.499Z",
@@ -6176,6 +6671,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6192,7 +6690,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T07:51:16.105Z",
@@ -6210,6 +6709,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6226,7 +6728,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -6243,6 +6746,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6259,7 +6765,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -6276,6 +6783,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6292,7 +6802,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -6309,6 +6820,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6325,7 +6839,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T22:19:11.319Z",
@@ -6342,6 +6857,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6358,7 +6876,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -6376,6 +6895,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6392,7 +6914,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -6410,6 +6933,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6426,7 +6952,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-24T16:32:15.953Z",
@@ -6443,6 +6970,9 @@
       ]
      }
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6459,13 +6989,15 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6474,6 +7006,9 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6490,7 +7025,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T04:30:07.072Z",
@@ -6499,6 +7035,9 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6515,13 +7054,15 @@
      "level": "country",
      "terms": [
       "Chinese"
-     ]
+     ],
+     "role": "shared"
     },
     "TWN": {
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "shared"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6530,6 +7071,9 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6546,7 +7090,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6555,6 +7100,9 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6571,7 +7119,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6580,6 +7129,9 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6596,7 +7148,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "incidental"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6605,6 +7158,9 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6621,7 +7177,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6630,6 +7187,9 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6646,7 +7206,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
@@ -6655,6 +7216,81 @@
     "score": 0,
     "tier": "other",
     "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Taiwan local election campaigns enter final day; China sends warplanes",
+   "url": "https://www.asiaone.com/asia/taiwan-local-election-campaigns-enter-final-day-china-sends-warplanes",
+   "publisher": "asiaone.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T07:50:00.000Z",
+   "seenByGdelt": "2026-11-27T08:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T08:37:51.924Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Taipei Fashion Week SS27 Draws Over 29,000 Visits, Sets New Records as Global Business Engagement Expands",
+   "url": "https://www.prnewswire.com/news-releases/taipei-fashion-week-ss27-draws-over-29-000-visits-sets-new-records-as-global-business-engagement-expands-302951611.html",
+   "publisher": "prnewswire.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T08:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "institution",
+     "terms": [
+      "Taipei"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-27T08:37:51.924Z",
+   "lastSeenAt": "2026-11-27T08:37:51.924Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "filtered": {
+    "kind": "off-topic",
+    "group": "entertainment",
+    "terms": [
+     "fashion week"
+    ]
    }
   },
   {
@@ -6671,7 +7307,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -6686,6 +7323,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6702,7 +7342,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -6718,6 +7359,9 @@
      "ETF",
      "stock price"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6734,7 +7378,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
@@ -6749,6 +7394,9 @@
     "terms": [
      "shares surge"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6765,7 +7413,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T10:28:35.298Z",
@@ -6780,6 +7429,9 @@
     "terms": [
      "net asset value"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6796,7 +7448,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -6811,6 +7464,9 @@
     "terms": [
      "ETF"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6827,7 +7483,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T07:49:16.689Z",
@@ -6842,6 +7499,9 @@
     "terms": [
      "portfolio"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6858,7 +7518,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T01:45:45.203Z",
@@ -6873,6 +7534,9 @@
     "terms": [
      "stock market today"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6889,7 +7553,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T01:45:45.203Z",
@@ -6904,6 +7569,9 @@
     "terms": [
      "ETF"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6920,7 +7588,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -6935,6 +7604,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6951,7 +7623,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -6966,6 +7639,9 @@
     "terms": [
      "iShares"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -6982,7 +7658,8 @@
      "level": "country",
      "terms": [
       "Taiwan"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T22:18:34.902Z",
@@ -6997,6 +7674,9 @@
     "terms": [
      "ETF"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7013,7 +7693,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T22:18:34.902Z",
@@ -7028,6 +7709,9 @@
     "terms": [
      "ETFs"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7044,7 +7728,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -7059,6 +7744,9 @@
     "terms": [
      "IPO"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7075,7 +7763,8 @@
      "level": "country",
      "terms": [
       "U.S."
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -7091,6 +7780,9 @@
      "ETF",
      "stock price"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7107,7 +7799,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -7122,6 +7815,9 @@
     "terms": [
      "portfolio"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7138,7 +7834,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -7153,6 +7850,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7169,7 +7869,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T16:31:13.165Z",
@@ -7184,6 +7885,9 @@
     "terms": [
      "dividend"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7200,7 +7904,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T13:45:49.942Z",
@@ -7215,6 +7920,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7231,7 +7939,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-26T01:45:45.203Z",
@@ -7246,6 +7955,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7262,7 +7974,8 @@
      "level": "country",
      "terms": [
       "USA"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T10:28:35.972Z",
@@ -7277,6 +7990,9 @@
     "terms": [
      "net asset value"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7293,7 +8009,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T10:28:35.972Z",
@@ -7316,6 +8033,9 @@
     "terms": [
      "net asset value"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7332,7 +8052,8 @@
      "level": "country",
      "terms": [
       "China"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T07:51:16.105Z",
@@ -7347,6 +8068,9 @@
     "terms": [
      "portfolio"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7363,7 +8087,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T19:21:25.022Z",
@@ -7378,6 +8103,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7394,7 +8122,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -7409,6 +8138,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7425,7 +8157,8 @@
      "level": "institution",
      "terms": [
       "Beijing"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -7440,6 +8173,9 @@
     "terms": [
      "IPO"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7456,7 +8192,8 @@
      "level": "country",
      "terms": [
       "Chinese"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -7471,6 +8208,9 @@
     "terms": [
      "IPO"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7487,7 +8227,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -7502,6 +8243,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7518,7 +8262,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -7533,6 +8278,9 @@
     "terms": [
      "stake in"
     ]
+   },
+   "source": {
+    "tier": "unassessed"
    }
   },
   {
@@ -7549,7 +8297,8 @@
      "level": "country",
      "terms": [
       "US"
-     ]
+     ],
+     "role": "primary"
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
@@ -7564,37 +8313,9 @@
     "terms": [
      "stake in"
     ]
-   }
-  },
-  {
-   "title": "Vale Shares Fall 4.39% as China Steel Weakens | Iron Ore Wrap, Nov 24",
-   "url": "https://www.riotimesonline.com/iron-ore-markets-latam-tuesday-november-24-2026/",
-   "publisher": "riotimesonline.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T00:55:00.000Z",
-   "seenByGdelt": "2026-11-25T03:45:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ]
-    }
    },
-   "firstSeenAt": "2026-11-25T04:32:41.744Z",
-   "lastSeenAt": "2026-11-25T04:32:41.744Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "shares fall"
-    ]
+   "source": {
+    "tier": "unassessed"
    }
   }
  ]
