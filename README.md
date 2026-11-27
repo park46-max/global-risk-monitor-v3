@@ -193,6 +193,19 @@ Rules are plain word lists in `data/relevance-rules.mjs`; no AI and no paid serv
 - Articles older than 7 days are dropped. If a feed fails, its earlier articles stay and are labelled **Cached: feed refresh failed**; one failing feed never stops the others. If every feed fails the run turns red.
 - Feeds only keep their latest items, so each country may often show few or no articles. "No headline names this country" only describes these feeds, not the world.
 
+## News quality rules (Stage 5)
+
+Everything here is fixed word rules on the headline. No AI, no paid service, nothing is fact-checked. Rules live in `data/relevance-rules.mjs` and `data/source-quality.mjs`; try one headline with `node scripts/explain-headline.mjs "headline" [article link]`.
+
+- **Primary, shared or incidental country.** A country named in a headline is not always what the story is about. *Shared* = two or more monitored countries are named (US-China, Russia-Ukraine, Taiwan Strait), or another country is named first but the headline has a security, diplomacy or sanctions/trade word. *Incidental* = another country is named first, the monitored one is not among the first three words and there is no such word, or the name is only a descriptor ("US-based"). Everything else is *primary*. Incidental items are not deleted: the page lists them under "Mentioned in passing", and the briefs leave them out and say how many.
+- **Off-topic filtering.** Sport, entertainment and local-crime words filter a headline only when it has no security, diplomacy or sanctions/trade topic. Filtered items stay visible in the "Filtered out" list with the words that caused it.
+- **Duplicates.** Same-word grouping as before, plus: demonyms and plurals are normalised ("Russian strikes" = "Russia strike"); a headline that is another one plus a few words is grouped; headlines with different numbers, or that each name a different country, are never merged. The representative is the highest-scoring article, then an established outlet, then the earliest. Every other source stays listed with its link.
+- **Source labels (conservative, not a blacklist).** *Established outlet*, *state-owned or government-run outlet* (an ownership label that applies to every country alike) or *not assessed* (the default; it does not mean unreliable). A label describes the outlet from its domain, never a headline, and a headline is **not** thereby fact-checked. Labels never hide an article and never change a score; they only break ties between otherwise equal duplicates. The lists are short, were compiled from general knowledge and are not checked against any registry, so review them. Criteria and limits are written at the top of `data/source-quality.mjs`.
+- **Sensational wording.** Clickbait phrases, "!" or mostly capital letters lower a headline's score by 1 and are shown on the page. The headline is still listed.
+- **Limits.** Word position is a rough proxy, so some roles will be wrong; a mixed headline can slip past the off-topic filter; paraphrased duplicates ("kills five" / "kills 5") are not caught. Old cached articles are re-judged on the next fetch.
+- **Not changed:** risk scoring and caches, World Bank and UCDP fetching, workflows, RSS settings, the GDELT search API fallback, the globe and the styles.
+- **Tests:** `node tests/test-news-quality.mjs` (88 simulated checks across all five countries). No real feed was contacted and nothing was run on GitHub or the live site.
+
 ## Country intelligence briefs (Stage 3)
 Each country page has a brief with four parts: Overview, Key developments, Why it matters, Sources. It is built automatically by `scripts/build-briefs.mjs` from the cached news (`news-gdelt.json`, and `news-rss.json` if you ever enable RSS) and saved to `data/cache/briefs.json`. **No AI, no paid service, no API key, no network request**: fixed rules only (`data/brief-rules.mjs`, `scripts/brief-lib.mjs`).
 
