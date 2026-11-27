@@ -3,22 +3,22 @@
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
  "methodologyVersion": 3,
- "generatedAt": "2026-11-27T13:06:36.212Z",
- "lastSuccessAt": "2026-11-27T13:06:36.212Z",
- "checkedAt": "2026-11-27T13:06:36.212Z",
+ "generatedAt": "2026-11-27T19:25:44.933Z",
+ "lastSuccessAt": "2026-11-27T19:25:44.933Z",
+ "checkedAt": "2026-11-27T19:25:44.933Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-27T13:06:36.162Z",
+   "checkedAt": "2026-11-27T19:25:44.875Z",
    "lastSuccessAt": "2026-11-27T11:49:14.467Z"
   },
   "indicators": {
    "status": "ok",
-   "checkedAt": "2026-11-27T08:47:46.764Z",
-   "lastSuccessAt": "2026-11-27T08:48:07.555Z"
+   "checkedAt": "2026-11-27T19:19:10.097Z",
+   "lastSuccessAt": "2026-11-27T19:19:19.938Z"
   },
   "briefs": {
-   "generatedAt": "2026-11-27T10:27:11.937Z"
+   "generatedAt": "2026-11-27T19:23:51.023Z"
   }
  },
  "countries": {
@@ -134,7 +134,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "contextAsOf": "2026-11-27T19:23:51.023Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -404,7 +404,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T08:47:47.381Z",
+    "lastSuccessAt": "2026-11-27T19:19:10.754Z",
     "stale": false,
     "limitations": [
      "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
@@ -478,7 +478,7 @@
       "2025"
      ],
      "stale": false,
-     "lastSuccessAt": "2026-11-27T08:47:47.381Z",
+     "lastSuccessAt": "2026-11-27T19:19:10.754Z",
      "flag": {
       "name": "Macroeconomic stress flag (project-defined)",
       "status": "assessed",
@@ -540,7 +540,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T19:23:51.023Z"
    }
   },
   "CHN": {
@@ -607,7 +607,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "contextAsOf": "2026-11-27T19:23:51.023Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -775,7 +775,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T08:47:48.885Z",
+    "lastSuccessAt": "2026-11-27T19:19:12.636Z",
     "stale": false,
     "limitations": [
      "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
@@ -847,7 +847,7 @@
       "2025"
      ],
      "stale": false,
-     "lastSuccessAt": "2026-11-27T08:47:48.885Z",
+     "lastSuccessAt": "2026-11-27T19:19:12.636Z",
      "flag": {
       "name": "Macroeconomic stress flag (project-defined)",
       "status": "assessed",
@@ -908,7 +908,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T19:23:51.023Z"
    }
   },
   "RUS": {
@@ -1007,7 +1007,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "contextAsOf": "2026-11-27T19:23:51.023Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -1243,7 +1243,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T08:47:50.277Z",
+    "lastSuccessAt": "2026-11-27T19:19:14.694Z",
     "stale": false,
     "limitations": [
      "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
@@ -1316,7 +1316,7 @@
       "2025"
      ],
      "stale": false,
-     "lastSuccessAt": "2026-11-27T08:47:50.277Z",
+     "lastSuccessAt": "2026-11-27T19:19:14.694Z",
      "flag": {
       "name": "Macroeconomic stress flag (project-defined)",
       "status": "assessed",
@@ -1378,7 +1378,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T19:23:51.023Z"
    }
   },
   "UKR": {
@@ -1423,13 +1423,6 @@
     ],
     "context": [
      {
-      "headline": "Zelenskyy calls for NATO membership and tougher sanctions in Ukraine peace deal",
-      "publisher": "news.az",
-      "url": "https://news.az/news/zelenskyy-calls-for-nato-membership-and-tougher-sanctions-in-ukraine-peace-deal",
-      "time": "2026-11-24T14:45:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
       "headline": "EU envoy backs India's diplomatic efforts for Ukraine truce, extends solidarity to safeguard energy security",
       "publisher": "aninews.in",
       "url": "https://aninews.in/news/world/asia/eu-envoy-backs-indias-diplomatic-efforts-for-ukraine-truce-extends-solidarity-to-safeguard-energy-security20261127140546/",
@@ -1442,9 +1435,16 @@
       "url": "https://www.straitstimes.com/world/europe/mural-appears-near-dutch-embassy-in-moscow-depicting-missile-supplies-for-ukraine",
       "time": "2026-11-26T14:15:00.000Z",
       "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump Urges Putin To End Military Aggression Across Europe, Says Russia-Ukraine Peace Deal 'Strong Possibility'",
+      "publisher": "freepressjournal.in",
+      "url": "https://www.freepressjournal.in/world/trump-urges-putin-to-end-military-aggression-across-europe-says-russia-ukraine-peace-deal-strong-possibility",
+      "time": "2026-11-26T16:06:00.000Z",
+      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "contextAsOf": "2026-11-27T19:23:51.023Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -1591,7 +1591,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T08:47:55.779Z",
+    "lastSuccessAt": "2026-11-27T19:19:16.653Z",
     "stale": false,
     "limitations": [
      "Unemployment (% of labour force): the newest value is from 2021, older than 3 years, so it was not used.",
@@ -1665,7 +1665,7 @@
       "2025"
      ],
      "stale": false,
-     "lastSuccessAt": "2026-11-27T08:47:55.779Z",
+     "lastSuccessAt": "2026-11-27T19:19:16.653Z",
      "flag": {
       "name": "Macroeconomic stress flag (project-defined)",
       "status": "assessed",
@@ -1706,13 +1706,6 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Zelenskyy calls for NATO membership and tougher sanctions in Ukraine peace deal",
-      "publisher": "news.az",
-      "url": "https://news.az/news/zelenskyy-calls-for-nato-membership-and-tougher-sanctions-in-ukraine-peace-deal",
-      "time": "2026-11-24T14:45:00.000Z",
-      "timeBasis": "first seen by GDELT"
-     },
-     {
       "headline": "EU envoy backs India's diplomatic efforts for Ukraine truce, extends solidarity to safeguard energy security",
       "publisher": "aninews.in",
       "url": "https://aninews.in/news/world/asia/eu-envoy-backs-indias-diplomatic-efforts-for-ukraine-truce-extends-solidarity-to-safeguard-energy-security20261127140546/",
@@ -1725,9 +1718,16 @@
       "url": "https://www.straitstimes.com/world/europe/mural-appears-near-dutch-embassy-in-moscow-depicting-missile-supplies-for-ukraine",
       "time": "2026-11-26T14:15:00.000Z",
       "timeBasis": "first seen by GDELT"
+     },
+     {
+      "headline": "Trump Urges Putin To End Military Aggression Across Europe, Says Russia-Ukraine Peace Deal 'Strong Possibility'",
+      "publisher": "freepressjournal.in",
+      "url": "https://www.freepressjournal.in/world/trump-urges-putin-to-end-military-aggression-across-europe-says-russia-ukraine-peace-deal-strong-possibility",
+      "time": "2026-11-26T16:06:00.000Z",
+      "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T19:23:51.023Z"
    }
   },
   "TWN": {
@@ -1801,7 +1801,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "contextAsOf": "2026-11-27T19:23:51.023Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -2013,7 +2013,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T19:23:51.023Z"
    }
   }
  }
