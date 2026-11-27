@@ -14,3 +14,6 @@ Global Risk Monitor is an independent International Relations and data-monitorin
 10. **No defensible diplomatic risk dataset.** The Diplomatic category stays "Insufficient data" for every country. Headlines never change a risk level.
 11. **Taiwan.** Treated neutrally; UCDP and World Bank coverage differs for Taiwan and missing data is never shown as low risk. The cross-strait situation is not captured by an armed-conflict dataset.
 12. **Third-party scripts.** The globe library loads from the jsDelivr CDN at a floating major version without a Subresource Integrity hash. A pinned version and verified hash have not yet been established (see LICENSING-AND-ATTRIBUTION.md).
+
+## Publisher headlines in Git history (Stage 10.2)
+Each scheduled run commits the cache files, so earlier headline copies remain in the repository history, forks and clones. The exclusion list cleans current files only. Options for limiting accumulation are assessed (read-only, nothing applied) in the Stage 10.2 report; any change needs separate approval.

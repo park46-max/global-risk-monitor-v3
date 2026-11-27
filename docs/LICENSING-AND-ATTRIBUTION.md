@@ -15,12 +15,33 @@ Checked 2026-11-28 against the pages named below, through search results and pag
 | jsDelivr CDN | Terms: free for personal and commercial use, no bandwidth or request limits; SRI should be used only with exact versions. | VERIFIED | Footer (privacy note) |
 | Publisher RSS | All publishers disabled, `termsChecked: null`. No publisher RSS items are fetched or shown. | VERIFIED (current files) | n/a |
 
-## Publisher headlines obtained through GDELT: UNRESOLVED
+## Publisher headlines: what is and is not established (Stage 10.2)
 
-- GDELT's terms cover GDELT's own datasets. They are silent on the copyright or terms of the publishers' content, so they **do not by themselves grant any right** to store or show publisher headlines.
-- The project stores each item's headline, publisher, URL and timestamps in `news-gdelt.json` (public, in the repository) and shows the headline, publisher, date and a link to the original page. It does not copy article text. Headlines are credited to their publishers and link out.
-- Whether storing and showing headlines this way is permitted depends on each publisher's terms and on the law where the site operator and readers are. This was **not** established. No publisher's terms were reviewed, and this is not legal advice.
-- This is a release decision for the project owner. Options (none applied): accept and document the risk with a takedown contact; show only publisher, time and link; or seek legal advice.
+**Status: UNRESOLVED, managed as a risk decision.** The owner has accepted that the right to reproduce publisher headlines has not been conclusively established and that GDELT's dataset licence does not automatically grant rights to third-party content. Keeping short headlines is a risk-management decision. It is **not** a claim of legal permission, and this is not legal advice.
+
+### Five things that must not be confused
+| Topic | What is true |
+|---|---|
+| Direct publisher RSS | Disabled for every publisher (`termsChecked: null`). No publisher feed is read. Enabling any of them needs a separate terms review. |
+| Headlines indexed through GDELT | The project downloads GDELT's public files / API results and keeps each item's headline, publisher name, date and link. No article text or images. |
+| GDELT dataset licence | Covers GDELT's own datasets (citation and link required). It is silent on the copyright or terms of the publishers' content, so it does not by itself license publisher headlines. |
+| Third-party headline rights | Not established. Protection of headlines varies by country (a short headline may be unprotected in some places and protected in others), and publisher terms may be stricter. Not reviewed for unlisted publishers. |
+| Publisher exclusions | A small list (`data/publisher-exclusions.js`) removes chosen publishers. An entry means "excluded". **No entry, and no absence of an entry, means approved or licensed.** |
+
+### Current exclusion list
+- **Al Jazeera** (aljazeera.com, aljazeera.net, aje.io, ajplus.net): excluded after the earlier permissions review. The three extra domains are believed, not verified.
+- **DW** (dw.com, dw.de): excluded as a precaution because DW's terms could not be retrieved or read. The owner should review DW's terms before ever removing this entry.
+
+### What the exclusion does
+Matching is by link address (including addresses hidden in link parameters), publisher name or domain, RSS feed id, and a headline credit such as "| Al Jazeera". It is applied before anything is written to `news.json`, `news-gdelt.json`, `news-rss.json`, `briefs.json` and `risk.json` (including carried-over and fallback copies), as a last-line check that stops the write, and again when the page displays cached data (so old caches are hidden at once). If the list cannot be loaded, scripts keep the old files and the page hides headlines. Ranking, keywords, country relevance and risk methodology are unchanged.
+
+**Limits.** A listed publisher's story republished on an unlisted domain with no credit in the headline cannot be detected. Unlisted publishers are not checked. Cached files are not meant as a news dataset or API: they exist to run the page, carry no promise of format or stability and are not offered for reuse.
+
+### Public caches and Git history
+Every scheduled run commits the cache files, so earlier versions stay in the repository's history and in any fork or clone. Excluding a publisher cleans the current files only. Removing a publisher from history needs a separate, deliberate history rewrite (not done; see docs/KNOWN-LIMITATIONS.md and the README removal procedure).
+
+### Notice and removal requests
+The page footer says headlines come from third-party publishers, that GDELT indexes the reports, that no article text or images are reproduced, and that publishers may ask for removal through a GitHub Issues link. Attribution, non-commercial operation and a removal route do not by themselves give permission, and the page says so.
 
 ## Technical dependency notes
 
