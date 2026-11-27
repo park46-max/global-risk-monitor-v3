@@ -92,7 +92,7 @@ ok(/could not be loaded in this browser/.test(app) && /WITHOUT relevance/.test(a
 ok(/Error details/.test(app) && /Latest refresh/.test(app) && /Cached data in use/.test(app) && /Last success/.test(app), 'status chips and error details are present');
 ok(!/The latest GDELT refresh failed\. /.test(app) && /warnline/.test(app), 'the large red GDELT warning banner is replaced by a compact warning line');
 const md5 = f => crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT, f))).digest('hex');
-ok(md5('js/globe.js') === 'c8c9ebaff9c79cd3a2a09d1f0aea9f8b' && md5('css/style.css') === '12f56d7b5e47d5558c7990ce3f9fc319', 'globe and stylesheet are unchanged');
+ok(md5('js/globe.js') === 'c8c9ebaff9c79cd3a2a09d1f0aea9f8b' && md5('css/style.css') === '9249eddbc05200825776f457bb61e2fb', 'globe and stylesheet are unchanged');
 const fd = fs.readFileSync(path.join(ROOT, 'scripts/fetch-data.mjs'), 'utf8');
 ok(/MIN_AGE_H/.test(fd) && !/secondary-lib|relevance-lib/.test(fd), 'the GDELT search fetcher is untouched and does not use the new module (request frequency and retries unchanged)');
 

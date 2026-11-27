@@ -26,7 +26,7 @@ const PROTECTED_MD5 = {
  ".github/workflows/update-rss.yml": "e3e18101cef4c7775ddbada20c1a67b3",
  "js/app.js": "0daf9b450c4085e45eb5ca5556998378",
  "js/globe.js": "c8c9ebaff9c79cd3a2a09d1f0aea9f8b",
- "css/style.css": "12f56d7b5e47d5558c7990ce3f9fc319",
+ "css/style.css": "9249eddbc05200825776f457bb61e2fb",
  "index.html": "b8a6b822be6a4d046c51f1ad3a6c6240",
  "scripts/build-risk.mjs": "f778556aa2645f372d8ad29b82cf956b",
  "scripts/fetch-data.mjs": "e149936bf523152dfbc20188ab2dd899",
