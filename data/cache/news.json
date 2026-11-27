@@ -3,16 +3,16 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-27T01:38:30.654Z",
-  "lastSuccessAt": "2026-11-27T01:40:11.602Z",
+  "checkedAt": "2026-11-27T07:38:55.639Z",
+  "lastSuccessAt": "2026-11-27T07:41:45.751Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-26T19:20:09.326Z",
-      "checkedAt": "2026-11-27T01:43:07.918Z",
+      "checkedAt": "2026-11-27T07:44:45.085Z",
       "articles": [
         {
           "title": "Make Amazon Pay Day 2026 : Amazon workers and supporters to strike and protest in over 20 countries as union wins first North American collective agreement",
@@ -178,11 +178,11 @@
     },
     "CHN": {
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
-      "status": "ok",
-      "attempted": true,
-      "error": null,
+      "status": "error",
+      "attempted": false,
+      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-27T01:40:11.602Z",
-      "checkedAt": "2026-11-27T01:40:11.602Z",
+      "checkedAt": "2026-11-27T07:44:45.085Z",
       "articles": [
         {
           "title": "Rare earth beneath our palms : Opportunity or opportunism ?",
@@ -350,9 +350,9 @@
       "query": "(Russia OR Moscow OR Kremlin OR \"Russian government\" OR \"Russian military\")",
       "status": "error",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-26T19:19:12.555Z",
-      "checkedAt": "2026-11-27T01:43:07.918Z",
+      "checkedAt": "2026-11-27T07:43:17.458Z",
       "articles": [
         {
           "title": "Veruschka , one of world first supermodels , dies at 87",
@@ -518,171 +518,171 @@
     },
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-26T19:18:48.608Z",
-      "checkedAt": "2026-11-27T01:41:34.905Z",
+      "error": null,
+      "fetchedAt": "2026-11-27T07:41:45.751Z",
+      "checkedAt": "2026-11-27T07:41:45.751Z",
       "articles": [
         {
-          "title": "Russia accuses Ukraine of trying to widen conflict zone",
-          "url": "https://www.northerndailyleader.com.au/story/9399142/russia-accuses-ukraine-of-trying-to-widen-conflict-zone/",
-          "domain": "northerndailyleader.com.au",
-          "seendate": "20261126T144500Z",
+          "title": "French politician who stood up to Bush over the invasion of Iraq is back to stop Le Pen",
+          "url": "https://www.newindianexpress.com/world/2026/Nov/27/french-politician-who-stood-up-to-bush-over-the-invasion-of-iraq-is-back-to-stop-le-pen",
+          "domain": "newindianexpress.com",
+          "seendate": "20261127T063000Z",
           "language": "English",
-          "sourcecountry": "Australia"
+          "sourcecountry": "India"
         },
         {
-          "title": "Türkiye warns against spillover of Russia - Ukraine war into Mediterranean",
-          "url": "https://www.dailysabah.com/politics/turkiye-warns-against-spillover-of-russia-ukraine-war-into-mediterranean/news",
-          "domain": "dailysabah.com",
-          "seendate": "20261126T144500Z",
-          "language": "English",
-          "sourcecountry": "Turkey"
-        },
-        {
-          "title": "Gap in employment rate between immigrants and Danes lower than ever",
-          "url": "https://www.thelocal.dk/20261126/gap-in-employment-between-non-western-immigrants-and-danes-lower-than-ever",
-          "domain": "thelocal.dk",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "Denmark"
-        },
-        {
-          "title": "IIHF to appeal CAS ruling on Russia to Swiss Federal Tribunal",
-          "url": "https://cyprus-mail.com/2026/11/26/iihf-to-appeal-cas-ruling-on-russia-to-swiss-federal-tribunal",
-          "domain": "cyprus-mail.com",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "Cyprus"
-        },
-        {
-          "title": "Ukraine says it has intercepted a Russian jet - powered drone with a laser for the first time",
-          "url": "https://www.cbsnews.com/news/russia-ukraine-war-laser-interception-russian-jet-powered-geran-drone/",
-          "domain": "cbsnews.com",
-          "seendate": "20261126T124500Z",
+          "title": "Zelenskyy warns of imminent major Russian attack on Ukraine power grid",
+          "url": "https://www.decaturdaily.com/news/other_news/international/zelenskyy-warns-of-imminent-major-russian-attack-on-ukraines-power-grid/article_90c39308-2f3e-4d55-ac94-a94513ecad80.html",
+          "domain": "decaturdaily.com",
+          "seendate": "20261127T063000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "A Norwegian airline nears bankruptcy , cancels all flights",
-          "url": "https://cphpost.dk/2026-11-26/news/round-up/a-norwegian-airline-nears-bankruptcy-cancels-all-flights/",
-          "domain": "cphpost.dk",
-          "seendate": "20261126T124500Z",
+          "title": "Ukraine war , Melania short - term ceasefire , Iran nukes , Greenland : Trump details Mar - a - Lago talks with NATO chief",
+          "url": "https://economictimes.indiatimes.com/news/international/world-news/ukraine-war-melanias-short-term-ceasefire-iran-nukes-greenland-trump-details-mar-a-lago-talks-with-nato-chief/articleshow/136208549.cms",
+          "domain": "economictimes.indiatimes.com",
+          "seendate": "20261127T063000Z",
           "language": "English",
-          "sourcecountry": "Denmark"
+          "sourcecountry": "India"
         },
         {
-          "title": "OPINION : Share Thanksgiving with the rest of the community by donating",
-          "url": "https://www.daytondailynews.com/local/opinion/opinion-share-thanksgiving-with-the-rest-of-the-community-by-donating/article_c3cab5b7-ec52-5479-831c-23279e888fa6.html",
-          "domain": "daytondailynews.com",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Lukoil global retreat driven by politics , says co - founder",
-          "url": "https://www.freemalaysiatoday.com/category/business/2026/11/26/lukoil-s-global-retreat-driven-by-politics-says-co-founder",
-          "domain": "freemalaysiatoday.com",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "Malaysia"
-        },
-        {
-          "title": "Shock in Berlin : Germany is running out of money because they are sending it to Ukraine",
-          "url": "https://www.bankingnews.gr/diethni/articles/913403/shock-in-berlin-germany-is-running-out-of-money-because-they-are-sending-it-to-ukraine",
-          "domain": "bankingnews.gr",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "Greece"
-        },
-        {
-          "title": "Ukraine Hits Key Russian Air Base , Damaging Multiple Aircraft - Jowhar News Leader",
-          "url": "https://jowhar.com/ukraine-hits-key-russian-air-base-damaging-multiple-aircraft/",
-          "domain": "jowhar.com",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "Somalia"
-        },
-        {
-          "title": "Live - Саммит ЕС в Брюсселе : спор о бюджете и кредите Украине",
-          "url": "https://ru.euronews.com/2026/11/26/eu-summit-brussels-ukraine-and-budget-talks",
-          "domain": "ru.euronews.com",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Copenhagen Nørrebro Station area set for major renovation",
-          "url": "https://cphpost.dk/2026-11-26/life-in-denmark/copenhagens-norrebro-station-area-set-for-major-renovation/",
-          "domain": "cphpost.dk",
-          "seendate": "20261126T124500Z",
-          "language": "English",
-          "sourcecountry": "Denmark"
-        },
-        {
-          "title": "US - led consortium agrees to acquire assets from Russian oil company Lukoil",
-          "url": "https://www.thepeterboroughexaminer.com/business/us-led-consortium-agrees-to-acquire-assets-from-russian-oil-company-lukoil/article_79676cdc-219d-53d7-bfc3-e2062f97cbaa.html",
-          "domain": "thepeterboroughexaminer.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Canada"
-        },
-        {
-          "title": "UK to invest £9 . 5m in Ukraine windfarm to bolster war - hit energy system",
-          "url": "https://www.aol.co.uk/articles/uk-invest-9-5m-ukraine-050046000.html",
-          "domain": "aol.co.uk",
-          "seendate": "20261126T061500Z",
+          "title": "Lancashire council extends support for Ukrainian families until 2029",
+          "url": "https://www.lancashiretelegraph.co.uk/news/26766486.lancashire-council-extends-support-ukrainian-families-2029/",
+          "domain": "lancashiretelegraph.co.uk",
+          "seendate": "20261127T063000Z",
           "language": "English",
           "sourcecountry": "United Kingdom"
         },
         {
-          "title": "Letters to the Editor : Nov . 25 , 2026",
-          "url": "https://www.kelownadailycourier.ca/opinion/letters_to_editor/article_7b50b9a7-5d08-4470-9994-d7286134fa66.html",
-          "domain": "kelownadailycourier.ca",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Canada"
-        },
-        {
-          "title": "Rassvet , Russia Starlink is expanding rapidly",
-          "url": "https://www.dw.com/en/can-rassvet-russias-starlink-change-the-course-of-the-war-in-ukraine/a-80052579",
-          "domain": "dw.com",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Germany"
-        },
-        {
-          "title": "The looming threat of an authoritarian triumvirate",
-          "url": "https://independentaustralia.net/politics/politics-display/the-looming-threat-of-an-authoritarian-triumvirate,21862",
-          "domain": "independentaustralia.net",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": "Australia"
-        },
-        {
-          "title": "Russia hits Kyiv with ballistic missiles , mayor says",
-          "url": "https://www.newcastleherald.com.au/story/9398450/russia-hits-kyiv-with-ballistic-missiles-mayor-says/",
-          "domain": "newcastleherald.com.au",
-          "seendate": "20261126T061500Z",
-          "language": "English",
-          "sourcecountry": null
-        },
-        {
-          "title": "Jared Kushner Thirsts Over Grandmaster Putin in Bonkers Interview",
-          "url": "https://www.thedailybeast.com/jared-kushner-thirsts-over-grandmaster-putin-in-bonkers-interview",
-          "domain": "thedailybeast.com",
-          "seendate": "20261126T061500Z",
+          "title": "Nuclear Progress Amidst Gloomy Political Outlook",
+          "url": "https://www.ipsnews.net/2026/11/nuclear-progress-amidst-gloomy-political-outlook/",
+          "domain": "ipsnews.net",
+          "seendate": "20261127T063000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "a proxy war between kiev european backers and russia .....",
-          "url": "https://yourdemocracy.net/drupal/node/62002",
-          "domain": "yourdemocracy.net",
-          "seendate": "20261126T061500Z",
+          "title": "What to know about North Korean move to shut down Swiss diplomatic office",
+          "url": "https://www.the-messenger.com/news/world/article_e1e0942e-f005-5e3e-8ea7-02604820bb9f.html",
+          "domain": "the-messenger.com",
+          "seendate": "20261127T063000Z",
           "language": "English",
-          "sourcecountry": null
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "French politician who stood up to Bush over the invasion of Iraq is back to stop Le Pen – Winnipeg Free Press",
+          "url": "https://www.winnipegfreepress.com/world/2026/11/27/french-politician-who-stood-up-to-bush-over-the-invasion-of-iraq-is-back-to-stop-le-pen",
+          "domain": "winnipegfreepress.com",
+          "seendate": "20261127T063000Z",
+          "language": "English",
+          "sourcecountry": "Canada"
+        },
+        {
+          "title": "Ukraine war , Melania short - term ceasefire , Iran nuclear threat , Greenland : Trump details Mar - a - Lago talks with NATO chief",
+          "url": "http://www.russiaherald.com/news/279464182/ukraine-war-melania-short-term-ceasefire-iran-nuclear-threat-greenland-trump-details-mar-a-lago-talks-with-nato-chief",
+          "domain": "russiaherald.com",
+          "seendate": "20261127T063000Z",
+          "language": "English",
+          "sourcecountry": "Russia"
+        },
+        {
+          "title": "Labour defence spending will prepare for war and help preserve peace",
+          "url": "https://www.dailyrecord.co.uk/news/scottish-news/labour-defence-spending-prepare-war-37920613",
+          "domain": "dailyrecord.co.uk",
+          "seendate": "20261127T063000Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
+        },
+        {
+          "title": "Jared Kushner : Putin showed restraint by not using nuclear weapons",
+          "url": "https://cyprusnews.eu/cnn-kosmos/jared-kushner-putin-showed-restraint-by-not-using-nuclear-weapons/",
+          "domain": "cyprusnews.eu",
+          "seendate": "20261127T063000Z",
+          "language": "English",
+          "sourcecountry": "Greece"
+        },
+        {
+          "title": "Not good enough : weak enforcement of sanctions lashed",
+          "url": "https://www.maitlandmercury.com.au/story/9399213/not-good-enough-weak-enforcement-of-sanctions-lashed/",
+          "domain": "maitlandmercury.com.au",
+          "seendate": "20261127T063000Z",
+          "language": "English",
+          "sourcecountry": "Australia"
+        },
+        {
+          "title": "Dow Jones Top Energy Headlines at 12 AM ET : Oil Prices Rise as Traders Weigh Middle East Supply Risks , OPEC+ Meeting | OPEC , ...",
+          "url": "https://www.morningstar.com/news/dow-jones/2026112751/dow-jones-top-energy-headlines-at-12-am-et-oil-prices-rise-as-traders-weigh-middle-east-supply-risks-opec-meeting-opec",
+          "domain": "morningstar.com",
+          "seendate": "20261127T063000Z",
+          "language": "English",
+          "sourcecountry": "China"
+        },
+        {
+          "title": "Trump says he asked Putin to pull back military aggression throughout Europe",
+          "url": "https://www.dailymaverick.co.za/article/2026-11-27-trump-says-he-asked-putin-to-pull-back-military-aggression-throughout-europe/",
+          "domain": "dailymaverick.co.za",
+          "seendate": "20261127T053000Z",
+          "language": "English",
+          "sourcecountry": "South Africa"
+        },
+        {
+          "title": "India - US trade deal that was held back now close to culmination : Piyush Goyal",
+          "url": "https://www.hindustantimes.com/india-news/india-us-trade-deal-that-was-held-back-now-close-to-culmination-piyush-goyal-101795755255538.html",
+          "domain": "hindustantimes.com",
+          "seendate": "20261127T053000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Trump tells US troops victory at hand over Iran",
+          "url": "https://www.mangalorean.com/trump-tells-us-troops-victory-at-hand-over-iran/",
+          "domain": "mangalorean.com",
+          "seendate": "20261127T053000Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "New Zealand Defence Force plans to have kamikaze drones in service by October 2027 under Project Longreach",
+          "url": "https://newswire.co.nz/2026/11/nzdf-kamikaze-drones-project-longreach-new-zealand/",
+          "domain": "newswire.co.nz",
+          "seendate": "20261127T053000Z",
+          "language": "English",
+          "sourcecountry": "New Zealand"
+        },
+        {
+          "title": "Why Europe leaders cant care about slumping support for Ukraine – POLITICO",
+          "url": "https://www.politico.eu/article/why-europes-leaders-cant-care-about-slumping-support-for-ukraine/",
+          "domain": "politico.eu",
+          "seendate": "20261127T053000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "France and Germany want deal by year - end to Le Pen - proof next EU budget , Ukraine",
+          "url": "https://www.dailymaverick.co.za/article/2026-11-27-france-and-germany-want-deal-by-year-end-to-le-pen-proof-next-eu-budget-and/",
+          "domain": "dailymaverick.co.za",
+          "seendate": "20261127T053000Z",
+          "language": "English",
+          "sourcecountry": "South Africa"
+        },
+        {
+          "title": "Trump Post - Midterm Power Play – Sri Lanka Guardian",
+          "url": "https://slguardian.org/trumps-post-midterm-power-play/",
+          "domain": "slguardian.org",
+          "seendate": "20261127T043000Z",
+          "language": "English",
+          "sourcecountry": "Sri Lanka"
+        },
+        {
+          "title": "Ukraine war briefing : Kyiv launched more long - range strikes in 2026 than rest of war combined , data shows",
+          "url": "https://www.aol.co.uk/articles/ukraine-war-briefing-kyiv-launched-030532000.html",
+          "domain": "aol.co.uk",
+          "seendate": "20261127T043000Z",
+          "language": "English",
+          "sourcecountry": "United Kingdom"
         }
       ]
     },
@@ -690,9 +690,9 @@
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
       "status": "error",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-27T01:39:48.903Z",
+      "checkedAt": "2026-11-27T07:40:16.673Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
