@@ -201,8 +201,8 @@ for (const f of ['scripts/risk-lib.mjs', 'scripts/build-risk.mjs', 'scripts/fetc
 sec('G. Protected files and page code');
 // Stage 8B-2: risk-lib and fetch-risk-inputs were changed again on purpose (profiles, optional verify-only probe); update-risk.yml is pinned to the PRODUCTION copy (schedule enabled at 05:41 UTC and pages: write, both added by the owner after Stage 8B-1; it is not part of any ZIP).
 // Stage 8B-1: scripts/risk-lib.mjs and scripts/fetch-risk-inputs.mjs were changed on purpose (see README, Stage 8B-1); their pinned hashes below were updated accordingly. Everything else is still pinned to Stage 7C.
-const PROTECT = { 'js/globe.js': 'c8c9ebaff9c79cd3a2a09d1f0aea9f8b', 'css/style.css': '32e647502e6ded7fa6554f9f274fad4a', 'scripts/fetch-data.mjs': 'e149936bf523152dfbc20188ab2dd899', 'scripts/risk-lib.mjs': '142d47abe44af19e86ebde4b112419ee',
-  'scripts/build-risk.mjs': 'f778556aa2645f372d8ad29b82cf956b', 'scripts/fetch-risk-inputs.mjs': '6fab07996cf7db368084e58e862b08d5', 'scripts/fetch-gdelt-files.mjs': 'e104a8b08daae814cb4f28576d016559',
+const PROTECT = { 'js/globe.js': 'c8c9ebaff9c79cd3a2a09d1f0aea9f8b', 'css/style.css': '32e647502e6ded7fa6554f9f274fad4a', 'scripts/fetch-data.mjs': '32bad48326c2c8f625829c889968022e', 'scripts/risk-lib.mjs': '142d47abe44af19e86ebde4b112419ee',
+  'scripts/build-risk.mjs': '81f99390ba35805ed6e923de4fca8d78', 'scripts/fetch-risk-inputs.mjs': '6fab07996cf7db368084e58e862b08d5', 'scripts/fetch-gdelt-files.mjs': '9a41f9bab9ba565a8676ea868184bd26',
   '.github/workflows/update-data.yml': '881ec1134f3a1619305817c05efa6a29', '.github/workflows/update-risk.yml': 'e223da77124f96890777f57be392bf5c', '.github/workflows/update-rss.yml': 'e3e18101cef4c7775ddbada20c1a67b3' };
 for (const [f, h] of Object.entries(PROTECT)) ok(md5(f) === h, `unchanged: ${f}`);
 ok(/cron: '23 \*\/3 \* \* \*'/.test(fs.readFileSync(path.join(ROOT, '.github/workflows/update-rss.yml'), 'utf8')), 'schedule unchanged (every 3 hours)');

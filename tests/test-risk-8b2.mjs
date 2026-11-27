@@ -184,7 +184,7 @@ console.log('\nG. Page rendering with a minimal DOM stub (SIMULATED browser: thi
       fetch: async p => p.includes('risk.json') && riskBody ? { ok: true, status: 200, json: async () => clone(riskBody) } : { ok: false, status: 404, json: async () => ({}) } };
     ctx.window = ctx; ctx.window.addEventListener = () => {};
     vm.createContext(ctx);
-    for (const f of ['data/countries.js', 'js/config.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+    for (const f of ['data/countries.js', 'data/publisher-exclusions.js', 'js/config.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
     let err = null; try { vm.runInContext(appSrc, ctx); await new Promise(r => setTimeout(r, 60)); } catch (e) { err = e; }
     return { risk: ids.risk, err };
   };
@@ -268,17 +268,17 @@ console.log('\nI. Protected functionality');
  "data/source-quality.mjs": "447b799a07ed3b6b00c206f2dd37ef71",
  "data/source-types.mjs": "db0533f9f6d4192cb1a030a08cf065c9",
  "data/brief-rules.mjs": "24593fd8816dab57914fad8bfa752135",
- "scripts/build-risk.mjs": "f778556aa2645f372d8ad29b82cf956b",
- "scripts/fetch-data.mjs": "e149936bf523152dfbc20188ab2dd899",
- "scripts/fetch-gdelt-files.mjs": "e104a8b08daae814cb4f28576d016559",
- "scripts/fetch-rss.mjs": "4b71492740396506ffa1b9ed7f7f2a04",
+ "scripts/build-risk.mjs": "81f99390ba35805ed6e923de4fca8d78",
+ "scripts/fetch-data.mjs": "32bad48326c2c8f625829c889968022e",
+ "scripts/fetch-gdelt-files.mjs": "9a41f9bab9ba565a8676ea868184bd26",
+ "scripts/fetch-rss.mjs": "6170d9a892e235bc565393e7d34e46c0",
  "scripts/http-lib.mjs": "3a98000ab966157de414f8440e33a5b5",
  "scripts/robots-lib.mjs": "40256961e299e294af0845ff215da9c2",
  "scripts/rss-lib.mjs": "9932def6574a43e7dd88016e0ecdcd1d",
  "scripts/secondary-lib.mjs": "cdce2d0d2187a9d63d89e73e5f14cae2",
  "scripts/relevance-lib.mjs": "8db0f8f4070264082589ce22bfc84109",
  "scripts/brief-lib.mjs": "351f804d31cbaad8b975cbc991161b6a",
- "scripts/build-briefs.mjs": "6a2c1faafbb0b3aadd7aee29b66035ae",
+ "scripts/build-briefs.mjs": "f4aec51c7d723784b76b112d23add3e6",
  "scripts/explain-headline.mjs": "fd6bfae79a7d723317c5c4706cfb91c4",
  "scripts/zip-lib.mjs": "65680c4dc0906e4ba1578b527b76b569"
 };

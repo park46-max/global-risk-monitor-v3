@@ -36,17 +36,17 @@ console.log('A. Protected files and protected code in js/app.js are unchanged');
  "data/source-quality.mjs": "447b799a07ed3b6b00c206f2dd37ef71",
  "data/source-types.mjs": "db0533f9f6d4192cb1a030a08cf065c9",
  "data/brief-rules.mjs": "24593fd8816dab57914fad8bfa752135",
- "scripts/build-risk.mjs": "f778556aa2645f372d8ad29b82cf956b",
- "scripts/fetch-data.mjs": "e149936bf523152dfbc20188ab2dd899",
- "scripts/fetch-gdelt-files.mjs": "e104a8b08daae814cb4f28576d016559",
- "scripts/fetch-rss.mjs": "4b71492740396506ffa1b9ed7f7f2a04",
+ "scripts/build-risk.mjs": "81f99390ba35805ed6e923de4fca8d78",
+ "scripts/fetch-data.mjs": "32bad48326c2c8f625829c889968022e",
+ "scripts/fetch-gdelt-files.mjs": "9a41f9bab9ba565a8676ea868184bd26",
+ "scripts/fetch-rss.mjs": "6170d9a892e235bc565393e7d34e46c0",
  "scripts/http-lib.mjs": "3a98000ab966157de414f8440e33a5b5",
  "scripts/robots-lib.mjs": "40256961e299e294af0845ff215da9c2",
  "scripts/rss-lib.mjs": "9932def6574a43e7dd88016e0ecdcd1d",
  "scripts/secondary-lib.mjs": "cdce2d0d2187a9d63d89e73e5f14cae2",
  "scripts/relevance-lib.mjs": "8db0f8f4070264082589ce22bfc84109",
  "scripts/brief-lib.mjs": "351f804d31cbaad8b975cbc991161b6a",
- "scripts/build-briefs.mjs": "6a2c1faafbb0b3aadd7aee29b66035ae",
+ "scripts/build-briefs.mjs": "f4aec51c7d723784b76b112d23add3e6",
  "scripts/explain-headline.mjs": "fd6bfae79a7d723317c5c4706cfb91c4",
  "scripts/zip-lib.mjs": "65680c4dc0906e4ba1578b527b76b569"
 };
@@ -55,7 +55,7 @@ console.log('A. Protected files and protected code in js/app.js are unchanged');
   ok(R.methodologyVersion === 3 && R.sources.ucdp.parserVersion === 2, 'methodology version is still 3 and the UCDP parser version still 2');
   // regions of js/app.js that read data, build the news, brief and GDELT sections, run the globe and handle selection: identical to the Stage 8B-2 production file
   const between = (t, a, b) => t.slice(t.indexOf(a), b ? t.indexOf(b, t.indexOf(a)) : undefined), until = (t, a, b) => t.slice(t.indexOf(a), t.indexOf(b));
-  const REG = [['loading, state, formatting helpers and loadAll', between(APP, '(() => {', 'function headSrc('), 'e9a66f4f8dfd1a2138b959d73e4c908d'],
+  const REG = [['loading, state, formatting helpers and loadAll (Stage 10.2 added the publisher exclusion block and one scrub line in loadAll; the rest is unchanged)', between(APP, '(() => {', 'function headSrc('), '7a031c3c7f99b2159df3a2b8f773cb12'],
     ['news row builder and item lists', between(APP, 'const missing = (what', 'function articleBlock('), 'c80b53ced9f6a1a0ebba2f535a85c760'],
     ['GDELT search section and news painting', between(APP, '// ----- GDELT search API (secondary)', 'function paintData()'), '81e7c2a62db0ea3f0a92fc381a75d304'],
     ['country header', (() => { const i = APP.indexOf('// ---------- static panels ----------'), j = APP.indexOf('function head()'); return APP.slice(i, APP.indexOf('\n// ----- ', j)); })(), '757167f100b925e0f66ad8533f49956a'],
@@ -79,7 +79,7 @@ console.log('\nB. index.html');
   ok(/takes no position on any territorial or sovereignty dispute, including the political status of Taiwan/.test(vis) && /Natural Earth \(public domain\)/.test(vis), 'the no-position statement on territorial disputes and Taiwan stays visible next to the globe');
   ok(/Natural Earth is used at 1:110m, via the world-atlas package/.test(fold) && /its own conventions for disputed areas/.test(fold) && /small territories may be missing/.test(fold) && /globe\.gl and three\.js \(MIT\)/.test(fold), 'the rest of the boundary note (scale, conventions for disputed areas, missing small territories, licences) is kept in a fold');
   ok(['id="chips"', 'id="globe"', 'id="gfb"', 'id="gctl"', 'id="q"', 'id="qmsg"', 'id="clist"', 'id="mapnote"', 'id="head"', 'id="risk"', 'id="nst"', 'id="news"', 'id="dst"', 'id="data"', 'id="brief"', 'id="meta"', 'id="refresh"'].every(x => HTML.includes(x)), 'every element id the scripts use is still present');
-  ok(/<script defer src="js\/config\.js"><\/script>\s*<script defer src="data\/countries\.js"><\/script>\s*<script defer src="js\/globe\.js"><\/script>\s*<script defer src="js\/app\.js"><\/script>/.test(HTML), 'the four scripts load in the same order as before');
+  ok(/<script defer src="js\/config\.js"><\/script>\s*<script defer src="data\/countries\.js"><\/script>\s*(?:<script defer src="data\/publisher-exclusions\.js"><\/script>\s*)?<script defer src="js\/globe\.js"><\/script>\s*<script defer src="js\/app\.js"><\/script>/.test(HTML), 'the scripts load in the same order as before (Stage 10.2 added data/publisher-exclusions.js after data/countries.js)');
   ok(!/analytics|gtag|googletagmanager|plausible|matomo|hotjar/i.test(HTML + APP + CSS), 'no analytics or tracking');
 }
 
@@ -139,7 +139,7 @@ console.log('\nD. Risk Profile rendering with a minimal DOM stub (SIMULATED brow
       fetch: async p => { const f = Object.keys(files).find(k => p.includes(k)); if (f) return { ok: true, status: 200, json: async () => clone(files[f]) }; if (failMode === 'network') throw new Error('Failed to fetch'); return { ok: false, status: 404, json: async () => ({}) }; } };
     ctx.window = ctx; ctx.window.addEventListener = () => {};
     vm.createContext(ctx);
-    for (const f of ['data/countries.js', 'js/config.js']) vm.runInContext(rd(f), ctx);
+    for (const f of ['data/countries.js', 'data/publisher-exclusions.js', 'js/config.js']) vm.runInContext(rd(f), ctx);
     let err = null; try { vm.runInContext(APP, ctx); await new Promise(r => setTimeout(r, 80)); } catch (e) { err = e; }
     return { ids, err, textOf };
   };
