@@ -57,6 +57,20 @@ async function probeIndicator(ind) {
   }
   return probed.get(ind);
 }
+// OPTIONAL PROBE (Stage 8B-2), --verify only. Asks the World Bank metadata API which indicators exist next to the revised WGI political stability indicator, to find out
+// whether uncertainty series (standard error, interval bounds) are published there. READ-ONLY and INDEPENDENT: nothing is written, nothing it prints feeds the risk cards, a failure is
+// ignored and never changes the exit code. Any series it names must still be checked (reference years, units, documentation) before it could be used in a later stage.
+async function probeWgiUncertainty() {
+  say('  OPTIONAL PROBE (verify only; read-only; nothing is stored or used): are uncertainty series listed for the revised WGI political stability indicator?');
+  try {
+    const meta = await wbJson(`${WB}/indicator/${R.sources.wgi.code}?format=json`), r = Array.isArray(meta) && Array.isArray(meta[1]) && meta[1][0], sid = r && r.source && r.source.id;
+    if (!sid) { say('    the metadata reply names no source, so the listing was not requested.'); return; }
+    const j = await wbJson(`${WB}/indicator?source=${encodeURIComponent(sid)}&format=json&per_page=1000`), rows = Array.isArray(j) && Array.isArray(j[1]) ? j[1] : [];
+    const found = rows.filter(x => x && /^GOV_WGI_PV\b/.test(String(x.id || ''))).map(x => `${x.id} = "${short(x.name)}"`);
+    say(`    source ${sid}: ${rows.length} indicators listed, ${found.length} start with GOV_WGI_PV.`); found.forEach(f => say('    ' + f));
+    say(found.some(f => /STD|ERR|\bSE\b|LOWER|UPPER|CONF|INTERVAL|MARGIN/i.test(f)) ? '    Possible uncertainty series are named above. They are NOT used by the cards; years, units and documentation must be checked before any could be added.' : '    No uncertainty series was identified in this listing. The cards state that the interval was not retrieved.');
+  } catch (e) { say('    probe failed (ignored, it does not affect the result): ' + short(e.message)); }
+}
 async function wbIndicator(code, ind) {
   const j = await wbJson(`${WB}/country/${code}/indicator/${ind}?format=json&mrnev=1`), m = wbErr(j);
   if (m) {
@@ -130,6 +144,7 @@ const results = [];
 say(VERIFY ? 'VERIFY MODE: every source is requested once; nothing is written.\n' : 'Fetching risk inputs (recent data is not requested again).\n');
 const ucdp = await runUcdp(results);
 say('World Bank WGI (political stability), indicator ' + R.sources.wgi.code + ':'); if (VERIFY) say('  ' + (await probeIndicator(R.sources.wgi.code)).trim()); const wgi = await runWb('wgi', 'wgi', R.sources.wgi.code, 'WGI', results);
+if (VERIFY) await probeWgiUncertainty();
 say('World Bank unemployment:'); const unemployment = await runWb('unemployment', 'unemployment', R.sources.unemployment.code, 'Unemployment', results);
 const asked = results.filter(r => r.state !== 'skipped'), failed = results.filter(r => r.state === 'failed'), okN = results.filter(r => r.state === 'ok').length;
 const lastSuccessAt = [ucdp.fetchedAt, ...Object.values(wgi).map(x => x.fetchedAt), ...Object.values(unemployment).map(x => x.fetchedAt)].filter(Boolean).sort().pop() || null;

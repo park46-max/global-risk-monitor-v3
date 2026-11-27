@@ -180,8 +180,92 @@ export function classifyEconomic(id, inputs, R, now) {
 export function classifyDiplomatic(id, briefs, R) {
   const name = R.countries[id].name, ctx = contextFor(id, briefs, ['Diplomacy', 'Sanctions and trade'], R);
   return mk({ category: 'diplomatic', status: 'insufficient', reason: 'method', context: ctx.items, contextAsOf: ctx.asOf,
-    summary: `No level for ${name}: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.`,
+    summary: `No level for ${name}: this project has not identified a suitable, verified and legally reusable dataset of diplomatic relations. Counting articles, sanctions headlines or keywords is not used: it does not measure diplomatic risk.`,
     limitations: ['Headlines below are reports by publishers, shown only as context. They are not verified here and no level is derived from them.', 'A manually sourced assessment can be added in data/countries.js and is shown there instead.'] });
+}
+
+
+// ---------- PROFILES (Stage 8B-2) ----------
+// Additive descriptive objects attached to the security and economic cards as "profile". They only restate cached source values (full precision kept) with
+// their reference years and availability. They never change level, rule, summary, facts or limitations of the cards above (the legacy classification).
+const ROLE_LABEL = { both: 'location and primary party', primary: 'primary party', location: 'location', supporting: 'supporting party', merged: 'location or primary party (this cache does not separate the two roles)' };
+const INTENSITY_LABEL = { 2: 'war', 1: 'minor' };
+const pct2 = v => fmt2(v) + '%';
+export function securityProfile(id, inputs, R, now) {
+  const S = R.security, U = R.sources.ucdp, W = R.sources.wgi, name = R.countries[id].name, nowYear = new Date(now).getUTCFullYear();
+  const u = inputs && inputs.ucdp, w = inputs && inputs.wgi && inputs.wgi[id];
+  const uOk = u && (u.status === 'ok' || u.status === 'error') && fin(u.latestYear) && u.conflicts && Array.isArray(u.conflicts[id]);
+  const srcU = src(U), srcW = src(W);
+  // ---- A. armed conflict involvement ----
+  let ac;
+  if (!uOk) ac = { status: 'unavailable', source: srcU, summary: 'The UCDP/PRIO file is not in the cache, so nothing is shown. This is not a finding of low risk.', notes: { visible: [R.notes.ucdpScope], more: [] } };
+  else if (u.latestYear < nowYear - U.maxDatasetAgeYears) ac = { status: 'outdated', source: srcU, referenceYear: u.latestYear, datasetVersion: u.version || null, summary: `The newest year in the cached UCDP/PRIO file is ${u.latestYear}, too old to describe the current situation, so nothing is shown.`, notes: { visible: [R.notes.ucdpScope], more: [] } };
+  else {
+    const yr = u.latestYear, ver = u.version ? 'v' + u.version : 'the cached version', seen = new Map();
+    // defensive: one record per conflict id (a cache written by summariseUcdp already has this; a hand-edited or damaged cache must not double count)
+    for (const c of u.conflicts[id]) { const k = String(c.conflictId), e = seen.get(k); if (!e) seen.set(k, { ...c, roles: c.roles && typeof c.roles === 'object' ? { ...c.roles } : c.roles }); else { if (hasRoles(e) && hasRoles(c)) for (const r of ['location', 'primary', 'supporting']) e.roles[r] = e.roles[r] || c.roles[r]; e.intensity = Math.max(e.intensity, c.intensity); if (c.role !== 'supporting party') e.role = c.role; } }
+    const list = [...seen.values()];
+    const conflicts = [...list].sort((a, b) => (roleBucket(a) === 'supporting') - (roleBucket(b) === 'supporting') || b.intensity - a.intensity || String(a.conflictId).localeCompare(String(b.conflictId), 'en', { numeric: true }))
+      .map(c => { const k = roleBucket(c); return { conflictId: String(c.conflictId), location: c.location, sideA: c.sideA, sideB: c.sideB, intensity: c.intensity, intensityLabel: INTENSITY_LABEL[c.intensity] || null, type: c.type || null, incompatibility: c.incompatibility || null,
+        roles: hasRoles(c) && k !== 'merged' ? { location: c.roles.location, primary: c.roles.primary, supporting: c.roles.supporting } : null, roleKey: k, roleLabel: ROLE_LABEL[k] + (hasRoles(c) && c.roles.supporting && k !== 'supporting' && k !== 'merged' ? ' (also coded as a supporting party in the same conflict)' : '') }; });
+    // exclusive buckets: every conflict is in exactly one, so the counts add up to uniqueConflicts (no double counting)
+    const roleCounts = { locationAndPrimary: 0, primaryOnly: 0, locationOnly: 0, supportingOnly: 0, locationOrPrimaryUnsplit: 0 }, MAP = { both: 'locationAndPrimary', primary: 'primaryOnly', location: 'locationOnly', supporting: 'supportingOnly', merged: 'locationOrPrimaryUnsplit' };
+    for (const c of conflicts) roleCounts[MAP[c.roleKey]]++;
+    const alsoSupporting = conflicts.filter(c => c.roles && c.roles.supporting && c.roleKey !== 'supporting').length;
+    const PART = { locationAndPrimary: 'as location and primary party', primaryOnly: 'as primary party', locationOnly: 'as location', locationOrPrimaryUnsplit: 'as location or primary party (this cache does not separate the two roles)', supportingOnly: 'as supporting party' };
+    const parts = Object.keys(PART).filter(k => roleCounts[k]).map(k => `${roleCounts[k]} ${PART[k]}`);
+    const stale = u.status === 'error' || isOld(u.fetchedAt, now, R), n = conflicts.length;
+    const more = [R.notes.ucdpIntensity, 'In UCDP, "location" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.', 'Each conflict is listed once, however many roles apply to this country. A supporting party is a state that entered the conflict with troops to actively support a primary party; this dashboard does not state which side.',
+      `Annual data: this describes calendar year ${yr}, not events since then.`, 'The UCDP/PRIO armed conflict dataset has no information on tension, crises short of armed conflict, terrorism or unrest.'];
+    if (conflicts.some(c => c.roleKey === 'merged')) more.push('This cache stores one merged role (location or primary party) for some entries; it is not split here. The separate roles are stored after the next successful refresh of the UCDP file.');
+    if (stale) more.push(u.status === 'error' ? `The latest refresh of the UCDP file failed (${u.error || 'no reason recorded'}); the last successfully fetched data (${u.fetchedAt || 'time unknown'}) is shown.` : `The UCDP data was last fetched successfully on ${u.fetchedAt || 'an unknown date'}, more than ${R.staleAfterDays} days ago.`);
+    ac = { status: 'ok', source: srcU, datasetVersion: u.version || null, referenceYear: yr, stale, lastSuccessAt: u.fetchedAt || null, uniqueConflicts: n, roleCounts, roleSummary: parts.join('; '), alsoSupporting, rolesSeparated: !conflicts.some(c => c.roleKey === 'merged'), conflicts,
+      summary: n ? `${n} state-based armed ${n === 1 ? 'conflict' : 'conflicts'} recorded in UCDP/PRIO ${ver} for ${yr}: ${parts.join('; ')}.` : `No state-based armed conflict recorded for ${name} in UCDP/PRIO ${ver} for ${yr}.`,
+      notes: { visible: n ? [R.notes.ucdpScope, 'Intensity describes the whole conflict, not this country\'s own involvement.'] : [R.notes.ucdpScope], more } };
+  }
+  // ---- B. political stability (WGI) ----
+  let ps;
+  const wBase = { source: srcW, indicator: W.code, uncertainty: null, uncertaintyNote: R.notes.wgiUncertainty };
+  const wMore = [W.note, R.notes.conventions];
+  const wOk = w && (w.status === 'ok' || w.status === 'error') && w.indicator === W.code && fin(w.value) && /^\d{4}$/.test(String(w.year));
+  if (!wOk) {
+    const why = w && w.status === 'unsupported' ? `The World Bank does not publish this indicator for ${name} (${w.error || 'no data for this country code'}). Nothing from another country is substituted.` : w ? 'The World Bank returned no value for this country.' : 'The WGI value is not in the cache.';
+    ps = { ...wBase, status: w && w.status === 'unsupported' ? 'unsupported' : 'unavailable', estimate: null, displayEstimate: null, referenceYear: null, summary: why + ' This is not a finding of low risk.', notes: { visible: [], more: wMore } };
+  } else {
+    const old = Number(w.year) < nowYear - S.wgiMaxAgeYears, stale = w.status === 'error' || isOld(w.fetchedAt, now, R), more = [...wMore];
+    if (old) more.push(`The reference year ${w.year} is older than ${S.wgiMaxAgeYears} years.`);
+    if (stale) more.push(`The World Bank WGI value could not be refreshed recently (${w.error || 'older than ' + R.staleAfterDays + ' days'}); the last successfully fetched value is shown.`);
+    ps = { ...wBase, status: old ? 'outdated' : 'ok', estimate: w.value, displayEstimate: fmt2(w.value), referenceYear: String(w.year), stale, sourceUpdated: w.sourceUpdated || null, lastSuccessAt: w.fetchedAt || null,
+      summary: `Estimate ${fmt2(w.value)} for ${w.year}.`, notes: { visible: [...(old ? [`The reference year ${w.year} is older than ${S.wgiMaxAgeYears} years.`] : []), R.notes.wgiScale, R.notes.wgiUncertainty], more } };
+  }
+  return { version: 1, armedConflict: ac, politicalStability: ps, countryNote: R.countries[id].profileNote || null, legacyNote: R.notes.legacy };
+}
+export function macroProfile(id, inputs, R, now, card) {
+  const E = R.economic, name = R.countries[id].name, nowYear = new Date(now).getUTCFullYear();
+  const wbInd = inputs && inputs.indicators && inputs.indicators.countries && inputs.indicators.countries[id], ri = inputs && inputs.riskInputs;
+  const pick = { inflation: wbInd && wbInd.indicators && wbInd.indicators[R.sources.inflation.code], growth: wbInd && wbInd.indicators && wbInd.indicators[R.sources.growth.code], unemployment: ri && ri.unemployment && ri.unemployment[id] };
+  const rows = [], fetched = []; let stale = false;
+  for (const [k, D] of Object.entries(E.dimensions)) {
+    const x = pick[k], S = R.sources[k], row = { key: k, label: D.label, code: S.code, source: src(S), status: null, value: null, displayValue: null, year: null, band: null, note: null };
+    if (!x) { row.status = 'not-in-cache'; row.note = 'Not in the cache.'; }
+    else if (x.status === 'unsupported') { row.status = 'unsupported'; row.note = 'The World Bank API has no data for this country code. Nothing from another country is substituted.'; }
+    else if (!fin(x.value) || !/^\d{4}$/.test(String(x.year))) { row.status = x.status === 'error' ? 'unavailable' : 'no-value'; row.note = x.status === 'error' ? `The request failed (${x.error || 'no reason recorded'}) and no earlier value is cached.` : 'The World Bank has published no value for this country.'; }
+    else {
+      row.value = x.value; row.displayValue = pct2(x.value); row.year = String(x.year);
+      if (Number(x.year) < nowYear - E.maxAgeYears) { row.status = 'outdated'; row.note = `Excluded from the stress flag: the newest value is older than ${E.maxAgeYears} years.`; }
+      else { row.status = 'used'; row.band = LEVEL_FOR(x.value, D.bands).level; const st = x.status === 'error' || isOld(x.fetchedAt, now, R); if (st) { stale = true; row.stale = true; row.note = 'The latest refresh failed or is old; the last successfully fetched value is shown.'; } fetched.push(x.fetchedAt); }
+    }
+    rows.push(row);
+  }
+  const used = rows.filter(r => r.status === 'used'), years = [...new Set(used.map(r => r.year))].sort();
+  const visible = ['Three indicators only. The flag is a project-defined rule, not an assessment of overall economic risk.'];
+  const more = [R.notes.macroFlag, R.notes.economicScope, R.notes.conventions, ...(used.length ? [R.notes.inflationCrisis, 'Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then.'] : [])];
+  if (years.length > 1) more.push('Reference years differ between indicators: ' + used.map(r => `${r.key === 'growth' ? 'GDP growth' : r.key} ${r.year}`).join(', ') + '.');
+  const tw = R.countries[id].economicNote && rows.every(r => r.status === 'no-value' || r.status === 'unsupported');
+  if (tw) more.push(R.countries[id].economicNote);
+  return { version: 1, indicators: rows, usedCount: used.length, minRequired: E.minDimensions, referenceYears: years, stale, lastSuccessAt: latest(fetched),
+    flag: { name: 'Macroeconomic stress flag (project-defined)', status: card.status, level: card.level || null, rule: card.rule || null },
+    notes: { visible, more }, legacyNote: R.notes.legacy };
 }
 
 // ---------- the whole file ----------
@@ -191,9 +275,17 @@ export function buildRisk({ riskInputs, indicators, briefs, now, R }) {
   const ri = validRiskInputs(riskInputs) ? riskInputs : null, ind = validIndicators(indicators) ? indicators : null;
   if (!ri && !ind) throw new Error('neither the risk-input cache nor the indicator cache could be read');
   const inputs = { riskInputs: ri, indicators: ind }, countries = {};
-  for (const id of Object.keys(R.countries)) countries[id] = { name: R.countries[id].name, security: classifySecurity(id, { ucdp: ri && ri.ucdp, wgi: ri && ri.wgi }, R, now, briefs), economic: classifyEconomic(id, inputs, R, now), diplomatic: classifyDiplomatic(id, briefs, R) };
+  for (const id of Object.keys(R.countries)) {
+    const sec = classifySecurity(id, { ucdp: ri && ri.ucdp, wgi: ri && ri.wgi }, R, now, briefs), eco = classifyEconomic(id, inputs, R, now);
+    // Stage 8B-2: the profile objects are ADDED to the unchanged legacy cards (level, rule, summary, facts, limitations stay exactly as in methodology version 2).
+    sec.profile = securityProfile(id, { ucdp: ri && ri.ucdp, wgi: ri && ri.wgi }, R, now); eco.profile = macroProfile(id, inputs, R, now, eco);
+    countries[id] = { name: R.countries[id].name, security: sec, economic: eco, diplomatic: classifyDiplomatic(id, briefs, R) };
+  }
   // A level of Critical means UCDP records a war in this country or involving it as a primary party. The economic card then says plainly that its few indicators do not capture that.
-  for (const c of Object.values(countries)) if (c.security.level === 'Critical' && c.economic.status === 'assessed') c.economic.limitations.push('UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution.');
+  for (const c of Object.values(countries)) if (c.security.level === 'Critical' && c.economic.status === 'assessed') {
+    c.economic.limitations.push('UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution.');
+    c.economic.profile.notes.visible.push('UCDP records a war involving this country as location or primary party; the three indicators may not capture war damage.');
+  }
   return { schema: 1, status: 'ok', method: 'Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.', methodologyVersion: R.methodologyVersion, generatedAt: iso(now), lastSuccessAt: iso(now), checkedAt: iso(now),
     inputs: { riskInputs: ri ? { status: 'ok', checkedAt: ri.checkedAt || null, lastSuccessAt: ri.lastSuccessAt || null } : { status: 'missing' }, indicators: ind ? { status: 'ok', checkedAt: ind.checkedAt || null, lastSuccessAt: ind.lastSuccessAt || null } : { status: 'missing' }, briefs: briefs && briefs.generatedAt ? { generatedAt: briefs.generatedAt } : { status: 'missing' } }, countries };
 }
