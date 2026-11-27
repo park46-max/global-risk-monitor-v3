@@ -28,7 +28,7 @@ function stamp(iso, maxH, label, failed) {   // freshness pill built from the re
 // ---------- state ----------
 let cur = IDS.includes(location.hash.slice(1).toUpperCase()) ? location.hash.slice(1).toUpperCase() : 'USA';
 let GEO = null, globeOn = false, rotSeg = null;
-const store = { news: null, ind: null, rss: null, gk: null, br: null, rk: null };
+const store = { sec: undefined, news: null, ind: null, rss: null, gk: null, br: null, rk: null };
 
 // ---------- cached data (written by the GitHub Action, Stage 2) ----------
 async function loadJson(path) {
@@ -50,7 +50,9 @@ async function loadAll() {
     return [p];
   };
   $('#meta').replaceChildren(...headSrc(store.rss, 'Official feeds', CFG.staleAfterHours.rss), ...headSrc(store.gk, 'GDELT files', CFG.staleAfterHours.gdeltFiles), ...head(n, 'GDELT search', CFG.staleAfterHours.news, c => c.status === 'error'), ...head(d, 'Indicators', CFG.staleAfterHours.indicators, c => c.status === 'error' || c.status === 'partial'));
+  document.querySelectorAll('#meta .pill').forEach(x => { x.style.whiteSpace = 'normal'; });   // long failure texts wrap instead of widening the page on phones
   paintNews(); paintData(); brief(); risk();
+  prepareSecondary().then(paintNews);   // the secondary section is repainted once the shared relevance rules have been applied to its articles
 }
 function headSrc(r, label, h) {   // header pill for a feed-style cache (publisher RSS, GDELT files)
   if (!r.ok) return [pill('bad', label + (r.error === 'file not found' ? ': not enabled yet' : ': unavailable'))];
@@ -71,6 +73,42 @@ const when = a => a.published ? 'Published ' + fmtUTC(a.published) : a.seenByGde
 // ----- feed-style sources: official/publisher RSS (scripts/fetch-rss.mjs) and GDELT open data files (scripts/fetch-gdelt-files.mjs) -----
 // Old cache files list terms as an array; new ones as { names, institutions }.
 const termText = t => !t ? '' : Array.isArray(t) ? t.join(', ') : [...(t.names || []), ...(t.institutions || []).map(x => x + ' (capital/government body)')].join(', ');
+// Shared by the open-data section and the secondary search-API section, so both use exactly the same display rules.
+const OUTLET = { established: 'established outlet', state: 'state-owned or government-run outlet', unassessed: 'not assessed' };
+const matchWhy = m => m.level === 'institution' ? 'Capital or government body named in headline: ' : m.level === 'summary' ? 'Mentioned in feed summary only: ' : 'Country named in headline: ';
+const byDate = (x, y) => (Date.parse(y.published || y.seenByGdelt || y.firstSeenAt) || 0) - (Date.parse(x.published || x.seenByGdelt || x.firstSeenAt) || 0);
+function itemRow(a, extra, policy) {
+  const m = a.matches[cur], kids = [el('b', null, a.publisher || 'Unknown publisher'), (a.via ? 'via ' + a.via + ' · ' : '') + when(a), ...extra];
+  const rowKids = [link(a.url, a.title), el('div', 'nm', kids), el('div', 'meta', matchWhy(m) + m.terms.join(', '))];
+  if (m.role === 'incidental') rowKids.push(el('div', 'meta', C[cur].name + ' is named only in passing here (another country comes first and there is no security, diplomacy or sanctions wording).'));
+  else if (m.role === 'shared') rowKids.push(el('div', 'meta', 'Involves more than one country (bilateral or multilateral story).'));
+  const tier = a.source && a.source.tier;
+  if (tier) { const lab = ((policy || {}).labels || {})[tier], d = el('div', 'meta', 'Outlet: ' + OUTLET[tier] + ' (a label for the outlet, not a fact-check of this headline)'); if (lab) d.title = lab; rowKids.push(d); }
+  if (a.relevance && a.relevance.style) rowKids.push(el('div', 'meta', 'Sensational wording flagged (' + a.relevance.style.terms.join(', ') + '); its relevance score is lowered by 1.'));
+  const tp = a.relevance && a.relevance.topics || [];
+  if (tp.length) rowKids.push(el('div', 'meta', 'Topics: ' + tp.map(t => t.label).join(' · ') + ' (' + tp.map(t => t.terms.join(', ')).join('; ') + ')'));
+  if (a.filtered) rowKids.push(el('div', 'meta', (a.filtered.kind === 'off-topic' ? 'Filtered as off-topic (' + (a.filtered.group || 'sport, entertainment or local news') + ' wording, no security, diplomacy or sanctions topic) because of: ' : 'Filtered as a routine financial notice because of: ') + a.filtered.terms.join(', ')));
+  const vs = a.variants || [];
+  if (vs.length) { const d = el('div', 'meta', 'Also reported by: '); vs.forEach((v, i) => { if (i) d.append(', '); d.append(link(v.url, v.publisher || 'source')); }); if ((a.variantsTotal || vs.length) > vs.length) d.append(' (+' + (a.variantsTotal - vs.length) + ' more)'); rowKids.push(d); }
+  return el('li', null, rowKids);
+}
+// Ranked list plus the labelled folds (other, in passing, summary-only, filtered). `all` = items that name the current country.
+function itemLists(all, row, nodes, { last, windowText }) {
+  const score = a => (a.relevance && a.relevance.score) || 0, byRel = (x, y) => score(y) - score(x) || byDate(x, y);
+  const shown = all.filter(a => !a.filtered), flt = all.filter(a => a.filtered).sort(byDate);
+  const passing = shown.filter(a => a.matches[cur].level !== 'summary' && a.matches[cur].role === 'incidental').sort(byDate).slice(0, 20);
+  const main = shown.filter(a => a.matches[cur].role !== 'incidental');
+  const strong = main.filter(a => a.matches[cur].level !== 'summary' && (!a.relevance || a.relevance.tier !== 'other')).sort(byRel).slice(0, 20);
+  const plain = main.filter(a => a.matches[cur].level !== 'summary' && a.relevance && a.relevance.tier === 'other').sort(byDate).slice(0, 20);
+  const sm = shown.filter(a => a.matches[cur].level === 'summary').sort(byDate).slice(0, 20);
+  const fold = (text, list) => { const d = el('details'); d.append(el('summary', null, text)); const ul = el('ul', 'news'); list.forEach(a => ul.append(row(a))); d.append(ul); nodes.push(d); };
+  if (strong.length) { const ul = el('ul', 'news'); strong.forEach(a => ul.append(row(a))); nodes.push(ul); }
+  else if (last) nodes.push(el('div', 'state', 'No cached headline with a security, diplomacy, sanctions/trade or economic-policy signal names ' + C[cur].name + ' (' + windowText + '). This does not mean nothing happened: it only reflects these sources.'));
+  if (plain.length) fold(`Other headlines naming ${C[cur].name} without a geopolitical keyword (${plain.length})`, plain);
+  if (passing.length) fold(`Mentioned in passing (${passing.length}): ${C[cur].name} is named, but the story appears to be mainly about another country`, passing);
+  if (sm.length) fold(`Mentioned in the feed summary only (${sm.length}): weaker match, the headline does not name ${C[cur].name}`, sm);
+  if (flt.length) fold(`Filtered out (${flt.length}): routine financial notices and sport, entertainment or local news with no geopolitical topic. Shown here so nothing is hidden silently`, flt);
+}
 function articleBlock(s, kind) {
   const gk = kind === 'gdelt', hrsKey = gk ? 'gdeltFiles' : 'rss';
   if (!s) return { pills: [pill('load')], nodes: [skel()] };
@@ -88,40 +126,11 @@ function articleBlock(s, kind) {
   if (failed.length) nodes.push(el('div', 'state err', [el('b', null, `${failed.length} of ${feeds.length} feeds failed on the latest refresh. `), failed.map(f => `${f.publisher} / ${f.label}: ${f.error || 'unknown error'}`).join('; ') + '. Articles from these feeds below are cached from the last successful update and may be out of date.']));
   const all = (Array.isArray(j.items) ? j.items : []).filter(a => a.matches && a.matches[cur]);
   // Why this article is listed for the country. Old cache files used level 'headline'; new ones use 'country' / 'institution'.
-  const why = m => m.level === 'institution' ? 'Capital or government body named in headline: ' : m.level === 'summary' ? 'Mentioned in feed summary only: ' : 'Country named in headline: ';
-  const row = a => {
-    const f = (j.feeds || {})[a.feedId], bad = !f || f.status !== 'ok', old = f && f.lastSuccessAt && (Date.now() - new Date(f.lastSuccessAt)) / 36e5 > hrs;
-    const m = a.matches[cur], kids = [el('b', null, a.publisher || 'Unknown publisher'), (a.via ? 'via ' + a.via + ' · ' : '') + when(a)];
-    if (bad) kids.push(pill('stale', f ? 'Cached: feed refresh failed' : 'Cached: feed not part of the latest refresh')); else if (old) kids.push(pill('stale', 'Stale'));
-    const rowKids = [link(a.url, a.title), el('div', 'nm', kids), el('div', 'meta', why(m) + m.terms.join(', '))];
-    if (m.role === 'incidental') rowKids.push(el('div', 'meta', C[cur].name + ' is named only in passing here (another country comes first and there is no security, diplomacy or sanctions wording).'));
-    else if (m.role === 'shared') rowKids.push(el('div', 'meta', 'Involves more than one country (bilateral or multilateral story).'));
-    const tier = a.source && a.source.tier;
-    if (tier) { const lab = ((j.sourcePolicy || {}).labels || {})[tier], d = el('div', 'meta', 'Outlet: ' + ({ established: 'established outlet', state: 'state-owned or government-run outlet', unassessed: 'not assessed' })[tier] + ' (a label for the outlet, not a fact-check of this headline)'); if (lab) d.title = lab; rowKids.push(d); }
-    if (a.relevance && a.relevance.style) rowKids.push(el('div', 'meta', 'Sensational wording flagged (' + a.relevance.style.terms.join(', ') + '); its relevance score is lowered by 1.'));
-    const tp = a.relevance && a.relevance.topics || [];
-    if (tp.length) rowKids.push(el('div', 'meta', 'Topics: ' + tp.map(t => t.label).join(' · ') + ' (' + tp.map(t => t.terms.join(', ')).join('; ') + ')'));
-    if (a.filtered) rowKids.push(el('div', 'meta', (a.filtered.kind === 'off-topic' ? 'Filtered as off-topic (' + (a.filtered.group || 'sport, entertainment or local news') + ' wording, no security, diplomacy or sanctions topic) because of: ' : 'Filtered as a routine financial notice because of: ') + a.filtered.terms.join(', ')));
-    const vs = a.variants || [];
-    if (vs.length) { const d = el('div', 'meta', 'Also reported by: '); vs.forEach((v, i) => { if (i) d.append(', '); d.append(link(v.url, v.publisher || 'source')); }); if ((a.variantsTotal || vs.length) > vs.length) d.append(' (+' + (a.variantsTotal - vs.length) + ' more)'); rowKids.push(d); }
-    return el('li', null, rowKids);
-  };
-  const byDate = (x, y) => (Date.parse(y.published || y.seenByGdelt || y.firstSeenAt) || 0) - (Date.parse(x.published || x.seenByGdelt || x.firstSeenAt) || 0);
-  const score = a => (a.relevance && a.relevance.score) || 0;
-  const byRel = (x, y) => score(y) - score(x) || byDate(x, y);
-  const shown = all.filter(a => !a.filtered), flt = all.filter(a => a.filtered).sort(byDate);
-  const passing = shown.filter(a => a.matches[cur].level !== 'summary' && a.matches[cur].role === 'incidental').sort(byDate).slice(0, 20);
-  const main = shown.filter(a => a.matches[cur].role !== 'incidental');
-  const strong = main.filter(a => a.matches[cur].level !== 'summary' && (!a.relevance || a.relevance.tier !== 'other')).sort(byRel).slice(0, 20);
-  const plain = main.filter(a => a.matches[cur].level !== 'summary' && a.relevance && a.relevance.tier === 'other').sort(byDate).slice(0, 20);
-  const sm = shown.filter(a => a.matches[cur].level === 'summary').sort(byDate).slice(0, 20);
-  const fold = (text, list) => { const d = el('details'); d.append(el('summary', null, text)); const ul = el('ul', 'news'); list.forEach(a => ul.append(row(a))); d.append(ul); nodes.push(d); };
-  if (strong.length) { const ul = el('ul', 'news'); strong.forEach(a => ul.append(row(a))); nodes.push(ul); }
-  else if (last) nodes.push(el('div', 'state', 'No cached headline with a security, diplomacy, sanctions/trade or economic-policy signal names ' + C[cur].name + ' (last ' + (j.retentionDays || 7) + ' days). This does not mean nothing happened: it only reflects these sources.'));
-  if (plain.length) fold(`Other headlines naming ${C[cur].name} without a geopolitical keyword (${plain.length})`, plain);
-  if (passing.length) fold(`Mentioned in passing (${passing.length}): ${C[cur].name} is named, but the story appears to be mainly about another country`, passing);
-  if (sm.length) fold(`Mentioned in the feed summary only (${sm.length}): weaker match, the headline does not name ${C[cur].name}`, sm);
-  if (flt.length) fold(`Filtered out (${flt.length}): routine financial notices and sport, entertainment or local news with no geopolitical topic. Shown here so nothing is hidden silently`, flt);
+  const bad = a => { const f = (j.feeds || {})[a.feedId]; return !f || f.status !== 'ok'; };
+  const row = a => { const f = (j.feeds || {})[a.feedId], old = f && f.lastSuccessAt && (Date.now() - new Date(f.lastSuccessAt)) / 36e5 > hrs, extra = [];
+    if (bad(a)) extra.push(pill('stale', f ? 'Cached: feed refresh failed' : 'Cached: feed not part of the latest refresh')); else if (old) extra.push(pill('stale', 'Stale'));
+    return itemRow(a, extra, j.sourcePolicy); };
+  itemLists(all, row, nodes, { last, windowText: 'last ' + (j.retentionDays || 7) + ' days' });
   const pubs = (j.publishers || []).map(p => p.name + ' (terms checked ' + p.termsChecked + ')').join(', ') || 'none';
   const attr = j.attribution ? [' Data: ', link(j.attribution.url, j.attribution.name), ' (open dataset, used under its terms).'] : [];
   nodes.push(el('p', 'meta', ['Reported events. Sources: ' + pubs + '.', ...attr, ' Matching words for ' + C[cur].name + ': ', el('code', null, termText((j.terms || {})[cur])), '. Each headline links to the original report. Last successful update: ' + (last ? fmtUTC(last) : 'none yet') + (j.checkedAt ? '. Last checked: ' + fmtUTC(j.checkedAt) : '') + '.']));
@@ -129,31 +138,98 @@ function articleBlock(s, kind) {
   return { pills, nodes };
 }
 
-// ----- GDELT (optional second source; its failures never affect the publisher feeds above) -----
+// ----- GDELT search API (secondary). Collapsed by default; the status is always visible in its header line. -----
+// Its articles get the SAME judgement as the open-data section: this page loads the project's own rule files (data/country-terms.mjs, data/relevance-rules.mjs,
+// data/source-quality.mjs, scripts/relevance-lib.mjs, scripts/rss-lib.mjs) instead of keeping a second copy of the rules. If they cannot be loaded, the articles are
+// shown unfiltered and the page says so. Nothing here changes what the GitHub Action requests from GDELT.
+let secOpen = false, RULES_P = null, cssDone = false;
+const seenIso = d => { const m = /^(\d{4})(\d\d)(\d\d)T(\d\d)(\d\d)(\d\d)Z?$/.exec(d || ''); return m ? `${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]}.000Z` : null; };   // only used by the unfiltered fallback below
+function loadRules() {
+  if (!RULES_P) RULES_P = Promise.all([import('../scripts/secondary-lib.mjs'), import('../scripts/relevance-lib.mjs'), import('../data/relevance-rules.mjs'), import('../data/country-terms.mjs')])
+    .then(([S, L, RR, CT]) => ({ S, rules: { countryTerms: CT.COUNTRY_TERMS, relevanceRules: RR.RULES }, terms: L.termSummary(CT.COUNTRY_TERMS) }));
+  return RULES_P;
+}
+async function prepareSecondary() {
+  const s = store.news; if (!s || !s.ok || !s.json.countries) { store.sec = null; return; }
+  try { const X = await loadRules(); store.sec = { ok: true, ...X.S.analyse(s.json.countries, X.rules), terms: X.terms }; }
+  catch (e) { store.sec = { ok: false, error: String((e && e.message) || e) }; }
+}
+function secCss() {
+  if (cssDone) return; cssDone = true;
+  const st = document.createElement('style');
+  st.textContent = '.sec2h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;width:100%;background:var(--p2);border:1px solid var(--line2);border-radius:8px;padding:8px 10px;color:var(--tx);font:inherit;text-align:left;cursor:pointer}' +
+    '.sec2h:hover{border-color:var(--cyan)}.sec2h:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.sec2h .car{display:inline-block;color:var(--mut);transition:transform .15s}.sec2h[aria-expanded=true] .car{transform:rotate(90deg)}' +
+    '.sec2h b{font-size:14px}.sec2h .pill{font-size:11.5px}.sec2b{margin-top:8px}' +
+    '.warnline{margin-top:6px;border-left:3px solid var(--amber);background:rgba(245,158,11,.08);color:#fcd9a0;border-radius:6px;padding:6px 10px;font-size:12.5px;line-height:1.45}' +
+    '.warnline.err{border-left-color:var(--red);background:rgba(239,68,68,.08);color:#fca5a5}.warnline details{margin-top:4px}.warnline summary{cursor:pointer;text-decoration:underline}.warnline ul{margin:4px 0 0;padding-left:18px}';
+  document.head.append(st);
+}
+function secShell(chips, warn, bodyNodes) {
+  secCss();
+  const wrap = el('div', 'sec2'), btn = el('button', 'sec2h'), body = el('div', 'sec2b');
+  body.id = 'sec2-body'; body.hidden = !secOpen; btn.type = 'button'; btn.setAttribute('aria-expanded', String(secOpen)); btn.setAttribute('aria-controls', 'sec2-body');
+  btn.append(el('span', 'car', '▸'), el('b', null, 'GDELT search API (secondary)'), ...chips);
+  btn.onclick = () => { secOpen = !secOpen; body.hidden = !secOpen; btn.setAttribute('aria-expanded', String(secOpen)); };
+  body.append(...bodyNodes); wrap.append(btn); if (warn) wrap.append(warn); wrap.append(body);
+  return wrap;
+}
 function gdeltBlock() {
   const s = store.news;
-  if (!s) return { pills: [pill('load')], nodes: [skel()] };
-  if (!s.ok) return { pills: [pill('bad')], nodes: [missing('GDELT news', CFG.newsFile, s.error)] };
-  const j = s.json, e = j.countries && j.countries[cur];
-  if (!e) return { pills: [pill('bad')], nodes: [el('div', 'state err', 'The GDELT cache has no entry for ' + C[cur].name + '.')] };
-  const arts = Array.isArray(e.articles) ? e.articles : [], ts = e.fetchedAt || null;
-  const pills = [stamp(ts, CFG.staleAfterHours.news, 'Updated', e.status === 'error'), ...(e.status === 'error' ? [pill('bad', e.attempted === false ? 'Refresh skipped' : 'Latest refresh failed')] : [])];
-  const out = [];
-  if (e.status === 'error') out.push(el('div', 'state err', [el('b', null, e.attempted === false ? 'The latest GDELT refresh was not attempted. ' : 'The latest GDELT refresh failed. '), e.error || 'No reason was recorded.', arts.length ? ' The articles below are cached from the last successful update and may be out of date.' : ' Nothing has been fetched successfully yet, so no articles are shown.']));
-  if (arts.length) {
-    const ul = el('ul', 'news');
-    arts.forEach(a => ul.append(el('li', null, [link(a.url, a.title || '(untitled)'), el('div', 'nm', [el('b', null, a.domain || 'Unknown publisher'), 'First seen by GDELT ' + (/^\d{8}T\d{4}/.test(a.seendate || '') ? a.seendate.replace(/^(\d{4})(\d\d)(\d\d)T(\d\d)(\d\d).*/, '$1-$2-$3 $4:$5 UTC') : 'at an unknown time')])])));
-    out.push(ul);
-  } else if (e.status !== 'error') out.push(el('div', 'state', 'GDELT returned no articles for this search in the cached window (' + (j.timespan || 'unknown') + ').'));
-  out.push(el('p', 'meta', ['Reported events. Search: ', el('code', null, e.query || C[cur].gdelt), '. Last successful update: ' + (ts ? fmtUTC(ts) : 'none yet') + (e.checkedAt ? '. Last checked: ' + fmtUTC(e.checkedAt) : '') + '.']));
-  out.push(el('p', 'note', 'Headlines belong to the publishers shown and are neither checked nor endorsed here. GDELT reports when it first saw an article, which can be later than its publication date. Fetched by a scheduled GitHub Action, not live in your browser.'));
-  return { pills, nodes: out };
+  if (!s) return secShell([pill('load')], null, [skel()]);
+  if (!s.ok) return secShell([pill('bad', 'Unavailable')], el('div', 'warnline err', '⚠ The cache file ' + CFG.newsFile + ' could not be read (' + s.error + '). No substitute content is shown.'), [el('p', 'meta', 'This section reads only the cache written by the scheduled GitHub Action; the browser never calls GDELT.')]);
+  const j = s.json, cs = Object.entries(j.countries || {}), n = cs.length, hrs = CFG.staleAfterHours.news;
+  if (!n) return secShell([pill('bad', 'Unreadable cache')], el('div', 'warnline err', '⚠ The cache file has no country entries, so nothing can be shown.'), []);
+  const errs = cs.filter(([, c]) => c && c.status === 'error'), notTried = errs.filter(([, c]) => c.attempted === false).length, failed = errs.length - notTried;
+  const cached = cs.filter(([, c]) => c && (c.status === 'error' ? (c.articles || []).length : j.checkedAt && c.checkedAt && Date.parse(c.checkedAt) < Date.parse(j.checkedAt) - 1000));
+  const last = j.lastSuccessAt || null, old = !last || (Date.now() - Date.parse(last)) / 36e5 > hrs;
+  // status chips: last success, latest refresh, cache in use. Green only when nothing failed and the data is not old.
+  const c1 = !last ? pill('bad', 'No successful update yet') : pill(errs.length || old ? 'stale' : 'live', 'Last success: ' + ago(last)); if (last) c1.title = fmtUTC(last) + ' (UTC)';
+  const c2 = !errs.length ? pill('live', `Latest refresh: all ${n} OK`) : pill(errs.length === n ? 'bad' : 'stale', `Latest refresh: ${errs.length} of ${n} not refreshed`);
+  const c3 = pill('hist', cached.length ? `Cached data in use: ${cached.length} of ${n}` : 'No cached data in use'); c3.title = 'Counts countries whose articles come from an earlier run: either the latest request failed or was not attempted, or the country was not re-requested because its cache was recent.';
+  let warn = null;
+  if (errs.length || old) {
+    const parts = [];
+    if (errs.length) parts.push(`Latest refresh problem: ${[failed ? failed + ' of ' + n + ' countries failed' : '', notTried ? notTried + ' not attempted' : ''].filter(Boolean).join(', ')}.`);
+    if (old && last) parts.push(`Data is stale: last successful update ${ago(last)} (${fmtUTC(last)}), older than ${hrs} h.`);
+    if (errs.length) parts.push((cached.length ? 'Showing cached articles' : 'No cached articles to show') + (last && !old ? '; last success ' + fmtUTC(last) : '') + '.');
+    if (!last) parts.push('There has been no successful update yet.');
+    warn = el('div', 'warnline' + (errs.length === n || !last ? ' err' : ''), '⚠ ' + parts.join(' '));
+    if (errs.length) { const d = el('details'), ul = el('ul'); d.append(el('summary', null, 'Error details')); errs.forEach(([k, c]) => ul.append(el('li', null, `${(C[k] || {}).name || k}: ${c.error || 'no reason recorded'}${c.attempted === false ? ' (not attempted)' : ''}`))); d.append(ul); warn.append(d); }
+  }
+  const e = (j.countries || {})[cur], chips = [c1, c2, c3];
+  if (!e) return secShell(chips, warn, [el('div', 'state err', 'The GDELT cache has no entry for ' + C[cur].name + '.')]);
+  const body = [], arts = Array.isArray(e.articles) ? e.articles : [], ts = e.fetchedAt || null, sec = store.sec;
+  body.push(el('div', 'meta', `${C[cur].name}: search ${e.status === 'error' ? (e.attempted === false ? 'not attempted in the latest run' : 'failed in the latest run') : 'succeeded'}; this country's articles were fetched ${ts ? fmtUTC(ts) + ' (' + ago(ts) + ')' : 'never successfully'}${e.checkedAt ? '; last checked ' + fmtUTC(e.checkedAt) : ''}.`));
+  const extra = a => { const ents = (a._from || [a.feedId]).map(k => (j.countries || {})[k]).filter(Boolean); if (!ents.length) return [];
+    if (!ents.some(x => x.status === 'ok')) return [pill('stale', 'Cached: latest refresh failed')];
+    return ents.some(x => x.status === 'ok' && x.fetchedAt && (Date.now() - Date.parse(x.fetchedAt)) / 36e5 <= hrs) ? [] : [pill('stale', 'Stale')]; };
+  if (sec === undefined) body.push(skel());
+  else if (sec && sec.ok) {
+    const mine = sec.items.filter(a => a.matches && a.matches[cur]), nodes = [];
+    itemLists(mine, a => itemRow(a, extra(a), null), nodes, { last: arts.length > 0, windowText: 'cached window ' + (j.timespan || 'unknown') });
+    const um = sec.unmatched.filter(a => a._from.includes(cur));
+    if (um.length) { const d = el('details'); d.append(el('summary', null, `Returned by the search, but the headline names none of the five countries (${um.length}): not matched, shown here so nothing is hidden`)); const ul = el('ul', 'news');
+      um.sort(byDate).forEach(a => ul.append(el('li', null, [link(a.url, a.title), el('div', 'nm', [el('b', null, a.publisher || 'Unknown publisher'), when(a), ...extra(a)]), el('div', 'meta', 'GDELT matched the search words somewhere in the article; the headline itself names no monitored country, so no relevance rule can be applied.')]))); d.append(ul); nodes.push(d); }
+    if (!arts.length && e.status !== 'error') body.push(el('div', 'state', 'GDELT returned no articles for this search in the cached window (' + (j.timespan || 'unknown') + ').'));
+    else if (!mine.length && !um.length && arts.length) body.push(el('div', 'state', 'None of the cached articles names ' + C[cur].name + ' in its headline after the matching rules.'));
+    if (arts.length === 0 && e.status === 'error') body.push(el('div', 'state', 'No cached articles for this country, so nothing is shown. The refresh problem is described above.'));
+    body.push(...nodes);
+    body.push(el('p', 'meta', ['Reported events. Search: ', el('code', null, e.query || C[cur].gdelt), '. Matching words for ' + C[cur].name + ': ', el('code', null, termText(sec.terms[cur])), '. Last successful update (any country): ' + (last ? fmtUTC(last) : 'none yet') + (j.checkedAt ? '. Last checked: ' + fmtUTC(j.checkedAt) : '') + '.']));
+    body.push(el('p', 'note', 'The same relevance, off-topic, country-matching, duplicate-grouping and outlet-label rules as the open-data section are applied to these headlines (rule files in data/ and scripts/relevance-lib.mjs, read by this page). The search itself matches words anywhere in the article, not only the headline, so some results do not name the country in the headline and are listed separately. Outlet labels describe the publisher, not a fact-check of the headline. Headlines belong to the publishers shown and are neither checked nor endorsed here. GDELT reports when it first saw an article, which can be later than its publication date. Fetched by a scheduled GitHub Action, not live in your browser.'));
+  } else {
+    body.push(el('div', 'warnline', '⚠ The shared relevance rules could not be loaded in this browser' + (sec && sec.error ? ' (' + sec.error + ')' : '') + ', so these headlines are shown WITHOUT relevance, off-topic, duplicate or outlet-label processing, in the order GDELT returned them.'));
+    if (arts.length) { const ul = el('ul', 'news'); arts.forEach(a => ul.append(el('li', null, [link(a.url, a.title || '(untitled)'), el('div', 'nm', [el('b', null, a.domain || 'Unknown publisher'), 'First seen by GDELT ' + (seenIso(a.seendate) ? fmtUTC(seenIso(a.seendate)) : 'at an unknown time')])]))); body.push(ul); }
+    else if (e.status !== 'error') body.push(el('div', 'state', 'GDELT returned no articles for this search in the cached window (' + (j.timespan || 'unknown') + ').'));
+    body.push(el('p', 'meta', ['Reported events. Search: ', el('code', null, e.query || C[cur].gdelt), '.']));
+    body.push(el('p', 'note', 'Headlines belong to the publishers shown and are neither checked nor endorsed here. GDELT reports when it first saw an article, which can be later than its publication date. Fetched by a scheduled GitHub Action, not live in your browser.'));
+  }
+  return secShell(chips, warn, body);
 }
 
 function paintNews() {
-  const r = articleBlock(store.rss, 'rss'), k = articleBlock(store.gk, 'gdelt'), g = gdeltBlock();
+  const r = articleBlock(store.rss, 'rss'), k = articleBlock(store.gk, 'gdelt');
   $('#nst').replaceChildren();
-  $('#news').replaceChildren(secHead('Official and publisher feeds (RSS)', r.pills), ...r.nodes, secHead('GDELT open data files', k.pills), ...k.nodes, secHead('GDELT search API (secondary)', g.pills), ...g.nodes);
+  $('#news').replaceChildren(secHead('Official and publisher feeds (RSS)', r.pills), ...r.nodes, secHead('GDELT open data files', k.pills), ...k.nodes, gdeltBlock());
 }
 
 const fmt = { usd: v => 'US$ ' + new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 2 }).format(v), pct: v => Number(v).toFixed(1) + '%', num: v => new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 2 }).format(v) };
