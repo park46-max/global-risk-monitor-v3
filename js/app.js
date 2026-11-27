@@ -454,19 +454,20 @@ function brief() {
     d.append(pill('ana'), el('span', 'meta', ' Keyword counts on headlines. Not verified events, a forecast, a risk score or causal analysis.'));
     const all = auto.sources || [], uniq = all.filter(x => !x.duplicateOf).length, rep = all.length - uniq;
     d.append(el('p', 'lim1', 'Counts come from keyword matching on headline wording; the articles were not read. This shows what the headlines are about, not what happened, why, or what comes next.'));
-    d.append(el('p', 'lim1', uniq + ' unique ' + (uniq === 1 ? 'headline' : 'headlines') + ' are counted' + ((auto.developments || []).length < uniq ? ' (Key developments shows the first ' + auto.developments.length + '; all ' + uniq + ' are in the source list)' : '') + (rep ? '. ' + rep + ' further source-list ' + (rep === 1 ? 'entry is' : 'entries are') + ' the same headline carried by another outlet; repeats are listed but not counted again, and they are not independent verification.' : '.')));
+    d.append(el('p', 'lim1', 'Selection bias: the ' + uniq + ' headlines counted are the highest-ranked unique headlines, and the ranking adds points for these same topic keywords. That pushes the proportions up. They are not representative of all matching reports or of overall media coverage, and a keyword match is not confirmed substantive coverage (for example, "truce" or "war" in a trade headline counts as security wording).'));
+    d.append(el('p', 'lim1', uniq + ' highest-ranked unique ' + (uniq === 1 ? 'headline' : 'headlines') + ' are counted' + ((auto.developments || []).length < uniq ? ' (Key developments shows the first ' + auto.developments.length + '; all ' + uniq + ' are in the source list)' : '') + (rep ? '. ' + rep + ' further source-list ' + (rep === 1 ? 'entry is' : 'entries are') + ' the same headline carried by another outlet; repeats are listed but not counted again, and they are not independent verification.' : '.')));
     const row = (label, n, den, what) => { const r = el('div', 'cov'), p = den ? Math.max(0, Math.min(100, Math.round(100 * n / den))) : 0, bar = el('span', 'cb', el('i')); bar.setAttribute('aria-hidden', 'true'); bar.firstChild.style.width = p + '%'; r.append(el('span', 'cl', label), el('span', 'cn', [el('b', null, String(n)), ' of ' + den + ' ' + what]), bar); return r; };
     const topics = [], more = [], rest = [];
     auto.why.forEach(x => {
       let m = /^(\d+) of the (\d+) listed reports? use (.+?) wording \(/.exec(x.text);
-      if (m && /^topic:/.test(x.rule)) { topics.push(row(m[3].charAt(0).toUpperCase() + m[3].slice(1), +m[1], +m[2], 'unique headlines'), ); return; }
+      if (m && /^topic:/.test(x.rule)) { topics.push(row(m[3].charAt(0).toUpperCase() + m[3].slice(1) + ' keywords', +m[1], +m[2], 'highest-ranked unique headlines')); return; }
       m = /^(\d+) listed reports? with topic keywords also names? (.+?) \[/.exec(x.text);
-      if (m && x.rule === 'two-countries') { more.push(row('Also name ' + m[2], +m[1], uniq, 'unique headlines'), el('p', 'meta', 'A headline that names two countries does not show how they are connected.')); return; }
+      if (m && x.rule === 'two-countries') { more.push(row('Also name ' + m[2], +m[1], uniq, 'highest-ranked unique headlines'), el('p', 'meta', 'A headline that names two countries does not show how they are connected.')); return; }
       m = /^(\d+) listed headlines? (?:was|were) carried by more than one outlet/.exec(x.text);
-      if (m && x.rule === 'several-outlets') { more.push(row('Carried by several outlets', +m[1], uniq, 'unique headlines'), el('p', 'meta', 'The same headline appearing in several places is not independent verification.')); return; }
+      if (m && x.rule === 'several-outlets') { more.push(row('Carried by several outlets', +m[1], uniq, 'highest-ranked unique headlines'), el('p', 'meta', 'The same headline appearing in several places is not independent verification.')); return; }
       rest.push(el('p', null, withRefs(x.text)));
     });
-    if (topics.length) d.append(el('h4', 'cov-h', 'Topic wording in the headlines'), el('p', 'meta', 'A headline can match several topics, so these counts overlap and do not add up to the total.'), ...topics);
+    if (topics.length) d.append(el('h4', 'cov-h', 'Topic keyword matches in the highest-ranked headlines'), el('p', 'meta', 'A headline can match several topics, so these counts overlap and do not add up to the total.'), ...topics);
     if (more.length) d.append(el('h4', 'cov-h', 'Other patterns'), ...more);
     if (rest.length) d.append(...rest);
     const fold = el('details', 'fold', el('summary', null, 'Rules, matched words and references'));
