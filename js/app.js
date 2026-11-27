@@ -416,7 +416,12 @@ function brief() {
     if (j.status === 'error') top.push(el('div', 'state err', [el('b', null, 'The latest update failed: '), j.error || 'no reason recorded', '. The brief below is the last successful one (generated ' + fmtUTC(auto.generatedAt) + ').']));
     if (auto.carriedForward) top.push(el('div', 'state err', [el('b', null, 'Earlier brief kept. '), auto.carriedForward.reason]));
   }
-  const ref = n => el('span', 'meta', ' [' + n + ']');
+  // Stage 9.2: every [n] is a button that opens the collapsed source list and moves to that entry (no URL change: the hash holds the selected country).
+  const srcFold = { el: null };
+  const showSrc = n => { const d = srcFold.el, li = d && document.getElementById('src-' + n); if (!d || !li) return; d.open = true; document.querySelectorAll('#brief .src-hl').forEach(x => x.classList.remove('src-hl')); li.classList.add('src-hl'); li.scrollIntoView({ block: 'center' }); li.focus({ preventScroll: true }); };
+  const refBtn = n => { const b = el('button', 'refbtn', '[' + n + ']'); b.type = 'button'; b.setAttribute('aria-label', 'Source ' + n + ': show in the source list'); b.addEventListener('click', () => showSrc(n)); return b; };
+  const withRefs = t => String(t).split(/(\[\d+\])/).map(p => /^\[\d+\]$/.test(p) ? refBtn(+p.slice(1, -1)) : p).filter(p => p !== '');
+  const ref = n => el('span', 'meta', [' ', refBtn(n)]);
   const unavailable = (why) => [pill('bad'), el('p', 'dim', why)];
   const sec = (h, k, fill) => {
     const d = el('section', 'bsec', el('h3', null, h)), x = hand[k];
@@ -425,7 +430,8 @@ function brief() {
     else fill(d);
     g.append(d);
   };
-  const lim = auto && auto.limitations || [];
+  const rn = t => hand.why ? t : String(t).replace(/"Why it matters"/g, '"Media Coverage Patterns"');   // the generated notice and limitations name the section; the heading was renamed
+  const lim = (auto && auto.limitations || []).map(rn);
   sec('Overview', 'overview', d => {
     if (auto.overview) d.append(pill(...KIND.fact), el('p', null, auto.overview.text));
     else d.append(...unavailable('Unavailable: not enough cached reports to summarise ' + C[cur].name + '.'));
@@ -438,28 +444,51 @@ function brief() {
       const li = el('li', null, [link(x.url, x.headline), ref(x.n)]);
       li.append(el('div', 'meta', `${x.publisher} · ${x.timeBasis === 'published' ? 'Published' : x.timeBasis === 'first seen by GDELT' ? 'Publication time not provided; first seen by GDELT' : 'Publication time not provided; first cached'} ${fmtUTC(x.time)}`));
       li.append(el('div', 'meta', (x.matched.level === 'institution' ? 'Capital or government body named in headline: ' : 'Country named in headline: ') + x.matched.terms.join(', ') + (x.topics.length ? ' · Topics: ' + x.topics.join(', ') : '')));
-      if (x.alsoReportedBy.length) li.append(el('div', 'meta', 'Also reported by: ' + x.alsoReportedBy.map(n => { const o = auto.sources.find(q => q.n === n); return o ? o.publisher + ' [' + n + ']' : '[' + n + ']'; }).join(', ')));
+      if (x.alsoReportedBy.length) { const al = el('div', 'meta', 'Also reported by: '); x.alsoReportedBy.forEach((n, i) => { const o = auto.sources.find(q => q.n === n); if (i) al.append(', '); if (o) al.append(o.publisher + ' '); al.append(refBtn(n)); }); li.append(al); }
       ul.append(li);
     });
     d.append(ul);
   });
-  sec('Why it matters', 'why', d => {
+  sec(hand.why ? 'Why it matters' : 'Media Coverage Patterns', 'why', d => {
     if (!auto.why) { d.append(...unavailable('Unavailable: ' + (auto.status === 'unavailable' ? 'there are no reports to apply the rules to.' : (lim.find(t => /analytical|No analytical rule/.test(t)) || 'not enough supporting reports.')))); return; }
-    d.append(pill('ana'), el('span', 'meta', ' Keyword rules applied to the listed headlines; not a finding'));
-    const ul = el('ul'); auto.why.forEach(x => ul.append(el('li', null, [x.text, el('div', 'meta', 'Rule: ' + x.rule)]))); d.append(ul);
+    d.append(pill('ana'), el('span', 'meta', ' Keyword counts on headlines. Not verified events, a forecast, a risk score or causal analysis.'));
+    const all = auto.sources || [], uniq = all.filter(x => !x.duplicateOf).length, rep = all.length - uniq;
+    d.append(el('p', 'lim1', 'Counts come from keyword matching on headline wording; the articles were not read. This shows what the headlines are about, not what happened, why, or what comes next.'));
+    d.append(el('p', 'lim1', uniq + ' unique ' + (uniq === 1 ? 'headline' : 'headlines') + ' are counted' + ((auto.developments || []).length < uniq ? ' (Key developments shows the first ' + auto.developments.length + '; all ' + uniq + ' are in the source list)' : '') + (rep ? '. ' + rep + ' further source-list ' + (rep === 1 ? 'entry is' : 'entries are') + ' the same headline carried by another outlet; repeats are listed but not counted again, and they are not independent verification.' : '.')));
+    const row = (label, n, den, what) => { const r = el('div', 'cov'), p = den ? Math.max(0, Math.min(100, Math.round(100 * n / den))) : 0, bar = el('span', 'cb', el('i')); bar.setAttribute('aria-hidden', 'true'); bar.firstChild.style.width = p + '%'; r.append(el('span', 'cl', label), el('span', 'cn', [el('b', null, String(n)), ' of ' + den + ' ' + what]), bar); return r; };
+    const topics = [], more = [], rest = [];
+    auto.why.forEach(x => {
+      let m = /^(\d+) of the (\d+) listed reports? use (.+?) wording \(/.exec(x.text);
+      if (m && /^topic:/.test(x.rule)) { topics.push(row(m[3].charAt(0).toUpperCase() + m[3].slice(1), +m[1], +m[2], 'unique headlines'), ); return; }
+      m = /^(\d+) listed reports? with topic keywords also names? (.+?) \[/.exec(x.text);
+      if (m && x.rule === 'two-countries') { more.push(row('Also name ' + m[2], +m[1], uniq, 'unique headlines'), el('p', 'meta', 'A headline that names two countries does not show how they are connected.')); return; }
+      m = /^(\d+) listed headlines? (?:was|were) carried by more than one outlet/.exec(x.text);
+      if (m && x.rule === 'several-outlets') { more.push(row('Carried by several outlets', +m[1], uniq, 'unique headlines'), el('p', 'meta', 'The same headline appearing in several places is not independent verification.')); return; }
+      rest.push(el('p', null, withRefs(x.text)));
+    });
+    if (topics.length) d.append(el('h4', 'cov-h', 'Topic wording in the headlines'), el('p', 'meta', 'A headline can match several topics, so these counts overlap and do not add up to the total.'), ...topics);
+    if (more.length) d.append(el('h4', 'cov-h', 'Other patterns'), ...more);
+    if (rest.length) d.append(...rest);
+    const fold = el('details', 'fold', el('summary', null, 'Rules, matched words and references'));
+    const ul = el('ul'); auto.why.forEach(x => ul.append(el('li', null, [withRefs(x.text), el('div', 'meta', 'Rule: ' + x.rule)]))); fold.append(ul); d.append(fold);
   });
-  const sd = el('section', 'bsec', el('h3', null, 'Sources')), asrc = auto ? auto.sources : [];
-  if (asrc.length) {
-    const ul = el('ul');
-    asrc.forEach(x => ul.append(el('li', null, [el('span', 'meta', '[' + x.n + '] '), link(x.url, x.title), ` (${x.publisher}${x.time ? ', ' + (x.timeBasis || 'time') + ' ' + fmtUTC(x.time) : ', time not provided'}${x.via ? ', via ' + x.via : ''}${x.sourceLabel ? ', outlet: ' + ({ established: 'established', state: 'state-owned or government-run', unassessed: 'not assessed' })[x.sourceLabel] : ''}${x.duplicateOf ? ', same headline as [' + x.duplicateOf + ']' : ''})`])));
-    sd.append(ul);
-  }
-  if ((hand.sources || []).length) { const ul = el('ul'); hand.sources.forEach(x => ul.append(el('li', null, [link(x.url, x.title), ` (${x.publisher}, accessed ${x.accessed})`]))); sd.append(ul); }
-  if (!asrc.length && !(hand.sources || []).length) sd.append(pill('bad'), el('p', 'dim', 'No sources listed. Every statement needs one.'));
+  const sd = el('section', 'bsec'), asrc = auto ? auto.sources : [], hsrc = hand.sources || [], nsrc = asrc.length + hsrc.length;
+  if (nsrc) {
+    const f = el('details', 'srcfold', el('summary', null, el('h3', null, 'Sources and references (' + nsrc + ')'))); srcFold.el = f;
+    const dup = asrc.filter(x => x.duplicateOf).length;
+    if (dup) f.append(el('p', 'meta', (asrc.length - dup) + ' unique headlines; ' + dup + ' entries are the same headline carried by another outlet. Numbers in square brackets elsewhere in the brief open the matching entry here.'));
+    if (asrc.length) {
+      const ul = el('ul');
+      asrc.forEach(x => ul.append(Object.assign(el('li', null, [el('span', 'meta', '[' + x.n + '] '), link(x.url, x.title), ` (${x.publisher}${x.time ? ', ' + (x.timeBasis || 'time') + ' ' + fmtUTC(x.time) : ', time not provided'}${x.via ? ', via ' + x.via : ''}${x.sourceLabel ? ', outlet: ' + ({ established: 'established', state: 'state-owned or government-run', unassessed: 'not assessed' })[x.sourceLabel] : ''}${x.duplicateOf ? ', same headline as [' + x.duplicateOf + ']' : ''})`]), { id: 'src-' + x.n, tabIndex: -1 })));
+      f.append(ul);
+    }
+    if (hsrc.length) { const ul = el('ul'); hsrc.forEach(x => ul.append(el('li', null, [link(x.url, x.title), ` (${x.publisher}, accessed ${x.accessed})`]))); f.append(ul); }
+    sd.append(f);
+  } else sd.append(el('h3', null, 'Sources'), pill('bad'), el('p', 'dim', 'No sources listed. Every statement needs one.'));
   g.append(sd);
   const foot = [];
   if (lim.length) { const ul = el('ul'); lim.forEach(t => ul.append(el('li', null, t))); foot.push(el('div', 'state', [el('b', null, 'Limitations. '), ul])); }
-  if (auto) foot.push(el('p', 'note', auto.notice || 'Headlines are reports, not verified facts.'));
+  if (auto) foot.push(el('p', 'note', rn(auto.notice || 'Headlines are reports, not verified facts.')));
   root.replaceChildren(...top, g, ...foot);
 }
 
