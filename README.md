@@ -21,7 +21,9 @@ Your browser only ever reads the JSON files from your own site. It never calls G
 ## Folder map
 ```
 index.html, css/, js/               the website (globe design is unchanged since Stage 1)
-data/rss-sources.mjs                publisher RSS feeds and country-matching words (every publisher is OFF)
+data/rss-sources.mjs                publisher RSS feeds and country-matching words (every publisher is OFF; Stage 7B adds three official candidates)
+data/source-types.mjs               source classification: government / international organization / EU institution / publisher reporting
+docs/rss-source-permissions.md      evidence, reuse conditions and open items for each official candidate
 data/countries.js                   the five countries: colours, camera, GDELT search queries, sourced entries
 data/cache/                         JSON written by the Action (starts empty)
 scripts/fetch-data.mjs              the GDELT + World Bank fetcher (Node 18+, no packages to install)
@@ -30,9 +32,11 @@ scripts/fetch-gdelt-files.mjs       reads GDELT's open 15-minute data files (ver
 scripts/http-lib.mjs                the safe download code shared by both (https only, host allowlist, every redirect checked)
 scripts/zip-lib.mjs                 tiny ZIP reader (no packages)
 scripts/rss-lib.mjs                 RSS parsing, dates, duplicates, country matching
+scripts/robots-lib.mjs              robots.txt reader used before any feed is requested
 tests/test-fetch.mjs                SIMULATED tests for the GDELT/World Bank fetcher (no internet needed)
 tests/test-rss.mjs                  SIMULATED tests for the RSS pipeline (no internet needed)
 tests/test-gdelt-files.mjs          SIMULATED tests for the GDELT file pipeline (no internet needed)
+tests/test-official-sources.mjs     SIMULATED tests for the official-source candidates, robots.txt, verify report, labels (no internet needed)
 .github/workflows/update-data.yml   GDELT + World Bank schedule
 .github/workflows/update-rss.yml    official RSS + GDELT files (manual only until you enable its schedule)
 .nojekyll                           tells GitHub Pages to serve files as they are
@@ -217,6 +221,19 @@ The open-data section stays the primary, expanded news source. The older GDELT s
 - **Not changed:** what is requested from GDELT, how often, retries, workflows, RSS, World Bank, UCDP, risk, briefs, the globe and the stylesheet. The section's small styles are added by `js/app.js` at run time.
 - **Limitations:** "cached data in use" for a country that was not re-requested is inferred from its check time being older than the file's (the file has no explicit flag); search results are matched on the whole article but judged on the headline only; the outlet lists are short (see `data/source-quality.mjs`).
 - **Tests:** `node tests/test-secondary-news.mjs` (36 checks, simulated). Optional browser test: `PUPPETEER=/path/to/puppeteer node tests/render-secondary.cjs` (81 checks over the states successful, stale, partly failed, failed with and without cache, empty, reused, unreadable, missing and rules-not-loadable; needs puppeteer and Chrome; prints "skipped" without them).
+
+## Official sources: State Department, UN News, EEAS (Stage 7B: configured, verified only technically, OFF)
+
+Three official sources were added to `data/rss-sources.mjs` as **candidates**. All three are `enabled: false`, `termsChecked: null`, and carry unresolved items in a `blockers` list. Reuters, BBC, DW, France 24 and Al Jazeera stay disabled. Evidence links, reuse conditions and open items are in **`docs/rss-source-permissions.md`** (audit date 2026-11-27).
+
+- **Classification.** Every publisher has a `sourceType` (`data/source-types.mjs`): *Government communications* (U.S. Department of State), *International organization communications* (UN News), *EU institutional communications* (EEAS), *Publisher reporting* (existing news sources). Official items are labelled on the page, listed apart under "Official communications", never grouped with another publisher's headline (so never shown as "also reported by"), left out of the country briefs for now (the brief says how many were left out), and the risk assessment never reads the RSS cache. They are described as statements by that body, not independently verified facts.
+- **What is shown once enabled:** headline, source name, classification, date if given, link to the original. No body text, description, image, logo or seal is stored or shown.
+- **EEAS has no feed address yet.** Verify mode reads the EEAS home page once and prints any feed addresses it declares; they are candidates only.
+- **Verify mode now reports**, per feed: HTTP status, requested and final address, RSS/Atom format, valid entries, how many have headline / own-site link / date, newest and oldest date, the robots.txt result, any `X-Robots-Tag`, and any access restriction. For a source with unresolved items it prints counts only, never headline text. It writes nothing and enables nothing. **A working feed is not permission.**
+- **robots.txt and restrictions.** The script (verify and fetch) reads the host's robots.txt first (user agent `GlobalRiskMonitor`), honours Disallow and Crawl-delay, and does not request a feed that is disallowed or whose robots.txt answers 401/403 or cannot be read. A 401/403 on a feed is recorded as "access restricted: not bypassed" and is not retried or worked around.
+- **How to enable one later (separate approval):** run verify, read its terms and the open items, delete the `blockers` you have resolved, then set `enabled: true` and `termsChecked: 'YYYY-MM-DD'` yourself. The script refuses a source that still has blockers.
+- **Limitations:** robots.txt is checked for the configured address, not for each redirect hop. An official site reached through GDELT is not given a source type. The feed addresses for State and UN News come from third-party directories and are unconfirmed until a verify run on GitHub.
+- **Tests:** `node tests/test-official-sources.mjs` (simulated, local mock server). Optional browser test: `PUPPETEER=/path/to/puppeteer node tests/render-official.cjs`. No real publisher was contacted.
 
 ## Country intelligence briefs (Stage 3)
 Each country page has a brief with four parts: Overview, Key developments, Why it matters, Sources. It is built automatically by `scripts/build-briefs.mjs` from the cached news (`news-gdelt.json`, and `news-rss.json` if you ever enable RSS) and saved to `data/cache/briefs.json`. **No AI, no paid service, no API key, no network request**: fixed rules only (`data/brief-rules.mjs`, `scripts/brief-lib.mjs`).
