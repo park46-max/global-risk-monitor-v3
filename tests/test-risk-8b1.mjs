@@ -24,10 +24,10 @@ const PROTECTED_MD5 = {
  ".github/workflows/update-data.yml": "881ec1134f3a1619305817c05efa6a29",
  ".github/workflows/update-risk.yml": "e223da77124f96890777f57be392bf5c",
  ".github/workflows/update-rss.yml": "e3e18101cef4c7775ddbada20c1a67b3",
- "js/app.js": "c80b81551697bb3dbb2073e545c03c68",
+ "js/app.js": "0daf9b450c4085e45eb5ca5556998378",
  "js/globe.js": "c8c9ebaff9c79cd3a2a09d1f0aea9f8b",
- "css/style.css": "40e667d30ab897118de04ff89fd785ca",
- "index.html": "68ab4e1fad014f5f0053affc3b6262a0",
+ "css/style.css": "12f56d7b5e47d5558c7990ce3f9fc319",
+ "index.html": "b8a6b822be6a4d046c51f1ad3a6c6240",
  "scripts/build-risk.mjs": "f778556aa2645f372d8ad29b82cf956b",
  "scripts/fetch-data.mjs": "e149936bf523152dfbc20188ab2dd899",
  "scripts/fetch-gdelt-files.mjs": "e104a8b08daae814cb4f28576d016559",
@@ -232,7 +232,7 @@ console.log('\nH. Protected functionality');
   const md5 = f => crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT, f))).digest('hex');
   const changed = Object.entries(PROTECTED_MD5).filter(([f, h]) => md5(f) !== h).map(([f]) => f);
   if (changed.length) console.log('    changed:', changed.join(', '));
-  ok(changed.length === 0, `${Object.keys(PROTECTED_MD5).length} protected files (workflows, js/app.js, globe, CSS, index.html, GDELT, World Bank and RSS scripts, RSS and country data, briefs) are byte-for-byte unchanged since Stage 7C (except js/app.js, changed on purpose in Stage 8B-2, and the production update-risk.yml)`);
+  ok(changed.length === 0, `${Object.keys(PROTECTED_MD5).length} protected files (workflows, js/app.js, globe, CSS, index.html, GDELT, World Bank and RSS scripts, RSS and country data, briefs) are byte-for-byte unchanged since Stage 7C (js/app.js, css/style.css and index.html are pinned to their Stage 9 versions; except js/app.js, changed on purpose in Stage 8B-2, and the production update-risk.yml)`);
   ok(PUBLISHERS.length > 0 && PUBLISHERS.every(p => p.enabled === false && p.termsChecked === null), 'every publisher RSS source is still disabled with termsChecked null');
   const wf = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'update-risk.yml'), 'utf8'); ok(/^\s+- cron: '41 5 \* \* \*'/m.test(wf) && /pages: write/.test(wf) && /contents: write/.test(wf) && /default: verify/.test(wf), 'the risk workflow is the production copy (schedule 05:41 UTC, contents and pages write) and defaults to verify');
   ok(R.diplomatic.levelsComputed === false && IDS.every(id => build().countries[id].diplomatic.level === null && build().countries[id].diplomatic.status === 'insufficient'), 'diplomatic stays Insufficient data for all five countries');

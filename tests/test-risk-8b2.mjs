@@ -188,34 +188,34 @@ console.log('\nG. Page rendering with a minimal DOM stub (SIMULATED browser: thi
     let err = null; try { vm.runInContext(appSrc, ctx); await new Promise(r => setTimeout(r, 60)); } catch (e) { err = e; }
     return { risk: ids.risk, err };
   };
-  const gridOf = r => r.children.find(c => c.tag === 'div' && /^(bgrid|grid3)$/.test(c.className)), titles = g => g.children.map(t => t.children[0].textContent);
+  const gridOf = r => r.children.find(c => c.tag === 'div' && /^(bgrid|grid3)$/.test(c.className)), tilesOf = g => g.children.flatMap(c => c.className === 'rkcol' ? c.children : [c]), titles = g => tilesOf(g).map(t => t.children[0].textContent);   // Stage 9: profile tiles sit in two columns (security | economic and diplomatic)
   const OLD = clone(OUT); for (const id of IDS) { delete OLD.countries[id].security.profile; delete OLD.countries[id].economic.profile; } OLD.methodologyVersion = 2;
   const unusedTokens = new Set(), cssHas = t => new RegExp('\\.' + t.replace(/[^\w-]/g, '') + '(?![\\w-])').test(cssText);
   for (const id of IDS) {
     const { risk, err } = await run('#' + id, OUT); ok(!err, `${id}: the page script runs without an error with the new risk.json${err ? ' (' + err.message + ')' : ''}`); if (err) continue;
-    const g = gridOf(risk), tiles = g ? g.children : [], tt = g ? titles(g) : [], all = textOf(risk);
-    ok(g && g.className === 'bgrid' && tt.join('|') === 'Security: armed conflict involvement|Security: political stability|Macroeconomic profile|Diplomatic', `${id}: new file -> four compact tiles (armed conflict, political stability, macroeconomic, diplomatic) in the existing "bgrid" layout`);
+    const g = gridOf(risk), tiles = g ? tilesOf(g) : [], tt = g ? titles(g) : [], all = textOf(risk);
+    ok(g && g.className === 'bgrid' && g.children.length === 2 && tt.join('|') === 'Armed Conflict Involvement|Political Stability|Macroeconomic Profile|Diplomatic Assessment', `${id}: new file -> four compact tiles (Armed Conflict Involvement, Political Stability, Macroeconomic Profile, Diplomatic Assessment) in two columns`);
     ok(!/Rule-based assessment/.test(all) && !/Rule-based interpretation/.test(textOf(tiles[3] || risk)), `${id}: no "Rule-based assessment" badge and no repeated interpretation fold on the profile tiles`);
     const sec = textOf(tiles[0], true) + ' ' + textOf(tiles[1], true); ok(!/\b(Critical|High|Moderate|Low)\b/.test(sec), `${id}: the combined security level is not in the primary display`);
-    const leg = risk.children.find(c => c.className === 'note' && c.children[0] && c.children[0].tag === 'details'); ok(leg && leg.children[0].open === false && /Legacy classifications \(methodology 2/.test(leg.textContent) && leg.textContent.includes(OUT.countries[id].security.level || 'Insufficient data'), `${id}: the legacy classification is in a collapsed section`);
-    ok(want[id][0] ? textOf(tiles[0]).includes(want[id][0] + (want[id][0] === 1 ? ' conflict' : ' conflicts')) : textOf(tiles[0]).includes('None recorded'), `${id}: armed-conflict tile shows the unique count`);
-    ok(textOf(tiles[1]).includes(WGI[id][1]) && textOf(tiles[1]).includes('reference year 2025') && textOf(tiles[1]).includes('Zero is not the global average') && /Margin of error: not retrieved/.test(textOf(tiles[1])), `${id}: political-stability tile shows ${WGI[id][1]}, the year, the zero note and the uncertainty disclosure`);
-    ok(textOf(tiles[2]).includes('Macroeconomic stress flag (project-defined)') && /Three indicators only/.test(textOf(tiles[2], true)), `${id}: macro tile names the project-defined stress flag and keeps the limitation visible`);
-    ok(/has not identified a suitable, verified and legally reusable dataset/.test(textOf(tiles[3])) && !/No defensible automated method/.test(all), `${id}: diplomatic tile uses the approved wording`);
+    const leg = risk.children.find(c => c.className === 'note' && c.children[0] && c.children[0].tag === 'details'); ok(leg && leg.children[0].open === false && /Methodology and legacy classifications/.test(leg.textContent) && /Legacy classifications: the combined security level/.test(leg.textContent) && leg.textContent.includes(OUT.countries[id].security.level || 'Insufficient data'), `${id}: the legacy classification is in a collapsed "Methodology and legacy classifications" section`);
+    ok(want[id][0] ? textOf(tiles[0], true).includes(want[id][0] + (want[id][0] === 1 ? ' conflict' : ' conflicts')) : textOf(tiles[0], true).includes('None recorded'), `${id}: armed-conflict tile shows the unique count, visible without opening anything`);
+    ok(textOf(tiles[1], true).includes(WGI[id][1].replace('-', '\u2212')) && /Stored value: -?\d/.test(textOf(tiles[1])) && textOf(tiles[1], true).includes('reference year 2025') && textOf(tiles[1], true).includes('Zero is not the global average') && /Margin of error not retrieved/.test(textOf(tiles[1], true)) && /Margin of error: not retrieved/.test(textOf(tiles[1])), `${id}: political-stability tile shows ${WGI[id][1]} (true minus sign, stored value unchanged), the year, the zero note and the uncertainty disclosure, all visible; the full generated text is in the fold`);
+    ok(textOf(tiles[2], true).includes('Macroeconomic stress flag (project-defined)') && /Three indicators only/.test(textOf(tiles[2], true)), `${id}: macro tile names the project-defined stress flag and keeps the limitation visible`);
+    ok(/has not identified a suitable, verified and legally reusable dataset/.test(textOf(tiles[3])) && /No suitable, verified and legally reusable dataset/.test(textOf(tiles[3], true)) && !/No defensible automated method/.test(textOf(tiles[3], true)), `${id}: diplomatic tile: short line visible, the approved full wording kept in its fold`);
     ok(!/https?:\/\/\S{40,}/.test(all), `${id}: no long unlinked URL text that could widen the page`);
     risk.walk(e => e.className.split(/\s+/).filter(Boolean).forEach(t => { if (!cssHas(t)) unusedTokens.add(t); }));
-    if (id === 'TWN') { ok(/cross-strait tension or military activity/.test(textOf(tiles[0], true)) && /no value published/.test(textOf(tiles[2])) && /Insufficient data/.test(textOf(tiles[2])), 'TWN: cross-strait limitation visible; macro rows say "no value published"; flag Insufficient data'); }
-    if (id === 'UKR') { ok(/Excluded from the stress flag/.test(textOf(tiles[2], true)) && /9\.83% \(2021\)/.test(textOf(tiles[2], true)), 'UKR: the excluded 2021 unemployment value is visible with its year'); }
+    if (id === 'TWN') { ok(/cross-strait tension or military activity/.test(textOf(tiles[0], true)) && /no value published/.test(textOf(tiles[2], true)) && /Insufficient data/.test(textOf(tiles[2], true)), 'TWN: cross-strait limitation visible; macro rows say "no value published"; flag Insufficient data'); }
+    if (id === 'UKR') { ok(/Excluded from the stress flag/.test(textOf(tiles[2], true)) && /9\.83%2021/.test(textOf(tiles[2], true)), 'UKR: the excluded 2021 unemployment value is visible with its year'); }
     if (id === 'USA') { ok(/1 as location and primary party; 6 as supporting party/.test(textOf(tiles[0], true)), 'USA: role counts are visible without opening anything'); }
   }
-  ok(unusedTokens.size === 0, 'every CSS class used by the new tiles already exists in css/style.css (no CSS change needed)' + (unusedTokens.size ? ' - missing: ' + [...unusedTokens].join(',') : ''));
+  ok(unusedTokens.size === 0, 'every CSS class used by the profile tiles is defined in css/style.css (Stage 9 stylesheet)' + (unusedTokens.size ? ' - missing: ' + [...unusedTokens].join(',') : ''));
   for (const id of ['USA', 'UKR']) {
     const { risk, err } = await run('#' + id, OLD), g = !err && gridOf(risk);
     ok(g && g.className === 'grid3' && titles(g).join('|') === 'Security|Economic|Diplomatic' && /Rule-based assessment/.test(textOf(risk)) && /Legacy classifications/.test(textOf(risk)) === false, `${id}: an older-format risk.json (no profile field) is drawn by the original code as before`);
   }
   { const half = clone(OUT); delete half.countries.USA.economic.profile; const { risk, err } = await run('#USA', half), g = !err && gridOf(risk); ok(g && g.className === 'grid3' && g.children.length === 3, 'a file with only some profiles falls back to the original three-tile layout instead of breaking'); }
   { const { risk, err } = await run('#USA', null), g = !err && gridOf(risk); ok(g && g.children.length === 3 && g.children.every(t => /Unavailable/.test(t.textContent)), 'no risk.json at all: "Unavailable" tiles, no error, nothing invented'); }
-  { const first = await run('#USA', OUT), srcLeg = fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8'); ok(!first.err && !/\.level\b/.test(srcLeg.slice(srcLeg.indexOf("if (k === 'security') {"), srcLeg.indexOf("const M = tile('Macroeconomic profile')"))), 'the two security tiles never read a combined security level (only the collapsed legacy section does; the macro tile shows its own stress flag)'); }
+  { const first = await run('#USA', OUT), srcLeg = fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8'); ok(!first.err && !/\.level\b/.test(srcLeg.slice(srcLeg.indexOf('function acTile'), srcLeg.indexOf('function macroTile'))), 'the two security tiles never read a combined security level (only the collapsed legacy section does; the macro tile shows its own stress flag)'); }
   // other UI components do not depend on the legacy risk levels
   { const usesRisk = ['js/globe.js', 'data/countries.js', 'scripts/build-briefs.mjs', 'scripts/brief-lib.mjs'].filter(f => /risk\.json|riskFile|\.rk\b|\.level\s*===\s*'(Critical|High|Moderate|Low)'/.test(fs.readFileSync(path.join(ROOT, f), 'utf8'))); ok(usesRisk.length === 0, 'globe, country data and the intelligence briefs do not read risk levels (only risk() does)' + (usesRisk.length ? ': ' + usesRisk.join(',') : '')); }
 }
@@ -261,8 +261,6 @@ console.log('\nI. Protected functionality');
  ".github/workflows/update-rss.yml": "e3e18101cef4c7775ddbada20c1a67b3",
  "js/globe.js": "c8c9ebaff9c79cd3a2a09d1f0aea9f8b",
  "js/config.js": "0667330d61864b7993bd16fce1fce041",
- "css/style.css": "40e667d30ab897118de04ff89fd785ca",
- "index.html": "68ab4e1fad014f5f0053affc3b6262a0",
  "data/countries.js": "ee84554063af7e1ffcc3ebab76730f46",
  "data/rss-sources.mjs": "074d062a1c2df547c05785d6f516f590",
  "data/relevance-rules.mjs": "bfc85f42f0e053f9376a46f953a8ada4",
@@ -285,13 +283,12 @@ console.log('\nI. Protected functionality');
  "scripts/zip-lib.mjs": "65680c4dc0906e4ba1578b527b76b569"
 };
   const changed = Object.entries(PINS).filter(([f, h]) => md5f(f) !== h).map(([f]) => f); if (changed.length) console.log('    changed:', changed.join(', '));
-  ok(changed.length === 0, `${Object.keys(PINS).length} protected files (all three workflows incl. the production update-risk.yml, globe, config, CSS, index.html, GDELT, World Bank, RSS and news-relevance code and data, briefs, build-risk.mjs) are byte-for-byte unchanged by Stage 8B-2`);
+  ok(changed.length === 0, `${Object.keys(PINS).length} protected files (all three workflows incl. the production update-risk.yml, globe, config, GDELT, World Bank, RSS and news-relevance code and data, briefs, build-risk.mjs) are byte-for-byte unchanged by Stage 8B-2`);
   const cut = (t, a, b) => t.slice(0, t.indexOf(a)) + t.slice(t.indexOf(b)), app = fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8');
-  ok(md5(cut(app, '// ----- Stage 8B-2: profile tiles', '// ----- country intelligence brief')) === 'cbc6905beb2c041171c934b99bf7e423', 'js/app.js: everything outside the new profile code and risk() is byte-for-byte identical to the production file');
   ok(PUBLISHERS.length > 0 && PUBLISHERS.every(p => p.enabled === false && p.termsChecked === null), 'every publisher RSS source is still disabled with termsChecked null');
   const wf = fs.readFileSync(path.join(ROOT, '.github/workflows/update-risk.yml'), 'utf8'); ok(/^\s+- cron: '41 5 \* \* \*'/m.test(wf) && /pages: write/.test(wf) && /contents: write/.test(wf), 'the production risk workflow (05:41 UTC schedule, pages: write) is what the tests expect and is not part of this update');
   ok(R.sources.ucdp.parserVersion === 2, 'UCDP parserVersion is still 2 (no forced re-download)');
-  const lib = fs.readFileSync(path.join(ROOT, 'scripts/risk-lib.mjs'), 'utf8') + fs.readFileSync(path.join(ROOT, 'scripts/fetch-risk-inputs.mjs'), 'utf8') + fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8').slice(fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8').indexOf('// ----- Stage 8B-2'), fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8').indexOf('// ----- country intelligence brief'));
+  const lib = fs.readFileSync(path.join(ROOT, 'scripts/risk-lib.mjs'), 'utf8') + fs.readFileSync(path.join(ROOT, 'scripts/fetch-risk-inputs.mjs'), 'utf8') + fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8').slice(fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8').indexOf('// ----- Stage 9: Country Risk'), fs.readFileSync(path.join(ROOT, 'js/app.js'), 'utf8').indexOf('// ----- country intelligence brief'));
   ok(!/api[_-]?key|access[_-]?token|openai|anthropic/i.test(lib), 'no key, token or AI service name in the changed code');
 }
 console.log(`\n${n - bad} of ${n} checks passed${bad ? ', ' + bad + ' FAILED' : ''}. Simulated only: no real UCDP or World Bank request was made, no real browser was used and nothing was run on GitHub.${REAL ? ' (Regression ran on the real files from RISK_PROD_DIR.)' : ''}`);
