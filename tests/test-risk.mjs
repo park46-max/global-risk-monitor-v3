@@ -1,4 +1,4 @@
-// SIMULATED tests for the automated risk assessments (rules, missing/stale data, failed requests, attribution, no fabricated scores).
+// SIMULATED tests for the automated risk assessments (Stage 8B-1 additions are in tests/test-risk-8b1.mjs) (rules, missing/stale data, failed requests, attribution, no fabricated scores).
 // A local mock server pretends to be api.worldbank.org and ucdp.uu.se. No real service is contacted and nothing was run on GitHub. Run: node tests/test-risk.mjs
 import http from 'node:http';
 import fs from 'node:fs';
@@ -49,7 +49,7 @@ const w = v => cache({ top: { wgi: Object.fromEntries(IDS.map(i => [i, { status:
 ok(sec('USA', w(0)).level === 'Low' && sec('USA', w(-0.01)).level === 'Moderate' && sec('USA', w(-1)).level === 'Moderate' && sec('USA', w(-1.01)).level === 'High', 'WGI boundaries: 0 -> Low, -0.01 and -1.0 -> Moderate, -1.01 -> High');
 ok(sec('UKR', w(1.5)).level === 'Critical', 'a good WGI value cannot lower a level set by UCDP involvement');
 const tw = sec('TWN', cache({ top: { wgi: { ...cache().wgi, TWN: { status: 'unsupported', error: 'The World Bank API has no country with code TWN (not published)' } } } }));
-ok(tw.status === 'insufficient' && tw.level === null && /not evidence of low risk/.test(tw.summary), 'Taiwan: no conflict recorded + no WGI -> Insufficient data, explicitly not "low risk"');
+ok(tw.status === 'insufficient' && tw.level === null && /not evidence of low risk/.test(tw.summary), 'hypothetical: no conflict recorded + the World Bank has no WGI value -> Insufficient data, explicitly not "low risk"');
 ok(tw.facts.some(f => /none recorded/.test(f.value)) && !/sovereign|province|part of/i.test(tw.summary + JSON.stringify(tw.facts)), 'Taiwan card states the observed absence and makes no sovereignty statement');
 ok(tw.limitations.some(l => /No sovereignty or status position/.test(l)), 'Taiwan limitation names the neutral handling');
 
@@ -122,7 +122,7 @@ function zip(name, data) {
   const cd = Buffer.concat([ch, nm]), e = Buffer.alloc(22); e.writeUInt32LE(0x06054b50, 0); e.writeUInt16LE(1, 8); e.writeUInt16LE(1, 10); e.writeUInt32LE(cd.length, 12); e.writeUInt32LE(local.length, 16);
   return Buffer.concat([local, cd, e]);
 }
-const mode = { fail: false, wrongCountry: false, wgiGone: false, wrongIndicator: false }, hits = []; const WBV = { 'GOV_WGI_PV.EST': { USA: 0.12, CHN: -0.35, RUS: -0.9, UKR: -1.6 }, 'SL.UEM.TOTL.ZS': { USA: 4.1, CHN: 4.9, RUS: 3.0, UKR: 9.5 } };
+const mode = { fail: false, wrongCountry: false, wgiGone: false, wrongIndicator: false }, hits = []; const WBV = { 'GOV_WGI_PV.EST': { USA: 0.12, CHN: -0.35, RUS: -0.9, UKR: -1.6, TWN: 0.8 }, 'SL.UEM.TOTL.ZS': { USA: 4.1, CHN: 4.9, RUS: 3.0, UKR: 9.5 } };
 const server = http.createServer((q, s) => {
   hits.push(q.url); const u = new URL(q.url, 'http://x'), send = (code, body, type = 'application/json') => { s.writeHead(code, { 'content-type': type }); s.end(body); };
   if (u.pathname.endsWith('.zip')) { if (u.pathname.includes('-271-')) return send(404, 'nope', 'text/plain'); if (mode.fail) return send(503, 'down', 'text/plain'); return send(200, zip('ucdp-prio-acd-261.csv', csv), 'application/zip'); }
@@ -131,8 +131,9 @@ const server = http.createServer((q, s) => {
   if (meta) return send(200, JSON.stringify(meta[1] === 'GOV_WGI_PV.EST' && !mode.wgiGone ? [{ page: 1 }, [{ id: 'GOV_WGI_PV.EST', name: 'Political Stability - Governance estimate (approx. -2.5 to +2.5)', source: { id: '2', value: 'World Development Indicators' } }]] : [{ message: [{ id: '175', key: 'Invalid format', value: 'The indicator was not found. It may have been deleted or archived.' }] }]));
   const m = /\/v2\/country\/([A-Z]{3})(?:\/indicator\/([\w.]+))?$/.exec(u.pathname); if (!m) return send(404, 'x', 'text/plain');
   const [, code, indc] = m;
-  if (code === 'TWN') return send(200, JSON.stringify([{ message: [{ id: '120', key: 'Invalid value', value: 'The provided parameter value is not valid' }] }]));
   if (!indc) return send(200, JSON.stringify([{ page: 1 }, [{ id: code }]]));
+  // SIMULATED Taiwan, modelled on the production answer seen on 2026-11-27: the WGI series has a value, the World Development Indicators series come back empty ("none").
+  if (code === 'TWN' && indc !== 'GOV_WGI_PV.EST') return send(200, JSON.stringify([{ page: 1, lastupdated: '2026-07-01' }, [{ indicator: { id: indc, value: 'name' }, countryiso3code: 'TWN', date: '2025', value: null }]]));
   if (!WBV[indc] || (indc === 'GOV_WGI_PV.EST' && mode.wgiGone)) return send(200, JSON.stringify([{ message: [{ id: '175', key: 'Invalid format', value: 'The indicator was not found. It may have been deleted or archived.' }] }]));
   const v = WBV[indc][code]; return send(200, JSON.stringify([{ page: 1, lastupdated: '2026-07-01' }, [{ indicator: { id: mode.wrongIndicator ? 'PV.EST' : indc, value: 'name' }, countryiso3code: mode.wrongCountry ? 'CHN' : code, date: indc === 'GOV_WGI_PV.EST' ? '2025' : '2025', value: v }]]));
 });
@@ -141,10 +142,10 @@ const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'risk-')), runS = (script, arg
 const rd = f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
 let r = await runS('fetch-risk-inputs.mjs', ['--verify']); ok(r.code === 0 && !fs.existsSync(path.join(dir, 'risk-inputs.json')) && /nothing was written/.test(r.out), 'fetch verify mode writes nothing');
 hits.length = 0; r = await runS('fetch-risk-inputs.mjs'); const ri = rd('risk-inputs.json');
-ok(r.code === 0 && ri.ucdp.status === 'ok' && ri.ucdp.version === '26.1' && ri.ucdp.latestYear === 2025, 'fetch: UCDP read; the not-yet-published 27.1 (HTTP 404) was skipped and 26.1 used');
+ok(r.code === 0 && ri.ucdp.status === 'ok' && ri.ucdp.version === '26.1' && ri.ucdp.latestYear === 2025 && ri.ucdp.parserVersion === R.sources.ucdp.parserVersion, 'fetch: UCDP read (parserVersion stored); the not-yet-published 27.1 (HTTP 404) was skipped and 26.1 used');
 ok(ri.ucdp.conflicts.UKR.length === 1 && ri.ucdp.conflicts.TWN.length === 0, 'fetch: per-country UCDP summary stored');
 ok(ri.wgi.USA.value === 0.12 && ri.wgi.USA.year === '2025' && ri.wgi.USA.indicator === 'GOV_WGI_PV.EST' && ri.unemployment.UKR.value === 9.5, 'fetch: World Bank values stored with years');
-ok(ri.wgi.TWN.status === 'unsupported' && ri.wgi.TWN.value === undefined && ri.unemployment.TWN.status === 'unsupported', 'fetch: Taiwan reported as unsupported by the World Bank, no value substituted');
+ok(ri.wgi.TWN.status === 'ok' && ri.wgi.TWN.value === 0.8 && ri.unemployment.TWN.status === 'none' && ri.unemployment.TWN.value === undefined, 'fetch (simulated): Taiwan WGI value stored; Taiwan unemployment reported as none, nothing substituted from another country');
 ok(!/ucdpapi|x-ucdp-access-token|api_key/i.test(hits.join(' ')), 'fetch: no UCDP API or key is used');
 ok(hits.some(h => h.includes('/indicator/GOV_WGI_PV.EST')) && !hits.some(h => /\/indicator\/PV\.EST/.test(h)), 'fetch: the current WGI code GOV_WGI_PV.EST is requested and the retired code PV.EST never is');
 const before = hits.length; r = await runS('fetch-risk-inputs.mjs'); ok(r.code === 0 && hits.length === before && /not requested again/.test(r.out), 'a second run right away makes ZERO requests (recent data is not requested again)');
@@ -158,15 +159,15 @@ mode.wrongIndicator = true; r = await runS('fetch-risk-inputs.mjs', ['--force'])
 ok(riW.wgi.USA.status === 'error' && /Refused: the reply was for indicator PV\.EST/.test(riW.wgi.USA.error) && riW.wgi.USA.value === 0.12, 'a reply for a different indicator (such as the legacy PV.EST) is refused, earlier value kept');
 mode.wrongIndicator = false; mode.wgiGone = true; r = await runS('fetch-risk-inputs.mjs', ['--force']); const riG = rd('risk-inputs.json');
 ok(riG.wgi.USA.status === 'error' && /indicator was not found/.test(riG.wgi.USA.error) && /metadata lookup/.test(riG.wgi.USA.error), 'simulated "indicator not found": the error is recorded with a metadata-lookup diagnostic, nothing is invented');
-ok(riG.wgi.USA.value === 0.12 && riG.wgi.TWN.status === 'unsupported' && riG.unemployment.USA.status === 'ok', 'while WGI fails: earlier value kept, Taiwan still reported unsupported, the other series are unaffected');
-const bg = await runS('build-risk.mjs'); const fG = rd('risk.json'); ok(fG.countries.USA.security.stale === true && fG.countries.TWN.security.level === null, 'build after a WGI failure: stale marked, Taiwan has no level, no value invented');
+ok(riG.wgi.USA.value === 0.12 && riG.wgi.TWN.status === 'error' && riG.unemployment.USA.status === 'ok' && riG.unemployment.TWN.status === 'none', 'while WGI fails: earlier value kept, Taiwan WGI is an error with no invented value, the other series are unaffected');
+const bg = await runS('build-risk.mjs'); const fG = rd('risk.json'); ok(fG.countries.USA.security.stale === true && fG.countries.TWN.security.stale === true && fG.countries.TWN.security.facts.some(f => f.value === '0.80'), 'build after a WGI failure: earlier values kept and marked stale (Taiwan too), nothing invented');
 mode.wgiGone = false;
-{ const old = rd('risk-inputs.json'); for (const k of IDS) old.wgi[k] = { status: k === 'TWN' ? 'unsupported' : 'error', error: 'World Bank error: The indicator was not found. It may have been deleted or archived.', fetchedAt: new Date(NOW).toISOString(), checkedAt: new Date(NOW).toISOString() }; fs.writeFileSync(path.join(dir, 'risk-inputs.json'), JSON.stringify(old)); }
+{ const old = rd('risk-inputs.json'); for (const k of IDS) old.wgi[k] = { status: 'error', error: 'World Bank error: The indicator was not found. It may have been deleted or archived.', fetchedAt: new Date(NOW).toISOString(), checkedAt: new Date(NOW).toISOString() }; fs.writeFileSync(path.join(dir, 'risk-inputs.json'), JSON.stringify(old)); }
 hits.length = 0; r = await runS('fetch-risk-inputs.mjs'); const riM = rd('risk-inputs.json');
 ok(hits.filter(h => h.includes('/indicator/GOV_WGI_PV.EST')).length >= 4 && riM.wgi.USA.status === 'ok' && riM.wgi.USA.indicator === 'GOV_WGI_PV.EST', 'cache entries written for the old code are not trusted: they are requested again and replaced, even if recent');
 const vr = await runS('fetch-risk-inputs.mjs', ['--verify', '--force']); ok(/metadata lookup: GOV_WGI_PV\.EST = "Political Stability/.test(vr.out), 'verify mode prints what the World Bank metadata says about the indicator');
 const rb = await runS('build-risk.mjs'); ok(rb.code === 0 && fs.existsSync(path.join(dir, 'risk.json')), 'build: runs from risk-inputs.json alone (no indicators.json, no briefs) and writes risk.json');
-const f1 = rd('risk.json'); ok(f1.status === 'ok' && f1.countries.TWN.security.level === null && f1.countries.USA.security.stale === false && f1.countries.USA.security.level === 'Low' && f1.countries.USA.security.facts.some(f => f.url.endsWith('GOV_WGI_PV.EST')), 'build: after the refetch USA gets Low from GOV_WGI_PV.EST (fresh), Taiwan still has no level');
+const f1 = rd('risk.json'); ok(f1.status === 'ok' && f1.countries.TWN.security.level === 'Low' && f1.countries.USA.security.stale === false && f1.countries.USA.security.level === 'Low' && f1.countries.USA.security.facts.some(f => f.url.endsWith('GOV_WGI_PV.EST')), 'build: after the refetch USA gets Low from GOV_WGI_PV.EST (fresh); Taiwan gets Low from its own (simulated) WGI value');
 fs.writeFileSync(path.join(dir, 'risk-inputs.json'), '{ broken'); r = await runS('build-risk.mjs', [], { RISK_NOW: new Date(NOW + 36e5).toISOString() }); const f2 = rd('risk.json');
 ok(r.code === 2 && f2.status === 'error' && /neither/.test(f2.error) && JSON.stringify(f2.countries) === JSON.stringify(f1.countries) && f2.lastSuccessAt === f1.lastSuccessAt, 'build: nothing readable -> exit 2, last successful assessments preserved unchanged and marked status "error"');
 fs.writeFileSync(path.join(dir, 'risk-inputs.json'), JSON.stringify(ri)); fs.writeFileSync(path.join(dir, 'indicators.json'), JSON.stringify(ind()));
