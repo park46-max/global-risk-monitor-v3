@@ -3,13 +3,13 @@
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
  "methodologyVersion": 2,
- "generatedAt": "2026-11-27T11:49:16.415Z",
- "lastSuccessAt": "2026-11-27T11:49:16.415Z",
- "checkedAt": "2026-11-27T11:49:16.415Z",
+ "generatedAt": "2026-11-27T11:53:49.410Z",
+ "lastSuccessAt": "2026-11-27T11:53:49.410Z",
+ "checkedAt": "2026-11-27T11:53:49.410Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-27T11:49:14.467Z",
+   "checkedAt": "2026-11-27T11:53:49.358Z",
    "lastSuccessAt": "2026-11-27T11:49:14.467Z"
   },
   "indicators": {
