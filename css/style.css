@@ -70,11 +70,7 @@ main{display:grid;gap:16px;padding:16px var(--pad) 8px;grid-template-columns:rep
 .card{background:var(--p1);border:1px solid var(--line);border-radius:10px;padding:16px;transition:border-color .15s}.card:hover{border-color:var(--line2)}
 .ch{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:12px}
 @media(min-width:1101px){
-  .mapc{align-self:start}                                   /* as tall as the globe needs, not as tall as the risk column */
-}
-@media(min-width:1101px) and (min-height:720px){
-  .mapc{position:sticky;top:12px}                           /* the globe stays in view while the long risk column scrolls */
-  .datac{align-self:start;position:sticky;top:12px}
+  .mapc,.datac{align-self:start}                                   /* as tall as its content, not as tall as the neighbouring column */
 }
 
 /* ---------- country selection (neutral blue: colour never encodes a country or a level) ---------- */
