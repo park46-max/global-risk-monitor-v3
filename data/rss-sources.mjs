@@ -6,7 +6,16 @@
 //   2. Read that publisher's own terms of use. Free access is not the same as permission to republish headlines.
 //   3. Only then edit the publisher below:  enabled: true,  termsChecked: 'YYYY-MM-DD'  (the date you read the terms),
 //      and write what you concluded in termsNote.
-// The script refuses to fetch a publisher that is enabled without a termsChecked date.
+// The script refuses to fetch a publisher that is enabled without a termsChecked date, or that still has unresolved items in `blockers`.
+//
+// EACH PUBLISHER HAS A sourceType (see data/source-types.mjs): journalism, government, international-organisation or eu-institution.
+// Official communications (everything except journalism) are labelled on the page, are never grouped with another publisher's headline as a
+// duplicate, are kept out of the country briefs, and never feed the risk assessment.
+//
+// FIELDS THAT ONLY DOCUMENT THE DECISION (the script never reads them): evidence, readOn, reuse, attribution, automatedFetching, feedAddressSource.
+// `blockers` is read: while it is not empty the publisher is refused even if enabled:true and termsChecked are set. Only you clear it,
+// by deleting the lines you have resolved. Neither verify mode nor any workflow ever edits this file.
+// Full write-up with links: docs/rss-source-permissions.md
 //
 // The feed addresses come from third-party feed directories (feeder.co, feedspot.com). They have NOT been confirmed as working
 // by the author of this file. Verify mode is how you confirm them.
@@ -18,13 +27,13 @@ export const PUBLISHERS = [
     // UN Geneva's separate newsroom site (unognewsroom.org) has its own terms (editorial use, acknowledge the United Nations as provider), which are a
     // different site's terms and are not assumed to apply here. This dashboard shows only headline, date and a link back, credits UN Geneva, and uses no images.
     // The feed addresses are NOT known yet: run verify and copy the candidates it prints into `feeds` below.
-    id: 'ungeneva', name: 'UN Geneva', hosts: ['ungeneva.org'], feedHosts: ['ungeneva.org'], discoverUrl: 'https://www.ungeneva.org/en/rss',
+    id: 'ungeneva', sourceType: 'international-organisation', name: 'UN Geneva', hosts: ['ungeneva.org'], feedHosts: ['ungeneva.org'], discoverUrl: 'https://www.ungeneva.org/en/rss',
     enabled: false, termsChecked: null,
     termsNote: 'PERMISSION STATED, CONDITIONS PARTLY UNKNOWN. UN Geneva RSS page (read 2026-11-20): feeds may be used "to display the latest news from UN Geneva on your own website or personal page". No copyright/attribution text found for ungeneva.org itself. Shown with attribution, headline and link only. Enable after you have copied verified feed addresses below and are content with this wording.',
     feeds: []
   },
   {
-    id: 'bbc', name: 'BBC News', hosts: ['bbc.co.uk', 'bbc.com'], feedHosts: ['bbci.co.uk'],
+    id: 'bbc', sourceType: 'journalism', name: 'BBC News', hosts: ['bbc.co.uk', 'bbc.com'], feedHosts: ['bbci.co.uk'],
     enabled: false, termsChecked: null,
     termsNote: 'NOT ESTABLISHED. Review of 2026-11-20: BBC\'s own RSS terms page could not be read. A third-party summary says feeds are allowed on personal sites if unchanged, credited and linked, with permission needed for business use. An unofficial, undated copy of the BBC terms says content from bbc.co.uk needs permission (clause 8a), making money from BBC content is prohibited (7d) and business use needs permission first (9). Whether a free public portfolio site counts as business use is unclear. Read the BBC page yourself, or ask the BBC, before enabling.',
     feeds: [
@@ -35,7 +44,7 @@ export const PUBLISHERS = [
     ]
   },
   {
-    id: 'dw', name: 'DW (Deutsche Welle)', hosts: ['dw.com'], feedHosts: ['dw.com'],
+    id: 'dw', sourceType: 'journalism', name: 'DW (Deutsche Welle)', hosts: ['dw.com'], feedHosts: ['dw.com'],
     enabled: false, termsChecked: null,
     termsNote: 'NOT ESTABLISHED. Review of 2026-11-20: no DW terms of use or RSS licence text could be found. Feeds are publicly available and verified reachable, but that is not permission. Read DW\'s terms, or ask DW, before enabling.',
     feeds: [
@@ -45,7 +54,7 @@ export const PUBLISHERS = [
     ]
   },
   {
-    id: 'france24', name: 'France 24', hosts: ['france24.com'], feedHosts: ['france24.com'],
+    id: 'france24', sourceType: 'journalism', name: 'France 24', hosts: ['france24.com'], feedHosts: ['france24.com'],
     enabled: false, termsChecked: null,
     termsNote: 'NOT ESTABLISHED. Review of 2026-11-20 of the France Medias Monde legal notice (covers france24.com): art. 6.1 grants only "personal and private" use and forbids reproducing or collecting content without authorisation; art. 7 says that creating hyperlinks to the sites implies you have obtained the necessary authorisations. It says nothing specific about RSS. Written permission is the safe route.',
     feeds: [
@@ -56,13 +65,88 @@ export const PUBLISHERS = [
     ]
   },
   {
-    id: 'aljazeera', name: 'Al Jazeera English', hosts: ['aljazeera.com'], feedHosts: ['aljazeera.com'],
+    id: 'aljazeera', sourceType: 'journalism', name: 'Al Jazeera English', hosts: ['aljazeera.com'], feedHosts: ['aljazeera.com'],
     enabled: false, termsChecked: null,
     termsNote: 'NOT ESTABLISHED. Review of 2026-11-20 of aljazeera.com/terms-and-conditions: site use is "only for your own personal, non-commercial use"; copying or distributing needs "the express prior written permission of an authorised officer"; web scraping is prohibited; links must go to full content pages and must not be framed. It says nothing about RSS. Written permission is needed.',
     feeds: [
       { id: 'aj-all', label: 'All news', url: 'https://www.aljazeera.com/xml/rss/all.xml' }
     ]
+  },
+  // ======================= OFFICIAL CANDIDATES (added in Stage 7B, audit of 2026-11-27) =======================
+  // All three are SWITCHED OFF and carry unresolved items in `blockers`. Verify mode may check them technically; nothing is shown on the page.
+  {
+    id: 'state', name: 'U.S. Department of State', sourceType: 'government', hosts: ['state.gov'], feedHosts: ['state.gov'],
+    enabled: false, termsChecked: null,
+    attribution: 'Source: U.S. Department of State (press release). No seal, logo, image or text is copied.',
+    readOn: '2026-11-27',
+    termsNote: 'CANDIDATE, NOT CLEARED. Government communications: shows what the U.S. government says, labelled as such, never presented as independently verified. Copyright text read 2026-11-27: "Unless a copyright is indicated, information on the Department of State Web Site is in the public domain and may be copied and distributed without permission"; citation of the Department as the source is "appreciated". Copyrighted photos and graphics need the original source\'s permission, and an archived copy of the policy says seals and logos need written permission: this dashboard copies neither. The text read says nothing about RSS or automated fetching.',
+    reuse: 'Public domain unless a copyright is indicated; may be copied and distributed without permission; citation appreciated. Not covered: copyrighted photos/graphics, seals and logos.',
+    automatedFetching: 'UNRESOLVED. Not addressed in the copyright text. The host\'s robots.txt is checked by the script at every run; the site\'s own terms were not readable during the audit.',
+    feedAddressSource: 'Third-party feed directory (feeder.co listing, shown as working). Not confirmed on the official state.gov RSS page, which could not be read during the audit.',
+    evidence: [
+      { url: 'https://ceac.state.gov/ceac/Common/Copyright.aspx', what: 'Department copyright text (hosted on a State Department site other than www.state.gov; page shows no date)' },
+      { url: 'https://feeder.co/discover/42270d2058/state-gov', what: 'Third-party listing of the feed address' }
+    ],
+    blockers: [
+      'Confirm the feed address with a verify run (it comes from a third-party directory, not from state.gov).',
+      'Automated fetching is not addressed in the copyright text; read state.gov\'s own terms and the verify run\'s robots.txt result before deciding.',
+      'The copyright text was read on ceac.state.gov, not www.state.gov: confirm the same wording applies to www.state.gov.'
+    ],
+    feeds: [
+      { id: 'state-press', label: 'Press releases', url: 'https://www.state.gov/rss-feed/press-releases/feed/' }
+    ]
+  },
+  {
+    id: 'unnews', name: 'UN News', sourceType: 'international-organisation', hosts: ['news.un.org'], feedHosts: ['news.un.org'],
+    enabled: false, termsChecked: null,
+    attribution: 'Source: UN News. No image, audio, video or text is copied.',
+    readOn: '2026-11-27',
+    termsNote: 'CANDIDATE, NOT CLEARED. International organization communications: shows what the United Nations reports about itself and world events, labelled as such. UN News page read 2026-11-27: "We are very happy for you to use, feature and repurpose our content", asking for attribution to UN News and a link back, and for users to observe copyright on photos, graphics, audio and video; questions to unnews@un.org. The UN-wide terms of use (read as copied on a UN OCHA site, official copy not fetched) are narrower: personal, non-commercial use, no resale or redistribution, no derivative works. Neither text mentions RSS or automated fetching. Written confirmation from UN News is the safe route.',
+    reuse: 'UN News page: use, feature and repurpose with attribution to UN News and a link back; observe copyright on photos, graphics, audio and video. UN-wide terms (secondary copy): personal non-commercial use, no redistribution or derivative works.',
+    automatedFetching: 'UNRESOLVED. Neither the UN News page nor the UN-wide terms address RSS or automated retrieval.',
+    feedAddressSource: 'Third-party listings (feedbagel.com, feeder.co). The official UN News RSS page (news.un.org/en/rss-feeds) was readable but exposed no feed addresses or usage terms to the audit.',
+    evidence: [
+      { url: 'https://news.un.org/en/content/navigate-news', what: 'UN News reuse statement and attribution request' },
+      { url: 'https://news.un.org/en/rss-feeds', what: 'Official RSS page (no feed addresses or terms visible to the audit)' },
+      { url: 'https://feedbagel.com/site/un.org', what: 'Third-party listing of feed addresses' },
+      { url: 'https://feeder.co/ja/discover/ffc94cf9d0/news-un-org-en', what: 'Third-party listing of feed addresses' }
+    ],
+    blockers: [
+      'Written confirmation from UN News (unnews@un.org) that automated RSS use on a public non-commercial dashboard is acceptable.',
+      'The UN-wide terms are narrower than the UN News page (personal, non-commercial, no redistribution): resolve which applies.',
+      'Feed addresses come from third-party listings: confirm them with a verify run and on the official UN News RSS page.',
+      'The UN copyright wording "the United Nations is advised" (seen in a search snippet) may require notifying the UN: check it.'
+    ],
+    feeds: [
+      { id: 'unnews-all',   label: 'All news',           url: 'https://news.un.org/feed/subscribe/en/news/all/rss.xml' },
+      { id: 'unnews-peace', label: 'Peace and Security', url: 'https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml' },
+      { id: 'unnews-eur',   label: 'Europe',             url: 'https://news.un.org/feed/subscribe/en/news/region/europe/feed/rss.xml' },
+      { id: 'unnews-asia',  label: 'Asia Pacific',       url: 'https://news.un.org/feed/subscribe/en/news/region/asia-pacific/feed/rss.xml' },
+      { id: 'unnews-amer',  label: 'Americas',           url: 'https://news.un.org/feed/subscribe/en/news/region/americas/feed/rss.xml' },
+      { id: 'unnews-me',    label: 'Middle East',        url: 'https://news.un.org/feed/subscribe/en/news/region/middle-east/feed/rss.xml' }
+    ]
+  },
+  {
+    // The feed address is NOT known. Verify mode reads the EEAS home page once (after robots.txt) and prints any feed addresses it declares.
+    // Those are only candidates: copy a verified one into `feeds` yourself. No EEAS feeds-page address is assumed here.
+    id: 'eeas', name: 'EEAS (European External Action Service)', sourceType: 'eu-institution', hosts: ['eeas.europa.eu'], feedHosts: ['eeas.europa.eu'], discoverUrl: 'https://www.eeas.europa.eu/',
+    enabled: false, termsChecked: null,
+    attribution: 'Source: European External Action Service. No image, logo or text is copied.',
+    readOn: '2026-11-27',
+    termsNote: 'CANDIDATE, NOT CLEARED, NO FEED ADDRESS YET. EU institutional communications: shows what the EU\'s diplomatic service says, labelled as such. Legal notice read 2026-11-27: "Reuse is authorised, provided the source is acknowledged"; individual notices may add conditions, and documents under third-party intellectual property rights are excluded. The notice says nothing about RSS, crawlers or automated fetching.',
+    reuse: 'Reuse authorised provided the source is acknowledged; third-party IP excluded; conditions in individual notices may apply.',
+    automatedFetching: 'UNRESOLVED. The legal notice does not mention RSS, bots, crawlers or scraping.',
+    feedAddressSource: 'None established. Only old-style "EEAS RSS Feeds" pages turned up in the audit; no current official feed address was confirmed.',
+    evidence: [
+      { url: 'https://www.eeas.europa.eu/eeas/legal-notice_en', what: 'EEAS legal notice (reuse statement)' }
+    ],
+    blockers: [
+      'No official feed address is known: run verify, read the candidates it prints from the EEAS home page, and confirm one on an official EEAS page before adding it to feeds.',
+      'Automated fetching is not addressed in the legal notice; check robots.txt (verify prints it) and ask the EEAS if unsure.'
+    ],
+    feeds: []
   }
+
 ];
 
 // How an article is matched to a country (names and capitals only, never people) is defined in data/country-terms.mjs.
