@@ -36,6 +36,7 @@ scripts/robots-lib.mjs              robots.txt reader used before any feed is re
 tests/test-fetch.mjs                SIMULATED tests for the GDELT/World Bank fetcher (no internet needed)
 tests/test-rss.mjs                  SIMULATED tests for the RSS pipeline (no internet needed)
 tests/test-gdelt-files.mjs          SIMULATED tests for the GDELT file pipeline (no internet needed)
+tests/test-redirect-safeguards.mjs  SIMULATED tests for robots.txt on every redirect, Crawl-delay, loops, 403 (local mock server)
 tests/test-official-sources.mjs     SIMULATED tests for the official-source candidates, robots.txt, verify report, labels (no internet needed)
 .github/workflows/update-data.yml   GDELT + World Bank schedule
 .github/workflows/update-rss.yml    official RSS + GDELT files (manual only until you enable its schedule)
@@ -234,6 +235,14 @@ Three official sources were added to `data/rss-sources.mjs` as **candidates**. A
 - **How to enable one later (separate approval):** run verify, read its terms and the open items, delete the `blockers` you have resolved, then set `enabled: true` and `termsChecked: 'YYYY-MM-DD'` yourself. The script refuses a source that still has blockers.
 - **Limitations:** robots.txt is checked for the configured address, not for each redirect hop. An official site reached through GDELT is not given a source type. The feed addresses for State and UN News come from third-party directories and are unconfirmed until a verify run on GitHub.
 - **Tests:** `node tests/test-official-sources.mjs` (simulated, local mock server). Optional browser test: `PUPPETEER=/path/to/puppeteer node tests/render-official.cjs`. No real publisher was contacted.
+
+### Stage 7C: redirect safeguards, live Stage 7B results, UN Geneva
+
+- **Live Stage 7B verification (GitHub Actions, reported by the project owner, 2026-11-27):** 12 of 19 configured feeds were reachable and readable (BBC 4/4, DW 3/3, France 24 4/4, Al Jazeera 1/1: technical availability only, all still disabled). **State Department:** robots.txt answered HTTP 403, feed not requested. **UN News:** robots.txt disallowed all 6 feeds. **EEAS:** discovery found zero feeds. **UN Geneva:** discovery found 11 candidates. These restrictions are respected, not worked around.
+- **robots.txt for every redirect.** The robots.txt of every address in a redirect chain (same host or another host the publisher lists) is read before that address is requested. A Disallow, an HTTP 401/403, an unreadable robots.txt, a Crawl-delay above 30 s, a redirect loop or a host the publisher does not list stops the chain. Crawl-delay is tracked per host, including for redirect destinations. Nothing is retried with other headers, addresses or proxies. This applies to verify and fetch mode and to feed discovery. The GDELT and risk fetchers use the same HTTP client but pass no such hook, so their requests are unchanged.
+- **UN Geneva** now has five verify-only feed candidates (still `enabled: false`, `termsChecked: null`). Its own RSS page says feeds may be used "to display the latest news from UN Geneva on your own website or personal page" with no conditions; no ungeneva.org terms page was found; UN News's permission is not assumed to apply. Evidence and unresolved questions: `docs/rss-source-permissions.md`.
+- **Nothing is published.** With the real configuration, fetch mode requests nothing and writes no cache (exit 3).
+- **Tests:** `node tests/test-redirect-safeguards.mjs` (37 simulated checks, local mock server) and the updated `tests/test-official-sources.mjs`. A redirect loop is now reported as "redirect loop" instead of "more than 3 redirects" (one assertion in `tests/test-rss.mjs` was updated for that wording).
 
 ## Country intelligence briefs (Stage 3)
 Each country page has a brief with four parts: Overview, Key developments, Why it matters, Sources. It is built automatically by `scripts/build-briefs.mjs` from the cached news (`news-gdelt.json`, and `news-rss.json` if you ever enable RSS) and saved to `data/cache/briefs.json`. **No AI, no paid service, no API key, no network request**: fixed rules only (`data/brief-rules.mjs`, `scripts/brief-lib.mjs`).
