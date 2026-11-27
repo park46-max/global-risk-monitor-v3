@@ -3,23 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b1220">
 <title>Global Risk Monitor</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="skip" href="#country">Skip to country details</a>
 <header class="top">
   <div class="brand"><h1>Global Risk Monitor</h1><p>Geopolitical intelligence terminal</p></div>
-  <div class="tools"><span id="meta" class="chr" aria-live="polite"></span><button id="refresh" class="btn" type="button" title="Re-read the cached data files">Reload data</button></div>
-  <ul class="legend" aria-label="Data status key">
-    <li><span class="pill live"><i></i>Updated</span> fresh: the latest fetch succeeded</li>
-    <li><span class="pill stale"><i></i>Cached / Stale</span> older data kept after a failed or skipped refresh, or data older than expected</li>
-    <li><span class="pill hist"><i></i>Historical</span> dated statistic</li>
-    <li><span class="pill bad"><i></i>Unavailable</span> nothing has ever been fetched, or no data exists</li>
-    <li>Data is fetched on a schedule by GitHub Actions and served as cached JSON. Your browser never calls GDELT, the World Bank or any publisher.</li>
-  </ul>
+  <span id="meta" class="chr" aria-live="polite"></span>
+  <button id="refresh" class="btn" type="button" title="Re-read the cached data files">Reload data</button>
+  <details class="key">
+    <summary>Data status key</summary>
+    <ul class="legend" aria-label="Data status key">
+      <li><span class="pill live"><i></i>Updated</span> fresh: the latest fetch succeeded</li>
+      <li><span class="pill stale"><i></i>Cached / Stale</span> older data kept after a failed or skipped refresh, or data older than expected</li>
+      <li><span class="pill hist"><i></i>Historical</span> dated statistic</li>
+      <li><span class="pill info"><i></i>Not enabled yet</span> a source that is intentionally switched off: not a fault</li>
+      <li><span class="pill bad"><i></i>Unavailable</span> nothing has ever been fetched, or no data exists</li>
+      <li>Data is fetched on a schedule by GitHub Actions and served as cached JSON. Your browser never calls GDELT, the World Bank or any publisher.</li>
+    </ul>
+  </details>
 </header>
 <main>
   <nav id="chips" class="strip" aria-label="Select an area"></nav>
@@ -32,13 +37,16 @@
     </div>
     <div id="globe" class="globe" aria-label="Interactive 3D globe. Use the country buttons or search as a keyboard alternative."></div>
     <div id="gfb" class="state" hidden></div>
-    <p class="note" id="mapnote">Boundaries: Natural Earth (public domain), 1:110m, via the world-atlas package. Natural Earth uses its own conventions for disputed areas, and small territories may be missing at this scale. This site takes no position on any territorial or sovereignty dispute, including the political status of Taiwan. 3D rendering: globe.gl and three.js (MIT).</p>
+    <div class="note" id="mapnote">
+      <p>Boundaries: Natural Earth (public domain). This site takes no position on any territorial or sovereignty dispute, including the political status of Taiwan.</p>
+      <details><summary>Map and boundary details</summary><p>Natural Earth is used at 1:110m, via the world-atlas package. Natural Earth uses its own conventions for disputed areas, and small territories may be missing at this scale. 3D rendering: globe.gl and three.js (MIT).</p></details>
+    </div>
   </section>
-  <section class="side swap"><div id="head"></div>
-    <article class="card"><div class="ch"><h2>Risk assessment</h2></div><div id="risk"></div></article>
+  <section class="side swap" id="country" tabindex="-1"><div id="head"></div>
+    <article class="card"><div class="ch"><h2>Country Risk Profile</h2></div><div id="risk"></div></article>
   </section>
   <article class="card newsc swap"><div class="ch"><h2>Latest developments</h2><div class="chr" id="nst"></div></div><div id="news"></div></article>
-  <article class="card datac swap"><div class="ch"><h2>Country data</h2><div class="chr" id="dst"></div></div><div id="data"></div></article>
+  <article class="card datac swap"><div class="ch"><h2>Country indicators</h2><div class="chr" id="dst"></div></div><div id="data"></div></article>
   <article class="card briefc swap"><div class="ch"><h2>Country intelligence brief</h2></div><div id="brief"></div></article>
 </main>
 <footer>News: official RSS feeds (only sources that have been verified and switched on), data from <a href="https://www.gdeltproject.org/" target="_blank" rel="noopener noreferrer">The GDELT Project</a> (open data files and the DOC 2.0 API), each article linking to its original publisher. Indicators: World Bank Open Data. Boundaries: Natural Earth. Nothing on this page is generated by an AI model.</footer>
