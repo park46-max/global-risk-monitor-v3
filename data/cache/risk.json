@@ -2,23 +2,23 @@
  "schema": 1,
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
- "methodologyVersion": 1,
- "generatedAt": "2026-11-27T06:38:44.901Z",
- "lastSuccessAt": "2026-11-27T06:38:44.901Z",
- "checkedAt": "2026-11-27T06:38:44.901Z",
+ "methodologyVersion": 2,
+ "generatedAt": "2026-11-27T11:49:16.415Z",
+ "lastSuccessAt": "2026-11-27T11:49:16.415Z",
+ "checkedAt": "2026-11-27T11:49:16.415Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-27T06:38:44.859Z",
-   "lastSuccessAt": "2026-11-21T03:15:43.287Z"
+   "checkedAt": "2026-11-27T11:49:14.467Z",
+   "lastSuccessAt": "2026-11-27T11:49:14.467Z"
   },
   "indicators": {
    "status": "ok",
-   "checkedAt": "2026-11-23T05:42:44.222Z",
-   "lastSuccessAt": "2026-11-23T05:42:52.179Z"
+   "checkedAt": "2026-11-27T08:47:46.764Z",
+   "lastSuccessAt": "2026-11-27T08:48:07.555Z"
   },
   "briefs": {
-   "generatedAt": "2026-11-27T04:30:25.967Z"
+   "generatedAt": "2026-11-27T10:27:11.937Z"
   }
  },
  "countries": {
@@ -28,13 +28,21 @@
     "category": "security",
     "status": "assessed",
     "level": "High",
-    "summary": "United States is recorded in UCDP/PRIO v26.1 as the location of or a primary party in 7 state-based armed conflicts in 2025.",
-    "rule": "S2: location or primary party in a UCDP conflict of intensity 1 (minor) in the newest dataset year -> High",
+    "summary": "United States is recorded in UCDP/PRIO v26.1 for 2025 in 7 state-based armed conflicts: 1 as location and primary party; 6 as supporting party.",
+    "rule": "S2: location or primary party in a UCDP conflict of intensity 1 (minor) in the newest dataset year -> High. Set by conflict 16099 (intensity 1, a property of the whole conflict).",
     "facts": [
      {
       "kind": "observed",
+      "label": "UCDP armed conflict 16099, 2025",
+      "value": "Government of United Kingdom, Government of United States of America vs Government of Yemen (North Yemen); UCDP \"location\" field: United Kingdom, United States of America, Yemen (North Yemen); minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: interstate; about territory; this country is coded as location and primary party",
+      "year": "2025",
+      "source": "UCDP/PRIO Armed Conflict Dataset",
+      "url": "https://ucdp.uu.se/downloads/"
+     },
+     {
+      "kind": "observed",
       "label": "UCDP armed conflict 337, 2025",
-      "value": "Government of Somalia vs Al-Shabaab; location: Somalia; war (at least 1,000 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "value": "Government of Somalia vs Al-Shabaab; UCDP \"location\" field: Somalia; war (at least 1,000 battle-related deaths in the year, all parties together); type: internationalised internal; about government; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -42,7 +50,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 13641, 2025",
-      "value": "Government of Nigeria vs IS; location: Nigeria; war (at least 1,000 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
+      "value": "Government of Nigeria vs IS; UCDP \"location\" field: Nigeria; war (at least 1,000 battle-related deaths in the year, all parties together); type: internationalised internal; about territory; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -50,7 +58,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 14609, 2025",
-      "value": "Government of Iran vs Government of Israel; location: Iran, Israel; war (at least 1,000 battle-related deaths in the year); type: interstate; about government; this country is a supporting party",
+      "value": "Government of Iran vs Government of Israel; UCDP \"location\" field: Iran, Israel; war (at least 1,000 battle-related deaths in the year, all parties together); type: interstate; about government; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -58,7 +66,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 259, 2025",
-      "value": "Government of Iraq vs IS; location: Iraq; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "value": "Government of Iraq vs IS; UCDP \"location\" field: Iraq; minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: internationalised internal; about government; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -66,7 +74,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 13604, 2025",
-      "value": "Government of Syria vs IS; location: Syria; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
+      "value": "Government of Syria vs IS; UCDP \"location\" field: Syria; minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: internationalised internal; about territory; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -74,15 +82,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 14197, 2025",
-      "value": "Government of Somalia vs IS; location: Somalia; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
-      "year": "2025",
-      "source": "UCDP/PRIO Armed Conflict Dataset",
-      "url": "https://ucdp.uu.se/downloads/"
-     },
-     {
-      "kind": "observed",
-      "label": "UCDP armed conflict 16099, 2025",
-      "value": "Government of United Kingdom, Government of United States of America vs Government of Yemen (North Yemen); location: United Kingdom, United States of America, Yemen (North Yemen); minor conflict (25 to 999 battle-related deaths in the year); type: interstate; about territory; this country is a location or primary party",
+      "value": "Government of Somalia vs IS; UCDP \"location\" field: Somalia; minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: internationalised internal; about territory; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -99,11 +99,17 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+    "lastSuccessAt": "2026-11-27T11:49:14.467Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
-     "Headlines are shown as reported context only and played no part in the level."
+     "Headlines are shown as reported context only and played no part in the level.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "Annual data: this describes calendar year 2025, not events since then.",
+     "UCDP intensity describes the conflict as a whole in 2025 (battle-related deaths of all parties together). It is not a measure of this country's own military contribution or casualties.",
+     "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+     "Each entry is one UCDP conflict record for the year, listed once; several records can concern the same location.",
+     "A supporting party is a state that entered the conflict with troops to actively support a primary party. This dashboard does not state which side."
     ],
     "context": [
      {
@@ -128,13 +134,13 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    },
    "economic": {
     "category": "economic",
     "status": "assessed",
     "level": "Low",
-    "summary": "Based on 3 World Bank macro indicators (inflation, gdp growth, unemployment); the highest band reached is Low.",
+    "summary": "Based on 3 World Bank macro indicators (inflation, GDP growth, unemployment); the highest band reached is Low. Reference years differ: inflation 2024, GDP growth 2025, unemployment 2025. Annual data, not current events.",
     "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)",
     "facts": [
      {
@@ -168,7 +174,7 @@
      {
       "kind": "observed",
       "label": "Unemployment (% of labour force)",
-      "value": "4.2",
+      "value": "4.20",
       "year": "2025",
       "source": "Unemployment, total (% of labour force), modelled ILO estimate",
       "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
@@ -205,11 +211,15 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-23T05:42:44.877Z",
+    "lastSuccessAt": "2026-11-27T08:47:47.381Z",
     "stale": false,
     "limitations": [
-     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
-     "Headlines played no part in the level."
+     "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+     "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then.",
+     "Headlines played no part in the level.",
+     "Reference years differ between indicators: inflation 2024, GDP growth 2025, unemployment 2025."
     ],
     "context": [],
     "contextAsOf": null
@@ -253,7 +263,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    }
   },
   "CHN": {
@@ -262,13 +272,13 @@
     "category": "security",
     "status": "assessed",
     "level": "Moderate",
-    "summary": "China is recorded in UCDP/PRIO v26.1 as a supporting party in 1 state-based armed conflict in 2025.",
-    "rule": "S3: appears only as a supporting party in a UCDP conflict in the newest dataset year -> Moderate",
+    "summary": "China is recorded in UCDP/PRIO v26.1 for 2025 in 1 state-based armed conflict: 1 as supporting party.",
+    "rule": "S3: appears only as a supporting party in a UCDP conflict in the newest dataset year -> Moderate. No entry as location or primary party.",
     "facts": [
      {
       "kind": "observed",
       "label": "UCDP armed conflict 416, 2025",
-      "value": "Government of Central African Republic vs CMSPR, CPC, CPC-F; location: Central African Republic; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "value": "Government of Central African Republic vs CMSPR, CPC, CPC-F; UCDP \"location\" field: Central African Republic; minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: internationalised internal; about government; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -285,11 +295,17 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+    "lastSuccessAt": "2026-11-27T11:49:14.467Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
-     "Headlines are shown as reported context only and played no part in the level."
+     "Headlines are shown as reported context only and played no part in the level.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "Annual data: this describes calendar year 2025, not events since then.",
+     "UCDP intensity describes the conflict as a whole in 2025 (battle-related deaths of all parties together). It is not a measure of this country's own military contribution or casualties.",
+     "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+     "Each entry is one UCDP conflict record for the year, listed once; several records can concern the same location.",
+     "A supporting party is a state that entered the conflict with troops to actively support a primary party. This dashboard does not state which side."
     ],
     "context": [
      {
@@ -307,20 +323,20 @@
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
-      "publisher": "jpost.com",
-      "url": "http://www.jpost.com/international/article-916124",
-      "time": "2026-11-25T18:00:00.000Z",
+      "headline": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
+      "publisher": "indiatimes.com",
+      "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
+      "time": "2026-11-25T09:30:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    },
    "economic": {
     "category": "economic",
     "status": "assessed",
     "level": "Low",
-    "summary": "Based on 3 World Bank macro indicators (inflation, gdp growth, unemployment); the highest band reached is Low.",
+    "summary": "Based on 3 World Bank macro indicators (inflation, GDP growth, unemployment); the highest band reached is Low. Reference year: 2025. Annual data, not current events.",
     "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)",
     "facts": [
      {
@@ -391,10 +407,13 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-23T05:42:46.324Z",
+    "lastSuccessAt": "2026-11-27T08:47:48.885Z",
     "stale": false,
     "limitations": [
-     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+     "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then.",
      "Headlines played no part in the level."
     ],
     "context": [],
@@ -432,14 +451,14 @@
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Chinese tech giant Huawei convicted in US over Iran sanctions, espionage, fraud",
-      "publisher": "jpost.com",
-      "url": "http://www.jpost.com/international/article-916124",
-      "time": "2026-11-25T18:00:00.000Z",
+      "headline": "US tariff plan targeting China, other economies risks offsetting trade negotiation gains, business confidence: experts",
+      "publisher": "globaltimes.cn",
+      "url": "https://www.globaltimes.cn/page/202611/1375070.shtml",
+      "time": "2026-11-25T17:15:00.000Z",
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    }
   },
   "RUS": {
@@ -448,21 +467,21 @@
     "category": "security",
     "status": "assessed",
     "level": "Critical",
-    "summary": "Russia is recorded in UCDP/PRIO v26.1 as the location of or a primary party in 5 state-based armed conflicts in 2025.",
-    "rule": "S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical",
+    "summary": "Russia is recorded in UCDP/PRIO v26.1 for 2025 in 5 state-based armed conflicts: 1 as location and primary party; 4 as supporting party.",
+    "rule": "S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical. Set by conflict 13243 (intensity 2, a property of the whole conflict).",
     "facts": [
      {
       "kind": "observed",
-      "label": "UCDP armed conflict 11347, 2025",
-      "value": "Government of Mali vs JNIM; location: Mali; war (at least 1,000 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "label": "UCDP armed conflict 13243, 2025",
+      "value": "Government of Russia (Soviet Union) vs Government of Ukraine; UCDP \"location\" field: Russia (Soviet Union), Ukraine; war (at least 1,000 battle-related deaths in the year, all parties together); type: interstate; about government and territory; this country is coded as location and primary party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
      },
      {
       "kind": "observed",
-      "label": "UCDP armed conflict 13243, 2025",
-      "value": "Government of Russia (Soviet Union) vs Government of Ukraine; location: Russia (Soviet Union), Ukraine; war (at least 1,000 battle-related deaths in the year); type: interstate; about government and territory; this country is a location or primary party",
+      "label": "UCDP armed conflict 11347, 2025",
+      "value": "Government of Mali vs JNIM; UCDP \"location\" field: Mali; war (at least 1,000 battle-related deaths in the year, all parties together); type: internationalised internal; about government; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -470,7 +489,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 416, 2025",
-      "value": "Government of Central African Republic vs CMSPR, CPC, CPC-F; location: Central African Republic; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government; this country is a supporting party",
+      "value": "Government of Central African Republic vs CMSPR, CPC, CPC-F; UCDP \"location\" field: Central African Republic; minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: internationalised internal; about government; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -478,7 +497,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 14113, 2025",
-      "value": "Government of Mali vs IS; location: Mali; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about territory; this country is a supporting party",
+      "value": "Government of Mali vs IS; UCDP \"location\" field: Mali; minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: internationalised internal; about territory; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -486,7 +505,7 @@
      {
       "kind": "observed",
       "label": "UCDP armed conflict 16038, 2025",
-      "value": "Government of Mali vs FLA; location: Mali; minor conflict (25 to 999 battle-related deaths in the year); type: internationalised internal; about government and territory; this country is a supporting party",
+      "value": "Government of Mali vs FLA; UCDP \"location\" field: Mali; minor conflict (25 to 999 battle-related deaths in the year, all parties together); type: internationalised internal; about government and territory; this country is coded as supporting party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -503,11 +522,17 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+    "lastSuccessAt": "2026-11-27T11:49:14.467Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
-     "Headlines are shown as reported context only and played no part in the level."
+     "Headlines are shown as reported context only and played no part in the level.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "Annual data: this describes calendar year 2025, not events since then.",
+     "UCDP intensity describes the conflict as a whole in 2025 (battle-related deaths of all parties together). It is not a measure of this country's own military contribution or casualties.",
+     "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+     "Each entry is one UCDP conflict record for the year, listed once; several records can concern the same location.",
+     "A supporting party is a state that entered the conflict with troops to actively support a primary party. This dashboard does not state which side."
     ],
     "context": [
      {
@@ -525,20 +550,20 @@
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump Urges Putin To End Military Aggression Across Europe, Says Russia-Ukraine Peace Deal 'Strong Possibility'",
-      "publisher": "freepressjournal.in",
-      "url": "https://www.freepressjournal.in/world/trump-urges-putin-to-end-military-aggression-across-europe-says-russia-ukraine-peace-deal-strong-possibility",
-      "time": "2026-11-26T16:06:00.000Z",
-      "timeBasis": "published"
+      "headline": "Mural appears near Dutch embassy in Moscow depicting missile supplies for Ukraine",
+      "publisher": "straitstimes.com",
+      "url": "https://www.straitstimes.com/world/europe/mural-appears-near-dutch-embassy-in-moscow-depicting-missile-supplies-for-ukraine",
+      "time": "2026-11-26T14:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    },
    "economic": {
     "category": "economic",
     "status": "assessed",
     "level": "Moderate",
-    "summary": "Based on 3 World Bank macro indicators (inflation, gdp growth, unemployment); the highest band reached is Moderate.",
+    "summary": "Based on 3 World Bank macro indicators (inflation, GDP growth, unemployment); the highest band reached is Moderate. Reference year: 2025. Annual data, not current events.",
     "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)",
     "facts": [
      {
@@ -558,7 +583,7 @@
      {
       "kind": "observed",
       "label": "GDP growth (annual %)",
-      "value": "1",
+      "value": "1.00",
       "year": "2025",
       "source": "GDP growth (annual %)",
       "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
@@ -609,10 +634,13 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-23T05:42:47.847Z",
+    "lastSuccessAt": "2026-11-27T08:47:50.277Z",
     "stale": false,
     "limitations": [
-     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+     "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then.",
      "Headlines played no part in the level.",
      "UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution."
     ],
@@ -651,14 +679,14 @@
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump Urges Putin To End Military Aggression Across Europe, Says Russia-Ukraine Peace Deal 'Strong Possibility'",
-      "publisher": "freepressjournal.in",
-      "url": "https://www.freepressjournal.in/world/trump-urges-putin-to-end-military-aggression-across-europe-says-russia-ukraine-peace-deal-strong-possibility",
-      "time": "2026-11-26T16:06:00.000Z",
-      "timeBasis": "published"
+      "headline": "Mural appears near Dutch embassy in Moscow depicting missile supplies for Ukraine",
+      "publisher": "straitstimes.com",
+      "url": "https://www.straitstimes.com/world/europe/mural-appears-near-dutch-embassy-in-moscow-depicting-missile-supplies-for-ukraine",
+      "time": "2026-11-26T14:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    }
   },
   "UKR": {
@@ -667,13 +695,13 @@
     "category": "security",
     "status": "assessed",
     "level": "Critical",
-    "summary": "Ukraine is recorded in UCDP/PRIO v26.1 as the location of or a primary party in 1 state-based armed conflict in 2025.",
-    "rule": "S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical",
+    "summary": "Ukraine is recorded in UCDP/PRIO v26.1 for 2025 in 1 state-based armed conflict: 1 as location and primary party.",
+    "rule": "S1: location or primary party in a UCDP conflict of intensity 2 (war) in the newest dataset year -> Critical. Set by conflict 13243 (intensity 2, a property of the whole conflict).",
     "facts": [
      {
       "kind": "observed",
       "label": "UCDP armed conflict 13243, 2025",
-      "value": "Government of Russia (Soviet Union) vs Government of Ukraine; location: Russia (Soviet Union), Ukraine; war (at least 1,000 battle-related deaths in the year); type: interstate; about government and territory; this country is a location or primary party",
+      "value": "Government of Russia (Soviet Union) vs Government of Ukraine; UCDP \"location\" field: Russia (Soviet Union), Ukraine; war (at least 1,000 battle-related deaths in the year, all parties together); type: interstate; about government and territory; this country is coded as location and primary party",
       "year": "2025",
       "source": "UCDP/PRIO Armed Conflict Dataset",
       "url": "https://ucdp.uu.se/downloads/"
@@ -690,11 +718,16 @@
     "referenceDates": [
      "2025"
     ],
-    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+    "lastSuccessAt": "2026-11-27T11:49:14.467Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
-     "Headlines are shown as reported context only and played no part in the level."
+     "Headlines are shown as reported context only and played no part in the level.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "Annual data: this describes calendar year 2025, not events since then.",
+     "UCDP intensity describes the conflict as a whole in 2025 (battle-related deaths of all parties together). It is not a measure of this country's own military contribution or casualties.",
+     "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+     "Each entry is one UCDP conflict record for the year, listed once; several records can concern the same location."
     ],
     "context": [
      {
@@ -705,11 +738,11 @@
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump Urges Putin To End Military Aggression Across Europe, Says Russia-Ukraine Peace Deal 'Strong Possibility'",
-      "publisher": "freepressjournal.in",
-      "url": "https://www.freepressjournal.in/world/trump-urges-putin-to-end-military-aggression-across-europe-says-russia-ukraine-peace-deal-strong-possibility",
-      "time": "2026-11-26T16:06:00.000Z",
-      "timeBasis": "published"
+      "headline": "EU envoy backs India's diplomatic efforts for Ukraine truce, extends solidarity to safeguard energy security",
+      "publisher": "aninews.in",
+      "url": "https://aninews.in/news/world/asia/eu-envoy-backs-indias-diplomatic-efforts-for-ukraine-truce-extends-solidarity-to-safeguard-energy-security20261127140546/",
+      "time": "2026-11-27T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
      },
      {
       "headline": "Mural appears near Dutch embassy in Moscow depicting missile supplies for Ukraine",
@@ -719,13 +752,13 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    },
    "economic": {
     "category": "economic",
     "status": "assessed",
     "level": "High",
-    "summary": "Based on 2 World Bank macro indicators (inflation, gdp growth); the highest band reached is High.",
+    "summary": "Based on 2 World Bank macro indicators (inflation, GDP growth); the highest band reached is High. Reference year: 2025. Annual data, not current events.",
     "rule": "E: the overall level is the worst band among the 2 available indicators (bands in data/risk-methodology.mjs)",
     "facts": [
      {
@@ -775,11 +808,14 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-23T05:42:49.760Z",
+    "lastSuccessAt": "2026-11-27T08:47:55.779Z",
     "stale": false,
     "limitations": [
      "Unemployment (% of labour force): the newest value is from 2021, older than 3 years, so it was not used.",
-     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
+     "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+     "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then.",
      "Headlines played no part in the level.",
      "UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution."
     ],
@@ -811,11 +847,11 @@
       "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Trump Urges Putin To End Military Aggression Across Europe, Says Russia-Ukraine Peace Deal 'Strong Possibility'",
-      "publisher": "freepressjournal.in",
-      "url": "https://www.freepressjournal.in/world/trump-urges-putin-to-end-military-aggression-across-europe-says-russia-ukraine-peace-deal-strong-possibility",
-      "time": "2026-11-26T16:06:00.000Z",
-      "timeBasis": "published"
+      "headline": "EU envoy backs India's diplomatic efforts for Ukraine truce, extends solidarity to safeguard energy security",
+      "publisher": "aninews.in",
+      "url": "https://aninews.in/news/world/asia/eu-envoy-backs-indias-diplomatic-efforts-for-ukraine-truce-extends-solidarity-to-safeguard-energy-security20261127140546/",
+      "time": "2026-11-27T09:15:00.000Z",
+      "timeBasis": "first seen by GDELT"
      },
      {
       "headline": "Mural appears near Dutch embassy in Moscow depicting missile supplies for Ukraine",
@@ -825,7 +861,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    }
   },
   "TWN": {
@@ -834,8 +870,8 @@
     "category": "security",
     "status": "assessed",
     "level": "Low",
-    "summary": "UCDP records no state-based armed conflict involving Taiwan in 2025; the World Bank governance estimate for 2025 is 1.",
-    "rule": "S4: no UCDP conflict recorded; WGI estimate >= 0 -> Low",
+    "summary": "UCDP records no state-based armed conflict involving Taiwan in 2025; the World Bank governance estimate for 2025 is 1.00.",
+    "rule": "S4: no UCDP conflict recorded; WGI estimate 0.9986707 (shown as 1.00) >= 0 -> Low",
     "facts": [
      {
       "kind": "observed",
@@ -847,8 +883,8 @@
      },
      {
       "kind": "observed",
-      "label": "Political stability and absence of violence/terrorism, estimate (WGI, about -2.5 to +2.5)",
-      "value": "1",
+      "label": "Political stability, governance estimate (WGI 2025 revision, about -2.5 to +2.5)",
+      "value": "1.00",
       "year": "2025",
       "source": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
       "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST"
@@ -872,22 +908,40 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+    "lastSuccessAt": "2026-11-27T11:49:14.467Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
      "Headlines are shown as reported context only and played no part in the level.",
-     "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). Annual. Single-year differences between countries can lie within the margin of error. The thresholds used here were chosen on the conventional scale and have not been re-checked against the revised series.",
+     "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+     "Annual data: this describes calendar year 2025, not events since then.",
+     "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). The World Bank defines political stability as perceptions of the likelihood of politically motivated violence, including civil unrest and terrorism. Annual. The World Bank publishes 90 percent confidence intervals, which are not used here: single-year differences between countries can lie within them. The cut-offs 0.0 and -1.0 are project-defined conventions chosen on the conventional scale and have not been re-checked against the revised series.",
+     "This level for Taiwan does not measure cross-strait tension or military activity: it uses only the absence of a UCDP-recorded state-based armed conflict and the WGI perception estimate.",
      "The level reflects measured violence and instability perceptions only, not interstate tension."
     ],
-    "context": [],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "context": [
+     {
+      "headline": "Chinese military tests new Taiwan landing tactics in coastal drills",
+      "publisher": "straitstimes.com",
+      "url": "https://www.straitstimes.com/asia/chinese-military-tests-new-taiwan-landing-tactics-in-coastal-drills",
+      "time": "2026-11-27T04:56:00.000Z",
+      "timeBasis": "published"
+     },
+     {
+      "headline": "Taipei Mayoral Candidate Puma Shen on Fighting Chinese Cognitive Warfare",
+      "publisher": "time.com",
+      "url": "https://time.com/article/2026/11/24/puma-shen-taipei-mayor-taiwan-china-interview/",
+      "time": "2026-11-24T20:42:00.000Z",
+      "timeBasis": "published"
+     }
+    ],
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    },
    "economic": {
     "category": "economic",
     "status": "insufficient",
     "level": null,
-    "summary": "No level: only 0 of the 3 indicators have a recent value (at least 2 are required). Missing data is not treated as low risk.",
+    "summary": "No level: the World Bank returned no value for any of the 3 indicators for Taiwan's code (at least 2 recent values are required), and nothing from another country is substituted. Missing data is not treated as low risk.",
     "rule": null,
     "facts": [],
     "sources": [],
@@ -895,8 +949,9 @@
     "lastSuccessAt": null,
     "stale": false,
     "limitations": [
-     "Only these macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured, so \"Low\" means only that the listed indicators are in ordinary ranges.",
-     "Headlines played no part in the level."
+     "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+     "Headlines played no part in the level.",
+     "The World Bank help desk states that its World Development Indicators do not list \"Taiwan, China\" as a separate country (https://datahelpdesk.worldbank.org/knowledgebase/articles/114933-where-are-your-data-on-taiwan), so these series are absent at the source. This is a source coverage limit, not evidence of low risk. The WGI political stability series is published for Taiwan and is a different dataset."
     ],
     "insufficientReason": "no-evidence",
     "context": [],
@@ -920,28 +975,28 @@
     "insufficientReason": "method",
     "context": [
      {
-      "headline": "Puma Shen: Taiwan's rising Taipei mayoral candidate who is also sanctioned by China",
-      "publisher": "hindustantimes.com",
-      "url": "https://www.hindustantimes.com/world-news/puma-shen-taiwans-rising-taepei-mayoral-candidate-who-is-also-sanctioned-by-china-101795742729439.html",
-      "time": "2026-11-27T01:55:00.000Z",
-      "timeBasis": "published"
+      "headline": "US tariff proposal would place Taiwan equal to FTA partners: official",
+      "publisher": "taipeitimes.com",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868438",
+      "time": "2026-11-26T04:30:00.000Z",
+      "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "Meet the rising Taipei mayoral candidate who's also sanctioned by China",
-      "publisher": "wdtimes.com",
-      "url": "http://www.wdtimes.com/news/world/meet-the-rising-taipei-mayoral-candidate-whos-also-sanctioned-by-china/article_505643f1-6f28-5b3e-bae1-942a3a3bd594.html",
-      "time": "2026-11-27T01:00:00.000Z",
-      "timeBasis": "published"
+      "headline": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
+      "publisher": "taipeitimes.com",
+      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405",
+      "time": "2026-11-25T17:45:00.000Z",
+      "timeBasis": "first seen by GDELT"
      },
      {
-      "headline": "What to know about the latest U.S. tariff proposals for Taiwan",
-      "publisher": "focustaiwan.tw",
-      "url": "https://focustaiwan.tw/business/202611260019",
-      "time": "2026-11-26T12:38:00.000Z",
-      "timeBasis": "published"
+      "headline": "Taiwan seeks to lock in 15% US tariff to shield AI server and chip exports",
+      "publisher": "digitimes.com",
+      "url": "https://www.digitimes.com/news/a20261126PD232/taiwan-exports-2026-taipei-investigation.html",
+      "time": "2026-11-27T06:00:00.000Z",
+      "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T04:30:25.967Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z"
    }
   }
  }

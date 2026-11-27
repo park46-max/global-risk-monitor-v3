@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-27T06:38:44.859Z",
- "checkedAt": "2026-11-27T06:38:44.859Z",
- "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+ "generatedAt": "2026-11-27T11:49:14.467Z",
+ "checkedAt": "2026-11-27T11:49:14.467Z",
+ "lastSuccessAt": "2026-11-27T11:49:14.467Z",
  "sources": {
   "ucdp": "https://ucdp.uu.se/downloads/",
   "worldBank": "https://data.worldbank.org/"
@@ -11,6 +11,7 @@
   "status": "ok",
   "error": null,
   "version": "26.1",
+  "parserVersion": 2,
   "sourceUrl": "https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-261-csv.zip",
   "latestYear": 2025,
   "conflicts": {
@@ -23,6 +24,11 @@
      "intensity": 2,
      "type": "internationalised internal",
      "incompatibility": "government",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -33,6 +39,11 @@
      "intensity": 2,
      "type": "internationalised internal",
      "incompatibility": "territory",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -43,6 +54,11 @@
      "intensity": 2,
      "type": "interstate",
      "incompatibility": "government",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -53,6 +69,11 @@
      "intensity": 1,
      "type": "internationalised internal",
      "incompatibility": "government",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -63,6 +84,11 @@
      "intensity": 1,
      "type": "internationalised internal",
      "incompatibility": "territory",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -73,6 +99,11 @@
      "intensity": 1,
      "type": "internationalised internal",
      "incompatibility": "territory",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -83,6 +114,11 @@
      "intensity": 1,
      "type": "interstate",
      "incompatibility": "territory",
+     "roles": {
+      "location": true,
+      "primary": true,
+      "supporting": false
+     },
      "role": "location or primary party"
     }
    ],
@@ -95,6 +131,11 @@
      "intensity": 1,
      "type": "internationalised internal",
      "incompatibility": "government",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     }
    ],
@@ -107,6 +148,11 @@
      "intensity": 2,
      "type": "internationalised internal",
      "incompatibility": "government",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -117,6 +163,11 @@
      "intensity": 2,
      "type": "interstate",
      "incompatibility": "government and territory",
+     "roles": {
+      "location": true,
+      "primary": true,
+      "supporting": false
+     },
      "role": "location or primary party"
     },
     {
@@ -127,6 +178,11 @@
      "intensity": 1,
      "type": "internationalised internal",
      "incompatibility": "government",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -137,6 +193,11 @@
      "intensity": 1,
      "type": "internationalised internal",
      "incompatibility": "territory",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     },
     {
@@ -147,6 +208,11 @@
      "intensity": 1,
      "type": "internationalised internal",
      "incompatibility": "government and territory",
+     "roles": {
+      "location": false,
+      "primary": false,
+      "supporting": true
+     },
      "role": "supporting party"
     }
    ],
@@ -159,13 +225,18 @@
      "intensity": 2,
      "type": "interstate",
      "incompatibility": "government and territory",
+     "roles": {
+      "location": true,
+      "primary": true,
+      "supporting": false
+     },
      "role": "location or primary party"
     }
    ],
    "TWN": []
   },
-  "fetchedAt": "2026-11-21T03:15:43.287Z",
-  "checkedAt": "2026-11-21T03:15:43.287Z"
+  "fetchedAt": "2026-11-27T11:49:14.467Z",
+  "checkedAt": "2026-11-27T11:49:14.467Z"
  },
  "wgi": {
   "USA": {
