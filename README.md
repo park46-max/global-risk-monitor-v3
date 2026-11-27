@@ -206,6 +206,18 @@ Everything here is fixed word rules on the headline. No AI, no paid service, not
 - **Not changed:** risk scoring and caches, World Bank and UCDP fetching, workflows, RSS settings, the GDELT search API fallback, the globe and the styles.
 - **Tests:** `node tests/test-news-quality.mjs` (88 simulated checks across all five countries). No real feed was contacted and nothing was run on GitHub or the live site.
 
+## The secondary GDELT search-API section (Stage 6)
+
+The open-data section stays the primary, expanded news source. The older GDELT search-API section (cache `data/cache/news.json`, written by `scripts/fetch-data.mjs`) is now secondary:
+
+- **Collapsed by default.** The header line is always visible and shows three chips: *Last success* (green only when the latest refresh succeeded and the data is under 24 hours old), *Latest refresh* (all OK, or how many countries failed or were not attempted) and *Cached data in use* (countries whose articles come from an earlier run). Your open/closed choice is kept while you switch countries.
+- **Compact warning.** When a refresh failed or the data is stale, a one-line warning stays visible under the header, even when collapsed, with an "Error details" list of the real error text per country. It says whether cached articles are being shown and when the last success was. If there is no cached data it says that and shows nothing instead.
+- **Same rules as the open-data section.** The page loads the project's own rule files (`data/country-terms.mjs`, `data/relevance-rules.mjs`, `data/source-quality.mjs`, `scripts/relevance-lib.mjs` through `scripts/secondary-lib.mjs`), so country matching and role, topic scoring, off-topic and financial filtering, duplicate grouping and outlet labels are the same code, not a copy. Filtered and "in passing" items stay in labelled folds, and a headline that names none of the five countries (the search matches words anywhere in the article) is listed separately as "not matched", never dropped. Links, publishers and the GDELT first-seen time are kept; a missing date is shown as missing.
+- **If those rule files cannot be loaded** (for example the host serves `.mjs` files with the wrong content type), the section says so and shows the articles unfiltered. The status chips and warning do not depend on the rule files.
+- **Not changed:** what is requested from GDELT, how often, retries, workflows, RSS, World Bank, UCDP, risk, briefs, the globe and the stylesheet. The section's small styles are added by `js/app.js` at run time.
+- **Limitations:** "cached data in use" for a country that was not re-requested is inferred from its check time being older than the file's (the file has no explicit flag); search results are matched on the whole article but judged on the headline only; the outlet lists are short (see `data/source-quality.mjs`).
+- **Tests:** `node tests/test-secondary-news.mjs` (36 checks, simulated). Optional browser test: `PUPPETEER=/path/to/puppeteer node tests/render-secondary.cjs` (81 checks over the states successful, stale, partly failed, failed with and without cache, empty, reused, unreadable, missing and rules-not-loadable; needs puppeteer and Chrome; prints "skipped" without them).
+
 ## Country intelligence briefs (Stage 3)
 Each country page has a brief with four parts: Overview, Key developments, Why it matters, Sources. It is built automatically by `scripts/build-briefs.mjs` from the cached news (`news-gdelt.json`, and `news-rss.json` if you ever enable RSS) and saved to `data/cache/briefs.json`. **No AI, no paid service, no API key, no network request**: fixed rules only (`data/brief-rules.mjs`, `scripts/brief-lib.mjs`).
 
