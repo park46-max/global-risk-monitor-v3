@@ -59,7 +59,7 @@ console.log('A. Protected files and protected code in js/app.js are unchanged');
     ['news row builder and item lists', between(APP, 'const missing = (what', 'function articleBlock('), 'c80b53ced9f6a1a0ebba2f535a85c760'],
     ['GDELT search section and news painting', between(APP, '// ----- GDELT search API (secondary)', 'function paintData()'), '81e7c2a62db0ea3f0a92fc381a75d304'],
     ['country header', (() => { const i = APP.indexOf('// ---------- static panels ----------'), j = APP.indexOf('function head()'); return APP.slice(i, APP.indexOf('\n// ----- ', j)); })(), '757167f100b925e0f66ad8533f49956a'],
-    ['intelligence brief, globe start-up, selection', between(APP, '// ----- country intelligence brief', "{ const sk = $('.skip')"), '6025c1a598ed0f8fdbfc948f4881a4dd'],
+    ['globe start-up and selection (the brief() function above it was changed in Stage 9.2 and is covered by test-ui-stage92.mjs)', between(APP, '// ---------- globe ----------', "{ const sk = $('.skip')"), '9bb9ce92d4bcf18ca1a925e99eda0040'],
     ['search, reload, hash and start-up wiring', APP.slice(APP.indexOf("$('#q').addEventListener('change'")), '5ea31f74618cc0ed6f914d35eb463b56']];
   for (const [name, text, h] of REG) ok(md5(text) === h, `js/app.js ${name}: byte-for-byte identical to the Stage 8B-2 production version`);
   ok(/GRM_GLOBE\.init\(\$\('#globe'\), feats, \{ C, onSelect: k => select\(k\), onOther: other, onUserRotate: \(\) => setRot\(false\) \}\)/.test(APP) && /GRM_GLOBE\.select\(id, fly\)/.test(APP), 'globe initialisation and selection calls are intact');
