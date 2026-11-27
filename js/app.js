@@ -94,9 +94,14 @@ function articleBlock(s, kind) {
     const m = a.matches[cur], kids = [el('b', null, a.publisher || 'Unknown publisher'), (a.via ? 'via ' + a.via + ' · ' : '') + when(a)];
     if (bad) kids.push(pill('stale', f ? 'Cached: feed refresh failed' : 'Cached: feed not part of the latest refresh')); else if (old) kids.push(pill('stale', 'Stale'));
     const rowKids = [link(a.url, a.title), el('div', 'nm', kids), el('div', 'meta', why(m) + m.terms.join(', '))];
+    if (m.role === 'incidental') rowKids.push(el('div', 'meta', C[cur].name + ' is named only in passing here (another country comes first and there is no security, diplomacy or sanctions wording).'));
+    else if (m.role === 'shared') rowKids.push(el('div', 'meta', 'Involves more than one country (bilateral or multilateral story).'));
+    const tier = a.source && a.source.tier;
+    if (tier) { const lab = ((j.sourcePolicy || {}).labels || {})[tier], d = el('div', 'meta', 'Outlet: ' + ({ established: 'established outlet', state: 'state-owned or government-run outlet', unassessed: 'not assessed' })[tier] + ' (a label for the outlet, not a fact-check of this headline)'); if (lab) d.title = lab; rowKids.push(d); }
+    if (a.relevance && a.relevance.style) rowKids.push(el('div', 'meta', 'Sensational wording flagged (' + a.relevance.style.terms.join(', ') + '); its relevance score is lowered by 1.'));
     const tp = a.relevance && a.relevance.topics || [];
     if (tp.length) rowKids.push(el('div', 'meta', 'Topics: ' + tp.map(t => t.label).join(' · ') + ' (' + tp.map(t => t.terms.join(', ')).join('; ') + ')'));
-    if (a.filtered) rowKids.push(el('div', 'meta', 'Filtered as a routine financial notice because of: ' + a.filtered.terms.join(', ')));
+    if (a.filtered) rowKids.push(el('div', 'meta', (a.filtered.kind === 'off-topic' ? 'Filtered as off-topic (' + (a.filtered.group || 'sport, entertainment or local news') + ' wording, no security, diplomacy or sanctions topic) because of: ' : 'Filtered as a routine financial notice because of: ') + a.filtered.terms.join(', ')));
     const vs = a.variants || [];
     if (vs.length) { const d = el('div', 'meta', 'Also reported by: '); vs.forEach((v, i) => { if (i) d.append(', '); d.append(link(v.url, v.publisher || 'source')); }); if ((a.variantsTotal || vs.length) > vs.length) d.append(' (+' + (a.variantsTotal - vs.length) + ' more)'); rowKids.push(d); }
     return el('li', null, rowKids);
@@ -105,19 +110,22 @@ function articleBlock(s, kind) {
   const score = a => (a.relevance && a.relevance.score) || 0;
   const byRel = (x, y) => score(y) - score(x) || byDate(x, y);
   const shown = all.filter(a => !a.filtered), flt = all.filter(a => a.filtered).sort(byDate);
-  const strong = shown.filter(a => a.matches[cur].level !== 'summary' && (!a.relevance || a.relevance.tier !== 'other')).sort(byRel).slice(0, 20);
-  const plain = shown.filter(a => a.matches[cur].level !== 'summary' && a.relevance && a.relevance.tier === 'other').sort(byDate).slice(0, 20);
+  const passing = shown.filter(a => a.matches[cur].level !== 'summary' && a.matches[cur].role === 'incidental').sort(byDate).slice(0, 20);
+  const main = shown.filter(a => a.matches[cur].role !== 'incidental');
+  const strong = main.filter(a => a.matches[cur].level !== 'summary' && (!a.relevance || a.relevance.tier !== 'other')).sort(byRel).slice(0, 20);
+  const plain = main.filter(a => a.matches[cur].level !== 'summary' && a.relevance && a.relevance.tier === 'other').sort(byDate).slice(0, 20);
   const sm = shown.filter(a => a.matches[cur].level === 'summary').sort(byDate).slice(0, 20);
   const fold = (text, list) => { const d = el('details'); d.append(el('summary', null, text)); const ul = el('ul', 'news'); list.forEach(a => ul.append(row(a))); d.append(ul); nodes.push(d); };
   if (strong.length) { const ul = el('ul', 'news'); strong.forEach(a => ul.append(row(a))); nodes.push(ul); }
   else if (last) nodes.push(el('div', 'state', 'No cached headline with a security, diplomacy, sanctions/trade or economic-policy signal names ' + C[cur].name + ' (last ' + (j.retentionDays || 7) + ' days). This does not mean nothing happened: it only reflects these sources.'));
   if (plain.length) fold(`Other headlines naming ${C[cur].name} without a geopolitical keyword (${plain.length})`, plain);
+  if (passing.length) fold(`Mentioned in passing (${passing.length}): ${C[cur].name} is named, but the story appears to be mainly about another country`, passing);
   if (sm.length) fold(`Mentioned in the feed summary only (${sm.length}): weaker match, the headline does not name ${C[cur].name}`, sm);
-  if (flt.length) fold(`Filtered out as routine financial notices (${flt.length}): shown here so nothing is hidden silently`, flt);
+  if (flt.length) fold(`Filtered out (${flt.length}): routine financial notices and sport, entertainment or local news with no geopolitical topic. Shown here so nothing is hidden silently`, flt);
   const pubs = (j.publishers || []).map(p => p.name + ' (terms checked ' + p.termsChecked + ')').join(', ') || 'none';
   const attr = j.attribution ? [' Data: ', link(j.attribution.url, j.attribution.name), ' (open dataset, used under its terms).'] : [];
   nodes.push(el('p', 'meta', ['Reported events. Sources: ' + pubs + '.', ...attr, ' Matching words for ' + C[cur].name + ': ', el('code', null, termText((j.terms || {})[cur])), '. Each headline links to the original report. Last successful update: ' + (last ? fmtUTC(last) : 'none yet') + (j.checkedAt ? '. Last checked: ' + fmtUTC(j.checkedAt) : '') + '.']));
-  nodes.push(el('p', 'note', (gk ? 'Headlines are written by the publishers named and link straight to their pages; GDELT only indexes them. ' : '') + 'Only the headline, publisher, date and link are copied; read the article at the publisher. Articles are matched to a country by its name, or its capital or a government body, in the headline (the names of people are never used), and ordered by simple keyword rules (security, diplomacy, sanctions and trade, economic policy). Routine fund and stock notices are filtered into a labelled list, and near-identical headlines are grouped with links to every source. A country named in a headline does not prove the article is mainly about it, and these keyword rules can be wrong. Headlines belong to the publishers and are neither checked nor endorsed here.'));
+  nodes.push(el('p', 'note', (gk ? 'Headlines are written by the publishers named and link straight to their pages; GDELT only indexes them. ' : '') + 'Only the headline, publisher, date and link are copied; read the article at the publisher. Articles are matched to a country by its name, or its capital or a government body, in the headline (the names of people are never used), and ordered by simple keyword rules (security, diplomacy, sanctions and trade, economic policy). Routine fund and stock notices, and sport, entertainment or local news without a geopolitical topic, are filtered into a labelled list; near-identical headlines are grouped with links to every source; and a country that is only named in passing is listed separately. Outlet labels describe the publisher (by fixed lists in data/source-quality.mjs) and are not a fact-check; an outlet without a label is simply not assessed. A country named in a headline does not prove the article is mainly about it, and these keyword rules can be wrong. Headlines belong to the publishers and are neither checked nor endorsed here.'));
   return { pills, nodes };
 }
 
@@ -274,7 +282,7 @@ function brief() {
   const sd = el('section', 'bsec', el('h3', null, 'Sources')), asrc = auto ? auto.sources : [];
   if (asrc.length) {
     const ul = el('ul');
-    asrc.forEach(x => ul.append(el('li', null, [el('span', 'meta', '[' + x.n + '] '), link(x.url, x.title), ` (${x.publisher}${x.time ? ', ' + (x.timeBasis || 'time') + ' ' + fmtUTC(x.time) : ', time not provided'}${x.via ? ', via ' + x.via : ''}${x.duplicateOf ? ', same headline as [' + x.duplicateOf + ']' : ''})`])));
+    asrc.forEach(x => ul.append(el('li', null, [el('span', 'meta', '[' + x.n + '] '), link(x.url, x.title), ` (${x.publisher}${x.time ? ', ' + (x.timeBasis || 'time') + ' ' + fmtUTC(x.time) : ', time not provided'}${x.via ? ', via ' + x.via : ''}${x.sourceLabel ? ', outlet: ' + ({ established: 'established', state: 'state-owned or government-run', unassessed: 'not assessed' })[x.sourceLabel] : ''}${x.duplicateOf ? ', same headline as [' + x.duplicateOf + ']' : ''})`])));
     sd.append(ul);
   }
   if ((hand.sources || []).length) { const ul = el('ul'); hand.sources.forEach(x => ul.append(el('li', null, [link(x.url, x.title), ` (${x.publisher}, accessed ${x.accessed})`]))); sd.append(ul); }
