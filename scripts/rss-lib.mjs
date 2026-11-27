@@ -51,6 +51,30 @@ export function parseFeed(xml) {
   return out;
 }
 
+// ---------- verification helpers (used by verify mode only; nothing here is stored) ----------
+// Which kind of feed is this, and what does it call itself? Reads only the first part of the document.
+export function feedFormat(xml) {
+  const text = String(xml || '').replace(/^\uFEFF/, ''), head = text.slice(0, 5000);
+  let format = 'unknown';
+  const rss = /<rss\b[^>]*>/i.exec(head);
+  if (rss) { const v = /\bversion\s*=\s*["']([\d.]+)["']/i.exec(rss[0]); format = 'RSS ' + (v ? v[1] : '(version not stated)'); }
+  else if (/<rdf:rdf[\s>]/i.test(head)) format = 'RSS 1.0 (RDF)';
+  else if (/<feed[\s>]/i.test(head)) format = 'Atom';
+  const t = /<(?:channel|feed)\b[^>]*>[\s\S]*?<title\b[^>]*>([\s\S]*?)<\/title>/i.exec(text.slice(0, 20000));
+  return { format, title: t ? clean(t[1]).slice(0, 120) : null };
+}
+// How complete are the entries? Counts only. A "usable link" is an http(s) address on one of the publisher's own hosts.
+export function auditEntries(entries, { publisher, now = Date.now() }) {
+  let headline = 0, link = 0, ownLink = 0, date = 0; const times = [];
+  for (const e of entries) {
+    if (e.title) headline++;
+    const u = safeUrl(e.link); if (u) { link++; if (hostAllowed(u.hostname.toLowerCase(), publisher.hosts || [])) ownLink++; }
+    const d = parseDate(e.dateRaw, now); if (d) { date++; times.push(Date.parse(d)); }
+  }
+  const valid = entries.filter(e => e.title && (() => { const u = safeUrl(e.link); return u && hostAllowed(u.hostname.toLowerCase(), publisher.hosts || []); })()).length;
+  return { entries: entries.length, valid, headline, link, ownLink, date, newest: times.length ? new Date(Math.max(...times)).toISOString() : null, oldest: times.length ? new Date(Math.min(...times)).toISOString() : null };
+}
+
 // ---------- dates ----------
 // Returns an ISO string, or null when the date is missing, unreadable, in the future (more than 1 h ahead) or before 2000.
 // A date is never guessed: null is shown as "date not provided".
@@ -121,7 +145,7 @@ export function buildItems(entries, { publisher, feedId, now = Date.now(), match
     if (!published) stat.undated++;
     const matches = matchCountries(matchers, e.title, e.summary);
     if (!Object.keys(matches).length) { stat.unmatched++; continue; }
-    items.push({ title: e.title, url: u.href, publisher: publisher.name, publisherId: publisher.id, feedId, published, matches });
+    items.push({ title: e.title, url: u.href, publisher: publisher.name, publisherId: publisher.id, sourceType: publisher.sourceType || 'journalism', feedId, published, matches });
   }
   return { items, stat };
 }

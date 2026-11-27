@@ -2,6 +2,7 @@
 // Everything here works on the headline text only, so every decision can be reproduced by hand (see scripts/explain-headline.mjs).
 import { matchCountries } from './rss-lib.mjs';
 import { SOURCE_POLICY } from '../data/source-quality.mjs';
+import { isOfficial } from '../data/source-types.mjs';
 
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const compileTerms = list => list.map(x => {
@@ -132,6 +133,9 @@ export function clusterItems(items, D) {
     const rep = reps.find(r => {
       const rt = tk.get(r), shared = Object.keys(it.matches || {}).some(k => r.matches && r.matches[k]);
       if (!shared) return false;
+      // An official communication (government, international organization, EU institution; see data/source-types.mjs) is only ever grouped with
+      // items of its OWN publisher. Grouping it with another publisher's headline would list it under "also reported by", which reads as corroboration.
+      if ((isOfficial(it.sourceType) || isOfficial(r.sourceType)) && it.publisherId !== r.publisherId) return false;
       const a = when(it), b = when(r); if (!isNaN(a) && !isNaN(b) && Math.abs(a - b) > winMs) return false;
       if (disjointNames(it, r)) return false;
       const na = numbers(normTitle(it.title)), nb = numbers(normTitle(r.title)); if (na.size && nb.size && !sameSet(na, nb)) return false;

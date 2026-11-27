@@ -1,6 +1,7 @@
 // Rule-based country briefs from the cached news. Pure functions: no network, no file access, no AI. Rules: data/brief-rules.mjs.
 import { buildMatchers, safeUrl } from './rss-lib.mjs';
 import { compileRules, refreshItems } from './relevance-lib.mjs';
+import { isOfficial } from '../data/source-types.mjs';
 
 const iso = ms => new Date(ms).toISOString();
 const utc = s => s.slice(0, 16).replace('T', ' ') + ' UTC';
@@ -27,6 +28,7 @@ export function prepareReports(caches, { now, matchers, compiled, R }) {
     for (const raw of json.items) {
       stat.read++;
       const u = safeUrl(raw && raw.url);
+      if (raw && isOfficial(raw.sourceType)) { stat.officialExcluded = (stat.officialExcluded || 0) + 1; continue; }   // official communications are not used as news reports in a brief (data/source-types.mjs)
       if (!raw || !raw.title || !String(raw.title).trim() || !raw.publisher || !u) { stat.noSource++; continue; }
       const it = JSON.parse(JSON.stringify(raw)); it.url = u.href; it.title = String(it.title).trim(); it._via = via;
       const t = when(it); if (!t) { stat.noTime++; continue; }
@@ -48,7 +50,7 @@ const refs = ns => ns.map(n => `[${n}]`).join('');
 
 // One country's brief. `reports` = prepared, grouped reports (all countries). Returns a plain JSON-able object.
 export function buildCountryBrief(id, reports, ctx) {
-  const { R, now, inputs } = ctx, name = R.names[id] || id;
+  const { R, now, inputs, officialExcluded = 0 } = ctx, name = R.names[id] || id;
   // Reports that name the country only in passing (role 'incidental', see data/relevance-rules.mjs rule 4) are counted but not used.
   const named = reports.filter(r => r.matches && r.matches[id] && OK_LEVEL.has(r.matches[id].level)), passing = named.filter(r => r.matches[id].role === 'incidental').length;
   const own = named.filter(r => r.matches[id].role !== 'incidental').sort(byRank);
@@ -62,6 +64,7 @@ export function buildCountryBrief(id, reports, ctx) {
       if (inp.failedFeeds) limitations.push(`${inp.failedFeeds} of ${inp.feeds} ${k} feeds failed on their latest refresh; their reports are cached from earlier.`);
     }
   }
+  if (officialExcluded) limitations.push(`${officialExcluded} official ${plural(officialExcluded, 'communication', 'communications')} (government, international organization or EU institution) in the cached feeds ${plural(officialExcluded, 'was', 'were')} not used in this brief: they state a body's own position and are not independent reporting.`);
   const base = { generatedAt: iso(now), window: { hours: R.windowHours, from: iso(now - R.windowHours * 36e5), to: iso(now) }, notice: R.notice };
   if (!listed.length) {
     return { ...base, status: 'unavailable', reportsFound: 0, overview: null, developments: [], why: null, sources: [],
@@ -125,7 +128,7 @@ export function buildAll({ caches, prev, now, R, countryTerms, rules }) {
   const { reports, stat } = prepareReports({ gdelt: caches.gdelt, rss: caches.rss }, { now, matchers, compiled, R });
   const countries = {};
   for (const id of Object.keys(countryTerms)) {
-    let b = buildCountryBrief(id, reports, { R, now, inputs });
+    let b = buildCountryBrief(id, reports, { R, now, inputs, officialExcluded: stat.officialExcluded || 0 });
     const old = prev && prev.countries && prev.countries[id];
     if (b.status === 'unavailable' && old && (old.status === 'ok' || old.status === 'limited') && old.generatedAt && (now - Date.parse(old.generatedAt)) / 36e5 <= R.carryMaxHours) {
       b = { ...old, carriedForward: { reason: `The latest cache has no usable report for this country (${stat.read} cached items inspected), so the earlier brief is kept and marked stale.`, checkedAt: iso(now) } };
