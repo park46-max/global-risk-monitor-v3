@@ -9,13 +9,19 @@
 //  - News headlines and article counts NEVER set a level. Headlines are shown as "reported context" only.
 //  - The thresholds are analyst-chosen conventions for a transparent screening rule. They are not an academic standard and not a forecast.
 //
+// VERSION 3 (Stage 8B-2): PROFILES. Security is shown as two separate profiles (UCDP armed-conflict involvement; WGI political stability) and the
+//  economic card as a macroeconomic profile (three indicators shown separately, with the old worst-band rule kept as a "stress flag").
+//  - NO rule and NO threshold changed: the combined levels of version 2 are still computed by the same code and stay in risk.json (fields level, rule, summary).
+//    The page shows them only in a collapsed "legacy" section.
+//  - The new data sits in an additive "profile" object on the security and economic cards. risk.json schema stays 1.
+//  - The wording of the notes below is shared by the profile cards.
 // VERSION 2 (Stage 8B-1): wording, role separation and disclosure only. NO classification rule or threshold was changed.
 //  - UCDP location, primary-party and supporting-party roles are now stored separately (cache field "roles"); the old merged "role" field is kept.
 //  - Texts no longer call every entry "location or primary party", state the reference years, and say what UCDP intensity and "location" mean.
 //  - All bands and cut-offs are labelled as project-defined conventions (see notes.conventions below).
 
 export const RISK = {
-  methodologyVersion: 2,
+  methodologyVersion: 3,
   // gw = Gleditsch-Ward country code used by UCDP; wb = World Bank country code. Names are only for display.
   countries: {
     USA: { name: 'United States', wb: 'USA', gw: 2 },
@@ -24,6 +30,8 @@ export const RISK = {
     UKR: { name: 'Ukraine', wb: 'UKR', gw: 369 },
     TWN: { name: 'Taiwan', wb: 'TWN', gw: 713,
       // Shown on Taiwan's cards. Names and codes are used as the sources give them; no sovereignty or status position is taken.
+      // Shown on the Security profile cards (version 3). The securityNote above belongs to the legacy combined level.
+      profileNote: 'Neither security profile measures cross-strait tension or military activity: UCDP covers recorded state-based armed conflict only, and the WGI estimate is a perception-based measure of political stability.',
       securityNote: 'This level for Taiwan does not measure cross-strait tension or military activity: it uses only the absence of a UCDP-recorded state-based armed conflict and the WGI perception estimate.',
       economicNote: 'The World Bank help desk states that its World Development Indicators do not list "Taiwan, China" as a separate country (https://datahelpdesk.worldbank.org/knowledgebase/articles/114933-where-are-your-data-on-taiwan), so these series are absent at the source. This is a source coverage limit, not evidence of low risk. The WGI political stability series is published for Taiwan and is a different dataset.' }
   },
@@ -91,6 +99,13 @@ export const RISK = {
   notes: {
     conventions: 'Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.',
     inflationCrisis: 'The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project\'s Critical level or its other limits.',
+    // ---- Stage 8B-2: wording used by the profile cards ----
+    legacy: 'Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display.',
+    ucdpScope: 'UCDP/PRIO records state-based armed conflict only. A count of zero is not an absence of security threats.',
+    ucdpIntensity: 'Intensity (minor: 25 to 999 battle-related deaths in the year; war: 1,000 or more) describes the whole conflict, not this country\'s own involvement or casualties.',
+    wgiScale: 'A perception-based estimate on a scale of about -2.5 to +2.5. Zero is not the global average: since the 2025 revision the global average can change over time, and earlier editions fixed it at zero.',
+    wgiUncertainty: 'Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted.',
+    macroFlag: 'The stress flag is a project-defined rule (the worst band among the available indicators, unchanged from methodology version 2). It is not a comprehensive assessment of economic risk.',
     economicScope: 'Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.'
   },
 
