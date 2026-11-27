@@ -22,15 +22,44 @@
 
 export const PUBLISHERS = [
   {
-    // OFFICIAL SOURCE WITH A STATED PERMISSION. Read on 2026-11-20 at https://www.ungeneva.org/en/rss : "You can also use our RSS feeds to display
-    // the latest news from UN Geneva on your own website or personal page." The page lists no copyright or attribution conditions and no feed addresses.
-    // UN Geneva's separate newsroom site (unognewsroom.org) has its own terms (editorial use, acknowledge the United Nations as provider), which are a
-    // different site's terms and are not assumed to apply here. This dashboard shows only headline, date and a link back, credits UN Geneva, and uses no images.
-    // The feed addresses are NOT known yet: run verify and copy the candidates it prints into `feeds` below.
+    // UN GENEVA (UNOG / UN Information Service). A STATED PERMISSION EXISTS BUT IT IS NOT A LICENCE: read 2026-11-27 on the official page
+    // https://www.ungeneva.org/en/news-media/rss : "You can also use our RSS feeds to display the latest news from UN Geneva on your own website or
+    // personal page." That page gives no copyright, attribution, redistribution or automated-access conditions and shows no feed addresses in its text.
+    // UN Geneva's separate sites have their OWN terms and are NOT assumed to apply here: unognewsroom.org (editorial use, 2 months) and archives.ungeneva.org
+    // (web scraping and automated downloads not permitted without approval). UN Geneva is not assumed to have UN News's permissions either.
+    // The five feed addresses below were found by this script's discovery step on the official RSS page during the live Stage 7B verification run
+    // (11 candidates were found; the project owner supplied these five). They are VERIFY-ONLY candidates: nothing is enabled and nothing is shown on the page.
     id: 'ungeneva', sourceType: 'international-organisation', name: 'UN Geneva', hosts: ['ungeneva.org'], feedHosts: ['ungeneva.org'], discoverUrl: 'https://www.ungeneva.org/en/rss',
     enabled: false, termsChecked: null,
-    termsNote: 'PERMISSION STATED, CONDITIONS PARTLY UNKNOWN. UN Geneva RSS page (read 2026-11-20): feeds may be used "to display the latest news from UN Geneva on your own website or personal page". No copyright/attribution text found for ungeneva.org itself. Shown with attribution, headline and link only. Enable after you have copied verified feed addresses below and are content with this wording.',
-    feeds: []
+    attribution: 'Source: UN Geneva (United Nations Office at Geneva). No image, logo, audio, video or text is copied.',
+    readOn: '2026-11-27',
+    termsNote: 'CANDIDATE, NOT CLEARED. International organization communications: what UN Geneva publishes about its own press activity (press releases, meeting summaries, briefings), labelled as such. UN Geneva RSS page (read 2026-11-27): feeds may be used "to display the latest news from UN Geneva on your own website or personal page"; no conditions are stated there. No ungeneva.org copyright, attribution or automated-access page was found. The UN-wide wording is narrower and the UN News permission does not transfer: UN-wide copyright page: "News-related material can be used as long as the appropriate credit is given and the United Nations is advised"; UN-wide terms: personal, non-commercial use, no redistribution, no derivative works. Whether a public portfolio dashboard that stores headlines counts as "display on your own website or personal page" is a question for UN Geneva. Written confirmation is the safe route.',
+    reuse: 'RSS page: feeds may be used to display the latest news from UN Geneva on your own website or personal page (no conditions stated). UN-wide copyright page: news-related material may be used with appropriate credit and the United Nations advised. UN-wide terms (secondary copy): personal non-commercial use, no redistribution or derivative works. Not assumed to apply: unognewsroom.org terms, archives.ungeneva.org terms.',
+    automatedFetching: 'UNRESOLVED. The RSS page invites subscription and display but says nothing about automated retrieval by a server-side job, rate limits or caching. robots.txt for ungeneva.org was not readable during the research (the tool could not fetch it): the verify run reads and obeys it for every feed.',
+    feedAddressSource: 'Discovered by this script on the official UN Geneva RSS page (live run 2026-11-27, 11 candidates found, five supplied by the project owner). The page text itself shows no addresses to a reader, so the exact addresses are not independently confirmed here. Each is on ungeneva.org under a news-media section that exists on the site.',
+    evidence: [
+      { url: 'https://www.ungeneva.org/en/news-media/rss', what: 'Official UN Geneva RSS page: "You can also use our RSS feeds to display the latest news from UN Geneva on your own website or personal page."' },
+      { url: 'https://www.ungeneva.org/en/rss', what: 'Same RSS page (discovery address); explains RSS, shows no conditions and no feed addresses in its text' },
+      { url: 'https://www.ungeneva.org/en/news-media/press-centre', what: 'Official press centre: UN Information Service Geneva issues press releases and meeting summaries' },
+      { url: 'https://www.un.org/en/sections/about-website/copyright/', what: 'UN-wide copyright page (search snippet): news-related material may be used with credit and the United Nations advised' },
+      { url: 'https://unoceans.un.org/www.un.org/en/about-us/terms-of-use.html', what: 'UN-wide terms of use (mirror on a UN site; official copy not fetched)' },
+      { url: 'https://www.unognewsroom.org/terms-of-use', what: 'DIFFERENT SITE (UN Geneva Multimedia Newsroom): editorial use, 2 months. Shown only to record that it is not assumed to apply' },
+      { url: 'https://archives.ungeneva.org/saverne/download', what: 'DIFFERENT SITE (UN Archives Geneva): web scraping and automated downloads need approval. Shown only to record that UN Geneva sites differ' }
+    ],
+    blockers: [
+      'Ask UN Geneva (through the contact page on ungeneva.org; no address is assumed here) whether a public non-commercial dashboard may fetch these feeds automatically and display headline, date and link, and under what attribution.',
+      'The RSS page states a permission without conditions; the UN-wide pages are narrower ("United Nations is advised", personal non-commercial use, no redistribution). Resolve which applies.',
+      'The feed addresses were found by discovery on the official page but are not independently confirmed: run verify and confirm each address on the page.',
+      'robots.txt for ungeneva.org has not been read for these feeds yet: the verify run must show it allows them. If it disallows or answers 403, the source stays unverifiable.',
+      'No ungeneva.org copyright or terms page was found. Look for one in the site footer.'
+    ],
+    feeds: [
+      { id: 'ungeneva-press-releases',     label: 'Press releases',     url: 'https://www.ungeneva.org/news-media/press-releases-list/rss.xml' },
+      { id: 'ungeneva-meeting-summaries',  label: 'Meeting summaries',  url: 'https://www.ungeneva.org/news-media/meeting-summaries-list/rss.xml' },
+      { id: 'ungeneva-press-conferences',  label: 'Press conferences',  url: 'https://www.ungeneva.org/news-media/press-conferences-list/rss.xml' },
+      { id: 'ungeneva-briefings',          label: 'Briefings',          url: 'https://www.ungeneva.org/news-media/briefings-list/rss.xml' },
+      { id: 'ungeneva-press-items',        label: 'All press items',    url: 'https://www.ungeneva.org/news-media/press-items-list/rss.xml' }
+    ]
   },
   {
     id: 'bbc', sourceType: 'journalism', name: 'BBC News', hosts: ['bbc.co.uk', 'bbc.com'], feedHosts: ['bbci.co.uk'],
@@ -87,7 +116,9 @@ export const PUBLISHERS = [
       { url: 'https://ceac.state.gov/ceac/Common/Copyright.aspx', what: 'Department copyright text (hosted on a State Department site other than www.state.gov; page shows no date)' },
       { url: 'https://feeder.co/discover/42270d2058/state-gov', what: 'Third-party listing of the feed address' }
     ],
+    liveVerification: { date: '2026-11-27', source: 'GitHub Actions verify run reported by the project owner', result: 'robots.txt returned HTTP 403, so the feed was NOT requested. This is an access restriction and is not worked around.' },
     blockers: [
+      'LIVE RESULT 2026-11-27: robots.txt on state.gov answered HTTP 403, so the feed was not requested. The script treats that as restricted. Do not enable until a later verify run shows robots.txt readable and the feed allowed (or the Department grants access in writing).',
       'Confirm the feed address with a verify run (it comes from a third-party directory, not from state.gov).',
       'Automated fetching is not addressed in the copyright text; read state.gov\'s own terms and the verify run\'s robots.txt result before deciding.',
       'The copyright text was read on ceac.state.gov, not www.state.gov: confirm the same wording applies to www.state.gov.'
@@ -111,7 +142,9 @@ export const PUBLISHERS = [
       { url: 'https://feedbagel.com/site/un.org', what: 'Third-party listing of feed addresses' },
       { url: 'https://feeder.co/ja/discover/ffc94cf9d0/news-un-org-en', what: 'Third-party listing of feed addresses' }
     ],
+    liveVerification: { date: '2026-11-27', source: 'GitHub Actions verify run reported by the project owner', result: 'robots.txt disallowed all 6 configured feed addresses; none was requested and no bypass was attempted.' },
     blockers: [
+      'LIVE RESULT 2026-11-27: UN News robots.txt disallowed all six configured feed addresses, so none was requested. The reuse wording on the UN News page does not override a robots.txt Disallow: only written permission from UN News, or an allowed address, could change this.',
       'Written confirmation from UN News (unnews@un.org) that automated RSS use on a public non-commercial dashboard is acceptable.',
       'The UN-wide terms are narrower than the UN News page (personal, non-commercial, no redistribution): resolve which applies.',
       'Feed addresses come from third-party listings: confirm them with a verify run and on the official UN News RSS page.',
@@ -140,7 +173,9 @@ export const PUBLISHERS = [
     evidence: [
       { url: 'https://www.eeas.europa.eu/eeas/legal-notice_en', what: 'EEAS legal notice (reuse statement)' }
     ],
+    liveVerification: { date: '2026-11-27', source: 'GitHub Actions verify run reported by the project owner', result: 'Home-page discovery found zero candidate feeds. robots.txt asked for a 10-second crawl delay, which was respected.' },
     blockers: [
+      'LIVE RESULT 2026-11-27: discovery on the EEAS home page found zero candidate feed addresses (the 10 s Crawl-delay in robots.txt was respected). No feed exists to test.',
       'No official feed address is known: run verify, read the candidates it prints from the EEAS home page, and confirm one on an official EEAS page before adding it to feeds.',
       'Automated fetching is not addressed in the legal notice; check robots.txt (verify prints it) and ask the EEAS if unsure.'
     ],
