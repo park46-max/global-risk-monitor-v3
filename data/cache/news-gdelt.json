@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-27T19:13:25.044Z",
- "checkedAt": "2026-11-27T19:13:25.044Z",
- "lastSuccessAt": "2026-11-27T19:13:25.044Z",
+ "generatedAt": "2026-11-27T19:23:40.744Z",
+ "checkedAt": "2026-11-27T19:23:40.744Z",
+ "lastSuccessAt": "2026-11-27T19:23:40.744Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -79,10 +79,10 @@
  "relevance": {
   "droppedNoMatch": 0,
   "filteredNotices": 33,
-  "filteredOffTopic": 6,
-  "groupedDuplicates": 22,
-  "incidentalMentions": 20,
-  "sensationalStyle": 6,
+  "filteredOffTopic": 7,
+  "groupedDuplicates": 18,
+  "incidentalMentions": 22,
+  "sensationalStyle": 5,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "sourcePolicy": {
@@ -101,15 +101,13 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-27T19:13:25.044Z",
-   "lastSuccessAt": "2026-11-27T19:13:25.044Z",
+   "checkedAt": "2026-11-27T19:23:40.744Z",
+   "lastSuccessAt": "2026-11-27T19:23:40.744Z",
    "error": null,
-   "latestFile": "20261127191500",
-   "warning": "4 of 11 files could not be read this run"
+   "latestFile": "20261127193000"
   }
  },
  "files": {
-  "20261123191500": "ok",
   "20261123193000": "missing",
   "20261123194500": "ok",
   "20261123200000": "ok",
@@ -473,10 +471,11 @@
   "20261127174500": "ok",
   "20261127180000": "ok",
   "20261127181500": "ok",
-  "20261127183000": "missing",
-  "20261127184500": "missing",
-  "20261127190000": "missing",
-  "20261127191500": "missing"
+  "20261127183000": "ok",
+  "20261127184500": "ok",
+  "20261127190000": "ok",
+  "20261127191500": "ok",
+  "20261127193000": "ok"
  },
  "items": [
   {
@@ -1392,7 +1391,7 @@
     }
    },
    "firstSeenAt": "2026-11-25T04:32:41.744Z",
-   "lastSeenAt": "2026-11-25T04:32:41.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
    "relevance": {
     "score": 7,
     "tier": "high",
@@ -3554,6 +3553,50 @@
    }
   },
   {
+   "title": "India-US Trade Pact and Tariffs: Key Details Explained",
+   "url": "https://www.deccanchronicle.com/nation/india-us-trade-pact-and-tariffs-key-details-explained-2008600",
+   "publisher": "deccanchronicle.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "pact"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "BRICS: New Development Bank's Bond Issuance in China Exceeds 100 Billion Yuan – BRICS Information Sharing & Exchanging Platform",
    "url": "https://www.brics-info.org/a53336fa381833692a50bb9e41c8226e/",
    "publisher": "brics-info.org",
@@ -3973,9 +4016,17 @@
      "url": "https://news.az/news/china-tests-new-amphibious-landing-tactics-in-military-drills-near-taiwan",
      "published": null,
      "seenByGdelt": "2026-11-27T07:15:00.000Z"
+    },
+    {
+     "publisher": "taipeitimes.com",
+     "publisherId": "gdelt",
+     "tier": "established",
+     "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868536",
+     "published": null,
+     "seenByGdelt": "2026-11-27T19:00:00.000Z"
     }
    ],
-   "variantsTotal": 1
+   "variantsTotal": 2
   },
   {
    "title": "Taiwan Envoy Urges Canada to Sign Pending Deal, Says It Will Help Shield Ottawa From Coercion by Beijing",
@@ -4388,6 +4439,69 @@
    }
   },
   {
+   "title": "US to hike tariffs on China, EU, Brazil and others over subsidized factories",
+   "url": "https://www.jdnews.com/us-to-hike-tariffs-on-china-eu-brazil-and-others-over-subsidized-factories/article_f8b0dab6-20da-5a1e-b3f4-75eb6fd98353.html",
+   "publisher": "jdnews.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-25T22:06:00.000Z",
+   "seenByGdelt": "2026-11-27T18:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariffs"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "lahainanews.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.lahainanews.com/wire/?category=5041&ID=403123",
+     "published": null,
+     "seenByGdelt": "2026-11-27T08:00:00.000Z"
+    },
+    {
+     "publisher": "miamitimesonline.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.miamitimesonline.com/business/us-to-hike-tariffs-on-china-eu-brazil-and-others-over-subsidized-factories/article_47e49451-7973-40d6-92d0-b3c969e393b2.html",
+     "published": "2026-11-27T16:18:00.000Z",
+     "seenByGdelt": "2026-11-27T17:00:00.000Z"
+    }
+   ],
+   "variantsTotal": 2
+  },
+  {
    "title": "Taiwan says it is confident of keeping previously agreed tariffs with US",
    "url": "https://www.businesstimes.com.sg/international/taiwan-says-it-confident-keeping-previously-agreed-tariffs-us",
    "publisher": "businesstimes.com.sg",
@@ -4704,50 +4818,6 @@
    "variantsTotal": 1
   },
   {
-   "title": "Russia and Ukraine exchange another 272 bodies of soldiers killed in war",
-   "url": "https://dunyanews.tv/en/World/985128-russia-and-ukraine-exchange-another-272-bodies-of-soldiers-killed-in-w",
-   "publisher": "dunyanews.tv",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T03:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T04:30:07.072Z",
-   "lastSeenAt": "2026-11-27T04:30:07.072Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
    "title": "Trump downplays Russia, China support for Iran during talks with US troops - Grenada Chronicle – Daily Grenada And Caribbean News",
    "url": "https://grenadachronicle.com/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops/",
    "publisher": "grenadachronicle.com",
@@ -4861,61 +4931,6 @@
    }
   },
   {
-   "title": "Malawian killed fighting for Russia in Ukraine war",
-   "url": "https://www.nyasatimes.com/malawian-killed-fighting-for-russia-in-ukraine-war/",
-   "publisher": "nyasatimes.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T04:46:00.000Z",
-   "seenByGdelt": "2026-11-27T06:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   },
-   "variants": [
-    {
-     "publisher": "mwnation.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "https://mwnation.com/malawian-killed-in-russia-ukraine-war/",
-     "published": "2026-11-27T07:24:00.000Z",
-     "seenByGdelt": "2026-11-27T16:15:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
-  },
-  {
    "title": "Taiwan machinery makers see limited impact from proposed U.S. tariffs",
    "url": "https://focustaiwan.tw/business/202611270007",
    "publisher": "focustaiwan.tw",
@@ -4960,50 +4975,6 @@
    }
   },
   {
-   "title": "Russia Claims Ukraine Lost 1,110 Troops in 24 Hours",
-   "url": "https://www.khaama.com/russia-claims-ukraine-lost-1110-troops-24-hours/",
-   "publisher": "khaama.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T05:22:00.000Z",
-   "seenByGdelt": "2026-11-27T06:45:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "troops"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
    "title": "Satellite images reveal China testing new method to land troops ashore in Taiwan drill",
    "url": "https://www.independent.co.uk/asia/china/china-taiwan-landing-drill-b3092537.html",
    "publisher": "independent.co.uk",
@@ -5039,50 +5010,6 @@
       "label": "Security",
       "terms": [
        "troops"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Ukraine Invasion Day 1,738: dead turkey day was yesterday in US, Trump whines about 17 windows",
-   "url": "https://www.dailykos.com/stories/2026/11/26/800134519/community/1738/",
-   "publisher": "dailykos.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T05:58:00.000Z",
-   "seenByGdelt": "2026-11-27T07:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "invasion"
       ]
      }
     ]
@@ -5486,61 +5413,6 @@
    "source": {
     "tier": "state"
    }
-  },
-  {
-   "title": "US to hike tariffs on China, EU, Brazil and others over subsidized factories | News, Sports, Jobs",
-   "url": "https://www.lahainanews.com/wire/?category=5041&ID=403123",
-   "publisher": "lahainanews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T08:00:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "shared"
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T08:37:51.924Z",
-   "lastSeenAt": "2026-11-27T08:37:51.924Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariffs"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   },
-   "variants": [
-    {
-     "publisher": "miamitimesonline.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "https://www.miamitimesonline.com/business/us-to-hike-tariffs-on-china-eu-brazil-and-others-over-subsidized-factories/article_47e49451-7973-40d6-92d0-b3c969e393b2.html",
-     "published": "2026-11-27T16:18:00.000Z",
-     "seenByGdelt": "2026-11-27T17:00:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
   },
   {
    "title": "Russian Armed Forces Hammer Facilities Supplying Ukraine's Military",
@@ -6446,7 +6318,7 @@
     }
    },
    "firstSeenAt": "2026-11-27T19:13:25.044Z",
-   "lastSeenAt": "2026-11-27T19:13:25.044Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -6820,6 +6692,226 @@
       "label": "Security",
       "terms": [
        "drone strikes"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ukraine proposes ceasefire in Black Sea, awaits Russia's response",
+   "url": "https://en.apa.az/europe/ukraine-proposes-ceasefire-in-black-sea-awaits-russias-response-539010",
+   "publisher": "en.apa.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "ceasefire"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ukraine submits Black Sea truce offer, waits for Russian response: Minister",
+   "url": "https://www.business-standard.com/world-news/ukraine-submits-black-sea-truce-offer-waits-for-russian-response-minister-126112701458_1.html",
+   "publisher": "business-standard.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "truce"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "How an Oscar-tipped film updated a classic thriller into Russia-Ukraine war commentary",
+   "url": "https://www.radiotimes.com/movies/minotaur-oscar-tipped-commentary-russia-exclusive-newsupdate/",
+   "publisher": "radiotimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Regulators Move Two Uranium Plants Forward That Could Loosen Russia's Grip On US Nuclear Fuel",
+   "url": "https://dailycaller.com/2026/11/27/nrc-uranium-enrichment-general-matter-paducah-orano-oak-ridge-russia/",
+   "publisher": "dailycaller.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ukraine drone strike forces Russian flotilla to change course",
+   "url": "https://news.az/news/ukraine-drone-strike-forces-russian-flotilla-to-change-course",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "drone strike"
       ]
      }
     ]
@@ -7435,14 +7527,14 @@
    }
   },
   {
-   "title": "Arab News | Rivals in Taipei mayoral race rally on eve of elections",
-   "url": "https://www.arabnews.com/world/rivals-in-taipei-mayoral-race-rally-on-eve-of-elections-3014279",
-   "publisher": "arabnews.com",
+   "title": "《TAIPEI TIMES》 DGBAS raises 2026 economic growth forecast to 13.28％ - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5655936",
+   "publisher": "ltn.com.tw",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": "2026-11-27T15:59:00.000Z",
-   "seenByGdelt": "2026-11-27T17:15:00.000Z",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:30:00.000Z",
    "matches": {
     "TWN": {
      "level": "institution",
@@ -7452,48 +7544,45 @@
      "role": "primary"
     }
    },
-   "firstSeenAt": "2026-11-27T19:13:25.044Z",
-   "lastSeenAt": "2026-11-27T19:13:25.044Z",
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
    "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
+    "score": 2,
+    "tier": "medium",
+    "topics": [
+     {
+      "id": "economicPolicy",
+      "label": "Economic policy",
+      "terms": [
+       "economic growth"
+      ]
+     }
+    ]
    },
    "source": {
     "tier": "unassessed"
-   },
-   "variants": [
-    {
-     "publisher": "wn.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "https://article.wn.com/view/2026/11/27/Rivals_in_Taipei_mayoral_race_rally_on_eve_of_elections/",
-     "published": null,
-     "seenByGdelt": "2026-11-27T17:00:00.000Z"
-    }
-   ],
-   "variantsTotal": 1
+   }
   },
   {
-   "title": "St. Kitts and Nevis prepares to issue digital ID cards after Taiwan handover",
-   "url": "https://www.biometricupdate.com/202611/st-kitts-and-nevis-prepares-to-issue-digital-id-cards-after-taiwan-handover",
-   "publisher": "biometricupdate.com",
+   "title": "《TAIPEI TIMES》 CEC reminds public no campaigning at the polls - 焦點",
+   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5655935",
+   "publisher": "ltn.com.tw",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
    "published": null,
-   "seenByGdelt": "2026-11-27T17:45:00.000Z",
+   "seenByGdelt": "2026-11-27T19:30:00.000Z",
    "matches": {
     "TWN": {
-     "level": "country",
+     "level": "institution",
      "terms": [
-      "Taiwan"
+      "Taipei"
      ],
      "role": "primary"
     }
    },
-   "firstSeenAt": "2026-11-27T19:13:25.044Z",
-   "lastSeenAt": "2026-11-27T19:13:25.044Z",
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
    "relevance": {
     "score": 0,
     "tier": "other",
@@ -7501,6 +7590,112 @@
    },
    "source": {
     "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Stock market news: U.S. shares rise Friday",
+   "url": "https://www.bnnbloomberg.ca/markets/2026/11/27/stocks-rise-and-keep-wall-street-on-track-to-close-out-an-erratic-week-with-big-gains/",
+   "publisher": "bnnbloomberg.ca",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T18:30:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "shares rise"
+    ]
+   }
+  },
+  {
+   "title": "Stock market news: U.S. shares jump to close out an erratic week",
+   "url": "https://www.cp24.com/news/money/2026/11/27/stocks-jump-to-close-out-an-erratic-week-that-was-also-wall-streets-best-in-more-than-a-year/",
+   "publisher": "cp24.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "U.S."
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "shares jump"
+    ]
+   }
+  },
+  {
+   "title": "Ukrainian govt authorizes PlayCity to conduct scheduled inspections of lottery operators",
+   "url": "https://en.interfax.com.ua/news/telecom/1243783.html",
+   "publisher": "interfax.com.ua",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T19:30:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-27T19:23:40.744Z",
+   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "relevance": {
+    "score": 0,
+    "tier": "other",
+    "topics": []
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "filtered": {
+    "kind": "off-topic",
+    "group": "entertainment",
+    "terms": [
+     "lottery"
+    ]
    }
   },
   {
@@ -8454,111 +8649,6 @@
     "kind": "financial-product",
     "terms": [
      "stake in"
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "iShares China Large-Cap ETF (FXI) Stock Price, News & Analysis",
-   "url": "https://247wallst.com/companies/fxi/",
-   "publisher": "247wallst.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T14:00:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ],
-     "role": "primary"
-    }
-   },
-   "firstSeenAt": "2026-11-25T16:31:13.165Z",
-   "lastSeenAt": "2026-11-25T16:31:13.165Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "iShares"
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "ETF expansion drives Taiwan's asset management growth - Asia Asset Management",
-   "url": "https://www.asiaasset.com/event-news/taiwan-asset-management-hub-etf-growth/",
-   "publisher": "asiaasset.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T16:01:00.000Z",
-   "seenByGdelt": "2026-11-25T20:30:00.000Z",
-   "matches": {
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ],
-     "role": "primary"
-    }
-   },
-   "firstSeenAt": "2026-11-25T22:18:34.902Z",
-   "lastSeenAt": "2026-11-25T22:18:34.902Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "ETF"
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Hong Kong bourse hopes to boost China's global access via ETFs with 60/40 index series",
-   "url": "https://www.asiaasset.com/exchange-traded-funds/hkex-indices-china-global-etf-access/",
-   "publisher": "asiaasset.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T16:01:00.000Z",
-   "seenByGdelt": "2026-11-25T20:30:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ],
-     "role": "primary"
-    }
-   },
-   "firstSeenAt": "2026-11-25T22:18:34.902Z",
-   "lastSeenAt": "2026-11-25T22:18:34.902Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "ETFs"
     ]
    },
    "source": {

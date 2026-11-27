@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 2,
- "generatedAt": "2026-11-27T19:13:45.253Z",
- "lastSuccessAt": "2026-11-27T19:13:45.253Z",
- "checkedAt": "2026-11-27T19:13:45.253Z",
+ "generatedAt": "2026-11-27T19:23:51.023Z",
+ "lastSuccessAt": "2026-11-27T19:23:51.023Z",
+ "checkedAt": "2026-11-27T19:23:51.023Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 182,
-   "lastSuccessAt": "2026-11-27T19:13:25.044Z",
-   "checkedAt": "2026-11-27T19:13:25.044Z",
+   "items": 184,
+   "lastSuccessAt": "2026-11-27T19:23:40.744Z",
+   "checkedAt": "2026-11-27T19:23:40.744Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,30 +22,30 @@
   }
  },
  "itemStats": {
-  "read": 182,
+  "read": 184,
   "noSource": 0,
   "noTime": 0,
   "outsideWindow": 1,
   "noCountry": 0,
   "routineNotices": 30,
-  "offTopic": 6,
+  "offTopic": 7,
   "incidentalMentions": 0,
   "grouped": 0
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-27T19:13:45.253Z",
+   "generatedAt": "2026-11-27T19:23:51.023Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T19:13:45.253Z",
-    "to": "2026-11-27T19:13:45.253Z"
+    "from": "2026-11-24T19:23:51.023Z",
+    "to": "2026-11-27T19:23:51.023Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 68,
+   "reportsFound": 69,
    "overview": {
     "kind": "fact",
-    "text": "68 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-24 22:53 UTC to 2026-11-27 17:45 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): sanctions and trade 11, diplomacy 6, security 6, economic policy 2.",
+    "text": "69 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-24 22:53 UTC to 2026-11-27 19:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): sanctions and trade 11, diplomacy 6, security 6, economic policy 2.",
     "evidence": [
      1,
      2,
@@ -58,7 +58,7 @@
      10,
      11,
      12,
-     15
+     13
     ]
    },
    "developments": [
@@ -179,9 +179,9 @@
       10,
       11,
       12,
-      15
+      13
      ],
-     "text": "11 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][4][5][6][7][9][10][11][12][15]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][4][5][6][7][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -189,12 +189,12 @@
      "evidence": [
       3,
       4,
-      10,
+      9,
       11,
       12,
-      15
+      13
      ],
-     "text": "6 of the 12 listed reports use diplomacy wording (envoy, negotiation, negotiations, G20) [3][4][10][11][12][15]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "6 of the 12 listed reports use diplomacy wording (envoy, negotiation, pact, negotiations) [3][4][9][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
@@ -214,9 +214,9 @@
      "kind": "analysis",
      "evidence": [
       1,
-      9
+      10
      ],
-     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][9]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -229,9 +229,9 @@
       5,
       6,
       7,
-      9
+      10
      ],
-     "text": "8 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][5][6][7][9]. A headline that names two countries does not show how they are connected."
+     "text": "8 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][5][6][7][10]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
@@ -239,11 +239,11 @@
      "evidence": [
       7,
       8,
-      12,
       13,
-      14
+      14,
+      15
      ],
-     "text": "2 listed headlines were carried by more than one outlet [7][12]. The same headline appearing in several places is not independent verification."
+     "text": "2 listed headlines were carried by more than one outlet [7][13]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -329,6 +329,16 @@
     },
     {
      "n": 9,
+     "title": "India-US Trade Pact and Tariffs: Key Details Explained",
+     "publisher": "deccanchronicle.com",
+     "url": "https://www.deccanchronicle.com/nation/india-us-trade-pact-and-tariffs-key-details-explained-2008600",
+     "time": "2026-11-27T19:15:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT",
+     "sourceLabel": "unassessed"
+    },
+    {
+     "n": 10,
      "title": "Chinese goods in focus as US Black Friday shoppers seek value amid inflation, tariff pressures",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1375198.shtml",
@@ -338,7 +348,7 @@
      "sourceLabel": "state"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "India, US push for trade deal as negotiations continue; no timeline set, says Commerce Secretary",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-push-for-trade-deal-as-negotiations-continue-no-timeline-set-says-commerce-secretary/articleshow/136226565.cms",
@@ -348,7 +358,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "Dutch PM to discuss US MATCH Act chipmaking export controls with Trump at G20",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/tech/technology/dutch-pm-to-discuss-us-match-act-chipmaking-export-controls-with-trump-at-g20/articleshow/136225240.cms",
@@ -358,7 +368,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 12,
+     "n": 13,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "aninews.in",
      "url": "https://aninews.in/news/world/asia/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework20261127135416/",
@@ -368,34 +378,24 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 13,
+     "n": 14,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "bignewsnetwork.com",
      "url": "http://www.bignewsnetwork.com/news/279465595/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework",
      "time": "2026-11-27T09:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 12
+     "duplicateOf": 13
     },
     {
-     "n": 14,
+     "n": 15,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "heraldglobe.com",
      "url": "http://www.heraldglobe.com/news/279465595/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework",
      "time": "2026-11-27T11:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 12
-    },
-    {
-     "n": 15,
-     "title": "India-US Trade Deal Nears Finalization as Piyush Goyal Signals Progress in Bilateral Negotiations",
-     "publisher": "siliconindia.com",
-     "url": "https://www.siliconindia.com/news/general/indiaus-trade-deal-nears-finalization-as-piyush-goyal-signals-progress-in-bilateral-negotiations-nid-243270-cid-1.html",
-     "time": "2026-11-27T07:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT",
-     "sourceLabel": "unassessed"
+     "duplicateOf": 13
     }
    ],
    "limitations": [
@@ -404,11 +404,11 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-27T19:13:45.253Z",
+   "generatedAt": "2026-11-27T19:23:51.023Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T19:13:45.253Z",
-    "to": "2026-11-27T19:13:45.253Z"
+    "from": "2026-11-24T19:23:51.023Z",
+    "to": "2026-11-27T19:23:51.023Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
@@ -751,18 +751,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-27T19:13:45.253Z",
+   "generatedAt": "2026-11-27T19:23:51.023Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T19:13:45.253Z",
-    "to": "2026-11-27T19:13:45.253Z"
+    "from": "2026-11-24T19:23:51.023Z",
+    "to": "2026-11-27T19:23:51.023Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 41,
+   "reportsFound": 43,
    "overview": {
     "kind": "fact",
-    "text": "41 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-24 21:11 UTC to 2026-11-27 08:37 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 5, economic policy 1.",
+    "text": "43 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-24 21:11 UTC to 2026-11-27 08:37 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 5, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -1116,11 +1116,11 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-27T19:13:45.253Z",
+   "generatedAt": "2026-11-27T19:23:51.023Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T19:13:45.253Z",
-    "to": "2026-11-27T19:13:45.253Z"
+    "from": "2026-11-24T19:23:51.023Z",
+    "to": "2026-11-27T19:23:51.023Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
@@ -1505,11 +1505,11 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-27T19:13:45.253Z",
+   "generatedAt": "2026-11-27T19:23:51.023Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T19:13:45.253Z",
-    "to": "2026-11-27T19:13:45.253Z"
+    "from": "2026-11-24T19:23:51.023Z",
+    "to": "2026-11-27T19:23:51.023Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
@@ -1519,17 +1519,17 @@
     "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-24 20:42 UTC to 2026-11-27 06:00 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): sanctions and trade 9, security 3.",
     "evidence": [
      1,
-     3,
      4,
-     6,
+     5,
      7,
      8,
      9,
      10,
      11,
-     17,
+     12,
      18,
-     19
+     19,
+     20
     ]
    },
    "developments": [
@@ -1551,12 +1551,13 @@
       "Security"
      ],
      "alsoReportedBy": [
-      2
+      2,
+      3
      ]
     },
     {
      "kind": "reporting",
-     "n": 3,
+     "n": 4,
      "headline": "US tariff proposal would place Taiwan equal to FTA partners: official",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868438",
@@ -1575,7 +1576,7 @@
     },
     {
      "kind": "reporting",
-     "n": 4,
+     "n": 5,
      "headline": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405",
@@ -1591,12 +1592,12 @@
       "Sanctions and trade"
      ],
      "alsoReportedBy": [
-      5
+      6
      ]
     },
     {
      "kind": "reporting",
-     "n": 6,
+     "n": 7,
      "headline": "Taipei Mayoral Candidate Puma Shen on Fighting Chinese Cognitive Warfare",
      "publisher": "time.com",
      "url": "https://time.com/article/2026/11/24/puma-shen-taipei-mayor-taiwan-china-interview/",
@@ -1615,7 +1616,7 @@
     },
     {
      "kind": "reporting",
-     "n": 7,
+     "n": 8,
      "headline": "Taiwan seeks to lock in 15% US tariff to shield AI server and chip exports",
      "publisher": "digitimes.com",
      "url": "https://www.digitimes.com/news/a20261126PD232/taiwan-exports-2026-taipei-investigation.html",
@@ -1638,46 +1639,46 @@
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
-      3,
       4,
-      7,
+      5,
       8,
-      10,
+      9,
       11,
-      17,
+      12,
       18,
-      19
+      19,
+      20
      ],
-     "text": "9 of the 12 listed reports use sanctions and trade wording (tariff, tariffs, sanctioned) [3][4][7][8][10][11][17][18][19]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use sanctions and trade wording (tariff, tariffs, sanctioned) [4][5][8][9][11][12][18][19][20]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
      "kind": "analysis",
      "evidence": [
       1,
-      6,
-      9
+      7,
+      10
      ],
-     "text": "3 of the 12 listed reports use security wording (military, warfare, troops) [1][6][9]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use security wording (military, warfare, troops) [1][7][10]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
      "kind": "analysis",
      "evidence": [
       1,
-      3,
       4,
-      6,
+      5,
       7,
       8,
       9,
       10,
       11,
-      17,
+      12,
       18,
-      19
+      19,
+      20
      ],
-     "text": "12 listed reports with topic keywords also name China and the United States [1][3][4][6][7][8][9][10][11][17][18][19]. A headline that names two countries does not show how they are connected."
+     "text": "12 listed reports with topic keywords also name China and the United States [1][4][5][7][8][9][10][11][12][18][19][20]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
@@ -1685,16 +1686,17 @@
      "evidence": [
       1,
       2,
-      4,
+      3,
       5,
-      11,
+      6,
       12,
       13,
       14,
       15,
-      16
+      16,
+      17
      ],
-     "text": "3 listed headlines were carried by more than one outlet [1][4][11]. The same headline appearing in several places is not independent verification."
+     "text": "3 listed headlines were carried by more than one outlet [1][5][12]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -1720,6 +1722,16 @@
     },
     {
      "n": 3,
+     "title": "Chinese military tests new Taiwan landing tactics in coastal drills",
+     "publisher": "taipeitimes.com",
+     "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/28/2003868536",
+     "time": "2026-11-27T19:00:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "sourceLabel": "established",
+     "duplicateOf": 1
+    },
+    {
+     "n": 4,
      "title": "US tariff proposal would place Taiwan equal to FTA partners: official",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868438",
@@ -1729,7 +1741,7 @@
      "sourceLabel": "established"
     },
     {
-     "n": 4,
+     "n": 5,
      "title": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
      "publisher": "taipeitimes.com",
      "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405",
@@ -1739,17 +1751,17 @@
      "sourceLabel": "established"
     },
     {
-     "n": 5,
+     "n": 6,
      "title": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
      "publisher": "ltn.com.tw",
      "url": "https://news.ltn.com.tw/news/focus/breakingnews/5653523",
      "time": "2026-11-25T19:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 4
+     "duplicateOf": 5
     },
     {
-     "n": 6,
+     "n": 7,
      "title": "Taipei Mayoral Candidate Puma Shen on Fighting Chinese Cognitive Warfare",
      "publisher": "time.com",
      "url": "https://time.com/article/2026/11/24/puma-shen-taipei-mayor-taiwan-china-interview/",
@@ -1759,7 +1771,7 @@
      "sourceLabel": "established"
     },
     {
-     "n": 7,
+     "n": 8,
      "title": "Taiwan seeks to lock in 15% US tariff to shield AI server and chip exports",
      "publisher": "digitimes.com",
      "url": "https://www.digitimes.com/news/a20261126PD232/taiwan-exports-2026-taipei-investigation.html",
@@ -1769,7 +1781,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 8,
+     "n": 9,
      "title": "US Section 301 tariffs spare key chip markets, but Vietnam clouds Taiwan's 2027 outlook",
      "publisher": "digitimes.com",
      "url": "https://www.digitimes.com/news/a20261127PD210/taiwan-2027-manufacturing-investigation-chips.html",
@@ -1779,7 +1791,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 9,
+     "n": 10,
      "title": "Satellite images reveal China testing new method to land troops ashore in Taiwan drill",
      "publisher": "independent.co.uk",
      "url": "https://www.independent.co.uk/asia/china/china-taiwan-landing-drill-b3092537.html",
@@ -1789,7 +1801,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "Taiwan machinery makers see limited impact from proposed U.S. tariffs",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/business/202611270007",
@@ -1799,7 +1811,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "Meet the rising Taipei mayoral candidate who's also sanctioned by China",
      "publisher": "wdtimes.com",
      "url": "http://www.wdtimes.com/news/world/meet-the-rising-taipei-mayoral-candidate-whos-also-sanctioned-by-china/article_505643f1-6f28-5b3e-bae1-942a3a3bd594.html",
@@ -1809,57 +1821,57 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 12,
+     "n": 13,
      "title": "Meet the rising Taipei mayoral candidate who's also sanctioned by China",
      "publisher": "the-messenger.com",
      "url": "https://www.the-messenger.com/news/world/article_7774ed6f-b924-5489-ac78-9ca65b3ef584.html",
      "time": "2026-11-27T01:18:00.000Z",
      "timeBasis": "published",
      "sourceLabel": "unassessed",
-     "duplicateOf": 11
+     "duplicateOf": 12
     },
     {
-     "n": 13,
+     "n": 14,
      "title": "Meet the rising Taipei mayoral candidate who's also sanctioned by China",
      "publisher": "dailyadvance.com",
      "url": "http://www.dailyadvance.com/news/world/meet-the-rising-mayoral-candidate-in-taiwan-whos-also-sanctioned-by-china/article_14572ba9-4849-543b-bfec-b942e41fbf7f.html",
      "time": "2026-11-27T01:18:00.000Z",
      "timeBasis": "published",
      "sourceLabel": "unassessed",
-     "duplicateOf": 11
+     "duplicateOf": 12
     },
     {
-     "n": 14,
+     "n": 15,
      "title": "Meet the rising Taipei mayoral candidate who's also sanctioned by China",
      "publisher": "hindustantimes.com",
      "url": "https://www.hindustantimes.com/world-news/puma-shen-taiwans-rising-taepei-mayoral-candidate-who-is-also-sanctioned-by-china-101795742729439.html",
      "time": "2026-11-27T01:55:00.000Z",
      "timeBasis": "published",
      "sourceLabel": "unassessed",
-     "duplicateOf": 11
+     "duplicateOf": 12
     },
     {
-     "n": 15,
+     "n": 16,
      "title": "Meet the rising Taipei mayoral candidate who's also sanctioned by China",
      "publisher": "idahopress.com",
      "url": "http://www.idahopress.com/news/world/meet-the-rising-mayoral-candidate-in-taiwan-whos-also-sanctioned-by-china/article_755aca76-3093-5cd9-ba07-87aafb661ccc.html",
      "time": "2026-11-27T08:29:00.000Z",
      "timeBasis": "published",
      "sourceLabel": "unassessed",
-     "duplicateOf": 11
+     "duplicateOf": 12
     },
     {
-     "n": 16,
+     "n": 17,
      "title": "Meet the rising Taipei mayoral candidate who's also sanctioned by China",
      "publisher": "dailyexcelsior.com",
      "url": "https://www.dailyexcelsior.com/meet-the-rising-mayoral-candidate-in-taiwan-whos-also-sanctioned-by-china/",
      "time": "2026-11-27T13:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 11
+     "duplicateOf": 12
     },
     {
-     "n": 17,
+     "n": 18,
      "title": "What to know about the latest U.S. tariff proposals for Taiwan",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/business/202611260019",
@@ -1869,7 +1881,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 18,
+     "n": 19,
      "title": "Agricultural minister says no new U.S. tariffs on 322 Taiwan products",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611260013",
@@ -1879,7 +1891,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 19,
+     "n": 20,
      "title": "Vice premier outlines tariffs, support for U.S. investments by Taiwan firms",
      "publisher": "focustaiwan.tw",
      "url": "https://focustaiwan.tw/politics/202611260010",
