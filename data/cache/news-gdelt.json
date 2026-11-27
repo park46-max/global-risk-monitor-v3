@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-27T19:23:40.744Z",
- "checkedAt": "2026-11-27T19:23:40.744Z",
- "lastSuccessAt": "2026-11-27T19:23:40.744Z",
+ "generatedAt": "2026-11-27T22:18:38.996Z",
+ "checkedAt": "2026-11-27T22:18:38.996Z",
+ "lastSuccessAt": "2026-11-27T22:18:38.996Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -78,11 +78,11 @@
  },
  "relevance": {
   "droppedNoMatch": 0,
-  "filteredNotices": 33,
+  "filteredNotices": 30,
   "filteredOffTopic": 7,
-  "groupedDuplicates": 18,
-  "incidentalMentions": 22,
-  "sensationalStyle": 5,
+  "groupedDuplicates": 27,
+  "incidentalMentions": 28,
+  "sensationalStyle": 2,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "sourcePolicy": {
@@ -101,25 +101,13 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-27T19:23:40.744Z",
-   "lastSuccessAt": "2026-11-27T19:23:40.744Z",
+   "checkedAt": "2026-11-27T22:18:38.996Z",
+   "lastSuccessAt": "2026-11-27T22:18:38.996Z",
    "error": null,
-   "latestFile": "20261127193000"
+   "latestFile": "20261127221500"
   }
  },
  "files": {
-  "20261123193000": "missing",
-  "20261123194500": "ok",
-  "20261123200000": "ok",
-  "20261123201500": "ok",
-  "20261123203000": "ok",
-  "20261123204500": "ok",
-  "20261123210000": "ok",
-  "20261123211500": "ok",
-  "20261123213000": "missing",
-  "20261123214500": "ok",
-  "20261123220000": "missing",
-  "20261123221500": "missing",
   "20261123230000": "ok",
   "20261123231500": "ok",
   "20261123233000": "ok",
@@ -475,7 +463,18 @@
   "20261127184500": "ok",
   "20261127190000": "ok",
   "20261127191500": "ok",
-  "20261127193000": "ok"
+  "20261127193000": "ok",
+  "20261127194500": "ok",
+  "20261127200000": "ok",
+  "20261127201500": "ok",
+  "20261127203000": "ok",
+  "20261127204500": "ok",
+  "20261127210000": "ok",
+  "20261127211500": "ok",
+  "20261127213000": "ok",
+  "20261127214500": "ok",
+  "20261127220000": "ok",
+  "20261127221500": "ok"
  },
  "items": [
   {
@@ -713,57 +712,6 @@
    "variantsTotal": 2,
    "source": {
     "tier": "established"
-   }
-  },
-  {
-   "title": "China's space diplomacy belied by Russia's nuclear weapon satellite",
-   "url": "http://www.washingtonexaminer.com/opinion/beltway-confidential/4814104/china-space-diplomacy-russia-nuclear-weapon-satellite/",
-   "publisher": "washingtonexaminer.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T21:11:00.000Z",
-   "seenByGdelt": "2026-11-25T00:30:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ],
-     "role": "shared"
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-25T01:46:06.110Z",
-   "lastSeenAt": "2026-11-25T01:46:06.110Z",
-   "relevance": {
-    "score": 8,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "nuclear"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "diplomacy"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
    }
   },
   {
@@ -1190,57 +1138,6 @@
    }
   },
   {
-   "title": "US prepares fresh tariff hikes on China and India over industrial subsidies; announcement expected this week",
-   "url": "https://www.livemint.com/economy/us-prepares-fresh-tariff-hikes-on-china-india-and-other-countries-what-we-know-11795539309152.html",
-   "publisher": "livemint.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-24T18:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "shared"
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-24T19:25:26.804Z",
-   "lastSeenAt": "2026-11-24T19:25:26.804Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariff"
-      ]
-     },
-     {
-      "id": "economicPolicy",
-      "label": "Economic policy",
-      "terms": [
-       "subsidies"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
    "title": "Italy concerned about Ukraine's military operations in Libya – Foreign Ministry",
    "url": "https://en.interfax.com.ua/news/general/1241765.html",
    "publisher": "interfax.com.ua",
@@ -1320,50 +1217,6 @@
       "label": "Diplomacy",
       "terms": [
        "peace talks"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "U.S. Dollar Slides Amid Renewed Concerns Of Fresh Tariff War",
-   "url": "https://www.rttnews.com/3717686/u-s-dollar-slides-amid-renewed-concerns-of-fresh-tariff-war.aspx",
-   "publisher": "rttnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T22:00:00.000Z",
-   "seenByGdelt": "2026-11-24T23:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ],
-     "role": "primary"
-    }
-   },
-   "firstSeenAt": "2026-11-25T01:46:06.110Z",
-   "lastSeenAt": "2026-11-25T01:46:06.110Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "tariff"
       ]
      }
     ]
@@ -3817,50 +3670,6 @@
    }
   },
   {
-   "title": "Taipei Mayoral Candidate Puma Shen on Fighting Chinese Cognitive Warfare",
-   "url": "https://time.com/article/2026/11/24/puma-shen-taipei-mayor-taiwan-china-interview/",
-   "publisher": "time.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-24T20:42:00.000Z",
-   "seenByGdelt": "2026-11-24T21:15:00.000Z",
-   "matches": {
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "Chinese"
-     ],
-     "role": "shared"
-    },
-    "TWN": {
-     "level": "institution",
-     "terms": [
-      "Taipei"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-24T22:19:26.499Z",
-   "lastSeenAt": "2026-11-24T22:19:26.499Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "warfare"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "established"
-   }
-  },
-  {
    "title": "US proposed new tariffs on 14 trading partners, including Taiwan, China",
    "url": "https://www.taipeitimes.com/News/front/archives/2026/11/26/2003868405",
    "publisher": "taipeitimes.com",
@@ -3991,7 +3800,7 @@
     }
    },
    "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T19:13:25.044Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -4875,9 +4684,17 @@
      "url": "https://english.aawsat.com/world/5346243-trump-downplays-china-and-russias-support-iran",
      "published": "2026-11-27T10:00:00.000Z",
      "seenByGdelt": "2026-11-27T10:15:00.000Z"
+    },
+    {
+     "publisher": "surinametimes.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.surinametimes.com/artikel/trump-downplays-china-and-russias-support-to-iran",
+     "published": null,
+     "seenByGdelt": "2026-11-27T22:00:00.000Z"
     }
    ],
-   "variantsTotal": 2
+   "variantsTotal": 3
   },
   {
    "title": "Trump downplays Russia, China support for Iran during talks with US troops - Dominican Republic Post – Caribbean News, Business, Travel & Culture",
@@ -5283,138 +5100,6 @@
    }
   },
   {
-   "title": "The Russia-Ukraine war reaches the Mediterranean: What it means for Israel",
-   "url": "https://www.jns.org/analysis/the-russia-ukraine-war-reaches-the-mediterranean-what-it-means-for-israel",
-   "publisher": "jns.org",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T07:41:00.000Z",
-   "seenByGdelt": "2026-11-27T12:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T13:42:10.738Z",
-   "lastSeenAt": "2026-11-27T13:42:10.738Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "The Russian Armed Forces have delivered new strikes on Ukraine's defense industry facilities, according to the Ministry of Defense.",
-   "url": "https://nt.am/en/news/363926/",
-   "publisher": "nt.am",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T08:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T08:37:51.924Z",
-   "lastSeenAt": "2026-11-27T08:37:51.924Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "armed forces"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "FSB Foils Ukrainian Plot to Assassinate Senior Russian Military Officer in Donetsk",
-   "url": "https://sputnikglobe.com/20261127/fsb-foils-ukrainian-plot-to-assassinate-senior-russian-military-officer-in-donetsk-1125150712.html",
-   "publisher": "sputnikglobe.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T08:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T08:37:51.924Z",
-   "lastSeenAt": "2026-11-27T08:37:51.924Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "state"
-   }
-  },
-  {
    "title": "Russian Armed Forces Hammer Facilities Supplying Ukraine's Military",
    "url": "https://sputnikglobe.com/20261127/russian-armed-forces-hammer-facilities-supplying-ukraines-military-1125150886.html",
    "publisher": "sputnikglobe.com",
@@ -5554,9 +5239,17 @@
      "url": "https://english.news.cn/20261127/b348331c56ab4f0e8e4a0dd256058e53/c.html",
      "published": null,
      "seenByGdelt": "2026-11-27T13:15:00.000Z"
+    },
+    {
+     "publisher": "pakistantoday.com.pk",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.pakistantoday.com.pk/2026/11/27/chinese-business-community-urges-us-to-withdraw-proposed-section-301-tariff-hikes-ccpit",
+     "published": "2026-11-27T16:09:00.000Z",
+     "seenByGdelt": "2026-11-27T20:15:00.000Z"
     }
    ],
-   "variantsTotal": 1
+   "variantsTotal": 2
   },
   {
    "title": "\"I give them a chance to save themselves\" - Trump: Victory will come when I say so - Iran shock: Israel and Ukraine are dragging the US and EU into war",
@@ -6381,6 +6074,61 @@
    }
   },
   {
+   "title": "Putin's biggest ally questions a key claim Russia uses to justify invasion of Ukraine - LocalNews8.com",
+   "url": "https://localnews8.com/news/national-world/cnn-world/2026/11/27/putins-biggest-ally-questions-a-key-claim-russia-uses-to-justify-invasion-of-ukraine/",
+   "publisher": "localnews8.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T15:52:00.000Z",
+   "seenByGdelt": "2026-11-27T22:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "invasion"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "cyprusnews.eu",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://cyprusnews.eu/cnn-kosmos/putins-biggest-ally-questions-a-key-claim-russia-uses-to-justify-invasion-of-ukraine/",
+     "published": "2026-11-27T16:02:00.000Z",
+     "seenByGdelt": "2026-11-27T17:00:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
    "title": "'It's ecocide': Ukraine's Black Sea wildlife is being devastated by the Russian invasion",
    "url": "https://www.breakingnews.ie/world/its-ecocide-ukraines-black-sea-wildlife-is-being-devastated-by-the-russian-invasion-1960366.html",
    "publisher": "breakingnews.ie",
@@ -6434,50 +6182,6 @@
     }
    ],
    "variantsTotal": 1
-  },
-  {
-   "title": "Putin's biggest ally questions a key claim Russia uses to justify invasion of Ukraine",
-   "url": "https://cyprusnews.eu/cnn-kosmos/putins-biggest-ally-questions-a-key-claim-russia-uses-to-justify-invasion-of-ukraine/",
-   "publisher": "cyprusnews.eu",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T16:02:00.000Z",
-   "seenByGdelt": "2026-11-27T17:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T19:13:25.044Z",
-   "lastSeenAt": "2026-11-27T19:13:25.044Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "invasion"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
   },
   {
    "title": "Italy Chastises Ukraine for Strike on Russian Warship at Libyan Naval Base",
@@ -6701,6 +6405,151 @@
    }
   },
   {
+   "title": "Kyiv offers Black Sea ceasefire, as Putin expands Russia's navy - Grenada Chronicle – Daily Grenada And Caribbean News",
+   "url": "https://grenadachronicle.com/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy/",
+   "publisher": "grenadachronicle.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T18:31:00.000Z",
+   "seenByGdelt": "2026-11-27T20:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "institution",
+     "terms": [
+      "Kyiv"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "ceasefire",
+       "navy"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Pakistan seeks zero-tariff access to Chinese market to boost exports to US$ 25bln",
+   "url": "https://arynews.tv/pakistan-seeks-zero-tariff-access-to-chinese-market-to-boost-exports-to-us-25bln",
+   "publisher": "arynews.tv",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T18:40:00.000Z",
+   "seenByGdelt": "2026-11-27T19:45:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariff"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   },
+   "variants": [
+    {
+     "publisher": "pakistantoday.com.pk",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "https://www.pakistantoday.com.pk/2026/11/27/pakistan-seeks-zero-tariff-access-to-china-to-boost-exports-to-dollar25bn",
+     "published": "2026-11-27T17:19:00.000Z",
+     "seenByGdelt": "2026-11-27T20:15:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
+  },
+  {
+   "title": "Kyiv offers Black Sea ceasefire, as Putin expands Russia's navy - Dominican Republic Post – Caribbean News, Business, Travel & Culture",
+   "url": "https://dominicanrepublicpost.com/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy/",
+   "publisher": "dominicanrepublicpost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T18:51:00.000Z",
+   "seenByGdelt": "2026-11-27T19:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "institution",
+     "terms": [
+      "Kyiv"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "ceasefire",
+       "navy"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "Ukraine proposes ceasefire in Black Sea, awaits Russia's response",
    "url": "https://en.apa.az/europe/ukraine-proposes-ceasefire-in-black-sea-awaits-russias-response-539010",
    "publisher": "en.apa.az",
@@ -6742,7 +6591,18 @@
    },
    "source": {
     "tier": "unassessed"
-   }
+   },
+   "variants": [
+    {
+     "publisher": "bignewsnetwork.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "http://www.bignewsnetwork.com/news/279468125/ukraine-proposes-black-sea-ceasefire-awaits-russia-response",
+     "published": null,
+     "seenByGdelt": "2026-11-27T19:45:00.000Z"
+    }
+   ],
+   "variantsTotal": 1
   },
   {
    "title": "Ukraine submits Black Sea truce offer, waits for Russian response: Minister",
@@ -6912,6 +6772,138 @@
       "label": "Security",
       "terms": [
        "drone strike"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Russian flotilla to Libya turns around after Ukrainian attack on other warship",
+   "url": "https://www.jpost.com/international/internationalrussia-ukraine-war/article-916342",
+   "publisher": "jpost.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T20:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "warship"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "US Disables Chinese-Owned Bulker Running the Iran Blockade",
+   "url": "https://maritime-executive.com/article/us-disables-chinese-owned-bulker-running-the-iran-blockade",
+   "publisher": "maritime-executive.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T22:00:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "Chinese"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "blockade"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ukraine proposes Black Sea ceasefire as Russia demands halt to oil attacks",
+   "url": "http://www.bgnes.com/conflicts/ukraine-proposes-black-sea-ceasefire-as-russia-demands-halt-to-oil-attacks",
+   "publisher": "bgnes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-27T22:15:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "ceasefire"
       ]
      }
     ]
@@ -7527,6 +7519,43 @@
    }
   },
   {
+   "title": "Taiwan Raises 2026 Real GDP Forecast to 13.28% on AI Demand",
+   "url": "https://econotimes.com/Taiwan-Raises-2026-Real-GDP-Forecast-to-13-28-on-AI-Demand-1781245",
+   "publisher": "econotimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T19:04:00.000Z",
+   "seenByGdelt": "2026-11-27T20:30:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
+   "relevance": {
+    "score": 2,
+    "tier": "medium",
+    "topics": [
+     {
+      "id": "economicPolicy",
+      "label": "Economic policy",
+      "terms": [
+       "GDP"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "《TAIPEI TIMES》 DGBAS raises 2026 economic growth forecast to 13.28％ - 焦點",
    "url": "https://news.ltn.com.tw/news/focus/breakingnews/5655936",
    "publisher": "ltn.com.tw",
@@ -7564,32 +7593,39 @@
    }
   },
   {
-   "title": "《TAIPEI TIMES》 CEC reminds public no campaigning at the polls - 焦點",
-   "url": "https://news.ltn.com.tw/news/focus/breakingnews/5655935",
-   "publisher": "ltn.com.tw",
+   "title": "Explainer: Why Beijing is watching Taiwan's local elections, and what they could mean for 2028",
+   "url": "https://www.voanews.com/a/explainer-why-beijing-is-watching-taiwan-s-local-elections-and-what-they-could-mean-for-2028-20261127/8228726.html",
+   "publisher": "voanews.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T19:30:00.000Z",
+   "published": "2026-11-27T20:06:00.000Z",
+   "seenByGdelt": "2026-11-27T21:00:00.000Z",
    "matches": {
-    "TWN": {
+    "CHN": {
      "level": "institution",
      "terms": [
-      "Taipei"
+      "Beijing"
      ],
-     "role": "primary"
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
     }
    },
-   "firstSeenAt": "2026-11-27T19:23:40.744Z",
-   "lastSeenAt": "2026-11-27T19:23:40.744Z",
+   "firstSeenAt": "2026-11-27T22:18:38.996Z",
+   "lastSeenAt": "2026-11-27T22:18:38.996Z",
    "relevance": {
     "score": 0,
     "tier": "other",
     "topics": []
    },
    "source": {
-    "tier": "unassessed"
+    "tier": "state"
    }
   },
   {
