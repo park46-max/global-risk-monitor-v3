@@ -8,6 +8,9 @@
 //   --force                                          ignore the "recently fetched" shortcuts
 // To avoid pointless requests: World Bank series are re-requested only when older than 7 days; the UCDP file only when older than 30 days (or never fetched).
 // A failed request keeps the earlier value (with its original fetch time) and records the error, so the assessment can show it as stale.
+// ONE-TIME UCDP MIGRATION (Stage 8B-1): a cache written by an older reader (no matching "parserVersion") is re-read once so that location, primary-party and
+// supporting-party roles are stored separately. The new result replaces the cache ONLY if it downloads, parses and passes the checks in validateUcdp();
+// otherwise the earlier cache is kept unchanged (marked as a failed refresh). After one success the 30-day shortcut applies again. --verify never writes.
 // Exit codes: 0 ok (or nothing needed), 2 everything attempted failed.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -87,20 +90,36 @@ function ucdpCandidates() {
   for (let y = top; y >= R.sources.ucdp.latestKnownVersionYear; y--) list.push({ version: y + '.1', url: (process.env.RISK_UCDP_TEMPLATE || R.sources.ucdp.urlTemplate).replace('{yy}', String(y)) });
   return list;
 }
+// Checks a freshly read UCDP result before it may replace a cache entry. Returns null if acceptable, otherwise the reason it is refused.
+const sig = list => (list || []).map(c => `${c.conflictId}|${c.intensity}|${c.role}`).sort().join(';');
+function validateUcdp(parsed, conflicts, version, prevU) {
+  const ids = Object.keys(R.countries);
+  if (!Number.isInteger(parsed.latestYear)) return 'the newest year could not be determined';
+  if (!parsed.rows.some(r => r.year === parsed.latestYear)) return 'the newest year has no conflict rows';
+  if (!ids.every(id => Array.isArray(conflicts[id]))) return 'a monitored country is missing from the result';
+  if (!ids.every(id => conflicts[id].every(c => c.conflictId && c.roles && (c.roles.location || c.roles.primary || c.roles.supporting)))) return 'an entry has no role';
+  if (prevU && Number.isInteger(prevU.latestYear) && parsed.latestYear < prevU.latestYear) return `the newest year (${parsed.latestYear}) is older than the cached year (${prevU.latestYear})`;
+  // Same UCDP version and year as the cache: the result must reproduce the cached conflicts and merged roles (UCDP raises the version number when the data change).
+  if (prevU && prevU.version === version && prevU.latestYear === parsed.latestYear && prevU.conflicts && ids.every(id => Array.isArray(prevU.conflicts[id])) && ids.some(id => sig(prevU.conflicts[id]) !== sig(conflicts[id]))) return 'the result differs from the cached conflicts for the same UCDP version and year, so it was not trusted';
+  return null;
+}
 async function runUcdp(results) {
-  const p = prev.ucdp;
-  if (!FORCE && p && p.status === 'ok' && ageDays(p.fetchedAt) < 30) { say('  UCDP: fetched ' + Math.round(ageDays(p.fetchedAt)) + ' days ago, not requested again'); results.push({ label: 'UCDP', state: 'skipped' }); return p; }
+  const p = prev.ucdp, want = R.sources.ucdp.parserVersion, migrate = !!(p && p.status === 'ok' && p.parserVersion !== want);
+  if (!FORCE && p && p.status === 'ok' && !migrate && ageDays(p.fetchedAt) < 30) { say('  UCDP: fetched ' + Math.round(ageDays(p.fetchedAt)) + ' days ago, not requested again'); results.push({ label: 'UCDP', state: 'skipped' }); return p; }
+  if (migrate) say(`  UCDP: the cache was written by an older reader (parser version ${p.parserVersion || 'none'}, now ${want}). One-time re-read to store the roles separately; the cached data is kept if this fails.`);
   let lastErr = 'no candidate address worked';
   for (const c of ucdpCandidates()) {
     try {
       const r = await client.request(c.url, { hosts: HOSTS, who: 'UCDP', binary: true, accept: 'application/zip,*/*;q=0.5', maxBytes: 20 * 1048576 }, m => say(m));
       const parsed = parseUcdp(readFirstZipEntry(r.buf).toString('utf8')), conflicts = summariseUcdp(parsed, R.countries), t = iso(NOW);
-      say(`  UCDP ${c.version}: newest year ${parsed.latestYear}, ${parsed.rows.filter(x => x.year === parsed.latestYear).length} conflicts that year; per country: ` + Object.entries(conflicts).map(([k, v]) => k + ' ' + v.length).join(', '));
+      const refused = validateUcdp(parsed, conflicts, c.version, p);
+      if (refused) throw new Error('UCDP result refused: ' + refused);
+      say(`  UCDP ${c.version}: newest year ${parsed.latestYear}, ${parsed.rows.filter(x => x.year === parsed.latestYear).length} conflicts that year; per country: ` + Object.entries(conflicts).map(([k, v]) => k + ' ' + v.length).join(', ') + (migrate ? ' (roles now stored separately)' : ''));
       results.push({ label: 'UCDP', state: 'ok' });
-      return { status: 'ok', error: null, version: c.version, sourceUrl: c.url, latestYear: parsed.latestYear, conflicts, fetchedAt: t, checkedAt: t };
+      return { status: 'ok', error: null, version: c.version, parserVersion: want, sourceUrl: c.url, latestYear: parsed.latestYear, conflicts, fetchedAt: t, checkedAt: t };
     } catch (e) {
       if (e.httpStatus === 404) { say(`  UCDP ${c.version}: not published yet (HTTP 404)`); continue; }   // a newer version that does not exist yet is normal
-      lastErr = short(e.message); say(`  UCDP ${c.version}: FAILED - ${lastErr}`); break;
+      lastErr = short(e.message); say(`  UCDP ${c.version}: FAILED - ${lastErr}${p && p.conflicts ? ' (the earlier cached data is kept unchanged)' : ''}`); break;
     }
   }
   results.push({ label: 'UCDP', state: 'failed' });
