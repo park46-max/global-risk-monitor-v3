@@ -2,14 +2,14 @@
  "schema": 1,
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
- "methodologyVersion": 2,
- "generatedAt": "2026-11-27T12:01:50.120Z",
- "lastSuccessAt": "2026-11-27T12:01:50.120Z",
- "checkedAt": "2026-11-27T12:01:50.120Z",
+ "methodologyVersion": 3,
+ "generatedAt": "2026-11-27T13:06:36.212Z",
+ "lastSuccessAt": "2026-11-27T13:06:36.212Z",
+ "checkedAt": "2026-11-27T13:06:36.212Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-27T12:01:50.076Z",
+   "checkedAt": "2026-11-27T13:06:36.162Z",
    "lastSuccessAt": "2026-11-27T11:49:14.467Z"
   },
   "indicators": {
@@ -134,7 +134,200 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "profile": {
+     "version": 1,
+     "armedConflict": {
+      "status": "ok",
+      "source": {
+       "name": "UCDP/PRIO Armed Conflict Dataset",
+       "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+       "url": "https://ucdp.uu.se/downloads/",
+       "licence": "CC BY 4.0 (stated on the UCDP download page)"
+      },
+      "datasetVersion": "26.1",
+      "referenceYear": 2025,
+      "stale": false,
+      "lastSuccessAt": "2026-11-27T11:49:14.467Z",
+      "uniqueConflicts": 7,
+      "roleCounts": {
+       "locationAndPrimary": 1,
+       "primaryOnly": 0,
+       "locationOnly": 0,
+       "supportingOnly": 6,
+       "locationOrPrimaryUnsplit": 0
+      },
+      "roleSummary": "1 as location and primary party; 6 as supporting party",
+      "alsoSupporting": 0,
+      "rolesSeparated": true,
+      "conflicts": [
+       {
+        "conflictId": "16099",
+        "location": "United Kingdom, United States of America, Yemen (North Yemen)",
+        "sideA": "Government of United Kingdom, Government of United States of America",
+        "sideB": "Government of Yemen (North Yemen)",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "interstate",
+        "incompatibility": "territory",
+        "roles": {
+         "location": true,
+         "primary": true,
+         "supporting": false
+        },
+        "roleKey": "both",
+        "roleLabel": "location and primary party"
+       },
+       {
+        "conflictId": "337",
+        "location": "Somalia",
+        "sideA": "Government of Somalia",
+        "sideB": "Al-Shabaab",
+        "intensity": 2,
+        "intensityLabel": "war",
+        "type": "internationalised internal",
+        "incompatibility": "government",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "13641",
+        "location": "Nigeria",
+        "sideA": "Government of Nigeria",
+        "sideB": "IS",
+        "intensity": 2,
+        "intensityLabel": "war",
+        "type": "internationalised internal",
+        "incompatibility": "territory",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "14609",
+        "location": "Iran, Israel",
+        "sideA": "Government of Iran",
+        "sideB": "Government of Israel",
+        "intensity": 2,
+        "intensityLabel": "war",
+        "type": "interstate",
+        "incompatibility": "government",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "259",
+        "location": "Iraq",
+        "sideA": "Government of Iraq",
+        "sideB": "IS",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "internationalised internal",
+        "incompatibility": "government",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "13604",
+        "location": "Syria",
+        "sideA": "Government of Syria",
+        "sideB": "IS",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "internationalised internal",
+        "incompatibility": "territory",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "14197",
+        "location": "Somalia",
+        "sideA": "Government of Somalia",
+        "sideB": "IS",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "internationalised internal",
+        "incompatibility": "territory",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       }
+      ],
+      "summary": "7 state-based armed conflicts recorded in UCDP/PRIO v26.1 for 2025: 1 as location and primary party; 6 as supporting party.",
+      "notes": {
+       "visible": [
+        "UCDP/PRIO records state-based armed conflict only. A count of zero is not an absence of security threats.",
+        "Intensity describes the whole conflict, not this country's own involvement."
+       ],
+       "more": [
+        "Intensity (minor: 25 to 999 battle-related deaths in the year; war: 1,000 or more) describes the whole conflict, not this country's own involvement or casualties.",
+        "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+        "Each conflict is listed once, however many roles apply to this country. A supporting party is a state that entered the conflict with troops to actively support a primary party; this dashboard does not state which side.",
+        "Annual data: this describes calendar year 2025, not events since then.",
+        "The UCDP/PRIO armed conflict dataset has no information on tension, crises short of armed conflict, terrorism or unrest."
+       ]
+      }
+     },
+     "politicalStability": {
+      "source": {
+       "name": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
+       "publisher": "World Bank Group",
+       "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST",
+       "licence": "World Bank Open Data terms of use (https://data.worldbank.org/summary-terms-of-use)"
+      },
+      "indicator": "GOV_WGI_PV.EST",
+      "uncertainty": null,
+      "uncertaintyNote": "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted.",
+      "status": "ok",
+      "estimate": -0.3020818,
+      "displayEstimate": "-0.30",
+      "referenceYear": "2025",
+      "stale": false,
+      "sourceUpdated": "2026-09-25",
+      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "summary": "Estimate -0.30 for 2025.",
+      "notes": {
+       "visible": [
+        "A perception-based estimate on a scale of about -2.5 to +2.5. Zero is not the global average: since the 2025 revision the global average can change over time, and earlier editions fixed it at zero.",
+        "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted."
+       ],
+       "more": [
+        "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). The World Bank defines political stability as perceptions of the likelihood of politically motivated violence, including civil unrest and terrorism. Annual. The World Bank publishes 90 percent confidence intervals, which are not used here: single-year differences between countries can lie within them. The cut-offs 0.0 and -1.0 are project-defined conventions chosen on the conventional scale and have not been re-checked against the revised series.",
+        "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards."
+       ]
+      }
+     },
+     "countryNote": null,
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "economic": {
     "category": "economic",
@@ -222,13 +415,97 @@
      "Reference years differ between indicators: inflation 2024, GDP growth 2025, unemployment 2025."
     ],
     "context": [],
-    "contextAsOf": null
+    "contextAsOf": null,
+    "profile": {
+     "version": 1,
+     "indicators": [
+      {
+       "key": "inflation",
+       "label": "Inflation (consumer prices, annual %)",
+       "code": "FP.CPI.TOTL.ZG",
+       "source": {
+        "name": "Inflation, consumer prices (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 2.94952520485207,
+       "displayValue": "2.95%",
+       "year": "2024",
+       "band": "Low",
+       "note": null
+      },
+      {
+       "key": "growth",
+       "label": "GDP growth (annual %)",
+       "code": "NY.GDP.MKTP.KD.ZG",
+       "source": {
+        "name": "GDP growth (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 2.16138195623856,
+       "displayValue": "2.16%",
+       "year": "2025",
+       "band": "Low",
+       "note": null
+      },
+      {
+       "key": "unemployment",
+       "label": "Unemployment (% of labour force)",
+       "code": "SL.UEM.TOTL.ZS",
+       "source": {
+        "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+        "publisher": "World Bank (ILO modelled estimate)",
+        "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 4.198,
+       "displayValue": "4.20%",
+       "year": "2025",
+       "band": "Low",
+       "note": null
+      }
+     ],
+     "usedCount": 3,
+     "minRequired": 2,
+     "referenceYears": [
+      "2024",
+      "2025"
+     ],
+     "stale": false,
+     "lastSuccessAt": "2026-11-27T08:47:47.381Z",
+     "flag": {
+      "name": "Macroeconomic stress flag (project-defined)",
+      "status": "assessed",
+      "level": "Low",
+      "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)"
+     },
+     "notes": {
+      "visible": [
+       "Three indicators only. The flag is a project-defined rule, not an assessment of overall economic risk."
+      ],
+      "more": [
+       "The stress flag is a project-defined rule (the worst band among the available indicators, unchanged from methodology version 2). It is not a comprehensive assessment of economic risk.",
+       "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+       "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+       "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+       "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then.",
+       "Reference years differ between indicators: inflation 2024, GDP growth 2025, unemployment 2025."
+      ]
+     },
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "diplomatic": {
     "category": "diplomatic",
     "status": "insufficient",
     "level": null,
-    "summary": "No level for United States: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "summary": "No level for United States: this project has not identified a suitable, verified and legally reusable dataset of diplomatic relations. Counting articles, sanctions headlines or keywords is not used: it does not measure diplomatic risk.",
     "rule": null,
     "facts": [],
     "sources": [],
@@ -330,7 +607,98 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "profile": {
+     "version": 1,
+     "armedConflict": {
+      "status": "ok",
+      "source": {
+       "name": "UCDP/PRIO Armed Conflict Dataset",
+       "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+       "url": "https://ucdp.uu.se/downloads/",
+       "licence": "CC BY 4.0 (stated on the UCDP download page)"
+      },
+      "datasetVersion": "26.1",
+      "referenceYear": 2025,
+      "stale": false,
+      "lastSuccessAt": "2026-11-27T11:49:14.467Z",
+      "uniqueConflicts": 1,
+      "roleCounts": {
+       "locationAndPrimary": 0,
+       "primaryOnly": 0,
+       "locationOnly": 0,
+       "supportingOnly": 1,
+       "locationOrPrimaryUnsplit": 0
+      },
+      "roleSummary": "1 as supporting party",
+      "alsoSupporting": 0,
+      "rolesSeparated": true,
+      "conflicts": [
+       {
+        "conflictId": "416",
+        "location": "Central African Republic",
+        "sideA": "Government of Central African Republic",
+        "sideB": "CMSPR, CPC, CPC-F",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "internationalised internal",
+        "incompatibility": "government",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       }
+      ],
+      "summary": "1 state-based armed conflict recorded in UCDP/PRIO v26.1 for 2025: 1 as supporting party.",
+      "notes": {
+       "visible": [
+        "UCDP/PRIO records state-based armed conflict only. A count of zero is not an absence of security threats.",
+        "Intensity describes the whole conflict, not this country's own involvement."
+       ],
+       "more": [
+        "Intensity (minor: 25 to 999 battle-related deaths in the year; war: 1,000 or more) describes the whole conflict, not this country's own involvement or casualties.",
+        "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+        "Each conflict is listed once, however many roles apply to this country. A supporting party is a state that entered the conflict with troops to actively support a primary party; this dashboard does not state which side.",
+        "Annual data: this describes calendar year 2025, not events since then.",
+        "The UCDP/PRIO armed conflict dataset has no information on tension, crises short of armed conflict, terrorism or unrest."
+       ]
+      }
+     },
+     "politicalStability": {
+      "source": {
+       "name": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
+       "publisher": "World Bank Group",
+       "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST",
+       "licence": "World Bank Open Data terms of use (https://data.worldbank.org/summary-terms-of-use)"
+      },
+      "indicator": "GOV_WGI_PV.EST",
+      "uncertainty": null,
+      "uncertaintyNote": "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted.",
+      "status": "ok",
+      "estimate": 0.022475,
+      "displayEstimate": "0.02",
+      "referenceYear": "2025",
+      "stale": false,
+      "sourceUpdated": "2026-09-25",
+      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "summary": "Estimate 0.02 for 2025.",
+      "notes": {
+       "visible": [
+        "A perception-based estimate on a scale of about -2.5 to +2.5. Zero is not the global average: since the 2025 revision the global average can change over time, and earlier editions fixed it at zero.",
+        "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted."
+       ],
+       "more": [
+        "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). The World Bank defines political stability as perceptions of the likelihood of politically motivated violence, including civil unrest and terrorism. Annual. The World Bank publishes 90 percent confidence intervals, which are not used here: single-year differences between countries can lie within them. The cut-offs 0.0 and -1.0 are project-defined conventions chosen on the conventional scale and have not been re-checked against the revised series.",
+        "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards."
+       ]
+      }
+     },
+     "countryNote": null,
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "economic": {
     "category": "economic",
@@ -417,13 +785,95 @@
      "Headlines played no part in the level."
     ],
     "context": [],
-    "contextAsOf": null
+    "contextAsOf": null,
+    "profile": {
+     "version": 1,
+     "indicators": [
+      {
+       "key": "inflation",
+       "label": "Inflation (consumer prices, annual %)",
+       "code": "FP.CPI.TOTL.ZG",
+       "source": {
+        "name": "Inflation, consumer prices (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 0.0595646916565402,
+       "displayValue": "0.06%",
+       "year": "2025",
+       "band": "Low",
+       "note": null
+      },
+      {
+       "key": "growth",
+       "label": "GDP growth (annual %)",
+       "code": "NY.GDP.MKTP.KD.ZG",
+       "source": {
+        "name": "GDP growth (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 4.95994886240992,
+       "displayValue": "4.96%",
+       "year": "2025",
+       "band": "Low",
+       "note": null
+      },
+      {
+       "key": "unemployment",
+       "label": "Unemployment (% of labour force)",
+       "code": "SL.UEM.TOTL.ZS",
+       "source": {
+        "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+        "publisher": "World Bank (ILO modelled estimate)",
+        "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 4.615,
+       "displayValue": "4.62%",
+       "year": "2025",
+       "band": "Low",
+       "note": null
+      }
+     ],
+     "usedCount": 3,
+     "minRequired": 2,
+     "referenceYears": [
+      "2025"
+     ],
+     "stale": false,
+     "lastSuccessAt": "2026-11-27T08:47:48.885Z",
+     "flag": {
+      "name": "Macroeconomic stress flag (project-defined)",
+      "status": "assessed",
+      "level": "Low",
+      "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)"
+     },
+     "notes": {
+      "visible": [
+       "Three indicators only. The flag is a project-defined rule, not an assessment of overall economic risk."
+      ],
+      "more": [
+       "The stress flag is a project-defined rule (the worst band among the available indicators, unchanged from methodology version 2). It is not a comprehensive assessment of economic risk.",
+       "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+       "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+       "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+       "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then."
+      ]
+     },
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "diplomatic": {
     "category": "diplomatic",
     "status": "insufficient",
     "level": null,
-    "summary": "No level for China: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "summary": "No level for China: this project has not identified a suitable, verified and legally reusable dataset of diplomatic relations. Counting articles, sanctions headlines or keywords is not used: it does not measure diplomatic risk.",
     "rule": null,
     "facts": [],
     "sources": [],
@@ -557,7 +1007,166 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "profile": {
+     "version": 1,
+     "armedConflict": {
+      "status": "ok",
+      "source": {
+       "name": "UCDP/PRIO Armed Conflict Dataset",
+       "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+       "url": "https://ucdp.uu.se/downloads/",
+       "licence": "CC BY 4.0 (stated on the UCDP download page)"
+      },
+      "datasetVersion": "26.1",
+      "referenceYear": 2025,
+      "stale": false,
+      "lastSuccessAt": "2026-11-27T11:49:14.467Z",
+      "uniqueConflicts": 5,
+      "roleCounts": {
+       "locationAndPrimary": 1,
+       "primaryOnly": 0,
+       "locationOnly": 0,
+       "supportingOnly": 4,
+       "locationOrPrimaryUnsplit": 0
+      },
+      "roleSummary": "1 as location and primary party; 4 as supporting party",
+      "alsoSupporting": 0,
+      "rolesSeparated": true,
+      "conflicts": [
+       {
+        "conflictId": "13243",
+        "location": "Russia (Soviet Union), Ukraine",
+        "sideA": "Government of Russia (Soviet Union)",
+        "sideB": "Government of Ukraine",
+        "intensity": 2,
+        "intensityLabel": "war",
+        "type": "interstate",
+        "incompatibility": "government and territory",
+        "roles": {
+         "location": true,
+         "primary": true,
+         "supporting": false
+        },
+        "roleKey": "both",
+        "roleLabel": "location and primary party"
+       },
+       {
+        "conflictId": "11347",
+        "location": "Mali",
+        "sideA": "Government of Mali",
+        "sideB": "JNIM",
+        "intensity": 2,
+        "intensityLabel": "war",
+        "type": "internationalised internal",
+        "incompatibility": "government",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "416",
+        "location": "Central African Republic",
+        "sideA": "Government of Central African Republic",
+        "sideB": "CMSPR, CPC, CPC-F",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "internationalised internal",
+        "incompatibility": "government",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "14113",
+        "location": "Mali",
+        "sideA": "Government of Mali",
+        "sideB": "IS",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "internationalised internal",
+        "incompatibility": "territory",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       },
+       {
+        "conflictId": "16038",
+        "location": "Mali",
+        "sideA": "Government of Mali",
+        "sideB": "FLA",
+        "intensity": 1,
+        "intensityLabel": "minor",
+        "type": "internationalised internal",
+        "incompatibility": "government and territory",
+        "roles": {
+         "location": false,
+         "primary": false,
+         "supporting": true
+        },
+        "roleKey": "supporting",
+        "roleLabel": "supporting party"
+       }
+      ],
+      "summary": "5 state-based armed conflicts recorded in UCDP/PRIO v26.1 for 2025: 1 as location and primary party; 4 as supporting party.",
+      "notes": {
+       "visible": [
+        "UCDP/PRIO records state-based armed conflict only. A count of zero is not an absence of security threats.",
+        "Intensity describes the whole conflict, not this country's own involvement."
+       ],
+       "more": [
+        "Intensity (minor: 25 to 999 battle-related deaths in the year; war: 1,000 or more) describes the whole conflict, not this country's own involvement or casualties.",
+        "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+        "Each conflict is listed once, however many roles apply to this country. A supporting party is a state that entered the conflict with troops to actively support a primary party; this dashboard does not state which side.",
+        "Annual data: this describes calendar year 2025, not events since then.",
+        "The UCDP/PRIO armed conflict dataset has no information on tension, crises short of armed conflict, terrorism or unrest."
+       ]
+      }
+     },
+     "politicalStability": {
+      "source": {
+       "name": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
+       "publisher": "World Bank Group",
+       "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST",
+       "licence": "World Bank Open Data terms of use (https://data.worldbank.org/summary-terms-of-use)"
+      },
+      "indicator": "GOV_WGI_PV.EST",
+      "uncertainty": null,
+      "uncertaintyNote": "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted.",
+      "status": "ok",
+      "estimate": -0.9449586,
+      "displayEstimate": "-0.94",
+      "referenceYear": "2025",
+      "stale": false,
+      "sourceUpdated": "2026-09-25",
+      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "summary": "Estimate -0.94 for 2025.",
+      "notes": {
+       "visible": [
+        "A perception-based estimate on a scale of about -2.5 to +2.5. Zero is not the global average: since the 2025 revision the global average can change over time, and earlier editions fixed it at zero.",
+        "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted."
+       ],
+       "more": [
+        "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). The World Bank defines political stability as perceptions of the likelihood of politically motivated violence, including civil unrest and terrorism. Annual. The World Bank publishes 90 percent confidence intervals, which are not used here: single-year differences between countries can lie within them. The cut-offs 0.0 and -1.0 are project-defined conventions chosen on the conventional scale and have not been re-checked against the revised series.",
+        "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards."
+       ]
+      }
+     },
+     "countryNote": null,
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "economic": {
     "category": "economic",
@@ -645,13 +1254,96 @@
      "UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution."
     ],
     "context": [],
-    "contextAsOf": null
+    "contextAsOf": null,
+    "profile": {
+     "version": 1,
+     "indicators": [
+      {
+       "key": "inflation",
+       "label": "Inflation (consumer prices, annual %)",
+       "code": "FP.CPI.TOTL.ZG",
+       "source": {
+        "name": "Inflation, consumer prices (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 8.71986939402666,
+       "displayValue": "8.72%",
+       "year": "2025",
+       "band": "Moderate",
+       "note": null
+      },
+      {
+       "key": "growth",
+       "label": "GDP growth (annual %)",
+       "code": "NY.GDP.MKTP.KD.ZG",
+       "source": {
+        "name": "GDP growth (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 1.00117656925738,
+       "displayValue": "1.00%",
+       "year": "2025",
+       "band": "Moderate",
+       "note": null
+      },
+      {
+       "key": "unemployment",
+       "label": "Unemployment (% of labour force)",
+       "code": "SL.UEM.TOTL.ZS",
+       "source": {
+        "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+        "publisher": "World Bank (ILO modelled estimate)",
+        "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 2.133,
+       "displayValue": "2.13%",
+       "year": "2025",
+       "band": "Low",
+       "note": null
+      }
+     ],
+     "usedCount": 3,
+     "minRequired": 2,
+     "referenceYears": [
+      "2025"
+     ],
+     "stale": false,
+     "lastSuccessAt": "2026-11-27T08:47:50.277Z",
+     "flag": {
+      "name": "Macroeconomic stress flag (project-defined)",
+      "status": "assessed",
+      "level": "Moderate",
+      "rule": "E: the overall level is the worst band among the 3 available indicators (bands in data/risk-methodology.mjs)"
+     },
+     "notes": {
+      "visible": [
+       "Three indicators only. The flag is a project-defined rule, not an assessment of overall economic risk.",
+       "UCDP records a war involving this country as location or primary party; the three indicators may not capture war damage."
+      ],
+      "more": [
+       "The stress flag is a project-defined rule (the worst band among the available indicators, unchanged from methodology version 2). It is not a comprehensive assessment of economic risk.",
+       "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+       "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+       "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+       "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then."
+      ]
+     },
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "diplomatic": {
     "category": "diplomatic",
     "status": "insufficient",
     "level": null,
-    "summary": "No level for Russia: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "summary": "No level for Russia: this project has not identified a suitable, verified and legally reusable dataset of diplomatic relations. Counting articles, sanctions headlines or keywords is not used: it does not measure diplomatic risk.",
     "rule": null,
     "facts": [],
     "sources": [],
@@ -752,7 +1444,98 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "profile": {
+     "version": 1,
+     "armedConflict": {
+      "status": "ok",
+      "source": {
+       "name": "UCDP/PRIO Armed Conflict Dataset",
+       "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+       "url": "https://ucdp.uu.se/downloads/",
+       "licence": "CC BY 4.0 (stated on the UCDP download page)"
+      },
+      "datasetVersion": "26.1",
+      "referenceYear": 2025,
+      "stale": false,
+      "lastSuccessAt": "2026-11-27T11:49:14.467Z",
+      "uniqueConflicts": 1,
+      "roleCounts": {
+       "locationAndPrimary": 1,
+       "primaryOnly": 0,
+       "locationOnly": 0,
+       "supportingOnly": 0,
+       "locationOrPrimaryUnsplit": 0
+      },
+      "roleSummary": "1 as location and primary party",
+      "alsoSupporting": 0,
+      "rolesSeparated": true,
+      "conflicts": [
+       {
+        "conflictId": "13243",
+        "location": "Russia (Soviet Union), Ukraine",
+        "sideA": "Government of Russia (Soviet Union)",
+        "sideB": "Government of Ukraine",
+        "intensity": 2,
+        "intensityLabel": "war",
+        "type": "interstate",
+        "incompatibility": "government and territory",
+        "roles": {
+         "location": true,
+         "primary": true,
+         "supporting": false
+        },
+        "roleKey": "both",
+        "roleLabel": "location and primary party"
+       }
+      ],
+      "summary": "1 state-based armed conflict recorded in UCDP/PRIO v26.1 for 2025: 1 as location and primary party.",
+      "notes": {
+       "visible": [
+        "UCDP/PRIO records state-based armed conflict only. A count of zero is not an absence of security threats.",
+        "Intensity describes the whole conflict, not this country's own involvement."
+       ],
+       "more": [
+        "Intensity (minor: 25 to 999 battle-related deaths in the year; war: 1,000 or more) describes the whole conflict, not this country's own involvement or casualties.",
+        "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+        "Each conflict is listed once, however many roles apply to this country. A supporting party is a state that entered the conflict with troops to actively support a primary party; this dashboard does not state which side.",
+        "Annual data: this describes calendar year 2025, not events since then.",
+        "The UCDP/PRIO armed conflict dataset has no information on tension, crises short of armed conflict, terrorism or unrest."
+       ]
+      }
+     },
+     "politicalStability": {
+      "source": {
+       "name": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
+       "publisher": "World Bank Group",
+       "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST",
+       "licence": "World Bank Open Data terms of use (https://data.worldbank.org/summary-terms-of-use)"
+      },
+      "indicator": "GOV_WGI_PV.EST",
+      "uncertainty": null,
+      "uncertaintyNote": "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted.",
+      "status": "ok",
+      "estimate": -0.3337994,
+      "displayEstimate": "-0.33",
+      "referenceYear": "2025",
+      "stale": false,
+      "sourceUpdated": "2026-09-25",
+      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "summary": "Estimate -0.33 for 2025.",
+      "notes": {
+       "visible": [
+        "A perception-based estimate on a scale of about -2.5 to +2.5. Zero is not the global average: since the 2025 revision the global average can change over time, and earlier editions fixed it at zero.",
+        "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted."
+       ],
+       "more": [
+        "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). The World Bank defines political stability as perceptions of the likelihood of politically motivated violence, including civil unrest and terrorism. Annual. The World Bank publishes 90 percent confidence intervals, which are not used here: single-year differences between countries can lie within them. The cut-offs 0.0 and -1.0 are project-defined conventions chosen on the conventional scale and have not been re-checked against the revised series.",
+        "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards."
+       ]
+      }
+     },
+     "countryNote": null,
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "economic": {
     "category": "economic",
@@ -820,13 +1603,96 @@
      "UCDP records this country as a location of or primary party in a war in the newest dataset year. The macro indicators above may be incomplete or may not capture war damage, so read this level with particular caution."
     ],
     "context": [],
-    "contextAsOf": null
+    "contextAsOf": null,
+    "profile": {
+     "version": 1,
+     "indicators": [
+      {
+       "key": "inflation",
+       "label": "Inflation (consumer prices, annual %)",
+       "code": "FP.CPI.TOTL.ZG",
+       "source": {
+        "name": "Inflation, consumer prices (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 12.7303341026902,
+       "displayValue": "12.73%",
+       "year": "2025",
+       "band": "High",
+       "note": null
+      },
+      {
+       "key": "growth",
+       "label": "GDP growth (annual %)",
+       "code": "NY.GDP.MKTP.KD.ZG",
+       "source": {
+        "name": "GDP growth (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "used",
+       "value": 1.82152376756284,
+       "displayValue": "1.82%",
+       "year": "2025",
+       "band": "Moderate",
+       "note": null
+      },
+      {
+       "key": "unemployment",
+       "label": "Unemployment (% of labour force)",
+       "code": "SL.UEM.TOTL.ZS",
+       "source": {
+        "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+        "publisher": "World Bank (ILO modelled estimate)",
+        "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "outdated",
+       "value": 9.834,
+       "displayValue": "9.83%",
+       "year": "2021",
+       "band": null,
+       "note": "Excluded from the stress flag: the newest value is older than 3 years."
+      }
+     ],
+     "usedCount": 2,
+     "minRequired": 2,
+     "referenceYears": [
+      "2025"
+     ],
+     "stale": false,
+     "lastSuccessAt": "2026-11-27T08:47:55.779Z",
+     "flag": {
+      "name": "Macroeconomic stress flag (project-defined)",
+      "status": "assessed",
+      "level": "High",
+      "rule": "E: the overall level is the worst band among the 2 available indicators (bands in data/risk-methodology.mjs)"
+     },
+     "notes": {
+      "visible": [
+       "Three indicators only. The flag is a project-defined rule, not an assessment of overall economic risk.",
+       "UCDP records a war involving this country as location or primary party; the three indicators may not capture war damage."
+      ],
+      "more": [
+       "The stress flag is a project-defined rule (the worst band among the available indicators, unchanged from methodology version 2). It is not a comprehensive assessment of economic risk.",
+       "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+       "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+       "The inflation limit for Critical (20% a year) corresponds to the inflation-crisis convention used by Reinhart and Rogoff (American Economic Review, 2011). That convention does not validate the project's Critical level or its other limits.",
+       "Annual figures for the reference years shown (the newest value the World Bank had published for each indicator at the last update); they do not describe events since then."
+      ]
+     },
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "diplomatic": {
     "category": "diplomatic",
     "status": "insufficient",
     "level": null,
-    "summary": "No level for Ukraine: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "summary": "No level for Ukraine: this project has not identified a suitable, verified and legally reusable dataset of diplomatic relations. Counting articles, sanctions headlines or keywords is not used: it does not measure diplomatic risk.",
     "rule": null,
     "facts": [],
     "sources": [],
@@ -935,7 +1801,79 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T10:27:11.937Z"
+    "contextAsOf": "2026-11-27T10:27:11.937Z",
+    "profile": {
+     "version": 1,
+     "armedConflict": {
+      "status": "ok",
+      "source": {
+       "name": "UCDP/PRIO Armed Conflict Dataset",
+       "publisher": "Uppsala Conflict Data Program (Uppsala University) and PRIO",
+       "url": "https://ucdp.uu.se/downloads/",
+       "licence": "CC BY 4.0 (stated on the UCDP download page)"
+      },
+      "datasetVersion": "26.1",
+      "referenceYear": 2025,
+      "stale": false,
+      "lastSuccessAt": "2026-11-27T11:49:14.467Z",
+      "uniqueConflicts": 0,
+      "roleCounts": {
+       "locationAndPrimary": 0,
+       "primaryOnly": 0,
+       "locationOnly": 0,
+       "supportingOnly": 0,
+       "locationOrPrimaryUnsplit": 0
+      },
+      "roleSummary": "",
+      "alsoSupporting": 0,
+      "rolesSeparated": true,
+      "conflicts": [],
+      "summary": "No state-based armed conflict recorded for Taiwan in UCDP/PRIO v26.1 for 2025.",
+      "notes": {
+       "visible": [
+        "UCDP/PRIO records state-based armed conflict only. A count of zero is not an absence of security threats."
+       ],
+       "more": [
+        "Intensity (minor: 25 to 999 battle-related deaths in the year; war: 1,000 or more) describes the whole conflict, not this country's own involvement or casualties.",
+        "In UCDP, \"location\" lists the country or countries whose government has a primary claim to the incompatibility; it does not state where the fighting took place.",
+        "Each conflict is listed once, however many roles apply to this country. A supporting party is a state that entered the conflict with troops to actively support a primary party; this dashboard does not state which side.",
+        "Annual data: this describes calendar year 2025, not events since then.",
+        "The UCDP/PRIO armed conflict dataset has no information on tension, crises short of armed conflict, terrorism or unrest."
+       ]
+      }
+     },
+     "politicalStability": {
+      "source": {
+       "name": "Worldwide Governance Indicators (2025 revision): Political Stability, governance estimate (approx. -2.5 to +2.5), GOV_WGI_PV.EST",
+       "publisher": "World Bank Group",
+       "url": "https://data.worldbank.org/indicator/GOV_WGI_PV.EST",
+       "licence": "World Bank Open Data terms of use (https://data.worldbank.org/summary-terms-of-use)"
+      },
+      "indicator": "GOV_WGI_PV.EST",
+      "uncertainty": null,
+      "uncertaintyNote": "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted.",
+      "status": "ok",
+      "estimate": 0.9986707,
+      "displayEstimate": "1.00",
+      "referenceYear": "2025",
+      "stale": false,
+      "sourceUpdated": "2026-09-25",
+      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "summary": "Estimate 1.00 for 2025.",
+      "notes": {
+       "visible": [
+        "A perception-based estimate on a scale of about -2.5 to +2.5. Zero is not the global average: since the 2025 revision the global average can change over time, and earlier editions fixed it at zero.",
+        "Margin of error: not retrieved here. The World Bank publishes 90 percent confidence intervals for the WGI estimates, and small differences between countries or years should not be over-interpreted."
+       ],
+       "more": [
+        "A composite of perception-based surveys (WGI 2025 revision, history recalculated back to 1996), roughly -2.5 (weak) to +2.5 (strong). The World Bank defines political stability as perceptions of the likelihood of politically motivated violence, including civil unrest and terrorism. Annual. The World Bank publishes 90 percent confidence intervals, which are not used here: single-year differences between countries can lie within them. The cut-offs 0.0 and -1.0 are project-defined conventions chosen on the conventional scale and have not been re-checked against the revised series.",
+        "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards."
+       ]
+      }
+     },
+     "countryNote": "Neither security profile measures cross-strait tension or military activity: UCDP covers recorded state-based armed conflict only, and the WGI estimate is a perception-based measure of political stability.",
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "economic": {
     "category": "economic",
@@ -955,13 +1893,92 @@
     ],
     "insufficientReason": "no-evidence",
     "context": [],
-    "contextAsOf": null
+    "contextAsOf": null,
+    "profile": {
+     "version": 1,
+     "indicators": [
+      {
+       "key": "inflation",
+       "label": "Inflation (consumer prices, annual %)",
+       "code": "FP.CPI.TOTL.ZG",
+       "source": {
+        "name": "Inflation, consumer prices (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "no-value",
+       "value": null,
+       "displayValue": null,
+       "year": null,
+       "band": null,
+       "note": "The World Bank has published no value for this country."
+      },
+      {
+       "key": "growth",
+       "label": "GDP growth (annual %)",
+       "code": "NY.GDP.MKTP.KD.ZG",
+       "source": {
+        "name": "GDP growth (annual %)",
+        "publisher": "World Bank",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "no-value",
+       "value": null,
+       "displayValue": null,
+       "year": null,
+       "band": null,
+       "note": "The World Bank has published no value for this country."
+      },
+      {
+       "key": "unemployment",
+       "label": "Unemployment (% of labour force)",
+       "code": "SL.UEM.TOTL.ZS",
+       "source": {
+        "name": "Unemployment, total (% of labour force), modelled ILO estimate",
+        "publisher": "World Bank (ILO modelled estimate)",
+        "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+        "licence": "World Bank Open Data, CC BY 4.0"
+       },
+       "status": "no-value",
+       "value": null,
+       "displayValue": null,
+       "year": null,
+       "band": null,
+       "note": "The World Bank has published no value for this country."
+      }
+     ],
+     "usedCount": 0,
+     "minRequired": 2,
+     "referenceYears": [],
+     "stale": false,
+     "lastSuccessAt": null,
+     "flag": {
+      "name": "Macroeconomic stress flag (project-defined)",
+      "status": "insufficient",
+      "level": null,
+      "rule": null
+     },
+     "notes": {
+      "visible": [
+       "Three indicators only. The flag is a project-defined rule, not an assessment of overall economic risk."
+      ],
+      "more": [
+       "The stress flag is a project-defined rule (the worst band among the available indicators, unchanged from methodology version 2). It is not a comprehensive assessment of economic risk.",
+       "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
+       "Level bands and cut-offs (S1 to S4, the WGI cut-offs and the economic bands) are project-defined conventions, not validated international risk standards.",
+       "The World Bank help desk states that its World Development Indicators do not list \"Taiwan, China\" as a separate country (https://datahelpdesk.worldbank.org/knowledgebase/articles/114933-where-are-your-data-on-taiwan), so these series are absent at the source. This is a source coverage limit, not evidence of low risk. The WGI political stability series is published for Taiwan and is a different dataset."
+      ]
+     },
+     "legacyNote": "Legacy classifications: the combined security level and the economic level of methodology version 2, produced by the same rules and thresholds as before and kept for continuity. The security level combines two different measures (UCDP conflict records and a WGI perception estimate), which is why it is no longer the main display."
+    }
    },
    "diplomatic": {
     "category": "diplomatic",
     "status": "insufficient",
     "level": null,
-    "summary": "No level for Taiwan: no free, verifiable, machine-readable dataset of diplomatic tension that can be reused legally was found, and counting articles, sanctions headlines or keywords does not measure diplomatic risk.",
+    "summary": "No level for Taiwan: this project has not identified a suitable, verified and legally reusable dataset of diplomatic relations. Counting articles, sanctions headlines or keywords is not used: it does not measure diplomatic risk.",
     "rule": null,
     "facts": [],
     "sources": [],
