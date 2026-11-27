@@ -64,14 +64,13 @@ code{font-size:12px;color:var(--tx2);word-break:break-word}
 /* ---------- page grid ---------- */
 main{display:grid;gap:16px;padding:16px var(--pad) 8px;grid-template-columns:repeat(12,minmax(0,1fr))}
 .strip{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;min-width:0}
-.mapc,.newsc{grid-column:span 7}.side,.datac{grid-column:span 5}.briefc{grid-column:1/-1}
+.colL{grid-column:span 7}.colR{grid-column:span 5}.briefc{grid-column:1/-1}
+/* Stage 9.2: two independent stacks on desktop, so a tall right column no longer pushes the news down the left column */
+.col{display:flex;flex-direction:column;gap:16px;min-width:0;align-self:start}
 .side{display:grid;gap:16px;align-content:start;min-width:0}
 .mapc,.newsc,.datac,.briefc{min-width:0}
 .card{background:var(--p1);border:1px solid var(--line);border-radius:10px;padding:16px;transition:border-color .15s}.card:hover{border-color:var(--line2)}
 .ch{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin-bottom:12px}
-@media(min-width:1101px){
-  .mapc,.datac{align-self:start}                                   /* as tall as its content, not as tall as the neighbouring column */
-}
 
 /* ---------- country selection (neutral blue: colour never encodes a country or a level) ---------- */
 .chip{display:flex;align-items:center;gap:10px;text-align:left;background:var(--p1);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:48px;cursor:pointer;transition:border-color .15s,background .15s}
@@ -139,8 +138,8 @@ details li+li{margin-top:4px}
 /* ---------- briefs ---------- */
 #brief .bgrid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
 #brief .bgrid>.bsec:last-child{grid-column:1/-1}
-#brief .bgrid>.bsec:last-child>ul{columns:2;column-gap:32px}
-#brief .bgrid>.bsec:last-child>ul>li{break-inside:avoid;margin-bottom:8px}
+#brief .srcfold ul{columns:2;column-gap:32px}
+#brief .srcfold ul>li{break-inside:avoid;margin-bottom:8px}
 
 /* ---------- news ---------- */
 .news{list-style:none;margin:0;padding:0}.news li{padding:12px 0;border-top:1px solid var(--line)}.news li:first-child{border-top:0;padding-top:0}
@@ -168,12 +167,13 @@ footer{padding:12px var(--pad) 32px;color:var(--mut);font-size:12px}
 
 /* ---------- tablet and phone ---------- */
 @media(max-width:1100px){
+  .col{display:contents}
   .mapc,.newsc,.side,.datac{grid-column:1/-1}
   /* visual order on narrow screens: country buttons, globe, overview and risk profile, indicators, brief, news */
   .mapc{order:1}.side{order:2}.datac{order:3}.briefc{order:4}.newsc{order:5}
   .globe{height:clamp(300px,52vw,520px)}
   #brief .bgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  #brief .bgrid>.bsec:last-child>ul{columns:1}
+  #brief .srcfold ul{columns:1}
 }
 @media(max-width:700px){
   main{padding:12px 12px 8px;gap:12px}
@@ -202,3 +202,17 @@ footer{padding:12px var(--pad) 32px;color:var(--mut);font-size:12px}
   td:nth-child(3)::before,td:nth-child(4)::before{content:attr(data-label) ': '}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- Stage 9.2: brief sources fold, reference buttons, Media Coverage Patterns ---------- */
+.srcfold>summary h3{display:inline;margin:0;font-size:14px}
+.srcfold>p.meta{margin:8px 0 0}
+.refbtn{display:inline;border:0;background:none;padding:3px 4px;margin:-3px -3px;font:inherit;font-size:12px;color:var(--accent);cursor:pointer;text-decoration:underline;text-underline-offset:2px;min-height:0}
+.refbtn:hover{color:var(--tx)}
+.src-hl{background:var(--accent-bg);outline:1px solid var(--accent-line);border-radius:4px}
+.bsec .lim1{font-size:12px;line-height:1.45;color:#b4c3dc;margin:8px 0 0}
+.cov-h{margin:14px 0 2px;font-size:12px;font-weight:600;color:var(--tx2);letter-spacing:.02em}
+.cov{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;align-items:baseline;margin-top:8px}
+.cov .cl{color:var(--tx);overflow-wrap:anywhere}
+.cov .cn{color:var(--tx2);font-size:12px;text-align:right}.cov .cn b{color:var(--tx);font-size:16px;font-weight:600}
+.cov .cb{grid-column:1/-1;display:block;height:6px;border-radius:3px;background:#1a2944;overflow:hidden}
+.cov .cb i{display:block;height:100%;background:var(--accent-line)}
