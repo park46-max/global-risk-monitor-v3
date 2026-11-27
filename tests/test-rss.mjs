@@ -195,7 +195,7 @@ ok(r.code === 2 && /address on localhost refused: it is not one of Pub H's feed 
 r = await run([pub('h2', 'Pub H2', [['h-2', '/redir-rel']])], ['--fetch']); ok(r.code === 0 && r.cache.feeds['h-2'].status === 'ok', 'a relative redirect on the publisher\'s own host is followed');
 r = await run([pub('h3', 'Pub H3', [['h-3', '/chain/1/3']])], ['--fetch']); ok(r.code === 0, 'three redirects are followed');
 r = await run([pub('h4', 'Pub H4', [['h-4', '/chain/1/9']])], ['--fetch']); ok(r.code === 2 && /more than 3 redirects/.test(r.cache.feeds['h-4'].error), 'more than three redirects refused');
-r = await run([pub('h5', 'Pub H5', [['h-5', '/redir-loop']])], ['--fetch']); ok(r.code === 2 && /more than 3 redirects/.test(r.cache.feeds['h-5'].error), 'a redirect loop stops');
+r = await run([pub('h5', 'Pub H5', [['h-5', '/redir-loop']])], ['--fetch']); ok(r.code === 2 && /redirect loop/.test(r.cache.feeds['h-5'].error), 'a redirect loop stops (Stage 7C: named as a loop instead of waiting for the redirect limit)');
 r = await run([pub('h6', 'Pub H6', [['h-6', '/redir-cred']])], ['--fetch']); ok(r.code === 2 && /user name or password/.test(r.cache.feeds['h-6'].error), 'redirect to an address with credentials refused');
 r = await run([pub('h7', 'Pub H7', [['h-7', '/redir-rel']])], ['--verify']); ok(/\(1 redirect\)/.test(r.log), 'verify mode reports the redirect');
 r = await run([pub('h8', 'Pub H8', [['h-8', '/good.xml']])], ['--fetch'], { env: { RSS_ALLOW_HTTP: '0' } }); ok(r.code === 2 && /only https addresses are allowed/.test(r.cache.feeds['h-8'].error), 'plain http refused when the test relaxation is off (production setting)');

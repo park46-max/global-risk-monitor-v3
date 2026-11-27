@@ -209,6 +209,23 @@ ok(/const isOff = a =>/.test(app) && /Official communications \(/.test(app) && /
 ok(!/el\('img'|createElement\('img'|<img/.test(app + fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8')), 'page: no image element anywhere (no logos, seals or pictures from feeds)');
 ok(!/\.description|\.summary\b|\.content\b/.test(fs.readFileSync(path.join(ROOT, 'scripts/rss-lib.mjs'), 'utf8').split('export function buildItems')[1].split('export function mergeItems')[0].replace(/e\.summary/g, '')), 'buildItems never copies a description or content field');
 
+// ============ H. Stage 7C: UN Geneva candidates, live results, nothing published ============
+sec('H. UN Geneva candidates and live results (configuration checks)');
+const ug = by.ungeneva;
+eq(ug.feeds.map(f => f.url), ['press-releases-list', 'meeting-summaries-list', 'press-conferences-list', 'briefings-list', 'press-items-list'].map(x => `https://www.ungeneva.org/news-media/${x}/rss.xml`), 'UN Geneva has exactly the five supplied candidate addresses');
+ok(ug.enabled === false && ug.termsChecked === null && ug.blockers.length >= 4, 'UN Geneva: disabled, termsChecked null, unresolved items listed');
+ok(ug.sourceType === 'international-organisation' && ug.discoverUrl === 'https://www.ungeneva.org/en/rss', 'UN Geneva: type and discovery page');
+ok(ug.evidence.some(e => e.url === 'https://www.ungeneva.org/en/news-media/rss' && /display the latest news from UN Geneva/.test(e.what)), 'UN Geneva: the official statement is quoted with its page');
+ok(/UNRESOLVED/.test(ug.automatedFetching) && /not assumed|NOT assumed|does not transfer/.test(ug.termsNote + ug.reuse + ug.automatedFetching), 'UN Geneva: automated fetching unresolved and UN News permission explicitly not assumed');
+ok(ug.evidence.filter(e => /DIFFERENT SITE/.test(e.what)).length === 2, 'UN Geneva: the two other UN Geneva sites are recorded as different sites, not as its terms');
+ok(ug.feeds.every(f => new URL(f.url).hostname === 'www.ungeneva.org'), 'UN Geneva: every feed is on its own host');
+for (const k of ['state', 'unnews', 'eeas']) ok(by[k].liveVerification && by[k].liveVerification.date === '2026-11-27' && /GitHub Actions/.test(by[k].liveVerification.source) && by[k].blockers[0].startsWith('LIVE RESULT 2026-11-27'), `${k}: the live Stage 7B result is recorded as the first blocker`);
+ok(/403/.test(by.state.liveVerification.result) && /all 6/.test(by.unnews.liveVerification.result) && /zero candidate/.test(by.eeas.liveVerification.result), 'live results recorded as reported: State 403, UN News 6 disallowed, EEAS zero candidates');
+ok(/UN Geneva/.test(docs) && /11 candidate/.test(docs) && /12 of 19/.test(docs) && /not assumed to have the same permissions as UN News/i.test(docs), 'docs record the live results and the UN Geneva findings');
+{ const o = path.join(TMP, 'real-fetch'); const rr = await new Promise(res => { let l = ''; const c = spawn('node', [path.join(ROOT, 'scripts/fetch-rss.mjs'), '--fetch', '--out=' + o], { env: { ...process.env, GITHUB_STEP_SUMMARY: '' } }); c.stdout.on('data', d => l += d); c.on('close', code => res({ code, l })); });
+  ok(rr.code === 3 && /No publisher is enabled/.test(rr.l) && !fs.existsSync(o), 'the REAL configuration in fetch mode requests nothing, publishes nothing and writes no cache (exit 3)'); }
+ok(!fs.existsSync(path.join(ROOT, 'data/cache/news-rss.json')), 'no news-rss.json cache exists in the project');
+
 server.close(); fs.rmSync(TMP, { recursive: true, force: true });
 console.log(`\n${pass} checks passed${fail ? ', ' + fail + ' FAILED' : ''}. Reminder: simulated only; no real publisher, no real feed and no GitHub Action was involved.`);
 process.exit(fail ? 1 : 0);
