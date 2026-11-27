@@ -29,6 +29,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: update-data
