@@ -77,12 +77,19 @@ const termText = t => !t ? '' : Array.isArray(t) ? t.join(', ') : [...(t.names |
 const OUTLET = { established: 'established outlet', state: 'state-owned or government-run outlet', unassessed: 'not assessed' };
 const matchWhy = m => m.level === 'institution' ? 'Capital or government body named in headline: ' : m.level === 'summary' ? 'Mentioned in feed summary only: ' : 'Country named in headline: ';
 const byDate = (x, y) => (Date.parse(y.published || y.seenByGdelt || y.firstSeenAt) || 0) - (Date.parse(x.published || x.seenByGdelt || x.firstSeenAt) || 0);
+// Source type (set per publisher in data/rss-sources.mjs, words in data/source-types.mjs, copied into the cache file as `sourceTypes`).
+// Anything other than 'journalism' is an official communication: it is labelled, listed apart, and never shown as confirmation of other reports.
+let TYPES = null;
+const isOff = a => !!a.sourceType && a.sourceType !== 'journalism';
+const typeInfo = a => ((TYPES || {})[a.sourceType]) || { label: 'Official communications', note: 'An official communication (' + a.sourceType + '). It states that body\'s own position or account and is not independently verified here.' };
 function itemRow(a, extra, policy) {
-  const m = a.matches[cur], kids = [el('b', null, a.publisher || 'Unknown publisher'), (a.via ? 'via ' + a.via + ' · ' : '') + when(a), ...extra];
+  const m = a.matches[cur], off = isOff(a), ti = off ? typeInfo(a) : null;
+  const kids = [el('b', null, a.publisher || 'Unknown publisher'), ...(off ? [(() => { const p = el('span', 'pill', [el('i'), ti.label]); p.title = ti.note; return p; })()] : []), (a.via ? 'via ' + a.via + ' · ' : '') + when(a), ...extra];
   const rowKids = [link(a.url, a.title), el('div', 'nm', kids), el('div', 'meta', matchWhy(m) + m.terms.join(', '))];
   if (m.role === 'incidental') rowKids.push(el('div', 'meta', C[cur].name + ' is named only in passing here (another country comes first and there is no security, diplomacy or sanctions wording).'));
   else if (m.role === 'shared') rowKids.push(el('div', 'meta', 'Involves more than one country (bilateral or multilateral story).'));
-  const tier = a.source && a.source.tier;
+  if (off) rowKids.push(el('div', 'meta', 'Official communication: ' + ti.note));
+  const tier = !off && a.source && a.source.tier;
   if (tier) { const lab = ((policy || {}).labels || {})[tier], d = el('div', 'meta', 'Outlet: ' + OUTLET[tier] + ' (a label for the outlet, not a fact-check of this headline)'); if (lab) d.title = lab; rowKids.push(d); }
   if (a.relevance && a.relevance.style) rowKids.push(el('div', 'meta', 'Sensational wording flagged (' + a.relevance.style.terms.join(', ') + '); its relevance score is lowered by 1.'));
   const tp = a.relevance && a.relevance.topics || [];
@@ -93,7 +100,17 @@ function itemRow(a, extra, policy) {
   return el('li', null, rowKids);
 }
 // Ranked list plus the labelled folds (other, in passing, summary-only, filtered). `all` = items that name the current country.
-function itemLists(all, row, nodes, { last, windowText }) {
+function itemLists(all, row, nodes, o) {
+  // Official communications get their own labelled list, apart from publisher reporting, so the two are never read as one stream.
+  const offAll = all.filter(isOff);
+  if (offAll.length && !o.official) {
+    itemLists(all.filter(a => !isOff(a)), row, nodes, { ...o, reportingOnly: true });
+    const sub = []; itemLists(offAll, row, sub, { ...o, last: false, official: true });
+    const h = el('h4', null, `Official communications (${offAll.length})`); h.style.cssText = 'margin:16px 0 4px;font-size:13px';
+    nodes.push(h, el('p', 'meta', 'Statements by governments, international organizations or EU institutions. They give those bodies\' own positions or accounts, are not independently verified here, and are not counted as independent confirmation of the reports above. Only the headline, source, date and link are shown.'), ...sub);
+    return;
+  }
+  const { last, windowText } = o;
   const score = a => (a.relevance && a.relevance.score) || 0, byRel = (x, y) => score(y) - score(x) || byDate(x, y);
   const shown = all.filter(a => !a.filtered), flt = all.filter(a => a.filtered).sort(byDate);
   const passing = shown.filter(a => a.matches[cur].level !== 'summary' && a.matches[cur].role === 'incidental').sort(byDate).slice(0, 20);
@@ -103,7 +120,7 @@ function itemLists(all, row, nodes, { last, windowText }) {
   const sm = shown.filter(a => a.matches[cur].level === 'summary').sort(byDate).slice(0, 20);
   const fold = (text, list) => { const d = el('details'); d.append(el('summary', null, text)); const ul = el('ul', 'news'); list.forEach(a => ul.append(row(a))); d.append(ul); nodes.push(d); };
   if (strong.length) { const ul = el('ul', 'news'); strong.forEach(a => ul.append(row(a))); nodes.push(ul); }
-  else if (last) nodes.push(el('div', 'state', 'No cached headline with a security, diplomacy, sanctions/trade or economic-policy signal names ' + C[cur].name + ' (' + windowText + '). This does not mean nothing happened: it only reflects these sources.'));
+  else if (last) nodes.push(el('div', 'state', 'No cached ' + (o.reportingOnly ? 'publisher-reporting ' : '') + 'headline with a security, diplomacy, sanctions/trade or economic-policy signal names ' + C[cur].name + ' (' + windowText + '). This does not mean nothing happened: it only reflects these sources.'));
   if (plain.length) fold(`Other headlines naming ${C[cur].name} without a geopolitical keyword (${plain.length})`, plain);
   if (passing.length) fold(`Mentioned in passing (${passing.length}): ${C[cur].name} is named, but the story appears to be mainly about another country`, passing);
   if (sm.length) fold(`Mentioned in the feed summary only (${sm.length}): weaker match, the headline does not name ${C[cur].name}`, sm);
@@ -117,7 +134,8 @@ function articleBlock(s, kind) {
     if (s.error === 'file not found') return { pills: [pill('bad', 'Not enabled yet')], nodes: [el('div', 'state', [el('b', null, 'Publisher RSS feeds are not enabled yet. '), 'No publisher has been verified and switched on, so there is no cache file. Nothing is shown here in place of publisher headlines. See the README.'])] };
     return { pills: [pill('bad')], nodes: [missing('Publisher feeds', CFG.rssFile, s.error)] };
   }
-  const j = s.json, feeds = Object.values(j.feeds || {}), nBad = feeds.filter(f => f.status !== 'ok').length, last = j.lastSuccessAt || null, hrs = CFG.staleAfterHours[hrsKey], pills = [], nodes = [];
+  const j = s.json; TYPES = j.sourceTypes || null;
+  const feeds = Object.values(j.feeds || {}), nBad = feeds.filter(f => f.status !== 'ok').length, last = j.lastSuccessAt || null, hrs = CFG.staleAfterHours[hrsKey], pills = [], nodes = [];
   if (!last) pills.push(pill('bad', 'No successful update yet'));
   else if (nBad === 0) pills.push(stamp(last, hrs, 'Updated', false));
   else if (nBad === feeds.length) pills.push(stamp(last, hrs, 'Updated', true), pill('bad', 'Latest refresh failed'));
@@ -131,7 +149,7 @@ function articleBlock(s, kind) {
     if (bad(a)) extra.push(pill('stale', f ? 'Cached: feed refresh failed' : 'Cached: feed not part of the latest refresh')); else if (old) extra.push(pill('stale', 'Stale'));
     return itemRow(a, extra, j.sourcePolicy); };
   itemLists(all, row, nodes, { last, windowText: 'last ' + (j.retentionDays || 7) + ' days' });
-  const pubs = (j.publishers || []).map(p => p.name + ' (terms checked ' + p.termsChecked + ')').join(', ') || 'none';
+  const pubs = (j.publishers || []).map(p => p.name + ' (' + (p.sourceType ? (((TYPES || {})[p.sourceType] || {}).label || (p.sourceType === 'journalism' ? 'Publisher reporting' : 'Official communications')) + '; ' : '') + 'terms checked ' + p.termsChecked + ')').join(', ') || 'none';
   const attr = j.attribution ? [' Data: ', link(j.attribution.url, j.attribution.name), ' (open dataset, used under its terms).'] : [];
   nodes.push(el('p', 'meta', ['Reported events. Sources: ' + pubs + '.', ...attr, ' Matching words for ' + C[cur].name + ': ', el('code', null, termText((j.terms || {})[cur])), '. Each headline links to the original report. Last successful update: ' + (last ? fmtUTC(last) : 'none yet') + (j.checkedAt ? '. Last checked: ' + fmtUTC(j.checkedAt) : '') + '.']));
   nodes.push(el('p', 'note', (gk ? 'Headlines are written by the publishers named and link straight to their pages; GDELT only indexes them. ' : '') + 'Only the headline, publisher, date and link are copied; read the article at the publisher. Articles are matched to a country by its name, or its capital or a government body, in the headline (the names of people are never used), and ordered by simple keyword rules (security, diplomacy, sanctions and trade, economic policy). Routine fund and stock notices, and sport, entertainment or local news without a geopolitical topic, are filtered into a labelled list; near-identical headlines are grouped with links to every source; and a country that is only named in passing is listed separately. Outlet labels describe the publisher (by fixed lists in data/source-quality.mjs) and are not a fact-check; an outlet without a label is simply not assessed. A country named in a headline does not prove the article is mainly about it, and these keyword rules can be wrong. Headlines belong to the publishers and are neither checked nor endorsed here.'));
