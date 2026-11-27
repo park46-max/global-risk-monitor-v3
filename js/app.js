@@ -285,11 +285,62 @@ function head() {
   const c = C[cur];
   $('#head').replaceChildren(el('div', 'card chead', [el('div', 'chl', [el('h2', null, c.name), el('span', null, cur)]), ...(c.note ? [el('p', 'callout', [pill('ed'), c.note])] : [])]));
 }
+// ----- Stage 8B-2: profile tiles (risk.json methodologyVersion 3 adds `profile` to the security and economic cards). Compact: essential limitations stay visible, details are folded.
+// Uses only existing CSS classes. A risk.json without `profile` (older file) is drawn by the original code in risk() below. -----
+const rkFold = (title, kids) => { const k = kids.filter(Boolean); if (!k.length) return null; const d = el('details'); d.append(el('summary', null, title), ...k); return d; };
+// Long URLs inside note text cannot wrap and would widen the page on phones: each is shown as a short link labelled with its host name.
+const rkTxt = t => String(t).split(/(https?:\/\/[^\s)]+)/).map(x => /^https?:\/\//.test(x) ? link(x, (x.match(/^https?:\/\/([^/]+)/) || [])[1] || 'link') : x);
+const rkList = items => { const ul = el('ul'); items.forEach(t => ul.append(el('li', null, rkTxt(t)))); return ul; };
+const rkSrc = s => el('p', 'meta', ['Source: ', link(s.url, s.name), ' (' + s.publisher + (s.licence ? ', ' : ''), ...(s.licence ? rkTxt(s.licence) : []), ').']);
+function profileTiles(k, a) {
+  const P = a.profile, tile = t => el('div', 'tile', el('h3', null, t)), add = (t, ...kids) => { kids.filter(Boolean).forEach(x => t.append(x)); return t; };
+  if (k === 'security') {
+    const ac = P.armedConflict, ps = P.politicalStability, A = tile('Security: armed conflict involvement'), W = tile('Security: political stability');
+    if (ac.status !== 'ok') add(A, el('p', 'big dim', 'Not shown'), el('p', 'meta', ac.summary));
+    else {
+      add(A, ...(ac.stale ? [pill('stale', 'Stale inputs')] : []), el('p', 'meta', 'UCDP/PRIO' + (ac.datasetVersion ? ' v' + ac.datasetVersion : '') + ', calendar year ' + ac.referenceYear),
+        el('p', ac.uniqueConflicts ? 'big' : 'big dim', ac.uniqueConflicts ? ac.uniqueConflicts + (ac.uniqueConflicts === 1 ? ' conflict' : ' conflicts') : 'None recorded'),
+        ac.roleSummary ? el('p', 'meta', ac.roleSummary) : el('p', 'meta', ac.summary));
+      // (the conflicts fold is added after the visible notes below)
+    }
+    ac.notes.visible.forEach(t => A.append(el('p', 'meta', t)));
+    if (P.countryNote) A.append(el('p', 'meta', P.countryNote));
+    if (ac.status === 'ok' && ac.conflicts.length) add(A, rkFold('Conflicts (' + ac.conflicts.length + ')', [(() => { const ul = el('ul'); ac.conflicts.forEach(c => ul.append(el('li', null, [el('b', null, c.conflictId + ' '), c.sideA + ' vs ' + c.sideB,
+        el('div', 'meta', c.roleLabel + (c.intensityLabel ? '. Intensity of the whole conflict: ' + c.intensityLabel : '') + (c.type ? '; ' + c.type : '') + (c.incompatibility ? '; about ' + c.incompatibility : '') + '. UCDP "location" field: ' + c.location + '.')]))); return ul; })()]));
+    add(A, rkFold('Method and limitations', [rkList(ac.notes.more), rkSrc(ac.source)]));
+    if (ps.status === 'ok' || ps.status === 'outdated') add(W, ...(ps.stale ? [pill('stale', 'Stale inputs')] : []), el('p', 'meta', 'World Bank WGI, 2025 revision, reference year ' + ps.referenceYear), el('p', 'big', ps.displayEstimate));
+    else add(W, el('p', 'big dim', 'No value'), el('p', 'meta', ps.summary));
+    ps.notes.visible.forEach(t => W.append(el('p', 'meta', t)));
+    add(W, rkFold('Method and limitations', [ps.estimate != null ? el('p', 'meta', 'Stored value: ' + ps.estimate + ' (shown to two decimals). ' + (ps.sourceUpdated ? 'World Bank dataset updated ' + ps.sourceUpdated + '.' : '')) : null, rkList(ps.notes.more), rkSrc(ps.source)]));
+    return [A, W];
+  }
+  const M = tile('Macroeconomic profile'), ul = el('ul', 'news'), NAME = { inflation: 'Inflation', growth: 'GDP growth', unemployment: 'Unemployment' }, fl = P.flag, ok = fl.status === 'assessed';
+  P.indicators.forEach(r => { const li = el('li');
+    if (r.displayValue) li.append(el('b', null, NAME[r.key] + ' '), r.displayValue + ' ', el('span', 'dim', '(' + r.year + ')'));
+    else li.append(el('b', null, NAME[r.key] + ' '), el('span', 'dim', r.status === 'unsupported' ? 'not published for this country' : r.status === 'unavailable' ? 'unavailable' : r.status === 'not-in-cache' ? 'not in the cache' : 'no value published'));
+    if (r.note && (r.status === 'outdated' || r.status === 'unavailable' || r.stale)) li.append(el('div', 'meta', r.note));
+    ul.append(li); });
+  add(M, ...(a.stale ? [pill('stale', 'Stale inputs')] : []), ul, el('p', 'meta', fl.name), el('p', ok ? 'big' : 'big dim', ok ? fl.level : 'Insufficient data'), ...(ok ? [] : [el('p', 'meta', a.summary)]));
+  P.notes.visible.forEach(t => M.append(el('p', 'meta', t)));
+  add(M, ok ? rkFold('How the flag is set', [el('p', 'meta', fl.rule), rkList(P.indicators.filter(r => r.status === 'used').map(r => NAME[r.key] + ': ' + r.band + ' band'))]) : null,
+    rkFold('Method and limitations', [rkList(P.notes.more)]),
+    rkFold('Sources and dates', [(() => { const u = el('ul'); P.indicators.forEach(r => u.append(el('li', null, [link(r.source.url, r.source.name), ' (' + r.source.publisher + (r.source.licence ? ', ' : ''), ...(r.source.licence ? rkTxt(r.source.licence) : []), ')' + (r.year ? ', reference year ' + r.year : '')]))); return u; })(),
+      el('p', 'meta', 'Last successful input update: ' + (a.lastSuccessAt ? fmtUTC(a.lastSuccessAt) : 'n/a') + '.')]));
+  return [M];
+}
+function legacySection(auto) {
+  const d = el('details'), ul = el('ul');
+  d.append(el('summary', null, 'Legacy classifications (methodology 2, kept for continuity)'), el('p', 'meta', auto.security.profile.legacyNote));
+  [['Security', auto.security], ['Economic', auto.economic], ['Diplomatic', auto.diplomatic]].forEach(([n, x]) => ul.append(el('li', null, [el('b', null, n + ': '), x.status === 'assessed' ? x.level : 'Insufficient data', ...(x.rule ? [el('div', 'meta', x.rule)] : [])])));
+  d.append(ul); return el('div', 'note', d);
+}
 // ----- risk assessment cards: built by scripts/build-risk.mjs from public datasets with documented rules (README "Risk assessments"). Hand-written entries in data/countries.js still win. -----
 function risk() {
   const s = store.rk, g = el('div', 'grid3'), top = [], hand = C[cur].risk || {}, hrs = CFG.staleAfterHours.risk || 72;
   const file = s && s.ok && s.json && s.json.countries ? s.json : null, auto = file && file.countries[cur];
   if (!s) { $('#risk').replaceChildren(skel()); return; }
+  const prof = !!(auto && auto.security && auto.security.profile && auto.economic && auto.economic.profile);   // methodology 3 file: profiles; an older file is drawn as before
+  if (prof) g.className = 'bgrid';
   if (file) {
     const failed = file.status === 'error';
     top.push(stamp(file.lastSuccessAt, hrs, 'Assessments built', failed));
@@ -304,12 +355,13 @@ function risk() {
     if (r) { b.append(pill('ana'), el('p', 'big', r.rating), el('p', 'meta', r.assessor + ', as of ' + r.asOf)); if (r.note) b.append(el('p', 'meta', 'Analyst note: ' + r.note)); if (safe(r.url)) b.append(link(r.url, 'Source')); g.append(b); return; }
     if (!file) { b.append(pill('bad'), el('p', 'big dim', 'Unavailable'), el('p', 'meta', s.error === 'file not found' ? 'The risk assessments have not been generated yet (the workflow has not run). Nothing is shown rather than guessing.' : 'The cache file ' + CFG.riskFile + ' could not be read (' + s.error + ').')); g.append(b); return; }
     if (!a) { b.append(pill('bad'), el('p', 'big dim', 'Unavailable'), el('p', 'meta', 'The cache has no entry for ' + C[cur].name + '.')); g.append(b); return; }
+    if (prof && (k === 'security' || k === 'economic')) { profileTiles(k, a).forEach(t => g.append(t)); return; }
     const ok = a.status === 'assessed';
-    b.append(ok ? pill('ana', 'Rule-based assessment') : pill('bad', 'Insufficient data'), ...(a.stale ? [pill('stale', 'Stale inputs')] : []), el('p', ok ? 'big' : 'big dim', ok ? a.level : 'Insufficient data'), el('p', 'meta', a.summary));
+    b.append(...(prof ? [] : [ok ? pill('ana', 'Rule-based assessment') : pill('bad', 'Insufficient data')]), ...(a.stale ? [pill('stale', 'Stale inputs')] : []), el('p', ok ? 'big' : 'big dim', ok ? a.level : 'Insufficient data'), el('p', 'meta', a.summary));
     const fold = (title, kids) => { if (kids.length) { const d = el('details'); d.append(el('summary', null, title), ...kids); b.append(d); } };
     const obs = (a.facts || []).filter(f => f.kind === 'observed'), itp = (a.facts || []).filter(f => f.kind === 'interpretation');
     fold('Observed facts (' + obs.length + ')', obs.length ? [(() => { const ul = el('ul'); obs.forEach(f => ul.append(el('li', null, [el('b', null, f.label + ': '), f.value, ' (' + (f.year || 'year n/a') + ', ', link(f.url, f.source), ')']))); return ul; })()] : []);
-    fold('Rule-based interpretation', ok ? [el('p', 'meta', a.rule || ''), ...(itp.length ? [(() => { const ul = el('ul'); itp.forEach(f => ul.append(el('li', null, f.label.replace(': band', '') + ': ' + f.value))); return ul; })()] : []), el('p', 'meta', 'An interpretation by fixed rules, not an observed fact, forecast or verdict.')] : [el('p', 'meta', 'No level is derived. ' + (a.insufficientReason === 'method' ? 'No defensible automated method exists for this category.' : 'The evidence is missing or too thin; missing data is never treated as low risk.'))]);
+    if (!(prof && !ok)) fold('Rule-based interpretation', ok ? [el('p', 'meta', a.rule || ''), ...(itp.length ? [(() => { const ul = el('ul'); itp.forEach(f => ul.append(el('li', null, f.label.replace(': band', '') + ': ' + f.value))); return ul; })()] : []), el('p', 'meta', 'An interpretation by fixed rules, not an observed fact, forecast or verdict.')] : [el('p', 'meta', 'No level is derived. ' + (a.insufficientReason === 'method' ? 'No defensible automated method exists for this category.' : 'The evidence is missing or too thin; missing data is never treated as low risk.'))]);
     fold('Sources and dates', [(() => { const ul = el('ul'); (a.sources || []).forEach(x => ul.append(el('li', null, [link(x.url, x.name), ' (' + x.publisher + (x.licence ? ', ' + x.licence : '') + ')']))); if (!(a.sources || []).length) ul.append(el('li', 'dim', 'No data source was used.')); return ul; })(),
       el('p', 'meta', 'Reference year' + ((a.referenceDates || []).length === 1 ? '' : 's') + ': ' + ((a.referenceDates || []).join(', ') || 'n/a') + '. Last successful input update: ' + (a.lastSuccessAt ? fmtUTC(a.lastSuccessAt) : 'n/a') + '.')]);
     fold('Limitations (' + (a.limitations || []).length + ')', [(() => { const ul = el('ul'); (a.limitations || []).forEach(t => ul.append(el('li', null, t))); return ul; })()]);
@@ -317,7 +369,7 @@ function risk() {
     if (ctx.length) fold('Reported context, not used for the level (' + ctx.length + ')', [el('p', 'meta', 'Headlines are reports by publishers, not verified facts.'), (() => { const ul = el('ul'); ctx.forEach(c => ul.append(el('li', null, [link(c.url, c.headline), el('div', 'meta', c.publisher + (c.time ? ' · ' + (c.timeBasis || 'time') + ' ' + fmtUTC(c.time) : ' · time not provided'))]))); return ul; })()]);
     g.append(b);
   });
-  $('#risk').replaceChildren(...top, g, el('p', 'note', file ? 'Levels come only from the public datasets named in each card, by fixed rules documented in the README. Headlines and article counts never set a level. "Insufficient data" means the evidence is missing or too thin; it is not a finding of low risk. Observed facts and rule-based interpretation are listed separately.' : 'No assessment is shown until it has been generated from sourced data.'));
+  $('#risk').replaceChildren(...top, g, ...(prof ? [legacySection(auto)] : []), el('p', 'note', prof ? 'Profiles show values from the public datasets named in each tile. The macroeconomic stress flag and the legacy classifications are fixed, project-defined rules, not validated international risk standards. Headlines and article counts never set a value. "Insufficient data" means the evidence is missing or too thin; it is not a finding of low risk.' : file ? 'Levels come only from the public datasets named in each card, by fixed rules documented in the README. Headlines and article counts never set a level. "Insufficient data" means the evidence is missing or too thin; it is not a finding of low risk. Observed facts and rule-based interpretation are listed separately.' : 'No assessment is shown until it has been generated from sourced data.'));
 }
 // ----- country intelligence brief: built by scripts/build-briefs.mjs from the cached news (fixed rules, no AI). Hand-written entries in data/countries.js still win. -----
 function brief() {
