@@ -348,6 +348,29 @@ Changed files: `css/style.css`, `index.html`, `js/app.js` (the presentation code
 - **Tested how.** Node: `tests/test-ui-stage9.mjs` (static and simulated DOM, not a browser). Headless Google Chrome in my sandbox against local copies of the site with simulated news and briefs: 80 overflow cases (8 widths, 5 countries, folded and expanded), 36 state cases (older and missing risk.json, missing caches, stale data, failed risk request), contrast, target sizes, keyboard, skip link. **Not tested:** the working globe (the sandbox cannot reach the CDN), real populated news or briefs, real touch, Safari or iOS, screen readers.
 - **Rollback.** Put back the previous `css/style.css`, `index.html` and `js/app.js` (and the previous tests).
 
+## Publisher content safeguards (Stage 10.2)
+Headlines shown here come from third-party publishers, found through GDELT. Only headline, publisher, date and link are kept; no article text or images. **The right to reproduce publisher headlines has not been conclusively established**, and GDELT's licence does not automatically cover publishers' content. Keeping short headlines is a risk-management decision, not legal permission. Details: `docs/LICENSING-AND-ATTRIBUTION.md`.
+
+- **Direct publisher RSS** is a different thing from **headlines indexed through GDELT**. All publisher RSS stays disabled. Nothing was enabled.
+- **Exclusion list:** `data/publisher-exclusions.js` (Al Jazeera, DW). One file, used by the update scripts and the page. A listing means "excluded", never "approved". Unlisted publishers are not necessarily licensed or approved.
+- The cache files are for running this page. They are not offered as a news dataset or API.
+- Earlier versions of the cache stay in Git history (also in forks and clones) unless history is deliberately rewritten.
+
+### Refreshing the public caches (after uploading Stage 10.2)
+The page hides excluded headlines immediately, but the old files stay public until regenerated.
+1. Upload the changed files to GitHub (Add file > Upload files, keeping the folders), including the new `data/publisher-exclusions.js` and `scripts/exclusion-lib.mjs`. Commit.
+2. Actions tab > **Update RSS news** > Run workflow. This purges `news-gdelt.json` and rebuilds `briefs.json`.
+3. Actions > **Update data cache** > Run workflow (choose the news dataset if asked). This cleans `news.json`.
+4. Actions > **Update risk assessments** > Run workflow. This cleans `risk.json`.
+5. Open each of `data/cache/news-gdelt.json`, `news.json`, `briefs.json`, `risk.json` on GitHub, press Ctrl+F and search `aljazeera` and `dw.com`: there should be no result. If a run fails, the old file is kept (and the page still hides it); read the run log and ask.
+No workflow, schedule or permission was changed.
+
+### If a publisher asks for removal
+1. Add its entry to `data/publisher-exclusions.js` (copy an existing one; domains, names, title credits).
+2. Commit, then do the refresh steps above and the Ctrl+F check.
+3. Reply on the issue. Be honest that older copies may remain in Git history, forks and clones.
+4. Only if the publisher insists on history removal: this needs a history rewrite (git filter-repo), a force-push and breaks forks and clones. It is not done automatically and needs your explicit decision.
+
 ## Changing things
 - **News search terms:** edit the `gdelt:` line per country in `data/countries.js`. GDELT rules: OR groups go in parentheses, phrases in quotes, every word at least 3 letters. After a change, run the Action manually. If a query is invalid the site will show GDELT's own error message.
 - **Schedule:** edit the `cron:` lines in `.github/workflows/update-data.yml`. GDELT asks for at most one request per 5 seconds; the script already waits about 8 seconds between countries. More than every few hours adds little and uses free minutes.
