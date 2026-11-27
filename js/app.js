@@ -30,6 +30,49 @@ let cur = IDS.includes(location.hash.slice(1).toUpperCase()) ? location.hash.sli
 let GEO = null, globeOn = false, rotSeg = null;
 const store = { sec: undefined, news: null, ind: null, rss: null, gk: null, br: null, rk: null };
 
+// ---------- publisher exclusion list (Stage 10.2) ----------
+// data/publisher-exclusions.js is the same file the update scripts read. The scripts remove listed publishers before anything is written;
+// this repeats the check when the page reads the cached files, so an older cache cannot show an excluded publisher. A publisher that is NOT listed
+// is NOT approved or licensed. If the list did not load, the news and brief files are treated as unreadable (fails closed).
+const PX = (() => {
+  const c = window.PUBLISHER_EXCLUSIONS; if (!c || c.version !== 1 || !Array.isArray(c.publishers)) return null;
+  const nh = v => String(v == null ? '' : v).toLowerCase().trim().replace(/^www\./, '').replace(/^\.+|\.+$/g, ''), nn = v => String(v == null ? '' : v).toLowerCase().replace(/[^a-z0-9.]+/g, ' ').trim(), esc = v => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return c.publishers.map(p => { const suf = (p.titleSuffixes || []).map(x => String(x).toLowerCase().trim()).filter(Boolean);
+    return { domains: (p.domains || []).map(nh).filter(Boolean), names: new Set((p.names || []).map(nn).filter(Boolean)), rss: (p.rssIds || []).map(x => String(x).toLowerCase()), nh, nn,
+      suf: suf.length ? new RegExp('[|\\-\\u2013\\u2014:\\u2022\\u00b7]\\s*(?:' + suf.map(esc).join('|') + ')\\s*$', 'i') : null }; });
+})();
+const pxHosts = v => { const out = []; let t = String(v == null ? '' : v); for (let k = 0; k < 3; k++) { const re = /(?:^|[^a-z0-9])(?:https?:)?\/\/([a-z0-9][a-z0-9.-]*)/gi; let m; while ((m = re.exec(t))) out.push(m[1].toLowerCase().replace(/^www\./, '')); let d; try { d = decodeURIComponent(t); } catch (e) { break; } if (d === t) break; t = d; } return out; };
+const pxHit = (h, p) => p.domains.some(d => h === d || h.endsWith('.' + d));
+function pxExcluded(r) {
+  if (!PX) return true;
+  if (!r || typeof r !== 'object') return false;
+  for (const p of PX) {
+    if (pxHosts(r.url).some(h => pxHit(h, p))) return true;
+    for (const f of ['publisher', 'domain', 'publisherId', 'source', 'outlet']) if (typeof r[f] === 'string') { const h = p.nh(r[f]); if (h && (pxHit(h, p) || p.names.has(p.nn(r[f])))) return true; }
+    if (typeof r.feedId === 'string' && p.rss.some(x => r.feedId.toLowerCase() === x || r.feedId.toLowerCase().startsWith(x + '-'))) return true;
+    if (p.suf) for (const f of ['title', 'headline']) if (typeof r[f] === 'string' && p.suf.test(r[f].trim())) return true;
+  }
+  return Array.isArray(r.variants) ? r.variants.some(pxExcluded) : false;
+}
+const pxItems = a => (Array.isArray(a) ? a : []).filter(i => !pxExcluded({ ...i, variants: undefined })).map(i => Array.isArray(i.variants) && i.variants.some(pxExcluded) ? { ...i, variants: i.variants.filter(v => !pxExcluded(v)) } : i);
+function pxScrub(kind, res) {
+  if (!res || !res.ok) return res;
+  const j = res.json || {};
+  if (kind === 'risk') { if (!j.countries) return res; const countries = {}; for (const [k, c] of Object.entries(j.countries)) { const nc = { ...c }; for (const cat of ['security', 'economic', 'diplomatic']) if (c && c[cat] && Array.isArray(c[cat].context)) nc[cat] = { ...c[cat], context: c[cat].context.filter(x => !pxExcluded(x)) }; countries[k] = nc; } return { ok: true, json: { ...j, countries } }; }
+  if (!PX) return { ok: false, error: 'the publisher exclusion list could not be loaded, so headlines are hidden' };
+  if (kind === 'news') { if (!j.countries) return res; const countries = {}; for (const [k, c] of Object.entries(j.countries)) countries[k] = c && Array.isArray(c.articles) ? { ...c, articles: pxItems(c.articles) } : c; return { ok: true, json: { ...j, countries } }; }
+  if (kind === 'items') return Array.isArray(j.items) ? { ok: true, json: { ...j, items: pxItems(j.items) } } : res;
+  if (kind === 'briefs') { if (!j.countries) return res; const countries = {}; for (const [k, b] of Object.entries(j.countries)) countries[k] = b && [...(b.sources || []), ...(b.developments || [])].some(pxExcluded)
+    ? { generatedAt: b.generatedAt || null, window: b.window || null, notice: b.notice || null, status: 'unavailable', reportsFound: 0, overview: null, developments: [], why: null, sources: [], limitations: ['This brief is unavailable until it is regenerated, because the publisher exclusion list changed and an earlier version named an excluded publisher. It returns after the next update.'], neutralized: true } : b; return { ok: true, json: { ...j, countries } }; }
+  return res;
+}
+// Where a publisher can ask for removal: the repository's Issues page, worked out from the Pages address (user.github.io/repo/). On a custom domain there is no link.
+(function () { try {
+  const a = $('#issuesLink'); if (!a || !a.setAttribute) return;
+  const h = (typeof location !== 'undefined' && location.hostname) || '', m = /^([a-z0-9-]+)\.github\.io$/i.exec(h), seg = ((typeof location !== 'undefined' && location.pathname) || '').split('/').filter(Boolean)[0];
+  if (m) a.setAttribute('href', 'https://github.com/' + m[1] + '/' + (seg && !/\.html?$/i.test(seg) ? seg : m[1] + '.github.io') + '/issues/new'); else a.removeAttribute('href');
+} catch (e) { /* the link is optional */ } })();
+
 // ---------- cached data (written by the GitHub Action, Stage 2) ----------
 async function loadJson(path) {
   try { const r = await fetch(path, { cache: 'no-cache' }); if (!r.ok) throw new Error(r.status === 404 ? 'file not found' : 'HTTP ' + r.status); return { ok: true, json: await r.json() }; }
@@ -38,6 +81,7 @@ async function loadJson(path) {
 async function loadAll() {
   $('#meta').replaceChildren(pill('load'));
   [store.news, store.ind, store.rss, store.gk, store.br, store.rk] = await Promise.all([loadJson(CFG.newsFile), loadJson(CFG.indicatorsFile), loadJson(CFG.rssFile), loadJson(CFG.gdeltFilesFile), loadJson(CFG.briefsFile || 'data/cache/briefs.json'), loadJson(CFG.riskFile || 'data/cache/risk.json')]);
+  store.news = pxScrub('news', store.news); store.rss = pxScrub('items', store.rss); store.gk = pxScrub('items', store.gk); store.br = pxScrub('briefs', store.br); store.rk = pxScrub('risk', store.rk);   // Stage 10.2: publisher exclusion list
   const n = store.news, d = store.ind;
   const head = (r, what, hrs, bad) => {
     if (!r.ok) return [pill('bad', what + ': unavailable')];
