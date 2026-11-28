@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-28T07:39:48.020Z",
- "checkedAt": "2026-11-28T07:39:48.020Z",
- "lastSuccessAt": "2026-11-28T07:39:48.020Z",
+ "generatedAt": "2026-11-28T10:13:35.983Z",
+ "checkedAt": "2026-11-28T10:13:35.983Z",
+ "lastSuccessAt": "2026-11-28T10:13:35.983Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -78,11 +78,11 @@
  },
  "relevance": {
   "droppedNoMatch": 0,
-  "filteredNotices": 31,
+  "filteredNotices": 30,
   "filteredOffTopic": 8,
-  "groupedDuplicates": 9,
-  "incidentalMentions": 11,
-  "sensationalStyle": 1,
+  "groupedDuplicates": 19,
+  "incidentalMentions": 23,
+  "sensationalStyle": 5,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "sourcePolicy": {
@@ -101,24 +101,13 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-28T07:39:48.020Z",
-   "lastSuccessAt": "2026-11-28T07:39:48.020Z",
+   "checkedAt": "2026-11-28T10:13:35.983Z",
+   "lastSuccessAt": "2026-11-28T10:13:35.983Z",
    "error": null,
-   "latestFile": "20261128074500",
-   "warning": "3 of 12 files could not be read this run"
+   "latestFile": "20261128101500"
   }
  },
  "files": {
-  "20261124074500": "ok",
-  "20261124080000": "ok",
-  "20261124081500": "ok",
-  "20261124083000": "ok",
-  "20261124084500": "ok",
-  "20261124090000": "ok",
-  "20261124091500": "ok",
-  "20261124093000": "ok",
-  "20261124094500": "ok",
-  "20261124100000": "ok",
   "20261124101500": "missing",
   "20261124103000": "ok",
   "20261124110000": "ok",
@@ -476,7 +465,17 @@
   "20261128070000": "ok",
   "20261128071500": "missing",
   "20261128073000": "missing",
-  "20261128074500": "missing"
+  "20261128074500": "missing",
+  "20261128080000": "ok",
+  "20261128081500": "ok",
+  "20261128083000": "ok",
+  "20261128084500": "ok",
+  "20261128090000": "ok",
+  "20261128091500": "ok",
+  "20261128093000": "ok",
+  "20261128094500": "ok",
+  "20261128100000": "ok",
+  "20261128101500": "ok"
  },
  "items": [
   {
@@ -673,7 +672,7 @@
     }
    },
    "firstSeenAt": "2026-11-26T16:27:22.008Z",
-   "lastSeenAt": "2026-11-26T16:27:22.008Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
    "relevance": {
     "score": 8,
     "tier": "high",
@@ -1027,50 +1026,6 @@
    }
   },
   {
-   "title": "Cyprus reportedly expels two Russian diplomats over suspected espionage",
-   "url": "https://www.azernews.az/region/268053.html",
-   "publisher": "azernews.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T07:52:00.000Z",
-   "seenByGdelt": "2026-11-25T09:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ],
-     "role": "primary"
-    }
-   },
-   "firstSeenAt": "2026-11-25T10:28:35.972Z",
-   "lastSeenAt": "2026-11-25T10:28:35.972Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "espionage"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "diplomats"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
    "title": "North Korea Kicks Out Swiss Diplomats in Spat Linked to Ukraine War",
    "url": "https://article.wn.com/view/2026/11/25/North_Korea_Kicks_Out_Swiss_Diplomats_in_Spat_Linked_to_Ukra/",
    "publisher": "wn.com",
@@ -1106,50 +1061,6 @@
       "label": "Diplomacy",
       "terms": [
        "diplomats"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Arab News | Qatar, US sign AI pact and critical minerals deal to bolster supply chains",
-   "url": "https://www.arabnews.com/business/qatar-us-sign-ai-pact-and-critical-minerals-deal-to-bolster-supply-chains-3013961",
-   "publisher": "arabnews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T09:58:00.000Z",
-   "seenByGdelt": "2026-11-25T10:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-25T10:28:35.972Z",
-   "lastSeenAt": "2026-11-25T10:28:35.972Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "pact"
-      ]
-     },
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "supply chains"
       ]
      }
     ]
@@ -3156,6 +3067,94 @@
    }
   },
   {
+   "title": "New Us Tariff Proposal Puts the Fragile Washington-Beijing Trade Truce Under Pressure Before January 10",
+   "url": "https://www.latintimes.com/us-proposes-tariffs-chinese-imports-trade-truce-601887",
+   "publisher": "latintimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-28T05:35:00.000Z",
+   "seenByGdelt": "2026-11-28T09:45:00.000Z",
+   "matches": {
+    "CHN": {
+     "level": "institution",
+     "terms": [
+      "Beijing"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-28T10:13:35.983Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "truce"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "tariff"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ukraine ready for Black Sea ceasefire, Foreign Minister says",
+   "url": "https://www.azernews.az/region/268259.html",
+   "publisher": "azernews.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-28T06:29:00.000Z",
+   "seenByGdelt": "2026-11-28T08:30:00.000Z",
+   "matches": {
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-28T10:13:35.983Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "ceasefire"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "foreign minister"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "Nuclear Weapons in Space: What the Outer Space Treaty Says as Russia Faces Fresh Satellite Allegation",
    "url": "https://www.rozanaspokesman.com/news/world/281126/nuclear-armed-satellite-allegation-why-verifying-what-is-on-board-is.html",
    "publisher": "rozanaspokesman.com",
@@ -4639,256 +4638,6 @@
    }
   },
   {
-   "title": "Meloni warns Kyiv that war 'cannot spread to the Mediterranean' after bombing of Russian warship in Libya",
-   "url": "https://www.dailymail.com/news/article-16326607/Meloni-warns-Kyiv-war-spread-Mediterranean-Russian-warship-Libya.html",
-   "publisher": "dailymail.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T13:49:00.000Z",
-   "seenByGdelt": "2026-11-27T14:30:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "institution",
-     "terms": [
-      "Kyiv"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T16:26:58.518Z",
-   "lastSeenAt": "2026-11-27T16:26:58.518Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "bombing",
-       "warship",
-       "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Russia develops Innoset military satellite communications system – Ukrainian intelligence",
-   "url": "https://en.interfax.com.ua/news/general/1243482.html",
-   "publisher": "interfax.com.ua",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T14:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T16:26:58.518Z",
-   "lastSeenAt": "2026-11-27T16:26:58.518Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "North Korea halts Russia military aid over Seoul row, Kyiv says",
-   "url": "https://www.euronews.com/2026/11/27/north-korea-halts-russia-military-aid-over-seoul-row-kyiv-says",
-   "publisher": "euronews.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T14:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "institution",
-     "terms": [
-      "Kyiv"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T16:26:58.518Z",
-   "lastSeenAt": "2026-11-27T16:26:58.518Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Swedish Gripen jets with Meteor missiles will arrive in Ukraine in January, posing the first serious threat to Russian aviation (Ukraine Battlefield update, Day 1,737)",
-   "url": "https://euobserver.com/252231/swedish-gripen-jets-with-meteor-missiles-will-arrive-in-ukraine-in-january-posing-the-first-serious-threat-to-russian-aviation-ukraine-battlefield-update-day-1737/",
-   "publisher": "euobserver.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T14:18:00.000Z",
-   "seenByGdelt": "2026-11-27T18:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T19:13:25.044Z",
-   "lastSeenAt": "2026-11-27T19:13:25.044Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "missiles"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Europe preparing for war with Russia, demanding truce in Ukraine: Russian FM Lavrov says US displaying more \"political maturity\"",
-   "url": "https://aninews.in/news/world/europe/europe-preparing-for-war-with-russia-demanding-truce-in-ukraine-russian-fm-lavrov-says-us-displaying-more-political-maturity20261127191441/",
-   "publisher": "aninews.in",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T14:30:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "shared"
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia",
-      "Russian"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T16:26:58.518Z",
-   "lastSeenAt": "2026-11-27T16:26:58.518Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "truce",
-       "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   },
-   "variants": [
-    {
-     "publisher": "kenyastar.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "http://www.kenyastar.com/news/279467013/europe-preparing-for-war-with-russia-demanding-truce-in-ukraine-russian-fm-lavrov-says-us-displaying-more-political-maturity",
-     "published": null,
-     "seenByGdelt": "2026-11-27T15:30:00.000Z"
-    },
-    {
-     "publisher": "russiaherald.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "http://www.russiaherald.com/news/279467013/europe-preparing-for-war-with-russia-demanding-truce-in-ukraine-russian-fm-lavrov-says-us-displaying-more-political-maturity",
-     "published": null,
-     "seenByGdelt": "2026-11-27T17:15:00.000Z"
-    }
-   ],
-   "variantsTotal": 2
-  },
-  {
    "title": "More than silicon: The geopolitics behind the US-China chip war",
    "url": "https://www.presstv.co.uk/Detail/2026/11/27/781721/the-us-china-microchip-war",
    "publisher": "presstv.co.uk",
@@ -4968,50 +4717,6 @@
       "label": "Security",
       "terms": [
        "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Russia Extends Jet Fuel Export Ban As Ukrainian Drone Barrage Batters Refineries",
-   "url": "https://www.zerohedge.com/energy/russia-extends-jet-fuel-export-ban-ukrainian-drone-barrage-batters-refineries",
-   "publisher": "zerohedge.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T15:20:00.000Z",
-   "seenByGdelt": "2026-11-27T17:15:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T19:13:25.044Z",
-   "lastSeenAt": "2026-11-27T19:23:40.744Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "sanctionsTrade",
-      "label": "Sanctions and trade",
-      "terms": [
-       "export ban"
       ]
      }
     ]
@@ -6547,7 +6252,7 @@
     }
    },
    "firstSeenAt": "2026-11-28T07:39:48.020Z",
-   "lastSeenAt": "2026-11-28T07:39:48.020Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -6557,6 +6262,50 @@
       "label": "Security",
       "terms": [
        "military"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Kremlin Says Proposed €100B EU Ukraine Fund Could Hurt Peace Talks",
+   "url": "https://www.latintimes.com/kremlin-warns-eu-ukraine-funding-could-undermine-talks-601926",
+   "publisher": "latintimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-28T05:11:00.000Z",
+   "seenByGdelt": "2026-11-28T09:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "institution",
+     "terms": [
+      "Kremlin"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T10:13:35.983Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "peace talks"
       ]
      }
     ]
@@ -6652,6 +6401,183 @@
    },
    "source": {
     "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Russian Army Intercepts Over 1.2K Ukrainian Drones in Latest Nighttime Air Barrage",
+   "url": "https://www.themoscowtimes.com/2026/11/28/russian-army-intercepts-over-1-2k-ukrainian-drones-in-latest-nighttime-air-a812401",
+   "publisher": "themoscowtimes.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-28T09:21:00.000Z",
+   "seenByGdelt": "2026-11-28T09:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T10:13:35.983Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "army"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Russian Forces Strike Ukrainian Military Logistics, Fuel Supplies and Energy Infrastructure – MoD",
+   "url": "https://sputnikglobe.com/20261128/russian-forces-strike-ukrainian-military-logistics-fuel-supplies-and-energy-infrastructure--mod-1125154712.html",
+   "publisher": "sputnikglobe.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T09:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T10:13:35.983Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "state"
+   }
+  },
+  {
+   "title": "Ukrainian forces capture two Georgians fighting for Russian army, project says",
+   "url": "https://news.az/news/ukrainian-forces-capture-two-georgians-fighting-for-russian-army-project-says",
+   "publisher": "news.az",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T09:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T10:13:35.983Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "army"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Russian Forces Inflict Heavy Losses on Ukrainian Troops Across Front Line – MoD",
+   "url": "https://sputnikglobe.com/20261128/russian-forces-inflict-heavy-losses-on-ukrainian-troops-across-front-line--mod-1125155328.html",
+   "publisher": "sputnikglobe.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T10:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukrainian"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T10:13:35.983Z",
+   "lastSeenAt": "2026-11-28T10:13:35.983Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "front line",
+       "troops"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "state"
    }
   },
   {

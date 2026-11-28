@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 2,
- "generatedAt": "2026-11-28T07:40:08.714Z",
- "lastSuccessAt": "2026-11-28T07:40:08.714Z",
- "checkedAt": "2026-11-28T07:40:08.714Z",
+ "generatedAt": "2026-11-28T10:13:54.110Z",
+ "lastSuccessAt": "2026-11-28T10:13:54.110Z",
+ "checkedAt": "2026-11-28T10:13:54.110Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 181,
-   "lastSuccessAt": "2026-11-28T07:39:48.020Z",
-   "checkedAt": "2026-11-28T07:39:48.020Z",
+   "items": 180,
+   "lastSuccessAt": "2026-11-28T10:13:35.983Z",
+   "checkedAt": "2026-11-28T10:13:35.983Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,10 +22,10 @@
   }
  },
  "itemStats": {
-  "read": 181,
+  "read": 180,
   "noSource": 0,
   "noTime": 0,
-  "outsideWindow": 0,
+  "outsideWindow": 2,
   "noCountry": 0,
   "routineNotices": 30,
   "offTopic": 8,
@@ -34,18 +34,18 @@
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-28T07:40:08.714Z",
+   "generatedAt": "2026-11-28T10:13:54.110Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-25T07:40:08.714Z",
-    "to": "2026-11-28T07:40:08.714Z"
+    "from": "2026-11-25T10:13:54.110Z",
+    "to": "2026-11-28T10:13:54.110Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 67,
+   "reportsFound": 64,
    "overview": {
     "kind": "fact",
-    "text": "67 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 09:30 UTC to 2026-11-27 19:15 UTC and come from 10 outlets. Reports with topic keywords (a report can have several): sanctions and trade 11, diplomacy 8, security 4, economic policy 2.",
+    "text": "64 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 10:15 UTC to 2026-11-27 19:15 UTC and come from 12 outlets. Reports with topic keywords (a report can have several): sanctions and trade 11, diplomacy 9, security 3, economic policy 2.",
     "evidence": [
      1,
      2,
@@ -56,7 +56,7 @@
      7,
      8,
      9,
-     10,
+     12,
      13,
      14
     ]
@@ -146,10 +146,10 @@
     {
      "kind": "reporting",
      "n": 5,
-     "headline": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
-     "publisher": "indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
-     "time": "2026-11-25T09:30:00.000Z",
+     "headline": "India-US Trade Pact and Tariffs: Key Details Explained",
+     "publisher": "deccanchronicle.com",
+     "url": "https://www.deccanchronicle.com/nation/india-us-trade-pact-and-tariffs-key-details-explained-2008600",
+     "time": "2026-11-27T19:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "matched": {
       "level": "country",
@@ -158,7 +158,7 @@
       ]
      },
      "topics": [
-      "Security",
+      "Diplomacy",
       "Sanctions and trade"
      ],
      "alsoReportedBy": []
@@ -177,11 +177,11 @@
       7,
       8,
       9,
-      10,
+      12,
       13,
       14
      ],
-     "text": "11 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][4][5][6][7][8][9][10][13][14]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][4][5][6][7][8][9][12][13][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -189,14 +189,15 @@
      "evidence": [
       3,
       4,
-      6,
+      5,
+      7,
       8,
       9,
-      10,
+      12,
       13,
       14
      ],
-     "text": "8 of the 12 listed reports use diplomacy wording (envoy, negotiation, pact, negotiations) [3][4][6][8][9][10][13][14]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use diplomacy wording (envoy, negotiation, pact, negotiations) [3][4][5][7][8][9][12][13][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
@@ -204,19 +205,18 @@
      "evidence": [
       1,
       2,
-      3,
-      5
+      3
      ],
-     "text": "4 of the 12 listed reports use security wording (war, truce) [1][2][3][5]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use security wording (war, truce) [1][2][3]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:economic-policy",
      "kind": "analysis",
      "evidence": [
       1,
-      7
+      6
      ],
-     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][7]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][6]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -226,20 +226,21 @@
       2,
       3,
       4,
-      5,
-      7
+      6
      ],
-     "text": "6 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][5][7]. A headline that names two countries does not show how they are connected."
+     "text": "5 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][6]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
+      9,
       10,
       11,
-      12
+      14,
+      15
      ],
-     "text": "1 listed headline was carried by more than one outlet [10]. The same headline appearing in several places is not independent verification."
+     "text": "2 listed headlines were carried by more than one outlet [9][14]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -285,16 +286,6 @@
     },
     {
      "n": 5,
-     "title": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
-     "publisher": "indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
-     "time": "2026-11-25T09:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "via": "GDELT",
-     "sourceLabel": "unassessed"
-    },
-    {
-     "n": 6,
      "title": "India-US Trade Pact and Tariffs: Key Details Explained",
      "publisher": "deccanchronicle.com",
      "url": "https://www.deccanchronicle.com/nation/india-us-trade-pact-and-tariffs-key-details-explained-2008600",
@@ -304,7 +295,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 7,
+     "n": 6,
      "title": "Chinese goods in focus as US Black Friday shoppers seek value amid inflation, tariff pressures",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1375198.shtml",
@@ -314,7 +305,7 @@
      "sourceLabel": "state"
     },
     {
-     "n": 8,
+     "n": 7,
      "title": "India, US push for trade deal as negotiations continue; no timeline set, says Commerce Secretary",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-push-for-trade-deal-as-negotiations-continue-no-timeline-set-says-commerce-secretary/articleshow/136226565.cms",
@@ -324,7 +315,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 9,
+     "n": 8,
      "title": "Dutch PM to discuss US MATCH Act chipmaking export controls with Trump at G20",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/tech/technology/dutch-pm-to-discuss-us-match-act-chipmaking-export-controls-with-trump-at-g20/articleshow/136225240.cms",
@@ -334,7 +325,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 10,
+     "n": 9,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "aninews.in",
      "url": "https://aninews.in/news/world/asia/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework20261127135416/",
@@ -344,27 +335,27 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 11,
+     "n": 10,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "bignewsnetwork.com",
      "url": "http://www.bignewsnetwork.com/news/279465595/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework",
      "time": "2026-11-27T09:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 10
+     "duplicateOf": 9
     },
     {
-     "n": 12,
+     "n": 11,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "heraldglobe.com",
      "url": "http://www.heraldglobe.com/news/279465595/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework",
      "time": "2026-11-27T11:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 10
+     "duplicateOf": 9
     },
     {
-     "n": 13,
+     "n": 12,
      "title": "India-US Trade Deal Nears Finalization as Piyush Goyal Signals Progress in Bilateral Negotiations",
      "publisher": "siliconindia.com",
      "url": "https://www.siliconindia.com/news/general/indiaus-trade-deal-nears-finalization-as-piyush-goyal-signals-progress-in-bilateral-negotiations-nid-243270-cid-1.html",
@@ -374,7 +365,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 14,
+     "n": 13,
      "title": "US proposes additional tariffs of up to 18% on Thai exports, putting trade agreement negotiations back in focus – Thailand Business News",
      "publisher": "thailand-business-news.com",
      "url": "https://www.thailand-business-news.com/trade/342399-us-proposes-additional-tariffs-of-up-to-18-on-thai-exports-putting-trade-agreement-negotiations-back-in-focus",
@@ -382,6 +373,26 @@
      "timeBasis": "published",
      "via": "GDELT",
      "sourceLabel": "unassessed"
+    },
+    {
+     "n": 14,
+     "title": "India-US trade pact and tariffs: An explainer - The HinduBusinessLine",
+     "publisher": "thehindubusinessline.com",
+     "url": "https://www.thehindubusinessline.com/economy/india-us-trade-pact-and-tariffs-an-explainer/article71749577.ece",
+     "time": "2026-11-27T06:13:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT",
+     "sourceLabel": "unassessed"
+    },
+    {
+     "n": 15,
+     "title": "India-US trade pact and tariffs: An explainer - The HinduBusinessLine",
+     "publisher": "newindianexpress.com",
+     "url": "https://www.newindianexpress.com/business/2026/Nov/27/india-us-trade-pact-and-tariffs-an-explainer-3",
+     "time": "2026-11-27T06:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "sourceLabel": "unassessed",
+     "duplicateOf": 14
     }
    ],
    "limitations": [
@@ -390,18 +401,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-28T07:40:08.714Z",
+   "generatedAt": "2026-11-28T10:13:54.110Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-25T07:40:08.714Z",
-    "to": "2026-11-28T07:40:08.714Z"
+    "from": "2026-11-25T10:13:54.110Z",
+    "to": "2026-11-28T10:13:54.110Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
    "reportsFound": 43,
    "overview": {
     "kind": "fact",
-    "text": "43 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 09:30 UTC to 2026-11-27 17:45 UTC and come from 8 outlets. Reports with topic keywords (a report can have several): sanctions and trade 9, security 9, diplomacy 4, economic policy 3.",
+    "text": "43 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 10:15 UTC to 2026-11-28 05:35 UTC and come from 9 outlets. Reports with topic keywords (a report can have several): sanctions and trade 9, security 9, diplomacy 4, economic policy 3.",
     "evidence": [
      1,
      2,
@@ -482,15 +493,15 @@
     {
      "kind": "reporting",
      "n": 4,
-     "headline": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
-     "publisher": "indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
-     "time": "2026-11-25T09:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "headline": "New Us Tariff Proposal Puts the Fragile Washington-Beijing Trade Truce Under Pressure Before January 10",
+     "publisher": "latintimes.com",
+     "url": "https://www.latintimes.com/us-proposes-tariffs-chinese-imports-trade-truce-601887",
+     "time": "2026-11-28T05:35:00.000Z",
+     "timeBasis": "published",
      "matched": {
-      "level": "country",
+      "level": "institution",
       "terms": [
-       "China"
+       "Beijing"
       ]
      },
      "topics": [
@@ -581,11 +592,10 @@
       1,
       2,
       3,
-      4,
       5,
       11
      ],
-     "text": "6 listed reports with topic keywords also name the United States and Russia [1][2][3][4][5][11]. A headline that names two countries does not show how they are connected."
+     "text": "5 listed reports with topic keywords also name the United States and Russia [1][2][3][5][11]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
@@ -621,11 +631,11 @@
     },
     {
      "n": 4,
-     "title": "China calls fresh US tariff plans 'political maneuvering', urges trade truce",
-     "publisher": "indiatimes.com",
-     "url": "https://economictimes.indiatimes.com/news/international/world-news/china-slams-proposed-us-tariffs-as-political-maneuvering-and-calls-for-trade-unity/articleshow/136154515.cms",
-     "time": "2026-11-25T09:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
+     "title": "New Us Tariff Proposal Puts the Fragile Washington-Beijing Trade Truce Under Pressure Before January 10",
+     "publisher": "latintimes.com",
+     "url": "https://www.latintimes.com/us-proposes-tariffs-chinese-imports-trade-truce-601887",
+     "time": "2026-11-28T05:35:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT",
      "sourceLabel": "unassessed"
     },
@@ -716,18 +726,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-28T07:40:08.714Z",
+   "generatedAt": "2026-11-28T10:13:54.110Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-25T07:40:08.714Z",
-    "to": "2026-11-28T07:40:08.714Z"
+    "from": "2026-11-25T10:13:54.110Z",
+    "to": "2026-11-28T10:13:54.110Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 46,
+   "reportsFound": 44,
    "overview": {
     "kind": "fact",
-    "text": "46 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 10:15 UTC to 2026-11-28 06:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 5, economic policy 1.",
+    "text": "44 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 10:15 UTC to 2026-11-28 06:45 UTC and come from 13 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 8, sanctions and trade 5, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -1080,18 +1090,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-28T07:40:08.714Z",
+   "generatedAt": "2026-11-28T10:13:54.110Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-25T07:40:08.714Z",
-    "to": "2026-11-28T07:40:08.714Z"
+    "from": "2026-11-25T10:13:54.110Z",
+    "to": "2026-11-28T10:13:54.110Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 40,
+   "reportsFound": 39,
    "overview": {
     "kind": "fact",
-    "text": "40 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 09:30 UTC to 2026-11-27 09:15 UTC and come from 16 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 11, economic policy 2.",
+    "text": "39 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 15:44 UTC to 2026-11-28 06:29 UTC and come from 16 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 11, economic policy 2.",
     "evidence": [
      1,
      2,
@@ -1100,7 +1110,7 @@
      8,
      9,
      10,
-     14,
+     11,
      15,
      16,
      17,
@@ -1227,13 +1237,13 @@
       8,
       9,
       10,
-      14,
+      11,
       15,
       16,
       17,
       18
      ],
-     "text": "12 of the 12 listed reports use security wording (truce, missile, military, war) [1][2][5][7][8][9][10][14][15][16][17][18]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "12 of the 12 listed reports use security wording (truce, missile, military, war) [1][2][5][7][8][9][10][11][15][16][17][18]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -1246,12 +1256,12 @@
       8,
       9,
       10,
-      14,
+      11,
       15,
       16,
       17
      ],
-     "text": "11 of the 12 listed reports use diplomacy wording (diplomatic, envoy, embassy, peace deal) [1][2][5][7][8][9][10][14][15][16][17]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use diplomacy wording (diplomatic, envoy, embassy, peace deal) [1][2][5][7][8][9][10][11][15][16][17]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:economic-policy",
@@ -1281,12 +1291,12 @@
       4,
       5,
       6,
-      10,
       11,
       12,
-      13
+      13,
+      14
      ],
-     "text": "3 listed headlines were carried by more than one outlet [2][5][10]. The same headline appearing in several places is not independent verification."
+     "text": "3 listed headlines were carried by more than one outlet [2][5][11]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -1372,6 +1382,16 @@
     },
     {
      "n": 9,
+     "title": "Ukraine ready for Black Sea ceasefire, Foreign Minister says",
+     "publisher": "azernews.az",
+     "url": "https://www.azernews.az/region/268259.html",
+     "time": "2026-11-28T06:29:00.000Z",
+     "timeBasis": "published",
+     "via": "GDELT",
+     "sourceLabel": "unassessed"
+    },
+    {
+     "n": 10,
      "title": "Trump pushes for Ukraine peace deal as Kushner says Putin has shown 'restraint' on nuclear weapons",
      "publisher": "hindustantimes.com",
      "url": "https://www.hindustantimes.com/world-news/trump-pushes-for-ukraine-peace-deal-as-kushner-says-putin-has-shown-restraint-on-nuclear-weapons-101795714661731.html",
@@ -1381,7 +1401,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 10,
+     "n": 11,
      "title": "\"Pull back all military aggression from Europe\": Trumps fresh appeal to Putin for Ukraine peace deal",
      "publisher": "webindia123.com",
      "url": "https://news.webindia123.com/news/Articles/World/20261126/4525013.html",
@@ -1391,37 +1411,37 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 11,
+     "n": 12,
      "title": "\"Pull back all military aggression from Europe\": Trumps fresh appeal to Putin for Ukraine peace deal",
      "publisher": "aninews.in",
      "url": "https://aninews.in/news/world/us/pull-back-all-military-aggression-from-europe-trump8217s-fresh-appeal-to-putin-for-ukraine-peace-deal20261126222544/",
      "time": "2026-11-26T18:30:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 10
+     "duplicateOf": 11
     },
     {
-     "n": 12,
+     "n": 13,
      "title": "\"Pull back all military aggression from Europe\": Trumps fresh appeal to Putin for Ukraine peace deal",
      "publisher": "heraldglobe.com",
      "url": "http://www.heraldglobe.com/news/279461048/pull-back-all-military-aggression-from-europe-trump-fresh-appeal-to-putin-for-ukraine-peace-deal",
      "time": "2026-11-26T20:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 10
+     "duplicateOf": 11
     },
     {
-     "n": 13,
+     "n": 14,
      "title": "\"Pull back all military aggression from Europe\": Trumps fresh appeal to Putin for Ukraine peace deal",
      "publisher": "shanghaisun.com",
      "url": "http://www.shanghaisun.com/news/279461048/pull-back-all-military-aggression-from-europe-trump-fresh-appeal-to-putin-for-ukraine-peace-deal",
      "time": "2026-11-26T23:15:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 10
+     "duplicateOf": 11
     },
     {
-     "n": 14,
+     "n": 15,
      "title": "Trump tells Putin to 'pull back all military aggression' as he tries for peace deal to end 'complete bloodbath' in Ukraine",
      "publisher": "nypost.com",
      "url": "https://nypost.com/2026/11/26/us-news/trump-tells-putin-to-pull-back-all-military-aggression-as-he-tries-for-peace-deal-to-end-complete-bloodbath-in-ukraine/",
@@ -1431,7 +1451,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 15,
+     "n": 16,
      "title": "Ukraine Invasion Day 1,736: RU demands UKR cede Donbas as a precondition of ceasefire negotiations",
      "publisher": "dailykos.com",
      "url": "https://www.dailykos.com/stories/2026/11/25/800134195/community/1736/",
@@ -1441,22 +1461,12 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 16,
+     "n": 17,
      "title": "Germany's Defense Budget Triples As NATO Summit Exposes Deep Divisions Over Ukraine Membership",
      "publisher": "foreignpolicyjournal.com",
      "url": "https://www.foreignpolicyjournal.com/2026/11/25/germanys-defense-budget-triples-as-nato-summit-exposes-deep-divisions-over-ukraine-membership/",
      "time": "2026-11-25T15:44:00.000Z",
      "timeBasis": "published",
-     "via": "GDELT",
-     "sourceLabel": "unassessed"
-    },
-    {
-     "n": 17,
-     "title": "North Korea Kicks Out Swiss Diplomats in Spat Linked to Ukraine War",
-     "publisher": "wn.com",
-     "url": "https://article.wn.com/view/2026/11/25/North_Korea_Kicks_Out_Swiss_Diplomats_in_Spat_Linked_to_Ukra/",
-     "time": "2026-11-25T09:30:00.000Z",
-     "timeBasis": "first seen by GDELT",
      "via": "GDELT",
      "sourceLabel": "unassessed"
     },
@@ -1477,11 +1487,11 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-28T07:40:08.714Z",
+   "generatedAt": "2026-11-28T10:13:54.110Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-25T07:40:08.714Z",
-    "to": "2026-11-28T07:40:08.714Z"
+    "from": "2026-11-25T10:13:54.110Z",
+    "to": "2026-11-28T10:13:54.110Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
