@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-28T01:44:19.379Z",
- "checkedAt": "2026-11-28T01:44:19.379Z",
- "lastSuccessAt": "2026-11-28T01:44:19.379Z",
+ "generatedAt": "2026-11-28T04:23:29.381Z",
+ "checkedAt": "2026-11-28T04:23:29.381Z",
+ "lastSuccessAt": "2026-11-28T04:23:29.381Z",
  "retentionDays": 3,
  "attribution": {
   "name": "The GDELT Project",
@@ -78,11 +78,11 @@
  },
  "relevance": {
   "droppedNoMatch": 0,
-  "filteredNotices": 32,
+  "filteredNotices": 31,
   "filteredOffTopic": 8,
-  "groupedDuplicates": 53,
-  "incidentalMentions": 14,
-  "sensationalStyle": 2,
+  "groupedDuplicates": 20,
+  "incidentalMentions": 2,
+  "sensationalStyle": 0,
   "rulesNote": "See data/relevance-rules.mjs and data/country-terms.mjs"
  },
  "sourcePolicy": {
@@ -101,24 +101,14 @@
    "label": "GKG 2.0 files, every 15 minutes",
    "url": "https://data.gdeltproject.org/gdeltv2/",
    "status": "ok",
-   "checkedAt": "2026-11-28T01:44:19.379Z",
-   "lastSuccessAt": "2026-11-28T01:44:19.379Z",
+   "checkedAt": "2026-11-28T04:23:29.381Z",
+   "lastSuccessAt": "2026-11-28T04:23:29.381Z",
    "error": null,
-   "latestFile": "20261128014500"
+   "latestFile": "20261128043000",
+   "warning": "1 of 11 files could not be read this run"
   }
  },
  "files": {
-  "20261124014500": "missing",
-  "20261124020000": "ok",
-  "20261124021500": "ok",
-  "20261124023000": "ok",
-  "20261124024500": "ok",
-  "20261124030000": "ok",
-  "20261124031500": "ok",
-  "20261124033000": "ok",
-  "20261124034500": "ok",
-  "20261124040000": "ok",
-  "20261124041500": "ok",
   "20261124043000": "ok",
   "20261124050000": "ok",
   "20261124051500": "ok",
@@ -475,7 +465,18 @@
   "20261128010000": "ok",
   "20261128011500": "ok",
   "20261128013000": "ok",
-  "20261128014500": "ok"
+  "20261128014500": "ok",
+  "20261128020000": "ok",
+  "20261128021500": "ok",
+  "20261128023000": "ok",
+  "20261128024500": "ok",
+  "20261128030000": "ok",
+  "20261128031500": "ok",
+  "20261128033000": "ok",
+  "20261128034500": "ok",
+  "20261128040000": "ok",
+  "20261128041500": "ok",
+  "20261128043000": "missing"
  },
  "items": [
   {
@@ -1112,50 +1113,6 @@
       "label": "Sanctions and trade",
       "terms": [
        "tariff"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Foreign Minister Addresses Reports of Potential U.S. Military Presence in Belize",
-   "url": "https://lovefm.com/foreign-minister-addresses-reports-of-potential-u-s-military-presence-in-belize/",
-   "publisher": "lovefm.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T03:54:00.000Z",
-   "seenByGdelt": "2026-11-25T06:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "U.S."
-     ],
-     "role": "primary"
-    }
-   },
-   "firstSeenAt": "2026-11-25T07:51:16.105Z",
-   "lastSeenAt": "2026-11-25T07:51:16.105Z",
-   "relevance": {
-    "score": 7,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     },
-     {
-      "id": "diplomacy",
-      "label": "Diplomacy",
-      "terms": [
-       "foreign minister"
       ]
      }
     ]
@@ -3206,6 +3163,94 @@
    }
   },
   {
+   "title": "Canada summons Russian ambassador over missile strikes in Poland",
+   "url": "https://aa.com.tr/en/asia-pacific/canada-summons-russian-ambassador-over-missile-strikes-in-poland/4141083",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T02:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russian"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missile"
+      ]
+     },
+     {
+      "id": "diplomacy",
+      "label": "Diplomacy",
+      "terms": [
+       "ambassador"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Oil production in Russia has plunged to an 18-year low. And it's not just because of the war and sanctions",
+   "url": "https://peakoil.com/production/oil-production-in-russia-has-plunged-to-an-18-year-low-and-its-not-just-because-of-the-war-and-sanctions",
+   "publisher": "peakoil.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T02:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 7,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     },
+     {
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
+      "terms": [
+       "sanctions"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "BRICS: New Development Bank's Bond Issuance in China Exceeds 100 Billion Yuan – BRICS Information Sharing & Exchanging Platform",
    "url": "https://www.brics-info.org/a53336fa381833692a50bb9e41c8226e/",
    "publisher": "brics-info.org",
@@ -3814,50 +3859,6 @@
    }
   },
   {
-   "title": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
-   "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
-   "publisher": "antiwar.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-25T21:15:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "shared"
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-25T22:18:34.902Z",
-   "lastSeenAt": "2026-11-25T22:18:34.902Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "military"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
    "title": "China Trains Fighter Pilots With AI Combat Drones. US Army Warns Of Threat To Taiwan And American Forces.",
    "url": "https://www.ibtimes.com/china-trains-pilots-ai-combat-drones-3810201",
    "publisher": "ibtimes.com",
@@ -4168,76 +4169,6 @@
    "source": {
     "tier": "unassessed"
    }
-  },
-  {
-   "title": "Trump downplays Russia, China support for Iran during talks with US troops - Grenada Chronicle – Daily Grenada And Caribbean News",
-   "url": "https://grenadachronicle.com/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops/",
-   "publisher": "grenadachronicle.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-27T04:17:00.000Z",
-   "seenByGdelt": "2026-11-27T05:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "shared"
-    },
-    "CHN": {
-     "level": "country",
-     "terms": [
-      "China"
-     ],
-     "role": "shared"
-    },
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T07:47:17.748Z",
-   "lastSeenAt": "2026-11-27T07:47:17.748Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "troops"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   },
-   "variants": [
-    {
-     "publisher": "aawsat.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "https://english.aawsat.com/world/5346243-trump-downplays-china-and-russias-support-iran",
-     "published": "2026-11-27T10:00:00.000Z",
-     "seenByGdelt": "2026-11-27T10:15:00.000Z"
-    },
-    {
-     "publisher": "surinametimes.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "https://www.surinametimes.com/artikel/trump-downplays-china-and-russias-support-to-iran",
-     "published": null,
-     "seenByGdelt": "2026-11-27T22:00:00.000Z"
-    }
-   ],
-   "variantsTotal": 3
   },
   {
    "title": "Trump downplays Russia, China support for Iran during talks with US troops - Dominican Republic Post – Caribbean News, Business, Travel & Culture",
@@ -4701,141 +4632,17 @@
      "url": "https://www.pakistantoday.com.pk/2026/11/27/chinese-business-community-urges-us-to-withdraw-proposed-section-301-tariff-hikes-ccpit",
      "published": "2026-11-27T16:09:00.000Z",
      "seenByGdelt": "2026-11-27T20:15:00.000Z"
+    },
+    {
+     "publisher": "en.people.cn",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "http://en.people.cn/n3/2026/1128/c90000-20524132.html",
+     "published": null,
+     "seenByGdelt": "2026-11-28T02:15:00.000Z"
     }
    ],
-   "variantsTotal": 2
-  },
-  {
-   "title": "Russia's own figures show it has lost nearly 500,000 people in Ukraine war",
-   "url": "http://www.businessghana.com/site/news/politics/360516/Russia",
-   "publisher": "businessghana.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T11:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T13:42:10.738Z",
-   "lastSeenAt": "2026-11-27T13:42:10.738Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Russian Defense Ministry claims it downed 5,400 Ukrainian drones over past week",
-   "url": "https://en.apa.az/cis-countries/russian-defense-ministry-claims-it-downed-5400-ukrainian-drones-over-past-week-538946",
-   "publisher": "en.apa.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T11:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russian"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukrainian"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T13:42:10.738Z",
-   "lastSeenAt": "2026-11-27T13:42:10.738Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "defense ministry"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "Azerbaijani and Estonian Foreign Ministers discuss Russia-Ukraine war",
-   "url": "https://en.apa.az/foreign-policy/azerbaijani-and-estonian-foreign-ministers-discuss-russia-ukraine-war-538924",
-   "publisher": "en.apa.az",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-27T11:00:00.000Z",
-   "matches": {
-    "RUS": {
-     "level": "country",
-     "terms": [
-      "Russia"
-     ],
-     "role": "shared"
-    },
-    "UKR": {
-     "level": "country",
-     "terms": [
-      "Ukraine"
-     ],
-     "role": "shared"
-    }
-   },
-   "firstSeenAt": "2026-11-27T13:42:10.738Z",
-   "lastSeenAt": "2026-11-27T13:42:10.738Z",
-   "relevance": {
-    "score": 4,
-    "tier": "high",
-    "topics": [
-     {
-      "id": "security",
-      "label": "Security",
-      "terms": [
-       "war"
-      ]
-     }
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
+   "variantsTotal": 3
   },
   {
    "title": "From declaration to feasibility: America, China, Russia and the future of nuclear talks – European Council on Foreign Relations",
@@ -5465,7 +5272,7 @@
     }
    },
    "firstSeenAt": "2026-11-28T01:44:19.379Z",
-   "lastSeenAt": "2026-11-28T01:44:19.379Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -5990,9 +5797,17 @@
      "url": "https://english.news.cn/20261128/f4a80e18d8bc4f619bb78ba7fbd12df0/c.html",
      "published": null,
      "seenByGdelt": "2026-11-27T23:00:00.000Z"
+    },
+    {
+     "publisher": "theuknews.com",
+     "publisherId": "gdelt",
+     "tier": "unassessed",
+     "url": "http://www.theuknews.com/news/279468575/ukraine-submits-black-sea-ceasefire-offer-awaits-russian-response",
+     "published": null,
+     "seenByGdelt": "2026-11-28T04:15:00.000Z"
     }
    ],
-   "variantsTotal": 3
+   "variantsTotal": 4
   },
   {
    "title": "Ukraine submits Black Sea truce offer, waits for Russian response: Minister",
@@ -6398,6 +6213,50 @@
    }
   },
   {
+   "title": "Kyiv Says North Korea Paused Missile Deliveries to Russia Over Seoul Outreach",
+   "url": "https://www.hngn.com/articles/273978/20261127/kyiv-says-north-korea-paused-missile-deliveries-russia-over-seoul-outreach.htm",
+   "publisher": "hngn.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-27T22:17:00.000Z",
+   "seenByGdelt": "2026-11-28T02:30:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "institution",
+     "terms": [
+      "Kyiv"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "missile"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "Ukraine Offers Black Sea Cease-Fire, Awaits Kremlin Response",
    "url": "http://www.kenyastar.com/news/279468839/ukraine-offers-black-sea-cease-fire-awaits-kremlin-response",
    "publisher": "kenyastar.com",
@@ -6423,7 +6282,7 @@
     }
    },
    "firstSeenAt": "2026-11-28T01:44:19.379Z",
-   "lastSeenAt": "2026-11-28T01:44:19.379Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -6474,7 +6333,7 @@
     }
    },
    "firstSeenAt": "2026-11-28T01:44:19.379Z",
-   "lastSeenAt": "2026-11-28T01:44:19.379Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -6581,6 +6440,50 @@
    }
   },
   {
+   "title": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
+   "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
+   "publisher": "antiwar.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-28T01:30:00.000Z",
+   "seenByGdelt": "2026-11-25T21:15:00.000Z",
+   "matches": {
+    "USA": {
+     "level": "country",
+     "terms": [
+      "US"
+     ],
+     "role": "shared"
+    },
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-25T22:18:34.902Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "military"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "U.S. Tariff Blitz Targets China, EU and Global Trade Imbalances – NaturalNews.com",
    "url": "https://www.naturalnews.com/2026-11-27-us-tariff-china-eu-and-global-tade-imbalances.html",
    "publisher": "naturalnews.com",
@@ -6650,7 +6553,7 @@
     }
    },
    "firstSeenAt": "2026-11-28T01:44:19.379Z",
-   "lastSeenAt": "2026-11-28T01:44:19.379Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
    "relevance": {
     "score": 4,
     "tier": "high",
@@ -6669,35 +6572,129 @@
    }
   },
   {
-   "title": "Foreign Minister Reaffirms Belize's Strong Diplomatic Ties with Taiwan - Love FM Belize News & Music Power",
-   "url": "https://lovefm.com/foreign-minister-reaffirms-belizes-strong-diplomatic-ties-with-taiwan/",
-   "publisher": "lovefm.com",
+   "title": "China and other US trading partners hit back at Trump's new tariff plans",
+   "url": "https://www.timesleader.com/business/1766651/china-and-other-us-trading-partners-hit-back-at-trumps-new-tariff-plans",
+   "publisher": "timesleader.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": "2026-11-25T04:07:00.000Z",
-   "seenByGdelt": "2026-11-25T06:15:00.000Z",
+   "published": null,
+   "seenByGdelt": "2026-11-28T02:15:00.000Z",
    "matches": {
-    "TWN": {
+    "USA": {
      "level": "country",
      "terms": [
-      "Taiwan"
+      "US"
      ],
-     "role": "primary"
+     "role": "shared"
+    },
+    "CHN": {
+     "level": "country",
+     "terms": [
+      "China"
+     ],
+     "role": "shared"
     }
    },
-   "firstSeenAt": "2026-11-25T07:51:16.105Z",
-   "lastSeenAt": "2026-11-25T07:51:16.105Z",
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
    "relevance": {
-    "score": 3,
+    "score": 4,
     "tier": "high",
     "topics": [
      {
-      "id": "diplomacy",
-      "label": "Diplomacy",
+      "id": "sanctionsTrade",
+      "label": "Sanctions and trade",
       "terms": [
-       "foreign minister",
-       "diplomatic"
+       "tariff"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Key Putin ally questions Ukraine war logic: 'Give Russia back to Mongolia?'",
+   "url": "https://www.moneycontrol.com/world/key-putin-ally-questions-ukraine-war-logic-give-russia-back-to-mongolia-article-14090573.html",
+   "publisher": "moneycontrol.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T02:45:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Ukraine…Russia War… Evening Number 1,739…Ukraine IS fighting More than Russia….",
+   "url": "https://politicaldog101.com/2026/11/ukrainerussia-war-evening-number-1739-ukraine-is-fighting-more-than-russia/",
+   "publisher": "politicaldog101.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T03:00:00.000Z",
+   "matches": {
+    "RUS": {
+     "level": "country",
+     "terms": [
+      "Russia"
+     ],
+     "role": "shared"
+    },
+    "UKR": {
+     "level": "country",
+     "terms": [
+      "Ukraine"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 4,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "war"
       ]
      }
     ]
@@ -7116,6 +7113,80 @@
    }
   },
   {
+   "title": "Why America Needs A New Israel In Taiwan And A New NATO In Asia - OpEd",
+   "url": "https://www.eurasiareview.com/28112026-why-america-needs-a-new-israel-in-taiwan-and-a-new-nato-in-asia-oped/",
+   "publisher": "eurasiareview.com",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": "2026-11-28T00:54:00.000Z",
+   "seenByGdelt": "2026-11-28T03:00:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "shared"
+    }
+   },
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "NATO"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
+   "title": "Taiwan holds local elections, referendum on nuclear energy",
+   "url": "https://aa.com.tr/en/asia-pacific/taiwan-holds-local-elections-referendum-on-nuclear-energy/4141091",
+   "publisher": "aa.com.tr",
+   "publisherId": "gdelt",
+   "via": "GDELT",
+   "feedId": "gdelt-gkg",
+   "published": null,
+   "seenByGdelt": "2026-11-28T02:45:00.000Z",
+   "matches": {
+    "TWN": {
+     "level": "country",
+     "terms": [
+      "Taiwan"
+     ],
+     "role": "primary"
+    }
+   },
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
+   "relevance": {
+    "score": 3,
+    "tier": "high",
+    "topics": [
+     {
+      "id": "security",
+      "label": "Security",
+      "terms": [
+       "nuclear"
+      ]
+     }
+    ]
+   },
+   "source": {
+    "tier": "unassessed"
+   }
+  },
+  {
    "title": "Taiwan raises 2026 GDP growth projection to 13.28% on strong AI demand",
    "url": "https://cedarnews.net/newstasks/1203125/taiwan-raises-2026-gdp-growth-projection-13/",
    "publisher": "cedarnews.net",
@@ -7386,14 +7457,14 @@
    }
   },
   {
-   "title": "Taiwan holds elections to choose mayors and other local leaders",
-   "url": "https://www.union-bulletin.com/news/world/taiwan-holds-elections-to-choose-mayors-and-other-local-leaders/article_6487f29f-28c6-5a2e-8c89-ac7fa18bb33b.html",
-   "publisher": "union-bulletin.com",
+   "title": "Taiwan's record economic growth - Shafaqna English | International Shia News & Fatwas",
+   "url": "https://en.shafaqna.com/495323/taiwans-record-economic-growth/",
+   "publisher": "shafaqna.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": "2026-11-27T23:00:00.000Z",
-   "seenByGdelt": "2026-11-27T23:30:00.000Z",
+   "published": "2026-11-28T02:23:00.000Z",
+   "seenByGdelt": "2026-11-28T03:00:00.000Z",
    "matches": {
     "TWN": {
      "level": "country",
@@ -7403,63 +7474,45 @@
      "role": "primary"
     }
    },
-   "firstSeenAt": "2026-11-28T01:44:19.379Z",
-   "lastSeenAt": "2026-11-28T01:44:19.379Z",
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
    "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
+    "score": 2,
+    "tier": "medium",
+    "topics": [
+     {
+      "id": "economicPolicy",
+      "label": "Economic policy",
+      "terms": [
+       "economic growth"
+      ]
+     }
+    ]
    },
    "source": {
     "tier": "unassessed"
-   },
-   "variants": [
-    {
-     "publisher": "winnipegfreepress.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "https://www.winnipegfreepress.com/world/2026/11/27/taiwan-holds-elections-to-choose-mayors-and-other-local-leaders",
-     "published": "2026-11-27T23:01:00.000Z",
-     "seenByGdelt": "2026-11-27T23:30:00.000Z"
-    },
-    {
-     "publisher": "brandonsun.com",
-     "publisherId": "gdelt",
-     "tier": "unassessed",
-     "url": "https://www.brandonsun.com/world/2026/11/27/taiwan-holds-elections-to-choose-mayors-and-other-local-leaders",
-     "published": "2026-11-28T00:20:00.000Z",
-     "seenByGdelt": "2026-11-28T00:45:00.000Z"
-    }
-   ],
-   "variantsTotal": 2
+   }
   },
   {
-   "title": "Taiwan votes in key local elections as China looks on",
-   "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/11/28/taiwan-votes-in-key-local-elections-as-china-looks-on",
-   "publisher": "internazionale.it",
+   "title": "GSOL Was Sole Fund With $0.9 Million U.S. Solana ETF Outflow on Nov. 27",
+   "url": "https://econotimes.com/GSOL-Was-Sole-Fund-With-0-9-Million-U-S-Solana-ETF-Outflow-on-Nov-27-1781291",
+   "publisher": "econotimes.com",
    "publisherId": "gdelt",
    "via": "GDELT",
    "feedId": "gdelt-gkg",
-   "published": null,
-   "seenByGdelt": "2026-11-28T01:30:00.000Z",
+   "published": "2026-11-28T02:00:00.000Z",
+   "seenByGdelt": "2026-11-28T03:15:00.000Z",
    "matches": {
-    "CHN": {
+    "USA": {
      "level": "country",
      "terms": [
-      "China"
+      "U.S."
      ],
-     "role": "shared"
-    },
-    "TWN": {
-     "level": "country",
-     "terms": [
-      "Taiwan"
-     ],
-     "role": "shared"
+     "role": "primary"
     }
    },
-   "firstSeenAt": "2026-11-28T01:44:19.379Z",
-   "lastSeenAt": "2026-11-28T01:44:19.379Z",
+   "firstSeenAt": "2026-11-28T04:23:29.381Z",
+   "lastSeenAt": "2026-11-28T04:23:29.381Z",
    "relevance": {
     "score": 0,
     "tier": "other",
@@ -7467,6 +7520,12 @@
    },
    "source": {
     "tier": "unassessed"
+   },
+   "filtered": {
+    "kind": "financial-product",
+    "terms": [
+     "ETF"
+    ]
    }
   },
   {
@@ -8492,41 +8551,6 @@
     "kind": "financial-product",
     "terms": [
      "portfolio"
-    ]
-   },
-   "source": {
-    "tier": "unassessed"
-   }
-  },
-  {
-   "title": "US stock market today: Dow rises, Nasdaq falls as AI selloff hits Wall Street",
-   "url": "https://www.thehindubusinessline.com/markets/wall-street-rebounds-from-days-lows-as-bargain-hunters-step-in-dow-gains-nasdaq-falls/article71744812.ece",
-   "publisher": "thehindubusinessline.com",
-   "publisherId": "gdelt",
-   "via": "GDELT",
-   "feedId": "gdelt-gkg",
-   "published": "2026-11-25T23:42:00.000Z",
-   "seenByGdelt": "2026-11-26T00:45:00.000Z",
-   "matches": {
-    "USA": {
-     "level": "country",
-     "terms": [
-      "US"
-     ],
-     "role": "primary"
-    }
-   },
-   "firstSeenAt": "2026-11-26T01:45:45.203Z",
-   "lastSeenAt": "2026-11-26T01:45:45.203Z",
-   "relevance": {
-    "score": 0,
-    "tier": "other",
-    "topics": []
-   },
-   "filtered": {
-    "kind": "financial-product",
-    "terms": [
-     "stock market today"
     ]
    },
    "source": {
