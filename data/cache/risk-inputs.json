@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "generatedAt": "2026-11-27T19:25:44.875Z",
- "checkedAt": "2026-11-27T19:25:44.875Z",
- "lastSuccessAt": "2026-11-27T11:49:14.467Z",
+ "generatedAt": "2026-11-28T06:37:47.232Z",
+ "checkedAt": "2026-11-28T06:37:47.232Z",
+ "lastSuccessAt": "2026-11-28T06:37:47.232Z",
  "sources": {
   "ucdp": "https://ucdp.uu.se/downloads/",
   "worldBank": "https://data.worldbank.org/"
@@ -247,8 +247,8 @@
    "year": "2025",
    "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
    "sourceUpdated": "2026-09-25",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "CHN": {
    "indicator": "GOV_WGI_PV.EST",
@@ -258,8 +258,8 @@
    "year": "2025",
    "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
    "sourceUpdated": "2026-09-25",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "RUS": {
    "indicator": "GOV_WGI_PV.EST",
@@ -269,8 +269,8 @@
    "year": "2025",
    "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
    "sourceUpdated": "2026-09-25",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "UKR": {
    "indicator": "GOV_WGI_PV.EST",
@@ -280,8 +280,8 @@
    "year": "2025",
    "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
    "sourceUpdated": "2026-09-25",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "TWN": {
    "indicator": "GOV_WGI_PV.EST",
@@ -291,8 +291,8 @@
    "year": "2025",
    "indicatorName": "Political Stability - Governance estimate (approx. -2.5 to +2.5)",
    "sourceUpdated": "2026-09-25",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   }
  },
  "unemployment": {
@@ -304,8 +304,8 @@
    "year": "2025",
    "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "CHN": {
    "indicator": "SL.UEM.TOTL.ZS",
@@ -315,8 +315,8 @@
    "year": "2025",
    "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "RUS": {
    "indicator": "SL.UEM.TOTL.ZS",
@@ -326,8 +326,8 @@
    "year": "2025",
    "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "UKR": {
    "indicator": "SL.UEM.TOTL.ZS",
@@ -337,16 +337,16 @@
    "year": "2021",
    "indicatorName": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
    "sourceUpdated": "2026-11-11",
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   },
   "TWN": {
    "indicator": "SL.UEM.TOTL.ZS",
    "status": "none",
    "error": null,
    "sourceUpdated": null,
-   "fetchedAt": "2026-11-21T03:15:43.287Z",
-   "checkedAt": "2026-11-21T03:15:43.287Z"
+   "fetchedAt": "2026-11-28T06:37:47.232Z",
+   "checkedAt": "2026-11-28T06:37:47.232Z"
   }
  }
 }

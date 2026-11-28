@@ -3,14 +3,14 @@
  "status": "ok",
  "method": "Fixed, documented rules on public datasets. No AI, no paid service. Headlines are context only.",
  "methodologyVersion": 3,
- "generatedAt": "2026-11-27T19:25:44.933Z",
- "lastSuccessAt": "2026-11-27T19:25:44.933Z",
- "checkedAt": "2026-11-27T19:25:44.933Z",
+ "generatedAt": "2026-11-28T06:38:06.161Z",
+ "lastSuccessAt": "2026-11-28T06:38:06.161Z",
+ "checkedAt": "2026-11-28T06:38:06.161Z",
  "inputs": {
   "riskInputs": {
    "status": "ok",
-   "checkedAt": "2026-11-27T19:25:44.875Z",
-   "lastSuccessAt": "2026-11-27T11:49:14.467Z"
+   "checkedAt": "2026-11-28T06:37:47.232Z",
+   "lastSuccessAt": "2026-11-28T06:37:47.232Z"
   },
   "indicators": {
    "status": "ok",
@@ -18,7 +18,7 @@
    "lastSuccessAt": "2026-11-27T19:19:19.938Z"
   },
   "briefs": {
-   "generatedAt": "2026-11-27T19:23:51.023Z"
+   "generatedAt": "2026-11-28T04:23:48.779Z"
   }
  },
  "countries": {
@@ -134,7 +134,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z",
+    "contextAsOf": "2026-11-28T04:23:48.779Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -312,7 +312,7 @@
       "referenceYear": "2025",
       "stale": false,
       "sourceUpdated": "2026-09-25",
-      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "lastSuccessAt": "2026-11-28T06:37:47.232Z",
       "summary": "Estimate -0.30 for 2025.",
       "notes": {
        "visible": [
@@ -404,7 +404,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T19:19:10.754Z",
+    "lastSuccessAt": "2026-11-28T06:37:47.232Z",
     "stale": false,
     "limitations": [
      "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
@@ -478,7 +478,7 @@
       "2025"
      ],
      "stale": false,
-     "lastSuccessAt": "2026-11-27T19:19:10.754Z",
+     "lastSuccessAt": "2026-11-28T06:37:47.232Z",
      "flag": {
       "name": "Macroeconomic stress flag (project-defined)",
       "status": "assessed",
@@ -540,7 +540,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z"
+    "contextAsOf": "2026-11-28T04:23:48.779Z"
    }
   },
   "CHN": {
@@ -607,7 +607,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z",
+    "contextAsOf": "2026-11-28T04:23:48.779Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -683,7 +683,7 @@
       "referenceYear": "2025",
       "stale": false,
       "sourceUpdated": "2026-09-25",
-      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "lastSuccessAt": "2026-11-28T06:37:47.232Z",
       "summary": "Estimate 0.02 for 2025.",
       "notes": {
        "visible": [
@@ -775,7 +775,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T19:19:12.636Z",
+    "lastSuccessAt": "2026-11-28T06:37:47.232Z",
     "stale": false,
     "limitations": [
      "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
@@ -847,7 +847,7 @@
       "2025"
      ],
      "stale": false,
-     "lastSuccessAt": "2026-11-27T19:19:12.636Z",
+     "lastSuccessAt": "2026-11-28T06:37:47.232Z",
      "flag": {
       "name": "Macroeconomic stress flag (project-defined)",
       "status": "assessed",
@@ -908,7 +908,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z"
+    "contextAsOf": "2026-11-28T04:23:48.779Z"
    }
   },
   "RUS": {
@@ -1007,7 +1007,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z",
+    "contextAsOf": "2026-11-28T04:23:48.779Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -1151,7 +1151,7 @@
       "referenceYear": "2025",
       "stale": false,
       "sourceUpdated": "2026-09-25",
-      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "lastSuccessAt": "2026-11-28T06:37:47.232Z",
       "summary": "Estimate -0.94 for 2025.",
       "notes": {
        "visible": [
@@ -1243,7 +1243,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T19:19:14.694Z",
+    "lastSuccessAt": "2026-11-28T06:37:47.232Z",
     "stale": false,
     "limitations": [
      "Only these three macro indicators are used. Debt, reserves, sanctions, war damage and banking stress are not measured. A band describes only the listed indicators; it is not an assessment of overall economic risk.",
@@ -1316,7 +1316,7 @@
       "2025"
      ],
      "stale": false,
-     "lastSuccessAt": "2026-11-27T19:19:14.694Z",
+     "lastSuccessAt": "2026-11-28T06:37:47.232Z",
      "flag": {
       "name": "Macroeconomic stress flag (project-defined)",
       "status": "assessed",
@@ -1378,7 +1378,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z"
+    "contextAsOf": "2026-11-28T04:23:48.779Z"
    }
   },
   "UKR": {
@@ -1444,7 +1444,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z",
+    "contextAsOf": "2026-11-28T04:23:48.779Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -1520,7 +1520,7 @@
       "referenceYear": "2025",
       "stale": false,
       "sourceUpdated": "2026-09-25",
-      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "lastSuccessAt": "2026-11-28T06:37:47.232Z",
       "summary": "Estimate -0.33 for 2025.",
       "notes": {
        "visible": [
@@ -1727,7 +1727,7 @@
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z"
+    "contextAsOf": "2026-11-28T04:23:48.779Z"
    }
   },
   "TWN": {
@@ -1774,7 +1774,7 @@
      "2025",
      "2025"
     ],
-    "lastSuccessAt": "2026-11-27T11:49:14.467Z",
+    "lastSuccessAt": "2026-11-28T06:37:47.232Z",
     "stale": false,
     "limitations": [
      "The UCDP file records state-based armed conflicts only; it does not measure interstate tension, crises short of armed conflict, or terrorism and unrest.",
@@ -1794,14 +1794,14 @@
       "timeBasis": "published"
      },
      {
-      "headline": "Taipei Mayoral Candidate Puma Shen on Fighting Chinese Cognitive Warfare",
-      "publisher": "time.com",
-      "url": "https://time.com/article/2026/11/24/puma-shen-taipei-mayor-taiwan-china-interview/",
-      "time": "2026-11-24T20:42:00.000Z",
+      "headline": "Philippines To Upgrade Airport Near Taiwan To Expand US Military Access",
+      "publisher": "antiwar.com",
+      "url": "https://news.antiwar.com/2026/11/25/philippines-to-upgrade-airport-near-taiwan-to-expand-us-military-access/",
+      "time": "2026-11-28T01:30:00.000Z",
       "timeBasis": "published"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z",
+    "contextAsOf": "2026-11-28T04:23:48.779Z",
     "profile": {
      "version": 1,
      "armedConflict": {
@@ -1858,7 +1858,7 @@
       "referenceYear": "2025",
       "stale": false,
       "sourceUpdated": "2026-09-25",
-      "lastSuccessAt": "2026-11-21T03:15:43.287Z",
+      "lastSuccessAt": "2026-11-28T06:37:47.232Z",
       "summary": "Estimate 1.00 for 2025.",
       "notes": {
        "visible": [
@@ -2013,7 +2013,7 @@
       "timeBasis": "first seen by GDELT"
      }
     ],
-    "contextAsOf": "2026-11-27T19:23:51.023Z"
+    "contextAsOf": "2026-11-28T04:23:48.779Z"
    }
   }
  }
