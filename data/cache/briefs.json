@@ -3,15 +3,15 @@
  "status": "ok",
  "method": "Fixed keyword rules on cached headlines. No AI, no paid service.",
  "rulesVersion": 2,
- "generatedAt": "2026-11-27T22:18:59.385Z",
- "lastSuccessAt": "2026-11-27T22:18:59.385Z",
- "checkedAt": "2026-11-27T22:18:59.385Z",
+ "generatedAt": "2026-11-28T01:44:40.427Z",
+ "lastSuccessAt": "2026-11-28T01:44:40.427Z",
+ "checkedAt": "2026-11-28T01:44:40.427Z",
  "inputs": {
   "gdelt": {
    "status": "ok",
-   "items": 184,
-   "lastSuccessAt": "2026-11-27T22:18:38.996Z",
-   "checkedAt": "2026-11-27T22:18:38.996Z",
+   "items": 181,
+   "lastSuccessAt": "2026-11-28T01:44:19.379Z",
+   "checkedAt": "2026-11-28T01:44:19.379Z",
    "failedFeeds": 0,
    "feeds": 1,
    "stale": false
@@ -22,30 +22,30 @@
   }
  },
  "itemStats": {
-  "read": 184,
+  "read": 181,
   "noSource": 0,
   "noTime": 0,
-  "outsideWindow": 4,
+  "outsideWindow": 0,
   "noCountry": 0,
   "routineNotices": 30,
-  "offTopic": 7,
+  "offTopic": 8,
   "incidentalMentions": 0,
   "grouped": 0
  },
  "countries": {
   "USA": {
-   "generatedAt": "2026-11-27T22:18:59.385Z",
+   "generatedAt": "2026-11-28T01:44:40.427Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T22:18:59.385Z",
-    "to": "2026-11-27T22:18:59.385Z"
+    "from": "2026-11-25T01:44:40.427Z",
+    "to": "2026-11-28T01:44:40.427Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 69,
+   "reportsFound": 68,
    "overview": {
     "kind": "fact",
-    "text": "69 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-24 22:53 UTC to 2026-11-27 19:15 UTC and come from 11 outlets. Reports with topic keywords (a report can have several): sanctions and trade 11, diplomacy 6, security 6, economic policy 2.",
+    "text": "68 distinct reports naming the United States (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 04:30 UTC to 2026-11-27 19:15 UTC and come from 10 outlets. Reports with topic keywords (a report can have several): sanctions and trade 11, diplomacy 7, security 5, economic policy 2.",
     "evidence": [
      1,
      2,
@@ -54,11 +54,11 @@
      5,
      6,
      7,
+     8,
      9,
      10,
      11,
-     12,
-     13
+     14
     ]
    },
    "developments": [
@@ -175,13 +175,13 @@
       5,
       6,
       7,
+      8,
       9,
       10,
       11,
-      12,
-      13
+      14
      ],
-     "text": "11 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][4][5][6][7][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "11 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][4][5][6][7][8][9][10][11][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
@@ -189,12 +189,13 @@
      "evidence": [
       3,
       4,
+      7,
       9,
+      10,
       11,
-      12,
-      13
+      14
      ],
-     "text": "6 of the 12 listed reports use diplomacy wording (envoy, negotiation, pact, negotiations) [3][4][9][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "7 of the 12 listed reports use diplomacy wording (envoy, negotiation, pact, negotiations) [3][4][7][9][10][11][14]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:security",
@@ -204,19 +205,18 @@
       2,
       3,
       5,
-      6,
-      7
+      6
      ],
-     "text": "6 of the 12 listed reports use security wording (war, truce, espionage) [1][2][3][5][6][7]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "5 of the 12 listed reports use security wording (war, truce) [1][2][3][5][6]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:economic-policy",
      "kind": "analysis",
      "evidence": [
       1,
-      10
+      8
      ],
-     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][10]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][8]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -228,22 +228,19 @@
       4,
       5,
       6,
-      7,
-      10
+      8
      ],
-     "text": "8 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][5][6][7][10]. A headline that names two countries does not show how they are connected."
+     "text": "7 listed reports with topic keywords also name China, Russia and Ukraine [1][2][3][4][5][6][8]. A headline that names two countries does not show how they are connected."
     },
     {
      "rule": "several-outlets",
      "kind": "analysis",
      "evidence": [
-      7,
-      8,
-      13,
-      14,
-      15
+      11,
+      12,
+      13
      ],
-     "text": "2 listed headlines were carried by more than one outlet [7][13]. The same headline appearing in several places is not independent verification."
+     "text": "1 listed headline was carried by more than one outlet [11]. The same headline appearing in several places is not independent verification."
     }
    ],
    "sources": [
@@ -309,26 +306,6 @@
     },
     {
      "n": 7,
-     "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-     "publisher": "ibtimes.com",
-     "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
-     "time": "2026-11-24T22:53:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT",
-     "sourceLabel": "unassessed"
-    },
-    {
-     "n": 8,
-     "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-     "publisher": "jpost.com",
-     "url": "http://www.jpost.com/international/article-916124",
-     "time": "2026-11-25T18:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "sourceLabel": "unassessed",
-     "duplicateOf": 7
-    },
-    {
-     "n": 9,
      "title": "India-US Trade Pact and Tariffs: Key Details Explained",
      "publisher": "deccanchronicle.com",
      "url": "https://www.deccanchronicle.com/nation/india-us-trade-pact-and-tariffs-key-details-explained-2008600",
@@ -338,7 +315,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 10,
+     "n": 8,
      "title": "Chinese goods in focus as US Black Friday shoppers seek value amid inflation, tariff pressures",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1375198.shtml",
@@ -348,7 +325,7 @@
      "sourceLabel": "state"
     },
     {
-     "n": 11,
+     "n": 9,
      "title": "India, US push for trade deal as negotiations continue; no timeline set, says Commerce Secretary",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-push-for-trade-deal-as-negotiations-continue-no-timeline-set-says-commerce-secretary/articleshow/136226565.cms",
@@ -358,7 +335,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 12,
+     "n": 10,
      "title": "Dutch PM to discuss US MATCH Act chipmaking export controls with Trump at G20",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/tech/technology/dutch-pm-to-discuss-us-match-act-chipmaking-export-controls-with-trump-at-g20/articleshow/136225240.cms",
@@ -368,7 +345,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 13,
+     "n": 11,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "aninews.in",
      "url": "https://aninews.in/news/world/asia/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework20261127135416/",
@@ -378,24 +355,34 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 14,
+     "n": 12,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "bignewsnetwork.com",
      "url": "http://www.bignewsnetwork.com/news/279465595/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework",
      "time": "2026-11-27T09:45:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 13
+     "duplicateOf": 11
     },
     {
-     "n": 15,
+     "n": 13,
      "title": "EU envoy Jean-Eric Paquet calls new US tariff basis \"not very convincing\", says India-EU FTA is rather \"long-term framework\"",
      "publisher": "heraldglobe.com",
      "url": "http://www.heraldglobe.com/news/279465595/eu-envoy-jean-eric-paquet-calls-new-us-tariff-basis-not-very-convincing-says-india-eu-fta-is-rather-long-term-framework",
      "time": "2026-11-27T11:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "sourceLabel": "unassessed",
-     "duplicateOf": 13
+     "duplicateOf": 11
+    },
+    {
+     "n": 14,
+     "title": "India-US Trade Deal Nears Finalization as Piyush Goyal Signals Progress in Bilateral Negotiations",
+     "publisher": "siliconindia.com",
+     "url": "https://www.siliconindia.com/news/general/indiaus-trade-deal-nears-finalization-as-piyush-goyal-signals-progress-in-bilateral-negotiations-nid-243270-cid-1.html",
+     "time": "2026-11-27T07:30:00.000Z",
+     "timeBasis": "first seen by GDELT",
+     "via": "GDELT",
+     "sourceLabel": "unassessed"
     }
    ],
    "limitations": [
@@ -404,18 +391,18 @@
    ]
   },
   "CHN": {
-   "generatedAt": "2026-11-27T22:18:59.385Z",
+   "generatedAt": "2026-11-28T01:44:40.427Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T22:18:59.385Z",
-    "to": "2026-11-27T22:18:59.385Z"
+    "from": "2026-11-25T01:44:40.427Z",
+    "to": "2026-11-28T01:44:40.427Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
    "reportsFound": 46,
    "overview": {
     "kind": "fact",
-    "text": "46 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-24 22:53 UTC to 2026-11-27 17:45 UTC and come from 9 outlets. Reports with topic keywords (a report can have several): security 10, sanctions and trade 9, diplomacy 4, economic policy 2.",
+    "text": "46 distinct reports naming China (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 04:30 UTC to 2026-11-27 17:45 UTC and come from 8 outlets. Reports with topic keywords (a report can have several): sanctions and trade 9, security 9, diplomacy 4, economic policy 3.",
     "evidence": [
      1,
      2,
@@ -423,12 +410,12 @@
      4,
      5,
      6,
+     7,
      8,
      9,
      10,
      11,
-     12,
-     13
+     12
     ]
    },
    "developments": [
@@ -536,23 +523,6 @@
    ],
    "why": [
     {
-     "rule": "topic:security",
-     "kind": "analysis",
-     "evidence": [
-      1,
-      2,
-      4,
-      5,
-      6,
-      9,
-      10,
-      11,
-      12,
-      13
-     ],
-     "text": "10 of the 12 listed reports use security wording (war, truce, espionage, navy) [1][2][4][5][6][9][10][11][12][13]. This shows what the headlines are about, not what happened or what comes next."
-    },
-    {
      "rule": "topic:sanctions-and-trade",
      "kind": "analysis",
      "evidence": [
@@ -562,31 +532,48 @@
       4,
       5,
       6,
-      8,
-      9,
+      7,
+      10,
       12
      ],
-     "text": "9 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][3][4][5][6][8][9][12]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "9 of the 12 listed reports use sanctions and trade wording (sanctions, rare earths, tariff, tariffs) [1][2][3][4][5][6][7][10][12]. This shows what the headlines are about, not what happened or what comes next."
+    },
+    {
+     "rule": "topic:security",
+     "kind": "analysis",
+     "evidence": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "text": "9 of the 12 listed reports use security wording (war, truce, navy, armed forces) [1][2][4][5][7][8][9][10][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:diplomacy",
      "kind": "analysis",
      "evidence": [
       3,
-      10,
-      11,
-      13
+      8,
+      9,
+      11
      ],
-     "text": "4 of the 12 listed reports use diplomacy wording (negotiation, diplomacy, summit, envoy) [3][10][11][13]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "4 of the 12 listed reports use diplomacy wording (negotiation, diplomacy, summit, envoy) [3][8][9][11]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "topic:economic-policy",
      "kind": "analysis",
      "evidence": [
       1,
-      8
+      6,
+      12
      ],
-     "text": "2 of the 12 listed reports use economic policy wording (oil price, inflation) [1][8]. This shows what the headlines are about, not what happened or what comes next."
+     "text": "3 of the 12 listed reports use economic policy wording (oil price, inflation) [1][6][12]. This shows what the headlines are about, not what happened or what comes next."
     },
     {
      "rule": "two-countries",
@@ -598,18 +585,9 @@
       4,
       5,
       6,
-      8
+      12
      ],
-     "text": "7 listed reports with topic keywords also name the United States and Russia [1][2][3][4][5][6][8]. A headline that names two countries does not show how they are connected."
-    },
-    {
-     "rule": "several-outlets",
-     "kind": "analysis",
-     "evidence": [
-      6,
-      7
-     ],
-     "text": "1 listed headline was carried by more than one outlet [6]. The same headline appearing in several places is not independent verification."
+     "text": "7 listed reports with topic keywords also name the United States and Russia [1][2][3][4][5][6][12]. A headline that names two countries does not show how they are connected."
     }
    ],
    "sources": [
@@ -665,26 +643,6 @@
     },
     {
      "n": 6,
-     "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-     "publisher": "ibtimes.com",
-     "url": "https://www.ibtimes.com/huawei-convicted-us-trade-secrets-sanctions-violations-3810153",
-     "time": "2026-11-24T22:53:00.000Z",
-     "timeBasis": "published",
-     "via": "GDELT",
-     "sourceLabel": "unassessed"
-    },
-    {
-     "n": 7,
-     "title": "Huawei Found Guilty In Major US Corporate Espionage And Iran Sanctions Case. Chinese Tech Giant Convicted On 10 Charges.",
-     "publisher": "jpost.com",
-     "url": "http://www.jpost.com/international/article-916124",
-     "time": "2026-11-25T18:00:00.000Z",
-     "timeBasis": "first seen by GDELT",
-     "sourceLabel": "unassessed",
-     "duplicateOf": 6
-    },
-    {
-     "n": 8,
      "title": "Chinese goods in focus as US Black Friday shoppers seek value amid inflation, tariff pressures",
      "publisher": "globaltimes.cn",
      "url": "https://www.globaltimes.cn/page/202611/1375198.shtml",
@@ -694,7 +652,7 @@
      "sourceLabel": "state"
     },
     {
-     "n": 9,
+     "n": 7,
      "title": "Another Cold War? Trump Turns To Tariffs To Challenge China's Global Trade Dominance",
      "publisher": "outlookindia.com",
      "url": "https://www.outlookindia.com/international/another-cold-war-trump-turns-to-tariffs-to-challenge-chinas-global-trade-dominance",
@@ -704,7 +662,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 10,
+     "n": 8,
      "title": "Malaysia will prioritise diplomacy in South China Sea while keeping Navy ready, says Anwar",
      "publisher": "thestar.com.my",
      "url": "https://www.thestar.com.my/news/nation/2026/11/26/malaysia-will-prioritise-diplomacy-in-south-china-sea-while-keeping-navy-ready-says-anwar",
@@ -714,7 +672,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 11,
+     "n": 9,
      "title": "More Chinese vessels spotted in West Philippine Sea after ASEAN Summit: Philippine armed forces",
      "publisher": "asianews.network",
      "url": "https://asianews.network/more-chinese-vessels-spotted-in-west-philippine-sea-after-asean-summit-philippine-armed-forces/",
@@ -724,7 +682,7 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 12,
+     "n": 10,
      "title": "Trump's tariff war gets a second act, with India, China and Europe in the firing line",
      "publisher": "indiatimes.com",
      "url": "https://economictimes.indiatimes.com/news/international/world-news/us-proposes-tariffs-on-14-trade-partners-over-excess-industrial-capacity-china-eu-others-in-radar/articleshow/136175571.cms",
@@ -734,12 +692,22 @@
      "sourceLabel": "unassessed"
     },
     {
-     "n": 13,
+     "n": 11,
      "title": "China supports diplomacy on Iran nuclear issue, urges return to talks: Envoy",
      "publisher": "wn.com",
      "url": "https://article.wn.com/view/2026/11/25/China_supports_diplomacy_on_Iran_nuclear_issue_urges_return_/",
      "time": "2026-11-25T18:45:00.000Z",
      "timeBasis": "first seen by GDELT",
+     "via": "GDELT",
+     "sourceLabel": "unassessed"
+    },
+    {
+     "n": 12,
+     "title": "White House tariffs announced on China, Vietnam, as inflation data comes back hot",
+     "publisher": "fortune.com",
+     "url": "https://fortune.com/2026/11/25/white-house-new-tariffs-inflation-data-expectations-fed/",
+     "time": "2026-11-25T17:06:00.000Z",
+     "timeBasis": "published",
      "via": "GDELT",
      "sourceLabel": "unassessed"
     }
@@ -750,18 +718,18 @@
    ]
   },
   "RUS": {
-   "generatedAt": "2026-11-27T22:18:59.385Z",
+   "generatedAt": "2026-11-28T01:44:40.427Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T22:18:59.385Z",
-    "to": "2026-11-27T22:18:59.385Z"
+    "from": "2026-11-25T01:44:40.427Z",
+    "to": "2026-11-28T01:44:40.427Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 43,
+   "reportsFound": 44,
    "overview": {
     "kind": "fact",
-    "text": "43 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 07:52 UTC to 2026-11-27 22:15 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 7, sanctions and trade 5, economic policy 1.",
+    "text": "44 distinct reports naming Russia (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 07:52 UTC to 2026-11-28 00:00 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 7, sanctions and trade 5, economic policy 1.",
     "evidence": [
      1,
      2,
@@ -1099,10 +1067,10 @@
     },
     {
      "n": 15,
-     "title": "Ukraine proposes Black Sea ceasefire as Russia demands halt to oil attacks",
-     "publisher": "bgnes.com",
-     "url": "http://www.bgnes.com/conflicts/ukraine-proposes-black-sea-ceasefire-as-russia-demands-halt-to-oil-attacks",
-     "time": "2026-11-27T22:15:00.000Z",
+     "title": "Ukraine corn prices hit lowest since Russia's 2022 invasion | Hellenic Shipping News Worldwide",
+     "publisher": "hellenicshippingnews.com",
+     "url": "https://www.hellenicshippingnews.com/ukraine-corn-prices-hit-lowest-since-russias-2022-invasion/",
+     "time": "2026-11-28T00:00:00.000Z",
      "timeBasis": "first seen by GDELT",
      "via": "GDELT",
      "sourceLabel": "unassessed"
@@ -1114,18 +1082,18 @@
    ]
   },
   "UKR": {
-   "generatedAt": "2026-11-27T22:18:59.385Z",
+   "generatedAt": "2026-11-28T01:44:40.427Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T22:18:59.385Z",
-    "to": "2026-11-27T22:18:59.385Z"
+    "from": "2026-11-25T01:44:40.427Z",
+    "to": "2026-11-28T01:44:40.427Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 41,
+   "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "41 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 09:30 UTC to 2026-11-27 09:15 UTC and come from 16 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 11, economic policy 2.",
+    "text": "40 distinct reports naming Ukraine (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 09:30 UTC to 2026-11-27 09:15 UTC and come from 16 outlets. Reports with topic keywords (a report can have several): security 12, diplomacy 11, economic policy 2.",
     "evidence": [
      1,
      2,
@@ -1511,18 +1479,18 @@
    ]
   },
   "TWN": {
-   "generatedAt": "2026-11-27T22:18:59.385Z",
+   "generatedAt": "2026-11-28T01:44:40.427Z",
    "window": {
     "hours": 72,
-    "from": "2026-11-24T22:18:59.385Z",
-    "to": "2026-11-27T22:18:59.385Z"
+    "from": "2026-11-25T01:44:40.427Z",
+    "to": "2026-11-28T01:44:40.427Z"
    },
    "notice": "Headlines are reports by publishers (or indexed by GDELT). They are not verified facts, and a country named in a headline does not prove the report is mainly about it. The sentences under \"Why it matters\" come from fixed keyword rules, not from reading the articles. Outlet labels describe the publisher, not whether a headline was fact-checked.",
    "status": "ok",
-   "reportsFound": 38,
+   "reportsFound": 40,
    "overview": {
     "kind": "fact",
-    "text": "38 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 17:45 UTC to 2026-11-27 06:00 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): sanctions and trade 10, security 2.",
+    "text": "40 distinct reports naming Taiwan (or its capital or government) were found in the cached headlines for the last 72 hours; the 12 highest-ranked are used below. They span 2026-11-25 17:45 UTC to 2026-11-27 06:00 UTC and come from 14 outlets. Reports with topic keywords (a report can have several): sanctions and trade 10, security 2.",
     "evidence": [
      1,
      4,
