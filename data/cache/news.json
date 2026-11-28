@@ -3,7 +3,7 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-27T19:19:19.939Z",
+  "checkedAt": "2026-11-28T01:32:33.444Z",
   "lastSuccessAt": "2026-11-27T13:37:02.867Z",
   "countries": {
     "USA": {
@@ -12,7 +12,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-27T13:37:02.867Z",
-      "checkedAt": "2026-11-27T19:22:19.002Z",
+      "checkedAt": "2026-11-28T01:35:21.019Z",
       "articles": [
         {
           "title": "Rajnath calls for preparedness against emerging security threats",
@@ -180,9 +180,9 @@
       "query": "(China OR Beijing OR \"Chinese government\" OR \"Xi Jinping\" OR PLA OR \"South China Sea\")",
       "status": "error",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
+      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-27T01:40:11.602Z",
-      "checkedAt": "2026-11-27T19:22:19.002Z",
+      "checkedAt": "2026-11-28T01:35:21.019Z",
       "articles": [
         {
           "title": "Rare earth beneath our palms : Opportunity or opportunism ?",
@@ -352,7 +352,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-27T13:35:39.208Z",
-      "checkedAt": "2026-11-27T19:22:19.002Z",
+      "checkedAt": "2026-11-28T01:35:21.019Z",
       "articles": [
         {
           "title": "Rajnath calls for preparedness against emerging security threats",
@@ -522,7 +522,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-27T07:41:45.751Z",
-      "checkedAt": "2026-11-27T19:22:19.002Z",
+      "checkedAt": "2026-11-28T01:35:21.019Z",
       "articles": [
         {
           "title": "French politician who stood up to Bush over the invasion of Iraq is back to stop Le Pen",
@@ -690,9 +690,9 @@
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
       "status": "error",
       "attempted": true,
-      "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-27T19:20:46.477Z",
+      "checkedAt": "2026-11-28T01:33:58.871Z",
       "articles": [
         {
           "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
