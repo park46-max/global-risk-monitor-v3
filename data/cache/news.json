@@ -3,8 +3,8 @@
   "source": "GDELT DOC 2.0 API",
   "sourceUrl": "https://www.gdeltproject.org/",
   "timespan": "7d",
-  "checkedAt": "2026-11-28T01:32:33.444Z",
-  "lastSuccessAt": "2026-11-27T13:37:02.867Z",
+  "checkedAt": "2026-11-28T07:32:03.597Z",
+  "lastSuccessAt": "2026-11-28T07:32:45.898Z",
   "countries": {
     "USA": {
       "query": "(\"United States\" OR \"White House\" OR Pentagon OR \"State Department\" OR \"Treasury Department\" OR \"U.S. Senate\")",
@@ -12,7 +12,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-27T13:37:02.867Z",
-      "checkedAt": "2026-11-28T01:35:21.019Z",
+      "checkedAt": "2026-11-28T07:35:46.082Z",
       "articles": [
         {
           "title": "Rajnath calls for preparedness against emerging security threats",
@@ -182,7 +182,7 @@
       "attempted": true,
       "error": "Network error: UND_ERR_CONNECT_TIMEOUT",
       "fetchedAt": "2026-11-27T01:40:11.602Z",
-      "checkedAt": "2026-11-28T01:35:21.019Z",
+      "checkedAt": "2026-11-28T07:34:16.876Z",
       "articles": [
         {
           "title": "Rare earth beneath our palms : Opportunity or opportunism ?",
@@ -352,7 +352,7 @@
       "attempted": false,
       "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
       "fetchedAt": "2026-11-27T13:35:39.208Z",
-      "checkedAt": "2026-11-28T01:35:21.019Z",
+      "checkedAt": "2026-11-28T07:35:46.082Z",
       "articles": [
         {
           "title": "Rajnath calls for preparedness against emerging security threats",
@@ -519,10 +519,10 @@
     "UKR": {
       "query": "(Ukraine OR Kyiv OR Kiev OR \"Ukrainian government\" OR \"Ukrainian forces\")",
       "status": "error",
-      "attempted": false,
-      "error": "Not attempted this run: GDELT kept refusing or timing out (2 countries in a row), so the remaining requests were skipped to avoid making it worse.",
+      "attempted": true,
+      "error": "GDELT is rate limiting requests.",
       "fetchedAt": "2026-11-27T07:41:45.751Z",
-      "checkedAt": "2026-11-28T01:35:21.019Z",
+      "checkedAt": "2026-11-28T07:35:46.082Z",
       "articles": [
         {
           "title": "French politician who stood up to Bush over the invasion of Iraq is back to stop Le Pen",
@@ -688,171 +688,163 @@
     },
     "TWN": {
       "query": "(Taiwan OR Taipei OR \"Taiwan Strait\" OR \"Taiwanese government\")",
-      "status": "error",
+      "status": "ok",
       "attempted": true,
-      "error": "GDELT is rate limiting requests.",
-      "fetchedAt": "2026-11-24T07:43:32.397Z",
-      "checkedAt": "2026-11-28T01:33:58.871Z",
+      "error": null,
+      "fetchedAt": "2026-11-28T07:32:45.898Z",
+      "checkedAt": "2026-11-28T07:32:45.898Z",
       "articles": [
         {
-          "title": "International mutual funds fall up to 38 % in 1 month . What should investors do amid subscription restrictions ?",
-          "url": "https://economictimes.indiatimes.com/mf/analysis/international-mutual-funds-fall-up-to-38-in-1-month-what-should-investors-do-amid-subscription-restrictions/articleshow/136121403.cms",
-          "domain": "economictimes.indiatimes.com",
-          "seendate": "20261124T071500Z",
+          "title": "Asia - Pacific GDP growth to ease to 4 . 4 % in 2027 , AI boom to cushion global headwinds : Report",
+          "url": "http://www.asiabulletin.com/news/279470059/asia-pacific-gdp-growth-to-ease-to-44-in-2027-ai-boom-to-cushion-global-headwinds-report",
+          "domain": "asiabulletin.com",
+          "seendate": "20261128T063000Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "China"
         },
         {
-          "title": "Nvidia share price could double as Jensen Huang returns as CEO , says deVere Group Nigel Green . Here why",
-          "url": "https://economictimes.indiatimes.com/markets/stocks/news/nvidia-share-price-could-double-as-jensen-huang-returns-as-ceo-says-devere-groups-nigel-green-heres-why/articleshow/136121626.cms",
-          "domain": "economictimes.indiatimes.com",
-          "seendate": "20261124T071500Z",
+          "title": "Taiwan votes in elections as China flexes military",
+          "url": "https://www.newcastleherald.com.au/story/9399773/taiwan-votes-in-elections-as-china-flexes-military/",
+          "domain": "newcastleherald.com.au",
+          "seendate": "20261128T063000Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": null
         },
         {
-          "title": "When elephants dance , everyone moves to give space : Uday Kotak on Huang reinstatement",
-          "url": "http://www.pakistantelegraph.com/news/279451423/when-elephants-dance-everyone-moves-to-give-space-uday-kotak-on-huang-reinstatement",
-          "domain": "pakistantelegraph.com",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "Pakistan"
-        },
-        {
-          "title": "Taiwan elections not about China , but Beijing has a lot to say",
-          "url": "https://www.asiaone.com/asia/taiwans-elections-not-about-china-beijing-has-lot-say",
-          "domain": "asiaone.com",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "Singapore"
-        },
-        {
-          "title": "Micron recruits Korean chip engineers for Asian operations",
-          "url": "https://www.koreaherald.com/article/10947716",
-          "domain": "koreaherald.com",
-          "seendate": "20261124T071500Z",
-          "language": "English",
-          "sourcecountry": "South Korea"
-        },
-        {
-          "title": "From horsepower to firepower , Japan draws auto suppliers into major arms buildup",
-          "url": "https://lufkindailynews.com/news_reuters/top_news/from-horsepower-to-firepower-japan-draws-auto-suppliers-into-major-arms-buildup/article_d47fca65-3fde-5846-9007-8b5e2c75f549.html",
-          "domain": "lufkindailynews.com",
-          "seendate": "20261124T071500Z",
+          "title": "AP News in Brief at 12 : 04 a . m . EST",
+          "url": "http://www.wdtimes.com/news/national/ap-news-in-brief-at-12-04-a-m-est/article_c2104562-9eb5-5b69-b7a7-36169aa9551a.html",
+          "domain": "wdtimes.com",
+          "seendate": "20261128T063000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Taiwan stocks post biggest - ever intraday gain , surge over 3 , 300 points on Nvidia boost",
-          "url": "http://www.pakistantelegraph.com/news/279451364/taiwan-stocks-post-biggest-ever-intraday-gain-surge-over-3300-points-on-nvidia-boost",
-          "domain": "pakistantelegraph.com",
-          "seendate": "20261124T071500Z",
+          "title": "AP News Summary at 12 : 38 a . m . EST",
+          "url": "http://www.wdtimes.com/news/national/ap-news-summary-at-12-38-a-m-est/article_8b7e1aaf-d90f-5780-899a-2a39160782e6.html",
+          "domain": "wdtimes.com",
+          "seendate": "20261128T063000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Republicans rethink tariffs , giving Democrats an opening to challenge Trump",
+          "url": "https://www.decaturdaily.com/news/other_news/national/republicans-rethink-tariffs-giving-democrats-an-opening-to-challenge-trump/article_051a9c7f-61bc-4343-81da-9d04727e9022.html",
+          "domain": "decaturdaily.com",
+          "seendate": "20261128T063000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Nvidia Blackwell tech used at China site tied to Alice Huang",
+          "url": "https://www.decaturdaily.com/business/nvidia-blackwell-tech-used-at-china-site-tied-to-alice-huang/article_ced7620c-b789-4826-b298-4c7eb54a9245.html",
+          "domain": "decaturdaily.com",
+          "seendate": "20261128T063000Z",
+          "language": "English",
+          "sourcecountry": "United States"
+        },
+        {
+          "title": "Moneycontrol Pro Weekender | A case of the nerves",
+          "url": "https://www.moneycontrol.com/news/business/moneycontrol-pro-weekender-a-case-of-the-nerves-14090483.html",
+          "domain": "moneycontrol.com",
+          "seendate": "20261128T051500Z",
+          "language": "English",
+          "sourcecountry": "India"
+        },
+        {
+          "title": "Taiwan votes in local elections as China sends warplanes , lambastes Taipei candidate",
+          "url": "https://dunyanews.tv/en/World/985297-taiwan-votes-in-local-elections-as-china-sends-warplanes-lambastes-ta",
+          "domain": "dunyanews.tv",
+          "seendate": "20261128T051500Z",
           "language": "English",
           "sourcecountry": "Pakistan"
         },
         {
-          "title": "Korean beauty clinics seek return of tourist tax refunds",
-          "url": "https://www.koreaherald.com/article/10947687",
-          "domain": "koreaherald.com",
-          "seendate": "20261124T071500Z",
+          "title": "Taiwan holds elections to choose mayors and other local leaders as China looks on",
+          "url": "http://www.dailyadvance.com/news/world/taiwan-holds-elections-to-choose-mayors-and-other-local-leaders-as-china-looks-on/article_4e2be8b7-b4ed-5be1-b25e-2fbb12f5826e.html",
+          "domain": "dailyadvance.com",
+          "seendate": "20261128T051500Z",
           "language": "English",
-          "sourcecountry": "South Korea"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Fourth - Generation Model of the Award - Winning LDS Series of Mobile LED Displays from ViewSonic Now Shipping in Asia Pacific",
-          "url": "https://www.thehindu.com/brandhub/pr-release/fourth-generation-model-of-the-award-winning-lds-series-of-mobile-led-displays-from-viewsonic-now-shipping-in-asia-pacific/article71737153.ece",
-          "domain": "thehindu.com",
-          "seendate": "20261124T071500Z",
+          "title": "Xi View of China and World , with Oriana Skylar Mastro",
+          "url": "https://www.miragenews.com/xis-view-of-china-and-world-with-oriana-skylar-1785091/",
+          "domain": "miragenews.com",
+          "seendate": "20261128T044500Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Trumps feared Nvidia CEO Jensen Huang could move to chine , lobbied for his return",
-          "url": "https://www.orissapost.com/trumps-feared-nvidia-ceo-jensen-huang-could-move-to-chine-lobbied-for-his-return/",
-          "domain": "orissapost.com",
-          "seendate": "20261124T071500Z",
+          "title": "Trump Proposes New Tariffs on 14 Nations : Vietnam and India Face the Steepest Rates",
+          "url": "https://www.latintimes.com/trump-proposes-new-tariffs-14-nations-vietnam-india-face-steepest-rates-601879",
+          "domain": "latintimes.com",
+          "seendate": "20261128T044500Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "United States"
         },
         {
-          "title": "Trump tough - on - China talk always just an act",
-          "url": "https://www.ironmountaindailynews.com/opinion/2026/11/trumps-tough-on-china-talk-always-just-an-act/",
+          "title": "News briefs - The Daily News",
+          "url": "https://www.ironmountaindailynews.com/news/2026/11/news-briefs-299/",
           "domain": "ironmountaindailynews.com",
-          "seendate": "20261124T063000Z",
+          "seendate": "20261128T043000Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "RBSE Class 11 History Syllabus 2026 - 27 PDF Download , Marks Distribution",
-          "url": "https://www.jagranjosh.com/articles/rbse-class-11-history-syllabus-2026-27-pdf-download-marks-distribution-1800019626-1",
-          "domain": "jagranjosh.com",
-          "seendate": "20261124T063000Z",
+          "title": "Taiwan holds elections to choose mayors and other local leaders",
+          "url": "https://www.therecord.com/news/world/asia/taiwan-holds-elections-to-choose-mayors-and-other-local-leaders/article_06e34a73-2ef9-5baa-bc2a-824826765e37.html",
+          "domain": "therecord.com",
+          "seendate": "20261128T023000Z",
           "language": "English",
-          "sourcecountry": "India"
+          "sourcecountry": "Canada"
         },
         {
-          "title": "Monday Blues : Profit - booking Puts Brakes on Bull Run",
-          "url": "https://economictimes.indiatimes.com/epaper/delhicapital/2026/nov/24/et-front/monday-blues-profit-booking-puts-brakes-on-bull-run/articleshow/136114048.cms",
-          "domain": "economictimes.indiatimes.com",
-          "seendate": "20261124T063000Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO :: WRAL . com",
-          "url": "https://www.wral.com/news/ap/feec0-asian-stocks-rally-after-wall-street-rebound-as-jensen-huang-returns-as-nvidia-s-ceo/",
-          "domain": "wral.com",
-          "seendate": "20261124T063000Z",
-          "language": "English",
-          "sourcecountry": "United States"
-        },
-        {
-          "title": "Sam Kerr Matildas eye Canberra Stadium record against Colombia | The Canberra Times",
-          "url": "https://www.canberratimes.com.au/story/9396477/sam-kerrs-matildas-eye-canberra-stadium-record-against-colombia/",
-          "domain": "canberratimes.com.au",
-          "seendate": "20261124T061500Z",
+          "title": "China eyes rising mayoral candidate in Taiwan",
+          "url": "https://www.bendigoadvertiser.com.au/story/9399822/china-eyes-rising-mayoral-candidate-in-taiwan/",
+          "domain": "bendigoadvertiser.com.au",
+          "seendate": "20261128T023000Z",
           "language": "English",
           "sourcecountry": "Australia"
         },
         {
-          "title": "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO",
-          "url": "https://www.ksat.com/business/2026/11/24/asian-stocks-rally-after-wall-street-rebound-as-jensen-huang-returns-as-nvidias-ceo/",
-          "domain": "ksat.com",
-          "seendate": "20261124T061500Z",
+          "title": "Restricted NVIDIA Chips Were Installed At A Chinese Data Center Linked To Alice Huang",
+          "url": "https://www.engadget.com/2329748/restricted-nvidia-chips-were-installed-at-a-chinese-data-center-linked-to-alice-huang/",
+          "domain": "engadget.com",
+          "seendate": "20261127T234500Z",
+          "language": "English",
+          "sourcecountry": "Japan"
+        },
+        {
+          "title": "Intel Shares Rise 5 . 38 % After 18A - P Customer , Microsoft EMIB Plans",
+          "url": "https://econotimes.com/Intel-Shares-Rise-5-38-After-18A-P-Customer-Microsoft-EMIB-Plans-1781263",
+          "domain": "econotimes.com",
+          "seendate": "20261127T234500Z",
           "language": "English",
           "sourcecountry": "United States"
         },
         {
-          "title": "Taiwan stocks soar on news of Jensen Huang return to Nvidia",
-          "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/24/2003868305",
-          "domain": "taipeitimes.com",
-          "seendate": "20261124T061500Z",
+          "title": "Nasdaq climbs 544 points Friday as markets finish early for Thanksgiving holiday",
+          "url": "http://www.parisguardian.com/news/279467907/nasdaq-climbs-544-points-friday-as-markets-finish-early-for-thanksgiving-holiday",
+          "domain": "parisguardian.com",
+          "seendate": "20261127T224500Z",
           "language": "English",
-          "sourcecountry": "Taiwan"
+          "sourcecountry": "France"
         },
         {
-          "title": "Taiwan first indigenous submarine begins 26th sea trial",
-          "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/11/24/2003868312",
-          "domain": "taipeitimes.com",
-          "seendate": "20261124T061500Z",
-          "language": "English",
-          "sourcecountry": "Taiwan"
-        },
-        {
-          "title": "KOSPI Jumps 7 . 5 %, Nikkei Gains 5 % As Jensen Huang Reinstatement At Nvidia Fuels AI Stock Rally",
-          "url": "https://www.freepressjournal.in/business/kospi-jumps-75-nikkei-gains-5-as-jensen-huangs-reinstatement-at-nvidia-fuels-ai-stock-rally",
-          "domain": "freepressjournal.in",
-          "seendate": "20261124T061500Z",
-          "language": "English",
-          "sourcecountry": "India"
-        },
-        {
-          "title": "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia CEO | World News",
-          "url": "http://www.thegazette.com/news/world/asian-stocks-rally-after-wall-street-rebound-as-jensen-huang-returns-as-nvidia-s-ceo/article_94740cc8-d0c4-5e46-b00f-cb99732875a6.html",
-          "domain": "thegazette.com",
-          "seendate": "20261124T051500Z",
+          "title": "Ahead of Taiwan local elections , politicians crowd in at Art Taipei",
+          "url": "https://www.theartnewspaper.com/2026/11/27/ahead-of-taiwan-votes-politicians-crowd-in-at-art-taipei",
+          "domain": "theartnewspaper.com",
+          "seendate": "20261127T224500Z",
           "language": "English",
           "sourcecountry": "United States"
+        },
+        {
+          "title": "Taiwan holds local elections as government warns of Beijing interference",
+          "url": "https://www.manilatimes.net/2026/11/28/world/taiwan-holds-local-elections-as-government-warns-of-beijing-interference/2479316",
+          "domain": "manilatimes.net",
+          "seendate": "20261127T224500Z",
+          "language": "English",
+          "sourcecountry": "Philippines"
         }
       ]
     }
